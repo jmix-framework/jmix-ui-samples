@@ -1,0 +1,26 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="msg://groupSimple.caption">
+                <capsLockIndicator id="capsLock1"
+                                   align="MIDDLE_CENTER"/>
+                <passwordField capsLockIndicator="capsLock1"
+                               align="MIDDLE_CENTER"/>
+            </groupBox>
+            <groupBox caption="msg://groupWithOff.caption">
+                <capsLockIndicator id="capsLock2"
+                                   align="MIDDLE_CENTER"
+                                   capsLockOffMessage="msg://capsLockOff"/>
+                <passwordField capsLockIndicator="capsLock2"
+                               align="MIDDLE_CENTER"/>
+            </groupBox>
+            <groupBox caption="msg://groupWithout.caption"
+                      orientation="horizontal"
+                      spacing="true">
+                <passwordField capsLockIndicator="capsLock3"/>
+                <capsLockIndicator id="capsLock3"
+                                   capsLockOnMessage=""/>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

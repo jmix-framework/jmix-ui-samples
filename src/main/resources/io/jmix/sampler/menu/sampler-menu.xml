@@ -67,6 +67,9 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <item id="capslock-indicator" docUrlSuffix="gui_CapsLockIndicator"
+              image="components/capslockindicator/capslockindicator.png"/>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
