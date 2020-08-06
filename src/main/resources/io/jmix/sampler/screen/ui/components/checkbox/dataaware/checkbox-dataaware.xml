@@ -1,0 +1,17 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout spacing="true">
+        <checkBox caption="CheckBox connected to a Container"
+                  dataContainer="customerDc"
+                  property="active"/>
+        <hbox spacing="true">
+            <label value="Value in the Container:"/>
+            <label dataContainer="customerDc"
+                   property="active"/>
+        </hbox>
+    </layout>
+</window>

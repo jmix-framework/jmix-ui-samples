@@ -70,6 +70,15 @@
 
         <item id="capslock-indicator" docUrlSuffix="gui_CapsLockIndicator"
               image="components/capslockindicator/capslockindicator.png"/>
+
+        <menu id="checkbox">
+            <item id="checkbox-simple" docUrlSuffix="gui_CheckBox" image="components/checkbox/checkbox-simple.png"/>
+            <item id="checkbox-dataaware" docUrlSuffix="gui_CheckBox" image="components/checkbox/checkbox-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

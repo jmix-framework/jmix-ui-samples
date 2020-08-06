@@ -48,7 +48,7 @@ public class SamplerMetadataTools extends MetadataTools {
                             App.getInstance().getLocale(), currentAuthentication.getTimeZone());
                 }
             }
-            return datatype.format(value, currentAuthentication.getLocale());
+            return datatype.format(value, App.getInstance().getLocale());
         } else if (range.isEnum()) {
             return messages.getMessage((Enum) value);
         } else if (value instanceof JmixEntity) {

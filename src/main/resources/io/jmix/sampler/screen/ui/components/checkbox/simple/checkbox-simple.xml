@@ -1,0 +1,5 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <checkBox id="carField" caption="I have a car"/>
+    </layout>
+</window>
