@@ -1,0 +1,26 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="calendarEventsDc"
+                    class="io.jmix.sampler.entity.CalendarEvent"
+                    fetchPlan="_local">
+            <loader id="calendarEventsLoader">
+                <query>
+                    <![CDATA[select e from sampler_CalendarEvent e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <calendar id="calendar"
+                  captionProperty="caption"
+                  dataContainer="calendarEventsDc"
+                  descriptionProperty="description"
+                  endDate="2020-07-31"
+                  endDateProperty="endDate"
+                  height="100%"
+                  startDate="2020-07-01"
+                  startDateProperty="startDate"
+                  stylenameProperty="stylename"
+                  width="100%"/>
+    </layout>
+</window>

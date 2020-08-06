@@ -41,6 +41,32 @@
             <item id="popup-button-custom-layout" docUrlSuffix="gui_PopupButton"
                   image="components/popupbutton/popup-button-custom-layout.png"/>
         </menu>
+
+        <menu id="calendar">
+            <item id="calendar-month" docUrlSuffix="gui_Calendar" splitEnabled="true"
+                  image="components/calendar/calendar-month.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CalendarEvent.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/calendar/month/calendar-event-screen.xml"/>
+                    <file name="io/jmix/sampler/screen/ui/components/calendar/month/CalendarEventScreen.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/calendar/month/calendar-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="calendar-week" docUrlSuffix="gui_Calendar" splitEnabled="true"
+                  image="components/calendar/calendar-week.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CalendarEvent.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/calendar/month/calendar-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="calendar-day" docUrlSuffix="gui_Calendar" splitEnabled="true"
+                  image="components/calendar/calendar-day.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CalendarEvent.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/calendar/month/calendar-style.scss"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

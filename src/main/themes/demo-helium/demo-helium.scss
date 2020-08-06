@@ -2,11 +2,11 @@
 @import "sys/main/sampler-main-screen";
 @import "sys/maindashboard/sampler-main-dashboard-fragment";
 @import "sys/browser/sampler-browser";
-@import "component/button/sampler-button";
-@import "component/folderspane/sampler-folderspane";
-@import "component/label/sampler-label";
-@import "component/popupview/sampler-popupview";
-@import "component/sidemenu/sampler-sidemenu";
+@import "ui/components/button/sampler-button";
+@import "ui/components/folderspane/sampler-folderspane";
+@import "ui/components/label/sampler-label";
+@import "ui/components/popupview/sampler-popupview";
+@import "ui/components/sidemenu/sampler-sidemenu";
 @import "ui/components/calendar/sampler-calendar";
 @import "ui/components/combobox/sampler-combobox-options-style-provider";
 @import "ui/components/composite/sampler-composite-component";

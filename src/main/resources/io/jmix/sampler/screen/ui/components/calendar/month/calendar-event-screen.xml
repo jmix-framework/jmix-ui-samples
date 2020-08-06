@@ -1,0 +1,46 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://io.jmix.sampler.entity/CalendarEvent">
+    <dialogMode forceDialog="true"
+                height="AUTO"
+                modal="true"
+                width="450"/>
+    <layout spacing="true">
+        <grid spacing="true"
+              width="100%">
+            <columns count="2"/>
+            <rows>
+                <row>
+                    <label id="startDateLabel"
+                           htmlEnabled="true"
+                           value="Start date"/>
+                    <label id="startDateValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+                <row>
+                    <label id="endDateLabel"
+                           htmlEnabled="true"
+                           value="End date"/>
+                    <label id="endDateValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+                <row>
+                    <label id="captionLabel"
+                           htmlEnabled="true"
+                           value="Caption"/>
+                    <label id="captionValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+                <row>
+                    <label id="descriptionLabel"
+                           htmlEnabled="true"
+                           value="Description"/>
+                    <label id="descriptionValue"
+                           align="MIDDLE_RIGHT"/>
+                </row>
+            </rows>
+        </grid>
+        <button id="closeButton"
+                align="MIDDLE_CENTER"
+                caption="Ok"/>
+    </layout>
+</window>

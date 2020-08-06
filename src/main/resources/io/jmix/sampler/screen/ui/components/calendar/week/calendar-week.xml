@@ -1,0 +1,43 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox expand="calendar"
+              height="100%"
+              spacing="true"
+              width="100%">
+            <calendar id="calendar"
+                      endDate="2020-07-23"
+                      height="100%"
+                      startDate="2020-07-17"/>
+            <scrollBox height="100%"
+                       orientation="vertical"
+                       spacing="true"
+                       width="300px">
+                <label htmlEnabled="true"
+                       stylename="h3"
+                       value="msg://addEvent"/>
+                <dateField id="startDateField"
+                           caption="msg://io.jmix.sampler.entity/CalendarEvent.startDate"
+                           width="100%"/>
+                <dateField id="endDateField"
+                           caption="msg://io.jmix.sampler.entity/CalendarEvent.endDate"
+                           width="100%"/>
+                <textField id="captionField"
+                           caption="msg://io.jmix.sampler.entity/CalendarEvent.caption"
+                           width="100%"/>
+                <textField id="descriptionField"
+                           caption="msg://io.jmix.sampler.entity/CalendarEvent.description"
+                           width="100%"/>
+                <comboBox id="styleNameField"
+                          caption="msg://io.jmix.sampler.entity/CalendarEvent.stylename"
+                          optionsEnum="io.jmix.sampler.entity.CalendarEventStyle"
+                          nullOptionVisible="false"
+                          width="100%"/>
+                <checkBox id="isAllDay"
+                          caption="msg://isAllDay"
+                          width="100%"/>
+                <button id="addEvent"
+                        caption="msg://addEvent"/>
+            </scrollBox>
+        </hbox>
+    </layout>
+</window>
