@@ -1,0 +1,11 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <label value="Field without caption"/>
+        <textField description="Description"
+                   contextHelpText="msg://io.jmix.sampler.screen.ui.components.contexthelp/contextHelpText.htmlContent"
+                   contextHelpTextHtmlEnabled="true"/>
+        <textField caption="Field with caption"
+                   description="Description"
+                   contextHelpText="msg://io.jmix.sampler.screen.ui.components.contexthelp/contextHelpText.content"/>
+    </layout>
+</window>

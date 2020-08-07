@@ -1,0 +1,7 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <textField id="textField"
+                   description="Description"
+                   contextHelpText="msg://io.jmix.sampler.screen.ui.components.contexthelp/contextHelpText.content"/>
+    </layout>
+</window>

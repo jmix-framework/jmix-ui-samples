@@ -1,0 +1,21 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout spacing="true">
+        <form id="form"
+              dataContainer="customerDc">
+            <column width="250px">
+                <field property="name"
+                       description="Description"
+                       contextHelpText="msg://io.jmix.sampler.screen.ui.components.contexthelp/contextHelpText.content"/>
+                <field property="age"/>
+                <field property="active"
+                       contextHelpText="msg://io.jmix.sampler.screen.ui.components.contexthelp/contextHelpText.htmlContent"
+                       contextHelpTextHtmlEnabled="true"/>
+            </column>
+        </form>
+    </layout>
+</window>

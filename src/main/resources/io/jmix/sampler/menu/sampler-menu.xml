@@ -118,6 +118,25 @@
             <item id="colorpicker-captions" docUrlSuffix="gui_ColorPicker"
                   image="components/colorpicker/colorpicker-captions.png"/>
         </menu>
+
+        <menu id="contexthelp">
+            <item id="contexthelp-field" docUrlSuffix="gui_attributes"
+                  image="components/contexthelp/contexthelp-field.png"/>
+            <item id="contexthelp-field-click" docUrlSuffix="gui_attributes"
+                  image="components/contexthelp/contexthelp-field-click.png"/>
+            <item id="contexthelp-form" docUrlSuffix="gui_attributes"
+                  image="components/contexthelp/contexthelp-form.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="contexthelp-form-click" docUrlSuffix="gui_attributes"
+                  image="components/contexthelp/contexthelp-form-click.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
