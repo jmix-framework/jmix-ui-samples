@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://browseCaption"
+        focusComponent="productsTable">
+    <data readOnly="true">
+        <collection id="productsDc"
+                    class="io.jmix.sampler.entity.Product"
+                    fetchPlan="_local">
+            <loader id="productsDl">
+                <query>
+                    <![CDATA[select e from sampler_Product e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="productsTable"
+            spacing="true">
+        <!-- todo filter
+        <filter id="filter"
+                applyTo="productsTable"
+                dataLoader="productsDl">
+            <properties include=".*"/>
+        </filter>-->
+        <table id="productsTable"
+               width="100%"
+               dataContainer="productsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="price"/>
+            </columns>
+            <pagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="productsTable.create"/>
+                <button id="editBtn" action="productsTable.edit"/>
+                <button id="removeBtn" action="productsTable.remove"/>
+            </buttonsPanel>
+        </table>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

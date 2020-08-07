@@ -300,4 +300,79 @@
 
     </changeSet>
 
+    <changeSet author="sampler" id="1.2">
+
+        <createTable tableName="SAMPLER_PRODUCT">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="VERSION" type="int" defaultValue="1">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATE_TS" type="datetime"/>
+            <column name="CREATED_BY" type="varchar(50)"/>
+            <column name="UPDATE_TS" type="datetime"/>
+            <column name="UPDATED_BY" type="varchar(50)"/>
+            <column name="DELETE_TS" type="datetime"/>
+            <column name="DELETED_BY" type="varchar(50)"/>
+
+            <column name="NAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="PRICE" type="decimal">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="17bc9b95-b562-0dd2-f904-db6df80b9c71"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="TV set"/>
+            <column name="PRICE" valueNumeric="24999.00"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="2ab4dece-2f67-69cd-0a76-fe1cd33537f6"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Keyboard"/>
+            <column name="PRICE" valueNumeric="499.00"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="3d829eba-cdb0-0446-49d4-9c13b1fe8269"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Earphones"/>
+            <column name="PRICE" valueNumeric="2000.00"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="d10674cf-a918-b74f-5eeb-c100631320fd"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Telephone"/>
+            <column name="PRICE" valueNumeric="17999.00"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="d7496b01-215d-f90c-7442-4d7e8c47848f"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Laptop"/>
+            <column name="PRICE" valueNumeric="52000.00"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="d92e7b2b-f1ea-511a-dda0-abf4e8fd7726"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Blue-Ray"/>
+            <column name="PRICE" valueNumeric="7000.00"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="d956ed3c-f7ab-687b-382d-0733db863b5c"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Microphone"/>
+            <column name="PRICE" valueNumeric="4999.00"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT">
+            <column name="ID" value="dab66821-e3b0-b6a8-eae1-e0b3f0e71d4f"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="DVD"/>
+            <column name="PRICE" valueNumeric="1000.00"/>
+        </insert>
+
+    </changeSet>
+
 </databaseChangeLog>

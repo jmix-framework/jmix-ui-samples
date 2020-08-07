@@ -1,0 +1,12 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <checkBoxGroup id="checkBoxGroupWithList"
+                           caption="Options List"/>
+            <checkBoxGroup id="checkBoxGroupWithMap"
+                           caption="Options Map"/>
+            <checkBoxGroup id="checkBoxGroupWithEnum"
+                           caption="Options Enum"/>
+        </hbox>
+    </layout>
+</window>

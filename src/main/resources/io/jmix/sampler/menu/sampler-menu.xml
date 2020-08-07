@@ -73,9 +73,31 @@
 
         <menu id="checkbox">
             <item id="checkbox-simple" docUrlSuffix="gui_CheckBox" image="components/checkbox/checkbox-simple.png"/>
-            <item id="checkbox-dataaware" docUrlSuffix="gui_CheckBox" image="components/checkbox/checkbox-dataaware.png">
+            <item id="checkbox-dataaware" docUrlSuffix="gui_CheckBox"
+                  image="components/checkbox/checkbox-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
+        <menu id="checkboxgroup">
+            <item id="checkboxgroup-simple" docUrlSuffix="gui_CheckBoxGroup"
+                  image="components/checkboxgroup/checkboxgroup-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="checkboxgroup-custom-options" docUrlSuffix="gui_CheckBoxGroup"
+                  image="components/checkboxgroup/checkboxgroup-custom-options.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="checkboxgroup-dataaware" docUrlSuffix="gui_CheckBoxGroup"
+                  image="components/checkboxgroup/checkboxgroup-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Product.java"/>
                 </otherFiles>
             </item>
         </menu>

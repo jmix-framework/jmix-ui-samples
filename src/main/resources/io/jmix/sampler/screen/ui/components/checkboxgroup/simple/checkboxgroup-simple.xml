@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <checkBoxGroup caption="Vertical"
+                       optionsEnum="io.jmix.sampler.entity.CustomerGrade"/>
+
+        <checkBoxGroup caption="Horizontal"
+                       optionsEnum="io.jmix.sampler.entity.CustomerGrade"
+                       orientation="horizontal"/>
+    </layout>
+</window>
