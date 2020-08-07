@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://browseCaption"
+        focusComponent="orderItemsTable">
+    <data readOnly="true">
+        <collection id="orderItemsDc"
+                    class="io.jmix.sampler.entity.OrderItem">
+            <fetchPlan extends="_local">
+                <property name="product" fetchPlan="_local"/>
+                <property name="order" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="orderItemsDl">
+                <query>
+                    <![CDATA[select e from sampler_OrderItem e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="orderItemsTable"
+            spacing="true">
+        <!-- todo filter
+        <filter id="filter"
+                applyTo="orderItemsTable"
+                dataLoader="orderItemsDl">
+            <properties include=".*"/>
+        </filter>-->
+        <table id="orderItemsTable"
+               width="100%"
+               dataContainer="orderItemsDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="product"/>
+                <column id="quantity"/>
+                <column id="order"/>
+            </columns>
+            <pagination/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="orderItemsTable.create"/>
+                <button id="editBtn" action="orderItemsTable.edit"/>
+                <button id="removeBtn" action="orderItemsTable.remove"/>
+            </buttonsPanel>
+        </table>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="msg://editorCaption"
+        focusComponent="form">
+    <data>
+        <instance id="orderItemDc"
+                  class="io.jmix.sampler.entity.OrderItem">
+            <fetchPlan extends="_local">
+                <property name="product" fetchPlan="_local"/>
+                <property name="order" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="orderItemDc">
+            <column width="250px">
+                <entityPicker id="productField" property="product">
+                    <actions>
+                        <action id="lookup" type="entity_lookup"/>
+                        <action id="clear" type="entity_clear"/>
+                    </actions>
+                </entityPicker>
+                <textField id="quantityField" property="quantity"/>
+                <entityPicker id="orderField" property="order">
+                    <actions>
+                        <action id="lookup" type="entity_lookup"/>
+                        <action id="clear" type="entity_clear"/>
+                    </actions>
+                </entityPicker>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button action="windowCommitAndClose"/>
+            <button action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

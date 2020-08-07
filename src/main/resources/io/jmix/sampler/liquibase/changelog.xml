@@ -397,4 +397,159 @@
 
     </changeSet>
 
+    <changeSet author="sampler" id="1.4">
+
+        <createTable tableName="SAMPLER_ORDER">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="VERSION" type="int" defaultValue="1">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATE_TS" type="datetime"/>
+            <column name="CREATED_BY" type="varchar(50)"/>
+            <column name="UPDATE_TS" type="datetime"/>
+            <column name="UPDATED_BY" type="varchar(50)"/>
+            <column name="DELETE_TS" type="datetime"/>
+            <column name="DELETED_BY" type="varchar(50)"/>
+
+            <column name="CUSTOMER_ID" type="varchar(36)"/>
+            <column name="DATE_" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AMOUNT" type="decimal"/>
+            <column name="DESCRIPTION" type="varchar(255)"/>
+        </createTable>
+        <createTable tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="VERSION" type="int" defaultValue="1">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATE_TS" type="datetime"/>
+            <column name="CREATED_BY" type="varchar(50)"/>
+            <column name="UPDATE_TS" type="datetime"/>
+            <column name="UPDATED_BY" type="varchar(50)"/>
+            <column name="DELETE_TS" type="datetime"/>
+            <column name="DELETED_BY" type="varchar(50)"/>
+
+            <column name="PRODUCT_ID" type="varchar(36)"/>
+            <column name="QUANTITY" type="decimal"/>
+            <column name="ORDER_ID" type="varchar(36)"/>
+        </createTable>
+
+        <insert tableName="SAMPLER_ORDER">
+            <column name="ID" value="23872068-ec86-ba3e-8d9b-a06d4c573aef"/>
+            <column name="VERSION" value="1"/>
+            <column name="CUSTOMER_ID" value="068ff1ae-992e-51db-b20f-8e21bcd19bfc"/>
+            <column name="DATE_" valueDate="2020-07-01"/>
+            <column name="AMOUNT" valueNumeric="24990.00"/>
+            <column name="DESCRIPTION" value="Office equipment"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER">
+            <column name="ID" value="3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf"/>
+            <column name="VERSION" value="1"/>
+            <column name="CUSTOMER_ID" value="0c3be785-1125-b755-7e79-3cc136cc1b13"/>
+            <column name="DATE_" valueDate="2020-07-11"/>
+            <column name="AMOUNT" valueNumeric="31999.00"/>
+            <column name="DESCRIPTION" value="Home theater"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER">
+            <column name="ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
+            <column name="VERSION" value="1"/>
+            <column name="CUSTOMER_ID" value="71ffb579-1b01-614a-0aea-5897c8c3bb91"/>
+            <column name="DATE_" valueDate="2020-07-30"/>
+            <column name="AMOUNT" valueNumeric="30998.00"/>
+            <column name="DESCRIPTION" value="Karaoke"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER">
+            <column name="ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
+            <column name="VERSION" value="1"/>
+            <column name="CUSTOMER_ID" value="ee875696-0a4d-0d54-41c8-b3dea6e3e7d1"/>
+            <column name="DATE_" valueDate="2020-07-26"/>
+            <column name="AMOUNT" valueNumeric="59999.00"/>
+            <column name="DESCRIPTION" value="Gamer equipment"/>
+        </insert>
+
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="08f26f09-4e6c-125a-12a0-0a8877a57ab2"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="d7496b01-215d-f90c-7442-4d7e8c47848f"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="1e52c338-7e02-058c-fc08-1e00ad56ebf0"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="d956ed3c-f7ab-687b-382d-0733db863b5c"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="3031898a-c8b9-f95a-8977-e97be9a4a8a8"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="2ab4dece-2f67-69cd-0a76-fe1cd33537f6"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="23872068-ec86-ba3e-8d9b-a06d4c573aef"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="3b5adca3-e01b-2bb0-36be-072165779a30"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="d92e7b2b-f1ea-511a-dda0-abf4e8fd7726"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="4695cbce-87f4-d034-efde-03c41489d601"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="3d829eba-cdb0-0446-49d4-9c13b1fe8269"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="5eb13363-3fc8-6f79-60a7-be0aa0fe998b"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="17bc9b95-b562-0dd2-f904-db6df80b9c71"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="6d654cd6-dc7a-755d-17a0-bec92b0706b3"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="d956ed3c-f7ab-687b-382d-0733db863b5c"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="727cbc21-8b5d-3d49-4daf-86d664f0a737"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="3d829eba-cdb0-0446-49d4-9c13b1fe8269"/>
+            <column name="QUANTITY" valueNumeric="10.000"/>
+            <column name="ORDER_ID" value="23872068-ec86-ba3e-8d9b-a06d4c573aef"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="d27771f8-5bd8-d510-3026-f655c4d7c43a"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="dab66821-e3b0-b6a8-eae1-e0b3f0e71d4f"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="df912333-fa7b-2606-c598-1c0135f1247b"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="dab66821-e3b0-b6a8-eae1-e0b3f0e71d4f"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
+        </insert>
+        <insert tableName="SAMPLER_ORDER_ITEM">
+            <column name="ID" value="e2e78593-5939-2941-4518-f79e47c7f257"/>
+            <column name="VERSION" value="1"/>
+            <column name="PRODUCT_ID" value="17bc9b95-b562-0dd2-f904-db6df80b9c71"/>
+            <column name="QUANTITY" valueNumeric="1.000"/>
+            <column name="ORDER_ID" value="3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf"/>
+        </insert>
+
+    </changeSet>
+
 </databaseChangeLog>
