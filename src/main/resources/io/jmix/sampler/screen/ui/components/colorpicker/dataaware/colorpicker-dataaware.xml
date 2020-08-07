@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="colorDc"
+                  class="io.jmix.sampler.entity.Color"
+                  fetchPlan="_local"/>
+    </data>
+    <layout spacing="true">
+        <colorPicker dataContainer="colorDc"
+                     property="hex"/>
+        <hbox spacing="true">
+            <label value="Value in the Container:"/>
+            <label dataContainer="colorDc"
+                   property="hex"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,7 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <colorPicker id="colorPicker"/>
+        <button id="button"
+                caption="msg://showValueBtn"/>
+    </layout>
+</window>

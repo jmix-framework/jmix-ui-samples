@@ -1,0 +1,6 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <colorPicker id="colorPicker"
+                     defaultCaptionEnabled="true"/>
+    </layout>
+</window>

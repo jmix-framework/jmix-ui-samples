@@ -375,4 +375,26 @@
 
     </changeSet>
 
+    <changeSet author="sampler" id="1.3">
+
+        <createTable tableName="SAMPLER_COLOR">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="VERSION" type="int" defaultValue="1">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATE_TS" type="datetime"/>
+            <column name="CREATED_BY" type="varchar(50)"/>
+            <column name="UPDATE_TS" type="datetime"/>
+            <column name="UPDATED_BY" type="varchar(50)"/>
+            <column name="DELETE_TS" type="datetime"/>
+            <column name="DELETED_BY" type="varchar(50)"/>
+
+            <column name="NAME" type="varchar(255)"/>
+            <column name="HEX" type="varchar(255)"/>
+        </createTable>
+
+    </changeSet>
+
 </databaseChangeLog>

@@ -1,0 +1,15 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <colorPicker hsvVisible="true"
+                     historyVisible="true"
+                     swatchesVisible="true"
+                     popupCaption="msg://colorPicker.popupCaption"
+                     confirmButtonCaption="msg://colorPicker.confirmButtonCaption"
+                     cancelButtonCaption="msg://colorPicker.cancelButtonCaption"
+                     swatchesTabCaption="msg://colorPicker.swatchesTabCaption"
+                     lookupAllCaption="msg://colorPicker.lookupAllCaption"
+                     lookupRedCaption="msg://colorPicker.lookupRedCaption"
+                     lookupBlueCaption="msg://colorPicker.lookupBlueCaption"
+                     lookupGreenCaption="msg://colorPicker.lookupGreenCaption"/>
+    </layout>
+</window>

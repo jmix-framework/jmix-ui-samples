@@ -101,6 +101,23 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="colorpicker">
+            <item id="colorpicker-simple" docUrlSuffix="gui_ColorPicker"
+                  image="components/colorpicker/colorpicker-simple.png"/>
+            <item id="colorpicker-default-caption" docUrlSuffix="gui_ColorPicker"
+                  image="components/colorpicker/colorpicker-default-caption.png"/>
+            <item id="colorpicker-dataaware" docUrlSuffix="gui_ColorPicker"
+                  image="components/colorpicker/colorpicker-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Color.java"/>
+                </otherFiles>
+            </item>
+            <item id="colorpicker-tabs" docUrlSuffix="gui_ColorPicker"
+                  image="components/colorpicker/colorpicker-tabs.png"/>
+            <item id="colorpicker-captions" docUrlSuffix="gui_ColorPicker"
+                  image="components/colorpicker/colorpicker-captions.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
