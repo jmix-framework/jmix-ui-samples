@@ -137,6 +137,17 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="currencyfield">
+            <item id="currencyfield-simple" docUrlSuffix="gui_CurrencyField"
+                  image="components/currencyfield/currencyfield-simple.png"/>
+            <item id="currencyfield-annotation" docUrlSuffix="gui_CurrencyField"
+                  image="components/currencyfield/currencyfield-annotation.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Product.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

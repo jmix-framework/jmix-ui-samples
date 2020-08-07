@@ -15,7 +15,7 @@
         <form id="form" dataContainer="productDc">
             <column width="250px">
                 <textField id="nameField" property="name"/>
-                <currencyField id="priceField" property="price" currency="$"/>
+                <currencyField id="priceField" property="price"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

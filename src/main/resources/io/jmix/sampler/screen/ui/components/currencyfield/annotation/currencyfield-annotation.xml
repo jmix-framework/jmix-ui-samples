@@ -1,0 +1,15 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="productDc"
+                  class="io.jmix.sampler.entity.Product"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <form id="form" dataContainer="productDc">
+            <column width="250px">
+                <textField id="nameField" property="name"/>
+                <currencyField id="priceField" property="price"/>
+            </column>
+        </form>
+    </layout>
+</window>
