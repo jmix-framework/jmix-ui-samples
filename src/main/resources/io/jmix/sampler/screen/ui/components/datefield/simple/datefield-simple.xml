@@ -1,0 +1,8 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <dateField id="dateField"
+                   caption="msg://dateField"/>
+        <button id="showValueBtn"
+                caption="msg://showValueBtn"/>
+    </layout>
+</window>

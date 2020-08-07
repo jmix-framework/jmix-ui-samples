@@ -1,0 +1,14 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <hbox spacing="true">
+            <dateField resolution="YEAR" caption="YEAR"/>
+            <dateField resolution="MONTH" caption="MONTH"/>
+            <dateField resolution="DAY" caption="DAY"/>
+        </hbox>
+        <hbox spacing="true">
+            <dateField resolution="HOUR" caption="HOUR"/>
+            <dateField resolution="MIN" caption="MIN"/>
+            <dateField resolution="SEC" caption="SEC"/>
+        </hbox>
+    </layout>
+</window>

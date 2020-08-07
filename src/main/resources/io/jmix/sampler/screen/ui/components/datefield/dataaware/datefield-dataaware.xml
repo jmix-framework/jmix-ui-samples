@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="ordersDc"
+                  class="io.jmix.sampler.entity.Order"
+                  fetchPlan="_local"/>
+    </data>
+    <layout spacing="true">
+        <dateField dataContainer="ordersDc"
+                   property="date"/>
+        <hbox spacing="true">
+            <label value="Value in the Container:"/>
+            <label dataContainer="ordersDc"
+                   property="date"/>
+        </hbox>
+    </layout>
+</window>

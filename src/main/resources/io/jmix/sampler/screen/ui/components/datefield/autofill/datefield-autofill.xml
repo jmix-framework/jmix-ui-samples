@@ -1,0 +1,6 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <checkBox id="autofillField" caption="msg://autofillField"/>
+        <dateField id="dateField"/>
+    </layout>
+</window>

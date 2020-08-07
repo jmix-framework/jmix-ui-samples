@@ -1,0 +1,11 @@
+<p>Date and time accuracy can be defined using a <code>resolution</code> attribute. An attribute value should match the
+    <code>DateField.Resolution</code> enumeration - <code>SEC</code>, <code>MIN</code>, <code>HOUR</code>, <code>DAY</code>,
+    <code>MONTH</code>, <code>YEAR</code>. Default is <code>MIN</code>, i.e., to within a minute.</p>
+
+<p>If <code>resolution="DAY"</code> and <code>dateFormat</code> is not specified, the format will be taken from one
+    specified in the
+    <a href="https://doc.cuba-platform.com/manual-7.2/main_message_pack.html" target="_blank">main message pack</a>
+    with the <code>dateFormat</code> key.</p>
+
+<p>If <code>resolution="MIN"</code> and <code>dateFormat</code> is not specified,
+    the format will be taken from one specified in the main message pack with the <code>dateTimeFormat</code> key.</p>

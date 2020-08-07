@@ -148,6 +148,21 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="datefield">
+            <item id="datefield-simple" docUrlSuffix="gui_DateField" image="components/datefield/datefield-simple.png"/>
+            <item id="datefield-dataaware" docUrlSuffix="gui_DateField"
+                  image="components/datefield/datefield-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="datefield-format" docUrlSuffix="gui_DateField" image="components/datefield/datefield-format.png"/>
+            <item id="datefield-resolution" docUrlSuffix="gui_DateField"
+                  image="components/datefield/datefield-resolution.png"/>
+            <item id="datefield-autofill" docUrlSuffix="gui_DateField"
+                  image="components/datefield/datefield-autofill.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

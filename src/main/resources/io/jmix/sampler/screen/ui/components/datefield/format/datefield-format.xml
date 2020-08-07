@@ -1,0 +1,9 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <dateField caption="MM/yy"
+                       dateFormat="MM/yy"/>
+            <dateField caption="msg://dateFormat" dateFormat="msg://dateFormat"/>
+        </hbox>
+    </layout>
+</window>
