@@ -9,8 +9,8 @@ import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@UiController("link-button")
-@UiDescriptor("link-button.xml")
+@UiController("linkbutton")
+@UiDescriptor("linkbutton.xml")
 public class LinkButtonSample extends ScreenFragment {
 
     @Autowired

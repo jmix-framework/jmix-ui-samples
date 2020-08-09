@@ -35,11 +35,11 @@
             <item id="button-action" docUrlSuffix="gui_Button" image="components/button/button-action.png"/>
             <item id="button-programmatic-action" docUrlSuffix="gui_Button"
                   image="components/button/button-action.png"/>
-            <item id="link-button" docUrlSuffix="gui_LinkButton" image="components/linkbutton/link-button.png"/>
-            <item id="popup-button-simple" docUrlSuffix="gui_PopupButton"
-                  image="components/popupbutton/popup-button-simple.png"/>
-            <item id="popup-button-custom-layout" docUrlSuffix="gui_PopupButton"
-                  image="components/popupbutton/popup-button-custom-layout.png"/>
+            <item id="linkbutton" docUrlSuffix="gui_LinkButton" image="components/linkbutton/linkbutton.png"/>
+            <item id="popupbutton-simple" docUrlSuffix="gui_PopupButton"
+                  image="components/popupbutton/popupbutton-simple.png"/>
+            <item id="popupbutton-custom-layout" docUrlSuffix="gui_PopupButton"
+                  image="components/popupbutton/popupbutton-custom-layout.png"/>
         </menu>
 
         <menu id="calendar">

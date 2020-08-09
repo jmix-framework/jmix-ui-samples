@@ -11,8 +11,8 @@ import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@UiController("popup-button-simple")
-@UiDescriptor("popup-button-simple.xml")
+@UiController("popupbutton-simple")
+@UiDescriptor("popupbutton-simple.xml")
 public class PopupButtonSimpleSample extends ScreenFragment {
 
     @Autowired

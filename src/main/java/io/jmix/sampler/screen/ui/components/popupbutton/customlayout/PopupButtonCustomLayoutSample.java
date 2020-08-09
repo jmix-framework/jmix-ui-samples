@@ -12,8 +12,8 @@ import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-@UiController("popup-button-custom-layout")
-@UiDescriptor("popup-button-custom-layout.xml")
+@UiController("popupbutton-custom-layout")
+@UiDescriptor("popupbutton-custom-layout.xml")
 public class PopupButtonCustomLayoutSample extends ScreenFragment {
 
     @Autowired
