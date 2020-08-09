@@ -1,0 +1,20 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <form dataContainer="customerDc">
+            <column width="300px">
+                <textField property="name"/>
+                <textField property="lastName"/>
+            </column>
+            <column width="200px">
+                <textField property="age"/>
+                <comboBox property="grade"/>
+                <checkBox property="active"/>
+            </column>
+        </form>
+    </layout>
+</window>

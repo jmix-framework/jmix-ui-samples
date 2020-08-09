@@ -1,0 +1,25 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="orderDc"
+                  class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+        </instance>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <form dataContainer="orderDc">
+                <column width="250px">
+                    <field id="dateField" property="date"/>
+                    <field id="customerField" property="customer"/>
+                    <field id="amountField" property="amount"/>
+                    <field id="descriptionField" property="description"/>
+                </column>
+            </form>
+            <button id="showOrderBtn"
+                    align="MIDDLE_LEFT"
+                    caption="Show Order"/>
+        </hbox>
+    </layout>
+</window>

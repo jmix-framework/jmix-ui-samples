@@ -1,0 +1,27 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="Caption on TOP">
+                <form captionPosition="TOP"
+                      dataContainer="customerDc">
+                    <textField property="name"/>
+                    <textField property="lastName"/>
+                </form>
+            </groupBox>
+            <groupBox caption="Caption on LEFT">
+                <form captionPosition="LEFT"
+                      dataContainer="customerDc">
+                    <textField property="name"/>
+                    <textField property="lastName"/>
+                    <textField property="age"/>
+                    <comboBox property="grade"/>
+                </form>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

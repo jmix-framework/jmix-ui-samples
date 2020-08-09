@@ -178,6 +178,42 @@
             <item id="datepicker-resolution" docUrlSuffix="gui_DatePicker"
                   image="components/datepicker/datepicker-resolution.png"/>
         </menu>
+
+        <menu id="form">
+            <item id="form-simple" docUrlSuffix="gui_Form" image="components/form/form-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-column" docUrlSuffix="gui_Form" image="components/form/form-column.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-caption-position" docUrlSuffix="gui_Form" image="components/form/form-caption-position.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-caption-alignment" docUrlSuffix="gui_Form"
+                  image="components/form/form-caption-alignment.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-field" docUrlSuffix="gui_Form" image="components/form/form-field.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="form-span" docUrlSuffix="gui_Form" image="components/form/form-span.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

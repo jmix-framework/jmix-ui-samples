@@ -1,0 +1,31 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="Caption alignment = LEFT">
+                <form childrenCaptionAlignment="LEFT"
+                      childrenCaptionWidth="150px"
+                      dataContainer="customerDc">
+                    <textField property="name"/>
+                    <textField property="lastName"/>
+                    <textField property="age"/>
+                    <comboBox property="grade"/>
+                </form>
+            </groupBox>
+            <groupBox caption="Caption alignment = RIGHT">
+                <form childrenCaptionAlignment="RIGHT"
+                      childrenCaptionWidth="150px"
+                      dataContainer="customerDc">
+                    <textField property="name"/>
+                    <textField property="lastName"/>
+                    <textField property="age"/>
+                    <comboBox property="grade"/>
+                </form>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>
