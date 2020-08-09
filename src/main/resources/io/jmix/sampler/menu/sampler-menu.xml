@@ -214,6 +214,11 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="icons">
+            <item id="icons-all" docUrlSuffix="gui_icons" splitEnabled="true" image="components/icons/icons-all.png"/>
+            <item id="icons-simple" docUrlSuffix="gui_icons" image="components/icons/icons-simple.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

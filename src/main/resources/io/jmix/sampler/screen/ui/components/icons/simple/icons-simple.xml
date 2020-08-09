@@ -1,0 +1,17 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <groupBox id="groupBoxDeclarative"
+                      caption="msg://groupBoxDeclarative"
+                      spacing="true">
+                <label icon="EUR"
+                       value="EURO"/>
+                <label icon="font-icon:BITCOIN"
+                       value="BITCOIN"/>
+            </groupBox>
+            <groupBox id="groupBoxProgrammatic"
+                      caption="msg://groupBoxProgrammatic"
+                      spacing="true"/>
+        </hbox>
+    </layout>
+</window>

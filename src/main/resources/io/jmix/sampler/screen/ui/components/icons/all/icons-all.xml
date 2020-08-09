@@ -1,0 +1,9 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout stylename="sampler-scroll">
+        <scrollBox id="scrollBox"
+                   stylename="sampler-scroll">
+            <cssLayout id="cssLayout"
+                       width="100%"/>
+        </scrollBox>
+    </layout>
+</window>
