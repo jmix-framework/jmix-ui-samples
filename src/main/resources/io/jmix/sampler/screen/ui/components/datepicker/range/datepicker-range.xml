@@ -1,0 +1,5 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <datePicker id="datePicker" rangeStart="2020-07-15" rangeEnd="2020-07-19"/>
+    </layout>
+</window>

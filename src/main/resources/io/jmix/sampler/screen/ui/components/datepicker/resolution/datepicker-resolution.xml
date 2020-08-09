@@ -1,0 +1,9 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <hbox spacing="true">
+            <datePicker resolution="DAY" caption="DAY"/>
+            <datePicker resolution="MONTH" caption="MONTH"/>
+            <datePicker resolution="YEAR" caption="YEAR"/>
+        </hbox>
+    </layout>
+</window>

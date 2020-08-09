@@ -1,0 +1,8 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <datePicker id="datePicker"
+                    caption="msg://datePicker"/>
+        <button id="button"
+                caption="msg://showValueBtn"/>
+    </layout>
+</window>

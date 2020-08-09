@@ -163,6 +163,21 @@
             <item id="datefield-autofill" docUrlSuffix="gui_DateField"
                   image="components/datefield/datefield-autofill.png"/>
         </menu>
+
+        <menu id="datepicker">
+            <item id="datepicker-simple" docUrlSuffix="gui_DatePicker"
+                  image="components/datepicker/datepicker-simple.png"/>
+            <item id="datepicker-dataaware" docUrlSuffix="gui_DatePicker"
+                  image="components/datepicker/datepicker-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="datepicker-range" docUrlSuffix="gui_DatePicker"
+                  image="components/datepicker/datepicker-range.png"/>
+            <item id="datepicker-resolution" docUrlSuffix="gui_DatePicker"
+                  image="components/datepicker/datepicker-resolution.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
