@@ -219,6 +219,16 @@
             <item id="icons-all" docUrlSuffix="gui_icons" splitEnabled="true" image="components/icons/icons-all.png"/>
             <item id="icons-simple" docUrlSuffix="gui_icons" image="components/icons/icons-simple.png"/>
         </menu>
+
+        <menu id="image">
+            <item id="image-url" docUrlSuffix="gui_Image" image="components/image/image-url.png"/>
+            <item id="image-relative" docUrlSuffix="gui_Image" image="components/image/image-relative.png"/>
+            <item id="image-theme" docUrlSuffix="gui_Image" image="components/image/image-theme.png"/>
+            <item id="image-classpath" docUrlSuffix="gui_Image" image="components/image/image-classpath.png"/>
+            <item id="image-stream" docUrlSuffix="gui_Image" image="components/image/image-stream.png"/>
+            <item id="image-scale" docUrlSuffix="gui_Image" image="components/image/image-scale.png"/>
+            <item id="image-click" docUrlSuffix="gui_Image" image="components/image/image-click.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

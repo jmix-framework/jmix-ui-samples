@@ -1,0 +1,17 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <comboBox id="scaleComboBox"
+                  nullOptionVisible="false"
+                  textInputAllowed="false"/>
+        <groupBox caption="msg://scaleGroupBox"
+                  height="200px"
+                  width="250px">
+            <image id="image"
+                   align="MIDDLE_CENTER"
+                   height="140px"
+                   width="170px">
+                <relativePath path="VAADIN/themes/demo-helium/files/jmix-icon-login.svg"/>
+            </image>
+        </groupBox>
+    </layout>
+</window>

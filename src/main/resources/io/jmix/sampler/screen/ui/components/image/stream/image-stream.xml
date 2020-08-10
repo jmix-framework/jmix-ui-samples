@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <groupBox caption="msg://io.jmix.sampler.screen.ui.components.image/programmaticalyDefinedSource"
+                  height="250px"
+                  width="370px">
+            <image id="image"
+                   align="MIDDLE_CENTER"/>
+        </groupBox>
+    </layout>
+</window>

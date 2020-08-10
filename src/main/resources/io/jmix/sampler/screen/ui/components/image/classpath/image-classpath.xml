@@ -1,0 +1,20 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="msg://io.jmix.sampler.screen.ui.components.image/programmaticalyDefinedSource"
+                      height="250px"
+                      width="370px">
+                <image id="programmaticImage"
+                       align="MIDDLE_CENTER"/>
+            </groupBox>
+            <groupBox caption="msg://io.jmix.sampler.screen.ui.components.image/declarativelyDefinedSource"
+                      height="250px"
+                      width="370px">
+                <image id="declarativeImage"
+                       align="MIDDLE_CENTER">
+                    <classpath path="io/jmix/sampler/screen/ui/components/image/classpath/jmix-icon-login.svg"/>
+                </image>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

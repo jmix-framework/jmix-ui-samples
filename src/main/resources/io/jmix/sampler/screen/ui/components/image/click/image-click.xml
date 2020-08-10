@@ -1,0 +1,22 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="msg://singleClickHandler"
+                      height="250px"
+                      width="400px">
+                <image id="imageClick"
+                       align="MIDDLE_CENTER">
+                    <theme path="files/jmix-icon-login.svg"/>
+                </image>
+            </groupBox>
+            <groupBox caption="msg://doubleClickHandler"
+                      height="250px"
+                      width="400px">
+                <image id="imageDoubleClick"
+                       align="MIDDLE_CENTER">
+                    <theme path="files/jmix-icon-login.svg"/>
+                </image>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

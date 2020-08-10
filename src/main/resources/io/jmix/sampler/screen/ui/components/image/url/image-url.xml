@@ -1,0 +1,21 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="msg://io.jmix.sampler.screen.ui.components.image/programmaticalyDefinedSource"
+                      height="200px"
+                      width="370px">
+                <image id="programmaticImage"
+                       align="MIDDLE_CENTER"
+                       width="100%"/>
+            </groupBox>
+            <groupBox caption="msg://io.jmix.sampler.screen.ui.components.image/declarativelyDefinedSource"
+                      height="200px"
+                      width="370px">
+                <image id="declarativeImage"
+                       align="MIDDLE_CENTER">
+                    <url url="https://www.cuba-platform.com/sites/all/themes/cuba_adaptive/img/logo-cuba.png"/>
+                </image>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>
