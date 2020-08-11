@@ -119,6 +119,37 @@
                   image="components/colorpicker/colorpicker-captions.png"/>
         </menu>
 
+        <menu id="combobox">
+            <item id="combobox-simple" docUrlSuffix="gui_ComboBox" image="components/combobox/combobox-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="combobox-custom-options" docUrlSuffix="gui_ComboBox"
+                  image="components/combobox/combobox-custom-options.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="combobox-filter-mode" docUrlSuffix="gui_ComboBox"
+                  image="components/combobox/combobox-filter-mode.png"/>
+            <item id="combobox-user-input" docUrlSuffix="gui_ComboBox"
+                  image="components/combobox/combobox-user-input.png"/>
+            <item id="combobox-icon-provider" docUrlSuffix="gui_ComboBox"
+                  image="components/combobox/combobox-icon-provider.png"/>
+            <item id="combobox-options-style-provider" docUrlSuffix="gui_ComboBox"
+                  image="components/combobox/combobox-options-style-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/combobox/optionsstyleprovider/combobox-style.scss"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="contexthelp">
             <item id="contexthelp-field" docUrlSuffix="gui_attributes"
                   image="components/contexthelp/contexthelp-field.png"/>

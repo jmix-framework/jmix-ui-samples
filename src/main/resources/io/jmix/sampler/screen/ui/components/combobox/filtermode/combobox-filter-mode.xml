@@ -1,0 +1,18 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <comboBox id="noFilterComboBox"
+                      caption="NO"
+                      inputPrompt="Start typing"
+                      filterMode="NO"/>
+            <comboBox id="startsWithFilterComboBox"
+                      caption="STARTS_WITH"
+                      inputPrompt="Start typing"
+                      filterMode="STARTS_WITH"/>
+            <comboBox id="containsFilterComboBox"
+                      caption="CONTAINS"
+                      inputPrompt="Start typing"
+                      filterMode="CONTAINS"/>
+        </hbox>
+    </layout>
+</window>

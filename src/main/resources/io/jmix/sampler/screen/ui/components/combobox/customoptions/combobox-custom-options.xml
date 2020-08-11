@@ -1,0 +1,29 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="orderDc"
+                  class="io.jmix.sampler.entity.Order"
+                  fetchPlan="_local"/>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <comboBox id="amountComboBox"
+                      caption="Options List"
+                      dataContainer="orderDc"
+                      property="amount"/>
+            <comboBox id="ageComboBox"
+                      caption="Options Map"
+                      dataContainer="customerDc"
+                      property="age"
+                      nullName="(not selected)"/>
+            <comboBox id="gradleComboBox"
+                      caption="Options Enum"
+                      dataContainer="customerDc"
+                      optionsEnum="io.jmix.sampler.entity.CustomerGrade"
+                      property="grade"
+                      inputPrompt="Select grade"/>
+        </hbox>
+    </layout>
+</window>

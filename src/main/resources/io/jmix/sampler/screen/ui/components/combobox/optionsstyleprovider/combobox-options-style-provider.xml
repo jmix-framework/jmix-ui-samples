@@ -1,0 +1,12 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <comboBox id="comboBox"
+                  dataContainer="customerDc"
+                  property="grade"/>
+    </layout>
+</window>
