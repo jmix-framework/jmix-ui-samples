@@ -240,6 +240,8 @@
             <item id="label-html" docUrlSuffix="gui_Label" image="components/label/label-html.png"/>
             <item id="label-formatter" docUrlSuffix="gui_Label" image="components/label/label-formatter.png"/>
         </menu>
+
+        <item id="link-simple" docUrlSuffix="gui_Link" image="components/link/link-simple.png"/>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

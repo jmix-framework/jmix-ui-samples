@@ -1,0 +1,14 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <link caption="Link"
+              target="_blank"
+              url="https://github.com/Haulmont/jmix-sampler"/>
+        <link caption="Link"
+              icon="CHAIN"
+              target="_blank"
+              url="https://github.com/Haulmont/jmix-sampler"/>
+        <link icon="CHAIN"
+              target="_blank"
+              url="https://github.com/Haulmont/jmix-sampler"/>
+    </layout>
+</window>
