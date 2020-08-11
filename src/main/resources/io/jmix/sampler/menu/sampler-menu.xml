@@ -229,6 +229,17 @@
             <item id="image-scale" docUrlSuffix="gui_Image" image="components/image/image-scale.png"/>
             <item id="image-click" docUrlSuffix="gui_Image" image="components/image/image-click.png"/>
         </menu>
+
+        <menu id="label">
+            <item id="label-simple" docUrlSuffix="gui_Label" image="components/label/label-simple.png"/>
+            <item id="label-dataaware" docUrlSuffix="gui_Label" image="components/label/label-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="label-html" docUrlSuffix="gui_Label" image="components/label/label-html.png"/>
+            <item id="label-formatter" docUrlSuffix="gui_Label" image="components/label/label-formatter.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

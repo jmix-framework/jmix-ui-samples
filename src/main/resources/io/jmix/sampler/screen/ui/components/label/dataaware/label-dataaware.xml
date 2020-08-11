@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <textField dataContainer="customerDc"
+                       property="name"/>
+            <label align="MIDDLE_CENTER"
+                   dataContainer="customerDc"
+                   property="name"/>
+        </hbox>
+    </layout>
+</window>

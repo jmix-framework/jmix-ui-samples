@@ -1,0 +1,5 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <label id="htmlLabel" htmlEnabled="true"/>
+    </layout>
+</window>

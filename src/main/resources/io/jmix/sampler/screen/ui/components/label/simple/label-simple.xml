@@ -1,0 +1,7 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <label value="msg://simpleLabel.caption"/>
+        <label value="Semper ipsum quisque augue tempus libero felis viverra class scelerisque"
+               width="200px"/>
+    </layout>
+</window>
