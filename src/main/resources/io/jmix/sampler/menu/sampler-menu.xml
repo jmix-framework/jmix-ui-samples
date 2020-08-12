@@ -210,6 +210,14 @@
                   image="components/datepicker/datepicker-resolution.png"/>
         </menu>
 
+        <item id="entitycombobox-simple" docUrlSuffix="gui_EntityComboBox"
+              image="components/entitycombobox/entitycombobox-simple.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/Customer.java"/>
+                <file name="io/jmix/sampler/entity/Order.java"/>
+            </otherFiles>
+        </item>
+
         <menu id="form">
             <item id="form-simple" docUrlSuffix="gui_Form" image="components/form/form-simple.png">
                 <otherFiles>
