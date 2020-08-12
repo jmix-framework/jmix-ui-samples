@@ -1,0 +1,18 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <singleSelectList id="singleSelectListWithList"
+                              caption="Options List"
+                              height="180px"
+                              width="160px"/>
+            <singleSelectList id="singleSelectListWithMap"
+                              caption="Options Map"
+                              height="180px"
+                              width="160px"/>
+            <singleSelectList id="singleSelectListWithEnum"
+                              caption="Options Enum"
+                              height="180px"
+                              width="160px"/>
+        </hbox>
+    </layout>
+</window>

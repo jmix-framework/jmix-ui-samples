@@ -1,0 +1,13 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <singleSelectList dataContainer="customerDc"
+                          property="grade"
+                          height="180px"
+                          width="160px"/>
+    </layout>
+</window>
