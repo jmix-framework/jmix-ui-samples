@@ -1,0 +1,20 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="orderDc"
+                  class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+        </instance>
+    </data>
+    <layout>
+        <entityPicker caption="Choose a customer"
+                      dataContainer="orderDc"
+                      property="customer">
+            <actions>
+                <action id="lookup" type="entity_lookup"/>
+                <action id="clear" type="entity_clear"/>
+            </actions>
+        </entityPicker>
+    </layout>
+</window>

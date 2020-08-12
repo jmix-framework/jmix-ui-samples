@@ -218,6 +218,29 @@
             </otherFiles>
         </item>
 
+        <menu id="entitypicker">
+            <item id="entitypicker-simple" docUrlSuffix="gui_EntityPicker"
+                  image="components/entitypicker/entitypicker-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="entitypicker-actions" docUrlSuffix="gui_EntityPicker"
+                  image="components/entitypicker/entitypicker-actions.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="entitypicker-metaclass" docUrlSuffix="gui_EntityPicker"
+                  image="components/entitypicker/entitypicker-metaclass.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="form">
             <item id="form-simple" docUrlSuffix="gui_Form" image="components/form/form-simple.png">
                 <otherFiles>

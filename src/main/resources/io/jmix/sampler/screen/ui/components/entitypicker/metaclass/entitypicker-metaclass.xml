@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <entityPicker id="entityPicker" metaClass="sampler_Customer">
+            <actions>
+                <action id="lookup" type="entity_lookup"/>
+                <action id="clear" type="entity_clear"/>
+            </actions>
+        </entityPicker>
+    </layout>
+</window>
