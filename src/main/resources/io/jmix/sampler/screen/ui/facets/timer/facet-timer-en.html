@@ -1,0 +1,21 @@
+<p><code>Timer</code> is a non-visual component designed to run some screen controller code at specified time intervals.
+    The timer works in a thread that handles user interface events, therefore it can update screen components. Timer
+    stops working when a screen it was created for is closed.</p>
+
+<p>Timers are described using the <code>timer</code> element.</p>
+
+<ul>
+    <li><code>delay</code> - a required attribute; it defines timer interval in milliseconds;</li>
+
+    <li><code>autostart</code> - an optional attribute; when it is set to <code>true</code>, timer starts immediately
+        after the screen is opened. By default, the value is <code>false</code>, which means that the timer will start
+        only when its <code>start()</code> method is invoked;
+    </li>
+
+    <li><code>repeating</code> - an optional attribute, turns on repeated executions of the timer. If the attribute is
+        set to <code>true</code>, the timer runs in cycles at equal intervals defined in the <code>delay</code>
+        attribute. Otherwise, the timer runs only once – <code>delay</code> milliseconds after the timer start.
+    </li>
+</ul>
+
+<p>To execute some code on timer, subscribe to its <code>TimerActionEvent</code> in the screen controller.</p>

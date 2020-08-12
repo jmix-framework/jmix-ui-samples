@@ -1,0 +1,44 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <actions>
+        <action id="openDialogAction" caption="Open a screen as modal dialog"/>
+        <action id="openLookupAction" caption="Open a lookup screen"/>
+    </actions>
+    <facets>
+        <screen id="actionScreen"
+                openMode="DIALOG"
+                screenId="sampler_Customer.browse"
+                onAction="openDialogAction"/>
+        <screen id="buttonScreen"
+                openMode="NEW_TAB"
+                screenClass="io.jmix.sampler.screen.entity.customer.CustomerBrowse"
+                onButton="openNewTabBtn"/>
+
+        <lookupScreen id="lookupScreen"
+                      openMode="DIALOG"
+                      entityClass="io.jmix.sampler.entity.Customer"
+                      onAction="openLookupAction"/>
+
+        <editorScreen id="editorScreen"
+                      openMode="NEW_TAB"
+                      editMode="CREATE"
+                      entityClass="io.jmix.sampler.entity.Customer"
+                      screenClass="io.jmix.sampler.screen.entity.customer.CustomerEdit"
+                      onButton="openEditBtn"/>
+    </facets>
+    <layout>
+        <vbox spacing="true" width="250px">
+            <button id="openDialogBtn"
+                    action="openDialogAction"
+                    width="100%"/>
+            <button id="openNewTabBtn"
+                    caption="Open a screen in new tab"
+                    width="100%"/>
+            <button id="openLookupBtn"
+                    action="openLookupAction"
+                    width="100%"/>
+            <button id="openEditBtn"
+                    caption="Open an editor screen"
+                    width="100%"/>
+        </vbox>
+    </layout>
+</window>

@@ -1,0 +1,19 @@
+<p>The <code>Screen facets</code> are non-visual components that provide an ability to pre-configure screen opening and
+    pass properties in XML descriptor. Screens can be pre-configure via corresponding facets:</p>
+
+<ul>
+    <li><code>ScreenFacet</code> - corresponds to <code>ScreenBuilders#screen</code>;</li>
+
+    <li><code>EditorScreenFacet</code> - corresponds to <code>ScreenBuilders#editor</code>;</li>
+
+    <li><code>LookupScreenFacet</code> - corresponds to <code>ScreenBuilders#lookup</code>.</li>
+</ul>
+
+<p>Screens can be opened explicitly via corresponding method: <code>show()</code> or subscribed to any action or button
+    by id:</p>
+
+<ul>
+    <li><code>onButton</code> - specifies the button id that opens a screen;</li>
+
+    <li><code>onAction</code> - specifies the action id that opens a screen.</li>
+</ul>

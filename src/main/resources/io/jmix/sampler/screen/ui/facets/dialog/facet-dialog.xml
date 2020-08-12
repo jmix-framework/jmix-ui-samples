@@ -1,0 +1,52 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <actions>
+        <action id="messageDialogAction" caption="Show MessageDialog"/>
+    </actions>
+    <facets>
+        <messageDialog id="messageDialog"
+                       caption="Message Dialog"
+                       message="Message"
+                       modal="true"
+                       closeOnClickOutside="true"
+                       onAction="messageDialogAction"/>
+
+        <optionDialog id="optionDialog"
+                      caption="Option Dialog"
+                      message="Message"
+                      onButton="optionDialogBtn">
+            <actions>
+                <action id="ok"
+                        caption="OK"
+                        icon="CHECK"
+                        primary="true"/>
+                <action id="cancel"
+                        caption="Cancel"
+                        icon="BAN"/>
+            </actions>
+        </optionDialog>
+
+        <inputDialog id="inputDialog"
+                     caption="Input Dialog"
+                     onButton="inputDialogBtn">
+            <parameters>
+                <booleanParameter id="boolParam"
+                                  caption="Boolean parameter"
+                                  defaultValue="true"
+                                  required="true"/>
+                <intParameter id="intParam"
+                              caption="Integer parameter"
+                              required="true"/>
+            </parameters>
+        </inputDialog>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <button id="messageDialogBtn"
+                    action="messageDialogAction"/>
+            <button id="optionDialogBtn"
+                    caption="Show OptionDialog"/>
+            <button id="inputDialogBtn"
+                    caption="Show InputDialog"/>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,21 @@
+<p><code>Dialog facets</code> - это невизуальные компоненты, позволяющие декларативно настроить стандартные диалоговые
+    окна в XML дескрипторе экрана. Диалоговые окна могут быть настроены с помощью следующих невизуальных компонентов:
+</p>
+
+<ul>
+    <li><code>MessageDialogFacet</code> - соответсвует вызову <code>Dialogs#createMessageDialog</code>;</li>
+
+    <li><code>OptionDialogFacet</code> - соответсвует вызову <code>Dialogs#createOptionDialog</code>;</li>
+
+    <li><code>InputDialogFacet</code> - соответсвует вызову <code>Dialogs#createInputDialog</code>.</li>
+</ul>
+
+<p>Диалоговые окна могут быть открыты с помощью с помощью вызова соответсвующего метода: <code>show()</code> или с
+    помощью подписки на действие или кнопку по идентификатору:</p>
+
+<ul>
+    <li><code>onButton</code> - определяет идентификатор кнопки, которая вызовет показ диалогового окна;</li>
+
+    <li><code>onAction</code> - определяет идентификатор действия, которое вызовет показ диалогового окна.</li>
+</ul>
+

@@ -1,0 +1,23 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <actions>
+        <action id="facetAction" caption="Action subscription"/>
+    </actions>
+    <facets>
+        <notification id="actionNotification"
+                      caption="Action performed"
+                      type="TRAY"
+                      onAction="facetAction"/>
+        <notification id="buttonNotification"
+                      caption="Button clicked"
+                      type="HUMANIZED"
+                      onButton="facetBtn"/>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <button id="facetActionBtn"
+                    action="facetAction"/>
+            <button id="facetBtn"
+                    caption="Button subscription"/>
+        </hbox>
+    </layout>
+</window>

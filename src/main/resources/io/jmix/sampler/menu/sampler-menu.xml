@@ -297,4 +297,18 @@
         </menu>
     </menu>
 
+    <menu id="facets" image="mainmenu/dialogsAndNotifications.svg">
+        <item id="facet-dialog" docUrlSuffix="gui_facets" image="facets/facet-dialog.png"/>
+        <item id="facet-notification" docUrlSuffix="gui_facets" image="facets/facet-notification.png"/>
+        <item id="facet-screen" docUrlSuffix="gui_facets" image="facets/facet-screen.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/entity/customer/customer-browse.xml"/>
+                <file name="io/jmix/sampler/screen/entity/customer/CustomerBrowse.java"/>
+                <file name="io/jmix/sampler/screen/entity/customer/customer-edit.xml"/>
+                <file name="io/jmix/sampler/screen/entity/customer/CustomerEdit.java"/>
+            </otherFiles>
+        </item>
+        <item id="facet-timer" docUrlSuffix="gui_facets" image="facets/facet-timer.png"/>
+    </menu>
+
 </menu-config>
