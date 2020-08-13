@@ -1,0 +1,15 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <popupView caption="Hide on mouse out" minimizedValue="Click me!">
+            <vbox width="60px" height="40px">
+                <label value="Content" align="MIDDLE_CENTER"/>
+            </vbox>
+        </popupView>
+        <popupView caption="Hide by clicking on outside area" minimizedValue="Click me!" hideOnMouseOut="false">
+            <vbox spacing="true">
+                <textField caption="Text Field"/>
+                <button caption="Button" align="MIDDLE_RIGHT"/>
+            </vbox>
+        </popupView>
+    </layout>
+</window>

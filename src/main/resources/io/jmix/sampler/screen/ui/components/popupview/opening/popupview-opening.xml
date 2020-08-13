@@ -1,0 +1,35 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDs"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout spacing="true">
+        <popupView id="popupView"
+                   minimizedValue="Minimized Value"
+                   hideOnMouseOut="false">
+            <vbox width="300px" height="400px">
+                <table id="customerTable"
+                       dataContainer="customersDs"
+                       height="100%"
+                       width="100%">
+                    <columns>
+                        <column id="name"/>
+                        <column id="lastName"/>
+                        <column id="age"/>
+                        <column id="active"/>
+                        <column id="grade"/>
+                    </columns>
+                </table>
+            </vbox>
+        </popupView>
+        <button id="button"
+                caption="Open the popup programmatically"/>
+    </layout>
+</window>

@@ -312,6 +312,21 @@
             </otherFiles>
         </item>
 
+        <menu id="popupview">
+            <item id="popupview-closing" docUrlSuffix="gui_PopupView"
+                  image="components/popupview/popupview-closing.png"/>
+            <item id="popupview-opening" docUrlSuffix="gui_PopupView"
+                  image="components/popupview/popupview-opening.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="popupview-listener" docUrlSuffix="gui_PopupView"
+                  image="components/popupview/popupview-listener.png"/>
+            <item id="popupview-minimized-value" docUrlSuffix="gui_PopupView"
+                  image="components/popupview/popupview-minimized-value.png"/>
+        </menu>
+
         <menu id="singleselectlist">
             <item id="singleselectlist-simple" docUrlSuffix="gui_SingleSelectList"
                   image="components/singleselectlist/singleselectlist-simple.png">
