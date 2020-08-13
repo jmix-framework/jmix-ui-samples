@@ -1,0 +1,6 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <progressBar indeterminate="true" width="200px"/>
+        <progressBar indeterminate="true" stylename="indeterminate-circle"/>
+    </layout>
+</window>

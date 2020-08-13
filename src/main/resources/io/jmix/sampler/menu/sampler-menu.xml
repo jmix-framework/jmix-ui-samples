@@ -327,6 +327,13 @@
                   image="components/popupview/popupview-minimized-value.png"/>
         </menu>
 
+        <menu id="progressbar">
+            <item id="progressbar-standard" docUrlSuffix="gui_ProgressBar"
+                  image="components/progressbar/progressbar-standard.png"/>
+            <item id="progressbar-indeterminate" docUrlSuffix="gui_ProgressBar"
+                  image="components/progressbar/progressbar-indeterminate.png"/>
+        </menu>
+
         <menu id="singleselectlist">
             <item id="singleselectlist-simple" docUrlSuffix="gui_SingleSelectList"
                   image="components/singleselectlist/singleselectlist-simple.png">
