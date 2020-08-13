@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout expand="sourceCodeEditor" spacing="true">
+        <hbox spacing="true">
+            <checkBox id="highlightActiveLineCheck"
+                      align="BOTTOM_LEFT"
+                      caption="Highlight Active Line"/>
+            <checkBox id="printMarginCheck"
+                      align="BOTTOM_LEFT"
+                      caption="Print Margin"/>
+            <checkBox id="showGutterCheck"
+                      align="BOTTOM_LEFT"
+                      caption="Show Gutter"/>
+        </hbox>
+        <sourceCodeEditor id="sourceCodeEditor" width="100%"/>
+    </layout>
+</window>

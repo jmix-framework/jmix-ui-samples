@@ -1,0 +1,9 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <hbox height="100%" width="100%" spacing="true">
+            <sourceCodeEditor caption="Tab key is ignored" height="100%" width="100%"/>
+            <sourceCodeEditor caption="Tab key is handled" handleTabKey="true"
+                              height="100%" width="100%"/>
+        </hbox>
+    </layout>
+</window>

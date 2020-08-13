@@ -375,6 +375,21 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="sourcecodeeditor">
+            <item id="sourcecodeeditor-simple" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+                  image="components/sourcecodeeditor/sourcecodeeditor-simple.png"/>
+            <item id="sourcecodeeditor-mode" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+                  image="components/sourcecodeeditor/sourcecodeeditor-mode.png"/>
+            <item id="sourcecodeeditor-tab" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+                  image="components/sourcecodeeditor/sourcecodeeditor-tab.png"/>
+            <item id="sourcecodeeditor-suggester" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+                  image="components/sourcecodeeditor/sourcecodeeditor-suggester.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

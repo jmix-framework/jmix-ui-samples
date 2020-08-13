@@ -1,0 +1,9 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout expand="sourceCodeEditor" spacing="true">
+        <comboBox id="modeField"
+                  caption="Mode"
+                  textInputAllowed="false"
+                  required="true"/>
+        <sourceCodeEditor id="sourceCodeEditor" width="100%"/>
+    </layout>
+</window>
