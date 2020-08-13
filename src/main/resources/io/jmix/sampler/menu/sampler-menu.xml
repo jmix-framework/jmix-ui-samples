@@ -334,6 +334,27 @@
                   image="components/progressbar/progressbar-indeterminate.png"/>
         </menu>
 
+        <menu id="radiobuttongroup">
+            <item id="radiobuttongroup-simple" docUrlSuffix="gui_RadioButtonGroup"
+                  image="components/radiobuttongroup/radiobuttongroup-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="radiobuttongroup-custom-options" docUrlSuffix="gui_RadioButtonGroup"
+                  image="components/radiobuttongroup/radiobuttongroup-custom-options.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="radiobuttongroup-dataaware" docUrlSuffix="gui_RadioButtonGroup"
+                  image="components/radiobuttongroup/radiobuttongroup-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Product.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="singleselectlist">
             <item id="singleselectlist-simple" docUrlSuffix="gui_SingleSelectList"
                   image="components/singleselectlist/singleselectlist-simple.png">

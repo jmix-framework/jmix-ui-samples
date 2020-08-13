@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="productsDc"
+                    class="io.jmix.sampler.entity.Product"
+                    fetchPlan="_local">
+            <loader id="productsLoader">
+                <query>
+                    <![CDATA[select e from sampler_Product e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <radioButtonGroup optionsContainer="productsDc"/>
+    </layout>
+</window>

@@ -1,0 +1,12 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <radioButtonGroup id="radioButtonGroupWithList"
+                              caption="Options List"/>
+            <radioButtonGroup id="radioButtonGroupWithMap"
+                              caption="Options Map"/>
+            <radioButtonGroup id="radioButtonGroupWithEnum"
+                              caption="Options Enum"/>
+        </hbox>
+    </layout>
+</window>

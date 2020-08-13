@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <radioButtonGroup caption="Vertical"
+                          optionsEnum="io.jmix.sampler.entity.CustomerGrade"/>
+
+        <radioButtonGroup caption="Horizontal"
+                          optionsEnum="io.jmix.sampler.entity.CustomerGrade"
+                          orientation="horizontal"/>
+    </layout>
+</window>
