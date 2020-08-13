@@ -1,0 +1,18 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <suggestionField id="stringSuggestionField"
+                             caption="String"
+                             inputPrompt="Start typing">
+            </suggestionField>
+            <suggestionField id="enumSuggestionField"
+                             caption="Enum"
+                             inputPrompt="Start typing">
+            </suggestionField>
+            <suggestionField id="optionWrapperSuggestionField"
+                             caption="OptionWrapper"
+                             inputPrompt="Start typing">
+            </suggestionField>
+        </hbox>
+    </layout>
+</window>

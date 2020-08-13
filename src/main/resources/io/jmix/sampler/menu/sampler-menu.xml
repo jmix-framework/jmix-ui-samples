@@ -376,6 +376,8 @@
             </item>
         </menu>
 
+        <item id="slider-simple" docUrlSuffix="gui_Slider" image="components/slider/slider-simple.png"/>
+
         <menu id="sourcecodeeditor">
             <item id="sourcecodeeditor-simple" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
                   image="components/sourcecodeeditor/sourcecodeeditor-simple.png"/>
@@ -387,6 +389,29 @@
                   image="components/sourcecodeeditor/sourcecodeeditor-suggester.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
+        <menu id="suggestionfield">
+            <item id="suggestionfield-dataaware" docUrlSuffix="gui_SuggestionField"
+                  image="components/suggestionfield/suggestionfield-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="suggestionfield-option-type" docUrlSuffix="gui_SuggestionField"
+                  image="components/suggestionfield/suggestionfield-option-type.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/SendingStatus.java"/>
+                </otherFiles>
+            </item>
+            <item id="suggestionfield-options-style-provider" docUrlSuffix="gui_SuggestionField"
+                  image="components/suggestionfield/suggestionfield-options-style-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
         </menu>

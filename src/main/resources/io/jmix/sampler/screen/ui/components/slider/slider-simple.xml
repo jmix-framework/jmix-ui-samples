@@ -1,0 +1,9 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <slider orientation="horizontal"
+                resolution="3"
+                updateValueOnClick="true"
+                width="200px"/>
+        <slider orientation="vertical" max="1000"/>
+    </layout>
+</window>

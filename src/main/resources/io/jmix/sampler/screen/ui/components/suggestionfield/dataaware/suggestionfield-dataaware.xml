@@ -1,0 +1,31 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="orderDc"
+                  class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+        </instance>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <suggestionField id="suggestionField"
+                         dataContainer="orderDc"
+                         inputPrompt="Start typing"
+                         property="customer">
+            <query entityClass="io.jmix.sampler.entity.Customer"
+                   escapeValueForLike="true"
+                   searchStringFormat="%$searchString%">
+                select c from sampler_Customer c where lower(c.name) like lower(:searchString) escape '\'
+            </query>
+        </suggestionField>
+    </layout>
+</window>
