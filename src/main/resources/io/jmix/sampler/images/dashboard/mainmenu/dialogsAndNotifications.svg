@@ -9,8 +9,8 @@
 	.st3{fill:none;stroke:#FFFFFF;stroke-width:2.8109;stroke-miterlimit:10;}
 	.st4{opacity:0.5;}
 	.st5{fill:#E6E7E8;stroke:#FFFFFF;stroke-width:2.8109;stroke-miterlimit:10;}
-	.st6{fill:#E3F2F8;}
-	.st7{fill:#64B5F6;}
+	.st6{fill:#E3DCFF;}
+	.st7{fill:#6F5CC3;}
 	.st8{fill:#FFFFFF;stroke:#555C6A;stroke-miterlimit:10;}
 	.st9{fill:#FFFFFF;}
 	.st10{opacity:7.000000e-02;clip-path:url(#SVGID_2_);}
@@ -30,7 +30,7 @@
 	.st24{opacity:7.000000e-02;clip-path:url(#SVGID_4_);}
 	.st25{opacity:7.000000e-02;clip-path:url(#SVGID_6_);}
 	.st26{opacity:0.2;}
-	.st27{fill-rule:evenodd;clip-rule:evenodd;fill:#64B5F6;stroke:#555C6A;stroke-width:0.8995;stroke-miterlimit:10;}
+	.st27{fill-rule:evenodd;clip-rule:evenodd;fill:#6F5CC3;stroke:#555C6A;stroke-width:0.8995;stroke-miterlimit:10;}
 	.st28{opacity:0.2;fill:#007AC0;}
 	.st29{fill:none;stroke:#555C6A;stroke-width:0.8995;stroke-miterlimit:10;stroke-dasharray:10.3401;}
 	.st30{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#555C6A;stroke-width:0.8995;stroke-miterlimit:10;}
@@ -42,7 +42,7 @@
 	.st36{fill:none;stroke:#555C6A;stroke-width:0.8995;stroke-miterlimit:10;}
 	.st37{opacity:7.000000e-02;clip-path:url(#SVGID_10_);}
 	.st38{fill:#CFD8DC;stroke:#555C6A;stroke-width:0.9152;stroke-miterlimit:10;}
-	.st39{fill:#64B5F6;stroke:#555C6A;stroke-width:0.9152;stroke-miterlimit:10;}
+	.st39{fill:#6F5CC3;stroke:#555C6A;stroke-width:0.9152;stroke-miterlimit:10;}
 	.st40{fill:#FFFFFF;stroke:#555C6A;stroke-width:0.9152;stroke-miterlimit:10;}
 	.st41{fill:#898E9F;}
 	.st42{fill:none;stroke:#555C6A;stroke-width:0.9152;stroke-miterlimit:10;}
@@ -77,7 +77,7 @@
 	.st71{fill:none;stroke:#555C6A;stroke-width:0.6509;stroke-miterlimit:10;}
 	.st72{fill:none;stroke:#555C6A;stroke-width:0.9207;stroke-miterlimit:10;}
 	.st73{fill:none;stroke:#555C6A;stroke-width:0.9207;stroke-miterlimit:10;stroke-dasharray:8.3696,8.3696;}
-	.st74{fill:#64B5F6;stroke:#555C6A;stroke-width:0.9207;stroke-miterlimit:10;}
+	.st74{fill:#6F5CC3;stroke:#555C6A;stroke-width:0.9207;stroke-miterlimit:10;}
 	.st75{fill:#FFFFFF;stroke:#555C6A;stroke-width:0.9207;stroke-miterlimit:10;}
 	.st76{fill:#E8E8EB;stroke:#555C6A;stroke-width:0.9207;stroke-miterlimit:10;}
 	.st77{fill:none;stroke:#555C6A;stroke-width:0.919;stroke-miterlimit:10;}
@@ -100,7 +100,7 @@
 	.st94{fill:none;stroke:#FFFFFF;stroke-miterlimit:10;}
 	.st95{fill:none;stroke:#555C6A;stroke-miterlimit:10;stroke-dasharray:6.8365,6.8365;}
 	.st96{fill:none;stroke:#555C6A;stroke-miterlimit:10;stroke-dasharray:6.5274,6.5274;}
-	.st97{fill:#E3F2F8;stroke:#555C6A;stroke-miterlimit:10;}
+	.st97{fill:#E3DCFF;stroke:#555C6A;stroke-miterlimit:10;}
 	.st98{opacity:7.000000e-02;clip-path:url(#SVGID_18_);}
 	.st99{fill:none;stroke:#555C6A;stroke-miterlimit:10;stroke-dasharray:6.6234,6.6234;}
 	.st100{fill:#FF9F36;stroke:#555C6A;stroke-width:3.4716;stroke-linecap:round;stroke-miterlimit:10;}
