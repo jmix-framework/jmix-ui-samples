@@ -27,7 +27,7 @@ public class OrderItem extends StandardEntity {
     @JoinColumn(name = "ORDER_ID")
     protected Order order;
 
-    @InstanceName(relatedProperties = {"product", "quantity"})
+    @InstanceName
     public String getInstanceName() {
         return product + " " + quantity;
     }

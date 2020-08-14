@@ -27,7 +27,7 @@ public class Customer extends StandardEntity {
     @Column(name = "GRADE")
     protected Integer grade;
 
-    @InstanceName(relatedProperties = {"name", "lastName"})
+    @InstanceName
     public String getInstanceName() {
         return name + " " + lastName;
     }
