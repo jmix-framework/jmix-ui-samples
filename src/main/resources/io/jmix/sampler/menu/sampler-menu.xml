@@ -533,6 +533,28 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="twincolumn">
+            <item id="twincolumn-simple" docUrlSuffix="gui_TwinColumn"
+                  image="components/twincolumn/twincolumn-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="twincolumn-option-style-provider" docUrlSuffix="gui_TwinColumn"
+                  image="components/twincolumn/twincolumn-option-style-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/twincolumn/optionstyleprovider/twincolumn-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="twincolumn-custom-options" docUrlSuffix="gui_TwinColumn"
+                  image="components/twincolumn/twincolumn-custom-options.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

@@ -1,0 +1,24 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <vbox spacing="true">
+                <twinColumn id="twinColumnWithOptionsList"
+                            caption="Options List"/>
+                <button id="showOptionsListValue"
+                        caption="Show value"/>
+            </vbox>
+            <vbox spacing="true">
+                <twinColumn id="twinColumnWithOptionsMap"
+                            caption="Options Map"/>
+                <button id="showOptionsMapValue"
+                        caption="Show value"/>
+            </vbox>
+            <vbox spacing="true">
+                <twinColumn id="twinColumnWithOptionsEnum"
+                            caption="Options Enum"/>
+                <button id="showOptionsEnumValue"
+                        caption="Show value"/>
+            </vbox>
+        </hbox>
+    </layout>
+</window>
