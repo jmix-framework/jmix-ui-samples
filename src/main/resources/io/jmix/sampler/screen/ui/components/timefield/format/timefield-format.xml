@@ -1,0 +1,11 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <timeField caption="mm/HH"
+                       timeFormat="mm/HH"/>
+            <timeField caption="msg://timeFormat"
+                       timeFormat="msg://timeFormat"
+                       width="90px"/>
+        </hbox>
+    </layout>
+</window>

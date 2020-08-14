@@ -478,6 +478,25 @@
             <item id="passwordfield-simple" docUrlSuffix="gui_PasswordField"
                   image="components/passwordfield/passwordfield-simple.png"/>
         </menu>
+
+        <menu id="timefield">
+            <item id="timefield-simple" docUrlSuffix="gui_TimeField" image="components/timefield/timefield-simple.png"/>
+            <item id="timefield-dataaware" docUrlSuffix="gui_TimeField"
+                  image="components/timefield/timefield-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="timefield-format" docUrlSuffix="gui_TimeField" image="components/timefield/timefield-format.png"/>
+            <item id="timefield-resolution" docUrlSuffix="gui_TimeField"
+                  image="components/timefield/timefield-resolution.png"/>
+            <item id="timefield-time-mode" docUrlSuffix="gui_TimeField"
+                  image="components/timefield/timefield-time-mode.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

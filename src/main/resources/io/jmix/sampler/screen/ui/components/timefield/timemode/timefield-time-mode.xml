@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="orderDc"
+                  class="io.jmix.sampler.entity.Order"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <hbox spacing="true">
+            <timeField dataContainer="orderDc" property="createTs"
+                       timeMode="H_12"/>
+            <label value="=" align="MIDDLE_CENTER"/>
+            <timeField dataContainer="orderDc" property="createTs"
+                       timeMode="H_24"/>
+        </hbox>
+    </layout>
+</window>

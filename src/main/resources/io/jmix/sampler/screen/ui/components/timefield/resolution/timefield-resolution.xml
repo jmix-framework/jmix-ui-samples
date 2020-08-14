@@ -1,0 +1,15 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <timeField id="hourTimeField"
+                       caption="HOUR"
+                       resolution="HOUR"/>
+            <timeField id="minuteTimeField"
+                       caption="MINUTE"
+                       resolution="MIN"/>
+            <timeField id="secondTimeField"
+                       caption="SECOND"
+                       resolution="SEC"/>
+        </hbox>
+    </layout>
+</window>
