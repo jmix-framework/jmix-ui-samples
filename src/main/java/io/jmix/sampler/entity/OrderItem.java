@@ -29,7 +29,7 @@ public class OrderItem extends StandardEntity {
 
     @InstanceName
     public String getInstanceName() {
-        return product + " " + quantity;
+        return product.getName() + " " + quantity;
     }
 
     public void setOrder(Order order) {

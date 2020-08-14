@@ -1,0 +1,20 @@
+<p><code>TokenList</code> component offers a simplified way of working with lists: instance names are listed vertically
+    or horizontally, adding is done using drop-down list, removal - using the buttons located near each instance.
+</p>
+
+<p>In this example, we have defined two collection data sources: <code>orderItemsDc</code> nested datasource, which
+    includes a collection of order lines within an order, and <code>allItemsDc</code> datasource containing a collection
+    of all order lines available in the database. The <code>TokenList</code> component displays the content of the
+    <code>orderItemsDc</code> datasource and allows changing the collection by adding instances from <code>allItemsDc</code>.
+</p>
+
+<p><code>tokenList</code> elements:</p>
+<ul>
+    <li><code>lookup</code> - values selection component descriptor.</li>
+    <li><code>button</code> - descriptor of the button for adding items. Can contain <code>caption</code> and
+        <code>icon</code> attributes.
+    </li>
+    <li><code>clearButton</code> - descriptor of the button for removing items. Can contain <code>caption</code> and
+        <code>icon</code> attributes.
+    </li>
+</ul>

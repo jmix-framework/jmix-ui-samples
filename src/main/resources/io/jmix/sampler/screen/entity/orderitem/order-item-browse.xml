@@ -5,10 +5,7 @@
     <data readOnly="true">
         <collection id="orderItemsDc"
                     class="io.jmix.sampler.entity.OrderItem">
-            <fetchPlan extends="_local">
-                <property name="product" fetchPlan="_local"/>
-                <property name="order" fetchPlan="_local"/>
-            </fetchPlan>
+            §
             <loader id="orderItemsDl">
                 <query>
                     <![CDATA[select e from sampler_OrderItem e]]>
