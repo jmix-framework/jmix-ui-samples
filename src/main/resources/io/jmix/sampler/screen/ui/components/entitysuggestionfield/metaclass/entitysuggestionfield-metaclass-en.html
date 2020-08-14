@@ -1,0 +1,21 @@
+<p>
+    <code>EntitySuggestionField</code> combines the functionality of a suggestion field and a <code>EntityPicker</code>
+    component, designed to display an entity instance. Second way to link the component with an entity attribute is to
+    specify <code>metaclass</code> attribute of the component.
+</p>
+
+<p>
+    The search logic is defined with the help of <code>SearchExecutor</code> interface. The following parameters can be
+    set:
+</p>
+<ul>
+    <li>
+        <code>asyncSearchDelayMs</code> - the delay between the last key press action and async search;
+    </li>
+    <li>
+        <code>suggestionsLimit</code> - the limit of suggestions to be shown;
+    </li>
+    <li>
+        <code>minSearchStringLength</code> - min string length required to perform suggestions search.
+    </li>
+</ul>

@@ -241,6 +241,30 @@
             </item>
         </menu>
 
+        <menu id="entitysuggestionfield">
+            <item id="entitysuggestionfield-dataaware" docUrlSuffix="gui_EntitySuggestionField"
+                  image="components/entitysuggestionfield/entitysuggestionfield-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="entitysuggestionfield-metaclass" docUrlSuffix="gui_EntitySuggestionField"
+                  image="components/entitysuggestionfield/entitysuggestionfield-metaclass.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="entitysuggestionfield-options-style-provider" docUrlSuffix="gui_EntitySuggestionField"
+                  image="components/entitysuggestionfield/entitysuggestionfield-options-style-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/entitysuggestionfield/optionsstyleprovider/entitysuggestionfield-style.scss"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="form">
             <item id="form-simple" docUrlSuffix="gui_Form" image="components/form/form-simple.png">
                 <otherFiles>
@@ -412,6 +436,7 @@
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/suggestionfield/optionsstyleprovider/suggestionfield-style.scss"/>
                 </otherFiles>
             </item>
         </menu>

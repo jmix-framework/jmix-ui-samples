@@ -1,0 +1,43 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select c from sampler_Customer c]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <vbox spacing="true"
+              width="300px">
+            <label value="msg://io.jmix.sampler.screen.ui.components.entitysuggestionfield/enterQuery"/>
+            <entitySuggestionField id="entitySuggestionField"
+                                   inputPrompt="Start typing"
+                                   metaClass="sampler_Customer"
+                                   width="100%">
+                <actions>
+                    <action id="lookup" type="entity_lookup"/>
+                    <action id="open" type="entity_open"/>
+                </actions>
+            </entitySuggestionField>
+            <groupBox caption="msg://io.jmix.sampler.screen.ui.components.entitysuggestionfield/tuning"
+                      spacing="true">
+                <label value="msg://io.jmix.sampler.screen.ui.components.entitysuggestionfield/asyncSearchDelayMs"/>
+                <textField id="delayTextField"
+                           datatype="int"
+                           width="100%"/>
+                <label value="msg://io.jmix.sampler.screen.ui.components.entitysuggestionfield/minSearchStringLength"/>
+                <textField id="stringLengthTextField"
+                           datatype="int"
+                           width="100%"/>
+                <label value="msg://io.jmix.sampler.screen.ui.components.entitysuggestionfield/suggestionsLimit"/>
+                <textField id="limitTextField"
+                           datatype="int"
+                           width="100%"/>
+            </groupBox>
+        </vbox>
+    </layout>
+</window>
