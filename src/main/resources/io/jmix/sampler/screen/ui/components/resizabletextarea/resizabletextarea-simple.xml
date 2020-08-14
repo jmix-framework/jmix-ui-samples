@@ -1,0 +1,12 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <resizableTextArea caption="Both"
+                               resizableDirection="BOTH"/>
+            <resizableTextArea caption="Vertical"
+                               resizableDirection="VERTICAL"/>
+            <resizableTextArea caption="Horizontal"
+                               resizableDirection="HORIZONTAL"/>
+        </hbox>
+    </layout>
+</window>

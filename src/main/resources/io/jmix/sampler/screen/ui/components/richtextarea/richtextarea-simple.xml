@@ -1,0 +1,5 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <richTextArea id="richTextArea"/>
+    </layout>
+</window>

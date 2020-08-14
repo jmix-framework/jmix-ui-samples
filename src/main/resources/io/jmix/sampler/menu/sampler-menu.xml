@@ -440,6 +440,15 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="textarea">
+            <item id="textarea-simple" docUrlSuffix="gui_TextArea"
+                  image="components/textarea/textarea-simple.png"/>
+            <item id="resizabletextarea-simple" docUrlSuffix="gui_ResizableTextArea"
+                  image="components/resizabletextarea/resizabletextarea-simple.png"/>
+            <item id="richtextarea-simple" docUrlSuffix="gui_RichTextArea"
+                  image="components/richtextarea/richtextarea-simple.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
