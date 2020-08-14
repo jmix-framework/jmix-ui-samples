@@ -1,0 +1,14 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <checkBox id="trim"
+                  caption="trim"/>
+        <hbox spacing="true">
+            <textField id="textField"/>
+            <button id="show"
+                    caption="Show value"/>
+            <label id="valueLabel"
+                   align="MIDDLE_LEFT"
+                   htmlEnabled="true"/>
+        </hbox>
+    </layout>
+</window>

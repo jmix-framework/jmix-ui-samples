@@ -1,0 +1,12 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <textField caption="String"
+                       datatype="string"/>
+            <textField caption="Integer"
+                       datatype="int"/>
+            <textField caption="Double"
+                       datatype="double"/>
+        </hbox>
+    </layout>
+</window>

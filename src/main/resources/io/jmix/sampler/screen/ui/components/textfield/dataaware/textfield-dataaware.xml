@@ -1,0 +1,17 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customersDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout spacing="true">
+        <textField caption="Name"
+                   dataContainer="customersDc"
+                   property="name"/>
+        <hbox spacing="true">
+            <label value="Name in the Container:"/>
+            <label dataContainer="customersDc"
+                   property="name"/>
+        </hbox>
+    </layout>
+</window>

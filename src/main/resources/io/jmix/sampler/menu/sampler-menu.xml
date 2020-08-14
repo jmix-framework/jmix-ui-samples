@@ -449,6 +449,35 @@
             <item id="richtextarea-simple" docUrlSuffix="gui_RichTextArea"
                   image="components/richtextarea/richtextarea-simple.png"/>
         </menu>
+
+        <menu id="textfield">
+            <item id="textfield-simple" docUrlSuffix="gui_TextField" image="components/textfield/textfield-simple.png"/>
+            <item id="textfield-dataaware" docUrlSuffix="gui_TextField"
+                  image="components/textfield/textfield-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="textfield-datatype" docUrlSuffix="gui_TextField"
+                  image="components/textfield/textfield-datatype.png"/>
+            <item id="textfield-validator" docUrlSuffix="gui_TextField"
+                  image="components/textfield/textfield-validator.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/components/textfield/validator/PositiveIntegerValidator.java"/>
+                </otherFiles>
+            </item>
+            <item id="textfield-trim" docUrlSuffix="gui_TextField" image="components/textfield/textfield-trim.png"/>
+            <item id="textfield-enter-press" docUrlSuffix="gui_TextField"
+                  image="components/textfield/textfield-enter-press.png"/>
+            <item id="textfield-text-change" docUrlSuffix="gui_TextField"
+                  image="components/textfield/textfield-text-change.png"/>
+            <item id="textfield-text-change-event-mode" docUrlSuffix="gui_TextField"
+                  image="components/textfield/textfield-text-change-event-mode.png"/>
+            <item id="maskedfield-simple" docUrlSuffix="gui_MaskedField"
+                  image="components/maskedfield/maskedfield-simple.png"/>
+            <item id="passwordfield-simple" docUrlSuffix="gui_PasswordField"
+                  image="components/passwordfield/passwordfield-simple.png"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

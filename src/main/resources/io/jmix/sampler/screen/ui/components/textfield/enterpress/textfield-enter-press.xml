@@ -1,0 +1,7 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <textField id="textField"
+                   inputPrompt="Type text and press Enter"
+                   width="200px"/>
+    </layout>
+</window>

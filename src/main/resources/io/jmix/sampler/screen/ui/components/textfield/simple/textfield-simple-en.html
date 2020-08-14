@@ -1,0 +1,10 @@
+<p><code>TextField</code> can be used both for working with entity attributes and entering/displaying arbitrary textual
+    information.</p>
+
+<p>If a text field is linked to an entity attribute (via <code>dataContainer</code> and <code>property</code>), and if the
+    entity attribute has a <code>length</code> parameter defined in the <code>@Column</code> JPA-annotation, then the
+    <code>TextField</code> will limit the maximum length of entered text accordingly.</p>
+
+<p>If a text field is not linked to an attribute, or if the attribute does not have <code>length</code> value defined,
+    or this value needs to be overridden, then the maximum length of the entered text can be limited using <code>maxLength</code>
+    attribute. The value of "-1" means there are no limitations.</p>

@@ -1,0 +1,7 @@
+<p>By default, text field trims spaces at the beginning and at the end of the entered string. I.e. if user enters "
+    <code> aaa bbb </code>", the value of the field returned by the <code>getValue()</code> method and
+    saved to the linked entity attribute will be "<code>aaa bbb</code>". You can disable trimming of
+    spaces by setting the <code>trim</code> attribute to <code>false</code>.</p>
+
+<p>Text field always returns <code>null</code> instead of an entered empty string. Therefore, with the <code>trim</code>
+    attribute enabled, any string containing spaces only will be converted to <code>null</code>.</p>

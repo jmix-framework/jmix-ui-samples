@@ -1,0 +1,8 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <textField caption="msg://textField.simpleCaption"
+                   description="msg://textField.description"/>
+        <textField caption="msg://textField.captionLength"
+                   maxLength="10"/>
+    </layout>
+</window>

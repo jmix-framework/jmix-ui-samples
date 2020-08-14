@@ -1,0 +1,6 @@
+<p>Text field can be assigned a validator - a class implementing <code>Validator</code>
+    interface. The validator limits user input in addition to what is already done by the <code>datatype</code>.</p>
+
+<p>Unlike input check against the data type, validation is performed not when the field looses focus, but after
+    invocation of the field's <code>validate()</code> method. It means that the field (and the linked entity
+    attribute) may temporarily contain a value that does not satisfy validation conditions.</p>

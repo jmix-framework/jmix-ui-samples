@@ -1,0 +1,22 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <textField id="integerTextField"
+                       caption="msg://integerTextField"
+                       datatype="int">
+                <validators>
+                    <custom bean="sampler_PositiveIntegerValidator"/>
+                </validators>
+            </textField>
+            <textField id="doubleTextField"
+                       caption="msg://doubleTextField"
+                       datatype="double">
+                <validators>
+                    <doubleMin value="1.0" inclusive="true"/>
+                    <doubleMax value="100.0" inclusive="true"/>
+                </validators>
+            </textField>
+            <button id="validate" caption="msg://validateBtn"/>
+        </hbox>
+    </layout>
+</window>

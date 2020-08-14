@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <radioButtonGroup id="modeGroup"
+                          caption="Mode"
+                          orientation="horizontal"/>
+        <textField id="textField"
+                   inputPrompt="Start typing"
+                   maxLength="140"/>
+    </layout>
+</window>
