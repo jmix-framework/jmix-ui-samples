@@ -1,0 +1,32 @@
+<p>Метод <code>setItemClickAction()</code> позволяет задать <code>действие</code>, выполняемое при двойном клике на
+    строке DataGrid. Если такое действие не задано, при двойном клике <code>DataGrid</code> пытается найти среди своих
+    действий подходящее в следующем порядке:</p>
+<ul>
+    <li>
+        <p>Действие, назначенное на клавишу <strong>Enter</strong> посредством свойства <code>shortcut</code>.</p>
+    </li>
+    <li>
+        <p>Действие с именем <code>edit</code>.</p>
+    </li>
+    <li>
+        <p>Действие с именем <code>view</code>.</p>
+    </li>
+</ul>
+
+<p>Метод <code>setEnterPressAction()</code> позволяет задать действие, выполняемое при нажатии клавиши
+    <strong>Enter</strong>. Если такое действие не задано, DataGrid пытается найти среди своих действий подходящее в
+    следующем порядке:</p>
+<ul>
+    <li>
+        <p>Действие, назначенное методом <code>setItemClickAction()</code>.</p>
+    </li>
+    <li>
+        <p>Действие, назначенное на клавишу <strong>Enter</strong> посредством свойства <code>shortcut</code>.</p>
+    </li>
+    <li>
+        <p>Действие с именем <code>edit</code>.</p>
+    </li>
+    <li>
+        <p>Действие с именем <code>view</code>.</p>
+    </li>
+</ul>

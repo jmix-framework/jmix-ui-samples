@@ -1,0 +1,34 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <hbox spacing="true">
+            <label value="Selection Mode:"
+                   align="MIDDLE_LEFT"/>
+            <comboBox id="selectionModeField"
+                      nullOptionVisible="false"
+                      textInputAllowed="false"/>
+        </hbox>
+        <dataGrid id="customersDataGrid"
+                  dataContainer="customersDc"
+                  width="100%">
+            <columns>
+                <column property="name"/>
+                <column property="lastName"/>
+                <column property="age"/>
+                <column property="active"/>
+                <column property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

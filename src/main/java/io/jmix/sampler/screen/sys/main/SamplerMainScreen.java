@@ -17,11 +17,11 @@
 package io.jmix.sampler.screen.sys.main;
 
 import io.jmix.core.CoreProperties;
-import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.config.MenuConfig;
-import io.jmix.sampler.util.SamplerHelper;
+import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.screen.sys.maindashboard.DashboardItemClickEvent;
 import io.jmix.sampler.screen.sys.maindashboard.SamplerMainDashboardFragment;
+import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.AppUI;
 import io.jmix.ui.Screens;
 import io.jmix.ui.component.AppWorkArea;
@@ -47,6 +47,7 @@ import io.jmix.ui.theme.ThemeConstantsRepository;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +77,8 @@ public class SamplerMainScreen extends Screen implements Window.HasWorkArea {
     protected ThemeConstantsRepository themeConstantsRepository;
     @Autowired
     protected UserSettingsTools userSettingsTools;
+    @Autowired
+    protected ApplicationContext applicationContext;
 
     @Autowired
     protected TextField<String> searchField;
@@ -224,7 +227,7 @@ public class SamplerMainScreen extends Screen implements Window.HasWorkArea {
         }
 
         if (ui.getUrlChangeHandler().getRedirectHandler() == null) {
-            RedirectHandler redirectHandler = getBeanLocator().getPrototype(RedirectHandler.class, ui);
+            RedirectHandler redirectHandler = applicationContext.getBean(RedirectHandler.class, ui);
             ui.getUrlChangeHandler().setRedirectHandler(redirectHandler);
         }
     }

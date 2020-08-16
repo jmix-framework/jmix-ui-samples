@@ -1,0 +1,28 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <dataGrid id="customersDataGrid"
+                  dataContainer="customersDc"
+                  width="100%">
+            <columns>
+                <column id="fullName" caption="msg://fullNameColumn">
+                    <componentRenderer/>
+                </column>
+                <column property="age"/>
+                <column property="active"/>
+                <column property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

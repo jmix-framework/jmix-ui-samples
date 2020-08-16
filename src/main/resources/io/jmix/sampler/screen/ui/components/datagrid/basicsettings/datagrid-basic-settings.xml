@@ -1,0 +1,36 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="ordersDc"
+                    class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="ordersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Order e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="ordersDataGrid"
+            spacing="true">
+        <hbox spacing="true">
+            <checkBox id="sortable"
+                      caption="Sortable"/>
+            <checkBox id="reorderingAllowed"
+                      caption="Reordering Allowed"/>
+            <checkBox id="columnsCollapsingAllowed"
+                      caption="Columns Collapsing Allowed"/>
+        </hbox>
+        <dataGrid id="ordersDataGrid"
+                  dataContainer="ordersDc"
+                  width="100%">
+            <columns>
+                <column property="date"/>
+                <column property="customer"/>
+                <column property="amount"/>
+                <column property="description"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

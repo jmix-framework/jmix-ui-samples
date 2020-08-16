@@ -1,0 +1,29 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="ordersDc"
+                    class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="ordersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Order e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="ordersDataGrid"
+            spacing="true">
+        <dataGrid id="ordersDataGrid"
+                  dataContainer="ordersDc"
+                  settingsEnabled="false"
+                  width="100%">
+            <columns>
+                <column property="date"/>
+                <column property="customer"/>
+                <column property="amount"/>
+                <column property="description"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

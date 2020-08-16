@@ -1,0 +1,30 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <keyValueCollection id="salesDc">
+            <loader id="salesLoader">
+                <query>
+                    <![CDATA[select o.customer, sum(o.amount) from sampler_Order o group by o.customer]]>
+                </query>
+            </loader>
+            <properties>
+                <property class="io.jmix.sampler.entity.Customer"
+                          name="customer"/>
+                <property datatype="decimal"
+                          name="sum"/>
+            </properties>
+        </keyValueCollection>
+    </data>
+    <layout>
+        <dataGrid id="salesDataGrid"
+                  dataContainer="salesDc"
+                  height="100%"
+                  width="100%">
+            <columns>
+                <column property="customer"
+                        caption="Customer"/>
+                <column property="sum"
+                        caption="Sum"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

@@ -1,0 +1,16 @@
+<p><code>DataGrd</code> имеет возможность добавлять генерируемые, или высчитываемые, колонки. Для этого существует два
+    метода:</p>
+
+<ul>
+    <li>
+        <p><code>addGeneratedColumn(String columnId, ColumnGenerator generator)</code></p>
+    </li>
+    <li>
+        <p><code>addGeneratedColumn(String columnId, ColumnGenerator generator, int index)</code></p>
+    </li>
+</ul>
+
+<p><code>ColumnGenerator</code> - это специальный интерфейс, который описывает генерируемую колонку.
+    <code>ColumnGeneratorEvent</code>, который передается в метод <code>getValue()</code> интефейса <code>ColumnGenerator</code>,
+    хранит информацио о сущности, которая отображется в текущей строке <code>DataGrid</code>, и <code>propertyId</code>
+    колонки.</p>

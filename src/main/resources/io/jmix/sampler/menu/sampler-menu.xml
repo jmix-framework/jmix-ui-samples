@@ -180,6 +180,140 @@
             </item>
         </menu>
 
+        <menu id="datagrid">
+            <item id="datagrid-basic-settings" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-basic-settings.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-actions.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-selection-mode" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-selection-mode.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-frozen-columns" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-frozen-columns.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-no-header" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-no-header.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-style-provider" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-style-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/styleprovider/datagrid-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-large-dataset" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-large-dataset.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-item-click" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-item-click.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-generated-column" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-generated-column.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-formatter" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-formatter.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/LowercaseFormatter.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/UppercaseFormatter.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-renderer" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-renderer.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CountryGrowth.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-description-provider" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-description-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-header-footer" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-header-footer.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CountryGrowth.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/headerfooter/datagrid-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-key-value" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-key-value.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-editor" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-editor.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-editor-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-editor-actions.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-editor-events" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-editor-events.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-details-generator" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-details-generator.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Product.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/detailsgenerator/DataGridDetailsGeneratorService.java"/>
+                </otherFiles>
+            </item>
+            <item id="datagrid-aggregatable" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+                  image="components/datagrid/datagrid-aggregatable.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/aggregatable/DataGridCustomerGradeAggregation.java"/>
+                </otherFiles>
+            </item>
+            <item id="treedatagrid-simple" docUrlSuffix="gui_TreeDataGrid" splitEnabled="true"
+                  image="components/treedatagrid/treedatagrid-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Task.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="datefield">
             <item id="datefield-simple" docUrlSuffix="gui_DateField" image="components/datefield/datefield-simple.png"/>
             <item id="datefield-dataaware" docUrlSuffix="gui_DateField"

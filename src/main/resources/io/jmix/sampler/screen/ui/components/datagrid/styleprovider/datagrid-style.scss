@@ -1,0 +1,20 @@
+.v-grid {
+  .active-customer {
+    font-weight: bold;
+  }
+
+  .v-grid-cell.premium-grade {
+    background-color: red;
+    color: white;
+  }
+
+  .v-grid-cell.high-grade {
+    background-color: green;
+    color: white;
+  }
+
+  .v-grid-cell.standard-grade {
+    background-color: blue;
+    color: white;
+  }
+}

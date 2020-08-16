@@ -1,0 +1,32 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="countryGrowthDc"
+                    class="io.jmix.sampler.entity.CountryGrowth"
+                    fetchPlan="_local">
+            <loader id="countryGrowthLoader">
+                <query>
+                    <![CDATA[select e from sampler_CountryGrowth e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="dataGrid"
+            spacing="true">
+        <dataGrid id="dataGrid"
+                  settingsEnabled="false"
+                  dataContainer="countryGrowthDc"
+                  width="100%">
+            <columns>
+                <column id="flag" property="flag" width="68px"/>
+                <column id="country" property="country"/>
+                <column id="year2014" property="year2014">
+                    <numberRenderer format="%.1f%%"/>
+                </column>
+                <column id="year2015" property="year2015"/>
+                <column id="growth">
+                    <htmlRenderer/>
+                </column>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

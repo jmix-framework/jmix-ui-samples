@@ -1,0 +1,15 @@
+<p><code>DataGrd</code> enables adding generated columns with the help of the methods:</p>
+
+<ul>
+    <li>
+        <p><code>addGeneratedColumn(String columnId, ColumnGenerator generator)</code></p>
+    </li>
+    <li>
+        <p><code>addGeneratedColumn(String columnId, ColumnGenerator generator, int index)</code></p>
+    </li>
+</ul>
+
+<p><code>ColumnGenerator</code> is a special interface that defines the generated, or calculated, column.
+    <code>ColumnGeneratorEvent</code>, passed in the <code>getValue()</code> method of <code>ColumnGenerator</code>
+    interface, contains information on the entity, displayed in the current <code>DataGrid</code> row, and the column
+    <code>propertyId</code>.</p>

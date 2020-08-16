@@ -1,0 +1,35 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="ordersDc"
+                    class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="ordersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Order e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <dataGrid id="orderDataGrid"
+                  aggregatable="true"
+                  dataContainer="ordersDc"
+                  height="100%"
+                  width="100%">
+            <columns>
+                <column property="date"/>
+                <column property="customer"/>
+                <column property="customer.grade">
+                    <aggregation
+                            strategyClass="io.jmix.sampler.screen.ui.components.datagrid.aggregatable.DataGridCustomerGradeAggregation"/>
+                </column>
+                <column property="amount">
+                    <aggregation type="SUM"/>
+                </column>
+                <column property="description"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

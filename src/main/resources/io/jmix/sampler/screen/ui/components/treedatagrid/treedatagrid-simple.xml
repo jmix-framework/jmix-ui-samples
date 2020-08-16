@@ -1,0 +1,32 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="tasksDc"
+                    class="io.jmix.sampler.entity.Task">
+
+            <loader id="tasksLoader">
+                <query>
+                    <![CDATA[select e from sampler_Task e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <treeDataGrid id="taskDataGrid"
+                      dataContainer="tasksDc"
+                      height="100%"
+                      hierarchyProperty="parentTask"
+                      width="100%">
+            <columns>
+                <column property="name"/>
+                <column property="dueDate"/>
+                <column property="assignee"/>
+            </columns>
+            <buttonsPanel>
+                <label align="MIDDLE_LEFT" value="Hierarchy Column:"/>
+                <comboBox id="columnSelector"
+                          nullOptionVisible="false"
+                          textInputAllowed="false"/>
+            </buttonsPanel>
+        </treeDataGrid>
+    </layout>
+</window>

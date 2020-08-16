@@ -1,0 +1,33 @@
+<p>The <code>setItemClickAction()</code> method allows you to define an
+    <code>action</code> that will be performed when a DataGrid row is double-clicked. If such action is not defined, the
+    <code>DataGrid</code> will attempt to find an appropriate one in the list of its actions in the following order:</p>
+<ul>
+    <li>
+        <p>The action assigned to the <strong>Enter</strong> key by the <code>shortcut</code> property</p>
+    </li>
+    <li>
+        <p>The <code>edit</code> action</p>
+    </li>
+    <li>
+        <p>The <code>view</code> action</p>
+    </li>
+</ul>
+
+<p>The <code>setEnterPressAction()</code> allows to you define an action executed when <strong>Enter</strong> is
+    pressed.
+    If such action is not defined, a DataGrid will attempt to find an appropriate one in the list of its actions in the
+    following order:</p>
+<ul>
+    <li>
+        <p>The action defined by the <code>setItemClickAction()</code> method</p>
+    </li>
+    <li>
+        <p>The action assigned to the <strong>Enter</strong> key by the <code>shortcut</code> property</p>
+    </li>
+    <li>
+        <p>The <code>edit</code> action</p>
+    </li>
+    <li>
+        <p>The <code>view</code> action</p>
+    </li>
+</ul>

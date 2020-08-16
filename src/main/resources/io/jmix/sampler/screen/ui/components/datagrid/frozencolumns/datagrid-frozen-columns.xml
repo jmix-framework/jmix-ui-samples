@@ -1,0 +1,38 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <hbox spacing="true">
+            <label value="Frozen Column Count:"
+                   align="MIDDLE_LEFT"/>
+            <textField id="frozenColumnCountField"
+                       datatype="int"/>
+        </hbox>
+        <dataGrid id="customersDataGrid"
+                  dataContainer="customersDc"
+                  width="100%">
+            <columns>
+                <column property="name"
+                        width="200px"/>
+                <column property="lastName"
+                        width="200px"/>
+                <column property="age"
+                        width="200px"/>
+                <column property="active"
+                        width="200px"/>
+                <column property="grade"
+                        width="200px"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>
