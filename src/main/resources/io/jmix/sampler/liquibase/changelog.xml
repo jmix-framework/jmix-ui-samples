@@ -722,4 +722,111 @@
 
     </changeSet>
 
+    <changeSet author="sampler" id="1.6">
+
+        <createTable tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="VERSION" type="int" defaultValue="1">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATE_TS" type="datetime"/>
+            <column name="CREATED_BY" type="varchar(50)"/>
+            <column name="UPDATE_TS" type="datetime"/>
+            <column name="UPDATED_BY" type="varchar(50)"/>
+            <column name="DELETE_TS" type="datetime"/>
+            <column name="DELETED_BY" type="varchar(50)"/>
+
+            <column name="NAME" type="varchar(255)"/>
+            <column name="LAST_NAME" type="varchar(255)"/>
+            <column name="AGE" type="int"/>
+            <column name="DEPARTMENT" type="int"/>
+            <column name="EXPERIENCE" type="int"/>
+            <column name="SALARY" type="decimal"/>
+        </createTable>
+
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="333a257f-0a1c-8345-30e7-a6efda9a6634"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="John"/>
+            <column name="LAST_NAME" value="Brown"/>
+            <column name="AGE" valueNumeric="29"/>
+            <column name="DEPARTMENT" valueNumeric="10"/>
+            <column name="EXPERIENCE" valueNumeric="20"/>
+            <column name="SALARY" valueNumeric="1500.00"/>
+        </insert>
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="5c527836-a992-0efb-7c04-904097977055"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Mary"/>
+            <column name="LAST_NAME" value="Thomas"/>
+            <column name="AGE" valueNumeric="24"/>
+            <column name="DEPARTMENT" valueNumeric="10"/>
+            <column name="EXPERIENCE" valueNumeric="10"/>
+            <column name="SALARY" valueNumeric="1000.00"/>
+        </insert>
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="b31f88ac-0c7d-7be0-8546-63e69250c136"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="James"/>
+            <column name="LAST_NAME" value="Anderson"/>
+            <column name="AGE" valueNumeric="25"/>
+            <column name="DEPARTMENT" valueNumeric="20"/>
+            <column name="EXPERIENCE" valueNumeric="20"/>
+            <column name="SALARY" valueNumeric="1000.00"/>
+        </insert>
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="e2f2a7c2-10f4-f925-1157-721805069f8c"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Karen"/>
+            <column name="LAST_NAME" value="White"/>
+            <column name="AGE" valueNumeric="28"/>
+            <column name="DEPARTMENT" valueNumeric="20"/>
+            <column name="EXPERIENCE" valueNumeric="20"/>
+            <column name="SALARY" valueNumeric="1500.00"/>
+        </insert>
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="f1d8dc8d-a88f-6043-4dfe-b47868f17872"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Emily"/>
+            <column name="LAST_NAME" value="Thompson"/>
+            <column name="AGE" valueNumeric="26"/>
+            <column name="DEPARTMENT" valueNumeric="10"/>
+            <column name="EXPERIENCE" valueNumeric="10"/>
+            <column name="SALARY" valueNumeric="1000.00"/>
+        </insert>
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="e74cf36c-e40e-409f-ed7a-78d659280f06"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Ben"/>
+            <column name="LAST_NAME" value="Davies"/>
+            <column name="AGE" valueNumeric="27"/>
+            <column name="DEPARTMENT" valueNumeric="10"/>
+            <column name="EXPERIENCE" valueNumeric="20"/>
+            <column name="SALARY" valueNumeric="1500.00"/>
+        </insert>
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="b29aaa13-d78a-4673-22f5-973058c6fd38"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Chloe"/>
+            <column name="LAST_NAME" value="Wilson"/>
+            <column name="AGE" valueNumeric="29"/>
+            <column name="DEPARTMENT" valueNumeric="20"/>
+            <column name="EXPERIENCE" valueNumeric="20"/>
+            <column name="SALARY" valueNumeric="1500.00"/>
+        </insert>
+        <insert tableName="SAMPLER_EMPLOYEE">
+            <column name="ID" value="b0fbe93d-7943-4053-d14d-5eb6d79dae25"/>
+            <column name="VERSION" value="1"/>
+            <column name="NAME" value="Sam"/>
+            <column name="LAST_NAME" value="Evans"/>
+            <column name="AGE" valueNumeric="29"/>
+            <column name="DEPARTMENT" valueNumeric="20"/>
+            <column name="EXPERIENCE" valueNumeric="10"/>
+            <column name="SALARY" valueNumeric="1000.00"/>
+        </insert>
+
+    </changeSet>
+
 </databaseChangeLog>

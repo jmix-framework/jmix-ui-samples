@@ -1,0 +1,28 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="ordersDc"
+                    class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="ordersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Order e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <table id="orderTable"
+               dataContainer="ordersDc"
+               height="100%"
+               width="100%">
+            <columns>
+                <column id="date"/>
+                <column id="customer"/>
+                <column id="amount"/>
+                <column id="description" maxTextLength="5"/>
+            </columns>
+        </table>
+    </layout>
+</window>

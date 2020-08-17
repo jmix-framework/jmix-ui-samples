@@ -1,0 +1,10 @@
+<p><code>addGeneratedColumn()</code> method allows you to define custom representation of data in a column. It takes two
+    parameters: identifier of the column and an implementation of the <code>Table.ColumnGenerator</code> interface.
+    Identifier can match one of the identifiers set for table columns in XML-descriptor - in this case the new column is
+    inserted instead of the one defined in XML. If the identifier does not match any of the columns, a new column is
+    added to the right.</p>
+<p><code>generateCell()</code> method of the <code>Table.ColumnGenerator</code> interface is invoked for each row of the
+    table. The method receives an instance of the entity displayed in the corresponding row. <code>generateCell()</code>
+    method should return a visual component which will be displayed in the cell.</p>
+<p>The <code>generator</code> attribute specifies the name of the method that is called to create a generated column.
+    The method receives an instance of the entity displayed in the corresponding row.

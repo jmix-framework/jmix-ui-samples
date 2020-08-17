@@ -1,0 +1,28 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="tasksDc"
+                    class="io.jmix.sampler.entity.Task">
+            <fetchPlan extends="_local">
+                <property name="parentTask" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="tasksLoader">
+                <query>
+                    <![CDATA[select e from sampler_Task e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <treeTable id="taskTable"
+                   dataContainer="tasksDc"
+                   height="100%"
+                   hierarchyProperty="parentTask"
+                   width="100%">
+            <columns>
+                <column id="name"/>
+                <column id="dueDate"/>
+                <column id="assignee"/>
+            </columns>
+        </treeTable>
+    </layout>
+</window>

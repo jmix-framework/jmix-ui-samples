@@ -264,7 +264,7 @@
                     <file name="io/jmix/sampler/screen/ui/components/datagrid/headerfooter/datagrid-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-key-value" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-key-value" docUrlSuffix="gui_keyvalue_containers" splitEnabled="true"
                   image="components/datagrid/datagrid-key-value.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -571,6 +571,116 @@
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/suggestionfield/optionsstyleprovider/suggestionfield-style.scss"/>
+                </otherFiles>
+            </item>
+        </menu>
+
+        <menu id="table">
+            <item id="table-simple" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-max-length" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-max-length.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-action" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-action.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-editable" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-editable.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-formatter" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-formatter.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/LowercaseFormatter.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/UppercaseFormatter.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-icon-provider" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-icon-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-style-provider" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-style-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/table/styleprovider/table-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="table-item-click" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-item-click.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-generated-column" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-generated-column.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-aggregatable" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-aggregatable.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/table/aggregatable/TableCustomerGradeAggregation.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-no-header" docUrlSuffix="gui_Table" splitEnabled="true"
+                  image="components/table/table-no-header.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="table-key-value" docUrlSuffix="gui_keyvalue_containers" splitEnabled="true"
+                  image="components/table/table-key-value.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="grouptable-simple" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+                  image="components/grouptable/grouptable-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="grouptable-style-provider" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+                  image="components/grouptable/grouptable-style-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/grouptable/stylepovider/grouptable-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="grouptable-aggregatable" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+                  image="components/grouptable/grouptable-aggregatable.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Employee.java"/>
+                    <file name="io/jmix/sampler/entity/Department.java"/>
+                    <file name="io/jmix/sampler/entity/Experience.java"/>
+                </otherFiles>
+            </item>
+            <item id="treetable-simple" docUrlSuffix="gui_TreeTable" splitEnabled="true"
+                  image="components/treetable/treetable-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
             </item>
         </menu>

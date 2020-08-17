@@ -1,0 +1,12 @@
+<p>You can use <code>editable</code> attribute to switch the table to in-place editing mode. In this mode, the
+    columns with <code>editable="true"</code> attribute show components to edit the attributes of the corresponding
+    entity.</p>
+
+<p>The component type for each editable column is selected automatically based on the type of the corresponding entity
+    attribute. For example, for string and numeric attributes, the application will use <code>TextField</code>,
+    for <code>Date</code> - <code>DateField</code>, for enumerations - <code>ComboBox</code>,
+    for links to other entities - <code>EntityPicker</code> (or <code>ComboBox</code>, if
+    <code>optionsDataContainer</code> is additionally specified for the column). For a
+    <code>Date</code> type editable column, you can additionally define <code>dateFormat</code> or
+    <code>resolution</code> attributes similar to the ones described for the <code>DateField</code>.
+</p>

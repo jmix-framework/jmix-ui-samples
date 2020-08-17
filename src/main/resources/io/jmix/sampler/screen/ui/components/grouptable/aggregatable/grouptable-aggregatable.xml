@@ -1,0 +1,33 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="employeeDc"
+                    class="io.jmix.sampler.entity.Employee"
+                    fetchPlan="_local">
+            <loader id="employeeLd">
+                <query>select e from sampler_Employee e</query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <groupTable id="employeesTable"
+                    aggregatable="true"
+                    dataContainer="employeeDc"
+                    fixedGrouping="true"
+                    height="100%"
+                    width="100%">
+            <columns>
+                <group>
+                    <column id="department"/>
+                </group>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="salary">
+                    <aggregation type="SUM" editable="true"/>
+                </column>
+                <column id="experience"/>
+            </columns>
+            <rows/>
+        </groupTable>
+    </layout>
+</window>

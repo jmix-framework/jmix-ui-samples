@@ -1,0 +1,39 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <table id="customerTable"
+               dataContainer="customersDc"
+               height="100%"
+               width="100%">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+                <action id="greeting" caption="Greeting"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+                <column id="grade"/>
+            </columns>
+            <buttonsPanel>
+                <button action="customerTable.create"/>
+                <button action="customerTable.edit"/>
+                <button action="customerTable.remove"/>
+                <button action="customerTable.greeting"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
