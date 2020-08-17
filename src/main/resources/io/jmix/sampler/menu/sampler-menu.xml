@@ -668,6 +668,24 @@
             </item>
         </menu>
 
+        <menu id="tree">
+            <item id="tree-simple" docUrlSuffix="gui_Tree" image="components/tree/tree-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Task.java"/>
+                </otherFiles>
+            </item>
+            <item id="tree-icon-provider" docUrlSuffix="gui_Tree" image="components/tree/tree-icon-provider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Task.java"/>
+                </otherFiles>
+            </item>
+            <item id="tree-item-click" docUrlSuffix="gui_Tree" image="components/tree/tree-item-click.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Task.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="twincolumn">
             <item id="twincolumn-simple" docUrlSuffix="gui_TwinColumn"
                   image="components/twincolumn/twincolumn-simple.png">
