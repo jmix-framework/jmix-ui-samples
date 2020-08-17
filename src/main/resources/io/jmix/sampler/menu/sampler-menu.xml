@@ -833,6 +833,24 @@
             <item id="vbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/vbox-simple.svg"/>
             <item id="flowbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/flowbox-simple.svg"/>
         </menu>
+        <menu id="buttonspanel">
+            <item id="buttonspanel-table" docUrlSuffix="gui_ButtonsPanel"
+                  image="containers/buttonspanel/buttonspanel-table.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="buttonspanel-always-visible" docUrlSuffix="gui_ButtonsPanel"
+                  image="containers/buttonspanel/buttonspanel-table.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/buttonspanel/visible/ButtonsPanelVisible.java"/>
+                    <file name="io/jmix/sampler/screen/ui/containers/buttonspanel/visible/buttonspanel-visible.xml"/>
+                    <file name="io/jmix/sampler/screen/ui/containers/buttonspanel/invisible/ButtonsPanelInvisible.java"/>
+                    <file name="io/jmix/sampler/screen/ui/containers/buttonspanel/invisible/buttonspanel-invisible.xml"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
