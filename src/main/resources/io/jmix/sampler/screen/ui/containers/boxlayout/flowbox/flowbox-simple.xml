@@ -1,0 +1,14 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <flowBox height="100%"
+                 spacing="true"
+                 width="500px">
+            <textField inputPrompt="TextField 1"/>
+            <button caption="Button 1"/>
+            <textField inputPrompt="TextField 2"/>
+            <button caption="Button 2"/>
+            <textField inputPrompt="TextField 3"/>
+            <button caption="Button 3"/>
+        </flowBox>
+    </layout>
+</window>

@@ -1,0 +1,11 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <label align="MIDDLE_LEFT"
+                   value="Label"/>
+            <textField inputPrompt="TextField"/>
+            <button caption="Button"/>
+            <button caption="Button"/>
+        </hbox>
+    </layout>
+</window>

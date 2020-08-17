@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <vbox spacing="true">
+            <label value="Label"/>
+            <textField inputPrompt="TextField"/>
+            <button caption="Button"/>
+            <button caption="Button"/>
+        </vbox>
+    </layout>
+</window>

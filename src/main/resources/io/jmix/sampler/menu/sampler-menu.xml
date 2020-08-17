@@ -828,6 +828,11 @@
             </item>
             <item id="accordion-lazy" docUrlSuffix="gui_Accordion" image="containers/accordion/accordion-simple.svg"/>
         </menu>
+        <menu id="boxlayout">
+            <item id="hbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/hbox-simple.svg"/>
+            <item id="vbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/vbox-simple.svg"/>
+            <item id="flowbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/flowbox-simple.svg"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
