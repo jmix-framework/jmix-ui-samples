@@ -1,0 +1,51 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <hbox id="hbox"
+              expand="accordion"
+              spacing="true"
+              width="750px">
+            <vbox spacing="true"
+                  width="290px">
+                <groupBox caption="DateField borderless"
+                          width="AUTO">
+                    <dateField id="dateField"
+                               stylename="borderless"/>
+                </groupBox>
+
+                <groupBox caption="ProgressBar"
+                          spacing="true"
+                          width="AUTO">
+                    <label value="default"/>
+                    <progressBar id="defaultPB"
+                                 width="250px"/>
+
+                    <label value="point"/>
+                    <progressBar id="pointPB"
+                                 stylename="point"
+                                 width="250px"/>
+                </groupBox>
+            </vbox>
+
+            <accordion id="accordion"
+                       caption="Accordion borderless"
+                       height="250px"
+                       stylename="borderless">
+                <tab id="first"
+                     caption="First tab">
+                    <label value="msg://io.jmix.sampler.screen.ui.predefinedstyles.styles/loremIpsum"
+                           width="440px"/>
+                </tab>
+                <tab id="second"
+                     caption="Second tab">
+                    <label value="msg://io.jmix.sampler.screen.ui.predefinedstyles.styles/loremIpsum"
+                           width="440px"/>
+                </tab>
+                <tab id="third"
+                     caption="Third tab">
+                    <label value="msg://io.jmix.sampler.screen.ui.predefinedstyles.styles/loremIpsum"
+                           width="440px"/>
+                </tab>
+            </accordion>
+        </hbox>
+    </layout>
+</window>

@@ -1,0 +1,47 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="customersTable"
+            spacing="true">
+        <groupBox caption="Styles"
+                  spacing="true">
+            <flowBox spacing="true">
+                <checkBox id="borderless"
+                          caption="borderless"/>
+                <checkBox id="small"
+                          caption="small"/>
+                <checkBox id="compact"
+                          caption="compact"/>
+                <checkBox id="noHeader"
+                          caption="no-header"/>
+                <checkBox id="noStripes"
+                          caption="no-stripes"/>
+                <checkBox id="noHorizontalLines"
+                          caption="no-horizontal-lines"/>
+                <checkBox id="noVerticalLines"
+                          caption="no-vertical-lines"/>
+            </flowBox>
+        </groupBox>
+        <table id="customersTable"
+               dataContainer="customersDc"
+               multiselect="true"
+               width="100%">
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+                <column id="grade"/>
+            </columns>
+        </table>
+    </layout>
+</window>

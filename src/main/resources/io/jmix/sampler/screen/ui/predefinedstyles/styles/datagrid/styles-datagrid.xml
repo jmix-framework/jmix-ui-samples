@@ -1,0 +1,41 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="customersDataGrid"
+            spacing="true">
+        <groupBox caption="Styles"
+                  spacing="true">
+            <flowBox spacing="true">
+                <checkBox id="borderless"
+                          caption="borderless"/>
+                <checkBox id="noStripes"
+                          caption="no-stripes"/>
+                <checkBox id="noHorizontalLines"
+                          caption="no-horizontal-lines"/>
+                <checkBox id="noVerticalLines"
+                          caption="no-vertical-lines"/>
+            </flowBox>
+        </groupBox>
+        <dataGrid id="customersDataGrid"
+                  dataContainer="customersDc"
+                  selectionMode="MULTI"
+                  width="100%">
+            <columns>
+                <column property="name"/>
+                <column property="lastName"/>
+                <column property="age"/>
+                <column property="active"/>
+                <column property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</window>

@@ -847,4 +847,36 @@
         <item id="facet-timer" docUrlSuffix="gui_facets" image="facets/facet-timer.png"/>
     </menu>
 
+    <menu id="predefinedstyles" image="mainmenu/predefinedStyles.svg">
+        <menu id="styles">
+            <item id="styles-button" image="predefinedstyles/styles/styles-button.png"/>
+            <item id="styles-containers" image="predefinedstyles/styles/styles-containers.png"/>
+            <item id="styles-label" image="predefinedstyles/styles/styles-label.png"/>
+            <item id="styles-misc" image="predefinedstyles/styles/styles-misc.png"/>
+            <item id="styles-splitpanel" image="predefinedstyles/styles/styles-splitpanel.png"/>
+            <item id="styles-table" image="predefinedstyles/styles/styles-table.png" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="styles-datagrid" image="predefinedstyles/styles/styles-datagrid.png" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="styles-tabsheet" image="predefinedstyles/styles/styles-tabsheet.png" splitEnabled="true"/>
+        </menu>
+
+        <menu id="inputfields">
+            <item id="inputfields-simple" image="predefinedstyles/inputfields/inputfields-simple.png"/>
+            <item id="inputfields-with-actions" image="predefinedstyles/inputfields/inputfields-with-actions.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+    </menu>
+
 </menu-config>

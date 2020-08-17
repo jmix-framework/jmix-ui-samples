@@ -1,0 +1,45 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout expand="spacer"
+            spacing="true">
+        <hbox spacing="true">
+            <groupBox caption="Icon styles"
+                      spacing="true">
+                <button caption="icon-align-right"
+                        icon="UPLOAD"
+                        stylename="icon-align-right"/>
+                <button caption="icon-align-top"
+                        icon="UPLOAD"
+                        stylename="icon-align-top"/>
+                <label value="icon-only:"/>
+                <button caption="icon-align-right"
+                        icon="UPLOAD"
+                        stylename="icon-only"/>
+            </groupBox>
+            <vbox spacing="true">
+                <groupBox caption="Border styles"
+                          spacing="true">
+                    <hbox spacing="true">
+                        <button caption="borderless"
+                                stylename="borderless"/>
+                        <button caption="borderless-colored"
+                                stylename="borderless-colored"/>
+                        <button caption="quiet"
+                                stylename="quiet"/>
+                    </hbox>
+                </groupBox>
+                <groupBox caption="Action styles"
+                          spacing="true">
+                    <hbox spacing="true">
+                        <button caption="primary"
+                                stylename="primary"/>
+                        <button caption="friendly"
+                                stylename="friendly"/>
+                        <button caption="danger"
+                                stylename="danger"/>
+                    </hbox>
+                </groupBox>
+            </vbox>
+        </hbox>
+        <label id="spacer"/>
+    </layout>
+</window>

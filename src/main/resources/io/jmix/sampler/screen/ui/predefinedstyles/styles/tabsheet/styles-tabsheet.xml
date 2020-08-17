@@ -1,0 +1,48 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <groupBox caption="Styles"
+                  spacing="true">
+            <flowBox spacing="true">
+                <checkBox id="centeredTabs"
+                          caption="centered-tabs"/>
+                <checkBox id="compactTabbar"
+                          caption="compact-tabbar"/>
+                <checkBox id="equalWidthTabs"
+                          caption="equal-width-tabs"/>
+                <checkBox id="framed"
+                          caption="framed"/>
+                <checkBox id="iconsOnTop"
+                          caption="icons-on-top"/>
+                <checkBox id="onlySelectedClosable"
+                          caption="only-selected-closable"/>
+                <checkBox id="paddedTabbar"
+                          caption="padded-tabbar"/>
+            </flowBox>
+        </groupBox>
+        <tabSheet id="tabSheet"
+                  height="150px">
+            <tab id="tab1"
+                 caption="Tab 1"
+                 expand="spacer1"
+                 icon="UPLOAD"
+                 margin="true"
+                 spacing="true">
+                <label value="Label 1"/>
+                <textField inputPrompt="TextField 1"/>
+                <button caption="Button 1"/>
+                <label id="spacer1"/>
+            </tab>
+            <tab id="tab2"
+                 caption="Tab 2"
+                 expand="spacer2"
+                 icon="UPLOAD"
+                 margin="true"
+                 spacing="true">
+                <label value="Label 2"/>
+                <textField inputPrompt="TextField 2"/>
+                <button caption="Button 2"/>
+                <label id="spacer2"/>
+            </tab>
+        </tabSheet>
+    </layout>
+</window>

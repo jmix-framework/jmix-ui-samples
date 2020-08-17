@@ -1,0 +1,45 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout expand="spacer"
+            spacing="true">
+        <hbox spacing="true">
+            <groupBox caption="Font variants"
+                      spacing="true"
+                      width="120px">
+                <label stylename="light"
+                       value="light"/>
+                <label stylename="bold"
+                       value="bold"/>
+                <label stylename="colored"
+                       value="colored"/>
+            </groupBox>
+            <groupBox caption="Headers"
+                      spacing="true"
+                      width="120px">
+                <label stylename="h1"
+                       value="h1"/>
+                <label stylename="h2"
+                       value="h2"/>
+                <label stylename="h3"
+                       value="h3"/>
+                <label stylename="h4"
+                       value="h4"/>
+            </groupBox>
+            <groupBox caption="Other"
+                      spacing="true"
+                      width="150px">
+                <label stylename="success"
+                       value="success"
+                       width="110px"/>
+                <label stylename="failure"
+                       value="failure"
+                       width="110px"/>
+                <label stylename="no-margin"
+                       value="no-margin"/>
+
+                <label value="Spinner:"/>
+                <label stylename="spinner"/>
+            </groupBox>
+        </hbox>
+        <label id="spacer"/>
+    </layout>
+</window>

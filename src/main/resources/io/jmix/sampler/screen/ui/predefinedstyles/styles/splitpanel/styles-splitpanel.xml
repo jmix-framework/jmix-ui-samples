@@ -1,0 +1,25 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout expand="mainSplit">
+        <label value="Large divider style"/>
+        <split id="mainSplit"
+               orientation="horizontal"
+               pos="30"
+               stylename="large"
+               width="100%">
+            <vbox expand="textArea1"
+                  height="100%"
+                  margin="true">
+                <label value="Area 1"/>
+                <textArea id="textArea1"
+                          width="100%"/>
+            </vbox>
+            <vbox expand="textArea2"
+                  height="100%"
+                  margin="true">
+                <label value="Area 2"/>
+                <textArea id="textArea2"
+                          width="100%"/>
+            </vbox>
+        </split>
+    </layout>
+</window>

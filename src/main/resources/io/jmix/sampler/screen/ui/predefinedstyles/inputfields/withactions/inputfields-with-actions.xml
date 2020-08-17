@@ -1,0 +1,90 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="orderDc"
+                  class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+        </instance>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <scrollBox height="100%"
+                   orientation="horizontal"
+                   scrollBars="horizontal"
+                   spacing="true">
+            <groupBox caption="ComboBox"
+                      height="250px"
+                      spacing="true"
+                      width="AUTO">
+                <comboBox id="comboBoxAlignCenter"
+                          caption="align-center"
+                          stylename="align-center"
+                          optionsEnum="io.jmix.sampler.entity.CustomerGrade"/>
+
+                <comboBox id="comboBoxAlignRight"
+                          caption="align-right"
+                          stylename="align-right"
+                          optionsEnum="io.jmix.sampler.entity.CustomerGrade"/>
+
+                <comboBox id="comboBoxBorderless"
+                          caption="borderless"
+                          stylename="borderless"
+                          optionsEnum="io.jmix.sampler.entity.CustomerGrade"/>
+            </groupBox>
+            <groupBox caption="EntityPicker"
+                      height="250px"
+                      spacing="true"
+                      width="AUTO">
+                <entityPicker caption="align-center"
+                              dataContainer="orderDc"
+                              property="customer"
+                              stylename="align-center"/>
+                <entityPicker caption="align-right"
+                              dataContainer="orderDc"
+                              property="customer"
+                              stylename="align-right"/>
+                <entityPicker caption="borderless"
+                              dataContainer="orderDc"
+                              property="customer"
+                              stylename="borderless"/>
+            </groupBox>
+            <groupBox caption="EntityComboBox"
+                      height="250px"
+                      spacing="true"
+                      width="AUTO">
+                <entityComboBox id="entityComboBoxAlignCenter"
+                                caption="align-center"
+                                captionProperty="name"
+                                dataContainer="orderDc"
+                                optionsContainer="customersDc"
+                                property="customer"
+                                stylename="align-center"/>
+
+                <entityComboBox id="entityComboBoxAlignRight"
+                                caption="align-right"
+                                captionProperty="name"
+                                dataContainer="orderDc"
+                                optionsContainer="customersDc"
+                                property="customer"
+                                stylename="align-right"/>
+
+                <entityComboBox id="entityComboBoxBorderless"
+                                caption="borderless"
+                                captionProperty="name"
+                                dataContainer="orderDc"
+                                optionsContainer="customersDc"
+                                property="customer"
+                                stylename="borderless"/>
+            </groupBox>
+        </scrollBox>
+    </layout>
+</window>

@@ -1,0 +1,91 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <scrollBox height="AUTO"
+                   orientation="horizontal"
+                   scrollBars="horizontal"
+                   spacing="true">
+            <groupBox caption="CssLayout"
+                      spacing="true"
+                      width="300px">
+                <label value="v-component-group"/>
+                <cssLayout stylename="v-component-group">
+                    <button caption="Create"/>
+                    <button caption="Edit"/>
+                    <button caption="Remove"/>
+                </cssLayout>
+
+                <cssLayout stylename="v-component-group">
+                    <textField width="200px"/>
+                    <button caption="Send"/>
+                </cssLayout>
+            </groupBox>
+
+            <groupBox caption="GroupBox"
+                      width="270px">
+                <groupBox expand="content1"
+                          height="200px"
+                          showAsPanel="true"
+                          stylename="borderless"
+                          width="230px">
+                    <hbox expand="caption"
+                          stylename="v-panel-caption"
+                          width="100%">
+                        <label id="caption"
+                               value="panel borderless"/>
+                        <button align="MIDDLE_RIGHT"
+                                icon="SAVE"
+                                stylename="borderless icon-only"/>
+                    </hbox>
+                    <label id="content1"
+                           value="msg://io.jmix.sampler.screen.ui.predefinedstyles.styles/loremIpsum"
+                           width="210px"/>
+                </groupBox>
+            </groupBox>
+
+            <groupBox caption="GroupBox panel well"
+                      height="250px"
+                      showAsPanel="true"
+                      stylename="well"
+                      width="228px">
+                <label value="msg://io.jmix.sampler.screen.ui.predefinedstyles.styles/loremIpsum"
+                       width="210px"/>
+            </groupBox>
+
+            <vbox expand="content2"
+                  height="250px"
+                  stylename="well"
+                  width="228px">
+                <hbox stylename="v-panel-caption"
+                      width="100%">
+                    <label value="well stylename"/>
+                    <button align="MIDDLE_RIGHT"
+                            icon="SAVE"
+                            stylename="borderless icon-only"/>
+                </hbox>
+                <vbox id="content2"
+                      margin="true">
+                    <label value="msg://io.jmix.sampler.screen.ui.predefinedstyles.styles/loremIpsum"
+                           width="210px"/>
+                </vbox>
+            </vbox>
+
+            <vbox expand="content3"
+                  height="250px"
+                  stylename="card"
+                  width="228px">
+                <hbox stylename="v-panel-caption"
+                      width="100%">
+                    <label value="card stylename"/>
+                    <button align="MIDDLE_RIGHT"
+                            icon="SAVE"
+                            stylename="borderless icon-only"/>
+                </hbox>
+                <vbox id="content3"
+                      margin="true">
+                    <label width="210px"
+                           value="msg://io.jmix.sampler.screen.ui.predefinedstyles.styles/loremIpsum"/>
+                </vbox>
+            </vbox>
+        </scrollBox>
+    </layout>
+</window>
