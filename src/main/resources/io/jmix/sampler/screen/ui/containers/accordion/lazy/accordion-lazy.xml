@@ -1,0 +1,20 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <accordion id="accordion">
+            <tab id="tab1"
+                 caption="Tab 1"
+                 margin="true">
+                <label id="label1"
+                       value="Label 1"/>
+            </tab>
+            <tab id="tab2"
+                 caption="Tab 2"
+                 margin="true"
+                 lazy="true">
+                <label id="label2"
+                       value="Label 2"/>
+            </tab>
+        </accordion>
+        <label id="info" align="MIDDLE_LEFT"/>
+    </layout>
+</window>

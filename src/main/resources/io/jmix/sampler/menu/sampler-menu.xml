@@ -819,6 +819,17 @@
         </menu>
     </menu>
 
+    <menu id="containers" image="mainmenu/containers.svg">
+        <menu id="accordion">
+            <item id="accordion-simple" docUrlSuffix="gui_Accordion" image="containers/accordion/accordion-simple.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="accordion-lazy" docUrlSuffix="gui_Accordion" image="containers/accordion/accordion-simple.svg"/>
+        </menu>
+    </menu>
+
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
         <menu id="dialogs">
             <item id="message-dialog" docUrlSuffix="gui_dialogs" image="mainmenu/dialogsAndNotifications.svg"/>

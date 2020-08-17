@@ -1,0 +1,55 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersLoader">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <accordion id="accordionMain"
+                   height="100%">
+            <tab id="tableTab"
+                 caption="Tab with table">
+                <table id="customerTable"
+                       dataContainer="customersDc"
+                       height="100%"
+                       width="100%">
+                    <columns>
+                        <column id="name"/>
+                        <column id="lastName"/>
+                        <column id="age"/>
+                        <column id="active"/>
+                        <column id="grade"/>
+                    </columns>
+                </table>
+            </tab>
+            <tab id="fieldTab"
+                 caption="Tab with fields"
+                 margin="true">
+                <gridLayout spacing="true">
+                    <columns count="4"/>
+                    <rows>
+                        <row>
+                            <label align="MIDDLE_LEFT"
+                                   value="Field 1"/>
+                            <textField/>
+                            <label align="MIDDLE_LEFT"
+                                   value="Field 2"/>
+                            <textField/>
+                        </row>
+                        <row>
+                            <label align="MIDDLE_LEFT"
+                                   value="Field 3"/>
+                            <textField/>
+                        </row>
+                    </rows>
+                </gridLayout>
+            </tab>
+        </accordion>
+    </layout>
+</window>

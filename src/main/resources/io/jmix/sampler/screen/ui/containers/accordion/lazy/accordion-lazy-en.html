@@ -1,0 +1,15 @@
+<p><code>lazy</code> attribute sets lazy loading for a tab content.</p>
+
+<p>Lazy-tabs do not load their content when a screen is opened, it reduces the number of components in memory.
+    Components within a tab are loaded only when user selects the tab. Additionally, if a lazy-tab includes visual
+    components linked to a data source, containing a JPQL query, this query will not be invoked as well. As a result,
+    the screen opens quicker and data is loaded only when user requests it by selecting this tab.</p>
+
+<p>Please note that the components located on a lazy-tab do not exist when the screen is opened. That is why they cannot
+    be injected into a controller and cannot be obtained by invoking <code>getComponent()</code>
+    in the controller's <code>init()</code>method. The <code>lazy</code>-tab components can be called only after
+    user opens it. This moment may be caught using <code>Accordion.TabChangeListener.</code></p>
+
+<p>In this example, when you open the screen, you will see that <code>label2</code> component, located inside
+    lazy <code>tab2</code>, is null. When you select the second tab, <code>checkComponents()</code> method will be called
+    again, and this time <code>label2</code> will be available.</p>
