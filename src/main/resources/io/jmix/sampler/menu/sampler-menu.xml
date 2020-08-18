@@ -879,6 +879,21 @@
             <item id="groupboxlayout-collapsable" docUrlSuffix="gui_GroupBoxLayout"
                   image="containers/groupboxlayout/groupboxlayout-simple.svg"/>
         </menu>
+        <menu id="htmlboxlayout">
+            <item id="htmlboxlayout-simple" docUrlSuffix="gui_HtmlBoxLayout" splitEnabled="true"
+                  image="containers/htmlboxlayout/htmlboxlayout-simple.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/htmlboxlayout/simple/html-layout.html"/>
+                    <file name="io/jmix/sampler/screen/ui/containers/htmlboxlayout/simple/htmlboxlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="htmlboxlayout-template" docUrlSuffix="gui_HtmlBoxLayout"
+                  image="containers/htmlboxlayout/htmlboxlayout-simple.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/htmlboxlayout/simple/htmlboxlayout-style.scss"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

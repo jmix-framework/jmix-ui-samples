@@ -1,0 +1,18 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <htmlBox id="htmlSample"
+                 height="100%"
+                 stylename="html-sample"
+                 template="html-layout">
+            <button id="addons"
+                    caption="Addons"
+                    width="100%"/>
+            <button id="buy"
+                    caption="Buy"
+                    width="100%"/>
+            <button id="support"
+                    caption="Support"
+                    width="100%"/>
+        </htmlBox>
+    </layout>
+</window>
