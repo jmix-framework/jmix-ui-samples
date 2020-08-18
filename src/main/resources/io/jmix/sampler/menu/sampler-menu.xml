@@ -896,6 +896,14 @@
         </menu>
         <item id="scrollboxlayout-simple" docUrlSuffix="gui_ScrollBoxLayout"
               image="containers/scrollboxlayout/scrollboxlayout-simple.svg"/>
+        <menu id="splitpanel">
+            <item id="splitpanel-simple" docUrlSuffix="gui_SplitPanel"
+                  image="containers/splitpanel/splitpanel-simple.svg"/>
+            <item id="splitpanel-dockable" docUrlSuffix="gui_SplitPanel"
+                  image="containers/splitpanel/splitpanel-simple.svg"/>
+            <item id="splitpanel-position" docUrlSuffix="gui_SplitPanel"
+                  image="containers/splitpanel/splitpanel-simple.svg"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

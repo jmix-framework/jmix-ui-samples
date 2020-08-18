@@ -1,0 +1,23 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox height="300px" spacing="true" width="100%">
+            <groupBox caption="Position range: 100px - 300px"
+                      height="100%"
+                      width="100%">
+                <split minSplitPosition="100px"
+                       maxSplitPosition="300px"
+                       orientation="horizontal"
+                       pos="200px"
+                       height="100%"
+                       width="100%">
+                    <hbox height="100%" width="100%">
+                        <label value="LEFT" align="MIDDLE_CENTER"/>
+                    </hbox>
+                    <hbox height="100%" width="100%">
+                        <label value="RIGHT" align="MIDDLE_CENTER"/>
+                    </hbox>
+                </split>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

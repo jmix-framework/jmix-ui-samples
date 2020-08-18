@@ -1,0 +1,33 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <split height="300px"
+               width="100%"
+               orientation="horizontal"
+               pos="30">
+            <vbox expand="textArea1"
+                  height="100%"
+                  margin="true">
+                <label value="Area 1"/>
+                <textArea id="textArea1"
+                          width="100%"/>
+            </vbox>
+            <split height="100%"
+                   width="100%"
+                   orientation="vertical">
+                <vbox expand="textArea2"
+                      height="100%"
+                      margin="true">
+                    <label value="Area 2"/>
+                    <textArea id="textArea2"
+                              width="100%"/>
+                </vbox>
+                <vbox expand="textArea3"
+                      height="100%"
+                      margin="true">
+                    <label value="Area 3"/>
+                    <textArea id="textArea3" width="100%"/>
+                </vbox>
+            </split>
+        </split>
+    </layout>
+</window>
