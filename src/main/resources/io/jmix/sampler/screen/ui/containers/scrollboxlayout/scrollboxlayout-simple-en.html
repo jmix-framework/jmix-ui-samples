@@ -1,0 +1,17 @@
+<p><code>ScrollBoxLayout</code> - a container that can scroll its content if it does not fit the size of the container.
+</p>
+
+<p>The components direction can be defined by <code>orientation</code> attribute - <code>horizontal</code>or
+    <code>vertical</code>.
+    Default is <code>vertical</code>.</p>
+
+<p><code>scrollBars</code> attribute allows configuring scroll bars. It can be <code>horizontal</code>,
+    <code>vertical</code> - for horizontal and vertical scrolling respectively, <code>both</code> - for
+    scrolling in any direction. Setting the value to <code>none</code> forbids scrolling in any direction.</p>
+
+<p>The components embedded into the <code>scrollBox</code> should have fixed size or default size. It can
+    not be set to <code>height="100%"</code> or <code>width="100%"</code>. At the same time, <code>scrollBox</code>
+    cannot calculate its own size based on its content. Its absolute size should either be specified or the scrollBox
+    should be stretched it in a parent container by setting <code>height="100%"</code> and <code>width="100%"</code>.
+</p>
+

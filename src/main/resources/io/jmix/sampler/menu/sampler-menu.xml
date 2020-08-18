@@ -880,7 +880,7 @@
                   image="containers/groupboxlayout/groupboxlayout-simple.svg"/>
         </menu>
         <menu id="htmlboxlayout">
-            <item id="htmlboxlayout-simple" docUrlSuffix="gui_HtmlBoxLayout" splitEnabled="true"
+            <item id="htmlboxlayout-simple" docUrlSuffix="gui_HtmlBoxLayout"
                   image="containers/htmlboxlayout/htmlboxlayout-simple.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/htmlboxlayout/simple/html-layout.html"/>
@@ -894,6 +894,8 @@
                 </otherFiles>
             </item>
         </menu>
+        <item id="scrollboxlayout-simple" docUrlSuffix="gui_ScrollBoxLayout"
+              image="containers/scrollboxlayout/scrollboxlayout-simple.svg"/>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

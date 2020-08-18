@@ -1,0 +1,60 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <scrollBox caption="Vertical scrollbar"
+                       height="150px"
+                       width="300px"
+                       spacing="true">
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+            </scrollBox>
+
+            <label width="20px"/>
+
+            <scrollBox caption="Horizontal scrollbar"
+                       height="50px"
+                       width="200px"
+                       orientation="horizontal"
+                       scrollBars="horizontal"
+                       spacing="true">
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+                <textField/>
+            </scrollBox>
+
+            <label width="20px"/>
+
+            <scrollBox caption="Both scrollbars"
+                       height="150px"
+                       width="150px"
+                       scrollBars="both"
+                       spacing="true">
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+                <textField width="200" height="50"/>
+            </scrollBox>
+        </hbox>
+    </layout>
+</window>
