@@ -1,0 +1,21 @@
+<p><code>GridLayout</code> places components in a grid.</p>
+
+<p><code>gridLayout</code> elements:</p>
+
+<ul>
+    <li>
+        <p><code>columns</code> - a required element, describes grid columns. It should have either a
+            <code>count</code> attribute, or a nested <code>column</code> element for each column.</p>
+
+        <p>In this example, the width of each column, and hence the whole container width, is adjusted by content.</p>
+
+        <p>If the container width is explicitly defined in pixels or percents, free space will be divided between the
+            columns equally.</p>
+    </li>
+    <li>
+        <p><code>rows</code> - a required element, contains a set of rows. Each line is defined in its own <code>row</code>
+            element. <code>row</code> element should contain elements of the components displayed in the grid's
+            current row cells. The number of components in a row should not exceed the defined number of columns, but it
+            can be less.</p>
+    </li>
+</ul>

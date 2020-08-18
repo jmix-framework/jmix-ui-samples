@@ -1,0 +1,11 @@
+<p>In order to divide screen space non-equally, a <code>column</code> element with a <code>flex</code> attribute should
+    be defined for each column. If <code>flex</code> is not defined, or is set to 0, the width of the column will be set
+    according to its contents given that at least one other column has a non-zero <code>flex</code>.</p>
+
+<p>In this example, the first and the third columns will get the width according to the maximum text length.
+    The second and fourth columns will get all remainded space, wherein the fourth will get three times more space
+    then the second.</p>
+
+<p>In order for the free space to appear, the entire container width should be set in either pixels or percents.
+    Otherwise, column width will be calculated according to content length, and <code>flex</code> attribute will
+    have no effect.</p>

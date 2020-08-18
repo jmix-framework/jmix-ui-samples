@@ -1,0 +1,19 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <gridLayout spacing="true">
+            <columns count="4"/>
+            <rows>
+                <row>
+                    <label value="Field 1" align="MIDDLE_LEFT"/>
+                    <textField/>
+                    <label value="Field 2" align="MIDDLE_LEFT"/>
+                    <textField/>
+                </row>
+                <row>
+                    <label value="Field 3" align="MIDDLE_LEFT"/>
+                    <textField/>
+                </row>
+            </rows>
+        </gridLayout>
+    </layout>
+</window>

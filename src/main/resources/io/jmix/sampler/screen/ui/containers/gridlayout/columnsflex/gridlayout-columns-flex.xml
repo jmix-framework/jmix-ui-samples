@@ -1,0 +1,25 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <gridLayout spacing="true"
+                    width="100%">
+            <columns>
+                <column/>
+                <column flex="1"/>
+                <column/>
+                <column flex="3"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="Field 1" align="MIDDLE_LEFT"/>
+                    <textField width="100%"/>
+                    <label value="Field 2" align="MIDDLE_LEFT"/>
+                    <textField width="100%"/>
+                </row>
+                <row>
+                    <label value="Field 3" align="MIDDLE_LEFT"/>
+                    <textField width="100%"/>
+                </row>
+            </rows>
+        </gridLayout>
+    </layout>
+</window>

@@ -863,6 +863,16 @@
                 <file name="io/jmix/sampler/screen/ui/components/button/simple/button-simple.xml"/>
             </otherFiles>
         </item>
+        <menu id="gridlayout">
+            <item id="gridlayout-simple" docUrlSuffix="gui_GridLayout"
+                  image="containers/gridlayout/gridlayout-simple.svg"/>
+            <item id="gridlayout-columns-flex" docUrlSuffix="gui_GridLayout"
+                  image="containers/gridlayout/gridlayout-simple.svg"/>
+            <item id="gridlayout-rows-flex" docUrlSuffix="gui_GridLayout"
+                  image="containers/gridlayout/gridlayout-simple.svg"/>
+            <item id="gridlayout-span" docUrlSuffix="gui_GridLayout"
+                  image="containers/gridlayout/gridlayout-simple.svg"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
