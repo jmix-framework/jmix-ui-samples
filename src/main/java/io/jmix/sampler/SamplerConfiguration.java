@@ -19,8 +19,10 @@ package io.jmix.sampler;
 import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
 import io.jmix.core.annotation.JmixModule;
+import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.bean.SamplerMetadataTools;
+import io.jmix.ui.App;
 import io.jmix.ui.UiConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,6 +30,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @JmixModule(dependsOn = UiConfiguration.class)
 public class SamplerConfiguration {
+
+    @Bean(name = App.NAME)
+    public App app() {
+        return new SamplerApp();
+    }
 
     @Bean(name = Messages.NAME)
     public Messages messages() {

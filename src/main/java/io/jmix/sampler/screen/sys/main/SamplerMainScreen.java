@@ -17,6 +17,7 @@
 package io.jmix.sampler.screen.sys.main;
 
 import io.jmix.core.CoreProperties;
+import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.config.MenuConfig;
 import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.screen.sys.maindashboard.DashboardItemClickEvent;
@@ -197,6 +198,8 @@ public class SamplerMainScreen extends Screen implements Window.HasWorkArea {
                 }
 
                 userSettingsTools.saveAppWindowTheme(selectedTheme);
+                ui.setTheme(selectedTheme);
+                ((SamplerApp) ui.getApp()).applyUserTheme(selectedTheme);
                 ui.getApp().createTopLevelWindow();
             }
         });
