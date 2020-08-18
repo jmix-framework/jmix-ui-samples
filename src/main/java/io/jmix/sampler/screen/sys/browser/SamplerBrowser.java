@@ -21,8 +21,8 @@ import com.google.common.collect.ImmutableMap;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
-import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.config.MenuConfig;
+import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.screen.sys.main.SamplerMainScreen;
 import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.App;
@@ -46,7 +46,6 @@ import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiControllerUtils;
 import io.jmix.ui.screen.UiDescriptor;
-import io.jmix.ui.sys.ControllerUtils;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -288,15 +287,15 @@ public class SamplerBrowser extends Screen {
         return docLink;
     }
 
-    protected PopupView permalink(String frameId) {
+    protected PopupView permalink(String fragmentId) {
         PopupView permalink = uiComponents.create(PopupView.class);
         permalink.setAlignment(Component.Alignment.TOP_RIGHT);
         permalink.setHideOnMouseOut(false);
-        permalink.setDescription(messages.getMessage(this.getClass(), "permalink.description"));
+        permalink.setDescription(messages.getMessage(SamplerBrowser.class, "permalink.description"));
         permalink.setStyleName("external-link");
 
         TextField<String> content = uiComponents.create(TextField.TYPE_STRING);
-        String value = ControllerUtils.getLocationWithoutParams() + "open?screen=" + frameId;
+        String value = urlRouting.getRouteGenerator().getRoute(SamplerBrowser.class, ImmutableMap.of("id", fragmentId));
         content.setValue(value);
         content.setWidth((value.length() * 8) + "px");
         content.setEditable(false);

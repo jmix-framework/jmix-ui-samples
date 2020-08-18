@@ -2,8 +2,8 @@ package io.jmix.sampler.screen.sys.maindashboard;
 
 import com.google.common.collect.Iterables;
 import io.jmix.core.common.event.Subscription;
-import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.config.MenuConfig;
+import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.Screens;
 import io.jmix.ui.UiComponents;
@@ -15,8 +15,6 @@ import io.jmix.ui.component.HBoxLayout;
 import io.jmix.ui.component.Image;
 import io.jmix.ui.component.Label;
 import io.jmix.ui.component.LinkButton;
-import io.jmix.ui.component.PopupView;
-import io.jmix.ui.component.TextField;
 import io.jmix.ui.screen.MessageBundle;
 import io.jmix.ui.screen.OpenMode;
 import io.jmix.ui.screen.ScreenFragment;
@@ -24,7 +22,6 @@ import io.jmix.ui.screen.ScreenOptions;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
-import io.jmix.ui.sys.ControllerUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -50,10 +47,6 @@ public class SamplerMainDashboardFragment extends ScreenFragment {
     protected HBoxLayout historyBox;
     @Autowired
     protected HBoxLayout header;
-    @Autowired
-    protected PopupView permalink;
-    @Autowired
-    protected TextField<String> popupContent;
 
     @Autowired
     protected MenuConfig menuConfig;
@@ -84,7 +77,6 @@ public class SamplerMainDashboardFragment extends ScreenFragment {
             cssLayout.add(label);
 
             header.setVisible(false);
-            permalink.setPopupVisible(false);
         } else {
             menuItems = menuConfig.getAllChildrenAsList(menuItemRootId);
             header.setVisible(true);
@@ -194,7 +186,6 @@ public class SamplerMainDashboardFragment extends ScreenFragment {
                 }
                 DashboardItemClickEvent clickEvent = new DashboardItemClickEvent(linkButton, itemId);
                 getEventHub().publish(DashboardItemClickEvent.class, clickEvent);
-
             }
         });
         if (!isMainDashboard) {
@@ -203,21 +194,7 @@ public class SamplerMainDashboardFragment extends ScreenFragment {
             historyBox.add(label);
             linkButton.setCaption(menuConfig.getMenuItemCaption(itemId));
         }
-        initPermalink(itemId);
         historyBox.add(linkButton);
-    }
-
-    protected void initPermalink(String frameId) {
-        String value = ControllerUtils.getLocationWithoutParams() + "open?screen=" + frameId;
-        popupContent.setValue(value);
-        popupContent.selectAll();
-        popupContent.setWidth((value.length() * 8) + "px");
-
-        permalink.addPopupVisibilityListener(event -> {
-            if (event.isPopupVisible()) {
-                popupContent.focus();
-            }
-        });
     }
 
     public void clearDashboard() {
@@ -226,7 +203,6 @@ public class SamplerMainDashboardFragment extends ScreenFragment {
 
     protected void clearBreadCrumbs() {
         historyBox.removeAll();
-        addNavigationButtonLink(MENU_ROOT_ITEM_ID, true);
     }
 
     public Subscription addDashboardItemClickListener(Consumer<DashboardItemClickEvent> listener) {

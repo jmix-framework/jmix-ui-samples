@@ -19,28 +19,15 @@ package io.jmix.sampler;
 import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
 import io.jmix.core.annotation.JmixModule;
-import io.jmix.sampler.bean.SamplerLinkHandler;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.bean.SamplerMetadataTools;
-import io.jmix.ui.App;
 import io.jmix.ui.UiConfiguration;
-import io.jmix.ui.sys.LinkHandler;
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
-
-import java.util.Map;
 
 @Configuration
 @JmixModule(dependsOn = UiConfiguration.class)
 public class SamplerConfiguration {
-
-    @Bean(name = LinkHandler.NAME)
-    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
-    public LinkHandler linkHandler(App app, String action, Map<String, String> requestParams) {
-        return new SamplerLinkHandler(app, action, requestParams);
-    }
 
     @Bean(name = Messages.NAME)
     public Messages messages() {

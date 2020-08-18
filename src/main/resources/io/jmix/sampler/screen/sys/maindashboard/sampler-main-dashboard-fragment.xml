@@ -5,21 +5,10 @@
             responsive="true"
             spacing="true">
         <hbox id="header"
-              expand="spacer"
               visible="false"
               width="100%">
             <hbox id="historyBox"
                   height="30px"/>
-            <label id="spacer"/>
-            <popupView id="permalink"
-                       align="TOP_RIGHT"
-                       description="msg://permalink.description"
-                       hideOnMouseOut="false"
-                       stylename="external-link"
-                       width="30px">
-                <textField id="popupContent"
-                           editable="false"/>
-            </popupView>
         </hbox>
         <scrollBox id="dashboardScrollBox">
             <cssLayout id="cssLayout"
