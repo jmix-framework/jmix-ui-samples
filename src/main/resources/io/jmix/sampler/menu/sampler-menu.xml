@@ -873,6 +873,12 @@
             <item id="gridlayout-span" docUrlSuffix="gui_GridLayout"
                   image="containers/gridlayout/gridlayout-simple.svg"/>
         </menu>
+        <menu id="groupboxlayout">
+            <item id="groupboxlayout-simple" docUrlSuffix="gui_GroupBoxLayout"
+                  image="containers/groupboxlayout/groupboxlayout-simple.svg"/>
+            <item id="groupboxlayout-collapsable" docUrlSuffix="gui_GroupBoxLayout"
+                  image="containers/groupboxlayout/groupboxlayout-simple.svg"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

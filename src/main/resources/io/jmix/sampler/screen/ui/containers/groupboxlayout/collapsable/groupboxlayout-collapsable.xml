@@ -1,0 +1,28 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <groupBox caption="GroupBox"
+                      collapsable="true"
+                      spacing="true"
+                      width="300px">
+                <label value="Label"/>
+                <textField inputPrompt="TextField" width="100%"/>
+                <button caption="Button"/>
+                <button caption="Button"/>
+            </groupBox>
+
+            <label width="20px"/>
+
+            <groupBox caption="GroupBox with 'light' style"
+                      collapsable="true"
+                      spacing="true"
+                      stylename="light"
+                      width="300px">
+                <label value="Label"/>
+                <textField inputPrompt="TextField" width="100%"/>
+                <button caption="Button"/>
+                <button caption="Button"/>
+            </groupBox>
+        </hbox>
+    </layout>
+</window>

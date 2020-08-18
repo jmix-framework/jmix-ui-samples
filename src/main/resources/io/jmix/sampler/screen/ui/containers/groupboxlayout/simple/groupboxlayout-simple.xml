@@ -1,0 +1,24 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <groupBox caption="Vertical GroupBox"
+                  spacing="true"
+                  width="AUTO">
+            <label value="Label"/>
+            <textField inputPrompt="TextField"/>
+            <button caption="Button"/>
+            <button caption="Button"/>
+        </groupBox>
+
+        <groupBox caption="Horizontal GroupBox"
+                  orientation="horizontal"
+                  spacing="true"
+                  width="AUTO">
+            <label align="MIDDLE_LEFT"
+                   value="Label"/>
+            <textField inputPrompt="TextField"/>
+            <button caption="Button"/>
+            <button caption="Button"/>
+        </groupBox>
+
+    </layout>
+</window>
