@@ -851,6 +851,12 @@
                 </otherFiles>
             </item>
         </menu>
+        <item id="csslayout-responsive" docUrlSuffix="gui_CssLayout"
+              image="containers/csslayout/csslayout-responsive.svg">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/containers/csslayout/csslayout-style.scss"/>
+            </otherFiles>
+        </item>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
