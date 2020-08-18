@@ -1,0 +1,22 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <tabSheet>
+            <tab id="tab1"
+                 caption="Tab 1"
+                 margin="true"
+                 spacing="true">
+                <label value="Label 1"/>
+                <textField inputPrompt="TextField 1"/>
+                <button caption="Button 1"/>
+            </tab>
+            <tab id="tab2"
+                 caption="Tab 2"
+                 margin="true"
+                 spacing="true">
+                <label value="Label 2"/>
+                <textField inputPrompt="TextField 2"/>
+                <button caption="Button 2"/>
+            </tab>
+        </tabSheet>
+    </layout>
+</window>

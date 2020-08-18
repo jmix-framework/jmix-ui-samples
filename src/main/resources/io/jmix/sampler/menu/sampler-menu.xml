@@ -904,6 +904,10 @@
             <item id="splitpanel-position" docUrlSuffix="gui_SplitPanel"
                   image="containers/splitpanel/splitpanel-simple.svg"/>
         </menu>
+        <menu id="tabsheet">
+            <item id="tabsheet-simple" docUrlSuffix="gui_TabSheet" image="containers/tabsheet/tabsheet-simple.svg"/>
+            <item id="tabsheet-lazy" docUrlSuffix="gui_TabSheet" image="containers/tabsheet/tabsheet-simple.svg"/>
+        </menu>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
