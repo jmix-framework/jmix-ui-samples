@@ -908,6 +908,8 @@
             <item id="tabsheet-simple" docUrlSuffix="gui_TabSheet" image="containers/tabsheet/tabsheet-simple.svg"/>
             <item id="tabsheet-lazy" docUrlSuffix="gui_TabSheet" image="containers/tabsheet/tabsheet-simple.svg"/>
         </menu>
+        <item id="layout-click" docUrlSuffix="gui_BoxLayout" image="containers/layoutclick/layout-click.png"/>
+        <item id="layout-shortcut" docUrlSuffix="gui_BoxLayout" image="containers/layoutshortcut/layout-shortcut.png"/>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

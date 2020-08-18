@@ -1,0 +1,17 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <groupBox id="groupBox"
+                  caption="Click inside this layout or nested component and use the following combination: Shift-A"
+                  height="300px"
+                  showAsPanel="true">
+            <vbox id="vBox"
+                  margin="true"
+                  spacing="true"
+                  stylename="card"
+                  width="AUTO">
+                <textField id="textField"/>
+                <dateField id="dateField"/>
+            </vbox>
+        </groupBox>
+    </layout>
+</window>

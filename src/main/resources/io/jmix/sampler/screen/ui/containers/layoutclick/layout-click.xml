@@ -1,0 +1,11 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <vbox id="layout"
+              height="300px"
+              stylename="card"
+              width="100%">
+            <label align="MIDDLE_CENTER"
+                   value="Click inside this area"/>
+        </vbox>
+    </layout>
+</window>
