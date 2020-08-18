@@ -1,0 +1,8 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <groupBox caption="Fragment"
+                  width="AUTO">
+            <fragment screen="button-simple"/>
+        </groupBox>
+    </layout>
+</window>

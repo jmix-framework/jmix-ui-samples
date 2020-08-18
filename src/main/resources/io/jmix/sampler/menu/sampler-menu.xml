@@ -857,6 +857,12 @@
                 <file name="io/jmix/sampler/screen/ui/containers/csslayout/csslayout-style.scss"/>
             </otherFiles>
         </item>
+        <item id="fragment-simple" docUrlSuffix="screen_controllers" image="containers/fragment/fragment-simple.svg">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/components/button/simple/ButtonSimpleSample.java"/>
+                <file name="io/jmix/sampler/screen/ui/components/button/simple/button-simple.xml"/>
+            </otherFiles>
+        </item>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
