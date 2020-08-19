@@ -12,6 +12,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout>
         <treeTable id="taskTable"
                    dataContainer="tasksDc"

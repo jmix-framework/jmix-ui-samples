@@ -5,7 +5,6 @@ import io.jmix.sampler.entity.OrderItem;
 import io.jmix.ui.model.CollectionContainer;
 import io.jmix.ui.model.InstanceContainer;
 import io.jmix.ui.screen.EditedEntityContainer;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.StandardEditor;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.Target;
@@ -18,7 +17,6 @@ import java.math.BigDecimal;
 @UiController("sampler_Order.edit")
 @UiDescriptor("order-edit.xml")
 @EditedEntityContainer("orderDc")
-@LoadDataBeforeShow
 public class OrderEdit extends StandardEditor<Order> {
     @Autowired
     protected CollectionContainer<OrderItem> itemsDc;

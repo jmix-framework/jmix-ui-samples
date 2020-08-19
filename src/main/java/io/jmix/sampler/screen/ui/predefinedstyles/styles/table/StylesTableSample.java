@@ -5,7 +5,6 @@ import io.jmix.ui.component.CheckBox;
 import io.jmix.ui.component.Component;
 import io.jmix.ui.component.HasValue;
 import io.jmix.ui.component.Table;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("styles-table")
 @UiDescriptor("styles-table.xml")
-@LoadDataBeforeShow
 public class StylesTableSample extends ScreenFragment {
 
     @Autowired

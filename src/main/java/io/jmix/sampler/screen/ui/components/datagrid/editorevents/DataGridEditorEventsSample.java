@@ -3,7 +3,6 @@ package io.jmix.sampler.screen.ui.components.datagrid.editorevents;
 import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.component.DataGrid;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("datagrid-editor-events")
 @UiDescriptor("datagrid-editor-events.xml")
-@LoadDataBeforeShow
 public class DataGridEditorEventsSample extends ScreenFragment {
     @Autowired
     protected Notifications notifications;

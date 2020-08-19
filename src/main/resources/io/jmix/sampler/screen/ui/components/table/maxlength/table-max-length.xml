@@ -12,6 +12,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout>
         <table id="orderTable"
                dataContainer="ordersDc"

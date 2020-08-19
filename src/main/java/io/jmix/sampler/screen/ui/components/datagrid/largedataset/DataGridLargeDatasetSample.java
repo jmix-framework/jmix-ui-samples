@@ -5,7 +5,6 @@ import io.jmix.core.Metadata;
 import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.model.CollectionContainer;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.Target;
@@ -18,7 +17,6 @@ import java.util.List;
 
 @UiController("datagrid-large-dataset")
 @UiDescriptor("datagrid-large-dataset.xml")
-@LoadDataBeforeShow
 public class DataGridLargeDatasetSample extends ScreenFragment {
     private static final int COUNT = 1000;
 

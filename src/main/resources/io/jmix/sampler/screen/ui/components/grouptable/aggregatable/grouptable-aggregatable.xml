@@ -8,6 +8,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout>
         <groupTable id="employeesTable"
                     aggregatable="true"

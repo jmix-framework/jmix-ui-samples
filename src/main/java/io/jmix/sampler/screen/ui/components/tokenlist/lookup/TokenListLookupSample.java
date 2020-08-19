@@ -3,7 +3,6 @@ package io.jmix.sampler.screen.ui.components.tokenlist.lookup;
 import io.jmix.core.Metadata;
 import io.jmix.sampler.entity.Order;
 import io.jmix.ui.model.InstanceContainer;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("tokenlist-lookup")
 @UiDescriptor("tokenlist-lookup.xml")
-@LoadDataBeforeShow
 public class TokenListLookupSample extends ScreenFragment {
 
     @Autowired

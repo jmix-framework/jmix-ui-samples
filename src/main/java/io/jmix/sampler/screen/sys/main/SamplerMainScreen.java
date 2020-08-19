@@ -36,7 +36,6 @@ import io.jmix.ui.component.mainwindow.SideMenu;
 import io.jmix.ui.navigation.RedirectHandler;
 import io.jmix.ui.navigation.Route;
 import io.jmix.ui.navigation.UrlRouting;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.OpenMode;
 import io.jmix.ui.screen.Screen;
 import io.jmix.ui.screen.ScreenOptions;
@@ -59,7 +58,6 @@ import java.util.stream.Collectors;
 @Route(path = "main")
 @UiDescriptor("sampler-main-screen.xml")
 @UiController("sampler_MainScreen")
-@LoadDataBeforeShow
 public class SamplerMainScreen extends Screen implements Window.HasWorkArea {
 
     protected final static String FOUND_ITEM_STYLE = "found-item";

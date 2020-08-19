@@ -7,7 +7,7 @@ import io.jmix.ui.Actions;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.action.Action;
 import io.jmix.ui.action.BaseAction;
-import io.jmix.ui.action.entitypicker.ClearAction;
+import io.jmix.ui.action.entitypicker.EntityClearAction;
 import io.jmix.ui.component.EntityPicker;
 import io.jmix.ui.model.InstanceContainer;
 import io.jmix.ui.screen.ScreenFragment;
@@ -55,7 +55,7 @@ public class EntityPickerActionsSample extends ScreenFragment {
                 .withIcon("font-icon:USERS")
         );
 
-        Action clearAction = actions.create(ClearAction.ID);
+        Action clearAction = actions.create(EntityClearAction.ID);
         clearAction.setIcon("font-icon:BAN");
         entityPicker.addAction(clearAction);
     }

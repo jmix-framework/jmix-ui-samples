@@ -10,6 +10,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout expand="sourceCodeEditor" spacing="true">
         <sourceCodeEditor id="sourceCodeEditor" width="100%"/>
     </layout>

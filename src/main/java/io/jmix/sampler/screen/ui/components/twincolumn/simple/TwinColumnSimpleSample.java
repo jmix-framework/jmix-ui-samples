@@ -5,7 +5,6 @@ import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.component.Button;
 import io.jmix.ui.component.TwinColumn;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -16,7 +15,6 @@ import java.util.Collection;
 
 @UiController("twincolumn-simple")
 @UiDescriptor("twincolumn-simple.xml")
-@LoadDataBeforeShow
 public class TwinColumnSimpleSample extends ScreenFragment {
 
     @Autowired

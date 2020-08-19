@@ -4,7 +4,6 @@ import io.jmix.sampler.entity.Customer;
 import io.jmix.sampler.entity.CustomerGrade;
 import io.jmix.ui.component.GroupTable;
 import io.jmix.ui.gui.data.GroupInfo;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -15,7 +14,6 @@ import javax.annotation.Nullable;
 
 @UiController("grouptable-style-provider")
 @UiDescriptor("grouptable-style-provider.xml")
-@LoadDataBeforeShow
 public class GroupTableStyleProviderSample extends ScreenFragment {
 
     @Autowired

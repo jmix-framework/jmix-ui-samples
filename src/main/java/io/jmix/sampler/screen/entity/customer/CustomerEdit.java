@@ -18,7 +18,6 @@ package io.jmix.sampler.screen.entity.customer;
 
 import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.screen.EditedEntityContainer;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.StandardEditor;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
@@ -26,6 +25,5 @@ import io.jmix.ui.screen.UiDescriptor;
 @UiController("sampler_Customer.edit")
 @UiDescriptor("customer-edit.xml")
 @EditedEntityContainer("customerDc")
-@LoadDataBeforeShow
 public class CustomerEdit extends StandardEditor<Customer> {
 }

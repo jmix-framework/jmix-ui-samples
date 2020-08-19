@@ -6,7 +6,6 @@ import io.jmix.ui.Notifications;
 import io.jmix.ui.action.Action;
 import io.jmix.ui.component.DataGrid;
 import io.jmix.ui.model.CollectionContainer;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -15,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("datagrid-editor-actions")
 @UiDescriptor("datagrid-editor-actions.xml")
-@LoadDataBeforeShow
 public class DataGridEditorActionsSample extends ScreenFragment {
 
     @Autowired

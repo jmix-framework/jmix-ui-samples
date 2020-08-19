@@ -37,14 +37,12 @@ import io.jmix.ui.navigation.Route;
 import io.jmix.ui.navigation.UrlIdSerializer;
 import io.jmix.ui.navigation.UrlParamsChangedEvent;
 import io.jmix.ui.navigation.UrlRouting;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.MapScreenOptions;
 import io.jmix.ui.screen.MessageBundle;
 import io.jmix.ui.screen.Screen;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
-import io.jmix.ui.screen.UiControllerUtils;
 import io.jmix.ui.screen.UiDescriptor;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.BooleanUtils;
@@ -135,19 +133,10 @@ public class SamplerBrowser extends Screen {
         Fragment fragment = screenFragment.getFragment();
         fragment.setId("sampleFrame");
 
-        loadScreenData(screenFragment, fragment);
         updateLayout(fragment, item);
         updateCaption(sampleId, item);
         updateTabs(sampleId, item);
         focusFirstPossibleComponent(fragment);
-    }
-
-    protected void loadScreenData(ScreenFragment screenFragment, Fragment fragment) {
-        LoadDataBeforeShow annotation = screenFragment.getClass().getAnnotation(LoadDataBeforeShow.class);
-        if (annotation != null && annotation.value()) {
-            UiControllerUtils.getScreenData(fragment.getFrameOwner())
-                    .loadAll();
-        }
     }
 
     protected void updateLayout(Fragment fragment, MenuItem item) {

@@ -17,7 +17,6 @@
 package io.jmix.sampler.screen.entity.customer;
 
 import io.jmix.sampler.entity.Customer;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.LookupComponent;
 import io.jmix.ui.screen.StandardLookup;
 import io.jmix.ui.screen.UiController;
@@ -26,6 +25,5 @@ import io.jmix.ui.screen.UiDescriptor;
 @UiController("sampler_Customer.browse")
 @UiDescriptor("customer-browse.xml")
 @LookupComponent("customersTable")
-@LoadDataBeforeShow
 public class CustomerBrowse extends StandardLookup<Customer> {
 }

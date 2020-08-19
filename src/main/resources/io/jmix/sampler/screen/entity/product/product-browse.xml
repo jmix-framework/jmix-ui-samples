@@ -15,6 +15,9 @@
     </data>
     <dialogMode height="600"
                 width="800"/>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout expand="productsTable"
             spacing="true">
         <!-- todo filter

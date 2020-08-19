@@ -2,14 +2,12 @@ package io.jmix.sampler.screen.ui.components.table.styleprovider;
 
 import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
 
 @UiController("table-style-provider")
 @UiDescriptor("table-style-provider.xml")
-@LoadDataBeforeShow
 public class TableStyleProviderSample extends ScreenFragment {
 
     @Install(to = "customerTable", subject = "styleProvider")

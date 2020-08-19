@@ -16,6 +16,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout>
         <suggestionField id="suggestionField"
                          dataContainer="orderDc"

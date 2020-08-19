@@ -9,7 +9,6 @@ import io.jmix.ui.component.ComboBox;
 import io.jmix.ui.component.DataGrid;
 import io.jmix.ui.component.HasValue;
 import io.jmix.ui.component.TreeDataGrid;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -23,7 +22,6 @@ import java.util.stream.Collectors;
 
 @UiController("treedatagrid-simple")
 @UiDescriptor("treedatagrid-simple.xml")
-@LoadDataBeforeShow
 public class TreeDataGridSimpleSample extends ScreenFragment {
     @Autowired
     protected ComboBox<String> columnSelector;

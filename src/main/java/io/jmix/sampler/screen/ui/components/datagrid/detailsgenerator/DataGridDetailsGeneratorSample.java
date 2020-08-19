@@ -12,7 +12,6 @@ import io.jmix.ui.component.HBoxLayout;
 import io.jmix.ui.component.Label;
 import io.jmix.ui.component.VBoxLayout;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -24,7 +23,6 @@ import java.util.List;
 
 @UiController("datagrid-details-generator")
 @UiDescriptor("datagrid-details-generator.xml")
-@LoadDataBeforeShow
 public class DataGridDetailsGeneratorSample extends ScreenFragment {
 
     @Autowired

@@ -6,6 +6,9 @@
             <loader id="customerDl"/>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout expand="customersDataGrid"
             spacing="true">
         <dataGrid id="customersDataGrid"

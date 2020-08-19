@@ -4,7 +4,6 @@ import io.jmix.sampler.entity.Order;
 import io.jmix.ui.component.CheckBox;
 import io.jmix.ui.component.HasValue;
 import io.jmix.ui.component.Table;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -13,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("table-simple")
 @UiDescriptor("table-simple.xml")
-@LoadDataBeforeShow
 public class TableSimpleSample extends ScreenFragment {
 
     @Autowired

@@ -28,6 +28,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout>
         <hbox spacing="true">
             <tokenList caption="Without 'Clear' button"

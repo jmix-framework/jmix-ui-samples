@@ -28,6 +28,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout>
         <tokenList id="linesList"
                    dataContainer="orderDc"

@@ -7,7 +7,6 @@ import io.jmix.ui.component.Component;
 import io.jmix.ui.component.DataGrid;
 import io.jmix.ui.component.Label;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
@@ -15,7 +14,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("datagrid-generated-column")
 @UiDescriptor("datagrid-generated-column.xml")
-@LoadDataBeforeShow
 public class DataGridGeneratedColumnSample extends ScreenFragment {
     @Autowired
     protected DataGrid<Customer> customersDataGrid;

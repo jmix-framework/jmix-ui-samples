@@ -4,7 +4,6 @@ import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.component.ComboBox;
 import io.jmix.ui.component.DataGrid;
 import io.jmix.ui.component.HasValue;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -16,7 +15,6 @@ import java.util.Map;
 
 @UiController("datagrid-selection-mode")
 @UiDescriptor("datagrid-selection-mode.xml")
-@LoadDataBeforeShow
 public class DataGridSelectionModeSample extends ScreenFragment {
     @Autowired
     protected DataGrid<Customer> customersDataGrid;

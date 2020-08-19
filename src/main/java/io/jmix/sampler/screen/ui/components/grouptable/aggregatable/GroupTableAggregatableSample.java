@@ -4,7 +4,6 @@ import io.jmix.sampler.entity.Employee;
 import io.jmix.sampler.entity.Experience;
 import io.jmix.ui.component.GroupTable;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
@@ -13,7 +12,6 @@ import java.math.BigDecimal;
 
 @UiController("grouptable-aggregatable")
 @UiDescriptor("grouptable-aggregatable.xml")
-@LoadDataBeforeShow
 public class GroupTableAggregatableSample extends ScreenFragment {
 
     @Install(to = "employeesTable", subject = "aggregationDistributionProvider")

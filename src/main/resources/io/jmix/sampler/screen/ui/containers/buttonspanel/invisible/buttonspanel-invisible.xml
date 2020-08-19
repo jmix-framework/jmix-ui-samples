@@ -11,6 +11,9 @@
         </collection>
     </data>
     <dialogMode width="800" height="600"/>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout expand="customerTable"
             spacing="true">
         <table id="customerTable"

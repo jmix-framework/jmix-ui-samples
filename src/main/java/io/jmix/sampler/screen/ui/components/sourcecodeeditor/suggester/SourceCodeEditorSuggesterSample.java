@@ -7,7 +7,6 @@ import io.jmix.ui.component.autocomplete.Suggestion;
 import io.jmix.ui.model.CollectionContainer;
 import io.jmix.ui.model.CollectionLoader;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
@@ -18,7 +17,6 @@ import java.util.List;
 
 @UiController("sourcecodeeditor-suggester")
 @UiDescriptor("sourcecodeeditor-suggester.xml")
-@LoadDataBeforeShow
 public class SourceCodeEditorSuggesterSample extends ScreenFragment {
     @Autowired
     protected CollectionContainer<Customer> customersDc;

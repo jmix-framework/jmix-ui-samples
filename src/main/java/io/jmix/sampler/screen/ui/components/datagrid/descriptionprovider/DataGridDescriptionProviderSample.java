@@ -8,7 +8,6 @@ import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.component.ContentMode;
 import io.jmix.ui.component.DataGrid;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -17,7 +16,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("datagrid-description-provider")
 @UiDescriptor("datagrid-description-provider.xml")
-@LoadDataBeforeShow
 public class DataGridDescriptionProviderSample extends ScreenFragment {
     @Autowired
     protected DataGrid<Customer> customersDataGrid;

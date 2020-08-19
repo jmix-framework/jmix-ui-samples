@@ -5,7 +5,6 @@ import io.jmix.sampler.entity.Customer;
 import io.jmix.sampler.entity.Order;
 import io.jmix.ui.model.InstanceContainer;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("entitysuggestionfield-options-style-provider")
 @UiDescriptor("entitysuggestionfield-options-style-provider.xml")
-@LoadDataBeforeShow
 public class EntitySuggestionFieldStyleProviderSample extends ScreenFragment {
 
     @Autowired

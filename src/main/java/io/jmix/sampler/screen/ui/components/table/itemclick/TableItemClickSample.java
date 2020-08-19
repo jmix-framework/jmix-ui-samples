@@ -5,7 +5,6 @@ import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.action.BaseAction;
 import io.jmix.ui.component.Table;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("table-item-click")
 @UiDescriptor("table-item-click.xml")
-@LoadDataBeforeShow
 public class TableItemClickSample extends ScreenFragment {
 
     @Autowired

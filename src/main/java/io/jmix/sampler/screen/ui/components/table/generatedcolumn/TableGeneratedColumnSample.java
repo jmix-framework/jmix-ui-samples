@@ -8,7 +8,6 @@ import io.jmix.ui.component.ComboBox;
 import io.jmix.ui.component.Component;
 import io.jmix.ui.component.Table;
 import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -20,7 +19,6 @@ import java.util.List;
 
 @UiController("table-generated-column")
 @UiDescriptor("table-generated-column.xml")
-@LoadDataBeforeShow
 public class TableGeneratedColumnSample extends ScreenFragment {
 
     @Autowired

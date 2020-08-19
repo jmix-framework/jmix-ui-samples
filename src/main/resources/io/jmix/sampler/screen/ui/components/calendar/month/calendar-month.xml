@@ -10,6 +10,9 @@
             </loader>
         </collection>
     </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout>
         <calendar id="calendar"
                   captionProperty="caption"

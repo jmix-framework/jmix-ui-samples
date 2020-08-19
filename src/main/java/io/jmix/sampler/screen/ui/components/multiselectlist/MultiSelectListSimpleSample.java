@@ -3,7 +3,6 @@ package io.jmix.sampler.screen.ui.components.multiselectlist;
 import io.jmix.sampler.entity.Product;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.component.HasValue;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -14,7 +13,6 @@ import java.util.Collection;
 
 @UiController("multiselectlist-simple")
 @UiDescriptor("multiselectlist-simple.xml")
-@LoadDataBeforeShow
 public class MultiSelectListSimpleSample extends ScreenFragment {
     @Autowired
     protected Notifications notifications;

@@ -14,6 +14,9 @@
     </data>
     <dialogMode height="600"
                 width="800"/>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="orderItemDc">
             <column width="250px">

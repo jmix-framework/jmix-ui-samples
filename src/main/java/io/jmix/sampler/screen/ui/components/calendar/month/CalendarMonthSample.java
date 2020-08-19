@@ -3,7 +3,6 @@ package io.jmix.sampler.screen.ui.components.calendar.month;
 import io.jmix.ui.ScreenBuilders;
 import io.jmix.ui.component.Calendar;
 import io.jmix.ui.component.calendar.CalendarEvent;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.OpenMode;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
@@ -15,7 +14,6 @@ import java.util.Date;
 
 @UiController("calendar-month")
 @UiDescriptor("calendar-month.xml")
-@LoadDataBeforeShow
 public class CalendarMonthSample extends ScreenFragment {
 
     @Autowired

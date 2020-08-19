@@ -5,7 +5,6 @@ import io.jmix.sampler.entity.Task;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.action.BaseAction;
 import io.jmix.ui.component.Tree;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -14,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("tree-item-click")
 @UiDescriptor("tree-item-click.xml")
-@LoadDataBeforeShow
 public class TreeItemClickSample extends ScreenFragment {
     @Autowired
     protected Tree<Task> tree;

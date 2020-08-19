@@ -3,7 +3,6 @@ package io.jmix.sampler.screen.ui.components.suggestionfield.dataaware;
 import io.jmix.core.Metadata;
 import io.jmix.sampler.entity.Order;
 import io.jmix.ui.model.InstanceContainer;
-import io.jmix.ui.screen.LoadDataBeforeShow;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
@@ -12,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @UiController("suggestionfield-dataaware")
 @UiDescriptor("suggestionfield-dataaware.xml")
-@LoadDataBeforeShow
 public class SuggestionFieldDataawareSample extends ScreenFragment {
 
     @Autowired
