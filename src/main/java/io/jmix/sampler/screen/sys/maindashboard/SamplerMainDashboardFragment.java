@@ -203,6 +203,7 @@ public class SamplerMainDashboardFragment extends ScreenFragment {
 
     protected void clearBreadCrumbs() {
         historyBox.removeAll();
+        addNavigationButtonLink(MENU_ROOT_ITEM_ID, true);
     }
 
     public Subscription addDashboardItemClickListener(Consumer<DashboardItemClickEvent> listener) {
