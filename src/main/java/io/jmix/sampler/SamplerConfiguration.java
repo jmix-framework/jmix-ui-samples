@@ -16,20 +16,32 @@
 
 package io.jmix.sampler;
 
+import io.jmix.core.CoreProperties;
 import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
-import io.jmix.core.annotation.JmixModule;
+import io.jmix.core.entity.BaseUser;
+import io.jmix.core.security.CoreAuthenticationProvider;
+import io.jmix.core.security.impl.InMemoryUserRepository;
+import io.jmix.core.security.impl.SystemAuthenticationProvider;
 import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.bean.SamplerMetadataTools;
 import io.jmix.ui.App;
-import io.jmix.ui.UiConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-@JmixModule(dependsOn = UiConfiguration.class)
-public class SamplerConfiguration {
+public class SamplerConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    protected InMemoryUserRepository userRepository;
+    @Autowired
+    protected CoreProperties coreProperties;
 
     @Bean(name = App.NAME)
     public App app() {
@@ -44,5 +56,34 @@ public class SamplerConfiguration {
     @Bean(name = MetadataTools.NAME)
     public MetadataTools metadataTools() {
         return new SamplerMetadataTools();
+    }
+
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(new SystemAuthenticationProvider(userRepository));
+
+        CoreAuthenticationProvider userAuthenticationProvider = new CoreAuthenticationProvider();
+        userAuthenticationProvider.setUserDetailsService(userRepository);
+        auth.authenticationProvider(userAuthenticationProvider);
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.antMatcher("/**")
+                .authorizeRequests().anyRequest().permitAll()
+                .and()
+                .anonymous(anonymousConfigurer -> {
+                    BaseUser anonymousUser = userRepository.getAnonymousUser();
+                    anonymousConfigurer.principal(anonymousUser);
+                    anonymousConfigurer.key(coreProperties.getAnonymousAuthenticationTokenKey());
+                })
+                .csrf().disable()
+                .headers().frameOptions().sameOrigin();
     }
 }
