@@ -9,7 +9,7 @@ import io.jmix.ui.screen.UiDescriptor;
 
 @UiController("table-icon-provider")
 @UiDescriptor("table-icon-provider.xml")
-public class TableIconPrviderSample extends ScreenFragment {
+public class TableIconProviderSample extends ScreenFragment {
 
     @Install(to = "customerTable", subject = "iconProvider")
     protected String customerTableIconProvider(Customer customer) {
