@@ -6,11 +6,11 @@
     </data>
     <layout spacing="true">
         <timeField dataContainer="orderDc"
-                   property="createTs"/>
+                   property="date"/>
         <hbox spacing="true">
             <label value="Time in the Container:"/>
             <label dataContainer="orderDc"
-                   property="createTs"/>
+                   property="date"/>
         </hbox>
     </layout>
 </window>

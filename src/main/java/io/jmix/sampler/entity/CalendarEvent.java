@@ -1,20 +1,30 @@
 package io.jmix.sampler.entity;
 
-import io.jmix.data.entity.StandardEntity;
+import io.jmix.core.JmixEntity;
+import io.jmix.core.entity.annotation.JmixGeneratedValue;
+import io.jmix.core.metamodel.annotation.InstanceName;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
+import java.util.UUID;
 
 @Table(name = "SAMPLER_CALENDAR_EVENT")
 @Entity(name = "sampler_CalendarEvent")
-public class CalendarEvent extends StandardEntity {
+public class CalendarEvent implements JmixEntity {
 
     private static final long serialVersionUID = 8854732567865981389L;
 
+    @Id
+    @Column(name = "ID")
+    @JmixGeneratedValue
+    protected UUID id;
+
+    @InstanceName
     @Column(name = "CAPTION")
     protected String caption;
 
@@ -31,6 +41,18 @@ public class CalendarEvent extends StandardEntity {
 
     @Column(name = "STYLENAME")
     protected String stylename;
+
+    public CalendarEvent() {
+        this.id = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getCaption() {
         return caption;

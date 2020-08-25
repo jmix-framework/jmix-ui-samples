@@ -1,16 +1,24 @@
 package io.jmix.sampler.entity;
 
+import io.jmix.core.JmixEntity;
+import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
-import io.jmix.data.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.UUID;
 
 @Table(name = "SAMPLER_COUNTRY_GROWTH")
 @Entity(name = "sampler_CountryGrowth")
-public class CountryGrowth extends StandardEntity {
+public class CountryGrowth implements JmixEntity {
     private static final long serialVersionUID = 5590699887119355446L;
+
+    @Id
+    @Column(name = "ID")
+    @JmixGeneratedValue
+    protected UUID id;
 
     @InstanceName
     @Column(name = "COUNTRY", nullable = false)
@@ -24,6 +32,18 @@ public class CountryGrowth extends StandardEntity {
 
     @Column(name = "YEAR2015", nullable = false)
     protected Double year2015;
+
+    public CountryGrowth() {
+        this.id = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public String getFlag() {
         return flag;

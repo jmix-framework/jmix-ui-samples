@@ -1,16 +1,24 @@
 package io.jmix.sampler.entity;
 
+import io.jmix.core.JmixEntity;
+import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
-import io.jmix.data.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.UUID;
 
 @Table(name = "SAMPLER_CUSTOMER")
 @Entity(name = "sampler_Customer")
-public class Customer extends StandardEntity {
+public class Customer implements JmixEntity {
     private static final long serialVersionUID = -3420505556417816206L;
+
+    @Id
+    @Column(name = "ID")
+    @JmixGeneratedValue
+    protected UUID id;
 
     @Column(name = "NAME", length = 50, nullable = false)
     protected String name;
@@ -27,9 +35,21 @@ public class Customer extends StandardEntity {
     @Column(name = "GRADE")
     protected Integer grade;
 
+    public Customer() {
+        this.id = UUID.randomUUID();
+    }
+
     @InstanceName
     public String getInstanceName() {
         return name + " " + lastName;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public void setGrade(CustomerGrade grade) {

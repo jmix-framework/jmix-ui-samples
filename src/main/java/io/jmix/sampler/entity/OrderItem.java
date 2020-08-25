@@ -1,20 +1,28 @@
 package io.jmix.sampler.entity;
 
+import io.jmix.core.JmixEntity;
+import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
-import io.jmix.data.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Table(name = "SAMPLER_ORDER_ITEM")
 @Entity(name = "sampler_OrderItem")
-public class OrderItem extends StandardEntity {
+public class OrderItem implements JmixEntity {
     private static final long serialVersionUID = 7404462282086544503L;
+
+    @Id
+    @Column(name = "ID")
+    @JmixGeneratedValue
+    protected UUID id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PRODUCT_ID")
@@ -27,9 +35,21 @@ public class OrderItem extends StandardEntity {
     @JoinColumn(name = "ORDER_ID")
     protected Order order;
 
+    public OrderItem() {
+        this.id = UUID.randomUUID();
+    }
+
     @InstanceName
     public String getInstanceName() {
         return product.getName() + " " + quantity;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public void setOrder(Order order) {

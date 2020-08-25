@@ -25,7 +25,7 @@ public class TimeFieldTimeModeSample extends ScreenFragment {
         // InstanceContainer initialization. It is usually done automatically if the screen is
         // inherited from StandardEditor and is used as an entity editor.
         Order order = metadata.create(Order.class);
-        order.setCreateTs(timeSource.currentTimestamp());
+        order.setDate(timeSource.currentTimestamp());
         orderDc.setItem(order);
     }
 }

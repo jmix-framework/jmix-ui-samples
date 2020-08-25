@@ -1,18 +1,26 @@
 package io.jmix.sampler.entity;
 
+import io.jmix.core.JmixEntity;
 import io.jmix.core.entity.annotation.CurrencyValue;
+import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
-import io.jmix.data.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.math.BigDecimal;
+import java.util.UUID;
 
 @Table(name = "SAMPLER_PRODUCT")
 @Entity(name = "sampler_Product")
-public class Product extends StandardEntity {
+public class Product implements JmixEntity {
     private static final long serialVersionUID = 4256660269544840258L;
+
+    @Id
+    @Column(name = "ID")
+    @JmixGeneratedValue
+    protected UUID id;
 
     @Column(name = "NAME", nullable = false)
     @InstanceName
@@ -21,6 +29,18 @@ public class Product extends StandardEntity {
     @Column(name = "PRICE", nullable = false)
     @CurrencyValue(currency = "$")
     protected BigDecimal price;
+
+    public Product() {
+        this.id = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public void setName(String name) {
         this.name = name;

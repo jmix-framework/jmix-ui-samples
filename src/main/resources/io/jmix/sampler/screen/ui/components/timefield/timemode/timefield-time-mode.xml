@@ -6,10 +6,10 @@
     </data>
     <layout>
         <hbox spacing="true">
-            <timeField dataContainer="orderDc" property="createTs"
+            <timeField dataContainer="orderDc" property="date"
                        timeMode="H_12"/>
             <label value="=" align="MIDDLE_CENTER"/>
-            <timeField dataContainer="orderDc" property="createTs"
+            <timeField dataContainer="orderDc" property="date"
                        timeMode="H_24"/>
         </hbox>
     </layout>

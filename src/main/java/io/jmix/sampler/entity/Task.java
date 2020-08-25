@@ -1,22 +1,30 @@
 package io.jmix.sampler.entity;
 
+import io.jmix.core.JmixEntity;
+import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
-import io.jmix.data.entity.StandardEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
+import java.util.UUID;
 
 @Table(name = "SAMPLER_TASK")
 @Entity(name = "sampler_Task")
-public class Task extends StandardEntity {
+public class Task implements JmixEntity {
     private static final long serialVersionUID = 2652709115420331280L;
+
+    @Id
+    @Column(name = "ID")
+    @JmixGeneratedValue
+    protected UUID id;
 
     @InstanceName
     @Column(name = "NAME", nullable = false)
@@ -33,6 +41,18 @@ public class Task extends StandardEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_TASK_ID")
     protected Task parentTask;
+
+    public Task() {
+        this.id = UUID.randomUUID();
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
 
     public void setParentTask(Task parentTask) {
         this.parentTask = parentTask;

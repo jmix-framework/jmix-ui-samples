@@ -11,15 +11,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="NAME" type="varchar(50)">
                 <constraints nullable="false"/>
@@ -36,7 +27,6 @@
 
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="4d750fdb-8ed7-a4e4-88d2-40974615cab2"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Dora"/>
             <column name="LAST_NAME" value="Abrams"/>
             <column name="AGE" valueNumeric="47"/>
@@ -45,7 +35,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="cf8022a3-5b70-520a-d426-aa4614210f0e"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Peter"/>
             <column name="LAST_NAME" value="Blakesly"/>
             <column name="AGE" valueNumeric="28"/>
@@ -54,7 +43,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="e7e127d7-33b4-2bd9-d405-0f7923a8bec6"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Martin"/>
             <column name="LAST_NAME" value="Briggs"/>
             <column name="AGE" valueNumeric="23"/>
@@ -63,7 +51,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="48eda61c-4142-0e47-5ca8-f338c36cfb0e"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Philipp"/>
             <column name="LAST_NAME" value="Brown"/>
             <column name="AGE" valueNumeric="30"/>
@@ -72,7 +59,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="0c3be785-1125-b755-7e79-3cc136cc1b13"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="John"/>
             <column name="LAST_NAME" value="Doe"/>
             <column name="AGE" valueNumeric="39"/>
@@ -81,7 +67,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="71ffb579-1b01-614a-0aea-5897c8c3bb91"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Daniel"/>
             <column name="LAST_NAME" value="Evans"/>
             <column name="AGE" valueNumeric="18"/>
@@ -90,7 +75,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="6f218a4d-5ea9-dbf1-b958-c947130a714d"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="John"/>
             <column name="LAST_NAME" value="Frost"/>
             <column name="AGE" valueNumeric="50"/>
@@ -99,7 +83,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="38144502-b2fe-45ab-c183-116aead24aca"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Edward"/>
             <column name="LAST_NAME" value="Harris"/>
             <column name="AGE" valueNumeric="27"/>
@@ -108,7 +91,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="8f806608-208b-9deb-138b-9c1dce60d663"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="George"/>
             <column name="LAST_NAME" value="Hughes"/>
             <column name="AGE" valueNumeric="90"/>
@@ -117,7 +99,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="2d59c523-2dc8-7f80-8726-b7fa8caf1c29"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Andy"/>
             <column name="LAST_NAME" value="Lewis"/>
             <column name="AGE" valueNumeric="35"/>
@@ -126,7 +107,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="3fbd8a37-fb90-d5f0-e03e-ae53e41b9fed"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="George"/>
             <column name="LAST_NAME" value="Moore"/>
             <column name="AGE" valueNumeric="41"/>
@@ -135,7 +115,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="9d9f028c-eade-eee2-d4d8-e97ebb969c54"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Claire"/>
             <column name="LAST_NAME" value="Morgan"/>
             <column name="AGE" valueNumeric="25"/>
@@ -144,7 +123,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="068ff1ae-992e-51db-b20f-8e21bcd19bfc"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Katherine"/>
             <column name="LAST_NAME" value="Potter"/>
             <column name="AGE" valueNumeric="34"/>
@@ -153,7 +131,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="ee875696-0a4d-0d54-41c8-b3dea6e3e7d1"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="John"/>
             <column name="LAST_NAME" value="Smith"/>
             <column name="AGE" valueNumeric="32"/>
@@ -162,7 +139,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="94d50ae5-1830-174b-81d3-069f221eed3a"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Michael"/>
             <column name="LAST_NAME" value="Taylor"/>
             <column name="AGE" valueNumeric="75"/>
@@ -171,7 +147,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="b6b31099-d194-fb3e-dd51-89d085dcc11c"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Joan"/>
             <column name="LAST_NAME" value="Thompson"/>
             <column name="AGE" valueNumeric="20"/>
@@ -180,7 +155,6 @@
         </insert>
         <insert tableName="SAMPLER_CUSTOMER">
             <column name="ID" value="6e3008dd-1eb8-1faf-788d-b6df97130e8d"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="James"/>
             <column name="LAST_NAME" value="White"/>
             <column name="AGE" valueNumeric="56"/>
@@ -196,15 +170,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="CAPTION" type="varchar(255)"/>
             <column name="DESCRIPTION" type="varchar(255)"/>
@@ -215,7 +180,6 @@
 
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="0ab34f04-41cc-2278-55dc-32c702a5acac"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Planning"/>
             <column name="START_DATE" valueDate="2020-07-04 13:00:00"/>
             <column name="END_DATE" valueDate="2020-07-04 12:00:00"/>
@@ -223,7 +187,6 @@
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="195f87ce-bc9c-98ae-c822-3052a0b6dd18"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Appointment"/>
             <column name="DESCRIPTION" value="A longer description"/>
             <column name="START_DATE" valueDate="2020-07-18 12:00:00"/>
@@ -232,7 +195,6 @@
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="24ce7594-7086-e142-d333-7ee567f6b2aa"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Training"/>
             <column name="START_DATE" valueDate="2020-07-07 00:00:00"/>
             <column name="END_DATE" valueDate="2020-07-13 00:00:00"/>
@@ -240,21 +202,18 @@
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="31d1297b-2309-5cea-9cc6-1bd5f256786b"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Company activities"/>
             <column name="START_DATE" valueDate="2020-07-14 18:00:00"/>
             <column name="END_DATE" valueDate="2020-07-14 09:00:00"/>
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="369ceb55-69a1-47e4-30bb-949d98c95f1e"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Research"/>
             <column name="START_DATE" valueDate="2020-07-21 17:00:00"/>
             <column name="END_DATE" valueDate="2020-07-21 15:00:00"/>
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="407e73a9-9aa9-421d-dbdb-1e1c47a2786b"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Free time"/>
             <column name="DESCRIPTION" value="Time for some different stuff"/>
             <column name="START_DATE" valueDate="2020-07-19 06:00:00"/>
@@ -263,7 +222,6 @@
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="52de207d-e8f5-ae71-b29f-f1dbcca41099"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Breakfast"/>
             <column name="DESCRIPTION" value="Breakfast with John Doe"/>
             <column name="START_DATE" valueDate="2020-07-19 09:00:00"/>
@@ -272,7 +230,6 @@
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="8d30ec01-ed5a-1fad-5e90-8af379c92f72"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Meeting with John Doe"/>
             <column name="DESCRIPTION" value="Unknown meeting"/>
             <column name="START_DATE" valueDate="2020-07-03 00:00:00"/>
@@ -281,7 +238,6 @@
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="c1648a0d-23f7-2e75-3db7-6e9466735959"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Interview"/>
             <column name="DESCRIPTION" value="Job interview"/>
             <column name="START_DATE" valueDate="2020-07-21 17:00:00"/>
@@ -290,7 +246,6 @@
         </insert>
         <insert tableName="SAMPLER_CALENDAR_EVENT">
             <column name="ID" value="f1a0c8a1-d122-b3c6-f88f-fad62fe85fa9"/>
-            <column name="VERSION" value="1"/>
             <column name="CAPTION" value="Meeting"/>
             <column name="DESCRIPTION" value="Meeting with lawyer"/>
             <column name="START_DATE" valueDate="2020-07-17 13:00:00"/>
@@ -306,15 +261,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="NAME" type="varchar(255)">
                 <constraints nullable="false"/>
@@ -326,49 +272,41 @@
 
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="17bc9b95-b562-0dd2-f904-db6df80b9c71"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="TV set"/>
             <column name="PRICE" valueNumeric="24999.00"/>
         </insert>
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="2ab4dece-2f67-69cd-0a76-fe1cd33537f6"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Keyboard"/>
             <column name="PRICE" valueNumeric="499.00"/>
         </insert>
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="3d829eba-cdb0-0446-49d4-9c13b1fe8269"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Earphones"/>
             <column name="PRICE" valueNumeric="2000.00"/>
         </insert>
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="d10674cf-a918-b74f-5eeb-c100631320fd"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Telephone"/>
             <column name="PRICE" valueNumeric="17999.00"/>
         </insert>
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="d7496b01-215d-f90c-7442-4d7e8c47848f"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Laptop"/>
             <column name="PRICE" valueNumeric="52000.00"/>
         </insert>
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="d92e7b2b-f1ea-511a-dda0-abf4e8fd7726"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Blue-Ray"/>
             <column name="PRICE" valueNumeric="7000.00"/>
         </insert>
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="d956ed3c-f7ab-687b-382d-0733db863b5c"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Microphone"/>
             <column name="PRICE" valueNumeric="4999.00"/>
         </insert>
         <insert tableName="SAMPLER_PRODUCT">
             <column name="ID" value="dab66821-e3b0-b6a8-eae1-e0b3f0e71d4f"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="DVD"/>
             <column name="PRICE" valueNumeric="1000.00"/>
         </insert>
@@ -381,15 +319,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="NAME" type="varchar(255)"/>
             <column name="HEX" type="varchar(255)"/>
@@ -403,15 +332,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="CUSTOMER_ID" type="varchar(36)"/>
             <column name="DATE_" type="date">
@@ -424,15 +344,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="PRODUCT_ID" type="varchar(36)"/>
             <column name="QUANTITY" type="decimal"/>
@@ -441,7 +352,6 @@
 
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="23872068-ec86-ba3e-8d9b-a06d4c573aef"/>
-            <column name="VERSION" value="1"/>
             <column name="CUSTOMER_ID" value="068ff1ae-992e-51db-b20f-8e21bcd19bfc"/>
             <column name="DATE_" valueDate="2020-07-01"/>
             <column name="AMOUNT" valueNumeric="24990.00"/>
@@ -449,7 +359,6 @@
         </insert>
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf"/>
-            <column name="VERSION" value="1"/>
             <column name="CUSTOMER_ID" value="0c3be785-1125-b755-7e79-3cc136cc1b13"/>
             <column name="DATE_" valueDate="2020-07-11"/>
             <column name="AMOUNT" valueNumeric="31999.00"/>
@@ -457,7 +366,6 @@
         </insert>
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
-            <column name="VERSION" value="1"/>
             <column name="CUSTOMER_ID" value="71ffb579-1b01-614a-0aea-5897c8c3bb91"/>
             <column name="DATE_" valueDate="2020-07-30"/>
             <column name="AMOUNT" valueNumeric="30998.00"/>
@@ -465,7 +373,6 @@
         </insert>
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
-            <column name="VERSION" value="1"/>
             <column name="CUSTOMER_ID" value="ee875696-0a4d-0d54-41c8-b3dea6e3e7d1"/>
             <column name="DATE_" valueDate="2020-07-26"/>
             <column name="AMOUNT" valueNumeric="59999.00"/>
@@ -474,77 +381,66 @@
 
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="08f26f09-4e6c-125a-12a0-0a8877a57ab2"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="d7496b01-215d-f90c-7442-4d7e8c47848f"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="1e52c338-7e02-058c-fc08-1e00ad56ebf0"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="d956ed3c-f7ab-687b-382d-0733db863b5c"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="3031898a-c8b9-f95a-8977-e97be9a4a8a8"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="2ab4dece-2f67-69cd-0a76-fe1cd33537f6"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="23872068-ec86-ba3e-8d9b-a06d4c573aef"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="3b5adca3-e01b-2bb0-36be-072165779a30"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="d92e7b2b-f1ea-511a-dda0-abf4e8fd7726"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="4695cbce-87f4-d034-efde-03c41489d601"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="3d829eba-cdb0-0446-49d4-9c13b1fe8269"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="5eb13363-3fc8-6f79-60a7-be0aa0fe998b"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="17bc9b95-b562-0dd2-f904-db6df80b9c71"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="6d654cd6-dc7a-755d-17a0-bec92b0706b3"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="d956ed3c-f7ab-687b-382d-0733db863b5c"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="727cbc21-8b5d-3d49-4daf-86d664f0a737"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="3d829eba-cdb0-0446-49d4-9c13b1fe8269"/>
             <column name="QUANTITY" valueNumeric="10.000"/>
             <column name="ORDER_ID" value="23872068-ec86-ba3e-8d9b-a06d4c573aef"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="d27771f8-5bd8-d510-3026-f655c4d7c43a"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="dab66821-e3b0-b6a8-eae1-e0b3f0e71d4f"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="df912333-fa7b-2606-c598-1c0135f1247b"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="dab66821-e3b0-b6a8-eae1-e0b3f0e71d4f"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
         </insert>
         <insert tableName="SAMPLER_ORDER_ITEM">
             <column name="ID" value="e2e78593-5939-2941-4518-f79e47c7f257"/>
-            <column name="VERSION" value="1"/>
             <column name="PRODUCT_ID" value="17bc9b95-b562-0dd2-f904-db6df80b9c71"/>
             <column name="QUANTITY" valueNumeric="1.000"/>
             <column name="ORDER_ID" value="3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf"/>
@@ -558,15 +454,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="NAME" type="varchar(255)">
                 <constraints nullable="false"/>
@@ -579,15 +466,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="COUNTRY" type="varchar(255)">
                 <constraints nullable="false"/>
@@ -603,21 +481,18 @@
 
         <insert tableName="SAMPLER_TASK">
             <column name="ID" value="10685e09-25c8-b3fe-22ba-238304d292b3"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Task1"/>
             <column name="DUE_DATE" valueDate="2020-07-30 00:00:00"/>
             <column name="ASSIGNEE_ID" value="48eda61c-4142-0e47-5ca8-f338c36cfb0e"/>
         </insert>
         <insert tableName="SAMPLER_TASK">
             <column name="ID" value="9b62fc2f-bf83-2a24-d392-0a332e472a01"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Task2"/>
             <column name="DUE_DATE" valueDate="2020-07-02 00:00:00"/>
             <column name="ASSIGNEE_ID" value="068ff1ae-992e-51db-b20f-8e21bcd19bfc"/>
         </insert>
         <insert tableName="SAMPLER_TASK">
             <column name="ID" value="489706de-c25f-c24d-8222-2d9b79189bc8"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Task3"/>
             <column name="DUE_DATE" valueDate="2020-07-16 00:00:00"/>
             <column name="ASSIGNEE_ID" value="9d9f028c-eade-eee2-d4d8-e97ebb969c54"/>
@@ -625,7 +500,6 @@
         </insert>
         <insert tableName="SAMPLER_TASK">
             <column name="ID" value="aa591e3a-7d2b-874d-51c0-3620030c2d64"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Task4"/>
             <column name="DUE_DATE" valueDate="2020-07-31 00:00:00"/>
             <column name="ASSIGNEE_ID" value="b6b31099-d194-fb3e-dd51-89d085dcc11c"/>
@@ -633,7 +507,6 @@
         </insert>
         <insert tableName="SAMPLER_TASK">
             <column name="ID" value="4572c65a-3f1e-30a6-b038-bc86ff26cfc9"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Task5"/>
             <column name="DUE_DATE" valueDate="2020-08-02 00:00:00"/>
             <column name="ASSIGNEE_ID" value="ee875696-0a4d-0d54-41c8-b3dea6e3e7d1"/>
@@ -641,7 +514,6 @@
         </insert>
         <insert tableName="SAMPLER_TASK">
             <column name="ID" value="2373294a-f53c-ea74-2c24-c80725b7ba85"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Task6"/>
             <column name="DUE_DATE" valueDate="2020-08-01 00:00:00"/>
             <column name="ASSIGNEE_ID" value="e7e127d7-33b4-2bd9-d405-0f7923a8bec6"/>
@@ -649,7 +521,6 @@
 
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="719b65f6-a32d-426f-8f69-db3f800a5124"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="USA"/>
             <column name="FLAG" value="files/flags/flag-us.svg"/>
             <column name="YEAR2014" valueNumeric="3.5"/>
@@ -657,7 +528,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="f74efb19-3d52-43cf-918e-87f48a9ac960"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="UK"/>
             <column name="FLAG" value="files/flags/flag-gb.svg"/>
             <column name="YEAR2014" valueNumeric="1.7"/>
@@ -665,7 +535,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="104ccf82-7d0a-4dc2-9273-6d66470ba661"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="Canada"/>
             <column name="FLAG" value="files/flags/flag-ca.svg"/>
             <column name="YEAR2014" valueNumeric="2.8"/>
@@ -673,7 +542,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="b06075ab-66da-46fb-bbd9-6584e943367a"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="Japan"/>
             <column name="FLAG" value="files/flags/flag-jp.svg"/>
             <column name="YEAR2014" valueNumeric="2.6"/>
@@ -681,7 +549,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="6f05051f-3dc3-4605-9287-467ea7b408ae"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="France"/>
             <column name="FLAG" value="files/flags/flag-fr.svg"/>
             <column name="YEAR2014" valueNumeric="1.4"/>
@@ -689,7 +556,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="47bd990b-b54d-4d77-989f-edfb6b52d5c9"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="Brazil"/>
             <column name="FLAG" value="files/flags/flag-br.svg"/>
             <column name="YEAR2014" valueNumeric="2.6"/>
@@ -697,7 +563,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="a9ce13f3-bcb9-4924-9651-a15ede3b3f3e"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="Russia"/>
             <column name="FLAG" value="files/flags/flag-ru.svg"/>
             <column name="YEAR2014" valueNumeric="6.4"/>
@@ -705,7 +570,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="ebe80366-5264-4955-861c-bdabcea8c18a"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="India"/>
             <column name="FLAG" value="files/flags/flag-in.svg"/>
             <column name="YEAR2014" valueNumeric="8.0"/>
@@ -713,7 +577,6 @@
         </insert>
         <insert tableName="SAMPLER_COUNTRY_GROWTH">
             <column name="ID" value="054a6e6a-86f8-4400-9e2d-1ccb0aa487f5"/>
-            <column name="VERSION" value="1"/>
             <column name="COUNTRY" value="China"/>
             <column name="FLAG" value="files/flags/flag-cn.svg"/>
             <column name="YEAR2014" valueNumeric="9.9"/>
@@ -728,15 +591,6 @@
             <column name="ID" type="uuid">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="VERSION" type="int" defaultValue="1">
-                <constraints nullable="false"/>
-            </column>
-            <column name="CREATE_TS" type="datetime"/>
-            <column name="CREATED_BY" type="varchar(50)"/>
-            <column name="UPDATE_TS" type="datetime"/>
-            <column name="UPDATED_BY" type="varchar(50)"/>
-            <column name="DELETE_TS" type="datetime"/>
-            <column name="DELETED_BY" type="varchar(50)"/>
 
             <column name="NAME" type="varchar(255)"/>
             <column name="LAST_NAME" type="varchar(255)"/>
@@ -748,7 +602,6 @@
 
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="333a257f-0a1c-8345-30e7-a6efda9a6634"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="John"/>
             <column name="LAST_NAME" value="Brown"/>
             <column name="AGE" valueNumeric="29"/>
@@ -758,7 +611,6 @@
         </insert>
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="5c527836-a992-0efb-7c04-904097977055"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Mary"/>
             <column name="LAST_NAME" value="Thomas"/>
             <column name="AGE" valueNumeric="24"/>
@@ -768,7 +620,6 @@
         </insert>
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="b31f88ac-0c7d-7be0-8546-63e69250c136"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="James"/>
             <column name="LAST_NAME" value="Anderson"/>
             <column name="AGE" valueNumeric="25"/>
@@ -778,7 +629,6 @@
         </insert>
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="e2f2a7c2-10f4-f925-1157-721805069f8c"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Karen"/>
             <column name="LAST_NAME" value="White"/>
             <column name="AGE" valueNumeric="28"/>
@@ -788,7 +638,6 @@
         </insert>
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="f1d8dc8d-a88f-6043-4dfe-b47868f17872"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Emily"/>
             <column name="LAST_NAME" value="Thompson"/>
             <column name="AGE" valueNumeric="26"/>
@@ -798,7 +647,6 @@
         </insert>
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="e74cf36c-e40e-409f-ed7a-78d659280f06"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Ben"/>
             <column name="LAST_NAME" value="Davies"/>
             <column name="AGE" valueNumeric="27"/>
@@ -808,7 +656,6 @@
         </insert>
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="b29aaa13-d78a-4673-22f5-973058c6fd38"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Chloe"/>
             <column name="LAST_NAME" value="Wilson"/>
             <column name="AGE" valueNumeric="29"/>
@@ -818,7 +665,6 @@
         </insert>
         <insert tableName="SAMPLER_EMPLOYEE">
             <column name="ID" value="b0fbe93d-7943-4053-d14d-5eb6d79dae25"/>
-            <column name="VERSION" value="1"/>
             <column name="NAME" value="Sam"/>
             <column name="LAST_NAME" value="Evans"/>
             <column name="AGE" valueNumeric="29"/>
