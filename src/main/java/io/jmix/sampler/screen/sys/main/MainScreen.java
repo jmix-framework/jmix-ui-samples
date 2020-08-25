@@ -21,7 +21,7 @@ import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.config.MenuConfig;
 import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.screen.sys.maindashboard.DashboardItemClickEvent;
-import io.jmix.sampler.screen.sys.maindashboard.SamplerMainDashboardFragment;
+import io.jmix.sampler.screen.sys.maindashboard.MainDashboardFragment;
 import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.AppUI;
 import io.jmix.ui.Screens;
@@ -56,9 +56,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Route(path = "main")
-@UiDescriptor("sampler-main-screen.xml")
+@UiDescriptor("main-screen.xml")
 @UiController("sampler_MainScreen")
-public class SamplerMainScreen extends Screen implements Window.HasWorkArea {
+public class MainScreen extends Screen implements Window.HasWorkArea {
 
     protected final static String FOUND_ITEM_STYLE = "found-item";
 
@@ -90,7 +90,7 @@ public class SamplerMainScreen extends Screen implements Window.HasWorkArea {
     @Autowired
     protected ComboBox<String> themeComboBox;
     @Autowired
-    protected SamplerMainDashboardFragment dashboardFragment;
+    protected MainDashboardFragment dashboardFragment;
 
     protected List<SideMenu.MenuItem> foundItems = new ArrayList<>();
     protected List<String> parentListIdsToExpand = new ArrayList<>();
@@ -114,7 +114,7 @@ public class SamplerMainScreen extends Screen implements Window.HasWorkArea {
         if (menuConfig.isRootItem(itemId)) {
             dashboardFragment.initDashboardMenu(itemId);
         } else {
-            dashboardFragment.initDashboardMenu(SamplerMainDashboardFragment.MENU_ROOT_ITEM_ID);
+            dashboardFragment.initDashboardMenu(MainDashboardFragment.MENU_ROOT_ITEM_ID);
         }
     }
 

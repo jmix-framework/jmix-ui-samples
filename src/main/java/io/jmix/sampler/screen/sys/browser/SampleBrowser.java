@@ -23,7 +23,7 @@ import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.sampler.config.MenuConfig;
 import io.jmix.sampler.config.MenuItem;
-import io.jmix.sampler.screen.sys.main.SamplerMainScreen;
+import io.jmix.sampler.screen.sys.main.MainScreen;
 import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.App;
 import io.jmix.ui.AppUI;
@@ -55,9 +55,9 @@ import java.util.Locale;
 import java.util.Map;
 
 @Route("sample")
-@UiController("sampler-browser")
-@UiDescriptor("sampler-browser.xml")
-public class SamplerBrowser extends Screen {
+@UiController("sample-browser")
+@UiDescriptor("sample-browser.xml")
+public class SampleBrowser extends Screen {
 
     protected static final String DESCRIPTION_BOX_STYLE = "description-box";
     protected static final String DOC_URL_MESSAGES_KEY = "docUrl";
@@ -119,8 +119,8 @@ public class SamplerBrowser extends Screen {
 
         Screens.OpenedScreens openedScreens = AppUI.getCurrent().getScreens().getOpenedScreens();
         Screen rootScreen = openedScreens.getRootScreen();
-        if (rootScreen instanceof SamplerMainScreen) {
-            ((SamplerMainScreen) rootScreen).expandItemsFromDirectLink(sampleId);
+        if (rootScreen instanceof MainScreen) {
+            ((MainScreen) rootScreen).expandItemsFromDirectLink(sampleId);
         }
     }
 
@@ -280,11 +280,11 @@ public class SamplerBrowser extends Screen {
         PopupView permalink = uiComponents.create(PopupView.class);
         permalink.setAlignment(Component.Alignment.TOP_RIGHT);
         permalink.setHideOnMouseOut(false);
-        permalink.setDescription(messages.getMessage(SamplerBrowser.class, "permalink.description"));
+        permalink.setDescription(messages.getMessage(SampleBrowser.class, "permalink.description"));
         permalink.setStyleName("external-link");
 
         TextField<String> content = uiComponents.create(TextField.TYPE_STRING);
-        String value = urlRouting.getRouteGenerator().getRoute(SamplerBrowser.class, ImmutableMap.of("id", fragmentId));
+        String value = urlRouting.getRouteGenerator().getRoute(SampleBrowser.class, ImmutableMap.of("id", fragmentId));
         content.setValue(value);
         content.setWidth((value.length() * 8) + "px");
         content.setEditable(false);

@@ -27,9 +27,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.function.Consumer;
 
-@UiController("sampler-main-dashboard-fragment")
-@UiDescriptor("sampler-main-dashboard-fragment.xml")
-public class SamplerMainDashboardFragment extends ScreenFragment {
+@UiController("main-dashboard-fragment")
+@UiDescriptor("main-dashboard-fragment.xml")
+public class MainDashboardFragment extends ScreenFragment {
 
     public static final String MENU_ROOT_ITEM_ID = "mainMenuItemRootId";
 

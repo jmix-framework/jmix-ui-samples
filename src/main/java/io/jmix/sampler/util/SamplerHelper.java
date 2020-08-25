@@ -40,7 +40,7 @@ public class SamplerHelper {
     protected Dom4jTools dom4JTools;
 
     public String getSamplerBrowserId() {
-        return "sampler-browser";
+        return "sample-browser";
     }
 
     public String getFileContent(String src) {
