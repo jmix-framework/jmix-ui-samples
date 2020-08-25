@@ -42,6 +42,7 @@ dependencies {
     implementation 'io.jmix.ui:jmix-ui-starter'
     implementation 'io.jmix.ui:jmix-ui-data-starter'
     implementation 'io.jmix.ui:jmix-ui-widgets-compiled'
+    implementation 'io.jmix.translations:jmix-translations-ru:0.1.0-SNAPSHOT'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
