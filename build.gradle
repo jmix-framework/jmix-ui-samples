@@ -14,11 +14,24 @@
  * limitations under the License.
  */
 
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://nexus.jmix.io/repository/public'
+        }
+    }
+
+    dependencies {
+        classpath('io.jmix.gradle:jmix-gradle-plugin:0.1.11')
+    }
+}
+
 plugins {
-    id 'io.jmix' version '0.1.11'
     id 'java'
 }
 
+apply plugin: 'io.jmix'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
