@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="sampler" id="6">
+
+        <createTable tableName="SAMPLER_TASK">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="NAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DUE_DATE" type="datetime"/>
+            <column name="ASSIGNEE_ID" type="varchar(36)"/>
+            <column name="PARENT_TASK_ID" type="varchar(36)"/>
+        </createTable>
+        <createTable tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="COUNTRY" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FLAG" type="varchar(255)"/>
+            <column name="YEAR2014" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="YEAR2015" type="double">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="SAMPLER_TASK">
+            <column name="ID" value="10685e09-25c8-b3fe-22ba-238304d292b3"/>
+            <column name="NAME" value="Task1"/>
+            <column name="DUE_DATE" valueDate="2020-07-30 00:00:00"/>
+            <column name="ASSIGNEE_ID" value="48eda61c-4142-0e47-5ca8-f338c36cfb0e"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK">
+            <column name="ID" value="9b62fc2f-bf83-2a24-d392-0a332e472a01"/>
+            <column name="NAME" value="Task2"/>
+            <column name="DUE_DATE" valueDate="2020-07-02 00:00:00"/>
+            <column name="ASSIGNEE_ID" value="068ff1ae-992e-51db-b20f-8e21bcd19bfc"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK">
+            <column name="ID" value="489706de-c25f-c24d-8222-2d9b79189bc8"/>
+            <column name="NAME" value="Task3"/>
+            <column name="DUE_DATE" valueDate="2020-07-16 00:00:00"/>
+            <column name="ASSIGNEE_ID" value="9d9f028c-eade-eee2-d4d8-e97ebb969c54"/>
+            <column name="PARENT_TASK_ID" value="10685e09-25c8-b3fe-22ba-238304d292b3"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK">
+            <column name="ID" value="aa591e3a-7d2b-874d-51c0-3620030c2d64"/>
+            <column name="NAME" value="Task4"/>
+            <column name="DUE_DATE" valueDate="2020-07-31 00:00:00"/>
+            <column name="ASSIGNEE_ID" value="b6b31099-d194-fb3e-dd51-89d085dcc11c"/>
+            <column name="PARENT_TASK_ID" value="489706de-c25f-c24d-8222-2d9b79189bc8"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK">
+            <column name="ID" value="4572c65a-3f1e-30a6-b038-bc86ff26cfc9"/>
+            <column name="NAME" value="Task5"/>
+            <column name="DUE_DATE" valueDate="2020-08-02 00:00:00"/>
+            <column name="ASSIGNEE_ID" value="ee875696-0a4d-0d54-41c8-b3dea6e3e7d1"/>
+            <column name="PARENT_TASK_ID" value="9b62fc2f-bf83-2a24-d392-0a332e472a01"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK">
+            <column name="ID" value="2373294a-f53c-ea74-2c24-c80725b7ba85"/>
+            <column name="NAME" value="Task6"/>
+            <column name="DUE_DATE" valueDate="2020-08-01 00:00:00"/>
+            <column name="ASSIGNEE_ID" value="e7e127d7-33b4-2bd9-d405-0f7923a8bec6"/>
+        </insert>
+
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="719b65f6-a32d-426f-8f69-db3f800a5124"/>
+            <column name="COUNTRY" value="USA"/>
+            <column name="FLAG" value="files/flags/flag-us.svg"/>
+            <column name="YEAR2014" valueNumeric="3.5"/>
+            <column name="YEAR2015" valueNumeric="4.2"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="f74efb19-3d52-43cf-918e-87f48a9ac960"/>
+            <column name="COUNTRY" value="UK"/>
+            <column name="FLAG" value="files/flags/flag-gb.svg"/>
+            <column name="YEAR2014" valueNumeric="1.7"/>
+            <column name="YEAR2015" valueNumeric="3.1"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="104ccf82-7d0a-4dc2-9273-6d66470ba661"/>
+            <column name="COUNTRY" value="Canada"/>
+            <column name="FLAG" value="files/flags/flag-ca.svg"/>
+            <column name="YEAR2014" valueNumeric="2.8"/>
+            <column name="YEAR2015" valueNumeric="2.9"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="b06075ab-66da-46fb-bbd9-6584e943367a"/>
+            <column name="COUNTRY" value="Japan"/>
+            <column name="FLAG" value="files/flags/flag-jp.svg"/>
+            <column name="YEAR2014" valueNumeric="2.6"/>
+            <column name="YEAR2015" valueNumeric="2.3"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="6f05051f-3dc3-4605-9287-467ea7b408ae"/>
+            <column name="COUNTRY" value="France"/>
+            <column name="FLAG" value="files/flags/flag-fr.svg"/>
+            <column name="YEAR2014" valueNumeric="1.4"/>
+            <column name="YEAR2015" valueNumeric="2.1"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="47bd990b-b54d-4d77-989f-edfb6b52d5c9"/>
+            <column name="COUNTRY" value="Brazil"/>
+            <column name="FLAG" value="files/flags/flag-br.svg"/>
+            <column name="YEAR2014" valueNumeric="2.6"/>
+            <column name="YEAR2015" valueNumeric="4.9"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="a9ce13f3-bcb9-4924-9651-a15ede3b3f3e"/>
+            <column name="COUNTRY" value="Russia"/>
+            <column name="FLAG" value="files/flags/flag-ru.svg"/>
+            <column name="YEAR2014" valueNumeric="6.4"/>
+            <column name="YEAR2015" valueNumeric="7.2"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="ebe80366-5264-4955-861c-bdabcea8c18a"/>
+            <column name="COUNTRY" value="India"/>
+            <column name="FLAG" value="files/flags/flag-in.svg"/>
+            <column name="YEAR2014" valueNumeric="8.0"/>
+            <column name="YEAR2015" valueNumeric="7.1"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_GROWTH">
+            <column name="ID" value="054a6e6a-86f8-4400-9e2d-1ccb0aa487f5"/>
+            <column name="COUNTRY" value="China"/>
+            <column name="FLAG" value="files/flags/flag-cn.svg"/>
+            <column name="YEAR2014" valueNumeric="9.9"/>
+            <column name="YEAR2015" valueNumeric="10.1"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

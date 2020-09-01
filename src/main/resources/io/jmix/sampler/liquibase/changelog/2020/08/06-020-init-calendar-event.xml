@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="sampler" id="2">
+
+        <createTable tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" type="uuid">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+
+            <column name="CAPTION" type="varchar(255)"/>
+            <column name="DESCRIPTION" type="varchar(255)"/>
+            <column name="START_DATE" type="datetime"/>
+            <column name="END_DATE" type="datetime"/>
+            <column name="STYLENAME" type="varchar(255)"/>
+        </createTable>
+
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="0ab34f04-41cc-2278-55dc-32c702a5acac"/>
+            <column name="CAPTION" value="Planning"/>
+            <column name="START_DATE" valueDate="2020-07-04 13:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-04 12:00:00"/>
+            <column name="STYLENAME" value="event-red"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="195f87ce-bc9c-98ae-c822-3052a0b6dd18"/>
+            <column name="CAPTION" value="Appointment"/>
+            <column name="DESCRIPTION" value="A longer description"/>
+            <column name="START_DATE" valueDate="2020-07-18 12:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-20 20:00:00"/>
+            <column name="STYLENAME" value="event-green"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="24ce7594-7086-e142-d333-7ee567f6b2aa"/>
+            <column name="CAPTION" value="Training"/>
+            <column name="START_DATE" valueDate="2020-07-07 00:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-13 00:00:00"/>
+            <column name="STYLENAME" value="event-yellow"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="31d1297b-2309-5cea-9cc6-1bd5f256786b"/>
+            <column name="CAPTION" value="Company activities"/>
+            <column name="START_DATE" valueDate="2020-07-14 18:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-14 09:00:00"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="369ceb55-69a1-47e4-30bb-949d98c95f1e"/>
+            <column name="CAPTION" value="Research"/>
+            <column name="START_DATE" valueDate="2020-07-21 17:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-21 15:00:00"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="407e73a9-9aa9-421d-dbdb-1e1c47a2786b"/>
+            <column name="CAPTION" value="Free time"/>
+            <column name="DESCRIPTION" value="Time for some different stuff"/>
+            <column name="START_DATE" valueDate="2020-07-19 06:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-04 12:00:00"/>
+            <column name="STYLENAME" value="event-blue"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="52de207d-e8f5-ae71-b29f-f1dbcca41099"/>
+            <column name="CAPTION" value="Breakfast"/>
+            <column name="DESCRIPTION" value="Breakfast with John Doe"/>
+            <column name="START_DATE" valueDate="2020-07-19 09:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-19 10:00:00"/>
+            <column name="STYLENAME" value="event-red"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="8d30ec01-ed5a-1fad-5e90-8af379c92f72"/>
+            <column name="CAPTION" value="Meeting with John Doe"/>
+            <column name="DESCRIPTION" value="Unknown meeting"/>
+            <column name="START_DATE" valueDate="2020-07-03 00:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-08 00:00:00"/>
+            <column name="STYLENAME" value="event-red"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="c1648a0d-23f7-2e75-3db7-6e9466735959"/>
+            <column name="CAPTION" value="Interview"/>
+            <column name="DESCRIPTION" value="Job interview"/>
+            <column name="START_DATE" valueDate="2020-07-21 17:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-21 15:00:00"/>
+            <column name="STYLENAME" value="event-green"/>
+        </insert>
+        <insert tableName="SAMPLER_CALENDAR_EVENT">
+            <column name="ID" value="f1a0c8a1-d122-b3c6-f88f-fad62fe85fa9"/>
+            <column name="CAPTION" value="Meeting"/>
+            <column name="DESCRIPTION" value="Meeting with lawyer"/>
+            <column name="START_DATE" valueDate="2020-07-17 13:00:00"/>
+            <column name="END_DATE" valueDate="2020-07-17 12:00:00"/>
+            <column name="STYLENAME" value="event-blue"/>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
