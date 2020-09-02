@@ -70,6 +70,12 @@ processResources {
     }
 }
 
+compileThemes {
+    if (findProject(':ui-themes')) {
+        dependsOn project(':ui-themes').tasks.getByName('jar')
+    }
+}
+
 test {
     useJUnitPlatform()
 }
