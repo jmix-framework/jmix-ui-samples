@@ -1,6 +1,6 @@
 package io.jmix.sampler.screen.ui.components.entitypicker.simple;
 
-import io.jmix.core.JmixEntity;
+import io.jmix.core.Entity;
 import io.jmix.core.Metadata;
 import io.jmix.core.MetadataTools;
 import io.jmix.sampler.entity.Order;
@@ -36,7 +36,7 @@ public class EntityPickerSimpleSample extends ScreenFragment {
 
     @Subscribe(id = "orderDc", target = Target.DATA_CONTAINER)
     protected void onOrderDcItemPropertyChange(InstanceContainer.ItemPropertyChangeEvent<Order> event) {
-        Object str = event.getValue() instanceof JmixEntity
+        Object str = event.getValue() instanceof Entity
                 ? metadataTools.getInstanceName(event.getValue())
                 : event.getValue();
 

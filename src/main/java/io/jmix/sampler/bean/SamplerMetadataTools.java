@@ -1,6 +1,6 @@
 package io.jmix.sampler.bean;
 
-import io.jmix.core.JmixEntity;
+import io.jmix.core.Entity;
 import io.jmix.core.MetadataTools;
 import io.jmix.core.entity.annotation.IgnoreUserTimeZone;
 import io.jmix.core.metamodel.datatype.Datatype;
@@ -51,7 +51,7 @@ public class SamplerMetadataTools extends MetadataTools {
             return datatype.format(value, App.getInstance().getLocale());
         } else if (range.isEnum()) {
             return messages.getMessage((Enum) value);
-        } else if (value instanceof JmixEntity) {
+        } else if (value instanceof Entity) {
             return getInstanceName(value);
         } else if (value instanceof Collection) {
             @SuppressWarnings("unchecked")
@@ -68,7 +68,7 @@ public class SamplerMetadataTools extends MetadataTools {
     public String format(@Nullable Object value) {
         if (value == null) {
             return "";
-        } else if (value instanceof JmixEntity) {
+        } else if (value instanceof Entity) {
             return getInstanceName(value);
         } else if (value instanceof Enum) {
             return messages.getMessage((Enum) value, App.getInstance().getLocale());
