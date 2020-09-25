@@ -1,22 +1,15 @@
 package io.jmix.sampler.entity;
 
-import io.jmix.core.JmixEntity;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.UUID;
 
 @Table(name = "SAMPLER_ORDER_ITEM")
 @Entity(name = "sampler_OrderItem")
-public class OrderItem implements JmixEntity {
+public class OrderItem {
     private static final long serialVersionUID = 7404462282086544503L;
 
     @Id

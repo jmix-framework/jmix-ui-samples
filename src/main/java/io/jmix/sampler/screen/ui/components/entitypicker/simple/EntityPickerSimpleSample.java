@@ -37,7 +37,7 @@ public class EntityPickerSimpleSample extends ScreenFragment {
     @Subscribe(id = "orderDc", target = Target.DATA_CONTAINER)
     protected void onOrderDcItemPropertyChange(InstanceContainer.ItemPropertyChangeEvent<Order> event) {
         Object str = event.getValue() instanceof JmixEntity
-                ? metadataTools.getInstanceName((JmixEntity) event.getValue())
+                ? metadataTools.getInstanceName(event.getValue())
                 : event.getValue();
 
         notifications.create()

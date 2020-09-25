@@ -1,7 +1,6 @@
 package io.jmix.sampler.entity;
 
 import io.jmix.core.DeletePolicy;
-import io.jmix.core.JmixEntity;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.entity.annotation.OnDelete;
 import io.jmix.core.metamodel.annotation.Composition;
@@ -15,7 +14,7 @@ import java.util.UUID;
 
 @Table(name = "SAMPLER_ORDER")
 @Entity(name = "sampler_Order")
-public class Order implements JmixEntity {
+public class Order {
     private static final long serialVersionUID = 5425074246531061156L;
 
     @Id

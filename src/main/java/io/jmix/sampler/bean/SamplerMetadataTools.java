@@ -52,7 +52,7 @@ public class SamplerMetadataTools extends MetadataTools {
         } else if (range.isEnum()) {
             return messages.getMessage((Enum) value);
         } else if (value instanceof JmixEntity) {
-            return getInstanceName((JmixEntity) value);
+            return getInstanceName(value);
         } else if (value instanceof Collection) {
             @SuppressWarnings("unchecked")
             Collection<Object> collection = (Collection<Object>) value;
@@ -69,7 +69,7 @@ public class SamplerMetadataTools extends MetadataTools {
         if (value == null) {
             return "";
         } else if (value instanceof JmixEntity) {
-            return getInstanceName((JmixEntity) value);
+            return getInstanceName(value);
         } else if (value instanceof Enum) {
             return messages.getMessage((Enum) value, App.getInstance().getLocale());
         } else if (value instanceof Collection) {

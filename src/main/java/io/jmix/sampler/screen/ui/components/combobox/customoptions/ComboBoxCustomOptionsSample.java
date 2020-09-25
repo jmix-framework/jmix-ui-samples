@@ -1,17 +1,12 @@
 package io.jmix.sampler.screen.ui.components.combobox.customoptions;
 
-import io.jmix.core.JmixEntity;
 import io.jmix.core.Metadata;
 import io.jmix.sampler.entity.Customer;
 import io.jmix.sampler.entity.Order;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.component.ComboBox;
 import io.jmix.ui.model.InstanceContainer;
-import io.jmix.ui.screen.ScreenFragment;
-import io.jmix.ui.screen.Subscribe;
-import io.jmix.ui.screen.Target;
-import io.jmix.ui.screen.UiController;
-import io.jmix.ui.screen.UiDescriptor;
+import io.jmix.ui.screen.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.math.BigDecimal;
@@ -73,7 +68,7 @@ public class ComboBoxCustomOptionsSample extends ScreenFragment {
         itemPropertyChanged(event);
     }
 
-    protected void itemPropertyChanged(InstanceContainer.ItemPropertyChangeEvent<? extends JmixEntity> event) {
+    protected void itemPropertyChanged(InstanceContainer.ItemPropertyChangeEvent<?> event) {
         String msg = event.getItem().getClass().getSimpleName() + "." + event.getProperty() + " = " + event.getValue();
         notifications.create()
                 .withCaption(msg)

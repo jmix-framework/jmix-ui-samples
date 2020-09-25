@@ -1,6 +1,5 @@
 package io.jmix.sampler.entity;
 
-import io.jmix.core.JmixEntity;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
 
@@ -13,7 +12,7 @@ import java.util.UUID;
 
 @Table(name = "SAMPLER_EMPLOYEE")
 @Entity(name = "sampler_Employee")
-public class Employee implements JmixEntity {
+public class Employee {
     private static final long serialVersionUID = -5217124568295017832L;
 
     @Id
