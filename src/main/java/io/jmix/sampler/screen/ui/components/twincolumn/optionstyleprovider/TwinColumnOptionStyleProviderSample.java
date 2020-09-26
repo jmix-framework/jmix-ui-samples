@@ -11,7 +11,7 @@ import io.jmix.ui.screen.UiDescriptor;
 public class TwinColumnOptionStyleProviderSample extends ScreenFragment {
 
     @Install(to = "twinColumn", subject = "optionStyleProvider")
-    protected String twinColumnOptionStyleProvider(Customer customer, boolean selected) {
+    protected String twinColumnOptionStyleProvider(Customer customer) {
         switch (customer.getGrade()) {
             case PREMIUM:
                 return "premium-grade";
