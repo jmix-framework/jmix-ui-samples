@@ -17,6 +17,7 @@
 package io.jmix.sampler;
 
 import io.jmix.core.CoreProperties;
+import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
 import io.jmix.core.entity.BaseUser;
@@ -42,6 +43,8 @@ public class SamplerConfiguration extends WebSecurityConfigurerAdapter {
     protected InMemoryUserRepository userRepository;
     @Autowired
     protected CoreProperties coreProperties;
+    @Autowired
+    protected MessageTools messageTools;
 
     @Bean(name = App.NAME)
     public App app() {
@@ -68,7 +71,7 @@ public class SamplerConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(new SystemAuthenticationProvider(userRepository));
 
-        CoreAuthenticationProvider userAuthenticationProvider = new CoreAuthenticationProvider();
+        CoreAuthenticationProvider userAuthenticationProvider = new CoreAuthenticationProvider(messageTools);
         userAuthenticationProvider.setUserDetailsService(userRepository);
         auth.authenticationProvider(userAuthenticationProvider);
     }
