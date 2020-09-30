@@ -26,7 +26,7 @@
                          property="customer">
             <query entityClass="io.jmix.sampler.entity.Customer"
                    escapeValueForLike="true"
-                   searchStringFormat="%$searchString%">
+                   searchStringFormat="%${searchString}%">
                 <![CDATA[select c from sampler_Customer c where lower(c.name) like lower(:searchString) escape '\']]>
             </query>
         </suggestionField>
