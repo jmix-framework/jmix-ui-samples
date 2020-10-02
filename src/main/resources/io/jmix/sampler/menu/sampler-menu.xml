@@ -910,6 +910,7 @@
         </menu>
         <item id="layout-click" docUrlSuffix="gui_BoxLayout" image="containers/layoutclick/layout-click.png"/>
         <item id="layout-shortcut" docUrlSuffix="gui_BoxLayout" image="containers/layoutshortcut/layout-shortcut.png"/>
+        <item id="drawer-sample" image="containers/drawer/drawer.svg"/>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
