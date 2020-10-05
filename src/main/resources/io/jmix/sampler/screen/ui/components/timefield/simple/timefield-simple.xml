@@ -2,7 +2,7 @@
     <layout>
         <hbox spacing="true">
             <timeField/>
-            <timeField showSeconds="true"/>
+            <timeField resolution="SEC"/>
         </hbox>
     </layout>
 </window>
