@@ -16,35 +16,19 @@
 
 package io.jmix.sampler;
 
-import io.jmix.core.CoreProperties;
-import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
-import io.jmix.core.entity.BaseUser;
-import io.jmix.core.security.CoreAuthenticationProvider;
-import io.jmix.core.security.impl.InMemoryUserRepository;
-import io.jmix.core.security.impl.SystemAuthenticationProvider;
+import io.jmix.core.security.CoreSecurityConfiguration;
 import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.bean.SamplerMetadataTools;
 import io.jmix.ui.App;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 @Configuration
-public class SamplerConfiguration extends WebSecurityConfigurerAdapter {
-
-    @Autowired
-    protected InMemoryUserRepository userRepository;
-    @Autowired
-    protected CoreProperties coreProperties;
-    @Autowired
-    protected MessageTools messageTools;
+public class SamplerConfiguration {
 
     @Bean(name = App.NAME)
     public App app() {
@@ -61,32 +45,7 @@ public class SamplerConfiguration extends WebSecurityConfigurerAdapter {
         return new SamplerMetadataTools();
     }
 
-    @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
-    }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(new SystemAuthenticationProvider(userRepository));
-
-        CoreAuthenticationProvider userAuthenticationProvider = new CoreAuthenticationProvider(messageTools);
-        userAuthenticationProvider.setUserDetailsService(userRepository);
-        auth.authenticationProvider(userAuthenticationProvider);
-    }
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.antMatcher("/**")
-                .authorizeRequests().anyRequest().permitAll()
-                .and()
-                .anonymous(anonymousConfigurer -> {
-                    BaseUser anonymousUser = userRepository.getAnonymousUser();
-                    anonymousConfigurer.principal(anonymousUser);
-                    anonymousConfigurer.key(coreProperties.getAnonymousAuthenticationTokenKey());
-                })
-                .csrf().disable()
-                .headers().frameOptions().sameOrigin();
+    @EnableWebSecurity
+    static class SamplerSecurityConfiguration extends CoreSecurityConfiguration {
     }
 }
