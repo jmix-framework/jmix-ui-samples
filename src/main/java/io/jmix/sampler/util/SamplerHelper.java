@@ -23,10 +23,8 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
-@Component(SamplerHelper.NAME)
+@Component("sampler_SamplerHelper")
 public class SamplerHelper {
-
-    public static final String NAME = "sampler_SamplerHelper";
 
     protected static final Map<String, Object> EMPTY_MAP = new HashMap<>();
 

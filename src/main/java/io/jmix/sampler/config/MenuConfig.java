@@ -27,10 +27,9 @@ import java.util.MissingResourceException;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-@Component(MenuConfig.NAME)
+@Component("sampler_MenuConfig")
 public class MenuConfig {
 
-    public static final String NAME = "sampler_MenuConfig";
     public static final String MENU_CONFIG_XML_PROP = "jmix.sampler.menuConfig";
 
     private static final Log log = LogFactory.getLog(MenuConfig.class);

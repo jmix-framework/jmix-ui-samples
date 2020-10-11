@@ -25,22 +25,26 @@ import io.jmix.sampler.bean.SamplerMetadataTools;
 import io.jmix.ui.App;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 @Configuration
 public class SamplerConfiguration {
 
-    @Bean(name = App.NAME)
+    @Bean("sampler_App")
+    @Primary
     public App app() {
         return new SamplerApp();
     }
 
-    @Bean(name = Messages.NAME)
+    @Bean("sampler_Messages")
+    @Primary
     public Messages messages() {
         return new SamplerMessagesImpl();
     }
 
-    @Bean(name = MetadataTools.NAME)
+    @Bean("sampler_MetadataTools")
+    @Primary
     public MetadataTools metadataTools() {
         return new SamplerMetadataTools();
     }

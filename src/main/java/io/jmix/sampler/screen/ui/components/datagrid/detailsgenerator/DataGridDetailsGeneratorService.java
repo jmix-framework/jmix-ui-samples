@@ -15,9 +15,8 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.UUID;
 
-@Component(DataGridDetailsGeneratorService.NAME)
+@Component("sampler_DataGridDetailsGeneratorService")
 public class DataGridDetailsGeneratorService {
-    public static final String NAME = "sampler_DataGridDetailsGeneratorService";
 
     @Autowired
     protected DataManager dataManager;

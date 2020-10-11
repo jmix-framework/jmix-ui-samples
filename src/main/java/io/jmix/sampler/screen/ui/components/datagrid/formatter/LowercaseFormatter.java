@@ -9,11 +9,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Nullable;
 
-@Component(LowercaseFormatter.NAME)
+@Component("sampler_LowercaseFormatter")
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class LowercaseFormatter implements Formatter<String> {
-
-    public static final String NAME = "sampler_LowercaseFormatter";
 
     @Autowired
     protected Messages messages;

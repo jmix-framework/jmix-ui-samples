@@ -7,11 +7,9 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Nullable;
 
-@Component(UppercaseFormatter.NAME)
+@Component("sampler_UppercaseFormatter")
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class UppercaseFormatter implements Formatter<String> {
-
-    public static final String NAME = "sampler_UppercaseFormatter";
 
     @Nullable
     @Override

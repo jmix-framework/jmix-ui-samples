@@ -8,11 +8,9 @@ import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component(PositiveIntegerValidator.NAME)
+@Component("sampler_PositiveIntegerValidator")
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class PositiveIntegerValidator extends AbstractValidator<Integer> {
-
-    public static final String NAME = "sampler_PositiveIntegerValidator";
 
     @Autowired
     protected Messages messages;
