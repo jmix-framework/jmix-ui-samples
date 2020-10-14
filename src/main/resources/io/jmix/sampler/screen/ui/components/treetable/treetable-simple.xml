@@ -4,6 +4,7 @@
                     class="io.jmix.sampler.entity.Task">
             <fetchPlan extends="_local">
                 <property name="parentTask" fetchPlan="_local"/>
+                <property name="assignee" fetchPlan="_local"/>
             </fetchPlan>
             <loader id="tasksLoader">
                 <query>
