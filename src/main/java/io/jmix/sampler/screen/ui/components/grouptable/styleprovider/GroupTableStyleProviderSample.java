@@ -3,7 +3,7 @@ package io.jmix.sampler.screen.ui.components.grouptable.styleprovider;
 import io.jmix.sampler.entity.Customer;
 import io.jmix.sampler.entity.CustomerGrade;
 import io.jmix.ui.component.GroupTable;
-import io.jmix.ui.gui.data.GroupInfo;
+import io.jmix.ui.component.data.GroupInfo;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
