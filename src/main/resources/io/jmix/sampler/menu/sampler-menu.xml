@@ -737,7 +737,7 @@
             <item id="timefield-time-mode" docUrlSuffix="gui_TimeField"
                   image="components/timefield/timefield-time-mode.png">
                 <otherFiles>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
             </item>
         </menu>
