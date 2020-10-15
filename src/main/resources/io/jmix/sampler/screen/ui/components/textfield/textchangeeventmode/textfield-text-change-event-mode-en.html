@@ -9,7 +9,7 @@
     </li>
     <li>
         <p><code>LAZY</code> (default) - an event is triggered when there is a pause in editing the text. The length of
-            the pause can be modified with <code>setInputEventTimeout()</code>. A text change event is forced before a
+            the pause can be modified with <code>setTextChangeTimeout()</code>. A text change event is forced before a
             possible <code>ValueChangeEvent</code>, even if the user did not keep a pause while entering the text.</p>
     </li>
     <li>
@@ -18,6 +18,6 @@
     <li>
         <p><code>TIMEOUT</code> - an event is triggered after a timeout period. If more changes are made during this
             period, the event sent to the server-side includes the changes made up to the last change. The length of the
-            timeout can be set with <code>setInputEventTimeout()</code>.
+            timeout can be set with <code>setTextChangeTimeout()</code>.
     </li>
 </ul>
