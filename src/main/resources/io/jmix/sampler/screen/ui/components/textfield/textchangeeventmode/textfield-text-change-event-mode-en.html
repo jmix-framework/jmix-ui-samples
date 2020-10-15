@@ -1,20 +1,23 @@
 <p>The <code>TextChangeEventMode</code> defines the way the changes are transmitted to the server to cause a server-side
-    event. There are 3 predefined event modes:</p>
+    event. There are 4 predefined event modes:</p>
 <ul>
+    <li>
+        <p><code>EAGER</code> - an event is triggered immediately for every change in the text content, typically caused
+            by a key press. The requests are separate and are processed sequentially one after another. Change events
+            are nevertheless communicated asynchronously to the server, so further input can be typed while event
+            requests are being processed.
+    </li>
     <li>
         <p><code>LAZY</code> (default) - an event is triggered when there is a pause in editing the text. The length of
             the pause can be modified with <code>setInputEventTimeout()</code>. A text change event is forced before a
             possible <code>ValueChangeEvent</code>, even if the user did not keep a pause while entering the text.</p>
     </li>
     <li>
+        <p><code>BLUR</code> - an event is triggered when the text field loses focus.
+    </li>
+    <li>
         <p><code>TIMEOUT</code> - an event is triggered after a timeout period. If more changes are made during this
             period, the event sent to the server-side includes the changes made up to the last change. The length of the
             timeout can be set with <code>setInputEventTimeout()</code>.
-    </li>
-    <li>
-        <p><code>EAGER</code> - an event is triggered immediately for every change in the text content, typically caused
-            by a key press. The requests are separate and are processed sequentially one after another. Change events
-            are nevertheless communicated asynchronously to the server, so further input can be typed while event
-            requests are being processed.
     </li>
 </ul>
