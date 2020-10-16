@@ -728,7 +728,7 @@
             <item id="timefield-dataaware" docUrlSuffix="gui_TimeField"
                   image="components/timefield/timefield-dataaware.png">
                 <otherFiles>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
             </item>
             <item id="timefield-format" docUrlSuffix="gui_TimeField" image="components/timefield/timefield-format.png"/>

@@ -2,7 +2,7 @@ package io.jmix.sampler.screen.ui.components.timefield.dataaware;
 
 import io.jmix.core.Metadata;
 import io.jmix.core.TimeSource;
-import io.jmix.sampler.entity.Order;
+import io.jmix.sampler.entity.Task;
 import io.jmix.ui.model.InstanceContainer;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @UiDescriptor("timefield-dataaware.xml")
 public class TimeFieldDataawareSample extends ScreenFragment {
     @Autowired
-    protected InstanceContainer<Order> orderDc;
+    protected InstanceContainer<Task> taskDc;
 
     @Autowired
     protected Metadata metadata;
@@ -25,8 +25,8 @@ public class TimeFieldDataawareSample extends ScreenFragment {
     protected void onInit(InitEvent event) {
         // InstanceContainer initialization. It is usually done automatically if the screen is
         // inherited from StandardEditor and is used as an entity editor.
-        Order order = metadata.create(Order.class);
-        order.setDate(timeSource.currentTimestamp());
-        orderDc.setItem(order);
+        Task task = metadata.create(Task.class);
+        task.setDueDate(timeSource.currentTimestamp());
+        taskDc.setItem(task);
     }
 }
