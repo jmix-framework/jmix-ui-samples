@@ -928,6 +928,8 @@
     </menu>
 
     <menu id="facets" image="mainmenu/dialogsAndNotifications.svg">
+        <item id="facet-clipboard-trigger" docUrlSuffix="gui_ClipboardTrigger"
+              image="facets/facet-clipboard-trigger.png"/>
         <item id="facet-dialog" docUrlSuffix="gui_facets" image="facets/facet-dialog.png"/>
         <item id="facet-notification" docUrlSuffix="gui_facets" image="facets/facet-notification.png"/>
         <item id="facet-screen" docUrlSuffix="gui_facets" image="facets/facet-screen.png">

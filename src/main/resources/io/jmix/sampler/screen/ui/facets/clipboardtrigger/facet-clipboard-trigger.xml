@@ -1,0 +1,13 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <facets>
+        <clipboardTrigger id="clipboardTrigger"
+                          button="copyButton"
+                          input="inputField"/>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <textField id="inputField"/>
+            <button id="copyButton" caption="msg://copyButton"/>
+        </hbox>
+    </layout>
+</window>
