@@ -17,7 +17,7 @@ public class GroupTableAggregatableSample extends ScreenFragment {
     @Install(to = "employeesTable", subject = "aggregationDistributionProvider")
     private void employeesTableAggregationDistributionProvider(GroupTable.GroupAggregationDistributionContext<Employee> context) {
         BigDecimal value = (BigDecimal) context.getValue();
-        if (value.signum() == -1) {
+        if (value == null || value.signum() == -1) {
             return;
         }
 
