@@ -33,11 +33,12 @@ public class TableGeneratedColumnSample extends ScreenFragment {
     @Subscribe
     protected void onInit(InitEvent event) {
         customerTable.addGeneratedColumn("language", entity -> {
-            ComboBox<String> lookupField = uiComponents.create(ComboBox.TYPE_STRING);
+            ComboBox<String> comboBox = uiComponents.create(ComboBox.TYPE_STRING);
+            comboBox.setId("languageComboBox");
             List<String> locales = new ArrayList<>(coreProperties.getAvailableLocales().keySet());
-            lookupField.setOptionsList(locales);
-            lookupField.setWidth("100%");
-            return lookupField;
+            comboBox.setOptionsList(locales);
+            comboBox.setWidth("100%");
+            return comboBox;
         });
 
         customerTable.getColumn("fullName").setCaption("Full Name");
