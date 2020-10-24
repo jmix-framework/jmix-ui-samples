@@ -22,7 +22,11 @@ import io.jmix.core.security.CoreSecurityConfiguration;
 import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.bean.SamplerMetadataTools;
+import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
+import io.jmix.sampler.screen.ui.components.composite.component.StepperFieldLoader;
 import io.jmix.ui.App;
+import io.jmix.ui.sys.registration.ComponentRegistration;
+import io.jmix.ui.sys.registration.ComponentRegistrationBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -51,5 +55,13 @@ public class SamplerConfiguration {
 
     @EnableWebSecurity
     static class SamplerSecurityConfiguration extends CoreSecurityConfiguration {
+    }
+
+    @Bean
+    public ComponentRegistration stepperField() {
+        return ComponentRegistrationBuilder.create(StepperField.NAME)
+                .withComponentClass(StepperField.class)
+                .withComponentLoaderClass(StepperFieldLoader.class)
+                .build();
     }
 }

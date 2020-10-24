@@ -150,6 +150,19 @@
             </item>
         </menu>
 
+        <item id="composite-component" docUrlSuffix="composite_components"
+              image="components/composite/composite-component.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/components/composite/component/StepperField.java"/>
+                <file name="io/jmix/sampler/screen/ui/components/composite/component/stepper-field.xml"/>
+                <file name="io/jmix/sampler/screen/ui/components/composite/component/StepperFieldLoader.java"/>
+                <file name="io/jmix/sampler/screen/ui/components/composite/component/stepper-field-style.scss"/>
+                <file name="io/jmix/sampler/screen/ui/components/composite/component/composite-component.xsd"/>
+                <file name="io/jmix/sampler/SamplerConfiguration.java"/>
+                <file name="io/jmix/sampler/entity/OrderItem.java"/>
+            </otherFiles>
+        </item>
+
         <menu id="contexthelp">
             <item id="contexthelp-field" docUrlSuffix="gui_attributes"
                   image="components/contexthelp/contexthelp-field.png"/>

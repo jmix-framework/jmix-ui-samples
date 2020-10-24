@@ -1,0 +1,9 @@
+.stepper-field {
+  display: flex;
+
+  .stepper-btn {
+    width: $v-unit-size;
+    min-width: $v-unit-size;
+    border: 1px solid var(--border-color);
+  }
+}

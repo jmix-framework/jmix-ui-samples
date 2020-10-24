@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:app="http://jmix.io/schema/sampler/composite-component.xsd">
+    <data>
+        <instance id="orderItemDc"
+                  class="io.jmix.sampler.entity.OrderItem"
+                  fetchPlan="_local">
+            <loader/>
+        </instance>
+    </data>
+    <layout>
+        <app:stepperField id="quantityField"
+                          dataContainer="orderItemDc"
+                          property="quantity"
+                          step="1"/>
+    </layout>
+</window>

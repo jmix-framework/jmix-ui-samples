@@ -1,0 +1,17 @@
+<xs:schema xmlns="http://jmix.io/schema/sampler/composite-component.xsd"
+           attributeFormDefault="unqualified"
+           elementFormDefault="qualified"
+           targetNamespace="http://jmix.io/schema/sampler/composite-component.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:layout="http://jmix.io/schema/ui/layout">
+
+    <xs:element name="stepperField">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="layout:baseFieldComponent">
+                    <xs:attribute name="step" type="xs:integer"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

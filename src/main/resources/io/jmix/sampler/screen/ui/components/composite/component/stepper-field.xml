@@ -1,0 +1,11 @@
+<composite xmlns="http://jmix.io/schema/ui/composite">
+    <cssLayout id="rootBox" width="100%" stylename="v-component-group stepper-field">
+        <textField id="valueField"/>
+        <button id="upBtn"
+                icon="CHEVRON_UP"
+                stylename="stepper-btn icon-only"/>
+        <button id="downBtn"
+                icon="CHEVRON_DOWN"
+                stylename="stepper-btn icon-only"/>
+    </cssLayout>
+</composite>
