@@ -1,0 +1,14 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <jsComponent id="timePicker"
+                     initFunctionName="io_jmix_sampler_screen_ui_components_javascript_component_TimePicker">
+            <dependencies>
+                <dependency path="webjar://jquery:jquery.min.js"/>
+                <dependency path="vaadin://timepicker/wickedpicker.min.js"/>
+                <dependency path="vaadin://timepicker/wickedpicker.min.css"/>
+                <dependency path="vaadin://timepicker/time-picker-connector.js"/>
+            </dependencies>
+        </jsComponent>
+        <button id="showValueBtn" caption="Show Value"/>
+    </layout>
+</window>

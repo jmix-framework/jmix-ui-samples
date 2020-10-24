@@ -463,6 +463,13 @@
             <item id="image-click" docUrlSuffix="gui_Image" image="components/image/image-click.png"/>
         </menu>
 
+        <item id="java-script-component" docUrlSuffix="jsComponent"
+              image="components/javascript/java-script-component.png">
+            <otherFiles>
+                <file name="VAADIN/timepicker/time-picker-connector.js"/>
+            </otherFiles>
+        </item>
+
         <menu id="label">
             <item id="label-simple" docUrlSuffix="gui_Label" image="components/label/label-simple.png"/>
             <item id="label-dataaware" docUrlSuffix="gui_Label" image="components/label/label-dataaware.png">
