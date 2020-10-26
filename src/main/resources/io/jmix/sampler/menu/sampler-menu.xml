@@ -250,14 +250,6 @@
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-formatter" docUrlSuffix="gui_DataGrid" splitEnabled="true"
-                  image="components/datagrid/datagrid-formatter.png">
-                <otherFiles>
-                    <file name="io/jmix/sampler/entity/Customer.java"/>
-                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/LowercaseFormatter.java"/>
-                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/UppercaseFormatter.java"/>
-                </otherFiles>
-            </item>
             <item id="datagrid-renderer" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="components/datagrid/datagrid-renderer.png">
                 <otherFiles>
@@ -626,8 +618,8 @@
                   image="components/table/table-formatter.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
-                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/LowercaseFormatter.java"/>
-                    <file name="io/jmix/sampler/screen/ui/components/datagrid/formatter/UppercaseFormatter.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/table/formatter/LowercaseFormatter.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/table/formatter/UppercaseFormatter.java"/>
                 </otherFiles>
             </item>
             <item id="table-icon-provider" docUrlSuffix="gui_Table" splitEnabled="true"
