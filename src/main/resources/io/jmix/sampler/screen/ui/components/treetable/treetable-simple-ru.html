@@ -2,8 +2,8 @@
     Предназначена для работы с сущностями, которые содержат ссылки на самих себя. Это могут быть например, файловая
     система или организационная структура предприятия.</p>
 
-<p>Для <code>TreeTable</code> в атрибуте <code>datasource</code> элемента <code>rows</code> должен быть указан
-    <code>hierarchicalDatasource</code>. Объявление <code>hierarchicalDatasource</code> должно содержать атрибут
-    <code>hierarchyProperty</code> - имя атрибута сущности, являющегося ссылкой на саму себя.</p>
+<p>Для <code>TreeTable</code> кроме атрибута <code>dataContainer</code>, задающего <code>data container</code> для
+    загрузки данных в таблицу, необходимо определить атрибут <code>hierarchyProperty</code> – имя атрибута сущности,
+    являющегося ссылкой на саму себя.</p>
 
 <p>Функциональность <code>TreeTable</code> аналогична простой таблице <code>Table</code>.</p>
