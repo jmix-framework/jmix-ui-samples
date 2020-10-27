@@ -5,6 +5,7 @@ import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.entity.annotation.OnDelete;
 import io.jmix.core.metamodel.annotation.Composition;
 import io.jmix.core.metamodel.annotation.InstanceName;
+import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -14,6 +15,7 @@ import java.util.UUID;
 
 @Table(name = "SAMPLER_ORDER")
 @Entity(name = "sampler_Order")
+@JmixEntity
 public class Order {
     private static final long serialVersionUID = 5425074246531061156L;
 

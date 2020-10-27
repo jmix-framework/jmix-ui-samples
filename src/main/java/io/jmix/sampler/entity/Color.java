@@ -2,6 +2,7 @@ package io.jmix.sampler.entity;
 
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
+import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,6 +12,7 @@ import java.util.UUID;
 
 @Table(name = "SAMPLER_COLOR")
 @Entity(name = "sampler_Color")
+@JmixEntity
 public class Color {
     private static final long serialVersionUID = -1981383843541262219L;
 

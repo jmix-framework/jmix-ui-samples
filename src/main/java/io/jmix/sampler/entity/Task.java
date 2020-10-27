@@ -2,6 +2,7 @@ package io.jmix.sampler.entity;
 
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
+import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.UUID;
 
 @Table(name = "SAMPLER_TASK")
 @Entity(name = "sampler_Task")
+@JmixEntity
 public class Task {
     private static final long serialVersionUID = 2652709115420331280L;
 
