@@ -21,7 +21,7 @@ public class ButtonsPanelAlwaysVisibleSample extends ScreenFragment {
     protected void onShowVisibleClick(Button.ClickEvent event) {
         screenBuilders.lookup(Customer.class, this)
                 .withScreenId("buttonspanel-visible")
-                .withLaunchMode(OpenMode.DIALOG)
+                .withOpenMode(OpenMode.DIALOG)
                 .withSelectHandler(customers -> {
                 })
                 .build()
@@ -32,7 +32,7 @@ public class ButtonsPanelAlwaysVisibleSample extends ScreenFragment {
     protected void onShowInvisibleClick(Button.ClickEvent event) {
         screenBuilders.lookup(Customer.class, this)
                 .withScreenId("buttonspanel-invisible")
-                .withLaunchMode(OpenMode.DIALOG)
+                .withOpenMode(OpenMode.DIALOG)
                 .withSelectHandler(customers -> {
                 })
                 .build()

@@ -42,7 +42,7 @@
                 <column id="amount"/>
                 <column id="description"/>
             </columns>
-            <pagination/>
+            <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn" action="ordersTable.create"/>

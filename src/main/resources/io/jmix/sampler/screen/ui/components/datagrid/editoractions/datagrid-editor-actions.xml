@@ -30,7 +30,7 @@
                 <column property="active"/>
                 <column property="grade"/>
             </columns>
-            <pagination/>
+            <simplePagination/>
             <buttonsPanel id="buttonsPanel" alwaysVisible="true">
                 <button id="createBtn"
                         action="customersDataGrid.create"/>

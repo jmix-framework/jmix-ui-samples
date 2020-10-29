@@ -39,7 +39,7 @@
                 <column id="quantity"/>
                 <column id="order"/>
             </columns>
-            <pagination/>
+            <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn" action="orderItemsTable.create"/>

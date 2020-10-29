@@ -31,7 +31,7 @@
                 <column id="active"/>
                 <column id="grade"/>
             </columns>
-            <pagination/>
+            <simplePagination/>
             <buttonsPanel>
                 <button id="createBtn"
                         action="customerTable.create"/>

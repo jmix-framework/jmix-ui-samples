@@ -41,7 +41,7 @@
                 <column id="active"/>
                 <column id="grade"/>
             </columns>
-            <pagination/>
+            <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn" action="customersTable.create"/>

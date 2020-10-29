@@ -38,7 +38,7 @@
                 <column id="name"/>
                 <column id="price"/>
             </columns>
-            <pagination/>
+            <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
                 <button id="createBtn" action="productsTable.create"/>

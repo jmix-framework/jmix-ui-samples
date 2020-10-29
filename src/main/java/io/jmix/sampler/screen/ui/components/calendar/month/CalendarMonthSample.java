@@ -23,7 +23,7 @@ public class CalendarMonthSample extends ScreenFragment {
     protected void onCalendarCalendarEventClick(Calendar.CalendarEventClickEvent<Date> event) {
         CalendarEventScreen screen = screenBuilders.screen(this)
                 .withScreenClass(CalendarEventScreen.class)
-                .withLaunchMode(OpenMode.DIALOG)
+                .withOpenMode(OpenMode.DIALOG)
                 .build();
 
         CalendarEvent<Date> calendarEvent = event.getCalendarEvent();
