@@ -36,7 +36,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
 jmix {
-    bomVersion = '0.1.0-SNAPSHOT'
+    bomVersion = '0.2.0-SNAPSHOT'
 }
 
 group = 'io.jmix.sampler'
