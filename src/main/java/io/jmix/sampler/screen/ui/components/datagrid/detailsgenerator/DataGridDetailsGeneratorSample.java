@@ -73,6 +73,7 @@ public class DataGridDetailsGeneratorSample extends ScreenFragment {
     protected Component getContent(Order entity) {
         Label<String> content = uiComponents.create(Label.TYPE_STRING);
         content.setHtmlEnabled(true);
+        content.setId("contentLabel");
 
         StringBuilder sb = new StringBuilder();
         sb.append("<table cellspacing=3px cellpadding=3px>")

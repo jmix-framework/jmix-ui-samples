@@ -27,6 +27,7 @@ public class DataGridEditorEventsSample extends ScreenFragment {
     protected void onCustomersDataGridEditorPreCommit(DataGrid.EditorPreCommitEvent<Customer> event) {
         notifications.create()
                 .withCaption("Pre Commit")
+                .withType(Notifications.NotificationType.TRAY)
                 .show();
     }
 
