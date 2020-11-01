@@ -23,6 +23,8 @@ import java.util.Locale;
 
 public class SamplerMessagesImpl extends MessagesImpl {
 
+    protected Locale userLocale;
+
     @Override
     public String getMessage(String key) {
         return getMessage(key, getUserLocale());
@@ -45,6 +47,13 @@ public class SamplerMessagesImpl extends MessagesImpl {
 
     @Override
     protected Locale getUserLocale() {
-        return App.getInstance().getLocale();
+        if (userLocale == null) {
+            userLocale = App.getInstance().getLocale();
+        }
+        return userLocale;
+    }
+
+    public void setUserLocale(Locale userLocale) {
+        this.userLocale = userLocale;
     }
 }

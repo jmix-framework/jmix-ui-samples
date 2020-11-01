@@ -17,7 +17,9 @@
 package io.jmix.sampler.screen.sys.main;
 
 import io.jmix.core.CoreProperties;
+import io.jmix.core.Messages;
 import io.jmix.sampler.bean.SamplerApp;
+import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.config.MenuConfig;
 import io.jmix.sampler.config.MenuItem;
 import io.jmix.sampler.screen.sys.maindashboard.DashboardItemClickEvent;
@@ -78,6 +80,8 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected UserSettingsTools userSettingsTools;
     @Autowired
     protected ApplicationContext applicationContext;
+    @Autowired
+    protected Messages messages;
 
     @Autowired
     protected TextField<String> searchField;
@@ -166,6 +170,10 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
                 RedirectHandler handler = ui.getUrlChangeHandler().getRedirectHandler();
                 if (handler != null) {
                     handler.schedule(urlRouting.getState());
+                }
+
+                if (messages instanceof SamplerMessagesImpl) {
+                    ((SamplerMessagesImpl) messages).setUserLocale(selectedLocale);
                 }
 
                 ui.getApp().setLocale(selectedLocale);
