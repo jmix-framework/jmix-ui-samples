@@ -9,10 +9,6 @@
                              caption="Enum"
                              inputPrompt="Start typing">
             </suggestionField>
-            <suggestionField id="optionWrapperSuggestionField"
-                             caption="OptionWrapper"
-                             inputPrompt="Start typing">
-            </suggestionField>
         </hbox>
     </layout>
 </window>

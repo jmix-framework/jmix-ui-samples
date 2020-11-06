@@ -22,8 +22,6 @@ public class SuggestionFieldOptionTypeSample extends ScreenFragment {
     protected SuggestionField<String> stringSuggestionField;
     @Autowired
     protected SuggestionField<SendingStatus> enumSuggestionField;
-    @Autowired
-    protected SuggestionField<Integer> optionWrapperSuggestionField;
 
     @Autowired
     protected Messages messages;
@@ -39,17 +37,7 @@ public class SuggestionFieldOptionTypeSample extends ScreenFragment {
         List<SendingStatus> enums = Arrays.asList(SendingStatus.values());
         enumSuggestionField.setSearchExecutor((searchString, searchParams) ->
                 enums.stream()
-                        .map(sendingStatus -> messages.getMessage(sendingStatus))
-                        .filter(str -> StringUtils.containsIgnoreCase(str, searchString))
-                        .collect(Collectors.toList()));
-
-        List<SuggestionField.OptionWrapper> wrappers = Arrays.asList(
-                new SuggestionField.OptionWrapper<>("One", 1),
-                new SuggestionField.OptionWrapper<>("Two", 2),
-                new SuggestionField.OptionWrapper<>("Three", 3));
-        optionWrapperSuggestionField.setSearchExecutor((searchString, searchParams) ->
-                wrappers.stream()
-                        .filter(optionWrapper -> StringUtils.containsIgnoreCase(optionWrapper.getCaption(), searchString))
+                        .filter(status -> StringUtils.containsIgnoreCase(messages.getMessage(status), searchString))
                         .collect(Collectors.toList()));
     }
 }
