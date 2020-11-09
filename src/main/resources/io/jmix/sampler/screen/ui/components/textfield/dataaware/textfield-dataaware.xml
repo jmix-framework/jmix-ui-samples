@@ -10,7 +10,7 @@
                    property="name"/>
         <hbox spacing="true">
             <label value="Name in the Container:"/>
-            <label dataContainer="customersDc"
+            <label id='labelName' dataContainer="customersDc"
                    property="name"/>
         </hbox>
     </layout>

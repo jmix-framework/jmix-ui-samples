@@ -1,11 +1,11 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <layout>
         <hbox spacing="true">
-            <textField caption="String"
+            <textField id="stringTextField" caption="String"
                        datatype="string"/>
-            <textField caption="Integer"
+            <textField id="integerTextField" caption="Integer"
                        datatype="int"/>
-            <textField caption="Double"
+            <textField id="doubleTextField" caption="Double"
                        datatype="double"/>
         </hbox>
     </layout>
