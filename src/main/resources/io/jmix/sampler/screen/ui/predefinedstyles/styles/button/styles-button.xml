@@ -3,17 +3,61 @@
             spacing="true">
         <hbox spacing="true">
             <groupBox caption="Icon styles"
-                      spacing="true">
-                <button caption="icon-align-right"
-                        icon="UPLOAD"
-                        stylename="icon-align-right"/>
-                <button caption="icon-align-top"
-                        icon="UPLOAD"
-                        stylename="icon-align-top"/>
-                <label value="icon-only:"/>
-                <button caption="icon-align-right"
-                        icon="UPLOAD"
-                        stylename="icon-only"/>
+                      spacing="true"
+                      orientation="horizontal">
+                <groupBox caption="Button"
+                          spacing="true">
+                    <button id="iconAlignRightButton"
+                            caption="icon-align-right"
+                            icon="UPLOAD"
+                            stylename="icon-align-right"/>
+                    <button id="iconAlignTopButton"
+                            caption="icon-align-top"
+                            icon="UPLOAD"
+                            stylename="icon-align-top"/>
+                    <label value="icon-only:"/>
+                    <button id="iconOnlyButton"
+                            caption="icon-only"
+                            icon="UPLOAD"
+                            stylename="icon-only"/>
+                </groupBox>
+                <groupBox caption="PopupButton"
+                          spacing="true">
+                    <popupButton id="iconAlignRightPopupButton"
+                                 caption="icon-align-right"
+                                 icon="SAVE"
+                                 stylename="icon-align-right">
+                        <actions>
+                            <action id="saveAsDocAction"
+                                    caption="msg://io.jmix.sampler.screen.ui.components.popupbutton.simple/saveAsDocAction.caption"/>
+                            <action id="saveAsPdfAction"
+                                    caption="msg://io.jmix.sampler.screen.ui.components.popupbutton.simple/saveAsPdfAction.caption"/>
+                        </actions>
+                    </popupButton>
+                    <popupButton id="iconAlignTopPopupButton"
+                                 caption="icon-align-top"
+                                 icon="SAVE"
+                                 stylename="icon-align-top">
+                        <actions>
+                            <action id="saveAsDocAction"
+                                    caption="msg://io.jmix.sampler.screen.ui.components.popupbutton.simple/saveAsDocAction.caption"/>
+                            <action id="saveAsPdfAction"
+                                    caption="msg://io.jmix.sampler.screen.ui.components.popupbutton.simple/saveAsPdfAction.caption"/>
+                        </actions>
+                    </popupButton>
+                    <label value="icon-only:"/>
+                    <popupButton id="iconOnlyPopupButton"
+                                 caption="icon-only"
+                                 icon="SAVE"
+                                 stylename="icon-only">
+                        <actions>
+                            <action id="saveAsDocAction"
+                                    caption="msg://io.jmix.sampler.screen.ui.components.popupbutton.simple/saveAsDocAction.caption"/>
+                            <action id="saveAsPdfAction"
+                                    caption="msg://io.jmix.sampler.screen.ui.components.popupbutton.simple/saveAsPdfAction.caption"/>
+                        </actions>
+                    </popupButton>
+                </groupBox>
             </groupBox>
             <vbox spacing="true">
                 <groupBox caption="Border styles"
