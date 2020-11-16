@@ -23,7 +23,7 @@ buildscript {
     }
 
     dependencies {
-        classpath('io.jmix.gradle:jmix-gradle-plugin:0.1.16')
+        classpath('io.jmix.gradle:jmix-gradle-plugin:0.1.18')
     }
 }
 
@@ -55,7 +55,7 @@ dependencies {
     implementation 'io.jmix.ui:jmix-ui-starter'
     implementation 'io.jmix.ui:jmix-ui-data-starter'
     implementation 'io.jmix.ui:jmix-ui-widgets-compiled'
-    implementation "io.jmix.translations:jmix-translations-ru:${jmix.bomVersion}"
+    implementation "io.jmix.translations:jmix-translations-ru"
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
