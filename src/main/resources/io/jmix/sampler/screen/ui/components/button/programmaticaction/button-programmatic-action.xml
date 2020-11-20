@@ -1,5 +1,5 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <layout>
-        <button id="button"/>
+        <button id="buttonAction"/>
     </layout>
 </window>

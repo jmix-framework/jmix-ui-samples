@@ -21,10 +21,10 @@
                               optionsEnum="io.jmix.sampler.entity.SendingStatus"
                               width="100%"/>
                     <hbox spacing="true">
-                        <button id="saveAnsCloseButton"
+                        <button id="saveAndCloseButton"
                                 caption="msg://saveButton.caption"
                                 icon="SAVE"/>
-                        <button id="cancelAnsCloseButton"
+                        <button id="cancelAndCloseButton"
                                 caption="msg://cancelButton.caption"
                                 icon="REMOVE"/>
                     </hbox>

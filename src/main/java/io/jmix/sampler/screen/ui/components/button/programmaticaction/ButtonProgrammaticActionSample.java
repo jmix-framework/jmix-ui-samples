@@ -14,14 +14,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ButtonProgrammaticActionSample extends ScreenFragment {
 
     @Autowired
-    protected Button button;
+    protected Button buttonAction;
 
     @Autowired
     protected Notifications notifications;
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        button.setAction(new BaseAction("theAction")
+        buttonAction.setAction(new BaseAction("theAction")
                 .withCaption("Click Me!")
                 .withHandler(actionPerformedEvent ->
                         notifications.create()

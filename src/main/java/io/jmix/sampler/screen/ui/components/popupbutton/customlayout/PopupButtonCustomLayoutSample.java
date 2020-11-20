@@ -28,8 +28,8 @@ public class PopupButtonCustomLayoutSample extends ScreenFragment {
     @Autowired
     protected Notifications notifications;
 
-    @Subscribe("saveAnsCloseButton")
-    protected void onSaveAnsCloseButtonClick(Button.ClickEvent event) {
+    @Subscribe("saveAndCloseButton")
+    protected void onSaveAndCloseButtonClick(Button.ClickEvent event) {
         popupButton.setPopupVisible(false);
 
         notifications.create()
@@ -37,8 +37,8 @@ public class PopupButtonCustomLayoutSample extends ScreenFragment {
                 .show();
     }
 
-    @Subscribe("cancelAnsCloseButton")
-    protected void onCancelAnsCloseButtonClick(Button.ClickEvent event) {
+    @Subscribe("cancelAndCloseButton")
+    protected void onCancelAndCloseButtonClick(Button.ClickEvent event) {
         popupButton.setPopupVisible(false);
 
         comboBox.setValue(null);
