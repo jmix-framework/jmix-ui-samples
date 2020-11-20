@@ -5,13 +5,14 @@
               width="100%">
             <groupBox caption="msg://io.jmix.sampler.screen.ui.components.browserframe/programmaticalyDefinedSource"
                       height="100%">
-                <browserFrame id="browserFrame"
+                <browserFrame id="programmaticBrowserFrame"
                               height="100%"
                               width="100%"/>
             </groupBox>
             <groupBox caption="msg://io.jmix.sampler.screen.ui.components.browserframe/declarativelyDefinedSource"
                       height="100%">
-                <browserFrame height="100%"
+                <browserFrame id="declarativeBrowserFrame"
+                              height="100%"
                               width="100%">
                     <relativePath path="VAADIN/themes/demo-helium/files/browserframe-relative.html"/>
                 </browserFrame>

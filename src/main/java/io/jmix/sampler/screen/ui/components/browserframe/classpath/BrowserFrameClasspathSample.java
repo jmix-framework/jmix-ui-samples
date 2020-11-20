@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class BrowserFrameClasspathSample extends ScreenFragment {
 
     @Autowired
-    protected BrowserFrame browserFrame;
+    protected BrowserFrame programmaticBrowserFrame;
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        browserFrame.setSource(ClasspathResource.class)
+        programmaticBrowserFrame.setSource(ClasspathResource.class)
                 .setPath("io/jmix/sampler/screen/ui/components/browserframe/classpath/browserframe-classpath.html");
     }
 }

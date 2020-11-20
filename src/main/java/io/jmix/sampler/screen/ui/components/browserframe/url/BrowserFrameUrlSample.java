@@ -20,13 +20,13 @@ public class BrowserFrameUrlSample extends ScreenFragment {
     private static final Logger log = LoggerFactory.getLogger(BrowserFrameUrlSample.class);
 
     @Autowired
-    protected BrowserFrame browserFrame;
+    protected BrowserFrame programmaticBrowserFrame;
 
     @Subscribe
     protected void onInit(InitEvent event) {
         try {
             URL url = new URL("https://doc.cuba-platform.com/manual-7.2/");
-            browserFrame.setSource(UrlResource.class)
+            programmaticBrowserFrame.setSource(UrlResource.class)
                     .setUrl(url);
         } catch (MalformedURLException e) {
             log.debug(e.getMessage());

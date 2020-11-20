@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class BrowserFrameThemeSample extends ScreenFragment {
 
     @Autowired
-    protected BrowserFrame browserFrame;
+    protected BrowserFrame programmaticBrowserFrame;
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        browserFrame.setSource(ThemeResource.class)
+        programmaticBrowserFrame.setSource(ThemeResource.class)
                 .setPath("files/browserframe-theme.html");
     }
 }

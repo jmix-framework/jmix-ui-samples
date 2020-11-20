@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class BrowserFrameRelativeSample extends ScreenFragment {
 
     @Autowired
-    protected BrowserFrame browserFrame;
+    protected BrowserFrame programmaticBrowserFrame;
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        browserFrame.setSource(RelativePathResource.class)
+        programmaticBrowserFrame.setSource(RelativePathResource.class)
                 .setPath("VAADIN/themes/demo-helium/files/browserframe-relative.html");
     }
 }
