@@ -1,6 +1,7 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <layout spacing="true">
-        <colorPicker hsvVisible="true"
+        <colorPicker id="colorPicker"
+                     hsvVisible="true"
                      historyVisible="true"
                      swatchesVisible="true"/>
     </layout>

@@ -9,7 +9,7 @@
                      property="hex"/>
         <hbox spacing="true">
             <label value="Value in the Container:"/>
-            <label dataContainer="colorDc"
+            <label id="labelValue" dataContainer="colorDc"
                    property="hex"/>
         </hbox>
     </layout>
