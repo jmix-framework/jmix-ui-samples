@@ -195,13 +195,18 @@ public class SampleBrowser extends Screen {
 
         WindowInfo info = windowConfig.getWindowInfo(item.getId());
 
-        String descriptionsPack = info.getControllerClass().getPackage().getName();
-        addTab(messageBundle.getMessage("description"), createDescription(descriptionsPack, item.getUrl(), id));
+        Package descriptionPackage = info.getControllerClass().getPackage();
+        if (descriptionPackage != null) {
+            addTab(messageBundle.getMessage("description"),
+                    createDescription(descriptionPackage.getName(), item.getUrl(), id));
+        }
 
         String screenSrc = info.getTemplate();
         addSourceTab(screenSrc);
 
-        addSourceTab(getControllerFileName(info.getControllerClassName()));
+        if (info.getControllerClassName() != null) {
+            addSourceTab(getControllerFileName(info.getControllerClassName()));
+        }
 
         List<String> otherFiles = item.getOtherFiles();
         if (CollectionUtils.isNotEmpty(otherFiles)) {
