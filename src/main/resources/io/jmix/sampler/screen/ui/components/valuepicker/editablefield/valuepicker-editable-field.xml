@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <valuePicker id="valuePicker"
+                     fieldEditable="true">
+            <actions>
+                <action id="clear" type="value_clear"/>
+            </actions>
+        </valuePicker>
+    </layout>
+</window>

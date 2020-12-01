@@ -829,6 +829,21 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="valuepicker">
+            <item id="valuepicker-actions" docUrlSuffix="gui_ValuePicker"
+                  image="components/valuepicker/valuepicker-actions.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="valuepicker-editable-field" docUrlSuffix="gui_ValuePicker"
+                  image="components/valuepicker/valuepicker-editable-field.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
     </menu>
 
     <menu id="containers" image="mainmenu/containers.svg">

@@ -1,0 +1,18 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer">
+            <fetchPlan extends="_local"/>
+        </instance>
+    </data>
+    <layout>
+        <valuePicker id="valuePicker"
+                     caption="Customer's name"
+                     dataContainer="customerDc"
+                     property="name">
+            <actions>
+                <action id="generate" icon="REFRESH"/>
+            </actions>
+        </valuePicker>
+    </layout>
+</window>
