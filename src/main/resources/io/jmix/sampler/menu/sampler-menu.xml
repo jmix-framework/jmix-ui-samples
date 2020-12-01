@@ -839,9 +839,18 @@
             </item>
             <item id="valuepicker-editable-field" docUrlSuffix="gui_ValuePicker"
                   image="components/valuepicker/valuepicker-editable-field.png">
-                <otherFiles>
-                    <file name="io/jmix/sampler/entity/Customer.java"/>
-                </otherFiles>
+            </item>
+        </menu>
+
+        <menu id="valuespicker">
+            <item id="valuespicker-simple" docUrlSuffix="gui_ValuesPicker"
+                  image="components/valuespicker/valuespicker-simple.png">
+            </item>
+            <item id="valuespicker-enum" docUrlSuffix="gui_ValuesPicker"
+                  image="components/valuespicker/valuespicker-enum.png">
+            </item>
+            <item id="valuespicker-entity" docUrlSuffix="gui_ValuesPicker"
+                  image="components/valuespicker/valuespicker-entity.png">
             </item>
         </menu>
     </menu>

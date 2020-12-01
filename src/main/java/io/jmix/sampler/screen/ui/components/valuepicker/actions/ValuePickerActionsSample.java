@@ -58,6 +58,4 @@ public class ValuePickerActionsSample extends ScreenFragment {
     protected void onValuePickerGenerate(Action.ActionPerformedEvent event) {
         customerDc.getItem().setName(RandomStringUtils.randomAlphabetic(5, 10));
     }
-
-
 }

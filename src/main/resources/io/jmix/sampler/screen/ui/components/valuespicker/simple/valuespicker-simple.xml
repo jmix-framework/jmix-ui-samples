@@ -1,0 +1,29 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <valuesPicker id="stringsValuePicker"
+                          caption="Strings">
+                <actions>
+                    <action id="select" type="values_select">
+                        <properties>
+                            <property name="javaClass" value="java.lang.String"/>
+                        </properties>
+                    </action>
+                    <action id="clear" type="value_clear"/>
+                </actions>
+            </valuesPicker>
+
+            <valuesPicker id="integersValuePicker"
+                          caption="Integers">
+                <actions>
+                    <action id="select" type="values_select">
+                        <properties>
+                            <property name="javaClass" value="java.lang.Integer"/>
+                        </properties>
+                    </action>
+                    <action id="clear" type="value_clear"/>
+                </actions>
+            </valuesPicker>
+        </hbox>
+    </layout>
+</window>

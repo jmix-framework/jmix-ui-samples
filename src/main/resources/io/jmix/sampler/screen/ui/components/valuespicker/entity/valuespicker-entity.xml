@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <valuesPicker id="valuePicker">
+                <actions>
+                    <action id="select" type="values_select">
+                        <properties>
+                            <property name="entityName" value="sampler_Customer"/>
+                        </properties>
+                    </action>
+                    <action id="clear" type="value_clear"/>
+                </actions>
+            </valuesPicker>
+        </hbox>
+    </layout>
+</window>
