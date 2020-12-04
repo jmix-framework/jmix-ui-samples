@@ -1,19 +1,33 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <layout>
-        <cssLayout stylename="jmix-drawer-layout" width="100%" height="300px">
+        <cssLayout stylename="jmix-drawer-layout" height="300px">
             <drawer id="drawer" expandOnHover="true">
-                <cssLayout stylename="jmix-drawer-header">
-                    <label id="headerLabel" value="Header"/>
+                <cssLayout stylename="jmix-drawer-header" width="100%">
+                    <image id="logoImage"
+                           stylename="app-icon"
+                           scaleMode="SCALE_DOWN">
+                        <theme path="files/jmix-icon-login.svg"/>
+                    </image>
+                    <label id="headerLabel"
+                           stylename="app-title"
+                           value="Header"/>
                 </cssLayout>
-                <cssLayout stylename="jmix-drawer-content" align="MIDDLE_CENTER">
-                    <label id="contentLabel" value="Content"/>
+                <cssLayout width="100%"
+                          stylename="jmix-drawer-content">
+                    <hbox width="100%" height="100%" stylename="sample-drawer-content">
+                        <label id="contentLabel" align="MIDDLE_CENTER" value="Drawer content"/>
+                    </hbox>
                 </cssLayout>
-                <cssLayout stylename="jmix-drawer-footer">
+                <cssLayout stylename="jmix-drawer-footer"
+                           width="100%">
                     <button id="toggleDrawerButton"
                             stylename="jmix-drawer-collapse-button"
                             icon="BARS"/>
                 </cssLayout>
             </drawer>
+            <hbox stylename="card" width="100%" height="100%" css="border-radius: 0">
+                <label value="Screen content" align="MIDDLE_CENTER" stylename="h1"/>
+            </hbox>
         </cssLayout>
     </layout>
 </window>

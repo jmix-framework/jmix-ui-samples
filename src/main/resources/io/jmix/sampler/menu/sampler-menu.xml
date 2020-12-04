@@ -893,6 +893,11 @@
                 <file name="io/jmix/sampler/screen/ui/containers/csslayout/csslayout-style.scss"/>
             </otherFiles>
         </item>
+        <item id="drawer-sample" docUrlSuffix="gui_Drawer" image="containers/drawer/drawer.svg">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/containers/drawer/drawer-style.scss"/>
+            </otherFiles>
+        </item>
         <item id="fragment-simple" docUrlSuffix="screen_controllers" image="containers/fragment/fragment-simple.svg">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/ui/components/button/simple/ButtonSimpleSample.java"/>
@@ -946,7 +951,6 @@
         </menu>
         <item id="layout-click" docUrlSuffix="gui_BoxLayout" image="containers/layoutclick/layout-click.png"/>
         <item id="layout-shortcut" docUrlSuffix="gui_BoxLayout" image="containers/layoutshortcut/layout-shortcut.png"/>
-        <item id="drawer-sample" image="containers/drawer/drawer.svg"/>
     </menu>
 
     <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">

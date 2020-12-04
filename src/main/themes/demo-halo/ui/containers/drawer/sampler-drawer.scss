@@ -1,0 +1,5 @@
+@mixin sampler-drawer() {
+  .jmix-drawer.collapsed:not(:hover) .sample-drawer-content {
+    display: none;
+  }
+}

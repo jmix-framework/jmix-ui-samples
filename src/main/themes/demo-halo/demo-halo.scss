@@ -16,6 +16,7 @@
 @import "ui/components/table/sampler-table";
 @import "ui/components/twincolumn/sampler-twincolumn";
 @import "ui/containers/csslayout/sampler-csslayout";
+@import "ui/containers/drawer/sampler-drawer";
 @import "ui/containers/layoutclick/sampler-layout-click";
 
 @mixin demo-halo {
@@ -41,5 +42,6 @@
   @include sampler-twincolumn;
 
   @include sampler-csslayout;
+  @include sampler-drawer;
   @include sampler-layout-click;
 }
