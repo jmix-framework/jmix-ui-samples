@@ -1,0 +1,31 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <responsiveGridLayout stylename="demo">
+            <row>
+                <col>
+                    <label value="First in DOM, no order applied"/>
+                </col>
+                <col order="12">
+                    <label value="Second in DOM, with a larger order"/>
+                </col>
+                <col order="1">
+                    <label value="Third in DOM, with an order of 1"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+
+        <responsiveGridLayout stylename="demo">
+            <row>
+                <col order="LAST">
+                    <label value="First in DOM, ordered last"/>
+                </col>
+                <col>
+                    <label value="Second in DOM, unordered"/>
+                </col>
+                <col order="FIRST">
+                    <label value="Third in DOM, ordered first"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

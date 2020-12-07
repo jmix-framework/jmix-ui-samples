@@ -1,0 +1,39 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <responsiveGridLayout stylename="demo vertical-alignment-demo">
+            <row alignItems="START">
+                <col>
+                    <label value="1 of 3"/>
+                </col>
+                <col>
+                    <label value="2 of 3"/>
+                </col>
+                <col>
+                    <label value="3 of 3"/>
+                </col>
+            </row>
+            <row alignItems="CENTER">
+                <col>
+                    <label value="1 of 3"/>
+                </col>
+                <col>
+                    <label value="2 of 3"/>
+                </col>
+                <col>
+                    <label value="3 of 3"/>
+                </col>
+            </row>
+            <row alignItems="END">
+                <col>
+                    <label value="1 of 3"/>
+                </col>
+                <col>
+                    <label value="2 of 3"/>
+                </col>
+                <col>
+                    <label value="3 of 3"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

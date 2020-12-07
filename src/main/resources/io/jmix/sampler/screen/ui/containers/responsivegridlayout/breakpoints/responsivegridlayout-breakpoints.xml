@@ -1,0 +1,33 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <responsiveGridLayout stylename="demo">
+            <row>
+                <col sm="6" md="8">
+                    <label value="sm-6, md-8"/>
+                </col>
+                <col sm="6" md="4">
+                    <label value="sm-6, md-4"/>
+                </col>
+            </row>
+            <row>
+                <col sm="4" md="2">
+                    <label value="sm-4, md-2"/>
+                </col>
+                <col sm="4" md="8">
+                    <label value="sm-4, md-8"/>
+                </col>
+                <col sm="4" md="2">
+                    <label value="sm-4, md-2"/>
+                </col>
+            </row>
+            <row>
+                <col xs="6">
+                    <label value="xs-6"/>
+                </col>
+                <col xs="6">
+                    <label value="xs-6"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

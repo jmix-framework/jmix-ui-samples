@@ -1,0 +1,31 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true">
+        <responsiveGridLayout containerType="FLUID" stylename="demo">
+            <row>
+                <col sm="4">
+                    <label value="1 of 3"/>
+                </col>
+                <col sm="4">
+                    <label value="2 of 3"/>
+                </col>
+                <col sm="4">
+                    <label value="3 of 3"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+
+        <responsiveGridLayout containerType="FIXED" stylename="demo">
+            <row>
+                <col sm="4">
+                    <label value="1 of 3"/>
+                </col>
+                <col sm="4">
+                    <label value="2 of 3"/>
+                </col>
+                <col sm="4">
+                    <label value="3 of 3"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

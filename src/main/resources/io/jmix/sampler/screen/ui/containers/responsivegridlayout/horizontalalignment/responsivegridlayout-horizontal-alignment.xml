@@ -1,0 +1,46 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <responsiveGridLayout stylename="demo">
+            <row justifyContent="START">
+                <col xs="4">
+                    <label value="1 of 2"/>
+                </col>
+                <col xs="4">
+                    <label value="2 of 2"/>
+                </col>
+            </row>
+            <row justifyContent="CENTER">
+                <col xs="4">
+                    <label value="1 of 2"/>
+                </col>
+                <col xs="4">
+                    <label value="2 of 2"/>
+                </col>
+            </row>
+            <row justifyContent="END">
+                <col xs="4">
+                    <label value="1 of 2"/>
+                </col>
+                <col xs="4">
+                    <label value="2 of 2"/>
+                </col>
+            </row>
+            <row justifyContent="AROUND">
+                <col xs="4">
+                    <label value="1 of 2"/>
+                </col>
+                <col xs="4">
+                    <label value="2 of 2"/>
+                </col>
+            </row>
+            <row justifyContent="BETWEEN">
+                <col xs="4">
+                    <label value="1 of 2"/>
+                </col>
+                <col xs="4">
+                    <label value="2 of 2"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

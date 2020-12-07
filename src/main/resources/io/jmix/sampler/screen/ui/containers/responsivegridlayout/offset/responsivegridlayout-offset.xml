@@ -1,0 +1,27 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <responsiveGridLayout stylename="demo">
+            <row>
+                <col md="4">
+                    <label value="md-4"/>
+                </col>
+                <col md="4" offsetMd="4">
+                    <label value="md-4, offset-md-4"/>
+                </col>
+            </row>
+            <row>
+                <col md="3" offsetMd="3">
+                    <label value="md-3, offset-md-3"/>
+                </col>
+                <col md="3" offsetMd="3">
+                    <label value="md-3, offset-md-3"/>
+                </col>
+            </row>
+            <row>
+                <col md="6" offsetMd="3">
+                    <label value="md-6, offset-md-3"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

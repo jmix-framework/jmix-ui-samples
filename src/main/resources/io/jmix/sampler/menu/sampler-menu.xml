@@ -935,6 +935,74 @@
                 </otherFiles>
             </item>
         </menu>
+        <menu id="responsivegridlayout">
+            <item id="responsivegridlayout-equal-width" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/equalwidth/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-one-column-width" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/onecolumnwidth/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-variable-width" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/variablewidth/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-breakpoints" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/breakpoints/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-row-columns" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/rowcolumns/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-row-vertical-alignment" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/rowverticalalignment/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-column-vertical-alignment" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/columnverticalalignment/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-horizontal-alignment" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/horizontalalignment/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-order" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/order/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-offset" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/offset/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+            <item id="responsivegridlayout-container-type" docUrlSuffix="gui_ResponsiveGridLayout"
+                  image="containers/responsivegridlayout/responsivegridlayout.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/containertype/responsivegridlayout-style.scss"/>
+                </otherFiles>
+            </item>
+        </menu>
         <item id="scrollboxlayout-simple" docUrlSuffix="gui_ScrollBoxLayout"
               image="containers/scrollboxlayout/scrollboxlayout-simple.svg"/>
         <menu id="splitpanel">

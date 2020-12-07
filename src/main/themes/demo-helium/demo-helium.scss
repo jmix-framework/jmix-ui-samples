@@ -18,6 +18,7 @@
 @import "ui/containers/csslayout/sampler-csslayout";
 @import "ui/containers/drawer/sampler-drawer";
 @import "ui/containers/layoutclick/sampler-layout-click";
+@import "ui/containers/responsivegridlayout/sampler-responsivegridlayout";
 
 @mixin demo-helium {
   @include helium;
@@ -44,6 +45,7 @@
   @include sampler-csslayout;
   @include sampler-drawer;
   @include sampler-layout-click;
+  @include sampler-responsivegridlayout;
 
   --sidemenu-title-background-color: var(--sidemenu-background-color);
 }

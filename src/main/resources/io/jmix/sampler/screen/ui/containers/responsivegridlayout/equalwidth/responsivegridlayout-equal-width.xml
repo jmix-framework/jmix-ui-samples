@@ -1,0 +1,25 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <responsiveGridLayout stylename="demo">
+            <row>
+                <col>
+                    <label value="1 of 2"/>
+                </col>
+                <col>
+                    <label value="2 of 2"/>
+                </col>
+            </row>
+            <row>
+                <col>
+                    <label value="1 of 3"/>
+                </col>
+                <col>
+                    <label value="2 of 3"/>
+                </col>
+                <col>
+                    <label value="3 of 3"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

@@ -1,0 +1,28 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <responsiveGridLayout stylename="demo">
+            <row justifyContentMd="CENTER">
+                <col xs="DEFAULT" lg="2">
+                    <label value="1 of 3"/>
+                </col>
+                <col md="AUTO">
+                    <label value="Variable width content"/>
+                </col>
+                <col xs="DEFAULT" lg="2">
+                    <label value="1 of 3"/>
+                </col>
+            </row>
+            <row>
+                <col>
+                    <label value="1 of 3"/>
+                </col>
+                <col md="AUTO">
+                    <label value="Variable width content"/>
+                </col>
+                <col xs="DEFAULT" lg="2">
+                    <label value="1 of 3"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>

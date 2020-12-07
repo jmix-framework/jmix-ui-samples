@@ -1,0 +1,17 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <responsiveGridLayout stylename="demo vertical-alignment-demo">
+            <row>
+                <col alignSelf="START">
+                    <label value="1 of 3"/>
+                </col>
+                <col alignSelf="CENTER">
+                    <label value="2 of 3"/>
+                </col>
+                <col alignSelf="END">
+                    <label value="3 of 3"/>
+                </col>
+            </row>
+        </responsiveGridLayout>
+    </layout>
+</window>
