@@ -282,12 +282,13 @@
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
+            <!-- todo Haulmont/jmix-sampler#23
             <item id="datagrid-editor-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="components/datagrid/datagrid-editor-actions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
-            </item>
+            </item>-->
             <item id="datagrid-editor-events" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="components/datagrid/datagrid-editor-events.png">
                 <otherFiles>
@@ -754,6 +755,7 @@
             </item>
         </menu>
 
+        <!-- todo Haulmont/jmix-sampler#19
         <menu id="tokenlist">
             <item id="tokenlist-simple" docUrlSuffix="gui_TokenList" image="components/tokenlist/tokenlist-simple.png">
                 <otherFiles>
@@ -788,7 +790,7 @@
                     <file name="io/jmix/sampler/entity/OrderItem.java"/>
                 </otherFiles>
             </item>
-        </menu>
+        </menu>-->
 
         <menu id="tree">
             <item id="tree-simple" docUrlSuffix="gui_Tree" image="components/tree/tree-simple.png">
@@ -1040,6 +1042,7 @@
               image="facets/facet-clipboard-trigger.png"/>
         <item id="facet-dialog" docUrlSuffix="gui_facets" image="facets/facet-dialog.png"/>
         <item id="facet-notification" docUrlSuffix="gui_facets" image="facets/facet-notification.png"/>
+        <!-- todo Haulmont/jmix-sampler#23
         <item id="facet-screen" docUrlSuffix="gui_facets" image="facets/facet-screen.png">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/entity/customer/customer-browse.xml"/>
@@ -1047,7 +1050,7 @@
                 <file name="io/jmix/sampler/screen/entity/customer/customer-edit.xml"/>
                 <file name="io/jmix/sampler/screen/entity/customer/CustomerEdit.java"/>
             </otherFiles>
-        </item>
+        </item>-->
         <item id="facet-timer" docUrlSuffix="gui_facets" image="facets/facet-timer.png"/>
     </menu>
 

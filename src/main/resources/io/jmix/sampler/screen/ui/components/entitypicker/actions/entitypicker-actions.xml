@@ -13,7 +13,8 @@
                       property="customer">
             <actions>
                 <action id="lookup" type="entity_lookup"/>
-                <action id="open" type="entity_open"/>
+                <!-- todo Haulmont/jmix-sampler#23
+                <action id="open" type="entity_open"/>-->
                 <action id="greeting" icon="MAGIC"/>
             </actions>
         </entityPicker>

@@ -19,9 +19,11 @@
                height="100%"
                width="100%">
             <actions>
-                <action id="create" type="create"/>
-                <action id="edit" type="edit"/>
-                <action id="remove" type="remove"/>
+                <!-- todo Haulmont/jmix-sampler#23 -->
+                <action id="create" type="create" enable="false"/>
+                <action id="edit" type="edit" enable="false"/>
+                <action id="view" type="view"/>
+                <action id="remove" type="remove" enable="false"/>
                 <action id="greeting" caption="Greeting"/>
             </actions>
             <columns>
@@ -34,6 +36,7 @@
             <buttonsPanel>
                 <button action="customerTable.create"/>
                 <button action="customerTable.edit"/>
+                <button action="customerTable.view"/>
                 <button action="customerTable.remove"/>
                 <button action="customerTable.greeting"/>
             </buttonsPanel>

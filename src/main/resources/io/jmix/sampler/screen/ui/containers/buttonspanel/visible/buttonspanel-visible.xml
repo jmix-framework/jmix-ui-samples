@@ -20,9 +20,11 @@
                dataContainer="customerDc"
                width="100%">
             <actions>
-                <action id="create" type="create"/>
-                <action id="edit" type="edit"/>
-                <action id="remove" type="remove"/>
+                <!-- todo Haulmont/jmix-sampler#23 -->
+                <action id="create" type="create" enable="false"/>
+                <action id="edit" type="edit" enable="false"/>
+                <action id="view" type="view"/>
+                <action id="remove" type="remove" enable="false"/>
             </actions>
             <columns>
                 <column id="name"/>
@@ -33,12 +35,10 @@
             </columns>
             <simplePagination/>
             <buttonsPanel alwaysVisible="true">
-                <button id="createBtn"
-                        action="customerTable.create"/>
-                <button id="editBtn"
-                        action="customerTable.edit"/>
-                <button id="removeBtn"
-                        action="customerTable.remove"/>
+                <button action="customerTable.create"/>
+                <button action="customerTable.edit"/>
+                <button action="customerTable.view"/>
+                <button action="customerTable.remove"/>
             </buttonsPanel>
         </table>
         <hbox id="lookupActions" spacing="true" visible="false">

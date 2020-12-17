@@ -1,5 +1,5 @@
 <window xmlns="http://jmix.io/schema/ui/window">
-    <layout spacing="true">
+    <layout spacing="true" expand="tabSheet">
         <groupBox caption="Styles"
                   spacing="true">
             <flowBox spacing="true">
@@ -19,8 +19,7 @@
                           caption="padded-tabbar"/>
             </flowBox>
         </groupBox>
-        <tabSheet id="tabSheet"
-                  height="150px">
+        <tabSheet id="tabSheet">
             <tab id="tab1"
                  caption="Tab 1"
                  expand="spacer1"

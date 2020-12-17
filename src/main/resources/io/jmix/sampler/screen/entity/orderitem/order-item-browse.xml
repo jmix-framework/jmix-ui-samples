@@ -41,7 +41,7 @@
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
-                          alwaysVisible="true">
+                          alwaysVisible="false">
                 <button id="createBtn" action="orderItemsTable.create"/>
                 <button id="editBtn" action="orderItemsTable.edit"/>
                 <button id="removeBtn" action="orderItemsTable.remove"/>

@@ -2,7 +2,7 @@
     <layout>
         <hbox spacing="true">
             <scrollBox caption="Vertical scrollbar"
-                       height="150px"
+                       height="300px"
                        width="300px"
                        spacing="true">
                 <textField/>
@@ -20,8 +20,8 @@
             <label width="20px"/>
 
             <scrollBox caption="Horizontal scrollbar"
-                       height="50px"
-                       width="200px"
+                       height="300px"
+                       width="300px"
                        orientation="horizontal"
                        scrollBars="horizontal"
                        spacing="true">
@@ -40,20 +40,50 @@
             <label width="20px"/>
 
             <scrollBox caption="Both scrollbars"
-                       height="150px"
-                       width="150px"
+                       height="300px"
+                       width="300px"
                        scrollBars="both"
                        spacing="true">
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
-                <textField width="200" height="50"/>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
+                <hbox>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                    <textField width="200" height="50"/>
+                </hbox>
             </scrollBox>
         </hbox>
     </layout>
