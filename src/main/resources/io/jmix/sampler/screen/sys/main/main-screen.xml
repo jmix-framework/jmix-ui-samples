@@ -36,7 +36,7 @@
                       spacing="true"
                       width="100%">
                     <label id="menuCaptionLabel"
-                           stylename="cuba-folders-pane-caption"
+                           stylename="jmix-folders-pane-caption"
                            value="msg://sideMenu.menuCaption"/>
                     <linkButton id="collapseAllBtn"
                                 align="MIDDLE_RIGHT"

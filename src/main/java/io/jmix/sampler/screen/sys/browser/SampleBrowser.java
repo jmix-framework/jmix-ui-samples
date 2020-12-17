@@ -101,8 +101,6 @@ public class SampleBrowser extends Screen {
 
     @Subscribe
     protected void onAfterShow(AfterShowEvent event) {
-        // When a locale is changed, UrlParamsChangedEvent is fired after AfterShowEvent
-        // See cuba-platform/cuba#1665
         if (sampleId == null) {
             return;
         }
@@ -233,10 +231,10 @@ public class SampleBrowser extends Screen {
         HBoxLayout hbox = uiComponents.create(HBoxLayout.class);
         hbox.setWidth("100%");
 
-        if (!Strings.isNullOrEmpty(docUrlSuffix)) {
+        /*if (!Strings.isNullOrEmpty(docUrlSuffix)) {
             Component docLinks = documentLinks(docUrlSuffix);
             hbox.add(docLinks);
-        }
+        }*/
 
         hbox.add(permalink(frameId));
         scrollBoxLayout.add(hbox);

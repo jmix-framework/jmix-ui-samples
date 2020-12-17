@@ -14,7 +14,7 @@
                 <browserFrame id="declarativeBrowserFrame"
                               height="100%"
                               width="100%">
-                    <url url="https://doc.cuba-platform.com/manual-7.2/"/>
+                    <url url="https://docs.jmix.io/jmix/0.x/intro.html"/>
                 </browserFrame>
             </groupBox>
         </hbox>
