@@ -18,11 +18,9 @@
                   dataContainer="customersDc"
                   width="100%">
             <actions>
-                <!-- todo Haulmont/jmix-sampler#23 -->
-                <action id="create" type="create" enable="false"/>
-                <action id="edit" type="edit" enable="false"/>
-                <action id="view" type="view"/>
-                <action id="remove" type="remove" enable="false"/>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
                 <action id="greeting" caption="Greeting"/>
             </actions>
             <columns>
@@ -35,7 +33,6 @@
             <buttonsPanel>
                 <button action="customersDataGrid.create"/>
                 <button action="customersDataGrid.edit"/>
-                <button action="customersDataGrid.view"/>
                 <button action="customersDataGrid.remove"/>
                 <button action="customersDataGrid.greeting"/>
             </buttonsPanel>

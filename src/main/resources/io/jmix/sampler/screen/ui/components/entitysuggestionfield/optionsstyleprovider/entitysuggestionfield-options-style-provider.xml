@@ -26,8 +26,6 @@
                                property="customer">
             <actions>
                 <action id="lookup" type="entity_lookup"/>
-                <!-- todo Haulmont/jmix-sampler#23
-                <action id="open" type="entity_open"/>-->
             </actions>
             <query entityClass="io.jmix.sampler.entity.Customer"
                    escapeValueForLike="true"

@@ -20,12 +20,6 @@
     </facets>
     <layout expand="customersTable"
             spacing="true">
-        <!-- todo filter
-        <filter id="filter"
-                applyTo="customersTable"
-                dataLoader="customersDl">
-            <properties include=".*"/>
-        </filter>-->
         <table id="customersTable"
                width="100%"
                dataContainer="customersDc">

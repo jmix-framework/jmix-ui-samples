@@ -201,12 +201,13 @@
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
+            <!-- todo Haulmont/jmix-sampler#23
             <item id="datagrid-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="components/datagrid/datagrid-actions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
-            </item>
+            </item>-->
             <item id="datagrid-selection-mode" docUrlSuffix="gui_DataGrid" splitEnabled="true"
                   image="components/datagrid/datagrid-selection-mode.png">
                 <otherFiles>
@@ -603,12 +604,13 @@
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
+            <!-- todo Haulmont/jmix-sampler#23
             <item id="table-action" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="components/table/table-action.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
-            </item>
+            </item>-->
             <item id="table-editable" docUrlSuffix="gui_Table" splitEnabled="true"
                   image="components/table/table-editable.png">
                 <otherFiles>
