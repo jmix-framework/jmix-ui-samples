@@ -17,6 +17,7 @@
 package io.jmix.sampler.screen.sys.main;
 
 import io.jmix.core.CoreProperties;
+import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
@@ -82,6 +83,8 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected ApplicationContext applicationContext;
     @Autowired
     protected Messages messages;
+    @Autowired
+    protected MessageTools messageTools;
 
     @Autowired
     protected TextField<String> searchField;
@@ -160,30 +163,44 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
         }
 
         localesComboBox.setOptionsMap(coreProperties.getAvailableLocales());
-        localesComboBox.setValue(ui.getLocale());
+
+        Locale uiLocale = ui.getLocale();
+        if (!coreProperties.getAvailableLocales().containsValue(uiLocale)) {
+            updateLocale(ui, messageTools.getDefaultLocale());
+            return;
+        }
+
+        localesComboBox.setValue(uiLocale);
+        if (messages instanceof SamplerMessagesImpl) {
+            ((SamplerMessagesImpl) messages).setUserLocale(uiLocale);
+        }
 
         localesComboBox.setVisible(coreProperties.isLocaleSelectVisible());
 
         localesComboBox.addValueChangeListener(e -> {
             Locale selectedLocale = e.getValue();
             if (selectedLocale != null) {
-                RedirectHandler handler = ui.getUrlChangeHandler().getRedirectHandler();
-                if (handler != null) {
-                    handler.schedule(urlRouting.getState());
-                }
-
-                if (messages instanceof SamplerMessagesImpl) {
-                    ((SamplerMessagesImpl) messages).setUserLocale(selectedLocale);
-                }
-
-                ui.getApp().setLocale(selectedLocale);
-                ui.getApp().createTopLevelWindow();
+                updateLocale(ui, selectedLocale);
             }
         });
 
         localesComboBox.setOptionStyleProvider(locale ->
                 locale.equals(ui.getLocale()) ? "selected-locale" : null
         );
+    }
+
+    protected void updateLocale(AppUI ui, Locale locale) {
+        RedirectHandler handler = ui.getUrlChangeHandler().getRedirectHandler();
+        if (handler != null) {
+            handler.schedule(urlRouting.getState());
+        }
+
+        if (messages instanceof SamplerMessagesImpl) {
+            ((SamplerMessagesImpl) messages).setUserLocale(locale);
+        }
+
+        ui.getApp().setLocale(locale);
+        ui.getApp().createTopLevelWindow();
     }
 
     protected void initThemes() {
