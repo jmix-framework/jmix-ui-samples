@@ -3,7 +3,7 @@ package io.jmix.sampler.util;
 import com.google.common.collect.ImmutableMap;
 import io.jmix.core.Resources;
 import io.jmix.core.common.xmlparsing.Dom4jTools;
-import io.jmix.sampler.config.MenuItem;
+import io.jmix.sampler.config.SamplerMenuItem;
 import io.jmix.ui.WindowInfo;
 import io.jmix.ui.screen.MapScreenOptions;
 import io.jmix.ui.screen.ScreenOptions;
@@ -45,7 +45,7 @@ public class SamplerHelper {
         return resources.getResourceAsString(src);
     }
 
-    public ScreenOptions getScreenOptions(MenuItem item) {
+    public ScreenOptions getScreenOptions(SamplerMenuItem item) {
         return new MapScreenOptions(ImmutableMap.of("windowId", item.getId()));
     }
 

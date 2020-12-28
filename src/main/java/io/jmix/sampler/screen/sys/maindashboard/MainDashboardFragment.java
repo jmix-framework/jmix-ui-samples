@@ -2,8 +2,8 @@ package io.jmix.sampler.screen.sys.maindashboard;
 
 import com.google.common.collect.Iterables;
 import io.jmix.core.common.event.Subscription;
-import io.jmix.sampler.config.MenuConfig;
-import io.jmix.sampler.config.MenuItem;
+import io.jmix.sampler.config.SamplerMenuConfig;
+import io.jmix.sampler.config.SamplerMenuItem;
 import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.Screens;
 import io.jmix.ui.UiComponents;
@@ -49,7 +49,7 @@ public class MainDashboardFragment extends ScreenFragment {
     protected HBoxLayout header;
 
     @Autowired
-    protected MenuConfig menuConfig;
+    protected SamplerMenuConfig menuConfig;
     @Autowired
     protected SamplerHelper helper;
     @Autowired
@@ -66,7 +66,7 @@ public class MainDashboardFragment extends ScreenFragment {
 
     public void initDashboardMenu(String menuItemRootId) {
         clearBreadCrumbs();
-        List<MenuItem> menuItems;
+        List<SamplerMenuItem> menuItems;
         boolean isMainDashboard = menuItemRootId.equals(MENU_ROOT_ITEM_ID);
         if (isMainDashboard) {
             menuItems = menuConfig.getRootItems();
@@ -83,8 +83,8 @@ public class MainDashboardFragment extends ScreenFragment {
             addNavigationButtonLink(menuItemRootId, false);
         }
 
-        MenuItem lastMenuItem = null;
-        for (MenuItem item : menuItems) {
+        SamplerMenuItem lastMenuItem = null;
+        for (SamplerMenuItem item : menuItems) {
             if (item.isMenu() && !isMainDashboard) {
                 Label<String> title = createLabelTitle();
                 String currentNameLabel = menuConfig.getMenuItemCaption(item.getId());

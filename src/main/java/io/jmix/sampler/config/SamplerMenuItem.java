@@ -6,10 +6,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-public class MenuItem {
+public class SamplerMenuItem {
 
-    protected final MenuItem parent;
-    protected final List<MenuItem> children = new ArrayList<>();
+    protected final SamplerMenuItem parent;
+    protected final List<SamplerMenuItem> children = new ArrayList<>();
 
     protected final String id;
     protected String url;
@@ -20,12 +20,12 @@ public class MenuItem {
 
     protected boolean isMenu = false;
 
-    public MenuItem(MenuItem parent, String id) {
+    public SamplerMenuItem(SamplerMenuItem parent, String id) {
         this.parent = parent;
         this.id = id;
     }
 
-    public MenuItem getParent() {
+    public SamplerMenuItem getParent() {
         return parent;
     }
 
@@ -69,11 +69,11 @@ public class MenuItem {
         this.url = url;
     }
 
-    public List<MenuItem> getChildren() {
+    public List<SamplerMenuItem> getChildren() {
         return Collections.unmodifiableList(children);
     }
 
-    public void addChild(MenuItem item) {
+    public void addChild(SamplerMenuItem item) {
         children.add(item);
     }
 

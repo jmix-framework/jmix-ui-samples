@@ -4,7 +4,6 @@ import io.jmix.core.Messages;
 import io.jmix.core.Resources;
 import io.jmix.core.common.xmlparsing.Dom4jTools;
 import org.apache.commons.collections4.IterableUtils;
-import org.apache.commons.collections4.Predicate;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -28,13 +27,13 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 @Component("sampler_MenuConfig")
-public class MenuConfig {
+public class SamplerMenuConfig {
 
     public static final String MENU_CONFIG_XML_PROP = "jmix.sampler.menuConfig";
 
-    private static final Log log = LogFactory.getLog(MenuConfig.class);
+    private static final Log log = LogFactory.getLog(SamplerMenuConfig.class);
 
-    protected List<MenuItem> rootItems = new ArrayList<>();
+    protected List<SamplerMenuItem> rootItems = new ArrayList<>();
 
     protected volatile boolean initialized;
     protected final ReadWriteLock lock = new ReentrantReadWriteLock();
@@ -101,7 +100,7 @@ public class MenuConfig {
     /**
      * Main menu root items
      */
-    public List<MenuItem> getRootItems() {
+    public List<SamplerMenuItem> getRootItems() {
         lock.readLock().lock();
         try {
             checkInitialized();
@@ -111,13 +110,13 @@ public class MenuConfig {
         }
     }
 
-    protected void loadMenuItems(Element parentElement, MenuItem parentItem) {
+    protected void loadMenuItems(Element parentElement, SamplerMenuItem parentItem) {
         for (Element element : parentElement.elements()) {
-            MenuItem menuItem = null;
+            SamplerMenuItem menuItem = null;
             String id = element.attributeValue("id");
             if (StringUtils.isNotBlank(id)) {
                 if ("menu".equals(element.getName())) {
-                    menuItem = new MenuItem(parentItem, id);
+                    menuItem = new SamplerMenuItem(parentItem, id);
                     menuItem.setImage(element.attributeValue("image"));
                     menuItem.setMenu(true);
 
@@ -139,8 +138,8 @@ public class MenuConfig {
         }
     }
 
-    protected MenuItem parseItem(Element element, MenuItem parentItem, String id) {
-        MenuItem menuItem = new MenuItem(parentItem, id);
+    protected SamplerMenuItem parseItem(Element element, SamplerMenuItem parentItem, String id) {
+        SamplerMenuItem menuItem = new SamplerMenuItem(parentItem, id);
         String docUrl = element.attributeValue("docUrlSuffix");
         if (StringUtils.isNotBlank(docUrl)) {
             menuItem.setUrl(docUrl);
@@ -183,8 +182,8 @@ public class MenuConfig {
         return menuItem;
     }
 
-    public MenuItem getItemById(String id) {
-        MenuItem menuItem = IterableUtils.find(getItemsAsList(), new MenuItemPredicate(id));
+    public SamplerMenuItem getItemById(String id) {
+        SamplerMenuItem menuItem = IterableUtils.find(getItemsAsList(), new SamplerMenuItemPredicate(id));
         if (menuItem == null) {
             throw new IllegalArgumentException("Unable to find item with id " + id);
         }
@@ -192,17 +191,17 @@ public class MenuConfig {
     }
 
     @Nullable
-    public MenuItem findItemById(String id) {
-        return IterableUtils.find(getItemsAsList(), new MenuItemPredicate(id));
+    public SamplerMenuItem findItemById(String id) {
+        return IterableUtils.find(getItemsAsList(), new SamplerMenuItemPredicate(id));
     }
 
-    protected List<MenuItem> getItemsAsList() {
+    protected List<SamplerMenuItem> getItemsAsList() {
         return getItemsAsList(getRootItems());
     }
 
-    protected List<MenuItem> getItemsAsList(List<MenuItem> allItems) {
-        List<MenuItem> items = new ArrayList<>();
-        for (MenuItem item : allItems) {
+    protected List<SamplerMenuItem> getItemsAsList(List<SamplerMenuItem> allItems) {
+        List<SamplerMenuItem> items = new ArrayList<>();
+        for (SamplerMenuItem item : allItems) {
             items.add(item);
             if (item.isMenu())
                 items.addAll(getItemsAsList(item.getChildren()));
@@ -214,21 +213,21 @@ public class MenuConfig {
      * @param itemId id of parent item that contains children
      * @return List of items.
      */
-    public List<MenuItem> getAllChildrenAsList(String itemId) {
-        MenuItem item = getItemById(itemId);
-        List<MenuItem> items = getItemsAsList(Collections.singletonList(item));
+    public List<SamplerMenuItem> getAllChildrenAsList(String itemId) {
+        SamplerMenuItem item = getItemById(itemId);
+        List<SamplerMenuItem> items = getItemsAsList(Collections.singletonList(item));
         return setCategoriesForSingleItems(items);
     }
 
-    protected List<MenuItem> setCategoriesForSingleItems(List<MenuItem> items) {
+    protected List<SamplerMenuItem> setCategoriesForSingleItems(List<SamplerMenuItem> items) {
         for (int i = 0; i < items.size(); i++) {
-            MenuItem item = items.get(i);
+            SamplerMenuItem item = items.get(i);
             if (item.isMenu()) {
-                List<MenuItem> withoutChildrenList = getItemsWithoutChildren(item.getChildren());
+                List<SamplerMenuItem> withoutChildrenList = getItemsWithoutChildren(item.getChildren());
                 if (!withoutChildrenList.isEmpty()) {
-                    for (MenuItem menuItem : withoutChildrenList) {
+                    for (SamplerMenuItem menuItem : withoutChildrenList) {
                         int index = items.indexOf(menuItem);
-                        MenuItem itemLabel = new MenuItem(menuItem.getParent(), menuItem.getId());
+                        SamplerMenuItem itemLabel = new SamplerMenuItem(menuItem.getParent(), menuItem.getId());
                         itemLabel.setMenu(true);
                         items.add(index, itemLabel);
                     }
@@ -238,9 +237,9 @@ public class MenuConfig {
         return items;
     }
 
-    protected List<MenuItem> getItemsWithoutChildren(List<MenuItem> items) {
-        List<MenuItem> itemList = new ArrayList<>();
-        for (MenuItem item : items) {
+    protected List<SamplerMenuItem> getItemsWithoutChildren(List<SamplerMenuItem> items) {
+        List<SamplerMenuItem> itemList = new ArrayList<>();
+        for (SamplerMenuItem item : items) {
             if (!item.isMenu())
                 itemList.add(item);
         }
@@ -251,20 +250,7 @@ public class MenuConfig {
     }
 
     public boolean isRootItem(String itemId) {
-        List<MenuItem> rootsItem = getRootItems();
+        List<SamplerMenuItem> rootsItem = getRootItems();
         return rootsItem.stream().anyMatch(menuItem -> menuItem.getId().equals(itemId));
-    }
-
-    protected class MenuItemPredicate implements Predicate<MenuItem> {
-        protected final String id;
-
-        MenuItemPredicate(String id) {
-            this.id = id;
-        }
-
-        @Override
-        public boolean evaluate(MenuItem object) {
-            return id.equals(object.getId());
-        }
     }
 }

@@ -21,8 +21,8 @@ import com.google.common.collect.ImmutableMap;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
-import io.jmix.sampler.config.MenuConfig;
-import io.jmix.sampler.config.MenuItem;
+import io.jmix.sampler.config.SamplerMenuConfig;
+import io.jmix.sampler.config.SamplerMenuItem;
 import io.jmix.sampler.screen.sys.main.MainScreen;
 import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.App;
@@ -67,7 +67,7 @@ public class SampleBrowser extends Screen {
     @Autowired
     protected SamplerHelper samplerHelper;
     @Autowired
-    protected MenuConfig menuConfig;
+    protected SamplerMenuConfig menuConfig;
     @Autowired
     protected Messages messages;
     @Autowired
@@ -123,7 +123,7 @@ public class SampleBrowser extends Screen {
     }
 
     protected void updateSample(String sampleId) {
-        MenuItem item = menuConfig.getItemById(sampleId);
+        SamplerMenuItem item = menuConfig.getItemById(sampleId);
 
         ScreenFragment screenFragment = fragments
                 .create(this, sampleId, new MapScreenOptions(item.getScreenParams()))
@@ -137,7 +137,7 @@ public class SampleBrowser extends Screen {
         focusFirstPossibleComponent(fragment);
     }
 
-    protected void updateLayout(Fragment fragment, MenuItem item) {
+    protected void updateLayout(Fragment fragment, SamplerMenuItem item) {
         getWindow().removeAll();
 
         TabSheet tabSheet = createTabSheet();
@@ -180,7 +180,7 @@ public class SampleBrowser extends Screen {
         return spacer;
     }
 
-    protected void updateCaption(String id, MenuItem item) {
+    protected void updateCaption(String id, SamplerMenuItem item) {
         String caption = menuConfig.getMenuItemCaption(item.getId());
         if (Strings.isNullOrEmpty(caption)) {
             caption = id;
@@ -188,7 +188,7 @@ public class SampleBrowser extends Screen {
         getWindow().setCaption(caption);
     }
 
-    protected void updateTabs(String id, MenuItem item) {
+    protected void updateTabs(String id, SamplerMenuItem item) {
         tabSheet.removeAllTabs();
 
         WindowInfo info = windowConfig.getWindowInfo(item.getId());

@@ -17,12 +17,11 @@
 package io.jmix.sampler.screen.sys.main;
 
 import io.jmix.core.CoreProperties;
-import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
-import io.jmix.sampler.config.MenuConfig;
-import io.jmix.sampler.config.MenuItem;
+import io.jmix.sampler.config.SamplerMenuConfig;
+import io.jmix.sampler.config.SamplerMenuItem;
 import io.jmix.sampler.screen.sys.maindashboard.DashboardItemClickEvent;
 import io.jmix.sampler.screen.sys.maindashboard.MainDashboardFragment;
 import io.jmix.sampler.util.SamplerHelper;
@@ -66,7 +65,7 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected final static String FOUND_ITEM_STYLE = "found-item";
 
     @Autowired
-    protected MenuConfig menuConfig;
+    protected SamplerMenuConfig menuConfig;
     @Autowired
     protected SamplerHelper helper;
     @Autowired
@@ -83,8 +82,6 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected ApplicationContext applicationContext;
     @Autowired
     protected Messages messages;
-    @Autowired
-    protected MessageTools messageTools;
 
     @Autowired
     protected TextField<String> searchField;
@@ -143,8 +140,8 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     }
 
     protected void initMenuItems() {
-        List<MenuItem> menuItems = menuConfig.getRootItems();
-        for (MenuItem item : menuItems) {
+        List<SamplerMenuItem> menuItems = menuConfig.getRootItems();
+        for (SamplerMenuItem item : menuItems) {
             SideMenu.MenuItem menuItem = sideMenu.createMenuItem(item.getId());
             menuItem.setCaption(menuConfig.getMenuItemCaption(item.getId()));
             loadMenuItems(item, menuItem);
@@ -163,17 +160,7 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
         }
 
         localesComboBox.setOptionsMap(coreProperties.getAvailableLocales());
-
-        Locale uiLocale = ui.getLocale();
-        if (!coreProperties.getAvailableLocales().containsValue(uiLocale)) {
-            updateLocale(ui, messageTools.getDefaultLocale());
-            return;
-        }
-
-        localesComboBox.setValue(uiLocale);
-        if (messages instanceof SamplerMessagesImpl) {
-            ((SamplerMessagesImpl) messages).setUserLocale(uiLocale);
-        }
+        localesComboBox.setValue(ui.getLocale());
 
         localesComboBox.setVisible(coreProperties.isLocaleSelectVisible());
 
@@ -258,9 +245,9 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
         }
     }
 
-    protected void loadMenuItems(MenuItem parentSamplerItem,
+    protected void loadMenuItems(SamplerMenuItem parentSamplerItem,
                                  SideMenu.MenuItem parentSideMenuItem) {
-        for (MenuItem currentItem : parentSamplerItem.getChildren()) {
+        for (SamplerMenuItem currentItem : parentSamplerItem.getChildren()) {
             SideMenu.MenuItem child;
             String id = currentItem.getId();
             if (currentItem.isMenu()) {
@@ -405,7 +392,7 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     }
 
     protected void fillParentListToExpand(String id) {
-        MenuItem itemToExpand = menuConfig.getItemById(id);
+        SamplerMenuItem itemToExpand = menuConfig.getItemById(id);
         if (itemToExpand.getParent() != null) {
             parentListIdsToExpand.add(itemToExpand.getParent().getId());
             fillParentListToExpand(itemToExpand.getParent().getId());
