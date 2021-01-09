@@ -182,10 +182,6 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
             handler.schedule(urlRouting.getState());
         }
 
-        if (messages instanceof SamplerMessagesImpl) {
-            ((SamplerMessagesImpl) messages).setUserLocale(locale);
-        }
-
         ui.getApp().setLocale(locale);
         ui.getApp().createTopLevelWindow();
     }
