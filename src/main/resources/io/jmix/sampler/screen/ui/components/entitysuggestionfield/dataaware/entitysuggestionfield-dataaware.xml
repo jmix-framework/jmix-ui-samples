@@ -26,6 +26,7 @@
                                    width="100%">
                 <actions>
                     <action id="lookup" type="entity_lookup"/>
+                    <action id="open" type="entity_open"/>
                 </actions>
             </entitySuggestionField>
             <groupBox caption="msg://io.jmix.sampler.screen.ui.components.entitysuggestionfield/tuning"

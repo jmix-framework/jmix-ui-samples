@@ -22,17 +22,26 @@ import io.jmix.core.security.CoreSecurityConfiguration;
 import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.bean.SamplerMetadataTools;
+import io.jmix.sampler.bean.SamplerRoutingDataSource;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperFieldLoader;
 import io.jmix.ui.App;
 import io.jmix.ui.sys.registration.ComponentRegistration;
 import io.jmix.ui.sys.registration.ComponentRegistrationBuilder;
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Scope;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
+import javax.sql.DataSource;
+
 @Configuration
+@EnableScheduling
 public class SamplerConfiguration {
 
     @Bean("sampler_App")
@@ -63,5 +72,19 @@ public class SamplerConfiguration {
                 .withComponentClass(StepperField.class)
                 .withComponentLoaderClass(StepperFieldLoader.class)
                 .build();
+    }
+
+    @Bean
+    @Primary
+    @ConfigurationProperties(prefix = "routing.datasource")
+    public DataSource dataSource() {
+        return new SamplerRoutingDataSource();
+    }
+
+    @Bean("sampler_SessionDataSource")
+    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
+    @ConfigurationProperties(prefix = "session.datasource")
+    public DataSource sessionDataSource() {
+        return new BasicDataSource();
     }
 }

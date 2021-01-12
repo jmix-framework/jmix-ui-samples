@@ -20,7 +20,9 @@
                dataContainer="customerDc"
                width="100%">
             <actions>
-                <action id="view" type="view"/>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
             </actions>
             <columns>
                 <column id="name"/>
@@ -31,7 +33,12 @@
             </columns>
             <simplePagination/>
             <buttonsPanel>
-                <button action="customerTable.view"/>
+                <button id="createBtn"
+                        action="customerTable.create"/>
+                <button id="editBtn"
+                        action="customerTable.edit"/>
+                <button id="removeBtn"
+                        action="customerTable.remove"/>
             </buttonsPanel>
         </table>
         <hbox id="lookupActions" spacing="true" visible="false">

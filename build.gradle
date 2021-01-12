@@ -53,9 +53,11 @@ dependencies {
     implementation 'io.jmix.ui:jmix-ui-starter'
     implementation 'io.jmix.ui:jmix-ui-data-starter'
     implementation 'io.jmix.ui:jmix-ui-widgets-compiled'
-    implementation "io.jmix.translations:jmix-translations-ru"
+    implementation 'io.jmix.sessions:jmix-sessions-starter'
+    implementation 'io.jmix.translations:jmix-translations-ru'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.apache.commons:commons-dbcp2'
 
     runtimeOnly 'org.hsqldb:hsqldb'
 
@@ -78,7 +80,7 @@ test {
     useJUnitPlatform()
 }
 
-bootBuildImage { 
+bootBuildImage {
     if (rootProject.hasProperty('jmixDockerTag')) {
         imageName = rootProject['jmixDockerTag']
     } else {
