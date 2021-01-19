@@ -174,7 +174,7 @@ public class SamplerRoutingDataSource extends AbstractDataSource implements Appl
         liquibase.setShouldRun(true);
         liquibase.setDataSource(sessionDataSource);
         try {
-            applicationContext.getBean(SpringLiquibase.class).afterPropertiesSet();
+            liquibase.afterPropertiesSet();
         } catch (LiquibaseException e) {
             throw new RuntimeException("Error initializing datasource " + urlPrefix + sessionId, e);
         }

@@ -18,8 +18,11 @@ package io.jmix.sampler;
 
 import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
+import io.jmix.core.Stores;
 import io.jmix.core.security.CoreSecurityConfiguration;
+import io.jmix.data.impl.liquibase.LiquibaseChangeLogProcessor;
 import io.jmix.sampler.bean.SamplerApp;
+import io.jmix.sampler.bean.SamplerLiquibase;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.bean.SamplerMetadataTools;
 import io.jmix.sampler.bean.SamplerRoutingDataSource;
@@ -28,8 +31,10 @@ import io.jmix.sampler.screen.ui.components.composite.component.StepperFieldLoad
 import io.jmix.ui.App;
 import io.jmix.ui.sys.registration.ComponentRegistration;
 import io.jmix.ui.sys.registration.ComponentRegistrationBuilder;
+import liquibase.integration.spring.SpringLiquibase;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -86,5 +91,27 @@ public class SamplerConfiguration {
     @ConfigurationProperties(prefix = "session.datasource")
     public DataSource sessionDataSource() {
         return new BasicDataSource();
+    }
+
+    @Bean(name = "sampler_Liquibase")
+    @Primary
+    public SpringLiquibase liquibase(DataSource dataSource,
+                                     LiquibaseProperties properties,
+                                     LiquibaseChangeLogProcessor processor) {
+        properties.setChangeLog("file:" + processor.createMasterChangeLog(Stores.MAIN));
+
+        SpringLiquibase liquibase = new SamplerLiquibase();
+
+        liquibase.setDataSource(dataSource);
+        liquibase.setChangeLog(properties.getChangeLog());
+        liquibase.setContexts(properties.getContexts());
+        liquibase.setDefaultSchema(properties.getDefaultSchema());
+        liquibase.setDropFirst(properties.isDropFirst());
+        liquibase.setShouldRun(properties.isEnabled());
+        liquibase.setLabels(properties.getLabels());
+        liquibase.setChangeLogParameters(properties.getParameters());
+        liquibase.setRollbackFile(properties.getRollbackFile());
+
+        return liquibase;
     }
 }
