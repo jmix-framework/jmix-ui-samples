@@ -1,5 +1,6 @@
 package io.jmix.sampler.screen.ui.components.combobox.userinput;
 
+import com.google.common.collect.Lists;
 import io.jmix.ui.Notifications;
 import io.jmix.ui.component.ComboBox;
 import io.jmix.ui.screen.ScreenFragment;
@@ -8,8 +9,6 @@ import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @UiController("combobox-user-input")
@@ -23,12 +22,12 @@ public class ComboBoxUserInputSample extends ScreenFragment {
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        final List<String> list = new ArrayList<>(Arrays.asList("One", "Two", "Three"));
-        comboBox.setOptionsList(list);
+        List<String> options = Lists.newArrayList("One", "Two", "Three");
+        comboBox.setOptionsList(options);
 
         comboBox.setNewOptionHandler(caption -> {
-            list.add(caption);
-            comboBox.setOptionsList(list);
+            options.add(caption);
+            comboBox.setOptionsList(options);
 
             notifications.create()
                     .withCaption(caption + " added")
