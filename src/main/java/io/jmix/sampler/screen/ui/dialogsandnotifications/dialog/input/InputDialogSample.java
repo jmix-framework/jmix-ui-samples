@@ -81,7 +81,7 @@ public class InputDialogSample extends ScreenFragment {
                         InputParameter.parameter("customer")
                                 .withField(() -> {
                                     ComboBox<Customer> field = uiComponents.create(ComboBox.of(Customer.class));
-                                    field.setOptionsList(dataManager.load(Customer.class).list());
+                                    field.setOptionsList(dataManager.load(Customer.class).all().list());
                                     field.setCaption("Customer");
                                     field.setWidthFull();
                                     return field;
