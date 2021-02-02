@@ -1,5 +1,5 @@
 <window xmlns="http://jmix.io/schema/ui/window"
-        xmlns:app="http://jmix.io/schema/sampler/composite-component.xsd">
+        xmlns:app="http://jmix.io/schema/sampler/composite-component">
     <data>
         <instance id="orderItemDc"
                   class="io.jmix.sampler.entity.OrderItem"
