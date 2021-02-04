@@ -6,15 +6,6 @@
                 <property name="customer" fetchPlan="_local"/>
             </fetchPlan>
         </instance>
-        <collection id="customersDc"
-                    class="io.jmix.sampler.entity.Customer"
-                    fetchPlan="_local">
-            <loader id="customersLoader">
-                <query>
-                    <![CDATA[select e from sampler_Customer e]]>
-                </query>
-            </loader>
-        </collection>
     </data>
     <facets>
         <dataLoadCoordinator auto="true"/>
