@@ -21,11 +21,7 @@ import io.jmix.core.MetadataTools;
 import io.jmix.core.Stores;
 import io.jmix.core.security.CoreSecurityConfiguration;
 import io.jmix.data.impl.liquibase.LiquibaseChangeLogProcessor;
-import io.jmix.sampler.bean.SamplerApp;
-import io.jmix.sampler.bean.SamplerLiquibase;
-import io.jmix.sampler.bean.SamplerMessagesImpl;
-import io.jmix.sampler.bean.SamplerMetadataTools;
-import io.jmix.sampler.bean.SamplerRoutingDataSource;
+import io.jmix.sampler.bean.*;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperFieldLoader;
 import io.jmix.ui.App;
@@ -98,12 +94,12 @@ public class SamplerConfiguration {
     public SpringLiquibase liquibase(DataSource dataSource,
                                      LiquibaseProperties properties,
                                      LiquibaseChangeLogProcessor processor) {
-        properties.setChangeLog("file:" + processor.createMasterChangeLog(Stores.MAIN));
 
-        SpringLiquibase liquibase = new SamplerLiquibase();
+        SamplerLiquibase liquibase = new SamplerLiquibase();
+
+        liquibase.setChangeLogContent(processor.createMasterChangeLog(Stores.MAIN));
 
         liquibase.setDataSource(dataSource);
-        liquibase.setChangeLog(properties.getChangeLog());
         liquibase.setContexts(properties.getContexts());
         liquibase.setDefaultSchema(properties.getDefaultSchema());
         liquibase.setDropFirst(properties.isDropFirst());

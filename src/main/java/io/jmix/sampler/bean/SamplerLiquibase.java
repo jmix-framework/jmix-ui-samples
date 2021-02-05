@@ -16,39 +16,40 @@
 
 package io.jmix.sampler.bean;
 
-import liquibase.integration.spring.SpringLiquibase;
-import liquibase.resource.ResourceAccessor;
+import io.jmix.data.impl.liquibase.JmixLiquibase;
+import liquibase.integration.spring.SpringResourceAccessor;
+import org.springframework.core.io.ResourceLoader;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
+import java.util.SortedSet;
 
-public class SamplerLiquibase extends SpringLiquibase {
+public class SamplerLiquibase extends JmixLiquibase {
 
-    protected Map<String, Set<String>> changelogPaths = new HashMap<>();
+    protected Map<String, SortedSet<String>> changelogPaths = new HashMap<>();
 
     @Override
-    protected ResourceAccessor createResourceOpener() {
-        return new SamplerResourceOpener(getChangeLog());
+    protected SpringResourceAccessor createResourceOpener() {
+        return new SamplerResourceOpener(resourceLoader);
     }
 
-    public class SamplerResourceOpener extends SpringResourceOpener {
+    public class SamplerResourceOpener extends JmixResourceAccessor {
 
-        public SamplerResourceOpener(String parentFile) {
-            super(parentFile);
+        public SamplerResourceOpener(ResourceLoader resourceLoader) {
+            super(resourceLoader);
         }
 
         @Override
-        public Set<String> list(String relativeTo, String path, boolean includeFiles, boolean includeDirectories,
-                                boolean recursive) throws IOException {
+        public SortedSet<String> list(String relativeTo, String path, boolean includeFiles, boolean includeDirectories,
+                                      boolean recursive) throws IOException {
             // Store paths to changelogs to use in session data source
-            Set<String> list = changelogPaths.get(path);
-            if (list == null) {
-                list = super.list(relativeTo, path, includeFiles, includeDirectories, recursive);
-                changelogPaths.put(path, list);
+            SortedSet<String> set = changelogPaths.get(path);
+            if (set == null) {
+                set = super.list(relativeTo, path, includeFiles, includeDirectories, recursive);
+                changelogPaths.put(path, set);
             }
-            return list;
+            return set;
         }
     }
 }
