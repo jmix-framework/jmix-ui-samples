@@ -404,6 +404,34 @@
             </item>
         </menu>
 
+        <menu id="filter">
+            <item id="filter-multiple-conditions" docUrlSuffix="gui_Filter"  splitEnabled="true"
+                  image="components/filter/filter-multiple-conditions.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="filter-group-condition" docUrlSuffix="gui_Filter"  splitEnabled="true"
+                  image="components/filter/filter-group-condition.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="filter-property-condition" docUrlSuffix="gui_Filter"  splitEnabled="true"
+                  image="components/filter/filter-property-condition.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="filter-jpql-condition" docUrlSuffix="gui_Filter"  splitEnabled="true"
+                  image="components/filter/filter-jpql-condition.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="form">
             <item id="form-simple" docUrlSuffix="gui_Form" image="components/form/form-simple.png">
                 <otherFiles>

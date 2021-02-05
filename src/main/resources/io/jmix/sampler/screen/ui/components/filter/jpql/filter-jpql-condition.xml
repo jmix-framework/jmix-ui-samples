@@ -1,0 +1,60 @@
+<!--
+  ~ Copyright 2020 Haulmont.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:c="http://jmix.io/schema/ui/jpql-condition">
+    <data>
+        <collection id="ordersDc"
+                    class="io.jmix.sampler.entity.Order"
+                    fetchPlan="_local">
+            <loader id="ordersDl">
+                <query>
+                    <![CDATA[select e from sampler_Order e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout spacing="true" expand="orderTable">
+        <filter id="filter" dataLoader="ordersDl">
+            <properties include=".*"/>
+            <configurations>
+                <configuration id="defaultConfiguration" name="msg://jpqlConfiguration.name" default="true">
+                    <jpqlFilter caption="msg://jpqlFilter.caption"
+                                parameterClass="io.jmix.sampler.entity.Product">
+                        <condition>
+                            <c:jpql>
+                                <c:join>join {E}.items i</c:join>
+                                <c:where>i.product.id = ?</c:where>
+                            </c:jpql>
+                        </condition>
+                    </jpqlFilter>
+                </configuration>
+            </configurations>
+        </filter>
+        <table id="orderTable"
+               dataContainer="ordersDc"
+               width="100%">
+            <columns>
+                <column id="date"/>
+                <column id="amount"/>
+                <column id="description"/>
+            </columns>
+        </table>
+    </layout>
+</window>
