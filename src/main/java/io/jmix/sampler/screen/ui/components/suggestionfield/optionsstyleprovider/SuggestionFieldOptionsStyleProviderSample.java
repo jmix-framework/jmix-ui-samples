@@ -1,36 +1,65 @@
 package io.jmix.sampler.screen.ui.components.suggestionfield.optionsstyleprovider;
 
+import io.jmix.core.Messages;
 import io.jmix.core.Metadata;
 import io.jmix.sampler.entity.Customer;
-import io.jmix.sampler.entity.Order;
+import io.jmix.sampler.entity.CustomerGrade;
+import io.jmix.ui.App;
+import io.jmix.ui.component.SuggestionField;
 import io.jmix.ui.model.InstanceContainer;
 import io.jmix.ui.screen.Install;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import java.util.stream.Collectors;
 
 @UiController("suggestionfield-options-style-provider")
 @UiDescriptor("suggestionfield-options-style-provider.xml")
 public class SuggestionFieldOptionsStyleProviderSample extends ScreenFragment {
 
     @Autowired
-    protected InstanceContainer<Order> orderDc;
+    protected InstanceContainer<Customer> customerDc;
     @Autowired
     protected Metadata metadata;
+    @Autowired
+    protected Messages messages;
+
+    @Autowired
+    protected SuggestionField<CustomerGrade> suggestionField;
 
     @Subscribe
     protected void onInit(InitEvent event) {
+        initDataContainer();
+        initSearchExecutor();
+    }
+
+    protected void initDataContainer() {
         // InstanceContainer initialization. It is usually done automatically if the screen is
         // inherited from StandardEditor and is used as an entity editor.
-        Order order = metadata.create(Order.class);
-        orderDc.setItem(order);
+        Customer customer = metadata.create(Customer.class);
+        customerDc.setItem(customer);
+    }
+
+    protected void initSearchExecutor() {
+        List<CustomerGrade> grades = Arrays.asList(CustomerGrade.values());
+        Locale userLocale = App.getInstance().getLocale();
+        suggestionField.setSearchExecutor((searchString, searchParams) ->
+                grades.stream()
+                        .filter(customerGrade -> StringUtils.containsIgnoreCase(
+                                messages.getMessage(customerGrade, userLocale), searchString))
+                        .collect(Collectors.toList()));
     }
 
     @Install(to = "suggestionField", subject = "optionStyleProvider")
-    protected String suggestionFieldOptionStyleProvider(Customer customer) {
-        switch (customer.getGrade()) {
+    protected String suggestionFieldOptionStyleProvider(CustomerGrade grade) {
+        switch (grade) {
             case HIGH:
                 return "high-grade";
             case PREMIUM:

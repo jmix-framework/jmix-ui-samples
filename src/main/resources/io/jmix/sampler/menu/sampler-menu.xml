@@ -596,7 +596,6 @@
                   image="components/suggestionfield/suggestionfield-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
             <item id="suggestionfield-option-type" docUrlSuffix="gui_SuggestionField"
@@ -609,7 +608,6 @@
                   image="components/suggestionfield/suggestionfield-options-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/suggestionfield/optionsstyleprovider/suggestionfield-style.scss"/>
                 </otherFiles>
             </item>

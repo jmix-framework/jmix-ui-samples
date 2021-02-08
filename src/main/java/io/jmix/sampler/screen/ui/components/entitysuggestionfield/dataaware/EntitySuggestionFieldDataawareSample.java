@@ -1,25 +1,17 @@
 package io.jmix.sampler.screen.ui.components.entitysuggestionfield.dataaware;
 
 import io.jmix.core.Metadata;
-import io.jmix.core.MetadataTools;
 import io.jmix.sampler.entity.Customer;
 import io.jmix.sampler.entity.Order;
 import io.jmix.ui.component.EntitySuggestionField;
 import io.jmix.ui.component.HasValue;
 import io.jmix.ui.component.TextField;
-import io.jmix.ui.model.CollectionContainer;
-import io.jmix.ui.model.CollectionLoader;
 import io.jmix.ui.model.InstanceContainer;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @UiController("entitysuggestionfield-dataaware")
 @UiDescriptor("entitysuggestionfield-dataaware.xml")
@@ -37,15 +29,9 @@ public class EntitySuggestionFieldDataawareSample extends ScreenFragment {
 
     @Autowired
     protected InstanceContainer<Order> orderDc;
-    @Autowired
-    protected CollectionContainer<Customer> customersDc;
-    @Autowired
-    protected CollectionLoader<Customer> customersLoader;
 
     @Autowired
     protected Metadata metadata;
-    @Autowired
-    protected MetadataTools metadataTools;
 
     @Subscribe
     protected void onInit(InitEvent event) {
@@ -53,14 +39,6 @@ public class EntitySuggestionFieldDataawareSample extends ScreenFragment {
         // inherited from StandardEditor and is used as an entity editor.
         Order order = metadata.create(Order.class);
         orderDc.setItem(order);
-
-        customersLoader.load();
-        List<Customer> customers = new ArrayList<>(customersDc.getItems());
-        entitySuggestionField.setSearchExecutor((searchString, searchParams) ->
-                customers.stream()
-                        .filter(customer ->
-                                StringUtils.containsIgnoreCase(metadataTools.getInstanceName(customer), searchString))
-                        .collect(Collectors.toList()));
 
         delayTextField.setValue(300);
         stringLengthTextField.setValue(2);

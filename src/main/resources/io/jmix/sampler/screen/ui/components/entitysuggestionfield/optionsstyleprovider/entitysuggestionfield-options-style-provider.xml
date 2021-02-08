@@ -28,11 +28,6 @@
                 <action id="lookup" type="entity_lookup"/>
                 <action id="open" type="entity_open"/>
             </actions>
-            <query entityClass="io.jmix.sampler.entity.Customer"
-                   escapeValueForLike="true"
-                   searchStringFormat="%${searchString}%">
-                select c from sampler_Customer c where lower(c.name) like lower(:searchString) escape '\'
-            </query>
         </entitySuggestionField>
     </layout>
 </window>

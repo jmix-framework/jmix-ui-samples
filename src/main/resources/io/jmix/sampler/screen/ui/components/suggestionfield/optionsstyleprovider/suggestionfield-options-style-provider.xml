@@ -1,10 +1,8 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <data>
-        <instance id="orderDc"
-                  class="io.jmix.sampler.entity.Order">
-            <fetchPlan extends="_local">
-                <property name="customer" fetchPlan="_local"/>
-            </fetchPlan>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_local">
         </instance>
     </data>
     <facets>
@@ -12,14 +10,9 @@
     </facets>
     <layout>
         <suggestionField id="suggestionField"
-                         dataContainer="orderDc"
+                         dataContainer="customerDc"
                          inputPrompt="Start typing"
-                         property="customer">
-            <query entityClass="io.jmix.sampler.entity.Customer"
-                   escapeValueForLike="true"
-                   searchStringFormat="%${searchString}%">
-                <![CDATA[select c from sampler_Customer c where lower(c.name) like lower(:searchString) escape '\']]>
-            </query>
+                         property="grade">
         </suggestionField>
     </layout>
 </window>

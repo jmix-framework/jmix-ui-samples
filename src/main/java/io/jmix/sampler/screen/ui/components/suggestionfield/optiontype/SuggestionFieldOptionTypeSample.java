@@ -2,6 +2,7 @@ package io.jmix.sampler.screen.ui.components.suggestionfield.optiontype;
 
 import io.jmix.core.Messages;
 import io.jmix.sampler.entity.SendingStatus;
+import io.jmix.ui.App;
 import io.jmix.ui.component.SuggestionField;
 import io.jmix.ui.screen.ScreenFragment;
 import io.jmix.ui.screen.Subscribe;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 @UiController("suggestionfield-option-type")
@@ -35,9 +37,11 @@ public class SuggestionFieldOptionTypeSample extends ScreenFragment {
                         .collect(Collectors.toList()));
 
         List<SendingStatus> enums = Arrays.asList(SendingStatus.values());
+        Locale userLocale = App.getInstance().getLocale();
         enumSuggestionField.setSearchExecutor((searchString, searchParams) ->
                 enums.stream()
-                        .filter(status -> StringUtils.containsIgnoreCase(messages.getMessage(status), searchString))
+                        .filter(status -> StringUtils.containsIgnoreCase(
+                                messages.getMessage(status, userLocale), searchString))
                         .collect(Collectors.toList()));
     }
 }
