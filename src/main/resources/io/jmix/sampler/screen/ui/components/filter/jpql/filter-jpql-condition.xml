@@ -29,6 +29,18 @@
                         </condition>
                     </jpqlFilter>
                 </configuration>
+                <configuration id="jpqlInConfiguration" name="msg://jpqlInExpressionConfiguration.name">
+                    <jpqlFilter caption="msg://jpqlFilterInExpression.caption"
+                                parameterClass="io.jmix.sampler.entity.CustomerGrade"
+                                hasInExpression="true">
+                        <condition>
+                            <c:jpql>
+                                <c:join>join {E}.customer c</c:join>
+                                <c:where>c.grade in ?</c:where>
+                            </c:jpql>
+                        </condition>
+                    </jpqlFilter>
+                </configuration>
             </configurations>
         </filter>
         <table id="orderTable"
