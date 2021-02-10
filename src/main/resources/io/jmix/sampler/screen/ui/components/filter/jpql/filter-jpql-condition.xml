@@ -35,8 +35,7 @@
                                 hasInExpression="true">
                         <condition>
                             <c:jpql>
-                                <c:join>join {E}.customer c</c:join>
-                                <c:where>c.grade in ?</c:where>
+                                <c:where>{E}.customer.grade in ?</c:where>
                             </c:jpql>
                         </condition>
                     </jpqlFilter>
