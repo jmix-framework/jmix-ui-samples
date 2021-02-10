@@ -20,6 +20,9 @@
     </facets>
     <layout expand="customersTable"
             spacing="true">
+        <filter id="filter" dataLoader="customersDl">
+            <properties include=".*"/>
+        </filter>
         <table id="customersTable"
                width="100%"
                dataContainer="customersDc">

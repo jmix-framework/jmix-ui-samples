@@ -20,6 +20,9 @@
     </facets>
     <layout expand="orderItemsTable"
             spacing="true">
+        <filter id="filter" dataLoader="orderItemsDl">
+            <properties include=".*"/>
+        </filter>
         <table id="orderItemsTable"
                width="100%"
                dataContainer="orderItemsDc">

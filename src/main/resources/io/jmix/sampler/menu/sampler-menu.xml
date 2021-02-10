@@ -553,6 +553,24 @@
             </item>
         </menu>
 
+        <menu id="relatedentities">
+            <item id="relatedentities-simple" docUrlSuffix="gui_RelatedEntities"
+                  image="components/relatedentities/relatedentities-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                    <file name="io/jmix/sampler/entity/OrderItem.java"/>
+                </otherFiles>
+            </item>
+            <item id="relatedentities-exclude" docUrlSuffix="gui_RelatedEntities"
+                  image="components/relatedentities/relatedentities-exclude.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="singleselectlist">
             <item id="singleselectlist-simple" docUrlSuffix="gui_SingleSelectList"
                   image="components/singleselectlist/singleselectlist-simple.png">
