@@ -129,7 +129,6 @@ public class SampleBrowser extends Screen {
                 .create(this, sampleId, new MapScreenOptions(item.getScreenParams()))
                 .init();
         Fragment fragment = screenFragment.getFragment();
-        fragment.setId("sampleFrame");
 
         updateLayout(fragment, item);
         updateCaption(sampleId, item);
