@@ -8,7 +8,7 @@
     <changeSet author="sampler" id="7">
 
         <createTable tableName="SAMPLER_EMPLOYEE">
-            <column name="ID" type="uuid">
+            <column name="ID" type="${uuid.type}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
 

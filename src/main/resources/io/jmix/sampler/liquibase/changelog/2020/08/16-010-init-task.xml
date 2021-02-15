@@ -8,7 +8,7 @@
     <changeSet author="sampler" id="6">
 
         <createTable tableName="SAMPLER_TASK">
-            <column name="ID" type="uuid">
+            <column name="ID" type="${uuid.type}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
 
@@ -20,7 +20,7 @@
             <column name="PARENT_TASK_ID" type="varchar(36)"/>
         </createTable>
         <createTable tableName="SAMPLER_COUNTRY_GROWTH">
-            <column name="ID" type="uuid">
+            <column name="ID" type="${uuid.type}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
 
