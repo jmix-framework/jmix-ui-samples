@@ -25,12 +25,13 @@ public class ComboBoxUserInputSample extends ScreenFragment {
         List<String> options = Lists.newArrayList("One", "Two", "Three");
         comboBox.setOptionsList(options);
 
-        comboBox.setNewOptionHandler(caption -> {
-            options.add(caption);
+        comboBox.setEnterPressHandler(enterPressEvent -> {
+            String text = enterPressEvent.getText();
+            options.add(text);
             comboBox.setOptionsList(options);
 
             notifications.create()
-                    .withCaption(caption + " added")
+                    .withCaption(text + " added")
                     .show();
         });
     }
