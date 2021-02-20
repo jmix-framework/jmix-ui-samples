@@ -405,29 +405,41 @@
         </menu>
 
         <menu id="filter">
-            <item id="filter-multiple-conditions" docUrlSuffix="gui_Filter"  splitEnabled="true"
+            <item id="filter-multiple-conditions" docUrlSuffix="gui_Filter" splitEnabled="true"
                   image="components/filter/filter-multiple-conditions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-group-condition" docUrlSuffix="gui_Filter"  splitEnabled="true"
+            <item id="filter-group-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
                   image="components/filter/filter-group-condition.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-property-condition" docUrlSuffix="gui_Filter"  splitEnabled="true"
+            <item id="filter-property-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
                   image="components/filter/filter-property-condition.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-jpql-condition" docUrlSuffix="gui_Filter"  splitEnabled="true"
+            <item id="filter-jpql-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
                   image="components/filter/filter-jpql-condition.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="filter-add-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
+                  image="components/filter/filter-add-condition.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="filter-programmatically-defined" docUrlSuffix="gui_Filter" splitEnabled="true"
+                  image="components/filter/filter-programmatically-defined.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
         </menu>

@@ -14,21 +14,6 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout spacing="true" expand="customerTable">
-        <filter id="filter" dataLoader="customersDl">
-            <properties include=".*"/>
-            <configurations>
-                <configuration id="defaultConfiguration" name="msg://groupConfiguration.name" default="true">
-                    <groupFilter operation="OR">
-                        <propertyFilter property="active" operation="EQUAL"
-                                        operationEditable="true" defaultValue="false"/>
-                        <propertyFilter property="grade" operation="EQUAL"
-                                        operationEditable="true" defaultValue="30"/>
-                    </groupFilter>
-                    <propertyFilter property="age" operation="GREATER_OR_EQUAL"
-                                    operationEditable="true" defaultValue="30"/>
-                </configuration>
-            </configurations>
-        </filter>
         <table id="customerTable"
                dataContainer="customersDc"
                width="100%">

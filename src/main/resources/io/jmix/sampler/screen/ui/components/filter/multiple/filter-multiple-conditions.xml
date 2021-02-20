@@ -3,7 +3,7 @@
         <collection id="customersDc"
                     class="io.jmix.sampler.entity.Customer"
                     fetchPlan="_local">
-            <loader id="customersLoader">
+            <loader id="customersDl">
                 <query>
                     <![CDATA[select e from sampler_Customer e]]>
                 </query>
@@ -14,7 +14,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout spacing="true" expand="customerTable">
-        <filter id="filter" dataLoader="customersLoader">
+        <filter id="filter" dataLoader="customersDl">
             <properties include=".*"/>
             <configurations>
                 <configuration id="defaultConfiguration" name="msg://multipleConfiguration.name"
