@@ -1,12 +1,19 @@
-<p>The list of <code>CheckBoxGroup</code> options can be specified using <code>setOptionsList()</code> and
-    <code>setOptionsMap()</code> methods.</p>
+<p>The list of <code>CheckBoxGroup</code> options can be specified using the following methods:</p>
 <ul>
     <li>
-        <p>If you use <code>setOptionsList()</code> method, the component will display results of
-            <code>toString()</code> transformation of each option value.</p>
+        <p>
+            <code>setOptionsList()</code> - allows you to specify programmatically a list of component options;
+        </p>
     </li>
     <li>
-        <p><code>setOptionsMap()</code> method allows you to specify a string caption for each option value explicitly.
+        <p>
+            <code>setOptionsMap()</code> - allows you to specify a string caption for each option value explicitly.
+        </p>
+    </li>
+    <li>
+        <p>
+            <code>setOptionsEnum()</code> - takes a class of enumeration as a parameter. The options list will consist
+            of localized names of enum values, the value of the component will be an enum value.
         </p>
     </li>
 </ul>
