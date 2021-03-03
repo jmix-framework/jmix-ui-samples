@@ -8,5 +8,11 @@
     <property name="uuid.type" dbms="oracle" value="varchar2(32)"/>
     <property name="uuid.type" dbms="!oracle" value="uuid"/>
 
-    <includeAll path="/io/jmix/sampler/liquibase/changelog"/>
+    <include file="/io/jmix/sampler/liquibase/changelog/2020/08/06-010-init-customer.xml"/>
+    <include file="/io/jmix/sampler/liquibase/changelog/2020/08/06-020-init-calendar-event.xml"/>
+    <include file="/io/jmix/sampler/liquibase/changelog/2020/08/07-010-init-product.xml"/>
+    <include file="/io/jmix/sampler/liquibase/changelog/2020/08/07-020-init-color.xml"/>
+    <include file="/io/jmix/sampler/liquibase/changelog/2020/08/07-030-init-order.xml"/>
+    <include file="/io/jmix/sampler/liquibase/changelog/2020/08/16-010-init-task.xml"/>
+    <include file="/io/jmix/sampler/liquibase/changelog/2020/08/17-010-init-employee.xml"/>
 </databaseChangeLog>
