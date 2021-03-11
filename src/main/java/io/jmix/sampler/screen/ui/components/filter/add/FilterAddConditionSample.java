@@ -32,6 +32,7 @@ public class FilterAddConditionSample extends ScreenFragment {
         DataLoader dataLoader = filter.getDataLoader();
 
         PropertyFilter<Integer> agePropertyFilter = uiComponents.create(PropertyFilter.NAME);
+        agePropertyFilter.setConditionModificationDelegated(true);
         agePropertyFilter.setDataLoader(dataLoader);
         agePropertyFilter.setProperty("age");
         agePropertyFilter.setOperation(PropertyFilter.Operation.GREATER_OR_EQUAL);

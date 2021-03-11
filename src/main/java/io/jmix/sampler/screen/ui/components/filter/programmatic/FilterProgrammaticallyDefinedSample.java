@@ -45,6 +45,7 @@ public class FilterProgrammaticallyDefinedSample extends ScreenFragment {
                 messages.getMessage(FilterProgrammaticallyDefinedSample.class, "javaConfiguration.name"));
 
         PropertyFilter<Integer> agePropertyFilter = uiComponents.create(PropertyFilter.NAME);
+        agePropertyFilter.setConditionModificationDelegated(true);
         agePropertyFilter.setDataLoader(customersDl);
         agePropertyFilter.setProperty("age");
         agePropertyFilter.setOperation(PropertyFilter.Operation.LESS_OR_EQUAL);

@@ -44,11 +44,13 @@ public class FilterGroupConditionSample extends ScreenFragment {
         DataLoader dataLoader = filter.getDataLoader();
 
         GroupFilter groupFilter = uiComponents.create(GroupFilter.NAME);
+        groupFilter.setConditionModificationDelegated(true);
         groupFilter.setDataLoader(dataLoader);
         groupFilter.setOperation(LogicalFilterComponent.Operation.OR);
         groupFilter.setCaption(logicalFilterSupport.getOperationCaption(groupFilter.getOperation()));
 
         PropertyFilter<Boolean> activePropertyFilter = uiComponents.create(PropertyFilter.NAME);
+        activePropertyFilter.setConditionModificationDelegated(true);
         activePropertyFilter.setDataLoader(dataLoader);
         activePropertyFilter.setProperty("active");
         activePropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
@@ -66,6 +68,7 @@ public class FilterGroupConditionSample extends ScreenFragment {
         groupFilter.add(activePropertyFilter);
 
         PropertyFilter<CustomerGrade> gradePropertyFilter = uiComponents.create(PropertyFilter.NAME);
+        gradePropertyFilter.setConditionModificationDelegated(true);
         gradePropertyFilter.setDataLoader(dataLoader);
         gradePropertyFilter.setProperty("grade");
         gradePropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
@@ -84,6 +87,7 @@ public class FilterGroupConditionSample extends ScreenFragment {
         javaConfiguration.getRootLogicalFilterComponent().add(groupFilter);
 
         PropertyFilter<Integer> agePropertyFilter = uiComponents.create(PropertyFilter.NAME);
+        agePropertyFilter.setConditionModificationDelegated(true);
         agePropertyFilter.setDataLoader(dataLoader);
         agePropertyFilter.setProperty("age");
         agePropertyFilter.setOperation(PropertyFilter.Operation.GREATER_OR_EQUAL);

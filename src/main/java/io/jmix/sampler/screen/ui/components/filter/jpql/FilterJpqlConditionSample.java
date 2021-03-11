@@ -38,6 +38,7 @@ public class FilterJpqlConditionSample extends ScreenFragment {
         DataLoader dataLoader = filter.getDataLoader();
 
         JpqlFilter<Product> jpqlFilter = uiComponents.create(JpqlFilter.NAME);
+        jpqlFilter.setConditionModificationDelegated(true);
         jpqlFilter.setFrame(getFragment());
         jpqlFilter.setDataLoader(dataLoader);
         jpqlFilter.setCondition("i.product.id = ?", "join {E}.items i");

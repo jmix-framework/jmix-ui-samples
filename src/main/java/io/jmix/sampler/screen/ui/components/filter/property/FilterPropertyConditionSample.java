@@ -40,6 +40,7 @@ public class FilterPropertyConditionSample extends ScreenFragment {
         DataLoader dataLoader = filter.getDataLoader();
 
         PropertyFilter<Customer> customerPropertyFilter = uiComponents.create(PropertyFilter.NAME);
+        customerPropertyFilter.setConditionModificationDelegated(true);
         customerPropertyFilter.setDataLoader(dataLoader);
         customerPropertyFilter.setProperty("customer");
         customerPropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
@@ -57,6 +58,7 @@ public class FilterPropertyConditionSample extends ScreenFragment {
         javaConfiguration.getRootLogicalFilterComponent().add(customerPropertyFilter);
 
         PropertyFilter<CustomerGrade> gradePropertyFilter = uiComponents.create(PropertyFilter.NAME);
+        gradePropertyFilter.setConditionModificationDelegated(true);
         gradePropertyFilter.setDataLoader(dataLoader);
         gradePropertyFilter.setProperty("customer.grade");
         gradePropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
