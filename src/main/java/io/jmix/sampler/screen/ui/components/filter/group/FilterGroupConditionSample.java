@@ -10,7 +10,6 @@ import io.jmix.ui.component.LogicalFilterComponent;
 import io.jmix.ui.component.PropertyFilter;
 import io.jmix.ui.component.filter.configuration.DesignTimeConfiguration;
 import io.jmix.ui.component.groupfilter.LogicalFilterSupport;
-import io.jmix.ui.component.propertyfilter.PropertyFilterSupport;
 import io.jmix.ui.component.propertyfilter.SingleFilterSupport;
 import io.jmix.ui.model.DataLoader;
 import io.jmix.ui.screen.ScreenFragment;
@@ -25,8 +24,6 @@ public class FilterGroupConditionSample extends ScreenFragment {
 
     @Autowired
     protected UiComponents uiComponents;
-    @Autowired
-    protected PropertyFilterSupport propertyFilterSupport;
     @Autowired
     protected SingleFilterSupport singleFilterSupport;
     @Autowired
@@ -47,7 +44,6 @@ public class FilterGroupConditionSample extends ScreenFragment {
         groupFilter.setConditionModificationDelegated(true);
         groupFilter.setDataLoader(dataLoader);
         groupFilter.setOperation(LogicalFilterComponent.Operation.OR);
-        groupFilter.setCaption(logicalFilterSupport.getOperationCaption(groupFilter.getOperation()));
 
         PropertyFilter<Boolean> activePropertyFilter = uiComponents.create(PropertyFilter.NAME);
         activePropertyFilter.setConditionModificationDelegated(true);
@@ -55,9 +51,6 @@ public class FilterGroupConditionSample extends ScreenFragment {
         activePropertyFilter.setProperty("active");
         activePropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
         activePropertyFilter.setOperationEditable(true);
-        activePropertyFilter.setCaption(propertyFilterSupport.getPropertyFilterCaption(
-                dataLoader.getContainer().getEntityMetaClass(),
-                activePropertyFilter.getProperty()));
         activePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
                 activePropertyFilter.getProperty()));
         activePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(
@@ -73,9 +66,6 @@ public class FilterGroupConditionSample extends ScreenFragment {
         gradePropertyFilter.setProperty("grade");
         gradePropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
         gradePropertyFilter.setOperationEditable(true);
-        gradePropertyFilter.setCaption(propertyFilterSupport.getPropertyFilterCaption(
-                dataLoader.getContainer().getEntityMetaClass(),
-                gradePropertyFilter.getProperty()));
         gradePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
                 gradePropertyFilter.getProperty()));
         gradePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(
@@ -92,9 +82,6 @@ public class FilterGroupConditionSample extends ScreenFragment {
         agePropertyFilter.setProperty("age");
         agePropertyFilter.setOperation(PropertyFilter.Operation.GREATER_OR_EQUAL);
         agePropertyFilter.setOperationEditable(true);
-        agePropertyFilter.setCaption(propertyFilterSupport.getPropertyFilterCaption(
-                dataLoader.getContainer().getEntityMetaClass(),
-                agePropertyFilter.getProperty()));
         agePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
                 agePropertyFilter.getProperty()));
         agePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(

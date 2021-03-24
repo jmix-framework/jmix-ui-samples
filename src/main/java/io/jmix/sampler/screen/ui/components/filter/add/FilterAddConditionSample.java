@@ -4,7 +4,6 @@ import io.jmix.core.querycondition.PropertyConditionUtils;
 import io.jmix.ui.UiComponents;
 import io.jmix.ui.component.Filter;
 import io.jmix.ui.component.PropertyFilter;
-import io.jmix.ui.component.propertyfilter.PropertyFilterSupport;
 import io.jmix.ui.component.propertyfilter.SingleFilterSupport;
 import io.jmix.ui.model.DataLoader;
 import io.jmix.ui.screen.ScreenFragment;
@@ -19,8 +18,6 @@ public class FilterAddConditionSample extends ScreenFragment {
 
     @Autowired
     protected UiComponents uiComponents;
-    @Autowired
-    protected PropertyFilterSupport propertyFilterSupport;
     @Autowired
     protected SingleFilterSupport singleFilterSupport;
 
@@ -37,9 +34,6 @@ public class FilterAddConditionSample extends ScreenFragment {
         agePropertyFilter.setProperty("age");
         agePropertyFilter.setOperation(PropertyFilter.Operation.GREATER_OR_EQUAL);
         agePropertyFilter.setOperationEditable(true);
-        agePropertyFilter.setCaption(propertyFilterSupport.getPropertyFilterCaption(
-                dataLoader.getContainer().getEntityMetaClass(),
-                agePropertyFilter.getProperty()));
         agePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
                 agePropertyFilter.getProperty()));
         agePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(

@@ -8,7 +8,6 @@ import io.jmix.ui.UiComponents;
 import io.jmix.ui.component.Filter;
 import io.jmix.ui.component.PropertyFilter;
 import io.jmix.ui.component.filter.configuration.DesignTimeConfiguration;
-import io.jmix.ui.component.propertyfilter.PropertyFilterSupport;
 import io.jmix.ui.component.propertyfilter.SingleFilterSupport;
 import io.jmix.ui.model.DataLoader;
 import io.jmix.ui.screen.ScreenFragment;
@@ -23,8 +22,6 @@ public class FilterPropertyConditionSample extends ScreenFragment {
 
     @Autowired
     protected UiComponents uiComponents;
-    @Autowired
-    protected PropertyFilterSupport propertyFilterSupport;
     @Autowired
     protected SingleFilterSupport singleFilterSupport;
     @Autowired
@@ -45,9 +42,6 @@ public class FilterPropertyConditionSample extends ScreenFragment {
         customerPropertyFilter.setProperty("customer");
         customerPropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
         customerPropertyFilter.setOperationEditable(true);
-        customerPropertyFilter.setCaption(propertyFilterSupport.getPropertyFilterCaption(
-                dataLoader.getContainer().getEntityMetaClass(),
-                customerPropertyFilter.getProperty()));
         customerPropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
                 customerPropertyFilter.getProperty()));
         customerPropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(
@@ -63,9 +57,6 @@ public class FilterPropertyConditionSample extends ScreenFragment {
         gradePropertyFilter.setProperty("customer.grade");
         gradePropertyFilter.setOperation(PropertyFilter.Operation.EQUAL);
         gradePropertyFilter.setOperationEditable(true);
-        gradePropertyFilter.setCaption(propertyFilterSupport.getPropertyFilterCaption(
-                dataLoader.getContainer().getEntityMetaClass(),
-                gradePropertyFilter.getProperty()));
         gradePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
                 gradePropertyFilter.getProperty()));
         gradePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(

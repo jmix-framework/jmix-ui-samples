@@ -7,7 +7,6 @@ import io.jmix.ui.UiComponents;
 import io.jmix.ui.component.Filter;
 import io.jmix.ui.component.PropertyFilter;
 import io.jmix.ui.component.filter.configuration.DesignTimeConfiguration;
-import io.jmix.ui.component.propertyfilter.PropertyFilterSupport;
 import io.jmix.ui.component.propertyfilter.SingleFilterSupport;
 import io.jmix.ui.model.CollectionLoader;
 import io.jmix.ui.screen.ScreenFragment;
@@ -22,8 +21,6 @@ public class FilterProgrammaticallyDefinedSample extends ScreenFragment {
 
     @Autowired
     protected UiComponents uiComponents;
-    @Autowired
-    protected PropertyFilterSupport propertyFilterSupport;
     @Autowired
     protected SingleFilterSupport singleFilterSupport;
     @Autowired
@@ -50,9 +47,6 @@ public class FilterProgrammaticallyDefinedSample extends ScreenFragment {
         agePropertyFilter.setProperty("age");
         agePropertyFilter.setOperation(PropertyFilter.Operation.LESS_OR_EQUAL);
         agePropertyFilter.setOperationEditable(true);
-        agePropertyFilter.setCaption(propertyFilterSupport.getPropertyFilterCaption(
-                customersDl.getContainer().getEntityMetaClass(),
-                agePropertyFilter.getProperty()));
         agePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
                 agePropertyFilter.getProperty()));
         agePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(
