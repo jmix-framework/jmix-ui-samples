@@ -1,10 +1,9 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <layout>
         <hbox spacing="true">
-            <textArea caption="TextArea with rows and cols"
-                      cols="20"
+            <textArea caption="TextArea with rows"
                       rows="5"/>
-            <textArea caption="TextArea with heigth and width"
+            <textArea caption="TextArea with height and width"
                       height="100px"
                       width="250px"/>
         </hbox>
