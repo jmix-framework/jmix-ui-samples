@@ -21,9 +21,9 @@
             <checkBox id="sortable"
                       caption="Sortable"/>
             <checkBox id="reorderingAllowed"
-                      caption="Reordering Allowed"/>
+                      caption="Reordering allowed"/>
             <checkBox id="columnsCollapsingAllowed"
-                      caption="Columns Collapsing Allowed"/>
+                      caption="Columns collapsing allowed"/>
         </hbox>
         <dataGrid id="ordersDataGrid"
                   dataContainer="ordersDc"

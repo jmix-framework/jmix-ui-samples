@@ -16,7 +16,7 @@
     <layout expand="customersDataGrid"
             spacing="true">
         <hbox spacing="true">
-            <label value="Frozen Column Count:"
+            <label value="Frozen column count:"
                    align="MIDDLE_LEFT"/>
             <textField id="frozenColumnCountField"
                        datatype="int"/>
