@@ -16,7 +16,7 @@
     <layout expand="customersDataGrid"
             spacing="true">
         <checkBox id="editorBuffered"
-                  caption="Editor Buffered"/>
+                  caption="Editor buffered"/>
         <dataGrid id="customersDataGrid"
                   editorEnabled="true"
                   dataContainer="customersDc"

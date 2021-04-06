@@ -8,7 +8,7 @@
         <dateField dataContainer="ordersDc"
                    property="date"/>
         <hbox spacing="true">
-            <label value="Value in the Container:"/>
+            <label value="Value in the container:"/>
             <label dataContainer="ordersDc"
                    property="date"/>
         </hbox>

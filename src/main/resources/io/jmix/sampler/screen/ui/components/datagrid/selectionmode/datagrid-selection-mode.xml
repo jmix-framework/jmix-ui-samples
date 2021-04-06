@@ -16,7 +16,7 @@
     <layout expand="customersDataGrid"
             spacing="true">
         <hbox spacing="true">
-            <label value="Selection Mode:"
+            <label value="Selection mode:"
                    align="MIDDLE_LEFT"/>
             <comboBox id="selectionModeField"
                       nullOptionVisible="false"

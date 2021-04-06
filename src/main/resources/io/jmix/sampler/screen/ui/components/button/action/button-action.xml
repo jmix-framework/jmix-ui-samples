@@ -1,7 +1,7 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <actions>
         <action id="someAction"
-                caption="Click Me!"/>
+                caption="Click me!"/>
     </actions>
     <layout>
         <button action="someAction"/>

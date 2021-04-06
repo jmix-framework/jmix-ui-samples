@@ -8,7 +8,7 @@
         <timeField dataContainer="taskDc"
                    property="dueDate"/>
         <hbox spacing="true">
-            <label value="Time in the Container:"/>
+            <label value="Time in the container:"/>
             <label dataContainer="taskDc"
                    property="dueDate">
                 <dateFormatter format="HH:mm"/>

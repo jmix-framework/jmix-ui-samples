@@ -5,11 +5,11 @@
                   fetchPlan="_local"/>
     </data>
     <layout spacing="true">
-        <checkBox caption="CheckBox connected to a Container"
+        <checkBox caption="CheckBox connected to a container"
                   dataContainer="customerDc"
                   property="active"/>
         <hbox spacing="true">
-            <label value="Value in the Container:"/>
+            <label value="Value in the container:"/>
             <label id="labelValue" dataContainer="customerDc"
                    property="active"/>
         </hbox>

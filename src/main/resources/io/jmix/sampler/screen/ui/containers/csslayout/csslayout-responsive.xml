@@ -6,15 +6,15 @@
             <vbox margin="true"
                   spacing="true"
                   stylename="group-panel">
-                <textField caption="Field One" width="100%"/>
-                <textField caption="Field Two" width="100%"/>
+                <textField caption="Field one" width="100%"/>
+                <textField caption="Field two" width="100%"/>
                 <button caption="Button"/>
             </vbox>
             <vbox margin="true"
                   spacing="true"
                   stylename="group-panel">
-                <textField caption="Field Three" width="100%"/>
-                <textField caption="Field Four" width="100%"/>
+                <textField caption="Field three" width="100%"/>
+                <textField caption="Field four" width="100%"/>
                 <button caption="Button"/>
             </vbox>
         </cssLayout>

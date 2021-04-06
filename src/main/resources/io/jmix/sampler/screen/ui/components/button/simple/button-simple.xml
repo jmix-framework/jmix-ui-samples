@@ -2,8 +2,8 @@
     <layout>
         <hbox spacing="true">
             <button id="helloButton"
-                    caption="Say Hello!"
-                    description="Click Me!"/>
+                    caption="Say hello!"
+                    description="Click me!"/>
             <button id="saveButton1"
                     caption="Save"
                     icon="SAVE"/>

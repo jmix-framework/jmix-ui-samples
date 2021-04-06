@@ -1,7 +1,7 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <layout spacing="true">
         <popupView id="popupView"
-                   minimizedValue="Minimized Value"
+                   minimizedValue="Minimized value"
                    hideOnMouseOut="false">
             <vbox width="60px" height="40px">
                 <label value="Content" align="MIDDLE_CENTER"/>

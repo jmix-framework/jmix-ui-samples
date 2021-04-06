@@ -12,35 +12,35 @@
                 </row>
                 <row>
                     <button id="topLeft"
-                            caption="Top Left"
+                            caption="Top left"
                             width="128px"/>
                     <button id="topCenter"
-                            caption="Top Center"
+                            caption="Top center"
                             width="128px"/>
                     <button id="topRight"
-                            caption="Top Right"
+                            caption="Top right"
                             width="128px"/>
                 </row>
                 <row>
                     <button id="middleLeft"
-                            caption="Middle Left"
+                            caption="Middle left"
                             width="128px"/>
                     <button id="middleCenter"
-                            caption="Middle Center"
+                            caption="Middle center"
                             width="128px"/>
                     <button id="middleRight"
-                            caption="Middle Right"
+                            caption="Middle right"
                             width="128px"/>
                 </row>
                 <row>
                     <button id="bottomLeft"
-                            caption="Bottom Left"
+                            caption="Bottom left"
                             width="128px"/>
                     <button id="bottomCenter"
-                            caption="Bottom Center"
+                            caption="Bottom center"
                             width="128px"/>
                     <button id="bottomRight"
-                            caption="Bottom Right"
+                            caption="Bottom right"
                             width="128px"/>
                 </row>
             </rows>

@@ -28,7 +28,7 @@
                 <column property="assignee"/>
             </columns>
             <buttonsPanel>
-                <label align="MIDDLE_LEFT" value="Hierarchy Column:"/>
+                <label align="MIDDLE_LEFT" value="Hierarchy column:"/>
                 <comboBox id="columnSelector"
                           nullOptionVisible="false"
                           textInputAllowed="false"/>

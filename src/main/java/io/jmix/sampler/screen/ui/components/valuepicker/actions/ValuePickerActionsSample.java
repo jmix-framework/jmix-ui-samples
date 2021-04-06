@@ -48,7 +48,7 @@ public class ValuePickerActionsSample extends ScreenFragment {
                             .withCaption(value != null ? value : "No value")
                             .show();
                 })
-                .withDescription("Show Value")
+                .withDescription("Show value")
                 .withIcon(JmixIcon.EYE.source()));
 
         valuePicker.addAction(actions.create(ValueClearAction.ID));

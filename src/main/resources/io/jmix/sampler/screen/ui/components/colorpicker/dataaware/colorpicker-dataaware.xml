@@ -8,7 +8,7 @@
         <colorPicker dataContainer="colorDc"
                      property="hex"/>
         <hbox spacing="true">
-            <label value="Value in the Container:"/>
+            <label value="Value in the container:"/>
             <label id="labelValue" dataContainer="colorDc"
                    property="hex"/>
         </hbox>

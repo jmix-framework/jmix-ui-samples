@@ -9,7 +9,7 @@
                    dataContainer="customersDc"
                    property="name"/>
         <hbox spacing="true">
-            <label value="Name in the Container:"/>
+            <label value="Name in the container:"/>
             <label id='labelName' dataContainer="customersDc"
                    property="name"/>
         </hbox>

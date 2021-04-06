@@ -9,6 +9,6 @@
                 <dependency path="vaadin://timepicker/time-picker-connector.js"/>
             </dependencies>
         </jsComponent>
-        <button id="showValueBtn" caption="Show Value"/>
+        <button id="showValueBtn" caption="Show value"/>
     </layout>
 </window>
