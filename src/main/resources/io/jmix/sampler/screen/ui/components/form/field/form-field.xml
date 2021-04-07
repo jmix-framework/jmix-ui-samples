@@ -19,7 +19,7 @@
             </form>
             <button id="showOrderBtn"
                     align="MIDDLE_LEFT"
-                    caption="Show Order"/>
+                    caption="Show order"/>
         </hbox>
     </layout>
 </window>

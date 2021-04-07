@@ -8,7 +8,7 @@
         </instance>
     </data>
     <layout spacing="true">
-        <groupBox caption="Col Span" width="AUTO">
+        <groupBox caption="Col span" width="AUTO">
             <form dataContainer="orderDc">
                 <column width="250px">
                     <textField property="customer"/>
@@ -19,7 +19,7 @@
                 </column>
             </form>
         </groupBox>
-        <groupBox caption="Row Span" width="AUTO">
+        <groupBox caption="Row span" width="AUTO">
             <form dataContainer="orderDc">
                 <column width="250px">
                     <textField property="customer"/>

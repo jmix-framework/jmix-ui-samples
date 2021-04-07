@@ -22,7 +22,7 @@ public class ButtonProgrammaticActionSample extends ScreenFragment {
     @Subscribe
     protected void onInit(InitEvent event) {
         buttonAction.setAction(new BaseAction("theAction")
-                .withCaption("Click Me!")
+                .withCaption("Click me!")
                 .withHandler(actionPerformedEvent ->
                         notifications.create()
                                 .withCaption("Action performed")
