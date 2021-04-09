@@ -26,19 +26,6 @@ public class SamplerMetadataTools extends MetadataTools {
         }
 
         Range range = property.getRange();
-        // todo dynamic attributes
-//        if (DynamicAttributesUtils.isDynamicAttribute(property)) {
-//            CategoryAttribute categoryAttribute = DynamicAttributesUtils.getCategoryAttribute(property);
-//
-//            if (categoryAttribute.getDataType().equals(PropertyType.ENUMERATION)) {
-//                return LocaleHelper.getEnumLocalizedValue((String) value, categoryAttribute.getEnumerationLocales());
-//            }
-//
-//            if (categoryAttribute.getIsCollection() && value instanceof Collection) {
-//                return dynamicAttributesTools.getDynamicAttributeValueAsString(property, value);
-//            }
-//        }
-
         if (range.isDatatype()) {
             Datatype datatype = range.asDatatype();
             if (datatype instanceof TimeZoneAwareDatatype) {
