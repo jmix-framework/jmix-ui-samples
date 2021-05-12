@@ -1,21 +1,18 @@
 package io.jmix.sampler.screen.ui.components.table.generatedcolumn;
 
 import io.jmix.core.CoreProperties;
+import io.jmix.core.MessageTools;
 import io.jmix.core.MetadataTools;
 import io.jmix.sampler.entity.Customer;
 import io.jmix.ui.UiComponents;
 import io.jmix.ui.component.ComboBox;
 import io.jmix.ui.component.Component;
 import io.jmix.ui.component.Table;
-import io.jmix.ui.screen.Install;
-import io.jmix.ui.screen.ScreenFragment;
-import io.jmix.ui.screen.Subscribe;
-import io.jmix.ui.screen.UiController;
-import io.jmix.ui.screen.UiDescriptor;
+import io.jmix.ui.screen.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @UiController("table-generated-column")
 @UiDescriptor("table-generated-column.xml")
@@ -28,6 +25,8 @@ public class TableGeneratedColumnSample extends ScreenFragment {
     @Autowired
     protected MetadataTools metadataTools;
     @Autowired
+    private MessageTools messageTools;
+    @Autowired
     protected CoreProperties coreProperties;
 
     @Subscribe
@@ -35,7 +34,9 @@ public class TableGeneratedColumnSample extends ScreenFragment {
         customerTable.addGeneratedColumn("language", entity -> {
             ComboBox<String> comboBox = uiComponents.create(ComboBox.TYPE_STRING);
             comboBox.setId("languageComboBox");
-            List<String> locales = new ArrayList<>(coreProperties.getAvailableLocales().keySet());
+            List<String> locales = coreProperties.getAvailableLocales().stream()
+                    .map(locale -> messageTools.getLocaleDisplayName(locale))
+                    .collect(Collectors.toList());
             comboBox.setOptionsList(locales);
             comboBox.setWidth("100%");
             return comboBox;

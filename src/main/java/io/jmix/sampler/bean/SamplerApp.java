@@ -28,7 +28,7 @@ public class SamplerApp extends JmixApp {
         AppUI currentUi = AppUI.getCurrent();
         if (currentUi != null) {
             Locale uiLocale = currentUi.getLocale();
-            if (!coreProperties.getAvailableLocales().containsValue(uiLocale)) {
+            if (!coreProperties.getAvailableLocales().contains(uiLocale)) {
                 uiLocale = messageTools.getDefaultLocale();
             }
 

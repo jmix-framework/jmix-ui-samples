@@ -17,6 +17,7 @@
 package io.jmix.sampler.screen.sys.main;
 
 import io.jmix.core.CoreProperties;
+import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.sampler.bean.SamplerApp;
 import io.jmix.sampler.bean.SamplerMessagesImpl;
@@ -27,6 +28,7 @@ import io.jmix.sampler.screen.sys.maindashboard.MainDashboardFragment;
 import io.jmix.sampler.util.SamplerHelper;
 import io.jmix.ui.AppUI;
 import io.jmix.ui.Screens;
+import io.jmix.ui.UiProperties;
 import io.jmix.ui.component.AppWorkArea;
 import io.jmix.ui.component.Button;
 import io.jmix.ui.component.ComboBox;
@@ -55,6 +57,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Route(path = "main")
@@ -72,6 +75,8 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected Screens screens;
     @Autowired
     protected CoreProperties coreProperties;
+    @Autowired
+    private UiProperties uiProperties;
     @Autowired
     protected UrlRouting urlRouting;
     @Autowired
@@ -95,6 +100,8 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected ComboBox<String> themeComboBox;
     @Autowired
     protected MainDashboardFragment dashboardFragment;
+    @Autowired
+    private MessageTools messageTools;
 
     protected List<SideMenu.MenuItem> foundItems = new ArrayList<>();
     protected List<String> parentListIdsToExpand = new ArrayList<>();
@@ -159,10 +166,10 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
             return;
         }
 
-        localesComboBox.setOptionsMap(coreProperties.getAvailableLocales());
+        localesComboBox.setOptionsMap(messageTools.getAvailableLocalesMap());
         localesComboBox.setValue(ui.getLocale());
 
-        localesComboBox.setVisible(coreProperties.isLocaleSelectVisible());
+        localesComboBox.setVisible(uiProperties.isLocaleSelectVisible());
 
         localesComboBox.addValueChangeListener(e -> {
             Locale selectedLocale = e.getValue();

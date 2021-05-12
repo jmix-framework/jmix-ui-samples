@@ -328,7 +328,7 @@ public class SampleBrowser extends Screen {
 
     protected void createMessagesContainers(String messagesPack) {
         Locale defaultLocale = messageTools.getDefaultLocale();
-        for (Locale locale : coreProperties.getAvailableLocales().values()) {
+        for (Locale locale : coreProperties.getAvailableLocales()) {
             String tabTitle;
             if (defaultLocale.equals(locale)) {
                 tabTitle = "messages.properties";
