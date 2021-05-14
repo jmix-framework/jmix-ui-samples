@@ -14,7 +14,9 @@
                 <browserFrame id="declarativeBrowserFrame"
                               height="100%"
                               width="100%">
-                    <url url="https://docs.jmix.io/jmix/0.x/intro.html"/>
+                    <resource>
+                        <url url="https://docs.jmix.io/jmix/0.x/intro.html"/>
+                    </resource>
                 </browserFrame>
             </groupBox>
         </hbox>

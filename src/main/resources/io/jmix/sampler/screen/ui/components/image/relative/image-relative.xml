@@ -12,7 +12,9 @@
                       width="370px">
                 <image id="declarativeImage"
                        align="MIDDLE_CENTER">
-                    <relativePath path="VAADIN/themes/demo-helium/files/jmix-icon-login.svg"/>
+                    <resource>
+                        <relativePath path="VAADIN/themes/demo-helium/files/jmix-icon-login.svg"/>
+                    </resource>
                 </image>
             </groupBox>
         </hbox>

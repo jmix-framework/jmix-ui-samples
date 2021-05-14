@@ -13,7 +13,9 @@
                       width="370px">
                 <image id="declarativeImage"
                        align="MIDDLE_CENTER">
-                    <url url="https://www.cuba-platform.com/sites/all/themes/cuba_adaptive/img/logo-cuba.png"/>
+                    <resource>
+                        <url url="https://www.cuba-platform.com/sites/all/themes/cuba_adaptive/img/logo-cuba.png"/>
+                    </resource>
                 </image>
             </groupBox>
         </hbox>

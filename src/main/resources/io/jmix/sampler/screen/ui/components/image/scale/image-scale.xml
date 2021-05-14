@@ -10,7 +10,9 @@
                    align="MIDDLE_CENTER"
                    height="140px"
                    width="170px">
-                <relativePath path="VAADIN/themes/demo-helium/files/jmix-icon-login.svg"/>
+                <resource>
+                    <relativePath path="VAADIN/themes/demo-helium/files/jmix-icon-login.svg"/>
+                </resource>
             </image>
         </groupBox>
     </layout>

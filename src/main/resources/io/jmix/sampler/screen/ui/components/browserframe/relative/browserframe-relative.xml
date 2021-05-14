@@ -14,7 +14,9 @@
                 <browserFrame id="declarativeBrowserFrame"
                               height="100%"
                               width="100%">
-                    <relativePath path="VAADIN/themes/demo-helium/files/browserframe-relative.html"/>
+                    <resource>
+                        <relativePath path="VAADIN/themes/demo-helium/files/browserframe-relative.html"/>
+                    </resource>
                 </browserFrame>
             </groupBox>
         </hbox>

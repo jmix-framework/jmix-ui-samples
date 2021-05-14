@@ -14,8 +14,9 @@
                 <browserFrame id="declarativeBrowserFrame"
                               height="100%"
                               width="100%">
-                    <classpath
-                            path="io/jmix/sampler/screen/ui/components/browserframe/classpath/browserframe-classpath.html"/>
+                    <resource>
+                        <classpath path="io/jmix/sampler/screen/ui/components/browserframe/classpath/browserframe-classpath.html"/>
+                    </resource>
                 </browserFrame>
             </groupBox>
         </hbox>

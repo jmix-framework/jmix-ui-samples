@@ -14,7 +14,9 @@
                 <browserFrame id="declarativeBrowserFrame"
                               height="100%"
                               width="100%">
-                    <theme path="files/browserframe-theme.html"/>
+                    <resource>
+                        <theme path="files/browserframe-theme.html"/>
+                    </resource>
                 </browserFrame>
             </groupBox>
         </hbox>

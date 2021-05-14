@@ -12,7 +12,9 @@
                       width="370px">
                 <image id="declarativeImage"
                        align="MIDDLE_CENTER">
-                    <classpath path="io/jmix/sampler/screen/ui/components/image/classpath/jmix-icon-login.svg"/>
+                    <resource>
+                        <classpath path="io/jmix/sampler/screen/ui/components/image/classpath/jmix-icon-login.svg"/>
+                    </resource>
                 </image>
             </groupBox>
         </hbox>

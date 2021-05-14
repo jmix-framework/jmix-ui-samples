@@ -6,7 +6,9 @@
                       width="400px">
                 <image id="imageClick"
                        align="MIDDLE_CENTER">
-                    <theme path="files/jmix-icon-login.svg"/>
+                    <resource>
+                        <theme path="files/jmix-icon-login.svg"/>
+                    </resource>
                 </image>
             </groupBox>
             <groupBox caption="msg://doubleClickHandler"
@@ -14,7 +16,9 @@
                       width="400px">
                 <image id="imageDoubleClick"
                        align="MIDDLE_CENTER">
-                    <theme path="files/jmix-icon-login.svg"/>
+                    <resource>
+                        <theme path="files/jmix-icon-login.svg"/>
+                    </resource>
                 </image>
             </groupBox>
         </hbox>
