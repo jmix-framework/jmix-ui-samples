@@ -6,7 +6,9 @@
                     <image id="logoImage"
                            stylename="app-icon"
                            scaleMode="SCALE_DOWN">
-                        <theme path="files/jmix-icon-login.svg"/>
+                        <resource>
+                            <theme path="files/jmix-icon-login.svg"/>
+                        </resource>
                     </image>
                     <label id="headerLabel"
                            stylename="app-title"
