@@ -11,7 +11,9 @@
             <label value="Time in the container:"/>
             <label dataContainer="taskDc"
                    property="dueDate">
-                <dateFormatter format="HH:mm"/>
+                <formatter>
+                    <date format="HH:mm"/>
+                </formatter>
             </label>
         </hbox>
     </layout>

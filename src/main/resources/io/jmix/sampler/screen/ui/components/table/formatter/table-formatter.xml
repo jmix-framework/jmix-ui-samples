@@ -20,10 +20,14 @@
                width="100%">
             <columns>
                 <column id="name">
-                    <customFormatter bean="sampler_UppercaseFormatter"/>
+                    <formatter>
+                        <custom bean="sampler_UppercaseFormatter"/>
+                    </formatter>
                 </column>
                 <column id="lastName">
-                    <customFormatter bean="sampler_LowercaseFormatter"/>
+                    <formatter>
+                        <custom bean="sampler_LowercaseFormatter"/>
+                    </formatter>
                 </column>
             </columns>
         </table>

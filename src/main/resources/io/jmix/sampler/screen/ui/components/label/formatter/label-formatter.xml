@@ -1,10 +1,14 @@
 <window xmlns="http://jmix.io/schema/ui/window">
     <layout spacing="true">
         <label id="dateLabel">
-            <dateFormatter type="DATE"/>
+            <formatter>
+                <date type="DATE"/>
+            </formatter>
         </label>
         <label id="numberLabel">
-            <numberFormatter format="#,###"/>
+            <formatter>
+                <number format="#,###"/>
+            </formatter>
         </label>
     </layout>
 </window>
