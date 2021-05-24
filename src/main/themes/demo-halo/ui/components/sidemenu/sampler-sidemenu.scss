@@ -1,4 +1,4 @@
-@mixin sampler-sidemenu($primary-stylename: c-sidemenu) {
+@mixin sampler-sidemenu($primary-stylename: jmix-sidemenu) {
 
     .#{$primary-stylename} {
         padding-left: 20px;
@@ -46,7 +46,7 @@
         max-width: initial;
     }
 
-   .#{$primary-stylename}-submenu.c-sidemenu-submenu-open {
+   .#{$primary-stylename}-submenu.jmix-sidemenu-submenu-open {
         margin-left: 15px;
     }
 

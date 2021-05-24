@@ -14,7 +14,7 @@
                   stylename="side-menu-box">
                 <hbox id="appTitleBox"
                       spacing="true"
-                      stylename="c-sidemenu-title"
+                      stylename="jmix-sidemenu-title"
                       width="100%">
                     <label id="appTitleLabel"
                            align="MIDDLE_CENTER"
@@ -82,7 +82,7 @@
             </vbox>
 
             <workArea id="workArea"
-                      stylename="c-workarea"
+                      stylename="jmix-workarea"
                       height="100%"
                       width="100%">
                 <initialLayout spacing="true" margin="true">
