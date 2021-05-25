@@ -210,10 +210,8 @@ public class SampleBrowser extends Screen {
             otherFiles.forEach(this::addSourceTab);
         }
 
-        String messagesPack = samplerHelper.findMessagePack(info);
-        if (StringUtils.isNotEmpty(messagesPack)) {
-            createMessagesContainers(messagesPack);
-        }
+        // TODO: gg, add messages explicitly
+//        createMessagesContainers(messagesPack);
     }
 
     protected Component createDescription(String descriptionsPack,

@@ -49,10 +49,6 @@ public class SamplerHelper {
         return new MapScreenOptions(ImmutableMap.of("windowId", item.getId()));
     }
 
-    protected String getMessagePack(Element root) {
-        return root.attributeValue("messagesPack");
-    }
-
     public String packageToPath(String pkg) {
         return pkg.replaceAll("[.]", "/");
     }
@@ -70,14 +66,6 @@ public class SamplerHelper {
             return fileName.substring(index + 1);
         }
         return null;
-    }
-
-    @Nullable
-    public String findMessagePack(WindowInfo info) {
-        Element root = getWindowElement(info.getTemplate());
-        return (root != null)
-                ? getMessagePack(root)
-                : null;
     }
 
     @Nullable
