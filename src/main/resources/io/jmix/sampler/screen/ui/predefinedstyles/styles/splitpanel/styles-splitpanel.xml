@@ -4,7 +4,7 @@
         <split id="mainSplit"
                orientation="horizontal"
                pos="30"
-               stylename="large"
+               stylename="splitter-large"
                width="100%">
             <vbox expand="textArea1"
                   height="100%"
