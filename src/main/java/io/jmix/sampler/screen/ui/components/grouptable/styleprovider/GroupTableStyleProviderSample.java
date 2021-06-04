@@ -25,14 +25,17 @@ public class GroupTableStyleProviderSample extends ScreenFragment {
             @SuppressWarnings("unchecked")
             @Override
             public String getStyleName(GroupInfo info) {
-                CustomerGrade grade = (CustomerGrade) info.getPropertyValue(info.getProperty());
-                switch (grade) {
-                    case PREMIUM:
-                        return "premium-grade";
-                    case HIGH:
-                        return "high-grade";
-                    case STANDARD:
-                        return "standard-grade";
+                Object value = info.getPropertyValue(info.getProperty());
+                if (value instanceof CustomerGrade) {
+                    CustomerGrade grade = (CustomerGrade) value;
+                    switch (grade) {
+                        case PREMIUM:
+                            return "premium-grade";
+                        case HIGH:
+                            return "high-grade";
+                        case STANDARD:
+                            return "standard-grade";
+                    }
                 }
                 return null;
             }
