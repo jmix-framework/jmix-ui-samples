@@ -41,6 +41,7 @@ public class SamplerHelper {
         return "sample-browser";
     }
 
+    @Nullable
     public String getFileContent(String src) {
         return resources.getResourceAsString(src);
     }
@@ -74,9 +75,9 @@ public class SamplerHelper {
 
     @Nullable
     public String findMessagePack(WindowInfo info) {
-        Element root = getWindowElement(info.getTemplate());
-        return (root != null)
-                ? getMessagePack(root)
+        Class<?> controllerClass = info.getControllerClass();
+        return controllerClass.getResource("messages.properties") != null
+                ? controllerClass.getPackage().getName()
                 : null;
     }
 
