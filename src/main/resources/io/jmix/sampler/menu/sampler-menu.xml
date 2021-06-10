@@ -18,17 +18,6 @@
 <menu-config xmlns="io/jmix/sampler/menu/sampler-menu.xsd">
 
     <menu id="components" image="mainmenu/components.svg">
-        <menu id="browserframe">
-            <item id="browserframe-classpath" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
-                  image="components/browserframe/browserframe-classpath.png"/>
-            <item id="browserframe-relative" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
-                  image="components/browserframe/browserframe-relative.png"/>
-            <item id="browserframe-theme" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
-                  image="components/browserframe/browserframe-theme.png"/>
-            <item id="browserframe-url" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
-                  image="components/browserframe/browserframe-url.png"/>
-        </menu>
-
         <menu id="button">
             <item id="button-simple" docUrlSuffix="gui_Button" image="components/button/button-simple.png"/>
             <item id="button-localized" docUrlSuffix="gui_Button" image="components/button/button-localized.png"/>
@@ -40,6 +29,17 @@
                   image="components/popupbutton/popupbutton-simple.png"/>
             <item id="popupbutton-custom-layout" docUrlSuffix="gui_PopupButton"
                   image="components/popupbutton/popupbutton-custom-layout.png"/>
+        </menu>
+
+        <menu id="browserframe">
+            <item id="browserframe-classpath" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+                  image="components/browserframe/browserframe-classpath.png"/>
+            <item id="browserframe-relative" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+                  image="components/browserframe/browserframe-relative.png"/>
+            <item id="browserframe-theme" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+                  image="components/browserframe/browserframe-theme.png"/>
+            <item id="browserframe-url" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+                  image="components/browserframe/browserframe-url.png"/>
         </menu>
 
         <menu id="calendar">
