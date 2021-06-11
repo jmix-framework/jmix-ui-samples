@@ -16,6 +16,7 @@
 
 package io.jmix.sampler;
 
+import com.vaadin.spring.annotation.UIScope;
 import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
 import io.jmix.core.Stores;
@@ -25,6 +26,8 @@ import io.jmix.sampler.bean.*;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperFieldLoader;
 import io.jmix.ui.App;
+import io.jmix.ui.AppUI;
+import io.jmix.ui.navigation.UrlTools;
 import io.jmix.ui.sys.registration.ComponentRegistration;
 import io.jmix.ui.sys.registration.ComponentRegistrationBuilder;
 import liquibase.integration.spring.SpringLiquibase;
@@ -51,10 +54,23 @@ public class SamplerConfiguration {
         return new SamplerApp();
     }
 
+    @Bean("sampler_AppUI")
+    @UIScope
+    @Primary
+    public AppUI appUI() {
+        return new SamplerAppUI();
+    }
+
     @Bean("sampler_Messages")
     @Primary
     public Messages messages() {
         return new SamplerMessagesImpl();
+    }
+
+    @Bean("sampler_UrlTools")
+    @Primary
+    public UrlTools urlTools() {
+        return new SamplerUrlTools();
     }
 
     @Bean("sampler_MetadataTools")
