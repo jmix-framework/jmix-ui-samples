@@ -45,6 +45,9 @@ repositories {
     maven {
         url 'https://nexus.jmix.io/repository/public'
     }
+    maven {
+        url 'https://vaadin.com/nexus/content/repositories/vaadin-addons'
+    }
 }
 
 dependencies {
@@ -58,6 +61,7 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.apache.commons:commons-dbcp2'
+    implementation 'org.vaadin.addons:googleanalyticstracker:3.0.0'
 
     runtimeOnly 'org.hsqldb:hsqldb'
 
