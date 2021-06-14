@@ -99,7 +99,7 @@ public class SamplerRoutingDataSource extends AbstractDataSource implements Appl
 
     @Scheduled(fixedRate = 60000)
     public void shutdown() {
-        log.info("Cleaning up session datasources ({})", dataSources.size());
+        log.debug("Cleaning up session datasources ({})", dataSources.size());
         SessionRepository<?> sessionRepository = applicationContext.getBean(SessionRepository.class);
         Iterator<Map.Entry<String, DataSource>> iterator = dataSources.entrySet().iterator();
         while (iterator.hasNext()) {
@@ -126,7 +126,7 @@ public class SamplerRoutingDataSource extends AbstractDataSource implements Appl
     }
 
     protected void shutdownSessionDataSource(String sessionId, DataSource sessionDataSource) {
-        log.info("Session with id {} does not exist or has expired, the datasource must be deleted", sessionId);
+        log.debug("Session with id {} does not exist or has expired, the datasource must be deleted", sessionId);
         try {
             Statement statement = sessionDataSource.getConnection().createStatement();
             statement.executeUpdate("SHUTDOWN");
@@ -166,7 +166,7 @@ public class SamplerRoutingDataSource extends AbstractDataSource implements Appl
     }
 
     protected DataSource createSessionDataSource(String sessionId) {
-        log.info("Creating datasource for session {}", sessionId);
+        log.debug("Creating datasource for session {}", sessionId);
         BasicDataSource sessionDataSource = (BasicDataSource) applicationContext.getBean(sessionDataSourceBeanName);
         sessionDataSource.setUrl(urlPrefix + sessionId);
 
