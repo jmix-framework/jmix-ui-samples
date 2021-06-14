@@ -20,32 +20,21 @@ import io.jmix.core.CoreProperties;
 import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.sampler.bean.SamplerApp;
-import io.jmix.sampler.bean.SamplerMessagesImpl;
 import io.jmix.sampler.config.SamplerMenuConfig;
 import io.jmix.sampler.config.SamplerMenuItem;
 import io.jmix.sampler.screen.sys.maindashboard.DashboardItemClickEvent;
 import io.jmix.sampler.screen.sys.maindashboard.MainDashboardFragment;
 import io.jmix.sampler.util.SamplerHelper;
+import io.jmix.ui.App;
 import io.jmix.ui.AppUI;
 import io.jmix.ui.Screens;
 import io.jmix.ui.UiProperties;
-import io.jmix.ui.component.AppWorkArea;
-import io.jmix.ui.component.Button;
-import io.jmix.ui.component.ComboBox;
-import io.jmix.ui.component.SplitPanel;
-import io.jmix.ui.component.TextField;
-import io.jmix.ui.component.TextInputField;
-import io.jmix.ui.component.Window;
+import io.jmix.ui.component.*;
 import io.jmix.ui.component.mainwindow.SideMenu;
 import io.jmix.ui.navigation.RedirectHandler;
 import io.jmix.ui.navigation.Route;
 import io.jmix.ui.navigation.UrlRouting;
-import io.jmix.ui.screen.OpenMode;
-import io.jmix.ui.screen.Screen;
-import io.jmix.ui.screen.ScreenOptions;
-import io.jmix.ui.screen.Subscribe;
-import io.jmix.ui.screen.UiController;
-import io.jmix.ui.screen.UiDescriptor;
+import io.jmix.ui.screen.*;
 import io.jmix.ui.settings.UserSettingsTools;
 import io.jmix.ui.theme.ThemeConstantsRepository;
 import org.apache.commons.collections4.CollectionUtils;
@@ -57,7 +46,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Route(path = "main")
@@ -87,6 +75,8 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected ApplicationContext applicationContext;
     @Autowired
     protected Messages messages;
+    @Autowired
+    private MessageTools messageTools;
 
     @Autowired
     protected TextField<String> searchField;
@@ -100,8 +90,6 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     protected ComboBox<String> themeComboBox;
     @Autowired
     protected MainDashboardFragment dashboardFragment;
-    @Autowired
-    private MessageTools messageTools;
 
     protected List<SideMenu.MenuItem> foundItems = new ArrayList<>();
     protected List<String> parentListIdsToExpand = new ArrayList<>();
@@ -190,6 +178,7 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
         }
 
         ui.getApp().setLocale(locale);
+        ui.getApp().addCookie(App.COOKIE_LOCALE, locale.toLanguageTag());
         ui.getApp().createTopLevelWindow();
     }
 
