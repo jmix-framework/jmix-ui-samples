@@ -4,8 +4,7 @@
         <split id="mainSplit" width="100%"
                maxSplitPosition="50%"
                orientation="horizontal"
-               pos="400px"
-               settingsEnabled="false">
+               pos="400px">
 
             <vbox id="sideMenuBox"
                   expand="sideMenu"

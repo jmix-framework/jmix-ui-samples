@@ -1,0 +1,32 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="ordersDc"
+                    class="io.jmix.sampler.entity.Order">
+            <fetchPlan extends="_local"/>
+            <loader id="ordersDl">
+                <query>
+                    <![CDATA[select e from sampler_Order e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="ordersTable"
+            spacing="true">
+        <propertyFilter property="amount"
+                        operation="GREATER_OR_EQUAL"
+                        dataLoader="ordersDl"/>
+        <table id="ordersTable"
+               dataContainer="ordersDc"
+               width="100%">
+            <columns>
+                <column id="date"/>
+                <column id="customer"/>
+                <column id="amount"/>
+                <column id="description"/>
+            </columns>
+        </table>
+    </layout>
+</window>

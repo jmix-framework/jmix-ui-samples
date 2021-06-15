@@ -32,28 +32,28 @@
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="23872068-ec86-ba3e-8d9b-a06d4c573aef"/>
             <column name="CUSTOMER_ID" value="068ff1ae-992e-51db-b20f-8e21bcd19bfc"/>
-            <column name="DATE_" valueDate="2020-07-01"/>
+            <column name="DATE_" valueDate="2021-06-01"/>
             <column name="AMOUNT" valueNumeric="24990.00"/>
             <column name="DESCRIPTION" value="Office equipment"/>
         </insert>
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="3fbc4ce8-7f8c-dcd0-5788-967f94f6ddbf"/>
             <column name="CUSTOMER_ID" value="0c3be785-1125-b755-7e79-3cc136cc1b13"/>
-            <column name="DATE_" valueDate="2020-07-11"/>
+            <column name="DATE_" valueDate="2021-06-05"/>
             <column name="AMOUNT" valueNumeric="31999.00"/>
             <column name="DESCRIPTION" value="Home theater"/>
         </insert>
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="a2ec9471-7e22-56ea-4601-e1d3ae9f24c9"/>
             <column name="CUSTOMER_ID" value="71ffb579-1b01-614a-0aea-5897c8c3bb91"/>
-            <column name="DATE_" valueDate="2020-07-30"/>
+            <column name="DATE_" valueDate="2021-07-30"/>
             <column name="AMOUNT" valueNumeric="30998.00"/>
             <column name="DESCRIPTION" value="Karaoke"/>
         </insert>
         <insert tableName="SAMPLER_ORDER">
             <column name="ID" value="bbb4351b-d605-40c6-55da-d785c7f32e03"/>
             <column name="CUSTOMER_ID" value="ee875696-0a4d-0d54-41c8-b3dea6e3e7d1"/>
-            <column name="DATE_" valueDate="2020-07-26"/>
+            <column name="DATE_" valueDate="2021-05-26"/>
             <column name="AMOUNT" valueNumeric="59999.00"/>
             <column name="DESCRIPTION" value="Gamer equipment"/>
         </insert>
