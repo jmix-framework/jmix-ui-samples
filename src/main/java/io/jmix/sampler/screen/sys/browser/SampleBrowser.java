@@ -19,7 +19,6 @@ package io.jmix.sampler.screen.sys.browser;
 import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableMap;
 import io.jmix.core.CoreProperties;
-import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
 import io.jmix.sampler.config.SamplerMenuConfig;
 import io.jmix.sampler.config.SamplerMenuItem;
@@ -72,8 +71,6 @@ public class SampleBrowser extends Screen {
     protected Messages messages;
     @Autowired
     protected MessageBundle messageBundle;
-    @Autowired
-    protected MessageTools messageTools;
     @Autowired
     protected CoreProperties coreProperties;
     @Autowired
@@ -327,15 +324,8 @@ public class SampleBrowser extends Screen {
     }
 
     protected void createMessagesContainers(String messagesPack) {
-        Locale defaultLocale = messageTools.getDefaultLocale();
         for (Locale locale : coreProperties.getAvailableLocales()) {
-            String tabTitle;
-            if (defaultLocale.equals(locale)) {
-                tabTitle = "messages.properties";
-            } else {
-                tabTitle = String.format("messages_%s.properties", locale.toString());
-            }
-
+            String tabTitle = String.format("messages_%s.properties", locale.toString());
             String src = samplerHelper.packageToPath(messagesPack) + "/" + tabTitle;
             String content = samplerHelper.getFileContent(src);
             if (StringUtils.isNotBlank(content)) {
