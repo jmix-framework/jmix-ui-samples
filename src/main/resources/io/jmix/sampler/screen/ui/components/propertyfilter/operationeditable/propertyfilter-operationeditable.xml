@@ -1,0 +1,35 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="customersTable"
+            spacing="true">
+        <propertyFilter id="propertyFilter"
+                        property="name"
+                        operation="CONTAINS"
+                        operationEditable="true"
+                        dataLoader="customersDl"/>
+        <table id="customersTable"
+               dataContainer="customersDc"
+               width="100%">
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+                <column id="age"/>
+                <column id="active"/>
+                <column id="grade"/>
+            </columns>
+        </table>
+    </layout>
+</window>

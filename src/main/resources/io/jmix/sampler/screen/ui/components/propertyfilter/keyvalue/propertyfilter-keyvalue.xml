@@ -1,0 +1,40 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <keyValueCollection id="customersDc">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select o.customer.name, o.customer.lastName, sum(o.amount) from sampler_Order o group by o.customer]]>
+                </query>
+            </loader>
+            <properties>
+                <property datatype="string" name="name"/>
+                <property datatype="string" name="lastName"/>
+                <property datatype="decimal" name="sum"/>
+            </properties>
+        </keyValueCollection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="customersTable"
+            spacing="true">
+        <hbox spacing="true">
+            <propertyFilter caption="Name"
+                            dataLoader="customersDl"
+                            operation="CONTAINS"
+                            property="name"/>
+        </hbox>
+        <table id="customersTable"
+               dataContainer="customersDc"
+               width="100%">
+            <columns>
+                <column id="name"
+                        caption="Name"/>
+                <column id="lastName"
+                        caption="Last name"/>
+                <column id="sum"
+                        caption="Sum"/>
+            </columns>
+        </table>
+    </layout>
+</window>

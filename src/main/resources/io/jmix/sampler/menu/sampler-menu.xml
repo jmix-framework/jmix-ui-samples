@@ -544,6 +544,41 @@
                   image="components/progressbar/progressbar-indeterminate.png"/>
         </menu>
 
+        <menu id="propertyfilter">
+            <item id="propertyfilter-simple" docUrlSuffix="property-filter" splitEnabled="true"
+                  image="components/propertyfilter/propertyfilter-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="propertyfilter-operationeditable" docUrlSuffix="property-filter" splitEnabled="true"
+                  image="components/propertyfilter/propertyfilter-operationeditable.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="propertyfilter-keyvalue" docUrlSuffix="property-filter" splitEnabled="true"
+                  image="components/propertyfilter/propertyfilter-keyvalue.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="propertyfilter-customfield" docUrlSuffix="property-filter" splitEnabled="true"
+                  image="components/propertyfilter/propertyfilter-customfield.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="propertyfilter-dateinterval" docUrlSuffix="property-filter" splitEnabled="true"
+                  image="components/propertyfilter/propertyfilter-dateinterval.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="radiobuttongroup">
             <item id="radiobuttongroup-simple" docUrlSuffix="gui_RadioButtonGroup"
                   image="components/radiobuttongroup/radiobuttongroup-simple.png">
