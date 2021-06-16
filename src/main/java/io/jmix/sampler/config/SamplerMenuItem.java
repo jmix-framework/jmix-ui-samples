@@ -13,18 +13,21 @@ public class SamplerMenuItem {
 
     protected final String id;
     protected String url;
-    protected String splitEnabled;
+    protected String page;
+    protected String anchor;
     protected String image;
+    protected boolean splitEnabled;
     protected List<String> otherFiles;
     protected Map<String, Object> screenParams;
 
     protected boolean isMenu = false;
 
-    public SamplerMenuItem(SamplerMenuItem parent, String id) {
+    public SamplerMenuItem(@Nullable SamplerMenuItem parent, String id) {
         this.parent = parent;
         this.id = id;
     }
 
+    @Nullable
     public SamplerMenuItem getParent() {
         return parent;
     }
@@ -41,12 +44,11 @@ public class SamplerMenuItem {
         this.isMenu = isMenu;
     }
 
-    @Nullable
-    public String getSplitEnabled() {
+    public boolean isSplitEnabled() {
         return splitEnabled;
     }
 
-    public void setSplitEnabled(String splitEnabled) {
+    public void setSplitEnabled(boolean splitEnabled) {
         this.splitEnabled = splitEnabled;
     }
 
@@ -62,11 +64,35 @@ public class SamplerMenuItem {
 
     @Nullable
     public String getUrl() {
+        SamplerMenuItem currentParent = parent;
+        while (url == null && currentParent != null) {
+            url = currentParent.getUrl();
+            currentParent = currentParent.getParent();
+        }
+
         return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(@Nullable String url) {
         this.url = url;
+    }
+
+    @Nullable
+    public String getPage() {
+        return page;
+    }
+
+    public void setPage(@Nullable String page) {
+        this.page = page;
+    }
+
+    @Nullable
+    public String getAnchor() {
+        return anchor;
+    }
+
+    public void setAnchor(@Nullable String anchor) {
+        this.anchor = anchor;
     }
 
     public List<SamplerMenuItem> getChildren() {

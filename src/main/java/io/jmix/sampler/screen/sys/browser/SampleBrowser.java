@@ -20,17 +20,12 @@ import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableMap;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.Messages;
+import io.jmix.core.security.CurrentAuthentication;
 import io.jmix.sampler.config.SamplerMenuConfig;
 import io.jmix.sampler.config.SamplerMenuItem;
 import io.jmix.sampler.screen.sys.main.MainScreen;
 import io.jmix.sampler.util.SamplerHelper;
-import io.jmix.ui.App;
-import io.jmix.ui.AppUI;
-import io.jmix.ui.Fragments;
-import io.jmix.ui.Screens;
-import io.jmix.ui.UiComponents;
-import io.jmix.ui.WindowConfig;
-import io.jmix.ui.WindowInfo;
+import io.jmix.ui.*;
 import io.jmix.ui.component.*;
 import io.jmix.ui.navigation.Route;
 import io.jmix.ui.navigation.UrlIdSerializer;
@@ -44,7 +39,6 @@ import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -79,6 +73,10 @@ public class SampleBrowser extends Screen {
     protected UrlRouting urlRouting;
     @Autowired
     protected WindowConfig windowConfig;
+    @Autowired
+    protected Screens screens;
+    @Autowired
+    protected CurrentAuthentication currentAuthentication;
 
     protected String sampleId;
     protected TabSheet tabSheet;
@@ -112,7 +110,7 @@ public class SampleBrowser extends Screen {
         sampleId = (String) UrlIdSerializer.deserializeId(String.class, serializedSampleId);
         updateSample(sampleId);
 
-        Screens.OpenedScreens openedScreens = AppUI.getCurrent().getScreens().getOpenedScreens();
+        Screens.OpenedScreens openedScreens = screens.getOpenedScreens();
         Screen rootScreen = openedScreens.getRootScreen();
         if (rootScreen instanceof MainScreen) {
             ((MainScreen) rootScreen).expandItemsFromDirectLink(sampleId);
@@ -138,8 +136,7 @@ public class SampleBrowser extends Screen {
 
         TabSheet tabSheet = createTabSheet();
 
-        String splitEnabled = item.getSplitEnabled();
-        if (BooleanUtils.toBoolean(splitEnabled)) {
+        if (item.isSplitEnabled()) {
             SplitPanel split = uiComponents.create(SplitPanel.class);
             split.setOrientation(SplitPanel.ORIENTATION_VERTICAL);
             split.setWidth("100%");
@@ -184,7 +181,7 @@ public class SampleBrowser extends Screen {
         getWindow().setCaption(caption);
     }
 
-    protected void updateTabs(String id, SamplerMenuItem item) {
+    protected void updateTabs(String sampleId, SamplerMenuItem item) {
         tabSheet.removeAllTabs();
 
         WindowInfo info = windowConfig.getWindowInfo(item.getId());
@@ -192,7 +189,8 @@ public class SampleBrowser extends Screen {
         Package descriptionPackage = info.getControllerClass().getPackage();
         if (descriptionPackage != null) {
             addTab(messageBundle.getMessage("description"),
-                    createDescription(descriptionPackage.getName(), item.getUrl(), id));
+                    createDescription(descriptionPackage.getName(),
+                            item.getUrl(), item.getPage(), item.getAnchor(), sampleId));
         }
 
         String screenSrc = info.getTemplate();
@@ -214,25 +212,28 @@ public class SampleBrowser extends Screen {
     }
 
     protected Component createDescription(String descriptionsPack,
-                                          @Nullable String docUrlSuffix,
-                                          String frameId) {
+                                          @Nullable String url,
+                                          @Nullable String page,
+                                          @Nullable String anchor,
+                                          String sampleId) {
         ScrollBoxLayout scrollBoxLayout = uiComponents.create(ScrollBoxLayout.class);
         scrollBoxLayout.addStyleName(DESCRIPTION_BOX_STYLE);
         scrollBoxLayout.setWidth("100%");
         scrollBoxLayout.setHeight("100%");
         scrollBoxLayout.setSpacing(true);
 
-        scrollBoxLayout.add(descriptionText(frameId, descriptionsPack));
+        scrollBoxLayout.add(descriptionText(sampleId, descriptionsPack));
 
         HBoxLayout hbox = uiComponents.create(HBoxLayout.class);
         hbox.setWidth("100%");
 
-        /*if (!Strings.isNullOrEmpty(docUrlSuffix)) {
-            Component docLinks = documentLinks(docUrlSuffix);
-            hbox.add(docLinks);
-        }*/
+        if (!Strings.isNullOrEmpty(url)
+                && !Strings.isNullOrEmpty(page)) {
+            Component docLink = documentLink(url, page, anchor);
+            hbox.add(docLink);
+        }
 
-        hbox.add(permalink(frameId));
+        hbox.add(permalink(sampleId));
         scrollBoxLayout.add(hbox);
         return scrollBoxLayout;
     }
@@ -259,17 +260,22 @@ public class SampleBrowser extends Screen {
             sb.append("/");
         }
         sb.append(frameId).append("-");
-        sb.append(getUserLocale().toString());
+        sb.append(getUserLocale().toLanguageTag());
         sb.append(".html");
         return sb.toString();
     }
 
-    protected Component documentLinks(String docUrlSuffix) {
+    protected Component documentLink(String url, String page, @Nullable String anchor) {
+        String baseUrl = messages.getMessage(DOC_URL_MESSAGES_KEY);
+
+        StringBuilder docUrl = new StringBuilder(baseUrl);
+        docUrl.append(url).append("/").append(page).append(".html");
+        if (!Strings.isNullOrEmpty(anchor)) {
+            docUrl.append("#").append(anchor);
+        }
+
         Link docLink = uiComponents.create(Link.class);
-        Locale locale = getUserLocale();
-        String message = messages.getMessage(DOC_URL_MESSAGES_KEY, locale);
-        String url = String.format(message, docUrlSuffix);
-        docLink.setUrl(url);
+        docLink.setUrl(docUrl.toString());
         docLink.setCaption(messages.getMessage(getClass(), "documentation"));
         docLink.setTarget("_blank");
         return docLink;
@@ -339,8 +345,7 @@ public class SampleBrowser extends Screen {
     protected void addTab(String name, Component component) {
         ComponentContainer container = createContainer();
         container.add(component);
-        tabSheet.addTab(name, container);
-        TabSheet.Tab tab = tabSheet.getTab(name);
+        TabSheet.Tab tab = tabSheet.addTab(name, container);
         tab.setCaption(name);
     }
 

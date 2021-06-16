@@ -3,6 +3,7 @@ package io.jmix.sampler.config;
 import io.jmix.core.Messages;
 import io.jmix.core.Resources;
 import io.jmix.core.common.xmlparsing.Dom4jTools;
+import io.jmix.ui.xml.layout.LoaderSupport;
 import org.apache.commons.collections4.IterableUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -17,14 +18,10 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.MissingResourceException;
+import java.util.*;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.function.Consumer;
 
 @Component("sampler_MenuConfig")
 public class SamplerMenuConfig {
@@ -46,6 +43,8 @@ public class SamplerMenuConfig {
     protected Resources resources;
     @Autowired
     protected Messages messages;
+    @Autowired
+    protected LoaderSupport loaderSupport;
 
     public String getMenuItemCaption(String id) {
         try {
@@ -110,15 +109,17 @@ public class SamplerMenuConfig {
         }
     }
 
-    protected void loadMenuItems(Element parentElement, SamplerMenuItem parentItem) {
+    protected void loadMenuItems(Element parentElement, @Nullable SamplerMenuItem parentItem) {
         for (Element element : parentElement.elements()) {
             SamplerMenuItem menuItem = null;
             String id = element.attributeValue("id");
             if (StringUtils.isNotBlank(id)) {
                 if ("menu".equals(element.getName())) {
                     menuItem = new SamplerMenuItem(parentItem, id);
-                    menuItem.setImage(element.attributeValue("image"));
                     menuItem.setMenu(true);
+                    
+                    loadString(element, "image", menuItem::setImage);
+                    loadString(element, "url", menuItem::setUrl);
 
                     loadMenuItems(element, menuItem);
                 } else if ("item".equals(element.getName())) {
@@ -140,20 +141,14 @@ public class SamplerMenuConfig {
 
     protected SamplerMenuItem parseItem(Element element, SamplerMenuItem parentItem, String id) {
         SamplerMenuItem menuItem = new SamplerMenuItem(parentItem, id);
-        String docUrl = element.attributeValue("docUrlSuffix");
-        if (StringUtils.isNotBlank(docUrl)) {
-            menuItem.setUrl(docUrl);
-        }
 
-        String splitEnabled = element.attributeValue("splitEnabled");
-        if (StringUtils.isNotBlank(splitEnabled)) {
-            menuItem.setSplitEnabled(splitEnabled);
-        }
+        loadString(element, "page", menuItem::setPage);
+        loadString(element, "url", menuItem::setUrl);
+        loadString(element, "anchor", menuItem::setAnchor);
+        loadString(element, "image", menuItem::setImage);
 
-        String image = element.attributeValue("image");
-        if (StringUtils.isNotBlank(image)) {
-            menuItem.setImage(image);
-        }
+        loaderSupport.loadBoolean(element, "splitEnabled")
+                .ifPresent(menuItem::setSplitEnabled);
 
         Element otherFilesElement = element.element("otherFiles");
         if (otherFilesElement != null && !otherFilesElement.elements().isEmpty()) {
@@ -252,5 +247,14 @@ public class SamplerMenuConfig {
     public boolean isRootItem(String itemId) {
         List<SamplerMenuItem> rootsItem = getRootItems();
         return rootsItem.stream().anyMatch(menuItem -> menuItem.getId().equals(itemId));
+    }
+
+    protected Optional<String> loadString(Element element, String attributeName) {
+        return loaderSupport.loadString(element, attributeName);
+    }
+
+    protected void loadString(Element element, String attributeName, Consumer<String> setter) {
+        loadString(element, attributeName)
+                .ifPresent(setter);
     }
 }

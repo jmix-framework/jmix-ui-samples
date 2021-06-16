@@ -17,33 +17,33 @@
 
 <menu-config xmlns="io/jmix/sampler/menu/sampler-menu.xsd">
 
-    <menu id="components" image="mainmenu/components.svg">
+    <menu id="components" image="mainmenu/components.svg" url="backoffice-ui/vcl/components">
         <menu id="button">
-            <item id="button-simple" docUrlSuffix="gui_Button" image="components/button/button-simple.png"/>
-            <item id="button-localized" docUrlSuffix="gui_Button" image="components/button/button-localized.png"/>
-            <item id="button-action" docUrlSuffix="gui_Button" image="components/button/button-action.png"/>
-            <item id="button-programmatic-action" docUrlSuffix="gui_Button"
+            <item id="button-simple" page="button" image="components/button/button-simple.png"/>
+            <item id="button-localized" page="button" image="components/button/button-localized.png"/>
+            <item id="button-action" page="button" image="components/button/button-action.png"/>
+            <item id="button-programmatic-action" page="button"
                   image="components/button/button-action.png"/>
-            <item id="linkbutton" docUrlSuffix="gui_LinkButton" image="components/linkbutton/linkbutton.png"/>
-            <item id="popupbutton-simple" docUrlSuffix="gui_PopupButton"
+            <item id="linkbutton" page="link-button" image="components/linkbutton/linkbutton.png"/>
+            <item id="popupbutton-simple" page="popup-button"
                   image="components/popupbutton/popupbutton-simple.png"/>
-            <item id="popupbutton-custom-layout" docUrlSuffix="gui_PopupButton"
+            <item id="popupbutton-custom-layout" page="popup-button"
                   image="components/popupbutton/popupbutton-custom-layout.png"/>
         </menu>
 
         <menu id="browserframe">
-            <item id="browserframe-classpath" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+            <item id="browserframe-classpath" page="browser-frame" splitEnabled="true"
                   image="components/browserframe/browserframe-classpath.png"/>
-            <item id="browserframe-relative" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+            <item id="browserframe-relative" page="browser-frame" splitEnabled="true"
                   image="components/browserframe/browserframe-relative.png"/>
-            <item id="browserframe-theme" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+            <item id="browserframe-theme" page="browser-frame" splitEnabled="true"
                   image="components/browserframe/browserframe-theme.png"/>
-            <item id="browserframe-url" docUrlSuffix="gui_BrowserFrame" splitEnabled="true"
+            <item id="browserframe-url" page="browser-frame" splitEnabled="true"
                   image="components/browserframe/browserframe-url.png"/>
         </menu>
 
         <menu id="calendar">
-            <item id="calendar-month" docUrlSuffix="gui_Calendar" splitEnabled="true"
+            <item id="calendar-month" page="calendar" splitEnabled="true"
                   image="components/calendar/calendar-month.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CalendarEvent.java"/>
@@ -52,14 +52,14 @@
                     <file name="io/jmix/sampler/screen/ui/components/calendar/month/calendar-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="calendar-week" docUrlSuffix="gui_Calendar" splitEnabled="true"
+            <item id="calendar-week" page="calendar" splitEnabled="true"
                   image="components/calendar/calendar-week.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CalendarEvent.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/calendar/month/calendar-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="calendar-day" docUrlSuffix="gui_Calendar" splitEnabled="true"
+            <item id="calendar-day" page="calendar" splitEnabled="true"
                   image="components/calendar/calendar-day.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CalendarEvent.java"/>
@@ -68,12 +68,12 @@
             </item>
         </menu>
 
-        <item id="capslock-indicator" docUrlSuffix="gui_CapsLockIndicator"
+        <item id="capslock-indicator" page="caps-lock-indicator"
               image="components/capslockindicator/capslockindicator.png"/>
 
         <menu id="checkbox">
-            <item id="checkbox-simple" docUrlSuffix="gui_CheckBox" image="components/checkbox/checkbox-simple.png"/>
-            <item id="checkbox-dataaware" docUrlSuffix="gui_CheckBox"
+            <item id="checkbox-simple" page="check-box" image="components/checkbox/checkbox-simple.png"/>
+            <item id="checkbox-dataaware" page="check-box"
                   image="components/checkbox/checkbox-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -82,19 +82,19 @@
         </menu>
 
         <menu id="checkboxgroup">
-            <item id="checkboxgroup-simple" docUrlSuffix="gui_CheckBoxGroup"
+            <item id="checkboxgroup-simple" page="check-box-group"
                   image="components/checkboxgroup/checkboxgroup-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="checkboxgroup-custom-options" docUrlSuffix="gui_CheckBoxGroup"
+            <item id="checkboxgroup-custom-options" page="check-box-group"
                   image="components/checkboxgroup/checkboxgroup-custom-options.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="checkboxgroup-dataaware" docUrlSuffix="gui_CheckBoxGroup"
+            <item id="checkboxgroup-dataaware" page="check-box-group"
                   image="components/checkboxgroup/checkboxgroup-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Product.java"/>
@@ -103,30 +103,30 @@
         </menu>
 
         <menu id="colorpicker">
-            <item id="colorpicker-simple" docUrlSuffix="gui_ColorPicker"
+            <item id="colorpicker-simple" page="color-picker"
                   image="components/colorpicker/colorpicker-simple.png"/>
-            <item id="colorpicker-default-caption" docUrlSuffix="gui_ColorPicker"
+            <item id="colorpicker-default-caption" page="color-picker"
                   image="components/colorpicker/colorpicker-default-caption.png"/>
-            <item id="colorpicker-dataaware" docUrlSuffix="gui_ColorPicker"
+            <item id="colorpicker-dataaware" page="color-picker"
                   image="components/colorpicker/colorpicker-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Color.java"/>
                 </otherFiles>
             </item>
-            <item id="colorpicker-tabs" docUrlSuffix="gui_ColorPicker"
+            <item id="colorpicker-tabs" page="color-picker"
                   image="components/colorpicker/colorpicker-tabs.png"/>
-            <item id="colorpicker-captions" docUrlSuffix="gui_ColorPicker"
+            <item id="colorpicker-captions" page="color-picker"
                   image="components/colorpicker/colorpicker-captions.png"/>
         </menu>
 
         <menu id="combobox">
-            <item id="combobox-simple" docUrlSuffix="gui_ComboBox" image="components/combobox/combobox-simple.png">
+            <item id="combobox-simple" page="combo-box" image="components/combobox/combobox-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="combobox-custom-options" docUrlSuffix="gui_ComboBox"
+            <item id="combobox-custom-options" page="combo-box"
                   image="components/combobox/combobox-custom-options.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -134,13 +134,13 @@
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="combobox-filter-mode" docUrlSuffix="gui_ComboBox"
+            <item id="combobox-filter-mode" page="combo-box"
                   image="components/combobox/combobox-filter-mode.png"/>
-            <item id="combobox-user-input" docUrlSuffix="gui_ComboBox"
+            <item id="combobox-user-input" page="combo-box"
                   image="components/combobox/combobox-user-input.png"/>
-            <item id="combobox-icon-provider" docUrlSuffix="gui_ComboBox"
+            <item id="combobox-icon-provider" page="combo-box"
                   image="components/combobox/combobox-icon-provider.png"/>
-            <item id="combobox-options-style-provider" docUrlSuffix="gui_ComboBox"
+            <item id="combobox-options-style-provider" page="combo-box"
                   image="components/combobox/combobox-options-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -150,7 +150,7 @@
             </item>
         </menu>
 
-        <item id="composite-component" docUrlSuffix="composite_components"
+        <item id="composite-component"
               image="components/composite/composite-component.png">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/ui/components/composite/component/StepperField.java"/>
@@ -164,17 +164,17 @@
         </item>
 
         <menu id="contexthelp">
-            <item id="contexthelp-field" docUrlSuffix="gui_attributes"
+            <item id="contexthelp-field" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-field.png"/>
-            <item id="contexthelp-field-click" docUrlSuffix="gui_attributes"
+            <item id="contexthelp-field-click" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-field-click.png"/>
-            <item id="contexthelp-form" docUrlSuffix="gui_attributes"
+            <item id="contexthelp-form" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-form.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="contexthelp-form-click" docUrlSuffix="gui_attributes"
+            <item id="contexthelp-form-click" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-form-click.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -183,9 +183,9 @@
         </menu>
 
         <menu id="currencyfield">
-            <item id="currencyfield-simple" docUrlSuffix="gui_CurrencyField"
+            <item id="currencyfield-simple"
                   image="components/currencyfield/currencyfield-simple.png"/>
-            <item id="currencyfield-annotation" docUrlSuffix="gui_CurrencyField"
+            <item id="currencyfield-annotation"
                   image="components/currencyfield/currencyfield-annotation.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Product.java"/>
@@ -194,107 +194,107 @@
         </menu>
 
         <menu id="datagrid">
-            <item id="datagrid-basic-settings" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-basic-settings" splitEnabled="true"
                   image="components/datagrid/datagrid-basic-settings.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-actions" splitEnabled="true"
                   image="components/datagrid/datagrid-actions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-selection-mode" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-selection-mode" splitEnabled="true"
                   image="components/datagrid/datagrid-selection-mode.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-frozen-columns" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-frozen-columns" splitEnabled="true"
                   image="components/datagrid/datagrid-frozen-columns.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-no-header" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-no-header" splitEnabled="true"
                   image="components/datagrid/datagrid-no-header.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-style-provider" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-style-provider" splitEnabled="true"
                   image="components/datagrid/datagrid-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/datagrid/styleprovider/datagrid-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-large-dataset" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-large-dataset" splitEnabled="true"
                   image="components/datagrid/datagrid-large-dataset.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-item-click" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-item-click" splitEnabled="true"
                   image="components/datagrid/datagrid-item-click.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-generated-column" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-generated-column" splitEnabled="true"
                   image="components/datagrid/datagrid-generated-column.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-renderer" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-renderer" splitEnabled="true"
                   image="components/datagrid/datagrid-renderer.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CountryGrowth.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-description-provider" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-description-provider" splitEnabled="true"
                   image="components/datagrid/datagrid-description-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-header-footer" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-header-footer" splitEnabled="true"
                   image="components/datagrid/datagrid-header-footer.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CountryGrowth.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/datagrid/headerfooter/datagrid-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-key-value" docUrlSuffix="gui_keyvalue_containers" splitEnabled="true"
+            <item id="datagrid-key-value" url="backoffice-ui/data" page="key-value-containers" splitEnabled="true"
                   image="components/datagrid/datagrid-key-value.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-editor" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-editor" splitEnabled="true"
                   image="components/datagrid/datagrid-editor.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-editor-actions" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-editor-actions" splitEnabled="true"
                   image="components/datagrid/datagrid-editor-actions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-editor-events" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-editor-events" splitEnabled="true"
                   image="components/datagrid/datagrid-editor-events.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-details-generator" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-details-generator" splitEnabled="true"
                   image="components/datagrid/datagrid-details-generator.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -303,7 +303,7 @@
                     <file name="io/jmix/sampler/screen/ui/components/datagrid/detailsgenerator/DataGridDetailsGeneratorService.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-aggregatable" docUrlSuffix="gui_DataGrid" splitEnabled="true"
+            <item id="datagrid-aggregatable" splitEnabled="true"
                   image="components/datagrid/datagrid-aggregatable.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -311,7 +311,7 @@
                     <file name="io/jmix/sampler/screen/ui/components/datagrid/aggregatable/DataGridCustomerGradeAggregation.java"/>
                 </otherFiles>
             </item>
-            <item id="treedatagrid-simple" docUrlSuffix="gui_TreeDataGrid" splitEnabled="true"
+            <item id="treedatagrid-simple" splitEnabled="true"
                   image="components/treedatagrid/treedatagrid-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
@@ -320,36 +320,36 @@
         </menu>
 
         <menu id="datefield">
-            <item id="datefield-simple" docUrlSuffix="gui_DateField" image="components/datefield/datefield-simple.png"/>
-            <item id="datefield-dataaware" docUrlSuffix="gui_DateField"
+            <item id="datefield-simple" page="date-field" image="components/datefield/datefield-simple.png"/>
+            <item id="datefield-dataaware" page="date-field"
                   image="components/datefield/datefield-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="datefield-format" docUrlSuffix="gui_DateField" image="components/datefield/datefield-format.png"/>
-            <item id="datefield-resolution" docUrlSuffix="gui_DateField"
+            <item id="datefield-format" page="date-field" image="components/datefield/datefield-format.png"/>
+            <item id="datefield-resolution" page="date-field"
                   image="components/datefield/datefield-resolution.png"/>
-            <item id="datefield-autofill" docUrlSuffix="gui_DateField"
+            <item id="datefield-autofill" page="date-field"
                   image="components/datefield/datefield-autofill.png"/>
         </menu>
 
         <menu id="datepicker">
-            <item id="datepicker-simple" docUrlSuffix="gui_DatePicker"
+            <item id="datepicker-simple" page="date-picker"
                   image="components/datepicker/datepicker-simple.png"/>
-            <item id="datepicker-dataaware" docUrlSuffix="gui_DatePicker"
+            <item id="datepicker-dataaware" page="date-picker"
                   image="components/datepicker/datepicker-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="datepicker-range" docUrlSuffix="gui_DatePicker"
+            <item id="datepicker-range" page="date-picker"
                   image="components/datepicker/datepicker-range.png"/>
-            <item id="datepicker-resolution" docUrlSuffix="gui_DatePicker"
+            <item id="datepicker-resolution" page="date-picker"
                   image="components/datepicker/datepicker-resolution.png"/>
         </menu>
 
-        <item id="entitycombobox-simple" docUrlSuffix="gui_EntityComboBox"
+        <item id="entitycombobox-simple" page="entity-combo-box"
               image="components/entitycombobox/entitycombobox-simple.png">
             <otherFiles>
                 <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -358,21 +358,21 @@
         </item>
 
         <menu id="entitypicker">
-            <item id="entitypicker-simple" docUrlSuffix="gui_EntityPicker"
+            <item id="entitypicker-simple" page="entity-picker"
                   image="components/entitypicker/entitypicker-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="entitypicker-actions" docUrlSuffix="gui_EntityPicker"
+            <item id="entitypicker-actions" page="entity-picker"
                   image="components/entitypicker/entitypicker-actions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="entitypicker-metaclass" docUrlSuffix="gui_EntityPicker"
+            <item id="entitypicker-metaclass" page="entity-picker"
                   image="components/entitypicker/entitypicker-metaclass.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -381,20 +381,20 @@
         </menu>
 
         <menu id="entitysuggestionfield">
-            <item id="entitysuggestionfield-dataaware" docUrlSuffix="gui_EntitySuggestionField"
+            <item id="entitysuggestionfield-dataaware" page="entity-suggestion-field"
                   image="components/entitysuggestionfield/entitysuggestionfield-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="entitysuggestionfield-metaclass" docUrlSuffix="gui_EntitySuggestionField"
+            <item id="entitysuggestionfield-metaclass" page="entity-suggestion-field"
                   image="components/entitysuggestionfield/entitysuggestionfield-metaclass.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="entitysuggestionfield-options-style-provider" docUrlSuffix="gui_EntitySuggestionField"
+            <item id="entitysuggestionfield-options-style-provider" page="entity-suggestion-field"
                   image="components/entitysuggestionfield/entitysuggestionfield-options-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -405,38 +405,38 @@
         </menu>
 
         <menu id="filter">
-            <item id="filter-multiple-conditions" docUrlSuffix="gui_Filter" splitEnabled="true"
+            <item id="filter-multiple-conditions" page="filter" splitEnabled="true"
                   image="components/filter/filter-multiple-conditions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-group-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
+            <item id="filter-group-condition" page="filter" splitEnabled="true"
                   image="components/filter/filter-group-condition.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-property-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
+            <item id="filter-property-condition" page="filter" splitEnabled="true"
                   image="components/filter/filter-property-condition.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-jpql-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
+            <item id="filter-jpql-condition" page="filter" splitEnabled="true"
                   image="components/filter/filter-jpql-condition.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-add-condition" docUrlSuffix="gui_Filter" splitEnabled="true"
+            <item id="filter-add-condition" page="filter" splitEnabled="true"
                   image="components/filter/filter-add-condition.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="filter-programmatically-defined" docUrlSuffix="gui_Filter" splitEnabled="true"
+            <item id="filter-programmatically-defined" page="filter" splitEnabled="true"
                   image="components/filter/filter-programmatically-defined.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -445,57 +445,57 @@
         </menu>
 
         <menu id="form">
-            <item id="form-simple" docUrlSuffix="gui_Form" image="components/form/form-simple.png">
+            <item id="form-simple" page="form" image="components/form/form-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="form-column" docUrlSuffix="gui_Form" image="components/form/form-column.png">
+            <item id="form-column" page="form" image="components/form/form-column.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="form-caption-position" docUrlSuffix="gui_Form" image="components/form/form-caption-position.png">
+            <item id="form-caption-position" page="form" image="components/form/form-caption-position.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="form-caption-alignment" docUrlSuffix="gui_Form"
+            <item id="form-caption-alignment" page="form"
                   image="components/form/form-caption-alignment.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="form-field" docUrlSuffix="gui_Form" image="components/form/form-field.png">
+            <item id="form-field" page="form" image="components/form/form-field.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="form-span" docUrlSuffix="gui_Form" image="components/form/form-span.png">
+            <item id="form-span" page="form" image="components/form/form-span.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
         </menu>
 
-        <menu id="icons">
-            <item id="icons-all" docUrlSuffix="gui_icons" splitEnabled="true" image="components/icons/icons-all.png"/>
-            <item id="icons-simple" docUrlSuffix="gui_icons" image="components/icons/icons-simple.png"/>
+        <menu id="icons" url="backoffice-ui">
+            <item id="icons-all" page="icons" splitEnabled="true" image="components/icons/icons-all.png"/>
+            <item id="icons-simple" page="icons" image="components/icons/icons-simple.png"/>
         </menu>
 
         <menu id="image">
-            <item id="image-url" docUrlSuffix="gui_Image" image="components/image/image-url.png"/>
-            <item id="image-relative" docUrlSuffix="gui_Image" image="components/image/image-relative.png"/>
-            <item id="image-theme" docUrlSuffix="gui_Image" image="components/image/image-theme.png"/>
-            <item id="image-classpath" docUrlSuffix="gui_Image" image="components/image/image-classpath.png"/>
-            <item id="image-stream" docUrlSuffix="gui_Image" image="components/image/image-stream.png"/>
-            <item id="image-scale" docUrlSuffix="gui_Image" image="components/image/image-scale.png"/>
-            <item id="image-click" docUrlSuffix="gui_Image" image="components/image/image-click.png"/>
+            <item id="image-url" page="image" image="components/image/image-url.png"/>
+            <item id="image-relative" page="image" image="components/image/image-relative.png"/>
+            <item id="image-theme" page="image" image="components/image/image-theme.png"/>
+            <item id="image-classpath" page="image" image="components/image/image-classpath.png"/>
+            <item id="image-stream" page="image" image="components/image/image-stream.png"/>
+            <item id="image-scale" page="image" image="components/image/image-scale.png"/>
+            <item id="image-click" page="image" image="components/image/image-click.png"/>
         </menu>
 
-        <item id="java-script-component" docUrlSuffix="jsComponent"
+        <item id="java-script-component"
               image="components/javascript/java-script-component.png">
             <otherFiles>
                 <file name="VAADIN/timepicker/time-picker-connector.js"/>
@@ -503,19 +503,19 @@
         </item>
 
         <menu id="label">
-            <item id="label-simple" docUrlSuffix="gui_Label" image="components/label/label-simple.png"/>
-            <item id="label-dataaware" docUrlSuffix="gui_Label" image="components/label/label-dataaware.png">
+            <item id="label-simple" page="label" image="components/label/label-simple.png"/>
+            <item id="label-dataaware" page="label" image="components/label/label-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="label-html" docUrlSuffix="gui_Label" image="components/label/label-html.png"/>
-            <item id="label-formatter" docUrlSuffix="gui_Label" image="components/label/label-formatter.png"/>
+            <item id="label-html" page="label" image="components/label/label-html.png"/>
+            <item id="label-formatter" page="label" image="components/label/label-formatter.png"/>
         </menu>
 
-        <item id="link-simple" docUrlSuffix="gui_Link" image="components/link/link-simple.png"/>
+        <item id="link-simple" page="link" image="components/link/link-simple.png"/>
 
-        <item id="multiselectlist-simple" docUrlSuffix="gui_MultiSelectList"
+        <item id="multiselectlist-simple" page="multi-select-list"
               image="components/multiselectlist/multiselectlist-simple.png">
             <otherFiles>
                 <file name="io/jmix/sampler/entity/Product.java"/>
@@ -523,55 +523,55 @@
         </item>
 
         <menu id="popupview">
-            <item id="popupview-closing" docUrlSuffix="gui_PopupView"
+            <item id="popupview-closing" page="popup-view"
                   image="components/popupview/popupview-closing.png"/>
-            <item id="popupview-opening" docUrlSuffix="gui_PopupView"
+            <item id="popupview-opening" page="popup-view"
                   image="components/popupview/popupview-opening.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="popupview-listener" docUrlSuffix="gui_PopupView"
+            <item id="popupview-listener" page="popup-view"
                   image="components/popupview/popupview-listener.png"/>
-            <item id="popupview-minimized-value" docUrlSuffix="gui_PopupView"
+            <item id="popupview-minimized-value" page="popup-view"
                   image="components/popupview/popupview-minimized-value.png"/>
         </menu>
 
         <menu id="progressbar">
-            <item id="progressbar-standard" docUrlSuffix="gui_ProgressBar"
+            <item id="progressbar-standard" page="progress-bar"
                   image="components/progressbar/progressbar-standard.png"/>
-            <item id="progressbar-indeterminate" docUrlSuffix="gui_ProgressBar"
+            <item id="progressbar-indeterminate" page="progress-bar"
                   image="components/progressbar/progressbar-indeterminate.png"/>
         </menu>
 
         <menu id="propertyfilter">
-            <item id="propertyfilter-simple" docUrlSuffix="property-filter" splitEnabled="true"
+            <item id="propertyfilter-simple" page="property-filter" splitEnabled="true"
                   image="components/propertyfilter/propertyfilter-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="propertyfilter-operationeditable" docUrlSuffix="property-filter" splitEnabled="true"
+            <item id="propertyfilter-operationeditable" page="property-filter" splitEnabled="true"
                   image="components/propertyfilter/propertyfilter-operationeditable.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="propertyfilter-keyvalue" docUrlSuffix="property-filter" splitEnabled="true"
+            <item id="propertyfilter-keyvalue" page="property-filter" splitEnabled="true"
                   image="components/propertyfilter/propertyfilter-keyvalue.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="propertyfilter-customfield" docUrlSuffix="property-filter" splitEnabled="true"
+            <item id="propertyfilter-customfield" page="property-filter" splitEnabled="true"
                   image="components/propertyfilter/propertyfilter-customfield.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="propertyfilter-dateinterval" docUrlSuffix="property-filter" splitEnabled="true"
+            <item id="propertyfilter-dateinterval" page="property-filter" splitEnabled="true"
                   image="components/propertyfilter/propertyfilter-dateinterval.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
@@ -580,19 +580,19 @@
         </menu>
 
         <menu id="radiobuttongroup">
-            <item id="radiobuttongroup-simple" docUrlSuffix="gui_RadioButtonGroup"
+            <item id="radiobuttongroup-simple" page="radio-button-group"
                   image="components/radiobuttongroup/radiobuttongroup-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="radiobuttongroup-custom-options" docUrlSuffix="gui_RadioButtonGroup"
+            <item id="radiobuttongroup-custom-options" page="radio-button-group"
                   image="components/radiobuttongroup/radiobuttongroup-custom-options.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="radiobuttongroup-dataaware" docUrlSuffix="gui_RadioButtonGroup"
+            <item id="radiobuttongroup-dataaware" page="radio-button-group"
                   image="components/radiobuttongroup/radiobuttongroup-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Product.java"/>
@@ -601,7 +601,7 @@
         </menu>
 
         <menu id="relatedentities">
-            <item id="relatedentities-simple" docUrlSuffix="gui_RelatedEntities"
+            <item id="relatedentities-simple"
                   image="components/relatedentities/relatedentities-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
@@ -609,7 +609,7 @@
                     <file name="io/jmix/sampler/entity/OrderItem.java"/>
                 </otherFiles>
             </item>
-            <item id="relatedentities-exclude" docUrlSuffix="gui_RelatedEntities"
+            <item id="relatedentities-exclude"
                   image="components/relatedentities/relatedentities-exclude.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Order.java"/>
@@ -619,19 +619,19 @@
         </menu>
 
         <menu id="singleselectlist">
-            <item id="singleselectlist-simple" docUrlSuffix="gui_SingleSelectList"
+            <item id="singleselectlist-simple" page="single-select-list"
                   image="components/singleselectlist/singleselectlist-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="singleselectlist-custom-options" docUrlSuffix="gui_SingleSelectList"
+            <item id="singleselectlist-custom-options" page="single-select-list"
                   image="components/singleselectlist/singleselectlist-custom-options.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="singleselectlist-dataaware" docUrlSuffix="gui_SingleSelectList"
+            <item id="singleselectlist-dataaware" page="single-select-list"
                   image="components/singleselectlist/singleselectlist-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Product.java"/>
@@ -639,16 +639,16 @@
             </item>
         </menu>
 
-        <item id="slider-simple" docUrlSuffix="gui_Slider" image="components/slider/slider-simple.png"/>
+        <item id="slider-simple" image="components/slider/slider-simple.png"/>
 
         <menu id="sourcecodeeditor">
-            <item id="sourcecodeeditor-simple" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+            <item id="sourcecodeeditor-simple" splitEnabled="true"
                   image="components/sourcecodeeditor/sourcecodeeditor-simple.png"/>
-            <item id="sourcecodeeditor-mode" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+            <item id="sourcecodeeditor-mode" splitEnabled="true"
                   image="components/sourcecodeeditor/sourcecodeeditor-mode.png"/>
-            <item id="sourcecodeeditor-tab" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+            <item id="sourcecodeeditor-tab" splitEnabled="true"
                   image="components/sourcecodeeditor/sourcecodeeditor-tab.png"/>
-            <item id="sourcecodeeditor-suggester" docUrlSuffix="gui_SourceCodeEditor" splitEnabled="true"
+            <item id="sourcecodeeditor-suggester" splitEnabled="true"
                   image="components/sourcecodeeditor/sourcecodeeditor-suggester.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -657,19 +657,19 @@
         </menu>
 
         <menu id="suggestionfield">
-            <item id="suggestionfield-dataaware" docUrlSuffix="gui_SuggestionField"
+            <item id="suggestionfield-dataaware" page="suggestion-field"
                   image="components/suggestionfield/suggestionfield-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="suggestionfield-option-type" docUrlSuffix="gui_SuggestionField"
+            <item id="suggestionfield-option-type" page="suggestion-field"
                   image="components/suggestionfield/suggestionfield-option-type.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/SendingStatus.java"/>
                 </otherFiles>
             </item>
-            <item id="suggestionfield-options-style-provider" docUrlSuffix="gui_SuggestionField"
+            <item id="suggestionfield-options-style-provider" page="suggestion-field"
                   image="components/suggestionfield/suggestionfield-options-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -679,33 +679,33 @@
         </menu>
 
         <menu id="table">
-            <item id="table-simple" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-simple" splitEnabled="true"
                   image="components/table/table-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="table-max-length" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-max-length" splitEnabled="true"
                   image="components/table/table-max-length.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="table-action" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-action" splitEnabled="true"
                   image="components/table/table-action.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-editable" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-editable" splitEnabled="true"
                   image="components/table/table-editable.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-formatter" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-formatter" splitEnabled="true"
                   image="components/table/table-formatter.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -713,32 +713,32 @@
                     <file name="io/jmix/sampler/screen/ui/components/table/formatter/UppercaseFormatter.java"/>
                 </otherFiles>
             </item>
-            <item id="table-icon-provider" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-icon-provider" splitEnabled="true"
                   image="components/table/table-icon-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-style-provider" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-style-provider" splitEnabled="true"
                   image="components/table/table-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/table/styleprovider/table-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="table-item-click" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-item-click" splitEnabled="true"
                   image="components/table/table-item-click.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-generated-column" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-generated-column" splitEnabled="true"
                   image="components/table/table-generated-column.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-aggregatable" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-aggregatable" splitEnabled="true"
                   image="components/table/table-aggregatable.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -746,33 +746,33 @@
                     <file name="io/jmix/sampler/screen/ui/components/table/aggregatable/TableCustomerGradeAggregation.java"/>
                 </otherFiles>
             </item>
-            <item id="table-no-header" docUrlSuffix="gui_Table" splitEnabled="true"
+            <item id="table-no-header" splitEnabled="true"
                   image="components/table/table-no-header.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-key-value" docUrlSuffix="gui_keyvalue_containers" splitEnabled="true"
+            <item id="table-key-value" url="backoffice-ui/data" page="key-value-containers" splitEnabled="true"
                   image="components/table/table-key-value.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="grouptable-simple" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+            <item id="grouptable-simple" splitEnabled="true"
                   image="components/grouptable/grouptable-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="grouptable-style-provider" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+            <item id="grouptable-style-provider" splitEnabled="true"
                   image="components/grouptable/grouptable-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/grouptable/stylepovider/grouptable-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="grouptable-aggregatable" docUrlSuffix="gui_GroupTable" splitEnabled="true"
+            <item id="grouptable-aggregatable" splitEnabled="true"
                   image="components/grouptable/grouptable-aggregatable.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Employee.java"/>
@@ -780,7 +780,7 @@
                     <file name="io/jmix/sampler/entity/Experience.java"/>
                 </otherFiles>
             </item>
-            <item id="treetable-simple" docUrlSuffix="gui_TreeTable" splitEnabled="true"
+            <item id="treetable-simple" splitEnabled="true"
                   image="components/treetable/treetable-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
@@ -789,55 +789,59 @@
         </menu>
 
         <menu id="textarea">
-            <item id="textarea-simple" docUrlSuffix="gui_TextArea"
+            <item id="textarea-simple" page="text-area"
                   image="components/textarea/textarea-simple.png"/>
-            <item id="resizabletextarea-simple" docUrlSuffix="gui_ResizableTextArea"
+            <item id="resizabletextarea-simple" page="gui_ResizableTextArea"
                   image="components/resizabletextarea/resizabletextarea-simple.png"/>
-            <item id="richtextarea-simple" docUrlSuffix="gui_RichTextArea"
+            <item id="richtextarea-simple" page="gui_RichTextArea"
                   image="components/richtextarea/richtextarea-simple.png"/>
         </menu>
 
         <menu id="textfield">
-            <item id="textfield-simple" docUrlSuffix="gui_TextField" image="components/textfield/textfield-simple.png"/>
-            <item id="textfield-dataaware" docUrlSuffix="gui_TextField"
+            <item id="textfield-simple" page="text-field"
+                  image="components/textfield/textfield-simple.png"/>
+            <item id="textfield-dataaware" page="text-field"
                   image="components/textfield/textfield-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="textfield-datatype" docUrlSuffix="gui_TextField"
+            <item id="textfield-datatype" page="text-field"
                   image="components/textfield/textfield-datatype.png"/>
-            <item id="textfield-validator" docUrlSuffix="gui_TextField"
+            <item id="textfield-validator" page="text-field"
                   image="components/textfield/textfield-validator.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/components/textfield/validator/PositiveIntegerValidator.java"/>
                 </otherFiles>
             </item>
-            <item id="textfield-trim" docUrlSuffix="gui_TextField" image="components/textfield/textfield-trim.png"/>
-            <item id="textfield-enter-press" docUrlSuffix="gui_TextField"
+            <item id="textfield-trim" page="text-field"
+                  image="components/textfield/textfield-trim.png"/>
+            <item id="textfield-enter-press" page="text-field"
                   image="components/textfield/textfield-enter-press.png"/>
-            <item id="textfield-text-change" docUrlSuffix="gui_TextField"
+            <item id="textfield-text-change" page="text-field"
                   image="components/textfield/textfield-text-change.png"/>
-            <item id="textfield-text-change-event-mode" docUrlSuffix="gui_TextField"
+            <item id="textfield-text-change-event-mode" page="text-field"
                   image="components/textfield/textfield-text-change-event-mode.png"/>
-            <item id="maskedfield-simple" docUrlSuffix="gui_MaskedField"
+            <item id="maskedfield-simple" page="gui_MaskedField"
                   image="components/maskedfield/maskedfield-simple.png"/>
-            <item id="passwordfield-simple" docUrlSuffix="gui_PasswordField"
+            <item id="passwordfield-simple" page="gui_PasswordField"
                   image="components/passwordfield/passwordfield-simple.png"/>
         </menu>
 
         <menu id="timefield">
-            <item id="timefield-simple" docUrlSuffix="gui_TimeField" image="components/timefield/timefield-simple.png"/>
-            <item id="timefield-dataaware" docUrlSuffix="gui_TimeField"
+            <item id="timefield-simple" page="gui_TimeField"
+                  image="components/timefield/timefield-simple.png"/>
+            <item id="timefield-dataaware" page="gui_TimeField"
                   image="components/timefield/timefield-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
             </item>
-            <item id="timefield-format" docUrlSuffix="gui_TimeField" image="components/timefield/timefield-format.png"/>
-            <item id="timefield-resolution" docUrlSuffix="gui_TimeField"
+            <item id="timefield-format" page="gui_TimeField"
+                  image="components/timefield/timefield-format.png"/>
+            <item id="timefield-resolution" page="gui_TimeField"
                   image="components/timefield/timefield-resolution.png"/>
-            <item id="timefield-time-mode" docUrlSuffix="gui_TimeField"
+            <item id="timefield-time-mode" page="gui_TimeField"
                   image="components/timefield/timefield-time-mode.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
@@ -845,55 +849,18 @@
             </item>
         </menu>
 
-        <!-- todo Haulmont/jmix-sampler#19
-        <menu id="tokenlist">
-            <item id="tokenlist-simple" docUrlSuffix="gui_TokenList" image="components/tokenlist/tokenlist-simple.png">
-                <otherFiles>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
-                    <file name="io/jmix/sampler/entity/OrderItem.java"/>
-                </otherFiles>
-            </item>
-            <item id="tokenlist-simple-mode" docUrlSuffix="gui_TokenList"
-                  image="components/tokenlist/tokenlist-simple-mode.png">
-                <otherFiles>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
-                    <file name="io/jmix/sampler/entity/OrderItem.java"/>
-                    <file name="io/jmix/sampler/screen/entity/orderitem/OrderItemBrowse.java"/>
-                </otherFiles>
-            </item>
-            <item id="tokenlist-clear" docUrlSuffix="gui_TokenList" image="components/tokenlist/tokenlist-clear.png">
-                <otherFiles>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
-                    <file name="io/jmix/sampler/entity/OrderItem.java"/>
-                </otherFiles>
-            </item>
-            <item id="tokenlist-position" docUrlSuffix="gui_TokenList"
-                  image="components/tokenlist/tokenlist-position.png">
-                <otherFiles>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
-                    <file name="io/jmix/sampler/entity/OrderItem.java"/>
-                </otherFiles>
-            </item>
-            <item id="tokenlist-lookup" docUrlSuffix="gui_TokenList" image="components/tokenlist/tokenlist-lookup.png">
-                <otherFiles>
-                    <file name="io/jmix/sampler/entity/Order.java"/>
-                    <file name="io/jmix/sampler/entity/OrderItem.java"/>
-                </otherFiles>
-            </item>
-        </menu>-->
-
         <menu id="tree">
-            <item id="tree-simple" docUrlSuffix="gui_Tree" image="components/tree/tree-simple.png">
+            <item id="tree-simple" image="components/tree/tree-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
             </item>
-            <item id="tree-icon-provider" docUrlSuffix="gui_Tree" image="components/tree/tree-icon-provider.png">
+            <item id="tree-icon-provider" image="components/tree/tree-icon-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
             </item>
-            <item id="tree-item-click" docUrlSuffix="gui_Tree" image="components/tree/tree-item-click.png">
+            <item id="tree-item-click" image="components/tree/tree-item-click.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
@@ -901,20 +868,20 @@
         </menu>
 
         <menu id="twincolumn">
-            <item id="twincolumn-simple" docUrlSuffix="gui_TwinColumn"
+            <item id="twincolumn-simple" page="twin-column"
                   image="components/twincolumn/twincolumn-simple.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="twincolumn-option-style-provider" docUrlSuffix="gui_TwinColumn"
+            <item id="twincolumn-option-style-provider" page="twin-column"
                   image="components/twincolumn/twincolumn-option-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/screen/ui/components/twincolumn/optionstyleprovider/twincolumn-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="twincolumn-custom-options" docUrlSuffix="gui_TwinColumn"
+            <item id="twincolumn-custom-options" page="twin-column"
                   image="components/twincolumn/twincolumn-custom-options.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/CustomerGrade.java"/>
@@ -923,52 +890,55 @@
         </menu>
 
         <menu id="valuepicker">
-            <item id="valuepicker-actions" docUrlSuffix="gui_ValuePicker"
+            <item id="valuepicker-actions" page="value-picker"
                   image="components/valuepicker/valuepicker-actions.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="valuepicker-editable-field" docUrlSuffix="gui_ValuePicker"
+            <item id="valuepicker-editable-field" page="value-picker"
                   image="components/valuepicker/valuepicker-editable-field.png">
             </item>
         </menu>
 
         <menu id="valuespicker">
-            <item id="valuespicker-simple" docUrlSuffix="gui_ValuesPicker"
+            <item id="valuespicker-simple" page="values-picker"
                   image="components/valuespicker/valuespicker-simple.png">
             </item>
-            <item id="valuespicker-enum" docUrlSuffix="gui_ValuesPicker"
+            <item id="valuespicker-enum" page="values-picker"
                   image="components/valuespicker/valuespicker-enum.png">
             </item>
-            <item id="valuespicker-entity" docUrlSuffix="gui_ValuesPicker"
+            <item id="valuespicker-entity" page="values-picker"
                   image="components/valuespicker/valuespicker-entity.png">
             </item>
         </menu>
     </menu>
 
-    <menu id="containers" image="mainmenu/containers.svg">
+    <menu id="containers" image="mainmenu/containers.svg" url="backoffice-ui/vcl/containers">
         <menu id="accordion">
-            <item id="accordion-simple" docUrlSuffix="gui_Accordion" image="containers/accordion/accordion-simple.svg">
+            <item id="accordion-simple" page="accordion" splitEnabled="true"
+                  image="containers/accordion/accordion-simple.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="accordion-lazy" docUrlSuffix="gui_Accordion" image="containers/accordion/accordion-simple.svg"/>
+            <item id="accordion-lazy" page="accordion" image="containers/accordion/accordion-simple.svg"/>
         </menu>
+
         <menu id="boxlayout">
-            <item id="hbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/hbox-simple.svg"/>
-            <item id="vbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/vbox-simple.svg"/>
-            <item id="flowbox-simple" docUrlSuffix="gui_BoxLayout" image="containers/boxlayout/flowbox-simple.svg"/>
+            <item id="hbox-simple" page="box-layout" image="containers/boxlayout/hbox-simple.svg"/>
+            <item id="vbox-simple" page="box-layout" image="containers/boxlayout/vbox-simple.svg"/>
+            <item id="flowbox-simple" page="box-layout" image="containers/boxlayout/flowbox-simple.svg"/>
         </menu>
+
         <menu id="buttonspanel">
-            <item id="buttonspanel-table" docUrlSuffix="gui_ButtonsPanel"
+            <item id="buttonspanel-table" page="buttons-panel"
                   image="containers/buttonspanel/buttonspanel-table.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="buttonspanel-always-visible" docUrlSuffix="gui_ButtonsPanel"
+            <item id="buttonspanel-always-visible" page="buttons-panel"
                   image="containers/buttonspanel/buttonspanel-table.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/buttonspanel/visible/ButtonsPanelVisible.java"/>
@@ -979,160 +949,173 @@
                 </otherFiles>
             </item>
         </menu>
-        <item id="csslayout-responsive" docUrlSuffix="gui_CssLayout"
+
+        <item id="csslayout-responsive" page="css-layout"
               image="containers/csslayout/csslayout-responsive.svg">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/ui/containers/csslayout/csslayout-style.scss"/>
             </otherFiles>
         </item>
-        <item id="drawer-sample" docUrlSuffix="gui_Drawer" image="containers/drawer/drawer.svg">
+
+        <item id="drawer-sample" page="drawer" image="containers/drawer/drawer.svg">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/ui/containers/drawer/drawer-style.scss"/>
             </otherFiles>
         </item>
-        <item id="fragment-simple" docUrlSuffix="screen_controllers" image="containers/fragment/fragment-simple.svg">
+
+        <item id="fragment-simple" url="backoffice-ui" page="using-fragments"
+              image="containers/fragment/fragment-simple.svg">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/ui/components/button/simple/ButtonSimpleSample.java"/>
                 <file name="io/jmix/sampler/screen/ui/components/button/simple/button-simple.xml"/>
             </otherFiles>
         </item>
+
         <menu id="gridlayout">
-            <item id="gridlayout-simple" docUrlSuffix="gui_GridLayout"
+            <item id="gridlayout-simple" page="grid-layout"
                   image="containers/gridlayout/gridlayout-simple.svg"/>
-            <item id="gridlayout-columns-flex" docUrlSuffix="gui_GridLayout"
+            <item id="gridlayout-columns-flex" page="grid-layout"
                   image="containers/gridlayout/gridlayout-simple.svg"/>
-            <item id="gridlayout-rows-flex" docUrlSuffix="gui_GridLayout"
+            <item id="gridlayout-rows-flex" page="grid-layout"
                   image="containers/gridlayout/gridlayout-simple.svg"/>
-            <item id="gridlayout-span" docUrlSuffix="gui_GridLayout"
+            <item id="gridlayout-span" page="grid-layout"
                   image="containers/gridlayout/gridlayout-simple.svg"/>
         </menu>
+
         <menu id="groupboxlayout">
-            <item id="groupboxlayout-simple" docUrlSuffix="gui_GroupBoxLayout"
+            <item id="groupboxlayout-simple" page="group-box-layout"
                   image="containers/groupboxlayout/groupboxlayout-simple.svg"/>
-            <item id="groupboxlayout-collapsable" docUrlSuffix="gui_GroupBoxLayout"
+            <item id="groupboxlayout-collapsable" page="group-box-layout"
                   image="containers/groupboxlayout/groupboxlayout-simple.svg"/>
         </menu>
+
         <menu id="htmlboxlayout">
-            <item id="htmlboxlayout-simple" docUrlSuffix="gui_HtmlBoxLayout"
+            <item id="htmlboxlayout-simple" page="html-box-layout"
                   image="containers/htmlboxlayout/htmlboxlayout-simple.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/htmlboxlayout/simple/html-layout.html"/>
                     <file name="io/jmix/sampler/screen/ui/containers/htmlboxlayout/simple/htmlboxlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="htmlboxlayout-template" docUrlSuffix="gui_HtmlBoxLayout"
+            <item id="htmlboxlayout-template" page="html-box-layout"
                   image="containers/htmlboxlayout/htmlboxlayout-simple.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/htmlboxlayout/simple/htmlboxlayout-style.scss"/>
                 </otherFiles>
             </item>
         </menu>
+
         <menu id="responsivegridlayout">
-            <item id="responsivegridlayout-equal-width" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-equal-width" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/equalwidth/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-one-column-width" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-one-column-width" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/onecolumnwidth/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-variable-width" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-variable-width" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/variablewidth/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-breakpoints" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-breakpoints" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/breakpoints/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-row-columns" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-row-columns" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/rowcolumns/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-row-vertical-alignment" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-row-vertical-alignment" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/rowverticalalignment/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-column-vertical-alignment" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-column-vertical-alignment" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/columnverticalalignment/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-horizontal-alignment" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-horizontal-alignment" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/horizontalalignment/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-order" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-order" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/order/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-offset" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-offset" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/offset/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="responsivegridlayout-container-type" docUrlSuffix="gui_ResponsiveGridLayout"
+            <item id="responsivegridlayout-container-type" page="responsive-grid-layout"
                   image="containers/responsivegridlayout/responsivegridlayout.svg">
                 <otherFiles>
                     <file name="io/jmix/sampler/screen/ui/containers/responsivegridlayout/containertype/responsivegridlayout-style.scss"/>
                 </otherFiles>
             </item>
         </menu>
-        <item id="scrollboxlayout-simple" docUrlSuffix="gui_ScrollBoxLayout"
+
+        <item id="scrollboxlayout-simple" page="scroll-box-layout"
               image="containers/scrollboxlayout/scrollboxlayout-simple.svg"/>
+
         <menu id="splitpanel">
-            <item id="splitpanel-simple" docUrlSuffix="gui_SplitPanel"
+            <item id="splitpanel-simple" page="split-panel"
                   image="containers/splitpanel/splitpanel-simple.svg"/>
-            <item id="splitpanel-dockable" docUrlSuffix="gui_SplitPanel"
+            <item id="splitpanel-dockable" page="split-panel"
                   image="containers/splitpanel/splitpanel-simple.svg"/>
-            <item id="splitpanel-position" docUrlSuffix="gui_SplitPanel"
+            <item id="splitpanel-position" page="split-panel"
                   image="containers/splitpanel/splitpanel-simple.svg"/>
         </menu>
+
         <menu id="tabsheet">
-            <item id="tabsheet-simple" docUrlSuffix="gui_TabSheet" image="containers/tabsheet/tabsheet-simple.svg"/>
-            <item id="tabsheet-lazy" docUrlSuffix="gui_TabSheet" image="containers/tabsheet/tabsheet-simple.svg"/>
+            <item id="tabsheet-simple" page="tab-sheet" image="containers/tabsheet/tabsheet-simple.svg"/>
+            <item id="tabsheet-lazy" page="tab-sheet" image="containers/tabsheet/tabsheet-simple.svg"/>
         </menu>
-        <item id="layout-click" docUrlSuffix="gui_BoxLayout" image="containers/layoutclick/layout-click.png"/>
-        <item id="layout-shortcut" docUrlSuffix="gui_BoxLayout" image="containers/layoutshortcut/layout-shortcut.png"/>
+
+        <item id="layout-click" page="box-layout" image="containers/layoutclick/layout-click.png"/>
+
+        <item id="layout-shortcut" page="box-layout" image="containers/layoutshortcut/layout-shortcut.png"/>
     </menu>
 
-    <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg">
+    <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg" url="backoffice-ui">
         <menu id="dialogs">
-            <item id="message-dialog" docUrlSuffix="gui_dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
-            <item id="option-dialog" docUrlSuffix="gui_dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
-            <item id="input-dialog" docUrlSuffix="gui_dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
+            <item id="message-dialog" page="dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
+            <item id="option-dialog" page="dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
+            <item id="input-dialog" page="dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
         </menu>
 
         <menu id="notifications" image="mainmenu/dialogsAndNotifications.svg">
-            <item id="notification-type" docUrlSuffix="gui_notifications" image="mainmenu/dialogsAndNotifications.svg"/>
-            <item id="notification-position" docUrlSuffix="gui_notifications"
+            <item id="notification-type" page="notifications" image="mainmenu/dialogsAndNotifications.svg"/>
+            <item id="notification-position" page="notifications"
                   image="mainmenu/dialogsAndNotifications.svg"/>
         </menu>
     </menu>
 
     <menu id="facets" image="mainmenu/dialogsAndNotifications.svg">
-        <item id="facet-clipboard-trigger" docUrlSuffix="gui_ClipboardTrigger"
+        <item id="facet-clipboard-trigger"
               image="facets/facet-clipboard-trigger.png"/>
-        <item id="facet-dialog" docUrlSuffix="gui_facets" image="facets/facet-dialog.png"/>
-        <item id="facet-notification" docUrlSuffix="gui_facets" image="facets/facet-notification.png"/>
-        <item id="facet-screen" docUrlSuffix="gui_facets" image="facets/facet-screen.png">
+        <item id="facet-dialog" image="facets/facet-dialog.png"/>
+        <item id="facet-notification" image="facets/facet-notification.png"/>
+        <item id="facet-screen" image="facets/facet-screen.png">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/entity/customer/customer-browse.xml"/>
                 <file name="io/jmix/sampler/screen/entity/customer/CustomerBrowse.java"/>
@@ -1140,7 +1123,7 @@
                 <file name="io/jmix/sampler/screen/entity/customer/CustomerEdit.java"/>
             </otherFiles>
         </item>
-        <item id="facet-timer" docUrlSuffix="gui_facets" image="facets/facet-timer.png"/>
+        <item id="facet-timer" image="facets/facet-timer.png"/>
     </menu>
 
     <menu id="predefinedstyles" image="mainmenu/predefinedStyles.svg">
