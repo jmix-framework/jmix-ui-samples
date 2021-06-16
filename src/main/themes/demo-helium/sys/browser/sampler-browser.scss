@@ -16,4 +16,13 @@
       border-radius: $v-border-radius / 2;
     }
   }
+
+  &.dark {
+    .description-box {
+      code {
+        color: #f9f2f4;
+        background-color: #354455;
+      }
+    }
+  }
 }

@@ -58,12 +58,12 @@
                            align="MIDDLE_LEFT"
                            stylename="bold"
                            value="msg://theme.caption"/>
-                    <comboBox id="themeComboBox"
+                    <comboBox id="themeSelector"
                               align="MIDDLE_LEFT"
                               nullOptionVisible="false"
                               stylename="borderless"
                               textInputAllowed="false"
-                              width="95px"/>
+                              width="130px"/>
 
                     <label id="spacer"/>
 
@@ -71,7 +71,7 @@
                            align="MIDDLE_RIGHT"
                            stylename="bold"
                            value="msg://locales.caption"/>
-                    <comboBox id="localesComboBox"
+                    <comboBox id="localeSelector"
                               align="MIDDLE_RIGHT"
                               nullOptionVisible="false"
                               stylename="borderless"

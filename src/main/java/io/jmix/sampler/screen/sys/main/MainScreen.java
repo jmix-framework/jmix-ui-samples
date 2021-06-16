@@ -16,6 +16,8 @@
 
 package io.jmix.sampler.screen.sys.main;
 
+import com.google.common.base.Strings;
+import com.vaadin.server.Page;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.MessageTools;
 import io.jmix.core.Messages;
@@ -36,17 +38,17 @@ import io.jmix.ui.navigation.Route;
 import io.jmix.ui.navigation.UrlRouting;
 import io.jmix.ui.screen.*;
 import io.jmix.ui.settings.UserSettingsTools;
-import io.jmix.ui.theme.ThemeConstantsRepository;
+import io.jmix.ui.theme.ThemeVariantsManager;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @Route(path = "main")
 @UiDescriptor("main-screen.xml")
@@ -68,8 +70,6 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     @Autowired
     protected UrlRouting urlRouting;
     @Autowired
-    protected ThemeConstantsRepository themeConstantsRepository;
-    @Autowired
     protected UserSettingsTools userSettingsTools;
     @Autowired
     protected ApplicationContext applicationContext;
@@ -85,11 +85,13 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     @Autowired
     protected SplitPanel mainSplit;
     @Autowired
-    protected ComboBox<Locale> localesComboBox;
+    protected ComboBox<Locale> localeSelector;
     @Autowired
-    protected ComboBox<String> themeComboBox;
+    protected ComboBox<Theme> themeSelector;
     @Autowired
     protected MainDashboardFragment dashboardFragment;
+    @Autowired
+    protected ThemeVariantsManager themeVariantsManager;
 
     protected List<SideMenu.MenuItem> foundItems = new ArrayList<>();
     protected List<String> parentListIdsToExpand = new ArrayList<>();
@@ -154,19 +156,19 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
             return;
         }
 
-        localesComboBox.setOptionsMap(messageTools.getAvailableLocalesMap());
-        localesComboBox.setValue(ui.getLocale());
+        localeSelector.setOptionsMap(messageTools.getAvailableLocalesMap());
+        localeSelector.setValue(ui.getLocale());
 
-        localesComboBox.setVisible(uiProperties.isLocaleSelectVisible());
+        localeSelector.setVisible(uiProperties.isLocaleSelectVisible());
 
-        localesComboBox.addValueChangeListener(e -> {
+        localeSelector.addValueChangeListener(e -> {
             Locale selectedLocale = e.getValue();
             if (selectedLocale != null) {
                 updateLocale(ui, selectedLocale);
             }
         });
 
-        localesComboBox.setOptionStyleProvider(locale ->
+        localeSelector.setOptionStyleProvider(locale ->
                 locale.equals(ui.getLocale()) ? "selected-locale" : null
         );
     }
@@ -183,30 +185,73 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
     }
 
     protected void initThemes() {
-        Map<String, String> availableThemes = themeConstantsRepository.getAvailableThemes().stream()
-                .collect(Collectors.toMap(theme -> StringUtils.substringAfter(theme, "demo-"), theme -> theme));
-        themeComboBox.setOptionsMap(availableThemes);
+        List<Theme> availableThemes = Arrays.asList(
+                new Theme("demo-helium", "helium-light", "light"),
+                new Theme("demo-helium", "helium-dark", "dark"),
+                new Theme("demo-halo", "halo"),
+                new Theme("demo-hover", "hover")
+        );
 
-        String userAppTheme = userSettingsTools.loadTheme();
-        themeComboBox.setValue(userAppTheme);
+        themeSelector.setOptionsList(availableThemes);
 
-        themeComboBox.addValueChangeListener(valueChangeEvent -> {
+        String userTheme = userSettingsTools.loadTheme();
+        String userThemeMode = getUserThemeMode();
+        themeSelector.setValue(
+                availableThemes.stream()
+                        .filter(theme ->
+                                theme.getTheme().equals(userTheme)
+                                        && (theme.getMode() == null
+                                        || theme.getMode().equals(userThemeMode)))
+                        .findFirst()
+                        .orElse(availableThemes.get(0))
+        );
+
+        themeSelector.addValueChangeListener(valueChangeEvent -> {
             AppUI ui = AppUI.getCurrent();
-            String selectedTheme = valueChangeEvent.getValue();
+            Theme selectedTheme = valueChangeEvent.getValue();
             if (ui != null && selectedTheme != null) {
                 RedirectHandler redirectHandler = ui.getUrlChangeHandler().getRedirectHandler();
                 if (redirectHandler != null) {
                     redirectHandler.schedule(urlRouting.getState());
                 }
 
-                userSettingsTools.saveAppWindowTheme(selectedTheme);
-                ui.setTheme(selectedTheme);
-                ((SamplerApp) ui.getApp()).applyUserTheme(selectedTheme);
+                String themeName = selectedTheme.getTheme();
+                userSettingsTools.saveAppWindowTheme(themeName);
+                ui.setTheme(themeName);
+                ((SamplerApp) ui.getApp()).applyUserTheme(themeName);
+
+                String themeMode = selectedTheme.getMode();
+                if (!Strings.isNullOrEmpty(themeMode)) {
+                    themeVariantsManager.setThemeMode(themeMode);
+                    Page.getCurrent().reload();
+                }
+
                 ui.getApp().createTopLevelWindow();
             }
         });
 
-        themeComboBox.setOptionStyleProvider(theme -> theme.equals(userSettingsTools.loadTheme()) ? "selected-theme" : null);
+        themeSelector.setOptionStyleProvider(theme -> {
+            if (theme.getTheme().equals(userSettingsTools.loadTheme())
+                    && (theme.getMode() == null
+                    || theme.getMode().equals(userThemeMode))) {
+                return "selected-theme";
+            }
+
+            return null;
+        });
+    }
+
+    @org.jetbrains.annotations.Nullable
+    private String getUserThemeMode() {
+        String userThemeMode = themeVariantsManager.getThemeModeUserSetting();
+        if (userThemeMode == null) {
+            userThemeMode = themeVariantsManager.getThemeModeCookieValue();
+        }
+        if (userThemeMode == null) {
+            userThemeMode = themeVariantsManager.getDefaultThemeMode();
+        }
+
+        return userThemeMode;
     }
 
     protected void initDashboardFragment() {
@@ -388,6 +433,40 @@ public class MainScreen extends Screen implements Window.HasWorkArea {
         if (itemToExpand.getParent() != null) {
             parentListIdsToExpand.add(itemToExpand.getParent().getId());
             fillParentListToExpand(itemToExpand.getParent().getId());
+        }
+    }
+
+    private static class Theme {
+        private String theme;
+        private String displayName;
+        private String mode;
+
+        public Theme(String theme, String displayName) {
+            this(theme, displayName, null);
+        }
+
+        public Theme(String theme, String displayName, String mode) {
+            this.theme = theme;
+            this.displayName = displayName;
+            this.mode = mode;
+        }
+
+        public String getTheme() {
+            return theme;
+        }
+
+        public String getDisplayName() {
+            return displayName;
+        }
+
+        @Nullable
+        public String getMode() {
+            return mode;
+        }
+
+        @Override
+        public String toString() {
+            return displayName;
         }
     }
 }
