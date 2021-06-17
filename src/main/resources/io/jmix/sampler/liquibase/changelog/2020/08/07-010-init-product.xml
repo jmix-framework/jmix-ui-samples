@@ -9,7 +9,7 @@
 
         <createTable tableName="SAMPLER_PRODUCT">
             <column name="ID" type="${uuid.type}">
-                <constraints primaryKey="true" nullable="false"/>
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_PRODUCT"/>
             </column>
 
             <column name="NAME" type="varchar(255)">

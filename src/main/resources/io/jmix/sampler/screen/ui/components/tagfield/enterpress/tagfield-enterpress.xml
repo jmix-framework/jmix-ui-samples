@@ -1,0 +1,8 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout>
+        <hbox spacing="true">
+            <tagField id="tagFieldNewItem" caption="New item provider"/>
+            <tagField id="tagFieldEnterHandler" caption="Enter press handler"/>
+        </hbox>
+    </layout>
+</window>

@@ -5,11 +5,9 @@ import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
 @Table(name = "SAMPLER_PRODUCT")
@@ -19,7 +17,7 @@ public class Product {
     private static final long serialVersionUID = 4256660269544840258L;
 
     @Id
-    @Column(name = "ID")
+    @Column(name = "ID", nullable = false)
     @JmixGeneratedValue
     protected UUID id;
 
@@ -30,6 +28,12 @@ public class Product {
     @Column(name = "PRICE", nullable = false)
     @CurrencyValue(currency = "$")
     protected BigDecimal price;
+
+    @JoinTable(name = "PRODUCT_PRODUCT_TAG_LINK",
+            joinColumns = @JoinColumn(name = "PRODUCT_ID"),
+            inverseJoinColumns = @JoinColumn(name = "PRODUCT_TAG_ID"))
+    @ManyToMany
+    private List<ProductTag> tags;
 
     public Product() {
         this.id = UUID.randomUUID();
@@ -57,5 +61,13 @@ public class Product {
 
     public BigDecimal getPrice() {
         return price;
+    }
+
+    public List<ProductTag> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<ProductTag> tags) {
+        this.tags = tags;
     }
 }

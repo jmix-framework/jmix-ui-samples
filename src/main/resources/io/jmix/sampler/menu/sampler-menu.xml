@@ -788,6 +788,49 @@
             </item>
         </menu>
 
+        <menu id="tagfield" url="backoffice-ui/vcl/components">
+            <item id="tagfield-simple" page="tag-field"
+                  image="components/tagfield/tagfield-simple.png"/>
+            <item id="tagfield-dataaware" page="tag-field"
+                  image="components/tagfield/tagfield-dataaware.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Product.java"/>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagfield-clearall" page="tag-field" anchor="attributes"
+                  image="components/tagfield/tagfield-clearall.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagfield-enterpress" page="tag-field" anchor="creating-new-items"
+                  image="components/tagfield/tagfield-enterpress.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagfield-tagclick" page="tag-field" anchor="tag-click-listener"
+                  image="components/tagfield/tagfield-tagclick.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagfield-captionprovider" page="tag-field" anchor="tag-caption-provider"
+                  image="components/tagfield/tagfield-captionprovider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagfield-styleprovider" page="tag-field" anchor="tag-style-provider"
+                  image="components/tagfield/tagfield-styleprovider.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                    <file name="io/jmix/sampler/screen/ui/components/tagfield/styleprovider/tagfield-style.scss"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="textarea">
             <item id="textarea-simple" page="text-area"
                   image="components/textarea/textarea-simple.png"/>

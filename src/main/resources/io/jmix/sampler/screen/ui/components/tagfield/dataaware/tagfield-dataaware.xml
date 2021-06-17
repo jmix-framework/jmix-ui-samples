@@ -1,0 +1,23 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <instance id="productDc"
+                  class="io.jmix.sampler.entity.Product">
+            <fetchPlan extends="_local">
+                <property name="tags" fetchPlan="_local"/>
+            </fetchPlan>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <tagField dataContainer="productDc"
+                  property="tags">
+            <query entityClass="io.jmix.sampler.entity.ProductTag"
+                   escapeValueForLike="true"
+                   searchStringFormat="%${searchString}%">
+                select e from sampler_ProductTag e where lower(e.name) like lower(:searchString) escape '\'
+            </query>
+        </tagField>
+    </layout>
+</window>

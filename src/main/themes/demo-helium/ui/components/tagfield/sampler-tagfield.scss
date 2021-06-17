@@ -1,0 +1,18 @@
+@mixin sampler-tagfield($primary-stylename: jmix-tagfield) {
+
+  .#{$primary-stylename} .jmix-taglabel.new {
+    background-color: #037516;
+  }
+
+  .#{$primary-stylename} .jmix-taglabel.discount {
+    background-color: #e00000;
+  }
+
+  .#{$primary-stylename} .jmix-taglabel.guarantee {
+    background-color: #3498db;
+  }
+
+  .#{$primary-stylename} .jmix-taglabel.bestseller {
+    background-color: #ffa746;
+  }
+}

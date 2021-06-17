@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2021 Haulmont.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_PRODUCT_TAG">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_PRODUCT_TAG"/>
+            </column>
+            <column name="NAME" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <createTable tableName="SAMPLER_PRODUCT_PRODUCT_TAG_LINK">
+            <column name="PRODUCT_ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_PRODUCT_PRODUCT_TAG_LINK"/>
+            </column>
+            <column name="PRODUCT_TAG_ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_PRODUCT_PRODUCT_TAG_LINK"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="3">
+        <addForeignKeyConstraint baseColumnNames="PRODUCT_ID" baseTableName="SAMPLER_PRODUCT_PRODUCT_TAG_LINK"
+                                 constraintName="FK_PROPROTAG_ON_PRODUCT"
+                                 referencedColumnNames="ID" referencedTableName="SAMPLER_PRODUCT"/>
+    </changeSet>
+
+    <changeSet author="sampler" id="4">
+        <addForeignKeyConstraint baseColumnNames="PRODUCT_TAG_ID" baseTableName="SAMPLER_PRODUCT_PRODUCT_TAG_LINK"
+                                 constraintName="FK_PROPROTAG_ON_PRODUCT_TAG"
+                                 referencedColumnNames="ID" referencedTableName="SAMPLER_PRODUCT_TAG"/>
+    </changeSet>
+
+    <changeSet author="sampler" id="5">
+        <insert tableName="SAMPLER_PRODUCT_TAG">
+            <column name="ID" value="bf312b24-e1ab-451b-9f9c-0e2089f23f34"/>
+            <column name="NAME" value="Discount"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT_TAG">
+            <column name="ID" value="a86157e4-f0d2-4903-8df5-5e0afc8d26a4"/>
+            <column name="NAME" value="Guarantee"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT_TAG">
+            <column name="ID" value="a19fd492-8a78-4682-b962-7e8e91543134"/>
+            <column name="NAME" value="Bestseller"/>
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT_TAG">
+            <column name="ID" value="f8d0ce8d-a625-4fa0-beba-092db4dcd3ca"/>
+            <column name="NAME" value="New"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="sampler" id="6">
+        <!-- Keyboard -->
+        <insert tableName="SAMPLER_PRODUCT_PRODUCT_TAG_LINK">
+            <column name="PRODUCT_ID" value="2ab4dece-2f67-69cd-0a76-fe1cd33537f6"/>
+            <column name="PRODUCT_TAG_ID" value="f8d0ce8d-a625-4fa0-beba-092db4dcd3ca"/> <!-- New -->
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT_PRODUCT_TAG_LINK">
+            <column name="PRODUCT_ID" value="2ab4dece-2f67-69cd-0a76-fe1cd33537f6"/>
+            <column name="PRODUCT_TAG_ID" value="bf312b24-e1ab-451b-9f9c-0e2089f23f34"/> <!-- Discount -->
+        </insert>
+
+        <!-- Laptop -->
+        <insert tableName="SAMPLER_PRODUCT_PRODUCT_TAG_LINK">
+            <column name="PRODUCT_ID" value="d7496b01-215d-f90c-7442-4d7e8c47848f"/>
+            <column name="PRODUCT_TAG_ID" value="a19fd492-8a78-4682-b962-7e8e91543134"/> <!-- Bestseller -->
+        </insert>
+        <insert tableName="SAMPLER_PRODUCT_PRODUCT_TAG_LINK">
+            <column name="PRODUCT_ID" value="d7496b01-215d-f90c-7442-4d7e8c47848f"/>
+            <column name="PRODUCT_TAG_ID" value="a86157e4-f0d2-4903-8df5-5e0afc8d26a4"/> <!-- Guarantee -->
+        </insert>
+    </changeSet>
+</databaseChangeLog>
