@@ -1201,4 +1201,55 @@
         </menu>
     </menu>
 
+    <menu id="pivotTable" image="mainmenu/pivotTable.svg">
+        <item id="pivottable-simple"
+              image="pivottable/pivottable-simple.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivottable-sorter-function"
+              image="pivottable/pivottable-sorter-function.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivottable-editable" splitEnabled="true"
+              image="pivottable/pivottable-editable.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivottable-explicit-renderer-aggregation"
+              image="pivottable/pivottable-explicit-renderer-aggregation.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivottable-renderer-aggregation-custom-set" splitEnabled="true"
+              image="pivottable/pivottable-renderer-aggregation-custom-set.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivottable-ui-properties" splitEnabled="true"
+              image="pivottable/pivottable-ui-properties.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivottable-data-export" splitEnabled="true"
+              image="pivottable/pivottable-data-export.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+        <item id="pivottable-show-pivot-action" splitEnabled="true"
+              image="pivottable/pivottable-show-pivot-action.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/TipInfo.java"/>
+            </otherFiles>
+        </item>
+    </menu>
+
 </menu-config>

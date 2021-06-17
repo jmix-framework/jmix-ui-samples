@@ -1,0 +1,29 @@
+<p>The <code>renderers</code> element defines the collection of rendering functions that should be displayed in the list
+    of available renderers in the UI.</p>
+
+<ul>
+    <li>
+        <code>default</code> attribute enables setting one of predefined renderers. The selected renderer will be used
+        as default when the component is loaded.
+    </li>
+    <li>
+        enclosed <code>renderer</code> element enables setting one of predefined renderers using its type attribute.
+    </li>
+</ul>
+
+<p>The <code>aggregations</code> element defines the collection of aggregators that should be displayed in the dropdown
+    list of available aggregators in the UI.</p>
+
+<ul>
+    <li>
+        <code>default</code> attribute enables setting one of predefined aggregation functions. The selected function
+        will be used as default when the component is loaded.
+    </li>
+    <li>
+        enclosed <code>aggregation</code> element is used in the same way as aggregation except for the enclosed
+        property element.
+    </li>
+</ul>
+
+<p>The <code>aggregationProperties</code> element defines the list of attributes that should be displayed in the
+    dropdown lists of aggregators. Its value can be either a properties key or a generated attribute’s name.</p>

@@ -1,0 +1,2496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2021 Haulmont.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="sampler" id="1">
+
+        <createTable tableName="SAMPLER_TIP_INFO">
+            <column name="ID" type="${uuid.type}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="TOTAL_BILL" type="decimal">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIP" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SMOKER" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SIZE_" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="SEX" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="DAY_" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="TIME_" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="3fe1de55-113d-4f0d-bef2-6610e4921df7"/>
+            <column name="TOTAL_BILL" value="16.99"/>
+            <column name="TIP" value="1.01"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d7a7ad11-8443-41d6-9d62-390f1417f714"/>
+            <column name="TOTAL_BILL" value="10.34"/>
+            <column name="TIP" value="1.66"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a9e81a9d-3efb-44dd-bd7a-0939c41cc9e7"/>
+            <column name="TOTAL_BILL" value="21.01"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0067c9b0-6365-455a-a9f6-3b1df95dc026"/>
+            <column name="TOTAL_BILL" value="23.68"/>
+            <column name="TIP" value="3.31"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a02ef1bc-430c-4c70-bbd9-1a002c6b64cf"/>
+            <column name="TOTAL_BILL" value="24.59"/>
+            <column name="TIP" value="3.61"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="54847309-b54b-4e3b-9463-28e052a4f1e2"/>
+            <column name="TOTAL_BILL" value="25.29"/>
+            <column name="TIP" value="4.71"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="390f92a5-4ead-4f89-96ed-840839dc57f0"/>
+            <column name="TOTAL_BILL" value="8.77"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5c395968-2455-46a1-af7b-94290c953a93"/>
+            <column name="TOTAL_BILL" value="26.88"/>
+            <column name="TIP" value="3.12"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="bc9a2416-f6d8-4943-85d1-041ea22a7c48"/>
+            <column name="TOTAL_BILL" value="15.04"/>
+            <column name="TIP" value="1.96"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5c717d4b-d3d3-4bf6-9d72-b6f84e8a5eb3"/>
+            <column name="TOTAL_BILL" value="14.78"/>
+            <column name="TIP" value="3.23"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="ba9eca25-ebe3-4d9c-8207-b5bb2590e03e"/>
+            <column name="TOTAL_BILL" value="10.27"/>
+            <column name="TIP" value="1.71"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="cee37ffe-d832-4e09-8a3c-3477f1465745"/>
+            <column name="TOTAL_BILL" value="35.26"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="565751f3-10fb-488d-a29d-d78126c6c6bd"/>
+            <column name="TOTAL_BILL" value="15.42"/>
+            <column name="TIP" value="1.57"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="df39ebaa-4fae-423a-a58a-85349835fc4d"/>
+            <column name="TOTAL_BILL" value="18.43"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="be4799be-44b6-43bb-92eb-bdf5b83043c6"/>
+            <column name="TOTAL_BILL" value="14.83"/>
+            <column name="TIP" value="3.02"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b25e7be5-2ab4-4327-bab9-dfd8a2a61308"/>
+            <column name="TOTAL_BILL" value="21.58"/>
+            <column name="TIP" value="3.92"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="cf0dbc92-56dc-45b2-a7b2-405659e6824d"/>
+            <column name="TOTAL_BILL" value="10.33"/>
+            <column name="TIP" value="1.67"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e7bd9b58-eded-4cf8-b199-2c1e3123ad2d"/>
+            <column name="TOTAL_BILL" value="16.29"/>
+            <column name="TIP" value="3.71"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e6a625de-dbe6-4f48-994a-98402945aef8"/>
+            <column name="TOTAL_BILL" value="16.97"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="acccddb5-a963-468a-aebc-6e343c939133"/>
+            <column name="TOTAL_BILL" value="20.65"/>
+            <column name="TIP" value="3.35"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="db583de9-7f5d-4a1a-a9ac-5674d8c6ef2c"/>
+            <column name="TOTAL_BILL" value="17.92"/>
+            <column name="TIP" value="4.08"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f22b9849-e8fb-4f18-8d8f-49707ef1ced0"/>
+            <column name="TOTAL_BILL" value="20.29"/>
+            <column name="TIP" value="2.75"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d4e700ea-4943-487f-acb1-5eb5ef54ff55"/>
+            <column name="TOTAL_BILL" value="15.77"/>
+            <column name="TIP" value="2.23"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b4387a5e-0518-4c73-ad44-d514e62cbfc7"/>
+            <column name="TOTAL_BILL" value="39.42"/>
+            <column name="TIP" value="7.58"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="327ff601-b921-4475-990f-428c3d592d61"/>
+            <column name="TOTAL_BILL" value="19.82"/>
+            <column name="TIP" value="3.18"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="9100855c-4847-4589-bd7c-e56ff2097cf2"/>
+            <column name="TOTAL_BILL" value="17.81"/>
+            <column name="TIP" value="2.34"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="7c7e97fb-b4f4-44fc-b28f-d0dea1d825e7"/>
+            <column name="TOTAL_BILL" value="13.37"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0334e504-c39d-49a2-bd07-9a1bb07ab88a"/>
+            <column name="TOTAL_BILL" value="12.69"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a3d3f2d0-c876-4c6b-8bb0-e909e192de20"/>
+            <column name="TOTAL_BILL" value="21.7"/>
+            <column name="TIP" value="4.3"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="ca6378d9-8c0e-4008-ab40-7e35245c2807"/>
+            <column name="TOTAL_BILL" value="19.65"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d716afb4-da82-44fa-b650-35c0205ece84"/>
+            <column name="TOTAL_BILL" value="9.55"/>
+            <column name="TIP" value="1.45"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="79ce0032-d2aa-47e9-b91d-933d236554eb"/>
+            <column name="TOTAL_BILL" value="18.35"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="3ec57089-0dc2-4d89-9aaa-3d5b84e59c7f"/>
+            <column name="TOTAL_BILL" value="15.06"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a0a500e3-4baa-46fb-bbf4-0013996b2427"/>
+            <column name="TOTAL_BILL" value="20.69"/>
+            <column name="TIP" value="2.45"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="fb5aaa52-6cc0-4b95-8698-63cba1d565fc"/>
+            <column name="TOTAL_BILL" value="17.78"/>
+            <column name="TIP" value="3.27"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="4aa06e1b-ec37-4a4c-bb1e-bf862a69e8f6"/>
+            <column name="TOTAL_BILL" value="24.06"/>
+            <column name="TIP" value="3.6"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="91f4e95e-3a19-40a7-bc3d-2d2720021cd1"/>
+            <column name="TOTAL_BILL" value="16.31"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="617ff547-e782-47cb-9e2a-c6d94f7765fa"/>
+            <column name="TOTAL_BILL" value="16.93"/>
+            <column name="TIP" value="3.07"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e421150f-bc26-4870-8390-979d7237012f"/>
+            <column name="TOTAL_BILL" value="18.69"/>
+            <column name="TIP" value="2.31"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="87357999-5a61-4de6-87eb-d7c5739618d6"/>
+            <column name="TOTAL_BILL" value="31.27"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="2e07ab9a-1d82-4d2e-9839-d7517de17563"/>
+            <column name="TOTAL_BILL" value="16.04"/>
+            <column name="TIP" value="2.24"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="af068c27-75dd-4e7d-ab2b-1baedf596e4b"/>
+            <column name="TOTAL_BILL" value="17.46"/>
+            <column name="TIP" value="2.54"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="14a7f0e6-eb49-4d64-9cb2-27d9291be716"/>
+            <column name="TOTAL_BILL" value="13.94"/>
+            <column name="TIP" value="3.06"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c4571497-e3bd-46dc-ae3f-43e65094b8d2"/>
+            <column name="TOTAL_BILL" value="9.68"/>
+            <column name="TIP" value="1.32"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="2ec8c345-fb63-40d1-85e6-75fd4167410b"/>
+            <column name="TOTAL_BILL" value="30.4"/>
+            <column name="TIP" value="5.6"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a0ce6484-5953-47f4-adb6-e606b159b06b"/>
+            <column name="TOTAL_BILL" value="18.29"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="1edcf224-2422-49e3-9356-c81629d331ec"/>
+            <column name="TOTAL_BILL" value="22.23"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="6e050885-ab3e-41d2-bac4-cbba73bfe0b8"/>
+            <column name="TOTAL_BILL" value="32.4"/>
+            <column name="TIP" value="6.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d847a97f-a48f-4e47-a2a1-63502d10ab34"/>
+            <column name="TOTAL_BILL" value="28.55"/>
+            <column name="TIP" value="2.05"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="ddf6d326-2dac-4cb5-9556-3ad9f0d95c09"/>
+            <column name="TOTAL_BILL" value="18.04"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a7f8cfed-c198-483f-b628-d5d68c75540f"/>
+            <column name="TOTAL_BILL" value="12.54"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="bf2630de-c646-4f9b-a1fd-8410190faf1f"/>
+            <column name="TOTAL_BILL" value="10.29"/>
+            <column name="TIP" value="2.6"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d2475c54-8d09-468a-865e-07ecb975aa25"/>
+            <column name="TOTAL_BILL" value="34.81"/>
+            <column name="TIP" value="5.2"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="2af2b2b3-0f0c-43d7-bcd0-e40c8a2d42cd"/>
+            <column name="TOTAL_BILL" value="9.94"/>
+            <column name="TIP" value="1.56"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="adbd189b-d7ee-4cf7-8a95-627895b308ef"/>
+            <column name="TOTAL_BILL" value="25.56"/>
+            <column name="TIP" value="4.34"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5871f4ea-2a66-46f1-ac1b-6994fd25ea99"/>
+            <column name="TOTAL_BILL" value="19.49"/>
+            <column name="TIP" value="3.51"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="4e9bc89d-d306-4595-8020-8c80071caad5"/>
+            <column name="TOTAL_BILL" value="38.01"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f9b354b7-c05b-41de-ab7f-ac2d62db1fae"/>
+            <column name="TOTAL_BILL" value="26.41"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="7397cf7e-e424-41dc-84cf-0292075a9a8a"/>
+            <column name="TOTAL_BILL" value="11.24"/>
+            <column name="TIP" value="1.76"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="92049935-e4ee-4218-82ee-3536694af8e2"/>
+            <column name="TOTAL_BILL" value="48.27"/>
+            <column name="TIP" value="6.73"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f1b55172-0d1c-45bc-a66c-8d5f6708eff7"/>
+            <column name="TOTAL_BILL" value="20.29"/>
+            <column name="TIP" value="3.21"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="afd30e44-f4a5-4401-b4bc-fd918c7ee946"/>
+            <column name="TOTAL_BILL" value="13.81"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="7ea788a5-9ee7-4b9c-96cd-3385821a77a7"/>
+            <column name="TOTAL_BILL" value="11.02"/>
+            <column name="TIP" value="1.98"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="bb14b76a-d01b-4589-928d-a4f013e634b0"/>
+            <column name="TOTAL_BILL" value="18.29"/>
+            <column name="TIP" value="3.76"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="516ea118-72fc-4ced-bc77-8de1dc8e46b3"/>
+            <column name="TOTAL_BILL" value="17.59"/>
+            <column name="TIP" value="2.64"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="517039b0-0a32-4134-ac48-147e2557eaf2"/>
+            <column name="TOTAL_BILL" value="20.08"/>
+            <column name="TIP" value="3.15"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="ef292a6f-50b1-4173-8122-f7e4932ec602"/>
+            <column name="TOTAL_BILL" value="16.45"/>
+            <column name="TIP" value="2.47"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0c1eed13-a2aa-4772-bbe2-86f5e3def0d3"/>
+            <column name="TOTAL_BILL" value="3.07"/>
+            <column name="TIP" value="1.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="1"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="cb7c6b53-47b3-4eaa-9472-fdfc552c278e"/>
+            <column name="TOTAL_BILL" value="20.23"/>
+            <column name="TIP" value="2.01"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d0ba1e99-bd3e-4438-afa9-57d53e749656"/>
+            <column name="TOTAL_BILL" value="15.01"/>
+            <column name="TIP" value="2.09"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c7ffee27-a82a-4cf0-94e1-7f1e49c0c7d8"/>
+            <column name="TOTAL_BILL" value="12.02"/>
+            <column name="TIP" value="1.97"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="664fc827-24d3-4b6c-9fc4-febdeda6bd58"/>
+            <column name="TOTAL_BILL" value="17.07"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="947e1c3c-0a02-47ec-b093-5a00b19edca8"/>
+            <column name="TOTAL_BILL" value="26.86"/>
+            <column name="TIP" value="3.14"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e97ae524-d945-4ad2-b40a-3a7532c78c8f"/>
+            <column name="TOTAL_BILL" value="25.28"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f4afb961-b9ae-4109-85d4-b56085a651ef"/>
+            <column name="TOTAL_BILL" value="14.73"/>
+            <column name="TIP" value="2.2"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f6995793-e1fb-462e-8c48-2d86b384988e"/>
+            <column name="TOTAL_BILL" value="10.51"/>
+            <column name="TIP" value="1.25"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="3d55bf06-af75-4733-97ec-09fc600ce637"/>
+            <column name="TOTAL_BILL" value="17.92"/>
+            <column name="TIP" value="3.08"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d60806b6-5f45-4846-a170-86477dd1fe58"/>
+            <column name="TOTAL_BILL" value="27.2"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="edcc4b78-6f58-4a79-9756-4bc935541714"/>
+            <column name="TOTAL_BILL" value="22.76"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="51446797-8165-4cfd-8ece-4fa3726efe20"/>
+            <column name="TOTAL_BILL" value="17.29"/>
+            <column name="TIP" value="2.71"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f264ad6c-4a98-4102-ac49-82c5df269118"/>
+            <column name="TOTAL_BILL" value="19.44"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0001e926-58df-4dbd-8432-893525783ccc"/>
+            <column name="TOTAL_BILL" value="16.66"/>
+            <column name="TIP" value="3.4"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0c09438b-0e8e-4d9c-b569-d2d478d86c10"/>
+            <column name="TOTAL_BILL" value="10.07"/>
+            <column name="TIP" value="1.83"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="1"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="370ab317-f6f7-4c25-8a65-c9bd527e821c"/>
+            <column name="TOTAL_BILL" value="32.68"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="fa794ed1-da66-4e73-a8b8-2f3c454177e2"/>
+            <column name="TOTAL_BILL" value="15.98"/>
+            <column name="TIP" value="2.03"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a50d2c89-e044-4f1e-b0e6-c8cbe5f35103"/>
+            <column name="TOTAL_BILL" value="34.83"/>
+            <column name="TIP" value="5.17"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b831af35-377f-4901-b7e7-3f8c7944ae58"/>
+            <column name="TOTAL_BILL" value="13.03"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="3a6a6635-22b3-41dc-a605-5b32d07db4d3"/>
+            <column name="TOTAL_BILL" value="18.28"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d606f536-5f8c-44e7-b8ce-8ea52706acda"/>
+            <column name="TOTAL_BILL" value="24.71"/>
+            <column name="TIP" value="5.85"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="96a27141-cbf9-4884-be08-71bfd8998be2"/>
+            <column name="TOTAL_BILL" value="21.16"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b85d3805-fd9b-49b7-a120-d7a180a7a3c7"/>
+            <column name="TOTAL_BILL" value="28.97"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f9c7910b-27a8-403d-88cc-5a9ca472bac7"/>
+            <column name="TOTAL_BILL" value="22.49"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c9184ac3-1077-4972-a748-5b157cbf5a41"/>
+            <column name="TOTAL_BILL" value="5.75"/>
+            <column name="TIP" value="1.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="fe738a7d-73d6-45a4-99b3-8e1d2335a2e8"/>
+            <column name="TOTAL_BILL" value="16.32"/>
+            <column name="TIP" value="4.3"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="7d06a1e6-1ed8-46d5-802d-a994782d1221"/>
+            <column name="TOTAL_BILL" value="22.75"/>
+            <column name="TIP" value="3.25"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="df21b31a-e260-4d27-831d-0675aeb21fa1"/>
+            <column name="TOTAL_BILL" value="40.17"/>
+            <column name="TIP" value="4.73"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="1dd613b5-c69b-4267-a1c5-0c64271106b8"/>
+            <column name="TOTAL_BILL" value="27.28"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="bc101804-3f18-4b34-bf06-2b056f05333c"/>
+            <column name="TOTAL_BILL" value="12.03"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="2adf6a69-7e53-4e6d-b355-b2394fc12e91"/>
+            <column name="TOTAL_BILL" value="21.01"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0dd22c66-217f-4e60-9845-c6b8778312ab"/>
+            <column name="TOTAL_BILL" value="12.46"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="10e0bb62-afe5-42ed-b616-b694b8684fdb"/>
+            <column name="TOTAL_BILL" value="11.35"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="92bbdbfa-04f3-47b6-85b3-f64436db4cdf"/>
+            <column name="TOTAL_BILL" value="15.38"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c04de267-ed1c-4190-a759-d90e49babbf4"/>
+            <column name="TOTAL_BILL" value="44.3"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c382cc7c-590e-4fae-8109-fd9fe730f949"/>
+            <column name="TOTAL_BILL" value="22.42"/>
+            <column name="TIP" value="3.48"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e76b40e0-68bf-4e5f-b3f1-0235b79d003d"/>
+            <column name="TOTAL_BILL" value="20.92"/>
+            <column name="TIP" value="4.08"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b8630f75-dab0-4e39-acb5-d4a7343c4b04"/>
+            <column name="TOTAL_BILL" value="15.36"/>
+            <column name="TIP" value="1.64"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e3f4d709-9a51-4249-9c30-cb74bc7c3487"/>
+            <column name="TOTAL_BILL" value="20.49"/>
+            <column name="TIP" value="4.06"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f822e1cf-d612-459a-a0b7-00047f62b0ff"/>
+            <column name="TOTAL_BILL" value="25.21"/>
+            <column name="TIP" value="4.29"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e7a6701a-be5b-49e1-8553-6871ba6461dc"/>
+            <column name="TOTAL_BILL" value="18.24"/>
+            <column name="TIP" value="3.76"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c6f30815-d716-4174-b5b6-5c851ec271d2"/>
+            <column name="TOTAL_BILL" value="14.31"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="da14d2b3-c76a-452d-adc2-d23251f1ed5b"/>
+            <column name="TOTAL_BILL" value="14.0"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="ac621f3c-35df-425f-a370-9dfba45022c5"/>
+            <column name="TOTAL_BILL" value="7.25"/>
+            <column name="TIP" value="1.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="1"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="960b86a9-d711-44da-8d51-1b9db7584a91"/>
+            <column name="TOTAL_BILL" value="38.07"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a569ef3e-03e8-43a3-a189-bd9bea0d213f"/>
+            <column name="TOTAL_BILL" value="23.95"/>
+            <column name="TIP" value="2.55"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="bc457dff-9218-4e12-9100-a809b6f09ad7"/>
+            <column name="TOTAL_BILL" value="25.71"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a772af7b-2e7a-4222-a9dd-6614da787979"/>
+            <column name="TOTAL_BILL" value="17.31"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="4c714b2e-4b8a-4c89-bc42-63ba5d35e9fc"/>
+            <column name="TOTAL_BILL" value="29.93"/>
+            <column name="TIP" value="5.07"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b88b669d-93fd-45b9-b557-81041493e223"/>
+            <column name="TOTAL_BILL" value="10.65"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d66d71f5-1a1a-41d9-b26e-e29436951bff"/>
+            <column name="TOTAL_BILL" value="12.43"/>
+            <column name="TIP" value="1.8"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a0917811-6875-43b6-9ad7-bddb1bc44753"/>
+            <column name="TOTAL_BILL" value="24.08"/>
+            <column name="TIP" value="2.92"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5447e0ad-de62-4c7a-9783-67e4bb29c04b"/>
+            <column name="TOTAL_BILL" value="11.69"/>
+            <column name="TIP" value="2.31"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="8c44e20f-3d79-4f8b-8015-1b24d65fc027"/>
+            <column name="TOTAL_BILL" value="13.42"/>
+            <column name="TIP" value="1.68"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b756b77e-475b-4029-a851-482de268c620"/>
+            <column name="TOTAL_BILL" value="14.26"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="85ac5808-62bd-43c8-a59b-52e327c3b26d"/>
+            <column name="TOTAL_BILL" value="15.95"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="1c65216b-30dd-4d77-8cb8-8dd136232bd6"/>
+            <column name="TOTAL_BILL" value="12.48"/>
+            <column name="TIP" value="2.52"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="23b3353a-a1a8-45ab-a889-6fa38961928f"/>
+            <column name="TOTAL_BILL" value="29.8"/>
+            <column name="TIP" value="4.2"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="6"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5bfc009b-d40c-4ea2-81e0-00b7b73f9c4e"/>
+            <column name="TOTAL_BILL" value="8.52"/>
+            <column name="TIP" value="1.48"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="750928c9-31fe-403f-b713-ef63c929e59d"/>
+            <column name="TOTAL_BILL" value="14.52"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="197c226a-3084-4fdb-a5a5-0ca9cf810ff1"/>
+            <column name="TOTAL_BILL" value="11.38"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="90cb1717-b9c9-4b30-89a0-f0b9ee72364d"/>
+            <column name="TOTAL_BILL" value="22.82"/>
+            <column name="TIP" value="2.18"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="80cb0129-6511-4fc7-b80b-6eeb9318c0f8"/>
+            <column name="TOTAL_BILL" value="19.08"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="09212e95-109d-4970-98c8-36cba89b7f98"/>
+            <column name="TOTAL_BILL" value="20.27"/>
+            <column name="TIP" value="2.83"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="406279a2-4f87-4a16-b022-9127f49b8baa"/>
+            <column name="TOTAL_BILL" value="11.17"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="37349ce4-c6d9-4f2d-b80d-57cc388f8fe5"/>
+            <column name="TOTAL_BILL" value="12.26"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="3fd99632-6f61-498c-b27c-312ff8e5d91a"/>
+            <column name="TOTAL_BILL" value="18.26"/>
+            <column name="TIP" value="3.25"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="9c95c366-4176-4f71-b1e5-b80736e83af2"/>
+            <column name="TOTAL_BILL" value="8.51"/>
+            <column name="TIP" value="1.25"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c3157a2f-55ba-4099-b292-5d65a0fc7b51"/>
+            <column name="TOTAL_BILL" value="10.33"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="3b38ec09-1238-4231-99b5-4ef875575fc9"/>
+            <column name="TOTAL_BILL" value="14.15"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b79acea3-7ed1-4b57-9557-a7e77e3ea1c7"/>
+            <column name="TOTAL_BILL" value="16.0"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="69ceea12-facb-465f-8573-5f690370df8e"/>
+            <column name="TOTAL_BILL" value="13.16"/>
+            <column name="TIP" value="2.75"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c30d56af-fd0a-4f09-bdbb-0d900e049703"/>
+            <column name="TOTAL_BILL" value="17.47"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="55d1b570-9e63-4dc6-bfcc-c8d748dc987b"/>
+            <column name="TOTAL_BILL" value="34.3"/>
+            <column name="TIP" value="6.7"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="6"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="81d4f1ac-b9f8-4c26-967f-ca73d668f7f6"/>
+            <column name="TOTAL_BILL" value="41.19"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="5"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="500c73dc-805b-4401-8e56-3f7a4e2797aa"/>
+            <column name="TOTAL_BILL" value="27.05"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="6"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="1e79b12a-25a7-4ce9-9802-479340132132"/>
+            <column name="TOTAL_BILL" value="16.43"/>
+            <column name="TIP" value="2.3"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="1a6717cd-04b4-46c6-bc07-e140686d1926"/>
+            <column name="TOTAL_BILL" value="8.35"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b5e1af64-340e-4b23-a91d-9c6ee389b721"/>
+            <column name="TOTAL_BILL" value="18.64"/>
+            <column name="TIP" value="1.36"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="284109f5-9a61-4872-abf4-d959cec605e4"/>
+            <column name="TOTAL_BILL" value="11.87"/>
+            <column name="TIP" value="1.63"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c303a810-58dd-4b3f-bed1-05237f6ab0b7"/>
+            <column name="TOTAL_BILL" value="9.78"/>
+            <column name="TIP" value="1.73"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="6eb9821f-514f-44d3-b426-cbd28aa3a8db"/>
+            <column name="TOTAL_BILL" value="7.51"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="98100c54-9a28-4523-8d2b-d8f1aa71111b"/>
+            <column name="TOTAL_BILL" value="14.07"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="2e538524-f40e-42fc-b681-43cd7d3c2eb3"/>
+            <column name="TOTAL_BILL" value="13.13"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="79857f35-631d-4474-ae27-5f8955115dee"/>
+            <column name="TOTAL_BILL" value="17.26"/>
+            <column name="TIP" value="2.74"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="04a83775-febf-48f7-bcef-77c96d3a557a"/>
+            <column name="TOTAL_BILL" value="24.55"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="fa1c6f54-23ab-4d9c-8840-ebea03ffcad4"/>
+            <column name="TOTAL_BILL" value="19.77"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b0547c70-33aa-4dcc-bc63-830c44bec6bf"/>
+            <column name="TOTAL_BILL" value="29.85"/>
+            <column name="TIP" value="5.14"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="5"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="13f71e65-3e36-4b10-98b6-479027f74e52"/>
+            <column name="TOTAL_BILL" value="48.17"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="6"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="29993c90-df21-4ab3-8cf0-ac91c73f77ff"/>
+            <column name="TOTAL_BILL" value="25.0"/>
+            <column name="TIP" value="3.75"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b0139f26-6054-4397-b1cc-8860d0e0d73b"/>
+            <column name="TOTAL_BILL" value="13.39"/>
+            <column name="TIP" value="2.61"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="07abb5a0-11ff-4f55-aeac-445cdc106f85"/>
+            <column name="TOTAL_BILL" value="16.49"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="57fab3a7-8aaa-425a-8537-7fc4a51f14d1"/>
+            <column name="TOTAL_BILL" value="21.5"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="05fc2362-8703-4415-bf09-de2170e06ec7"/>
+            <column name="TOTAL_BILL" value="12.66"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b7a3590b-38a9-4db2-8b15-05fc5f63dfab"/>
+            <column name="TOTAL_BILL" value="16.21"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="84488477-01df-4688-95d8-9b93f7ac369d"/>
+            <column name="TOTAL_BILL" value="13.81"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="21ae9c0c-e4b5-448d-ae8a-1839a54f38a8"/>
+            <column name="TOTAL_BILL" value="17.51"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f7b1c9bf-1d12-4811-a75f-5c188e198846"/>
+            <column name="TOTAL_BILL" value="24.52"/>
+            <column name="TIP" value="3.48"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="6f08fa35-d644-432c-a378-359524549125"/>
+            <column name="TOTAL_BILL" value="20.76"/>
+            <column name="TIP" value="2.24"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="297addf5-ff28-4fb7-a754-7546afae4f04"/>
+            <column name="TOTAL_BILL" value="31.71"/>
+            <column name="TIP" value="4.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="31067cf2-b127-41e0-bf65-89dda0a8fdf8"/>
+            <column name="TOTAL_BILL" value="10.59"/>
+            <column name="TIP" value="1.61"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5cd67b9d-2c92-4e0f-b9b3-72517077d159"/>
+            <column name="TOTAL_BILL" value="10.63"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="10dc3a14-9a85-4a4f-8dbe-c287f27e2001"/>
+            <column name="TOTAL_BILL" value="50.81"/>
+            <column name="TIP" value="10.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="87852aaa-647c-4831-bd01-99a99d710a6d"/>
+            <column name="TOTAL_BILL" value="15.81"/>
+            <column name="TIP" value="3.16"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b9ce684d-6f4a-474b-9f1b-92a1f6e8f5ab"/>
+            <column name="TOTAL_BILL" value="7.25"/>
+            <column name="TIP" value="5.15"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="886db39c-ed91-4590-8f47-4fa8cf8ec44c"/>
+            <column name="TOTAL_BILL" value="31.85"/>
+            <column name="TIP" value="3.18"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f6174e1b-c821-4249-99d1-49e80d19f18d"/>
+            <column name="TOTAL_BILL" value="16.82"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="10e40dbf-fbd1-4e35-a8c5-5809a302c2bb"/>
+            <column name="TOTAL_BILL" value="32.9"/>
+            <column name="TIP" value="3.11"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b6bd39e5-ba03-496f-be38-78e0be292ee3"/>
+            <column name="TOTAL_BILL" value="17.89"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="478fad56-ba5d-4be7-b2fe-812c4bc3caf6"/>
+            <column name="TOTAL_BILL" value="14.48"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="bc3237d5-d16d-4126-bd7f-e20c4190f961"/>
+            <column name="TOTAL_BILL" value="9.6"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="ccd92504-2a40-46d4-9fef-13e01016c7ae"/>
+            <column name="TOTAL_BILL" value="34.63"/>
+            <column name="TIP" value="3.55"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="811a1eb6-f5b6-47f1-a524-a062c735f54c"/>
+            <column name="TOTAL_BILL" value="34.65"/>
+            <column name="TIP" value="3.68"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="8e1d043a-d5b1-4352-b776-129fee0929ad"/>
+            <column name="TOTAL_BILL" value="23.33"/>
+            <column name="TIP" value="5.65"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f607db81-f80f-4117-a2e4-b39cd33ab9d9"/>
+            <column name="TOTAL_BILL" value="45.35"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="1ee264c8-66bb-45ba-9715-3f2ef19452d0"/>
+            <column name="TOTAL_BILL" value="23.17"/>
+            <column name="TIP" value="6.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="1773e7ae-4105-44d6-af3a-c30fbf6cbd9d"/>
+            <column name="TOTAL_BILL" value="40.55"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="559d78a5-1287-44b8-9df3-6dfb46f3dfaf"/>
+            <column name="TOTAL_BILL" value="20.69"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="5"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a6ecae36-060b-40f1-aff7-f30ee00ed8b0"/>
+            <column name="TOTAL_BILL" value="20.9"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="92581c0d-b69e-4b8c-ae5e-93b4660a4193"/>
+            <column name="TOTAL_BILL" value="30.46"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="5"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="afd1b0e1-113d-4974-8f82-4250e4aa3fb5"/>
+            <column name="TOTAL_BILL" value="18.15"/>
+            <column name="TIP" value="3.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="364912fb-7de2-4e8a-9a3a-bbc85456b61d"/>
+            <column name="TOTAL_BILL" value="23.1"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b3b89c45-e54b-4ae8-b7bb-7feeaa1819bc"/>
+            <column name="TOTAL_BILL" value="15.69"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sun"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="2fdd1ae7-d05d-4e8e-9238-f64d96bf8930"/>
+            <column name="TOTAL_BILL" value="19.81"/>
+            <column name="TIP" value="4.19"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="11356c03-6d55-46e1-8439-2ef7e6200e6b"/>
+            <column name="TOTAL_BILL" value="28.44"/>
+            <column name="TIP" value="2.56"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c8336ce0-b48a-45dc-b4ff-8bcae7f20a98"/>
+            <column name="TOTAL_BILL" value="15.48"/>
+            <column name="TIP" value="2.02"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="cc249e7e-d9c6-4f94-b5c0-86eda2d905f1"/>
+            <column name="TOTAL_BILL" value="16.58"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="23f0d2b3-20b0-423e-bba9-666ba8156b54"/>
+            <column name="TOTAL_BILL" value="7.56"/>
+            <column name="TIP" value="1.44"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="06714fc8-ea77-4943-953a-cb875fb947c5"/>
+            <column name="TOTAL_BILL" value="10.34"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5b55c051-5c52-4156-92f7-c9352bade89e"/>
+            <column name="TOTAL_BILL" value="43.11"/>
+            <column name="TIP" value="5.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="137ee046-88f4-4735-8e03-8a791af3af0a"/>
+            <column name="TOTAL_BILL" value="13.0"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="be41ec45-ba42-4da6-b92e-88f07d665373"/>
+            <column name="TOTAL_BILL" value="13.51"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="9a5b09fd-6746-4d45-9036-dc4f5c384adc"/>
+            <column name="TOTAL_BILL" value="18.71"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="737474a2-7a9c-4e5f-9ba7-dab8e57d56b1"/>
+            <column name="TOTAL_BILL" value="12.74"/>
+            <column name="TIP" value="2.01"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="921cf054-6503-4b63-8132-701917843793"/>
+            <column name="TOTAL_BILL" value="13.0"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="042cee34-9552-407a-97c3-a3c201363ec8"/>
+            <column name="TOTAL_BILL" value="16.4"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a447e349-f53f-45a9-a9df-ab5de7a2b4e4"/>
+            <column name="TOTAL_BILL" value="20.53"/>
+            <column name="TIP" value="4.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="15fa8027-b15c-45bc-badc-93a9de370d71"/>
+            <column name="TOTAL_BILL" value="16.47"/>
+            <column name="TIP" value="3.23"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="6afadfbd-2a4d-4343-a2f8-f8314e877cc6"/>
+            <column name="TOTAL_BILL" value="26.59"/>
+            <column name="TIP" value="3.41"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="fb3e455f-9176-466c-97dd-23fa5253df8e"/>
+            <column name="TOTAL_BILL" value="38.73"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e52ea758-87af-4096-b20e-020886f69601"/>
+            <column name="TOTAL_BILL" value="24.27"/>
+            <column name="TIP" value="2.03"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="665d6d40-4a82-456d-8d4f-0a16cfa1b98c"/>
+            <column name="TOTAL_BILL" value="12.76"/>
+            <column name="TIP" value="2.23"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="907a373f-c6f0-40ea-9071-80342a02bc59"/>
+            <column name="TOTAL_BILL" value="30.06"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a6270e70-61dc-42a1-b868-62269cf31ff8"/>
+            <column name="TOTAL_BILL" value="25.89"/>
+            <column name="TIP" value="5.16"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="78f01b28-775d-4998-b773-720c76cbbbca"/>
+            <column name="TOTAL_BILL" value="48.33"/>
+            <column name="TIP" value="9.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="b6e1cb39-981e-4122-9dda-38c8306d1ce1"/>
+            <column name="TOTAL_BILL" value="13.27"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="5707078f-ab52-46e3-be03-6ccba9f8ad37"/>
+            <column name="TOTAL_BILL" value="28.17"/>
+            <column name="TIP" value="6.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="69e438f9-2e02-44e9-8b36-23d212fd4f88"/>
+            <column name="TOTAL_BILL" value="12.9"/>
+            <column name="TIP" value="1.1"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="c22cb82b-d47b-4bcd-b3a0-f79d0bfe73fd"/>
+            <column name="TOTAL_BILL" value="28.15"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="5"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="3523c63b-6821-4c5b-9124-d8d190df26ad"/>
+            <column name="TOTAL_BILL" value="11.59"/>
+            <column name="TIP" value="1.5"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="03262b99-c021-4f95-82d6-df47ee6b222b"/>
+            <column name="TOTAL_BILL" value="7.74"/>
+            <column name="TIP" value="1.44"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="9c18783c-82fd-4914-94a3-3e808fa4ad1e"/>
+            <column name="TOTAL_BILL" value="30.14"/>
+            <column name="TIP" value="3.09"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="cf08bbc3-2d95-410a-a02f-6f5ea988db38"/>
+            <column name="TOTAL_BILL" value="12.16"/>
+            <column name="TIP" value="2.2"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="2337a894-b1ef-4c47-b46d-422368cce801"/>
+            <column name="TOTAL_BILL" value="13.42"/>
+            <column name="TIP" value="3.48"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d146dfa7-b418-4cae-aa73-dcecf961a4af"/>
+            <column name="TOTAL_BILL" value="8.58"/>
+            <column name="TIP" value="1.92"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="1"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e928906d-8566-4230-ace4-2e5fecdb4409"/>
+            <column name="TOTAL_BILL" value="15.98"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="27dfc771-9e75-4ec7-9371-a6c59f0b2c67"/>
+            <column name="TOTAL_BILL" value="13.42"/>
+            <column name="TIP" value="1.58"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="d4e7cff6-de3c-4994-8eaa-0dd43c627f45"/>
+            <column name="TOTAL_BILL" value="16.27"/>
+            <column name="TIP" value="2.5"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="51cfd092-8c9b-4958-b35d-9101ab7a7c35"/>
+            <column name="TOTAL_BILL" value="10.09"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="fri"/>
+            <column name="TIME_" value="lunch"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f8dfba0d-ced8-4843-a24f-10ab65bf4a6a"/>
+            <column name="TOTAL_BILL" value="20.45"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="250b8914-4c9f-4e9b-9d31-b47166047f6e"/>
+            <column name="TOTAL_BILL" value="13.28"/>
+            <column name="TIP" value="2.72"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="ddf70e03-b03b-4cef-971f-6aa100866f4d"/>
+            <column name="TOTAL_BILL" value="22.12"/>
+            <column name="TIP" value="2.88"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="492a7f15-6c64-430e-889f-717ac7d2b861"/>
+            <column name="TOTAL_BILL" value="24.01"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="4"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="e11ada4e-aa93-45df-a8b5-95b172b070ac"/>
+            <column name="TOTAL_BILL" value="15.69"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0158fe52-c6b8-46aa-8c28-d269ae3d595e"/>
+            <column name="TOTAL_BILL" value="11.61"/>
+            <column name="TIP" value="3.39"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="0e5b27a1-f45d-4cbb-ae30-69512a200545"/>
+            <column name="TOTAL_BILL" value="10.77"/>
+            <column name="TIP" value="1.47"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="a3aefe6e-a3b2-47ce-8699-103239dd401a"/>
+            <column name="TOTAL_BILL" value="15.53"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="568f1716-e6f6-4734-9a41-bedd846c4927"/>
+            <column name="TOTAL_BILL" value="10.07"/>
+            <column name="TIP" value="1.25"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="54b44fcf-a0a7-4c0e-ab87-3fbf0fd36095"/>
+            <column name="TOTAL_BILL" value="12.6"/>
+            <column name="TIP" value="1.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="4b525e8f-db39-4d76-9a84-ec6470fe79e7"/>
+            <column name="TOTAL_BILL" value="32.83"/>
+            <column name="TIP" value="1.17"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f8476d2c-8d70-4ed0-880f-c61752debcbe"/>
+            <column name="TOTAL_BILL" value="35.83"/>
+            <column name="TIP" value="4.67"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="8db2ffc0-6a73-4a03-8edc-4a1355c493eb"/>
+            <column name="TOTAL_BILL" value="29.03"/>
+            <column name="TIP" value="5.92"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="3"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="f9250a2e-bcbb-4d79-bebb-0fb4ddc6ba36"/>
+            <column name="TOTAL_BILL" value="27.18"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="fc02e2f4-be1c-4698-b4f7-fd6fd8655360"/>
+            <column name="TOTAL_BILL" value="22.67"/>
+            <column name="TIP" value="2.0"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="true"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="65b5b35f-1330-4a67-a91f-5b41cca0c1c7"/>
+            <column name="TOTAL_BILL" value="17.82"/>
+            <column name="TIP" value="1.75"/>
+            <column name="SEX" value="male"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="sat"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+        <insert tableName="SAMPLER_TIP_INFO">
+            <column name="ID" value="dee07955-6c3a-4e4c-87d5-a834b6baa121"/>
+            <column name="TOTAL_BILL" value="18.78"/>
+            <column name="TIP" value="3.0"/>
+            <column name="SEX" value="female"/>
+            <column name="SMOKER" value="false"/>
+            <column name="DAY_" value="thu"/>
+            <column name="TIME_" value="dinner"/>
+            <column name="SIZE_" value="2"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

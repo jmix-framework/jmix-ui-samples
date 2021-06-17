@@ -21,6 +21,7 @@ import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
 import io.jmix.core.Stores;
 import io.jmix.core.security.CoreSecurityConfiguration;
+import io.jmix.core.security.CurrentAuthentication;
 import io.jmix.data.impl.liquibase.LiquibaseChangeLogProcessor;
 import io.jmix.sampler.bean.*;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
@@ -77,6 +78,12 @@ public class SamplerConfiguration {
     @Primary
     public MetadataTools metadataTools() {
         return new SamplerMetadataTools();
+    }
+
+    @Bean("sampler_CurrentAuthentication")
+    @Primary
+    public CurrentAuthentication authentication() {
+        return new SamplerCurrentAuthentication();
     }
 
     @EnableWebSecurity

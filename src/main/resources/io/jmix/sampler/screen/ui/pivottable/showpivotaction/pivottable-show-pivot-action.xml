@@ -1,0 +1,45 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="tipsDc"
+                    class="io.jmix.sampler.entity.TipInfo">
+            <fetchPlan extends="_local"/>
+            <loader id="tipsLoader">
+                <query>
+                    <![CDATA[select e from sampler_TipInfo e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <groupTable id="tipsTable"
+                    dataContainer="tipsDc"
+                    multiselect="true"
+                    height="100%"
+                    width="100%">
+            <actions>
+                <action id="customShowPivotAction"
+                        type="showPivot"/>
+            </actions>
+            <buttonsPanel>
+                <button id="customShowPivotBtn"
+                        action="tipsTable.customShowPivotAction"
+                        caption="msg://button.customShowPivot.caption"/>
+                <button id="defaultShowPivotBtn"
+                        caption="msg://button.defaultShowPivot.caption"/>
+            </buttonsPanel>
+            <simplePagination/>
+            <columns>
+                <column id="day"/>
+                <column id="time"/>
+                <column id="sex"/>
+                <column id="smoker"/>
+                <column id="tip"/>
+                <column id="size"/>
+                <column id="totalBill"/>
+            </columns>
+        </groupTable>
+    </layout>
+</window>

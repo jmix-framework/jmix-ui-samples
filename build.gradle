@@ -55,7 +55,7 @@ dependencies {
     implementation 'io.jmix.data:jmix-eclipselink-starter'
     implementation 'io.jmix.ui:jmix-ui-starter'
     implementation 'io.jmix.ui:jmix-ui-data-starter'
-    implementation 'io.jmix.ui:jmix-ui-widgets-compiled'
+    implementation "io.jmix.ui:jmix-pivot-table-starter"
     implementation 'io.jmix.sessions:jmix-sessions-starter'
     implementation 'io.jmix.translations:jmix-translations-ru'
 
@@ -66,6 +66,9 @@ dependencies {
     runtimeOnly 'org.hsqldb:hsqldb'
 
     themes 'io.jmix.ui:jmix-ui-themes'
+
+    widgets "io.jmix.ui:jmix-pivot-table-widgets"
+    widgets "io.jmix.ui:jmix-ui-widgets"
 }
 
 processResources {
@@ -78,6 +81,10 @@ compileThemes {
     if (findProject(':ui-themes')) {
         dependsOn project(':ui-themes').tasks.getByName('jar')
     }
+}
+
+compileWidgets {
+    generate "io.jmix.sampler.widgets.CustomWidgetSet"
 }
 
 test {

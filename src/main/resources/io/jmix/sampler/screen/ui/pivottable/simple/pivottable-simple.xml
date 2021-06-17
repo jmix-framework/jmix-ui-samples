@@ -1,0 +1,39 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:pivot="http://jmix.io/schema/ui/pivot-table">
+    <data>
+        <collection id="tipsDc"
+                    class="io.jmix.sampler.entity.TipInfo">
+            <fetchPlan extends="_local"/>
+            <loader id="tipsLoader">
+                <query>
+                    <![CDATA[select e from sampler_TipInfo e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <pivot:pivotTable id="pivotTable"
+                          dataContainer="tipsDc">
+            <pivot:properties>
+                <pivot:property name="totalBill"/>
+                <pivot:property name="tip"/>
+                <pivot:property name="sex"/>
+                <pivot:property name="smoker"/>
+                <pivot:property name="day"/>
+                <pivot:property name="time"/>
+                <pivot:property name="size"/>
+            </pivot:properties>
+            <pivot:columns>
+                <pivot:column value="day"/>
+                <pivot:column value="time"/>
+            </pivot:columns>
+            <pivot:rows>
+                <pivot:row value="sex"/>
+                <pivot:row value="smoker"/>
+            </pivot:rows>
+        </pivot:pivotTable>
+    </layout>
+</window>

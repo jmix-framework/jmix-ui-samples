@@ -1,0 +1,30 @@
+<p>The <code>renderer</code> attribute allows setting one of the predefined data renderers. Only for non-editable
+    <code>pivotTable</code>.</p>
+
+<p>The <code>aggregation</code> element sets up a function which will aggregate results per cell.</p>
+
+<p><code>aggregation</code> attributes:</p>
+<ul>
+    <li>
+        <code>mode</code> - enables setting one of predefined aggregation functions.
+    </li>
+    <li>
+        <code>caption</code> - a localized value to be displayed in the UI.
+    </li>
+    <li>
+        <code>custom</code> - if <code>true</code>, the <code>mode</code> value is ignored in favor of the javaScript
+        code from the enclosed <code>function</code> element.
+    </li>
+</ul>
+
+<p><code>aggregation</code> elements:</p>
+
+<ul>
+    <li>
+        <code>function</code> - contains JavaScript code of an aggregation function.
+    </li>
+    <li>
+        <code>property</code> - the list of attributes to be used as input parameters of the aggregation function. Its
+        value can be either a <code>properties</code> key or a generated attribute’s name.
+    </li>
+</ul>
