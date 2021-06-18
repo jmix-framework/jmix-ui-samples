@@ -23,7 +23,7 @@ buildscript {
     }
 
     dependencies {
-        classpath('io.jmix.gradle:jmix-gradle-plugin:1.0.0-M3')
+        classpath('io.jmix.gradle:jmix-gradle-plugin:1.0.0-M4')
     }
 }
 
