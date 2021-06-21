@@ -19,7 +19,7 @@ package io.jmix.sampler.screen.entity.producttag;
 import io.jmix.ui.screen.*;
 import io.jmix.sampler.entity.ProductTag;
 
-@UiController("ProductTag.browse")
+@UiController("sampler_ProductTag.browse")
 @UiDescriptor("product-tag-browse.xml")
 @LookupComponent("productTagsTable")
 public class ProductTagBrowse extends StandardLookup<ProductTag> {

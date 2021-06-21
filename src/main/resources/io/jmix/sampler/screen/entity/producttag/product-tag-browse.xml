@@ -25,7 +25,7 @@
             <fetchPlan extends="_base"/>
             <loader id="productTagsDl">
                 <query>
-                    <![CDATA[select e from ProductTag e]]>
+                    <![CDATA[select e from sampler_ProductTag e]]>
                 </query>
             </loader>
         </collection>
@@ -64,7 +64,7 @@
             </columns>
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
-                          alwaysVisible="true">
+                          alwaysVisible="false">
                 <button id="createBtn" action="productTagsTable.create"/>
                 <button id="editBtn" action="productTagsTable.edit"/>
                 <button id="removeBtn" action="productTagsTable.remove"/>

@@ -19,7 +19,7 @@ package io.jmix.sampler.screen.entity.producttag;
 import io.jmix.ui.screen.*;
 import io.jmix.sampler.entity.ProductTag;
 
-@UiController("ProductTag.edit")
+@UiController("sampler_ProductTag.edit")
 @UiDescriptor("product-tag-edit.xml")
 @EditedEntityContainer("productTagDc")
 public class ProductTagEdit extends StandardEditor<ProductTag> {

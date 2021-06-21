@@ -831,6 +831,35 @@
             </item>
         </menu>
 
+        <menu id="tagpicker" url="backoffice-ui/vcl/components">
+            <item id="tagpicker-simple" page="tag-picker"
+                  image="components/tagpicker/tagpicker-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Product.java"/>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagpicker-action" page="tag-picker" anchor="tag-picker-action"
+                  image="components/tagpicker/tagpicker-action.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagpicker-tagclick" page="tag-picker" anchor="handlers"
+                  image="components/tagpicker/tagpicker-tagclick.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+            <item id="tagpicker-tagposition" page="tag-picker" anchor="tag-position"
+                  image="components/tagpicker/tagpicker-tagposition.png"
+                  splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ProductTag.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="textarea">
             <item id="textarea-simple" page="text-area"
                   image="components/textarea/textarea-simple.png"/>

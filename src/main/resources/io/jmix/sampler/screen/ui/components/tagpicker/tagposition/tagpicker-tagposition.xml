@@ -1,0 +1,42 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="productTagsDc"
+                    class="io.jmix.sampler.entity.ProductTag">
+            <fetchPlan extends="_local"/>
+            <loader id="productTagsDl">
+                <query>
+                    <![CDATA[select e from sampler_ProductTag e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="rightLeft"
+            spacing="true">
+        <hbox id="bottomTop"
+              spacing="true"
+              width="700px">
+            <tagPicker caption="msg://tagPicker.caption.bottom"
+                       optionsContainer="productTagsDc"
+                       width="100%"/>
+            <tagPicker caption="msg://tagPicker.caption.top"
+                       optionsContainer="productTagsDc"
+                       tagPosition="TOP"
+                       width="100%"/>
+        </hbox>
+        <hbox id="rightLeft"
+              spacing="true"
+              width="700px">
+            <tagPicker caption="msg://tagPicker.caption.left"
+                       optionsContainer="productTagsDc"
+                       tagPosition="LEFT"
+                       width="100%"/>
+            <tagPicker caption="msg://tagPicker.caption.right"
+                       optionsContainer="productTagsDc"
+                       tagPosition="RIGHT"
+                       width="100%"/>
+        </hbox>
+    </layout>
+</window>

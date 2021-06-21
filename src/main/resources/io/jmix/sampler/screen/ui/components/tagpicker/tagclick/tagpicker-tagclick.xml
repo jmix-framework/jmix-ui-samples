@@ -1,0 +1,20 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="productTagsDc"
+                    class="io.jmix.sampler.entity.ProductTag">
+            <fetchPlan extends="_local"/>
+            <loader id="orderItemsDl">
+                <query>
+                    <![CDATA[select e from sampler_ProductTag e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <tagPicker id="tagPicker"
+                   optionsContainer="productTagsDc"/>
+    </layout>
+</window>
