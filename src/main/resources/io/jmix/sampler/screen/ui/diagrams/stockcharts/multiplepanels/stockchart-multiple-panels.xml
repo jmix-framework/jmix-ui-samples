@@ -1,0 +1,136 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="stockChartDc"
+                    class="io.jmix.sampler.entity.StockData"/>
+    </data>
+    <layout>
+        <chart:stockChart id="stockChart"
+                          height="100%"
+                          width="100%">
+            <chart:dataSets>
+                <chart:dataSet id="dataSet1"
+                               categoryField="date"
+                               color="#7f8da9"
+                               dataContainer="stockChartDc"
+                               title="West Stock">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="open"
+                                            toField="open"/>
+                        <chart:fieldMapping fromField="close"
+                                            toField="close"/>
+                        <chart:fieldMapping fromField="high"
+                                            toField="high"/>
+                        <chart:fieldMapping fromField="low"
+                                            toField="low"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+                <chart:dataSet id="dataSet2"
+                               categoryField="date"
+                               color="#fac314"
+                               compared="true"
+                               dataContainer="stockChartDc"
+                               title="East Stock">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+            </chart:dataSets>
+            <chart:panels>
+                <chart:panel percentHeight="70"
+                             showCategoryAxis="false"
+                             title="Value">
+                    <chart:valueAxes>
+                        <chart:axis id="valueAxis"
+                                    dashLength="5"/>
+                    </chart:valueAxes>
+                    <chart:categoryAxis dashLength="5"/>
+                    <chart:stockGraphs>
+                        <chart:stockGraph id="stockGraph"
+                                          closeField="close"
+                                          comparable="true"
+                                          compareField="value"
+                                          fillAlphas="1"
+                                          highField="high"
+                                          lineColor="#7f8da9"
+                                          lowField="low"
+                                          negativeLineColor="#db4c3c"
+                                          openField="open"
+                                          proCandlesticks="true"
+                                          showBalloon="false"
+                                          type="CANDLESTICK"
+                                          useDataSetColors="false"
+                                          valueField="close">
+                            <chart:fillColors>
+                                <chart:color value="#7f8da9"/>
+                            </chart:fillColors>
+                            <chart:negativeFillColors>
+                                <chart:color value="#db4c3c"/>
+                            </chart:negativeFillColors>
+                        </chart:stockGraph>
+                    </chart:stockGraphs>
+                    <chart:stockLegend periodValueTextComparing="[[percents.value.close]]%"/>
+                </chart:panel>
+                <chart:panel marginTop="1"
+                             percentHeight="30"
+                             showCategoryAxis="true"
+                             title="Volume">
+                    <chart:valueAxes>
+                        <chart:axis dashLength="5"/>
+                    </chart:valueAxes>
+                    <chart:categoryAxis dashLength="5">
+                        <chart:guides>
+                            <chart:guide dashLength="2"
+                                         date="2015-11-06"
+                                         fillAlpha="0.2"
+                                         fillColor="#CC0000"
+                                         inside="true"
+                                         label="Very hot period :-)"
+                                         labelRotation="90"
+                                         toDate="2015-11-09"/>
+                        </chart:guides>
+                    </chart:categoryAxis>
+                    <chart:stockGraphs>
+                        <chart:stockGraph fillAlphas="1"
+                                          showBalloon="false"
+                                          type="COLUMN"
+                                          valueField="volume"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend labelText=""
+                                       markerSize="0"
+                                       markerType="NONE"
+                                       periodValueTextRegular="[[value.close]]"/>
+                </chart:panel>
+            </chart:panels>
+            <chart:chartScrollbarSettings graph="stockGraph"
+                                          graphType="LINE"
+                                          usePeriod="WW"/>
+            <chart:chartCursorSettings valueLineBalloonEnabled="true"
+                                       valueLineEnabled="true"/>
+            <chart:periodSelector position="BOTTOM">
+                <chart:periods>
+                    <chart:period count="10"
+                                  label="10 days"
+                                  period="DAYS"/>
+                    <chart:period count="1"
+                                  label="1 month"
+                                  period="MONTHS"
+                                  selected="true"/>
+                    <chart:period count="1"
+                                  label="1 year"
+                                  period="YEARS"/>
+                    <chart:period label="YTD"
+                                  period="YTD"/>
+                    <chart:period label="MAX"
+                                  period="MAX"/>
+                </chart:periods>
+            </chart:periodSelector>
+            <chart:export/>
+        </chart:stockChart>
+    </layout>
+</window>

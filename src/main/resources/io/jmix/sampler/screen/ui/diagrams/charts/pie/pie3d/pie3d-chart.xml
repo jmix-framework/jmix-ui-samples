@@ -1,0 +1,36 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="countryLitresDc"
+                    class="io.jmix.sampler.entity.CountryLitres">
+            <fetchPlan extends="_local"/>
+            <loader id="countryLitresLoader">
+                <query>
+                    <![CDATA[select e from sampler_CountryLitres e order by e.litres desc]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <chart:pieChart id="pie3dChart"
+                        angle="30"
+                        balloonText="[[title]]&lt;br&gt;&lt;span style='font-size:14px'&gt;
+                        &lt;strong&gt;[[value]]&lt;/strong&gt; ([[percents]]%)&lt;/span&gt;"
+                        dataContainer="countryLitresDc"
+                        depth3D="15"
+                        height="100%"
+                        outlineAlpha="0.4"
+                        titleField="country"
+                        valueField="litres"
+                        width="100%">
+            <chart:legend autoMargins="false"
+                          marginRight="80"
+                          markerType="CIRCLE"
+                          position="RIGHT"/>
+            <chart:export/>
+        </chart:pieChart>
+    </layout>
+</window>

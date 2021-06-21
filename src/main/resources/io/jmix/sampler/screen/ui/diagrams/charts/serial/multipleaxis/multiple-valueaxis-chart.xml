@@ -1,0 +1,79 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="lineChartDc"
+                    class="io.jmix.sampler.entity.DateValueVolume"/>
+    </data>
+    <layout>
+        <chart:serialChart id="lineChart"
+                           autoMarginOffset="20"
+                           categoryField="date"
+                           dataContainer="lineChartDc"
+                           height="100%"
+                           marginLeft="40"
+                           marginRight="40"
+                           mouseWheelZoomEnabled="true"
+                           theme="LIGHT"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis id="v1"
+                            axisAlpha="0"
+                            ignoreAxisWidth="true"
+                            position="LEFT"/>
+                <chart:axis id="v2"
+                            axisAlpha="0"
+                            ignoreAxisWidth="true"
+                            position="RIGHT"/>
+            </chart:valueAxes>
+            <chart:balloon borderThickness="1"
+                           shadowAlpha="0"/>
+            <chart:graphs>
+                <chart:graph id="g1"
+                             balloonText="&lt;span style=&apos;font-size:18px;&apos;&gt;[[value]]&lt;/span&gt;"
+                             bullet="ROUND"
+                             bulletBorderAlpha="1"
+                             bulletColor="WHITE"
+                             bulletSize="5"
+                             hideBulletsCount="50"
+                             lineThickness="2"
+                             title="Value"
+                             useLineColorForBulletBorder="true"
+                             valueAxis="v1"
+                             valueField="value">
+                    <chart:balloon adjustBorderColor="false"
+                                   color="WHITE"
+                                   drop="true"/>
+                </chart:graph>
+                <chart:graph id="g2"
+                             balloonText="&lt;span style=&apos;font-size:18px;&apos;&gt;[[value]]&lt;/span&gt;"
+                             bullet="ROUND"
+                             bulletBorderAlpha="1"
+                             bulletColor="WHITE"
+                             bulletSize="5"
+                             hideBulletsCount="50"
+                             lineThickness="2"
+                             title="Volume"
+                             useLineColorForBulletBorder="true"
+                             valueAxis="v2"
+                             valueField="volume">
+                    <chart:balloon adjustBorderColor="false"
+                                   color="WHITE"
+                                   drop="true"/>
+                </chart:graph>
+            </chart:graphs>
+            <chart:legend useGraphSettings="true"/>
+            <chart:categoryAxis dashLength="1"
+                                minorGridEnabled="true"/>
+            <chart:chartCursor cursorAlpha="1"
+                               cursorColor="#258cbb"
+                               cursorPosition="MOUSE"
+                               limitToGraph="g1"
+                               pan="true"
+                               valueLineAlpha="0.2"
+                               valueLineBalloonEnabled="true"
+                               valueLineEnabled="true"
+                               valueZoomable="true"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

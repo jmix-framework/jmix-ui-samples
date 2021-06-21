@@ -1,0 +1,59 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="incomeExpensesDc"
+                    class="io.jmix.sampler.entity.IncomeExpenses">
+            <fetchPlan extends="_local"/>
+            <loader id="incomeExpensesLoader">
+                <query>
+                    <![CDATA[select e from sampler_IncomeExpenses e order by e.year]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="columnChart" spacing="true">
+        <hbox spacing="true">
+            <button id="addIncome" caption="Add" icon="font-awesome-icon:PLUS"/>
+            <button id="removeIncome" caption="Remove" icon="font-awesome-icon:REMOVE"/>
+        </hbox>
+        <chart:serialChart id="columnChart"
+                           additionalFields="additional"
+                           addClassNames="true"
+                           autoMargins="false"
+                           categoryField="year"
+                           dataContainer="incomeExpensesDc"
+                           marginBottom="26"
+                           marginLeft="30"
+                           marginRight="8"
+                           marginTop="10"
+                           startDuration="1"
+                           theme="LIGHT"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:balloon adjustBorderColor="false"
+                           color="WHITE"
+                           horizontalPadding="10"
+                           verticalPadding="8"/>
+            <chart:graphs>
+                <chart:graph alphaField="alpha"
+                             balloonText="&lt;span style='font-size:12px;'&gt;[[title]] in [[category]]:&lt;br&gt;
+                             &lt;span style='font-size:20px;'&gt;[[value]]&lt;/span&gt; [[additional]]&lt;/span&gt;"
+                             dashLengthField="dashLengthColumn"
+                             fillAlphas="1"
+                             title="Income"
+                             type="COLUMN"
+                             valueField="income"/>
+            </chart:graphs>
+            <chart:categoryAxis axisAlpha="0"
+                                gridPosition="START"
+                                tickLength="0"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

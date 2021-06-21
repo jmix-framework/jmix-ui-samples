@@ -1,0 +1,31 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:charts="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="transportCountDc"
+                    class="io.jmix.sampler.entity.TransportCount">
+            <fetchPlan extends="_local"/>
+            <loader id="transportCountLoader">
+                <query>
+                    <![CDATA[select e from sampler_TransportCount e order by e.year]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <charts:serialChart id="serialChart"
+                            categoryField="year"
+                            dataContainer="transportCountDc"
+                            theme="LIGHT"
+                            height="100%"
+                            width="100%">
+            <charts:chartCursor/>
+            <charts:valueAxes>
+                <charts:axis position="LEFT"
+                             stackType="REGULAR"
+                             title="Traffic incidents"/>
+            </charts:valueAxes>
+            <charts:categoryAxis startOnAxis="true"/>
+            <charts:export/>
+        </charts:serialChart>
+    </layout>
+</window>

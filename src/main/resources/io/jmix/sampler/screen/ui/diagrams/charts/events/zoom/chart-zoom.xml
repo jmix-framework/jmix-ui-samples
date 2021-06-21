@@ -1,0 +1,48 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="dateValueDc"
+                    class="io.jmix.sampler.entity.DateValue">
+            <fetchPlan extends="_local"/>
+            <loader id="dateValueLoader">
+                <query>
+                    <![CDATA[select e from sampler_DateValue e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="lineChart" spacing="true">
+        <label id="label" value="Zoom: " htmlEnabled="true"/>
+        <chart:serialChart id="lineChart"
+                           categoryField="date"
+                           dataContainer="dateValueDc"
+                           mouseWheelScrollEnabled="true"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:graphs>
+                <chart:graph id="g1"
+                             bullet="ROUND"
+                             bulletBorderAlpha="1"
+                             bulletColor="WHITE"
+                             bulletSize="5"
+                             hideBulletsCount="50"
+                             lineThickness="2"
+                             title="Red line"
+                             valueField="value"/>
+            </chart:graphs>
+            <chart:categoryAxis dashLength="1"
+                                minorGridEnabled="true"
+                                position="TOP"/>
+            <chart:chartScrollbar graph="g1"
+                                  autoGridCount="true"
+                                  scrollbarHeight="30"/>
+            <chart:chartCursor cursorPosition="MOUSE"/>
+        </chart:serialChart>
+    </layout>
+</window>

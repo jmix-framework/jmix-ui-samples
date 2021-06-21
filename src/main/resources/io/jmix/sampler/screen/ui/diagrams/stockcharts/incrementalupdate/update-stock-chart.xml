@@ -1,0 +1,110 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="stockChartDc1"
+                    class="io.jmix.sampler.entity.DateValueVolume"/>
+        <collection id="stockChartDc2"
+                    class="io.jmix.sampler.entity.DateValueVolume"/>
+        <collection id="stockChartDc3"
+                    class="io.jmix.sampler.entity.DateValueVolume"/>
+        <collection id="stockChartDc4"
+                    class="io.jmix.sampler.entity.DateValueVolume"/>
+    </data>
+    <facets>
+        <timer id="timer" autostart="true" delay="5000" repeating="true"/>
+    </facets>
+    <layout expand="stockChart" spacing="true">
+        <hbox spacing="true">
+            <button id="startTimer" caption="Start" icon="font-awesome-icon:PLAY"/>
+            <button id="stopTimer" caption="Stop" icon="font-awesome-icon:STOP"/>
+            <label id="statusLabel" align="MIDDLE_LEFT" value="Update enabled"/>
+        </hbox>
+        <chart:stockChart id="stockChart"
+                          mainDataSet="dataSet4"
+                          theme="LIGHT"
+                          width="100%">
+            <chart:dataSets>
+                <chart:dataSet id="dataSet1"
+                               categoryField="date"
+                               dataContainer="stockChartDc1"
+                               title="First data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+                <chart:dataSet id="dataSet2"
+                               categoryField="date"
+                               dataContainer="stockChartDc2"
+                               title="Second data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+                <chart:dataSet id="dataSet3"
+                               categoryField="date"
+                               dataContainer="stockChartDc3"
+                               title="Third data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+                <chart:dataSet id="dataSet4"
+                               categoryField="date"
+                               dataContainer="stockChartDc4"
+                               title="Fourth data set">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value"
+                                            toField="value"/>
+                        <chart:fieldMapping fromField="volume"
+                                            toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+            </chart:dataSets>
+            <chart:panels>
+                <chart:panel percentHeight="70"
+                             showCategoryAxis="false"
+                             title="Value">
+                    <chart:stockGraphs>
+                        <chart:stockGraph id="stockGraph"
+                                          balloonText="[[title]]:&lt;strong&gt;[[value]]&lt;/strong&gt;"
+                                          comparable="true"
+                                          compareField="value"
+                                          compareGraphBalloonText="[[title]]:&lt;strong&gt;[[value]]&lt;/strong&gt;"
+                                          valueField="value"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend periodValueTextComparing="[[percents.value.close]]%"
+                                       periodValueTextRegular="[[value.close]]"/>
+                </chart:panel>
+                <chart:panel id="panel"
+                             percentHeight="30"
+                             title="Volume">
+                    <chart:stockGraphs>
+                        <chart:stockGraph fillAlphas="1"
+                                          showBalloon="false"
+                                          type="COLUMN"
+                                          valueField="volume"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend periodValueTextRegular="[[value.close]]"/>
+                </chart:panel>
+            </chart:panels>
+            <chart:chartScrollbarSettings graph="stockGraph"/>
+            <chart:chartCursorSettings cursorAlpha="0.1"
+                                       fullWidth="true"
+                                       valueBalloonsEnabled="true"
+                                       valueLineAlpha="0.5"
+                                       valueLineBalloonEnabled="true"
+                                       valueLineEnabled="true"/>
+            <chart:dataSetSelector position="LEFT"/>
+            <chart:export/>
+        </chart:stockChart>
+    </layout>
+</window>

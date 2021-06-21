@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_POINT_VALUE"/>
+            </column>
+            <column name="X" type="DOUBLE"/>
+            <column name="Y" type="DOUBLE"/>
+            <column name="VALUE_" type="INT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" value="2d47b668-8fae-8a1f-f65f-145e4b11d812"/>
+            <column name="X" valueNumeric="1.0"/>
+            <column name="Y" valueNumeric="13.0"/>
+            <column name="VALUE_" valueNumeric="8"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" value="4431be86-e95d-a046-a609-fa981b35ac76"/>
+            <column name="X" valueNumeric="5.0"/>
+            <column name="Y" valueNumeric="-6.0"/>
+            <column name="VALUE_" valueNumeric="65"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" value="68e7e4ff-b821-cb86-14d7-a54bb5ff2d47"/>
+            <column name="X" valueNumeric="14.0"/>
+            <column name="Y" valueNumeric="10.0"/>
+            <column name="VALUE_" valueNumeric="59"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" value="78259a35-b6c9-ada0-cb0f-689785bbd1fb"/>
+            <column name="X" valueNumeric="3.0"/>
+            <column name="Y" valueNumeric="5.0"/>
+            <column name="VALUE_" valueNumeric="50"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" value="b2f832c8-c2a9-5ef5-58dd-dd723fd26189"/>
+            <column name="X" valueNumeric="8.0"/>
+            <column name="Y" valueNumeric="-10.0"/>
+            <column name="VALUE_" valueNumeric="19"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" value="c732e449-d790-1143-5532-01b451b08634"/>
+            <column name="X" valueNumeric="-4.0"/>
+            <column name="Y" valueNumeric="15.0"/>
+            <column name="VALUE_" valueNumeric="92"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_VALUE">
+            <column name="ID" value="e66eb943-7b88-06ba-06c1-51087f874204"/>
+            <column name="X" valueNumeric="6.0"/>
+            <column name="Y" valueNumeric="1.0"/>
+            <column name="VALUE_" valueNumeric="35"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

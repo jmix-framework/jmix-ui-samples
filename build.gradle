@@ -55,6 +55,7 @@ dependencies {
     implementation 'io.jmix.data:jmix-eclipselink-starter'
     implementation 'io.jmix.ui:jmix-ui-starter'
     implementation 'io.jmix.ui:jmix-ui-data-starter'
+    implementation "io.jmix.ui:jmix-charts-starter"
     implementation "io.jmix.ui:jmix-pivot-table-starter"
     implementation 'io.jmix.sessions:jmix-sessions-starter'
     implementation 'io.jmix.translations:jmix-translations-ru'
@@ -67,6 +68,7 @@ dependencies {
 
     themes 'io.jmix.ui:jmix-ui-themes'
 
+    widgets "io.jmix.ui:jmix-charts-widgets"
     widgets "io.jmix.ui:jmix-pivot-table-widgets"
     widgets "io.jmix.ui:jmix-ui-widgets"
 }

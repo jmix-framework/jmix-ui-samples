@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_TASK_SPAN"/>
+            </column>
+            <column name="CATEGORY" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="45b72563-6f35-29ba-af6a-f92ec7824a86"/>
+            <column name="CATEGORY" value="John"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="ea6a27df-d2e1-386e-61b1-befcaaac7100"/>
+            <column name="CATEGORY" value="Smith"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="8b4dd0ad-cde2-2766-d83c-485a9bead8b7"/>
+            <column name="CATEGORY" value="Ben"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="4bea2fa9-9296-b8f0-6f61-269c64c2409e"/>
+            <column name="CATEGORY" value="Mike"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="dd60a011-4ec7-092c-a4a2-f9a84c4f848e"/>
+            <column name="CATEGORY" value="Lenny"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="b8884f20-3290-328f-3a51-28413b9c9241"/>
+            <column name="CATEGORY" value="Scott"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="7e7b5048-0faf-545c-02d2-4e78c67a8f8d"/>
+            <column name="CATEGORY" value="Julia"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="ab25cb5e-320b-ff5e-33f6-ebd7da150619"/>
+            <column name="CATEGORY" value="Bob"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="c262de4b-9897-e16c-df88-d24e0fd7bf5f"/>
+            <column name="CATEGORY" value="Kendra"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="7574c53b-5bce-845d-908c-bf30f29182a9"/>
+            <column name="CATEGORY" value="Tom"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="c2fd2888-1b41-8268-814e-278522b37e23"/>
+            <column name="CATEGORY" value="Kyle"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="24fe04b8-c410-0354-338c-126cc78c7734"/>
+            <column name="CATEGORY" value="Anita"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="4a63bf60-c121-d269-c592-a54dc56e666d"/>
+            <column name="CATEGORY" value="Jack"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="47649c8a-674d-d551-2d72-27d198f796d2"/>
+            <column name="CATEGORY" value="Kim"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="faecb45a-4663-6bbc-6ae6-ddab158af784"/>
+            <column name="CATEGORY" value="Aaron"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="46937a60-6620-b6ce-a530-71792cd0c6d4"/>
+            <column name="CATEGORY" value="Alan"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="0f8dab07-0d2e-958c-dc0b-4f52e31706e4"/>
+            <column name="CATEGORY" value="Ruth"/>
+        </insert>
+        <insert tableName="SAMPLER_TASK_SPAN">
+            <column name="ID" value="e3c711f1-9de7-6856-736d-98392fa2e79b"/>
+            <column name="CATEGORY" value="Simon"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

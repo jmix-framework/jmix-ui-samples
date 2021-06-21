@@ -1,0 +1,25 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <layout>
+        <chart:pieChart id="chart"
+                        balloonText="[[title]] - [[percents]]%"
+                        height="100%"
+                        labelText="[[]]"
+                        startAngle="312"
+                        titleField="description"
+                        valueField="value"
+                        width="100%">
+            <chart:legend autoMargins="false"
+                          marginRight="080"
+                          markerType="CIRCLE"
+                          position="RIGHT"
+                          valueText="[[]]"/>
+            <chart:colors>
+                <chart:color value="#446493"/>
+                <chart:color value="#5E3D2C"/>
+                <chart:color value="#D0A557"/>
+            </chart:colors>
+            <chart:export/>
+        </chart:pieChart>
+    </layout>
+</window>

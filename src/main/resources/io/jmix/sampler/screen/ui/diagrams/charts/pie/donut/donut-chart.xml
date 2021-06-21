@@ -1,0 +1,16 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <layout>
+        <chart:pieChart id="donutChart"
+                        height="100%"
+                        innerRadius="60%"
+                        labelRadius="5"
+                        labelText="[[title]]"
+                        radius="42%"
+                        titleField="title"
+                        valueField="value"
+                        width="100%">
+            <chart:export/>
+        </chart:pieChart>
+    </layout>
+</window>

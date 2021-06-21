@@ -1,0 +1,41 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="gapChartDc"
+                    class="io.jmix.sampler.entity.DateValueGap"/>
+    </data>
+    <layout>
+        <chart:serialChart
+                dataContainer="gapChartDc"
+                width="100%"
+                height="100%"
+                theme="NONE"
+                marginRight="70"
+                autoMarginOffset="20"
+                categoryField="date">
+            <chart:balloon cornerRadius="6"/>
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"/>
+            </chart:valueAxes>
+            <chart:graphs>
+                <chart:graph
+                        balloonText="[[category]]&lt;br&gt;&lt;b&gt;&lt;span style='font-size:14px;'&gt;[[value]] C&lt;/span&gt;&lt;/b&gt;"
+                        bullet="ROUND"
+                        bulletSize="6"
+                        connect="false"
+                        lineColor="#b6d278"
+                        lineThickness="2"
+                        negativeLineColor="#487dac"
+                        valueField="value"/>
+            </chart:graphs>
+            <chart:chartCursor categoryBalloonDateFormat="DD"
+                               cursorAlpha="0.1"
+                               cursorColor="#000000"
+                               fullWidth="true"
+                               graphBulletSize="2"/>
+            <chart:categoryAxis minPeriod="DAYS"
+                                minorGridEnabled="true"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

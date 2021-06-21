@@ -1230,6 +1230,270 @@
         </menu>
     </menu>
 
+    <menu id="charts" image="mainmenu/charts.svg" url="backoffice-ui">
+        <menu id="sub-charts">
+
+            <menu id="serialChart">
+                <item id="line-chart" splitEnabled="true" image="charts/line-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValue.java"/>
+                    </otherFiles>
+                </item>
+                <item id="colorsupsdowns-chart" splitEnabled="true" image="charts/colorsupsdowns-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValue.java"/>
+                    </otherFiles>
+                </item>
+                <item id="smoothedline-chart" splitEnabled="true" image="charts/smoothedline-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValue.java"/>
+                    </otherFiles>
+                </item>
+                <item id="stackedarea-chart" splitEnabled="true" image="charts/stackedarea-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/TransportCount.java"/>
+                    </otherFiles>
+                </item>
+                <item id="stackedcolumn-chart" splitEnabled="true" image="charts/stackedcolumn-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/TransportCount.java"/>
+                    </otherFiles>
+                </item>
+                <item id="clusteredbar-chart" splitEnabled="true" image="charts/clusteredbar-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValueVolume.java"/>
+                    </otherFiles>
+                </item>
+                <item id="columnline-chart" splitEnabled="true" image="charts/columnline-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/IncomeExpenses.java"/>
+                    </otherFiles>
+                </item>
+                <item id="column3d-chart" splitEnabled="true" image="charts/column3d-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/CountryGrowth.java"/>
+                    </otherFiles>
+                </item>
+                <item id="multiple-valueaxis-chart" splitEnabled="true" image="charts/multiple-valueaxis-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValueVolume.java"/>
+                    </otherFiles>
+                </item>
+                <item id="micro-chart" image="charts/micro-chart.png"/>
+                <item id="cylinder-chart" splitEnabled="true" image="charts/cylinder-chart.svg"/>
+            </menu>
+
+            <menu id="gap-chart">
+                <item id="gap-field-chart" splitEnabled="true" image="charts/gap-field-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValueGap.java"/>
+                    </otherFiles>
+                </item>
+                <item id="connect-chart" splitEnabled="true" image="charts/connect-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValueGap.java"/>
+                    </otherFiles>
+                </item>
+            </menu>
+
+            <menu id="xy-chart-menu">
+                <item id="xy-chart" splitEnabled="true" image="charts/xy-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/PointPair.java"/>
+                    </otherFiles>
+                </item>
+                <item id="xy-dateaxis-chart" splitEnabled="true" image="charts/xy-dateaxis-chart.svg"/>
+                <item id="fills-axis-chart" splitEnabled="true" image="charts/fills-axis-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/PointPair.java"/>
+                    </otherFiles>
+                </item>
+            </menu>
+
+            <menu id="pieChart">
+                <item id="pie-chart" splitEnabled="true" image="charts/pie-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/CountryLitres.java"/>
+                    </otherFiles>
+                </item>
+                <item id="pie3d-chart" splitEnabled="true" image="charts/pie3d-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/CountryLitres.java"/>
+                    </otherFiles>
+                </item>
+                <item id="donut-chart" splitEnabled="true" image="charts/donut-chart.svg"/>
+            </menu>
+
+            <menu id="radarChart">
+                <item id="radar-chart" splitEnabled="true" image="charts/radar-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/CountryLitres.java"/>
+                    </otherFiles>
+                </item>
+                <item id="polar-chart" splitEnabled="true" image="charts/polar-chart.svg"/>
+            </menu>
+
+            <menu id="ganttChart">
+                <item id="gantt-chart" splitEnabled="true" image="charts/gantt-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/Segment.java"/>
+                        <file name="io/jmix/sampler/entity/TaskSpan.java"/>
+                    </otherFiles>
+                </item>
+                <item id="gantt-chart-dates" splitEnabled="true" image="charts/gantt-chart-dates.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateSegment.java"/>
+                        <file name="io/jmix/sampler/entity/DateTaskSpan.java"/>
+                    </otherFiles>
+                </item>
+            </menu>
+
+            <menu id="gauge-chart-menu">
+                <item id="gauge-chart" splitEnabled="true" image="charts/gauge-chart.svg"/>
+                <item id="angular-twoaxes-chart" splitEnabled="true" image="charts/angular-twoaxes-chart.svg"/>
+                <item id="solid-gauge-chart" splitEnabled="true" image="charts/solid-gauge-chart.svg"/>
+            </menu>
+
+            <menu id="funnelChart">
+                <item id="funnel-chart" splitEnabled="true" image="charts/funnel-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/TitleValue.java"/>
+                    </otherFiles>
+                </item>
+                <item id="funnel3d-chart" splitEnabled="true" image="charts/funnel3d-chart.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/TitleValue.java"/>
+                    </otherFiles>
+                </item>
+            </menu>
+
+            <menu id="chartEvents">
+                <item id="chart-click" splitEnabled="true" image="charts/chart-click.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/PointPair.java"/>
+                    </otherFiles>
+                </item>
+                <item id="chart-graph-click" splitEnabled="true" image="charts/chart-graph-click.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/IncomeExpenses.java"/>
+                    </otherFiles>
+                </item>
+                <item id="chart-legend" splitEnabled="true" image="charts/chart-legend.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/CountryLitres.java"/>
+                    </otherFiles>
+                </item>
+                <item id="chart-slice" splitEnabled="true" image="charts/chart-slice.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/CountryLitres.java"/>
+                    </otherFiles>
+                </item>
+                <item id="chart-zoom" splitEnabled="true" image="charts/chart-zoom.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValue.java"/>
+                    </otherFiles>
+                </item>
+                <item id="chart-category-item-click" splitEnabled="true" image="charts/chart-category-item-click.svg">
+                    <otherFiles>
+                        <file name="io/jmix/sampler/entity/DateValue.java"/>
+                    </otherFiles>
+                </item>
+            </menu>
+        </menu>
+
+        <menu id="stockCharts">
+            <item id="stockchart-multiple-datasets" splitEnabled="true"
+                  image="charts/stockchart-multiple-datasets.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/DateValueVolume.java"/>
+                </otherFiles>
+            </item>
+            <item id="stockchart-stock-events" splitEnabled="true"
+                  image="charts/stockchart-stock-events.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/DateValueVolume.java"/>
+                </otherFiles>
+            </item>
+            <item id="stockchart-multiple-panels" splitEnabled="true"
+                  image="charts/stockchart-multiple-panels.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/StockData.java"/>
+                </otherFiles>
+            </item>
+            <item id="stockchart-intraday-data" splitEnabled="true"
+                  image="charts/stockchart-intraday-data.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/DateValueVolume.java"/>
+                </otherFiles>
+            </item>
+            <item id="stockchart-drawing" splitEnabled="true"
+                  image="charts/stockchart-drawing.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/DateValueVolume.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
+        <menu id="dataItems">
+            <item id="entity-data-item" splitEnabled="true" image="charts/entity-data-item.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/ValueDescription.java"/>
+                </otherFiles>
+            </item>
+            <item id="map-data-item" splitEnabled="true" image="charts/entity-data-item.png"/>
+            <item id="simple-data-item" splitEnabled="true" image="charts/entity-data-item.png"/>
+        </menu>
+
+        <menu id="incrementalUpdate">
+            <item id="update-column-chart" splitEnabled="true" image="charts/update-column-chart.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/IncomeExpenses.java"/>
+                </otherFiles>
+            </item>
+            <item id="update-line-chart" splitEnabled="true" image="charts/update-line-chart.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/DateValue.java"/>
+                </otherFiles>
+            </item>
+            <item id="update-xy-chart" splitEnabled="true" image="charts/update-xy-chart.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/PointValue.java"/>
+                </otherFiles>
+            </item>
+            <item id="update-stock-chart" splitEnabled="true"
+                  image="charts/update-stock-chart.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/DateValueVolume.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
+        <menu id="other">
+            <item id="chart-responsive" splitEnabled="true" image="charts/chart-responsive.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/TransportCount.java"/>
+                </otherFiles>
+            </item>
+            <item id="chart-keyvalue" splitEnabled="true" image="charts/chart-keyvalue.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Order.java"/>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="dynamically-creating-graphs-chart" splitEnabled="true"
+                  image="charts/dynamically-creating-graphs-chart.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/TransportCount.java"/>
+                </otherFiles>
+            </item>
+            <item id="two-level-category-chart" splitEnabled="true" image="charts/two-level-category-chart.svg">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/CountrySales.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+    </menu>
+
     <menu id="pivotTable" image="mainmenu/pivotTable.svg">
         <item id="pivottable-simple"
               image="pivottable/pivottable-simple.png">

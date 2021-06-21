@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_DATE_VALUE"/>
+            </column>
+            <column name="DATE_" type="DATE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VALUE_" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="a38bc5af-e5ae-487d-9f68-eda244579c4c"/>
+            <column name="DATE_" valueDate="2012-07-27"/>
+            <column name="VALUE_" valueNumeric="13"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="38fc001c-7a1d-48c6-9880-53045358a57b"/>
+            <column name="DATE_" valueDate="2012-07-28"/>
+            <column name="VALUE_" valueNumeric="11"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="2b33aa8c-98af-42cc-96c5-ecc0bfd11adc"/>
+            <column name="DATE_" valueDate="2012-07-29"/>
+            <column name="VALUE_" valueNumeric="15"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="f92f6377-5a15-4cc2-b1c0-a6a4ae9d69ae"/>
+            <column name="DATE_" valueDate="2012-07-30"/>
+            <column name="VALUE_" valueNumeric="16"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="41e9b3b7-16ab-47a0-bba5-5f5d7009b184"/>
+            <column name="DATE_" valueDate="2012-07-31"/>
+            <column name="VALUE_" valueNumeric="18"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5b46b2d2-bdfd-4271-827f-f64bf7740c76"/>
+            <column name="DATE_" valueDate="2012-08-01"/>
+            <column name="VALUE_" valueNumeric="13"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="bb91dfe0-2f8a-40c6-86ab-9a04432eeae5"/>
+            <column name="DATE_" valueDate="2012-08-02"/>
+            <column name="VALUE_" valueNumeric="22"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="af2cce91-ffce-49bf-a687-8384ed672a07"/>
+            <column name="DATE_" valueDate="2012-08-03"/>
+            <column name="VALUE_" valueNumeric="23"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="18b41cfc-4f37-4c9e-8494-d1cc9c830bba"/>
+            <column name="DATE_" valueDate="2012-08-04"/>
+            <column name="VALUE_" valueNumeric="20"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="bbce4ad9-80a2-4c60-96c8-771bb528ce6f"/>
+            <column name="DATE_" valueDate="2012-08-05"/>
+            <column name="VALUE_" valueNumeric="17"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="55f77b83-f613-4e33-af39-1a896de8ebd7"/>
+            <column name="DATE_" valueDate="2012-08-06"/>
+            <column name="VALUE_" valueNumeric="16"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="e5972386-69db-4948-aa07-4c54f8999837"/>
+            <column name="DATE_" valueDate="2012-08-07"/>
+            <column name="VALUE_" valueNumeric="18"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fb99d6f1-887f-4b4b-9a91-cbf12af7795f"/>
+            <column name="DATE_" valueDate="2012-08-08"/>
+            <column name="VALUE_" valueNumeric="21"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="a6e1f239-70af-4a2c-ab93-52deb8cd53d4"/>
+            <column name="DATE_" valueDate="2012-08-09"/>
+            <column name="VALUE_" valueNumeric="26"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c11aa48f-a099-44df-9269-c3de1e39854a"/>
+            <column name="DATE_" valueDate="2012-08-10"/>
+            <column name="VALUE_" valueNumeric="24"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="af87a1a4-bbc4-41d4-85bb-f03f191c99b8"/>
+            <column name="DATE_" valueDate="2012-08-11"/>
+            <column name="VALUE_" valueNumeric="29"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="93aadf8a-d0c2-4f51-b3db-2eabcd798d4e"/>
+            <column name="DATE_" valueDate="2012-08-12"/>
+            <column name="VALUE_" valueNumeric="32"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="bc4c657e-671c-427a-a0fa-4c19bb972115"/>
+            <column name="DATE_" valueDate="2012-08-13"/>
+            <column name="VALUE_" valueNumeric="18"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="2e573e8b-0f22-448f-9287-089512ed652f"/>
+            <column name="DATE_" valueDate="2012-08-14"/>
+            <column name="VALUE_" valueNumeric="24"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="2c6c0232-3b6d-4352-a0e5-a2896b6e75fb"/>
+            <column name="DATE_" valueDate="2012-08-15"/>
+            <column name="VALUE_" valueNumeric="22"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="7e1b3a43-5912-449f-b53d-566ef46efadb"/>
+            <column name="DATE_" valueDate="2012-08-16"/>
+            <column name="VALUE_" valueNumeric="18"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="6dec20ba-0314-49fb-aa98-e477741e1e80"/>
+            <column name="DATE_" valueDate="2012-08-17"/>
+            <column name="VALUE_" valueNumeric="19"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="837fae9a-93f1-4344-9530-f723c6cb6d32"/>
+            <column name="DATE_" valueDate="2012-08-18"/>
+            <column name="VALUE_" valueNumeric="14"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="7f3e70ff-c4e3-49a9-b5e1-5387e95cdb59"/>
+            <column name="DATE_" valueDate="2012-08-19"/>
+            <column name="VALUE_" valueNumeric="15"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="856c9237-b7b9-419b-976e-7ac8a42f35c1"/>
+            <column name="DATE_" valueDate="2012-08-20"/>
+            <column name="VALUE_" valueNumeric="12"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4e8af7af-84ef-4441-8c4a-29bd1dffbb4b"/>
+            <column name="DATE_" valueDate="2012-08-21"/>
+            <column name="VALUE_" valueNumeric="8"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="50bbd21e-b9b0-488b-a659-9cefc8369b62"/>
+            <column name="DATE_" valueDate="2012-08-22"/>
+            <column name="VALUE_" valueNumeric="9"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="bd2646a7-f6d6-4758-9fb6-8e7fa29d9061"/>
+            <column name="DATE_" valueDate="2012-08-23"/>
+            <column name="VALUE_" valueNumeric="8"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="819fc308-4c6e-4ce0-a933-5edbbd647a65"/>
+            <column name="DATE_" valueDate="2012-08-24"/>
+            <column name="VALUE_" valueNumeric="7"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="beb7ff22-aba4-495d-8f3f-1cbcd52e1586"/>
+            <column name="DATE_" valueDate="2012-08-25"/>
+            <column name="VALUE_" valueNumeric="5"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="2c0786bc-3078-457d-a114-9242ee020ae9"/>
+            <column name="DATE_" valueDate="2012-08-26"/>
+            <column name="VALUE_" valueNumeric="11"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="282b9092-ae76-41b4-b09a-5e752240a5a3"/>
+            <column name="DATE_" valueDate="2012-08-27"/>
+            <column name="VALUE_" valueNumeric="13"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="882490be-e3d8-48cc-be65-47219542a047"/>
+            <column name="DATE_" valueDate="2012-08-28"/>
+            <column name="VALUE_" valueNumeric="18"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c33a82d4-33e6-4c9c-b077-4bd7f74bc90d"/>
+            <column name="DATE_" valueDate="2012-08-29"/>
+            <column name="VALUE_" valueNumeric="20"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="f3eae5a9-d0c3-43a3-b93d-5b36c5d30b22"/>
+            <column name="DATE_" valueDate="2012-08-30"/>
+            <column name="VALUE_" valueNumeric="29"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="f6f532a6-5901-43d5-8e03-8939f5ec6338"/>
+            <column name="DATE_" valueDate="2012-08-31"/>
+            <column name="VALUE_" valueNumeric="33"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c71a17d4-fc68-4f54-9bbd-598fd8770c36"/>
+            <column name="DATE_" valueDate="2012-09-01"/>
+            <column name="VALUE_" valueNumeric="42"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="7f71f0fa-1c69-423f-908f-a5f459fca06d"/>
+            <column name="DATE_" valueDate="2012-09-02"/>
+            <column name="VALUE_" valueNumeric="35"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fd4a7b9a-7b25-4d8e-8c43-fdb75f3ad7c8"/>
+            <column name="DATE_" valueDate="2012-09-03"/>
+            <column name="VALUE_" valueNumeric="31"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="54900ad4-c923-4876-8ca1-3df1270cf6c9"/>
+            <column name="DATE_" valueDate="2012-09-04"/>
+            <column name="VALUE_" valueNumeric="47"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="452df036-4654-42b5-80bb-cfbc468cdc6e"/>
+            <column name="DATE_" valueDate="2012-09-05"/>
+            <column name="VALUE_" valueNumeric="52"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="b77b7f57-4a4a-4108-8e94-5280bbb116bd"/>
+            <column name="DATE_" valueDate="2012-09-06"/>
+            <column name="VALUE_" valueNumeric="46"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="86479e5d-d2b7-4801-920b-78701c564aec"/>
+            <column name="DATE_" valueDate="2012-09-07"/>
+            <column name="VALUE_" valueNumeric="41"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="52da01bc-ff98-4708-94de-aed21b2656aa"/>
+            <column name="DATE_" valueDate="2012-09-08"/>
+            <column name="VALUE_" valueNumeric="43"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5ddf232d-69a1-4ddb-860c-0e62d13c48ce"/>
+            <column name="DATE_" valueDate="2012-09-09"/>
+            <column name="VALUE_" valueNumeric="40"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d9b7bebf-e619-4394-ae42-d141adcad707"/>
+            <column name="DATE_" valueDate="2012-09-10"/>
+            <column name="VALUE_" valueNumeric="39"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="274e2c8b-08ff-4b2b-b9dc-7396ccde4d59"/>
+            <column name="DATE_" valueDate="2012-09-11"/>
+            <column name="VALUE_" valueNumeric="34"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="20c5ac3e-61ce-4fde-b76e-eb591b6a55ad"/>
+            <column name="DATE_" valueDate="2012-09-12"/>
+            <column name="VALUE_" valueNumeric="29"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4e681421-e6a9-4ad5-a3b6-dd40d6b74ef8"/>
+            <column name="DATE_" valueDate="2012-09-13"/>
+            <column name="VALUE_" valueNumeric="34"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="44bcec8f-9369-47b4-a332-e1ec8c1dd24a"/>
+            <column name="DATE_" valueDate="2012-09-14"/>
+            <column name="VALUE_" valueNumeric="37"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="7a7011a8-1966-4156-b815-186551b69c49"/>
+            <column name="DATE_" valueDate="2012-09-15"/>
+            <column name="VALUE_" valueNumeric="42"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="38013868-84ef-4e58-860d-620cd04b2f70"/>
+            <column name="DATE_" valueDate="2012-09-16"/>
+            <column name="VALUE_" valueNumeric="49"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d5d40970-6f9e-478d-a49a-e8824541bda8"/>
+            <column name="DATE_" valueDate="2012-09-17"/>
+            <column name="VALUE_" valueNumeric="46"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5b59f726-306f-4c9c-9104-a631814b19cf"/>
+            <column name="DATE_" valueDate="2012-09-18"/>
+            <column name="VALUE_" valueNumeric="47"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="214b9cc2-35bd-4ebc-a3f3-4f8c0065a334"/>
+            <column name="DATE_" valueDate="2012-09-19"/>
+            <column name="VALUE_" valueNumeric="55"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5c679523-d10c-45c4-a18a-363d10b02b87"/>
+            <column name="DATE_" valueDate="2012-09-20"/>
+            <column name="VALUE_" valueNumeric="59"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c2450163-3e55-4b43-ad56-b30f305d4a66"/>
+            <column name="DATE_" valueDate="2012-09-21"/>
+            <column name="VALUE_" valueNumeric="58"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="62ec7acb-fcb2-4665-abdd-bb7458b9c6cd"/>
+            <column name="DATE_" valueDate="2012-09-22"/>
+            <column name="VALUE_" valueNumeric="57"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="dd06e89f-7522-4a2c-857f-a5069c0b46bd"/>
+            <column name="DATE_" valueDate="2012-09-23"/>
+            <column name="VALUE_" valueNumeric="61"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="30a42aee-e523-4b96-8268-d7e13949c080"/>
+            <column name="DATE_" valueDate="2012-09-24"/>
+            <column name="VALUE_" valueNumeric="59"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="645bf453-b490-4a25-a3d4-5dcb0c990c9e"/>
+            <column name="DATE_" valueDate="2012-09-25"/>
+            <column name="VALUE_" valueNumeric="67"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="26cfddf0-9e51-405a-ad44-fe92eafd41e1"/>
+            <column name="DATE_" valueDate="2012-09-26"/>
+            <column name="VALUE_" valueNumeric="65"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="e8db5690-6d7a-4490-a115-0ab57a07cb69"/>
+            <column name="DATE_" valueDate="2012-09-27"/>
+            <column name="VALUE_" valueNumeric="61"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c0ca140e-fb87-4a5d-b957-5cab41cf9e34"/>
+            <column name="DATE_" valueDate="2012-09-28"/>
+            <column name="VALUE_" valueNumeric="66"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="90df9f08-ea89-4e01-aa78-18061b168e79"/>
+            <column name="DATE_" valueDate="2012-09-29"/>
+            <column name="VALUE_" valueNumeric="69"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="84a3f021-0935-4550-8325-88cf5d7fe220"/>
+            <column name="DATE_" valueDate="2012-09-30"/>
+            <column name="VALUE_" valueNumeric="71"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="239c8c11-316e-43c1-bcf6-fd423aea9e51"/>
+            <column name="DATE_" valueDate="2012-10-01"/>
+            <column name="VALUE_" valueNumeric="67"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="dd82d2b0-d0c2-4ec5-bd5c-5085a284fbb9"/>
+            <column name="DATE_" valueDate="2012-10-02"/>
+            <column name="VALUE_" valueNumeric="63"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fae51849-7f58-490f-9f65-ed78e1519012"/>
+            <column name="DATE_" valueDate="2012-10-03"/>
+            <column name="VALUE_" valueNumeric="46"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="9d317cbb-4f1f-4453-843d-1b364ae527a6"/>
+            <column name="DATE_" valueDate="2012-10-04"/>
+            <column name="VALUE_" valueNumeric="32"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="638114d5-159c-46fb-8c2d-6d80879f9697"/>
+            <column name="DATE_" valueDate="2012-10-05"/>
+            <column name="VALUE_" valueNumeric="21"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="75bd1890-a996-4bba-b973-837bae2294d0"/>
+            <column name="DATE_" valueDate="2012-10-06"/>
+            <column name="VALUE_" valueNumeric="18"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="69d48e93-d57a-429c-a9d5-f2f7b783e1d8"/>
+            <column name="DATE_" valueDate="2012-10-07"/>
+            <column name="VALUE_" valueNumeric="21"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="90a71d35-5824-47a2-a69f-0daad7a7b741"/>
+            <column name="DATE_" valueDate="2012-10-08"/>
+            <column name="VALUE_" valueNumeric="28"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4d360d62-49da-4603-951c-8bc6ea062f70"/>
+            <column name="DATE_" valueDate="2012-10-09"/>
+            <column name="VALUE_" valueNumeric="27"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="6604fd38-e9f9-4bb9-85f2-99e39ea34571"/>
+            <column name="DATE_" valueDate="2012-10-10"/>
+            <column name="VALUE_" valueNumeric="36"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="bb17d986-3c5a-4451-ad4e-09b7e0de67aa"/>
+            <column name="DATE_" valueDate="2012-10-11"/>
+            <column name="VALUE_" valueNumeric="33"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="f95fa343-00ca-4f2e-a755-feef0dbe047c"/>
+            <column name="DATE_" valueDate="2012-10-12"/>
+            <column name="VALUE_" valueNumeric="31"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="1424a255-7d34-4147-a9e0-58b0fc429f08"/>
+            <column name="DATE_" valueDate="2012-10-13"/>
+            <column name="VALUE_" valueNumeric="30"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="adfb2337-25c5-4ca0-a936-e736b5834430"/>
+            <column name="DATE_" valueDate="2012-10-14"/>
+            <column name="VALUE_" valueNumeric="34"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="a00261a5-2b1f-49c5-bd4a-41fc9f8b65bb"/>
+            <column name="DATE_" valueDate="2012-10-15"/>
+            <column name="VALUE_" valueNumeric="38"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="2f39db20-5e52-48bd-b0d5-4af7be431f41"/>
+            <column name="DATE_" valueDate="2012-10-16"/>
+            <column name="VALUE_" valueNumeric="37"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4dfd4d4a-6778-4f15-ad48-2d7eaf1ea9a4"/>
+            <column name="DATE_" valueDate="2012-10-17"/>
+            <column name="VALUE_" valueNumeric="44"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="ed8a2c70-3d35-47fd-a632-786c40796eae"/>
+            <column name="DATE_" valueDate="2012-10-18"/>
+            <column name="VALUE_" valueNumeric="49"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="b0407c34-f6ad-4ba1-b269-809c8ae088fb"/>
+            <column name="DATE_" valueDate="2012-10-19"/>
+            <column name="VALUE_" valueNumeric="53"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5c941478-d0de-412f-8de1-4aece61c269d"/>
+            <column name="DATE_" valueDate="2012-10-20"/>
+            <column name="VALUE_" valueNumeric="57"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4e5b1f22-1a97-42d7-9605-acd0331d39d3"/>
+            <column name="DATE_" valueDate="2012-10-21"/>
+            <column name="VALUE_" valueNumeric="60"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="e693e7c4-d159-4034-8373-9abaf4edbd0b"/>
+            <column name="DATE_" valueDate="2012-10-22"/>
+            <column name="VALUE_" valueNumeric="61"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="122af6d1-033e-4598-8b10-2389b6f2d7ea"/>
+            <column name="DATE_" valueDate="2012-10-23"/>
+            <column name="VALUE_" valueNumeric="69"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d3d30f76-2276-4f41-a8c0-1f0ccb01e9f8"/>
+            <column name="DATE_" valueDate="2012-10-24"/>
+            <column name="VALUE_" valueNumeric="67"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="469a83b6-dd24-4187-ab85-2fd471d66ef5"/>
+            <column name="DATE_" valueDate="2012-10-25"/>
+            <column name="VALUE_" valueNumeric="72"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="3e4e44db-1784-4ed0-9d2c-dcfabdd517be"/>
+            <column name="DATE_" valueDate="2012-10-26"/>
+            <column name="VALUE_" valueNumeric="77"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="a3279bd3-58ff-4c10-8744-7bc07491c5fb"/>
+            <column name="DATE_" valueDate="2012-10-27"/>
+            <column name="VALUE_" valueNumeric="75"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="3adf0cb6-04b6-4b9a-8c11-bcf2709f2589"/>
+            <column name="DATE_" valueDate="2012-10-28"/>
+            <column name="VALUE_" valueNumeric="70"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="ca026ed8-35bc-44be-b377-8920c8bc0998"/>
+            <column name="DATE_" valueDate="2012-10-29"/>
+            <column name="VALUE_" valueNumeric="72"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="58e65777-3113-412c-a7f3-815ee8c091c2"/>
+            <column name="DATE_" valueDate="2012-10-30"/>
+            <column name="VALUE_" valueNumeric="70"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="7c799a51-7497-4603-b883-7a89b9e762cc"/>
+            <column name="DATE_" valueDate="2012-10-31"/>
+            <column name="VALUE_" valueNumeric="72"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="2fb11127-eb9f-4ac1-9ce2-707c1b3dcaaa"/>
+            <column name="DATE_" valueDate="2012-11-01"/>
+            <column name="VALUE_" valueNumeric="73"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="041d43bb-5022-4509-bd0c-0b4bd75e7d5e"/>
+            <column name="DATE_" valueDate="2012-11-02"/>
+            <column name="VALUE_" valueNumeric="67"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="6b24bb04-367f-4eb1-ae0b-0f86dfb2c778"/>
+            <column name="DATE_" valueDate="2012-11-03"/>
+            <column name="VALUE_" valueNumeric="68"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4bbc39f6-5a97-4392-ae00-dcf63e5e7ca5"/>
+            <column name="DATE_" valueDate="2012-11-04"/>
+            <column name="VALUE_" valueNumeric="65"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="de59907e-5f7d-4b8f-a874-6d4bcae63170"/>
+            <column name="DATE_" valueDate="2012-11-05"/>
+            <column name="VALUE_" valueNumeric="71"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="75e7c4f9-8fac-41dc-9dd1-21eddd01f05e"/>
+            <column name="DATE_" valueDate="2012-11-06"/>
+            <column name="VALUE_" valueNumeric="75"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="aab6c3f9-f844-489e-a3d1-8ae6ba66f189"/>
+            <column name="DATE_" valueDate="2012-11-07"/>
+            <column name="VALUE_" valueNumeric="74"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="8f296fca-6400-4a6f-a169-012c68a0c306"/>
+            <column name="DATE_" valueDate="2012-11-08"/>
+            <column name="VALUE_" valueNumeric="71"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="411443f8-bc13-484d-a446-7486901b4229"/>
+            <column name="DATE_" valueDate="2012-11-09"/>
+            <column name="VALUE_" valueNumeric="76"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5929073a-a785-4c44-812e-9609b8348d5f"/>
+            <column name="DATE_" valueDate="2012-11-10"/>
+            <column name="VALUE_" valueNumeric="77"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d8c827f8-1173-417f-bc63-a86637f0a683"/>
+            <column name="DATE_" valueDate="2012-11-11"/>
+            <column name="VALUE_" valueNumeric="81"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5e6969ab-b174-4aaa-bd10-ab41ae592107"/>
+            <column name="DATE_" valueDate="2012-11-12"/>
+            <column name="VALUE_" valueNumeric="83"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="924b589f-10c8-4cb9-82f9-2f7ac1dbe3f7"/>
+            <column name="DATE_" valueDate="2012-11-13"/>
+            <column name="VALUE_" valueNumeric="80"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="b7415573-b8b5-438c-93bf-24a410684721"/>
+            <column name="DATE_" valueDate="2012-11-14"/>
+            <column name="VALUE_" valueNumeric="81"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="58d7a1b9-55d1-4048-86ee-813e8e7d42f9"/>
+            <column name="DATE_" valueDate="2012-11-15"/>
+            <column name="VALUE_" valueNumeric="87"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fc634316-86a5-472c-9167-29106233b3df"/>
+            <column name="DATE_" valueDate="2012-11-16"/>
+            <column name="VALUE_" valueNumeric="82"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="25d56ee0-4ec3-4911-b4ef-00160f6a6de3"/>
+            <column name="DATE_" valueDate="2012-11-17"/>
+            <column name="VALUE_" valueNumeric="86"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="90b2fd13-e358-4c1c-9eef-1dc01cf64c3a"/>
+            <column name="DATE_" valueDate="2012-11-18"/>
+            <column name="VALUE_" valueNumeric="80"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="86a3dc0a-9d54-4733-9694-7ad1ff4a991e"/>
+            <column name="DATE_" valueDate="2012-11-19"/>
+            <column name="VALUE_" valueNumeric="87"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="8d61837c-bf8b-4efe-a6e5-108c9239ac22"/>
+            <column name="DATE_" valueDate="2012-11-20"/>
+            <column name="VALUE_" valueNumeric="83"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="e15a1709-0d92-4970-9721-29f15d2496d8"/>
+            <column name="DATE_" valueDate="2012-11-21"/>
+            <column name="VALUE_" valueNumeric="85"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="8a6abae1-522a-493b-b88c-8aafbf4e939f"/>
+            <column name="DATE_" valueDate="2012-11-22"/>
+            <column name="VALUE_" valueNumeric="84"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="829c4c02-3c89-47f5-be86-4220a11b997b"/>
+            <column name="DATE_" valueDate="2012-11-23"/>
+            <column name="VALUE_" valueNumeric="82"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="e52cafc5-d624-4d12-8523-3daff01f71e6"/>
+            <column name="DATE_" valueDate="2012-11-24"/>
+            <column name="VALUE_" valueNumeric="73"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="bec751ee-6e3d-4ca2-8a0a-cec9b4de4aa1"/>
+            <column name="DATE_" valueDate="2012-11-25"/>
+            <column name="VALUE_" valueNumeric="71"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="128aafb7-cf3b-44f5-b8ee-21ec6cdb029c"/>
+            <column name="DATE_" valueDate="2012-11-26"/>
+            <column name="VALUE_" valueNumeric="75"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="5f6acecf-5c56-485a-a041-9910b5373fc0"/>
+            <column name="DATE_" valueDate="2012-11-27"/>
+            <column name="VALUE_" valueNumeric="79"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="738028bf-6a7d-4ccc-be7a-ff8a7f490d65"/>
+            <column name="DATE_" valueDate="2012-11-28"/>
+            <column name="VALUE_" valueNumeric="70"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d0228a47-f936-484b-a331-05defec2e524"/>
+            <column name="DATE_" valueDate="2012-11-29"/>
+            <column name="VALUE_" valueNumeric="73"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="813b7b77-bcc8-482b-9a87-5ebffaffff5c"/>
+            <column name="DATE_" valueDate="2012-11-30"/>
+            <column name="VALUE_" valueNumeric="61"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="df6ca321-073f-4016-bd0f-7ef59c759206"/>
+            <column name="DATE_" valueDate="2012-12-01"/>
+            <column name="VALUE_" valueNumeric="62"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="183eb3de-b64b-46e2-ae33-2de0c8d2e41e"/>
+            <column name="DATE_" valueDate="2012-12-02"/>
+            <column name="VALUE_" valueNumeric="66"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="86717bd0-6044-4e4b-b6d4-07e4412f0cb3"/>
+            <column name="DATE_" valueDate="2012-12-03"/>
+            <column name="VALUE_" valueNumeric="65"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4f4d90cf-a95e-4e99-a801-53610e65a9e8"/>
+            <column name="DATE_" valueDate="2012-12-04"/>
+            <column name="VALUE_" valueNumeric="73"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="571f1894-2f37-4652-8267-8903131421ea"/>
+            <column name="DATE_" valueDate="2012-12-05"/>
+            <column name="VALUE_" valueNumeric="79"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="59499d04-4aa5-4ff5-9ba6-985470add684"/>
+            <column name="DATE_" valueDate="2012-12-06"/>
+            <column name="VALUE_" valueNumeric="78"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="21d3d80f-2c4c-4e6f-87ee-0aa3af9373d3"/>
+            <column name="DATE_" valueDate="2012-12-07"/>
+            <column name="VALUE_" valueNumeric="78"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="06f2f581-8ca8-403b-9848-b9e56218b9cf"/>
+            <column name="DATE_" valueDate="2012-12-08"/>
+            <column name="VALUE_" valueNumeric="78"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="b12c5c49-237f-48ba-932e-d0dec82aa012"/>
+            <column name="DATE_" valueDate="2012-12-09"/>
+            <column name="VALUE_" valueNumeric="74"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="128c71b5-154d-4070-80fa-c5ff53956bfa"/>
+            <column name="DATE_" valueDate="2012-12-10"/>
+            <column name="VALUE_" valueNumeric="73"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="3eb7f336-70f0-4605-841b-2c8646997d48"/>
+            <column name="DATE_" valueDate="2012-12-11"/>
+            <column name="VALUE_" valueNumeric="75"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="bfc22c06-2f68-46c7-90e9-f877c71a95ab"/>
+            <column name="DATE_" valueDate="2012-12-12"/>
+            <column name="VALUE_" valueNumeric="70"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="290f4f2c-39be-4499-ba68-6c4ed6b8866a"/>
+            <column name="DATE_" valueDate="2012-12-13"/>
+            <column name="VALUE_" valueNumeric="77"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="f2eae508-a2cb-4011-b83f-6c6820aaa2ad"/>
+            <column name="DATE_" valueDate="2012-12-14"/>
+            <column name="VALUE_" valueNumeric="67"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="aea67829-d50d-4029-a422-ceab814de6d2"/>
+            <column name="DATE_" valueDate="2012-12-15"/>
+            <column name="VALUE_" valueNumeric="62"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d1000683-9fa3-44aa-9dce-3f1621057649"/>
+            <column name="DATE_" valueDate="2012-12-16"/>
+            <column name="VALUE_" valueNumeric="64"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="6098cd8f-25ac-4cc5-b932-99bc1ce76926"/>
+            <column name="DATE_" valueDate="2012-12-17"/>
+            <column name="VALUE_" valueNumeric="61"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="6b4eb94b-896c-4359-868c-9f44465c1eb6"/>
+            <column name="DATE_" valueDate="2012-12-18"/>
+            <column name="VALUE_" valueNumeric="59"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d87f77a6-52fc-4eee-9f1e-30915231ac9b"/>
+            <column name="DATE_" valueDate="2012-12-19"/>
+            <column name="VALUE_" valueNumeric="53"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="004bca52-f62a-44d4-a39f-7b30fa2b3b35"/>
+            <column name="DATE_" valueDate="2012-12-20"/>
+            <column name="VALUE_" valueNumeric="54"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="3c10d193-de24-4276-8bf9-aad7c1f155aa"/>
+            <column name="DATE_" valueDate="2012-12-21"/>
+            <column name="VALUE_" valueNumeric="56"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="474a8f3f-ec2b-49dc-a3f1-c07a59ad208c"/>
+            <column name="DATE_" valueDate="2012-12-22"/>
+            <column name="VALUE_" valueNumeric="59"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="0fac802c-0f62-45de-85c7-a08300c78925"/>
+            <column name="DATE_" valueDate="2012-12-23"/>
+            <column name="VALUE_" valueNumeric="58"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="24237ffb-b75b-4f1f-aa4e-3f16dcc4aa49"/>
+            <column name="DATE_" valueDate="2012-12-24"/>
+            <column name="VALUE_" valueNumeric="55"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="1b7dfb1a-860b-4cc1-bf8a-b0bbef7b3de9"/>
+            <column name="DATE_" valueDate="2012-12-25"/>
+            <column name="VALUE_" valueNumeric="52"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="87361d03-715b-4eb9-8c85-c7aacc2d6e6a"/>
+            <column name="DATE_" valueDate="2012-12-26"/>
+            <column name="VALUE_" valueNumeric="54"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="44000a0c-25ef-41fc-8fd3-1ab674f4cfab"/>
+            <column name="DATE_" valueDate="2012-12-27"/>
+            <column name="VALUE_" valueNumeric="50"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="a7f5bdf2-c65f-43ec-87f3-b8a7cf418b51"/>
+            <column name="DATE_" valueDate="2012-12-28"/>
+            <column name="VALUE_" valueNumeric="50"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="cc1f296c-5b30-4b39-8f6b-a8a65fdf7d52"/>
+            <column name="DATE_" valueDate="2012-12-29"/>
+            <column name="VALUE_" valueNumeric="51"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fc331ce0-7241-4856-90af-76821b4336b6"/>
+            <column name="DATE_" valueDate="2012-12-30"/>
+            <column name="VALUE_" valueNumeric="52"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fba7ba8f-5412-429c-b6a3-039ac9580cdb"/>
+            <column name="DATE_" valueDate="2012-12-31"/>
+            <column name="VALUE_" valueNumeric="58"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="e7b8a86e-f4bf-451e-9f51-0b0cb340e9a1"/>
+            <column name="DATE_" valueDate="2013-01-01"/>
+            <column name="VALUE_" valueNumeric="60"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="f5c699a5-52e0-40b9-8f9a-39c50d2bafc4"/>
+            <column name="DATE_" valueDate="2013-01-02"/>
+            <column name="VALUE_" valueNumeric="67"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c386be2d-a551-44b9-bc07-d2636404ec19"/>
+            <column name="DATE_" valueDate="2013-01-03"/>
+            <column name="VALUE_" valueNumeric="64"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4cbc7dfe-aeef-488e-bac7-4083107e3e09"/>
+            <column name="DATE_" valueDate="2013-01-04"/>
+            <column name="VALUE_" valueNumeric="66"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="b60e3517-0dec-47a1-9c33-faa9b40fb5d4"/>
+            <column name="DATE_" valueDate="2013-01-05"/>
+            <column name="VALUE_" valueNumeric="60"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="33a2a844-2335-4888-b303-8efb14f0b104"/>
+            <column name="DATE_" valueDate="2013-01-06"/>
+            <column name="VALUE_" valueNumeric="63"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="0cd6676e-d055-4908-9011-0afabd0766b6"/>
+            <column name="DATE_" valueDate="2013-01-07"/>
+            <column name="VALUE_" valueNumeric="61"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="07c38aa8-c1c8-4488-9ca6-a7e361ffda37"/>
+            <column name="DATE_" valueDate="2013-01-08"/>
+            <column name="VALUE_" valueNumeric="60"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="ec17a83d-5c0c-4a0d-aa6a-a2187ff909c9"/>
+            <column name="DATE_" valueDate="2013-01-09"/>
+            <column name="VALUE_" valueNumeric="65"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="a9b55d24-f1d2-47c3-bb16-3193f322e815"/>
+            <column name="DATE_" valueDate="2013-01-10"/>
+            <column name="VALUE_" valueNumeric="75"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="9c14fb55-739a-45e3-9533-b65e4490c83c"/>
+            <column name="DATE_" valueDate="2013-01-11"/>
+            <column name="VALUE_" valueNumeric="77"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fbfa6d88-e4fc-4bb6-9db1-22ffb624f874"/>
+            <column name="DATE_" valueDate="2013-01-12"/>
+            <column name="VALUE_" valueNumeric="78"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="3b600d4b-43aa-4777-b288-9435fd11709b"/>
+            <column name="DATE_" valueDate="2013-01-13"/>
+            <column name="VALUE_" valueNumeric="70"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="93ff130b-4b95-446d-9cf6-05a8c39a8cee"/>
+            <column name="DATE_" valueDate="2013-01-14"/>
+            <column name="VALUE_" valueNumeric="70"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="2c3402d2-aac0-47e6-941d-10ce39d39769"/>
+            <column name="DATE_" valueDate="2013-01-15"/>
+            <column name="VALUE_" valueNumeric="73"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="62f35e5f-0f7b-4248-b4cd-f45711abb643"/>
+            <column name="DATE_" valueDate="2013-01-16"/>
+            <column name="VALUE_" valueNumeric="71"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="d535ff03-a56b-4dcb-9cd0-20d28c010632"/>
+            <column name="DATE_" valueDate="2013-01-17"/>
+            <column name="VALUE_" valueNumeric="74"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fb6d340f-34fc-4241-ab01-aaf5a973918b"/>
+            <column name="DATE_" valueDate="2013-01-18"/>
+            <column name="VALUE_" valueNumeric="78"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="a1bb9dc5-1023-43dc-bf34-db30d1f814df"/>
+            <column name="DATE_" valueDate="2013-01-19"/>
+            <column name="VALUE_" valueNumeric="85"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="004706fc-dba5-4e79-8bd3-6ab9cd088805"/>
+            <column name="DATE_" valueDate="2013-01-20"/>
+            <column name="VALUE_" valueNumeric="82"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="4e6cae8d-eeb0-44b4-b0d3-0db5238e497f"/>
+            <column name="DATE_" valueDate="2013-01-21"/>
+            <column name="VALUE_" valueNumeric="83"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="facba445-9316-4b46-baee-88f7c7d45f87"/>
+            <column name="DATE_" valueDate="2013-01-22"/>
+            <column name="VALUE_" valueNumeric="88"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c38b0abd-1562-46d7-a4c6-aff5c81b7891"/>
+            <column name="DATE_" valueDate="2013-01-23"/>
+            <column name="VALUE_" valueNumeric="85"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="f5ffa844-ba7b-4171-a38e-cc900981bdcc"/>
+            <column name="DATE_" valueDate="2013-01-24"/>
+            <column name="VALUE_" valueNumeric="85"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="3405a7fe-6d28-4e57-b586-083d797c231e"/>
+            <column name="DATE_" valueDate="2013-01-25"/>
+            <column name="VALUE_" valueNumeric="80"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="fee0ff2f-3eb4-4ab3-a789-0f03ab8c2803"/>
+            <column name="DATE_" valueDate="2013-01-26"/>
+            <column name="VALUE_" valueNumeric="87"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="eee44ade-ee1d-48a7-8222-75e38f89f00b"/>
+            <column name="DATE_" valueDate="2013-01-27"/>
+            <column name="VALUE_" valueNumeric="84"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="c388ea59-8396-472e-97d1-b32a6e8dfdbe"/>
+            <column name="DATE_" valueDate="2013-01-28"/>
+            <column name="VALUE_" valueNumeric="83"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="7e84b1ea-a649-45a7-9827-0e6e54a18cc2"/>
+            <column name="DATE_" valueDate="2013-01-29"/>
+            <column name="VALUE_" valueNumeric="84"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_VALUE">
+            <column name="ID" value="95f6c0c5-ce68-498b-ad1d-ff2536607a47"/>
+            <column name="DATE_" valueDate="2013-01-30"/>
+            <column name="VALUE_" valueNumeric="81"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_SEGMENT">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_SEGMENT"/>
+            </column>
+            <column name="START_" type="INT"/>
+            <column name="DURATION" type="INT"/>
+            <column name="COLOR" type="VARCHAR(255)"/>
+            <column name="TASK_" type="VARCHAR(255)"/>
+            <column name="INDEX_" type="INT"/>
+            <column name="TASK_SPAN_ID" type="${uuid.type}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <addForeignKeyConstraint baseColumnNames="TASK_SPAN_ID" baseTableName="SAMPLER_SEGMENT"
+                                 constraintName="FK_SAMPLERSEGMENT_ON_TASKSPAN"
+                                 referencedColumnNames="ID" referencedTableName="SAMPLER_TASK_SPAN"/>
+    </changeSet>
+
+    <changeSet author="sampler" id="3">
+
+        <!-- SAMPLER_TASK_SPAN - John -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="1f1893fc-5c84-e325-05de-afff087e3846"/>
+            <column name="START_" valueNumeric="7"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="45b72563-6f35-29ba-af6a-f92ec7824a86"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="c0abff55-10a7-0c21-e530-40f0f8da1fb7"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="45b72563-6f35-29ba-af6a-f92ec7824a86"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="736d331e-856d-fa38-54f4-0860be998105"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="3"/>
+            <column name="TASK_SPAN_ID" value="45b72563-6f35-29ba-af6a-f92ec7824a86"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Smith -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="f81b33db-5c66-aae1-0c1b-f053b6e13d5a"/>
+            <column name="START_" valueNumeric="10"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="ea6a27df-d2e1-386e-61b1-befcaaac7100"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="53e26f0b-2320-eb09-2ceb-a63e93b07749"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="1"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="ea6a27df-d2e1-386e-61b1-befcaaac7100"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="2b48407d-5f3d-3f7b-4ea8-2562fcd3dff5"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="4"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="3"/>
+            <column name="TASK_SPAN_ID" value="ea6a27df-d2e1-386e-61b1-befcaaac7100"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Ben -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="25a81604-92eb-6bf5-1be4-f4def6b7ff7f"/>
+            <column name="START_" valueNumeric="12"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="8b4dd0ad-cde2-2766-d83c-485a9bead8b7"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="2053d743-c83e-6ada-0d21-a83e505a6be8"/>
+            <column name="START_" valueNumeric="16"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#FFCF96"/>
+            <column name="TASK_" value="Task #4"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="8b4dd0ad-cde2-2766-d83c-485a9bead8b7"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Mike -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="7e538d61-140a-9d3d-b463-cc497c5e614e"/>
+            <column name="START_" valueNumeric="9"/>
+            <column name="DURATION" valueNumeric="6"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="4bea2fa9-9296-b8f0-6f61-269c64c2409e"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="780c52e4-e0ce-3b07-c744-e3ef1a70038d"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="4"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="4bea2fa9-9296-b8f0-6f61-269c64c2409e"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Lenny -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="0cdacba9-9370-5776-3742-832e5883f3ea"/>
+            <column name="START_" valueNumeric="8"/>
+            <column name="DURATION" valueNumeric="1"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="dd60a011-4ec7-092c-a4a2-f9a84c4f848e"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="92437b45-8bcd-7b67-dc2e-84630d6d8e68"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="4"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="dd60a011-4ec7-092c-a4a2-f9a84c4f848e"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Scott -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="9d212c69-e7c7-90d6-b6e2-2b5fdda35f89"/>
+            <column name="START_" valueNumeric="15"/>
+            <column name="DURATION" valueNumeric="3"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="b8884f20-3290-328f-3a51-28413b9c9241"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Julia -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="c28d6d90-c75a-ee72-3737-e3a204735044"/>
+            <column name="START_" valueNumeric="9"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="7e7b5048-0faf-545c-02d2-4e78c67a8f8d"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="59fbcc2f-adc6-48a0-1b44-25b522ce1b65"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="1"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="7e7b5048-0faf-545c-02d2-4e78c67a8f8d"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="e57ed427-30d6-2cc9-f4ac-a80badddd35c"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="8"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="3"/>
+            <column name="TASK_SPAN_ID" value="7e7b5048-0faf-545c-02d2-4e78c67a8f8d"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Bob -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="5620138a-c995-1e7c-8060-ccc89b390d79"/>
+            <column name="START_" valueNumeric="9"/>
+            <column name="DURATION" valueNumeric="8"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="ab25cb5e-320b-ff5e-33f6-ebd7da150619"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="00ac9143-26d5-dbdc-78dc-b06a61b516ba"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="7"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="ab25cb5e-320b-ff5e-33f6-ebd7da150619"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Kendra -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="d597cdc4-f6d1-886b-8a48-e5cdb94f4f7d"/>
+            <column name="START_" valueNumeric="11"/>
+            <column name="DURATION" valueNumeric="8"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task#2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="c262de4b-9897-e16c-df88-d24e0fd7bf5f"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="417f321a-de73-a501-b6bf-2b28888c5ed7"/>
+            <column name="START_" valueNumeric="19"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#FFCF96"/>
+            <column name="TASK_" value="Task #4"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="c262de4b-9897-e16c-df88-d24e0fd7bf5f"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Tom -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="8a4f3587-0151-0af8-0399-de2fbe1f253e"/>
+            <column name="START_" valueNumeric="9"/>
+            <column name="DURATION" valueNumeric="4"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="7574c53b-5bce-845d-908c-bf30f29182a9"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="d5e2526c-9618-2cbd-aeb4-2f40a3f2f9e4"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="3"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="7574c53b-5bce-845d-908c-bf30f29182a9"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="be6a6074-1a39-7b51-2ce9-3018f368008c"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="5"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="3"/>
+            <column name="TASK_SPAN_ID" value="7574c53b-5bce-845d-908c-bf30f29182a9"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Kyle -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="ecf9df21-261a-07ce-9ae9-54cfff7538aa"/>
+            <column name="START_" valueNumeric="6"/>
+            <column name="DURATION" valueNumeric="3"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="c2fd2888-1b41-8268-814e-278522b37e23"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Anita -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="5fe92b01-6898-72ac-aae6-fd434b2e4941"/>
+            <column name="START_" valueNumeric="12"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="24fe04b8-c410-0354-338c-126cc78c7734"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="f1c33c16-d95a-0a19-c642-cc6aac431f35"/>
+            <column name="START_" valueNumeric="16"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#FFCF96"/>
+            <column name="TASK_" value="Task #4"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="24fe04b8-c410-0354-338c-126cc78c7734"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Jack -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="d553e610-13c7-7e4a-5543-2d87401ea71e"/>
+            <column name="START_" valueNumeric="8"/>
+            <column name="DURATION" valueNumeric="10"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="4a63bf60-c121-d269-c592-a54dc56e666d"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="9c33fd53-bb62-5620-80f1-400b001a899e"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="4a63bf60-c121-d269-c592-a54dc56e666d"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Kim -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="42fbe604-b3e1-7147-6c24-0bb24b466dd3"/>
+            <column name="START_" valueNumeric="12"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="47649c8a-674d-d551-2d72-27d198f796d2"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="b2551d03-e64d-0261-19de-e78d15928f0c"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="3"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="47649c8a-674d-d551-2d72-27d198f796d2"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Aaron -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="08fd8182-3df6-5f52-63a3-4ce498fae993"/>
+            <column name="START_" valueNumeric="18"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="faecb45a-4663-6bbc-6ae6-ddab158af784"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="47473750-1de0-41ed-1c1e-6ecb58473d70"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#FFCF96"/>
+            <column name="TASK_" value="Task #4"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="faecb45a-4663-6bbc-6ae6-ddab158af784"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Alan -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="1dba048f-830f-6f1e-b897-0d5c65a03468"/>
+            <column name="START_" valueNumeric="17"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="46937a60-6620-b6ce-a530-71792cd0c6d4"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="fc90f4d3-18ec-0a8b-12d5-8aef59a91d74"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="46937a60-6620-b6ce-a530-71792cd0c6d4"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="ca4260a6-d4f8-0c55-75fc-e65cca5da030"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="3"/>
+            <column name="TASK_SPAN_ID" value="46937a60-6620-b6ce-a530-71792cd0c6d4"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Ruth -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="90a174d6-2477-1c4f-141e-0e67a2292cbc"/>
+            <column name="START_" valueNumeric="13"/>
+            <column name="DURATION" valueNumeric="2"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="0f8dab07-0d2e-958c-dc0b-4f52e31706e4"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="2384a090-8ea8-8bc6-9892-d0060b435baa"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="1"/>
+            <column name="COLOR" value="#8dc49f"/>
+            <column name="TASK_" value="Task #3"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="0f8dab07-0d2e-958c-dc0b-4f52e31706e4"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="c58160ca-a3fd-2e49-5ee7-352dc16bfc89"/>
+            <column name="START_" valueNumeric="null"/>
+            <column name="DURATION" valueNumeric="4"/>
+            <column name="COLOR" value="#46615e"/>
+            <column name="TASK_" value="Task #1"/>
+            <column name="INDEX_" valueNumeric="3"/>
+            <column name="TASK_SPAN_ID" value="0f8dab07-0d2e-958c-dc0b-4f52e31706e4"/>
+        </insert>
+
+        <!-- SAMPLER_TASK_SPAN - Simon -->
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="3f4d96ee-633a-ff12-3b97-ed392642d140"/>
+            <column name="START_" valueNumeric="10"/>
+            <column name="DURATION" valueNumeric="3"/>
+            <column name="COLOR" value="#727d6f"/>
+            <column name="TASK_" value="Task #2"/>
+            <column name="INDEX_" valueNumeric="1"/>
+            <column name="TASK_SPAN_ID" value="e3c711f1-9de7-6856-736d-98392fa2e79b"/>
+        </insert>
+        <insert tableName="SAMPLER_SEGMENT">
+            <column name="ID" value="a1a12b4b-a5e5-780c-1577-3ec3aa4f7c50"/>
+            <column name="START_" valueNumeric="17"/>
+            <column name="DURATION" valueNumeric="4"/>
+            <column name="COLOR" value="#FFCF96"/>
+            <column name="TASK_" value="Task #4"/>
+            <column name="INDEX_" valueNumeric="2"/>
+            <column name="TASK_SPAN_ID" value="e3c711f1-9de7-6856-736d-98392fa2e79b"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>

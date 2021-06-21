@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" type="${uuid.type}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="COUNTRY" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="LITRES" type="double">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" value="6d206bd6-f17f-48f6-a007-a55199a1067f"/>
+            <column name="COUNTRY" value="Russia"/>
+            <column name="LITRES" valueNumeric="256.9"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" value="1eacbf39-7da2-472b-9527-9a2fbec7868e"/>
+            <column name="COUNTRY" value="Ireland"/>
+            <column name="LITRES" valueNumeric="131.1"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" value="a988fa3f-1126-4560-8504-9354f9f5fc57"/>
+            <column name="COUNTRY" value="Germany"/>
+            <column name="LITRES" valueNumeric="115.8"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" value="ec6dac6b-63c7-470f-81a7-c4a7a6ddac80"/>
+            <column name="COUNTRY" value="Australia"/>
+            <column name="LITRES" valueNumeric="109.9"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" value="b9d30c9c-cf10-4acd-8ce5-f4124ad2ec70"/>
+            <column name="COUNTRY" value="Austria"/>
+            <column name="LITRES" valueNumeric="108.3"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" value="6507a392-5252-4bff-b2a4-3c9f294aab2a"/>
+            <column name="COUNTRY" value="UK"/>
+            <column name="LITRES" valueNumeric="65.0"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_LITRES">
+            <column name="ID" value="8df0609a-317a-4f03-81db-0aa6653a4c8b"/>
+            <column name="COUNTRY" value="Belgium"/>
+            <column name="LITRES" valueNumeric="40.0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

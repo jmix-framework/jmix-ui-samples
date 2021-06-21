@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_TITLE_VALUE"/>
+            </column>
+            <column name="TITLE" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="VALUE_" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" value="0b3cba71-290f-4954-9aac-17db1eb7178b"/>
+            <column name="TITLE" value="Website visits"/>
+            <column name="VALUE_" valueNumeric="300"/>
+        </insert>
+        <insert tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" value="a10f2002-ac28-4a56-9df9-731e4c0611c9"/>
+            <column name="TITLE" value="Downloads"/>
+            <column name="VALUE_" valueNumeric="123"/>
+        </insert>
+        <insert tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" value="2fb9c084-8b1d-4555-a08a-95721d1d85df"/>
+            <column name="TITLE" value="Requested prices"/>
+            <column name="VALUE_" valueNumeric="98"/>
+        </insert>
+        <insert tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" value="b87dc1cb-813a-42b7-829b-86ead4c5933d"/>
+            <column name="TITLE" value="Contaced"/>
+            <column name="VALUE_" valueNumeric="72"/>
+        </insert>
+        <insert tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" value="ebd1406c-b6e6-469d-8227-fee96651e108"/>
+            <column name="TITLE" value="Purchased"/>
+            <column name="VALUE_" valueNumeric="35"/>
+        </insert>
+        <insert tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" value="a0bd883f-0be3-49bd-b000-d5f27da7bdbf"/>
+            <column name="TITLE" value="Asked for support"/>
+            <column name="VALUE_" valueNumeric="25"/>
+        </insert>
+        <insert tableName="SAMPLER_TITLE_VALUE">
+            <column name="ID" value="0be7a2b2-8b28-44b6-9430-8e18daa2a0f0"/>
+            <column name="TITLE" value="Purchased more"/>
+            <column name="VALUE_" valueNumeric="18"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

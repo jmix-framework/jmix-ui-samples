@@ -1,0 +1,72 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <layout>
+        <chart:gaugeChart id="gaugeChart"
+                          height="100%"
+                          width="100%">
+            <chart:axes>
+                <chart:axis axisAlpha="0"
+                            labelsEnabled="false"
+                            tickAlpha="0"
+                            startValue="0"
+                            endValue="100"
+                            startAngle="0"
+                            endAngle="270">
+                    <chart:bands>
+                        <chart:band color="#eee"
+                                    startValue="0"
+                                    endValue="100"
+                                    radius="100%"
+                                    innerRadius="85%"/>
+                        <chart:band color="#84b761"
+                                    startValue="0"
+                                    endValue="80"
+                                    radius="100%"
+                                    innerRadius="85%"/>
+                        <chart:band color="#eee"
+                                    startValue="0"
+                                    endValue="100"
+                                    radius="75%"
+                                    innerRadius="60%"/>
+                        <chart:band color="#FFD700"
+                                    startValue="0"
+                                    endValue="65"
+                                    radius="75%"
+                                    innerRadius="60%"/>
+                        <chart:band color="#eee"
+                                    startValue="0"
+                                    endValue="100"
+                                    radius="50%"
+                                    innerRadius="35%"/>
+                        <chart:band color="#ff696e"
+                                    startValue="0"
+                                    endValue="90"
+                                    radius="50%"
+                                    innerRadius="35%"/>
+                        <chart:band color="#eee"
+                                    startValue="0"
+                                    endValue="100"
+                                    radius="25%"
+                                    innerRadius="10%"/>
+                        <chart:band color="#6970ff"
+                                    startValue="0"
+                                    endValue="70"
+                                    radius="25%"
+                                    innerRadius="10%"/>
+                    </chart:bands>
+                </chart:axis>
+            </chart:axes>
+            <chart:allLabels>
+                <chart:label id="first" text="First option" align="RIGHT" size="15" x="49%" y="5.5%" bold="true"
+                             color="#84b761"/>
+                <chart:label id="second" text="Second option" align="RIGHT" size="15" x="49%" y="16.6%" bold="true"
+                             color="#FFD700"/>
+                <chart:label id="third" text="Third option" align="RIGHT" size="15" x="49%" y="28%" bold="true"
+                             color="#ff696e"/>
+                <chart:label id="four" text="Fourth option" align="RIGHT" size="15" x="49%" y="39%" bold="true"
+                             color="#6970ff"/>
+            </chart:allLabels>
+            <chart:export/>
+        </chart:gaugeChart>
+    </layout>
+</window>

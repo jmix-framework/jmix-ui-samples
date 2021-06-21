@@ -1,0 +1,65 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="pointPairDc"
+                    class="io.jmix.sampler.entity.PointPair">
+            <fetchPlan extends="_local"/>
+            <loader id="pointPairLoader">
+                <query>
+                    <![CDATA[select e from sampler_PointPair e order by e.ax]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <chart:xyChart id="chart"
+                       dataContainer="pointPairDc"
+                       height="100%"
+                       marginBottom="60"
+                       marginLeft="64"
+                       startDuration="1"
+                       width="100%">
+            <chart:chartCursor/>
+            <chart:chartScrollbar/>
+            <chart:graphs>
+                <chart:graph bullet="TRIANGLE_UP"
+                             fillAlphas="0"
+                             lineAlpha="0"
+                             lineColor="#FF6600"
+                             xField="ax"
+                             yField="ay"/>
+                <chart:graph bullet="TRIANGLE_DOWN"
+                             fillAlphas="0"
+                             lineAlpha="0"
+                             lineColor="#FCD202"
+                             xField="bx"
+                             yField="by"/>
+            </chart:graphs>
+            <chart:trendLines>
+                <chart:trendLine finalValue="12"
+                                 finalXValue="12"
+                                 initialValue="2"
+                                 initialXValue="1"
+                                 lineColor="#FF6600"/>
+                <chart:trendLine finalValue="19"
+                                 finalXValue="12"
+                                 initialValue="1"
+                                 initialXValue="1"
+                                 lineColor="#FCD202"/>
+            </chart:trendLines>
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            dashLength="1"
+                            position="BOTTOM"
+                            title="X Axis"/>
+                <chart:axis axisAlpha="0"
+                            dashLength="1"
+                            position="LEFT"
+                            title="Y Axis"/>
+            </chart:valueAxes>
+        </chart:xyChart>
+    </layout>
+</window>

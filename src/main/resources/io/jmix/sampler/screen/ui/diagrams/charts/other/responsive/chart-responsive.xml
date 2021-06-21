@@ -1,0 +1,85 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="transportCountDc"
+                    class="io.jmix.sampler.entity.TransportCount">
+            <fetchPlan extends="_local"/>
+            <loader id="transportCountLoader">
+                <query>
+                    <![CDATA[select e from sampler_TransportCount e order by e.year]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="scrollBox"
+            spacing="true">
+        <comboBox id="resolutionsField"/>
+        <scrollBox id="scrollBox" width="100%">
+            <chart:serialChart id="stackedArea"
+                               categoryField="year"
+                               dataContainer="transportCountDc"
+                               height="100%"
+                               marginLeft="0"
+                               marginTop="10"
+                               plotAreaBorderAlpha="0"
+                               width="100%">
+                <chart:chartScrollbar/>
+                <chart:chartCursor cursorAlpha="0"/>
+                <chart:legend equalWidths="false"
+                              periodValueText="total: [[value.sum]]"
+                              position="BOTTOM"
+                              valueAlign="LEFT"
+                              valueWidth="100"/>
+                <chart:valueAxes>
+                    <chart:axis gridAlpha="0.07"
+                                position="LEFT"
+                                stackType="REGULAR"
+                                title="Traffic incidents"/>
+                </chart:valueAxes>
+                <chart:graphs>
+                    <chart:graph fillAlphas="0.6"
+                                 lineAlpha="0"
+                                 type="COLUMN"
+                                 bullet="ROUND"
+                                 title="Cars"
+                                 valueField="cars"/>
+                    <chart:graph fillAlphas="0.6"
+                                 lineAlpha="0"
+                                 type="COLUMN"
+                                 title="Motorcycles"
+                                 valueField="motorcycles"/>
+                    <chart:graph fillAlphas="0.6"
+                                 lineAlpha="0"
+                                 type="COLUMN"
+                                 title="Bicycles"
+                                 valueField="bicycles"/>
+                </chart:graphs>
+                <chart:categoryAxis axisColor="#DADADA"
+                                    gridAlpha="0.07"
+                                    title="Year"
+                                    startOnAxis="true">
+                    <chart:guides>
+                        <chart:guide category="2001"
+                                     dashLength="2"
+                                     lineAlpha="1"
+                                     lineColor="#CC0000"
+                                     inside="true"
+                                     label="fines for speeding increased"
+                                     labelRotation="90"/>
+                        <chart:guide category="2007"
+                                     dashLength="2"
+                                     inside="true"
+                                     label="motorcycle fee introduced"
+                                     labelRotation="90"
+                                     lineAlpha="1"
+                                     lineColor="#CC0000"/>
+                    </chart:guides>
+                </chart:categoryAxis>
+                <chart:responsive enabled="true"/>
+            </chart:serialChart>
+        </scrollBox>
+    </layout>
+</window>

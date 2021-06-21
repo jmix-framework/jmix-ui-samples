@@ -1,0 +1,43 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:charts="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="countrySalesDc"
+                    class="io.jmix.sampler.entity.CountrySales">
+            <loader id="countrySalesDc">
+                <query><![CDATA[select e from sampler_CountrySales e order by e.country]]></query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <charts:serialChart id="serialChart"
+                            additionalFields="product"
+                            categoryField="category"
+                            dataContainer="countrySalesDc"
+                            height="100%"
+                            width="100%">
+            <charts:graphs>
+                <charts:graph id="saleGraph"
+                              fillAlphas="1"
+                              lineColor="BLACK"
+                              type="COLUMN"
+                              valueField="sales">
+                    <charts:fillColors>
+                        <charts:color value="#028E9B"/>
+                    </charts:fillColors>
+                </charts:graph>
+                <charts:graph id="costGraph"
+                              fillAlphas="1"
+                              lineColor="BLACK"
+                              type="COLUMN"
+                              valueField="expense">
+                    <charts:fillColors>
+                        <charts:color value="#FF7800"/>
+                    </charts:fillColors>
+                </charts:graph>
+            </charts:graphs>
+            <charts:categoryAxis gridAlpha="0"
+                                 labelRotation="90"/>
+            <charts:export/>
+        </charts:serialChart>
+    </layout>
+</window>

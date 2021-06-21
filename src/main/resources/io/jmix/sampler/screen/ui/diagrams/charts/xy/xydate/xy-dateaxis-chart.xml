@@ -1,0 +1,39 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <layout>
+        <chart:xyChart id="xyChart"
+                       autoMarginOffset="20"
+                       height="100%"
+                       marginBottom="60"
+                       marginLeft="64"
+                       theme="LIGHT"
+                       width="100%">
+            <chart:chartCursor/>
+            <chart:graphs>
+                <chart:graph balloonText="x:[[x]]&lt;br&gt;y:[[y]]&lt;br&gt;value:[[value]]"
+                             bullet="ROUND"
+                             dateFormat="MMM-DD"
+                             lineAlpha="0"
+                             lineColor="#FF6600"
+                             valueField="roundValue"
+                             xField="date"
+                             yField="roundY"/>
+                <chart:graph balloonText="x:[[x]]&lt;br&gt;y:[[y]]&lt;br&gt;value:[[value]]"
+                             bullet="DIAMOND"
+                             dateFormat="mm-dd"
+                             lineAlpha="0"
+                             lineColor="#FCD202"
+                             valueField="diamondValue"
+                             xField="date"
+                             yField="diamondY"/>
+            </chart:graphs>
+            <chart:valueAxes>
+                <chart:axis id="axisDate"
+                            axisAlpha="0"
+                            position="BOTTOM"
+                            type="DATE"/>
+            </chart:valueAxes>
+            <chart:export position="BOTTOM_RIGHT"/>
+        </chart:xyChart>
+    </layout>
+</window>

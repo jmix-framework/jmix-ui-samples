@@ -1,0 +1,166 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="dateValueDc"
+                    class="io.jmix.sampler.entity.DateValue">
+            <fetchPlan extends="_local"/>
+            <loader id="dateValueLoader"
+                    maxResults="10">
+                <query>
+                    <![CDATA[select e from sampler_DateValue e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="incomeExpensesDc"
+                    class="io.jmix.sampler.entity.IncomeExpenses">
+            <fetchPlan extends="_local"/>
+            <loader id="incomeExpensesLoader">
+                <query>
+                    <![CDATA[select e from sampler_IncomeExpenses e order by e.year]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <vbox height="250px" spacing="true">
+            <chart:serialChart id="lineChart"
+                               width="250px"
+                               height="30px"
+                               categoryField="date"
+                               dataContainer="dateValueDc"
+                               autoMargins="false"
+                               marginLeft="0"
+                               marginRight="5"
+                               creditsPosition="BOTTOM_RIGHT"
+                               marginTop="0"
+                               marginBottom="0"
+                               theme="LIGHT">
+                <chart:valueAxes>
+                    <chart:axis id="v1"
+                                axisAlpha="0"
+                                gridAlpha="0"/>
+                </chart:valueAxes>
+                <chart:graphs>
+                    <chart:graph id="g1"
+                                 valueField="value"
+                                 showBalloon="false">
+                    </chart:graph>
+                </chart:graphs>
+                <chart:categoryAxis gridAlpha="0" axisAlpha="0" startOnAxis="true"/>
+            </chart:serialChart>
+            <chart:serialChart id="columnChart" additionalFields="additional"
+                               addClassNames="true"
+                               autoMargins="false"
+                               categoryField="year"
+                               dataContainer="incomeExpensesDc"
+                               height="30px"
+                               marginBottom="0"
+                               marginLeft="0"
+                               marginRight="0"
+                               marginTop="0"
+                               theme="LIGHT"
+                               creditsPosition="BOTTOM_RIGHT"
+                               width="250px">
+                <chart:valueAxes>
+                    <chart:axis axisAlpha="0"
+                                gridAlpha="0"/>
+                </chart:valueAxes>
+                <chart:graphs>
+                    <chart:graph alphaField="alpha"
+                                 dashLengthField="dashLengthColumn"
+                                 fillAlphas="1"
+                                 type="COLUMN"
+                                 showBalloon="false"
+                                 valueField="income"/>
+                    <chart:graph bullet="ROUND"
+                                 bulletBorderAlpha="1"
+                                 bulletColor="WHITE"
+                                 bulletSize="7"
+                                 dashLengthField="dashLengthLine"
+                                 fillAlphas="0"
+                                 lineAlpha="1"
+                                 lineThickness="3"
+                                 showBalloon="false"
+                                 useLineColorForBulletBorder="true"
+                                 valueField="expenses"/>
+                </chart:graphs>
+                <chart:categoryAxis axisAlpha="0"
+                                    gridAlpha="0"/>
+            </chart:serialChart>
+            <chart:serialChart id="rotateColumnChart"
+                               autoMargins="false"
+                               categoryField="x"
+                               height="30px"
+                               marginBottom="0"
+                               marginLeft="0"
+                               marginRight="0"
+                               marginTop="0"
+                               theme="LIGHT"
+                               creditsPosition="BOTTOM_RIGHT"
+                               rotate="true"
+                               width="250px">
+                <chart:valueAxes>
+                    <chart:axis axisAlpha="0"
+                                stackType="FILL"
+                                gridAlpha="0">
+                    </chart:axis>
+                </chart:valueAxes>
+                <chart:graphs>
+                    <chart:graph
+                            dashLengthField="dashLengthColumn"
+                            fillAlphas="0.6"
+                            lineColor="#FFFFFF"
+                            type="COLUMN"
+                            showBalloon="false"
+                            valueField="y1">
+                        <chart:fillColors>
+                            <chart:color value="#000000"/>
+                        </chart:fillColors>
+                    </chart:graph>
+                    <chart:graph
+                            dashLengthField="dashLengthColumn"
+                            fillAlphas="0.2"
+                            lineColor="#FFFFFF"
+                            type="COLUMN"
+                            showBalloon="false"
+                            valueField="y2">
+                        <chart:fillColors>
+                            <chart:color value="#000000"/>
+                        </chart:fillColors>
+                    </chart:graph>
+                </chart:graphs>
+                <chart:categoryAxis axisAlpha="0"
+                                    gridAlpha="0"/>
+                <chart:data>
+                    <chart:item>
+                        <chart:property name="x" value="1"/>
+                        <chart:property name="y1" value="66"/>
+                        <chart:property name="y2" value="34"/>
+                    </chart:item>
+                </chart:data>
+            </chart:serialChart>
+            <chart:pieChart
+                    width="300px"
+                    height="30px"
+                    valueField="value"
+                    labelsEnabled="false"
+                    radius="12"
+                    balloonText="[[value]]%"
+                    outlineThickness="1">
+                <chart:data>
+                    <chart:item>
+                        <chart:property name="x" value="1"/>
+                        <chart:property name="value" value="29"/>
+                    </chart:item>
+                    <chart:item>
+                        <chart:property name="x" value="2"/>
+                        <chart:property name="value" value="71"/>
+                    </chart:item>
+                </chart:data>
+            </chart:pieChart>
+        </vbox>
+    </layout>
+</window>

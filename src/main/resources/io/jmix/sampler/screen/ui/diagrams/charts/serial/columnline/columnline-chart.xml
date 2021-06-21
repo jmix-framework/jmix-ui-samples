@@ -1,0 +1,69 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="incomeExpensesDc"
+                    class="io.jmix.sampler.entity.IncomeExpenses">
+            <fetchPlan extends="_local"/>
+            <loader id="incomeExpensesLoader">
+                <query>
+                    <![CDATA[select e from sampler_IncomeExpenses e order by e.year]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <chart:serialChart additionalFields="additional"
+                           addClassNames="true"
+                           autoMargins="false"
+                           categoryField="year"
+                           dataContainer="incomeExpensesDc"
+                           height="100%"
+                           marginBottom="26"
+                           marginLeft="30"
+                           marginRight="8"
+                           marginTop="10"
+                           startDuration="1"
+                           theme="LIGHT"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:balloon adjustBorderColor="false"
+                           color="WHITE"
+                           horizontalPadding="10"
+                           verticalPadding="8"/>
+            <chart:graphs>
+                <chart:graph alphaField="alpha"
+                             balloonText="&lt;span style='font-size:12px;'&gt;[[title]] in [[category]]:&lt;br&gt;
+                             &lt;span style='font-size:20px;'&gt;[[value]]&lt;/span&gt; [[additional]]&lt;/span&gt;"
+                             dashLengthField="dashLengthColumn"
+                             fillAlphas="1"
+                             title="Income"
+                             type="COLUMN"
+                             valueField="income"/>
+                <chart:graph balloonText="&lt;span style='font-size:12px;'&gt;[[title]] in [[category]]:&lt;br&gt;
+                             &lt;span style='font-size:20px;'&gt;[[value]]&lt;/span&gt; [[additional]]&lt;/span&gt;"
+                             bullet="ROUND"
+                             bulletBorderAlpha="1"
+                             bulletBorderThickness="3"
+                             bulletColor="WHITE"
+                             bulletSize="7"
+                             dashLengthField="dashLengthLine"
+                             fillAlphas="0"
+                             lineAlpha="1"
+                             lineThickness="3"
+                             title="Expenses"
+                             useLineColorForBulletBorder="true"
+                             valueField="expenses"/>
+            </chart:graphs>
+            <chart:categoryAxis axisAlpha="0"
+                                gridPosition="START"
+                                tickLength="0"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_DATE_TASK_SPAN">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_DATE_TASK_SPAN"/>
+            </column>
+            <column name="CATEGORY" type="VARCHAR(255)"/>
+            <column name="CREATED_BY" type="VARCHAR(255)"/>
+            <column name="CREATED_DATE" type="DATETIME"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_DATE_TASK_SPAN">
+            <column name="ID" value="77aaa6cf-ed0b-fd3f-2790-d68f3fa159ed"/>
+            <column name="CATEGORY" value="Module #1"/>
+            <column name="CREATED_BY" value="admin"/>
+            <column name="CREATED_DATE" valueDate="2021-06-16 13:01:01"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_TASK_SPAN">
+            <column name="ID" value="4d04aa84-ae6d-fa6b-a1bb-562dd555fe6c"/>
+            <column name="CATEGORY" value="Module #2"/>
+            <column name="CREATED_BY" value="admin"/>
+            <column name="CREATED_DATE" valueDate="2021-06-16 13:02:02"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_TASK_SPAN">
+            <column name="ID" value="d7701287-004e-30e8-e5f6-baad0a09ab7a"/>
+            <column name="CATEGORY" value="Module #3"/>
+            <column name="CREATED_BY" value="admin"/>
+            <column name="CREATED_DATE" valueDate="2021-06-16 13:03:03"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_TASK_SPAN">
+            <column name="ID" value="975d175b-e07c-0f34-3f8b-07faec59c248"/>
+            <column name="CATEGORY" value="Module #4"/>
+            <column name="CREATED_BY" value="admin"/>
+            <column name="CREATED_DATE" valueDate="2021-06-16 13:04:04"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_TASK_SPAN">
+            <column name="ID" value="4fc62742-91e2-dead-a1ec-9d7754b6e814"/>
+            <column name="CATEGORY" value="Module #5"/>
+            <column name="CREATED_BY" value="admin"/>
+            <column name="CREATED_DATE" valueDate="2021-06-16 13:05:05"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

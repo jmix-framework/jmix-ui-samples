@@ -1,0 +1,50 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="stockChartDc"
+                    class="io.jmix.sampler.entity.DateValueVolume"/>
+    </data>
+    <layout>
+        <chart:stockChart id="stockChart"
+                          height="100%"
+                          theme="LIGHT"
+                          width="100%">
+            <chart:dataSets>
+                <chart:dataSet id="dataSet"
+                               dataContainer="stockChartDc"
+                               categoryField="date">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value" toField="value"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+            </chart:dataSets>
+
+            <chart:panels>
+                <chart:panel showCategoryAxis="true" title="Value" eraseAll="false" drawingIconsEnabled="true">
+                    <chart:allLabels>
+                        <chart:label x="0" y="115" align="CENTER" size="16"
+                                     text="Click on the pencil icon on top-right to start drawing"/>
+                    </chart:allLabels>
+                    <chart:stockGraphs>
+                        <chart:stockGraph id="stockGraph" valueField="value" useDataSetColors="false"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend valueTextRegular=" " markerType="NONE"/>
+                </chart:panel>
+            </chart:panels>
+
+            <chart:chartScrollbarSettings graph="stockGraph"/>
+
+            <chart:chartCursorSettings valueLineBalloonEnabled="true"/>
+
+            <chart:periodSelector position="BOTTOM">
+                <chart:periods>
+                    <chart:period period="DAYS" count="10" label="10 days"/>
+                    <chart:period period="MONTHS" count="1" label="1 month"/>
+                    <chart:period period="YEARS" count="1" label="1 year"/>
+                    <chart:period period="YTD" label="YTD"/>
+                    <chart:period period="MAX" label="MAX"/>
+                </chart:periods>
+            </chart:periodSelector>
+        </chart:stockChart>
+    </layout>
+</window>

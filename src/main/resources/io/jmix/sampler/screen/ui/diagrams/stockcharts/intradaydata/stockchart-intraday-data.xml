@@ -1,0 +1,66 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="stockChartDc"
+                    class="io.jmix.sampler.entity.DateValueVolume"/>
+    </data>
+    <layout>
+        <chart:stockChart id="stockChart"
+                          height="100%"
+                          width="100%">
+            <chart:categoryAxesSettings minPeriod="mm"/>
+
+            <chart:dataSets>
+                <chart:dataSet id="dataSet"
+                               color="#b0de09"
+                               dataContainer="stockChartDc"
+                               categoryField="date">
+                    <chart:fieldMappings>
+                        <chart:fieldMapping fromField="value" toField="value"/>
+                        <chart:fieldMapping fromField="volume" toField="volume"/>
+                    </chart:fieldMappings>
+                </chart:dataSet>
+            </chart:dataSets>
+
+            <chart:panels>
+                <chart:panel showCategoryAxis="false" title="Value" percentHeight="70">
+                    <chart:stockGraphs>
+                        <chart:stockGraph id="stockGraph"
+                                          bullet="ROUND"
+                                          lineThickness="2"
+                                          type="SMOOTHED_LINE"
+                                          valueField="value"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend valueTextRegular=" " markerType="NONE"/>
+                </chart:panel>
+                <chart:panel title="Volume" percentHeight="30">
+                    <chart:stockGraphs>
+                        <chart:stockGraph cornerRadiusTop="2"
+                                          fillAlphas="1"
+                                          type="COLUMN"
+                                          valueField="volume"/>
+                    </chart:stockGraphs>
+                    <chart:stockLegend valueTextRegular=" " markerType="NONE"/>
+                </chart:panel>
+            </chart:panels>
+
+            <chart:chartScrollbarSettings graph="stockGraph" usePeriod="10mm" position="TOP"/>
+
+            <chart:chartCursorSettings valueLineBalloonEnabled="true"/>
+
+            <chart:periodSelector position="TOP" inputFieldWidth="150">
+                <chart:periods>
+                    <chart:period period="HOURS" count="1" label="1 hour" selected="true"/>
+                    <chart:period period="HOURS" count="2" label="2 hours"/>
+                    <chart:period period="HOURS" count="5" label="5 hours"/>
+                    <chart:period period="HOURS" count="12" label="12 hours"/>
+                    <chart:period period="MAX" label="MAX"/>
+                </chart:periods>
+            </chart:periodSelector>
+
+            <chart:panelsSettings usePrefixes="true"/>
+
+            <chart:export position="BOTTOM_RIGHT"/>
+        </chart:stockChart>
+    </layout>
+</window>

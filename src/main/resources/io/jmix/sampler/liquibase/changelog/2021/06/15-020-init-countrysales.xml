@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" type="${uuid.type}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="PRODUCT" type="varchar(255)"/>
+            <column name="CATEGORY" type="varchar(255)"/>
+            <column name="COUNTRY" type="varchar(255)"/>
+            <column name="SALES" type="int"/>
+            <column name="EXPENSE" type="int"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="2ceda37b-7721-01a0-226f-d8af17a64b7c"/>
+            <column name="PRODUCT" value="Keyboard"/>
+            <column name="CATEGORY" value="Russia- Keyboard"/>
+            <column name="COUNTRY" value="Russia"/>
+            <column name="SALES" valueNumeric="348"/>
+            <column name="EXPENSE" valueNumeric="163"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="3d6f7f23-ca74-93aa-d36a-a623461aa099"/>
+            <column name="PRODUCT" value="Computer mouse"/>
+            <column name="CATEGORY" value="USA - Computer mouse"/>
+            <column name="COUNTRY" value="USA"/>
+            <column name="SALES" valueNumeric="345"/>
+            <column name="EXPENSE" valueNumeric="198"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="427ac929-ff30-6944-5c46-8c7d9bd4bcf8"/>
+            <column name="PRODUCT" value="Keyboard"/>
+            <column name="CATEGORY" value="Germany - Keyboard"/>
+            <column name="COUNTRY" value="Germany"/>
+            <column name="SALES" valueNumeric="373"/>
+            <column name="EXPENSE" valueNumeric="183"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="4b538cd7-c2f0-45cc-1dbc-c04b376ffd26"/>
+            <column name="PRODUCT" value="Computer mouse"/>
+            <column name="CATEGORY" value="Germany - Computer mouse"/>
+            <column name="COUNTRY" value="Germany"/>
+            <column name="SALES" valueNumeric="412"/>
+            <column name="EXPENSE" valueNumeric="201"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="5b13f7df-d2ba-22bb-9327-ce3c0efb9f3f"/>
+            <column name="PRODUCT" value="Keyboard"/>
+            <column name="CATEGORY" value="France- Keyboard"/>
+            <column name="COUNTRY" value="France"/>
+            <column name="SALES" valueNumeric="376"/>
+            <column name="EXPENSE" valueNumeric="198"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="a557a503-d6e3-afe8-fdaa-c42f29116f46"/>
+            <column name="PRODUCT" value="Keyboard"/>
+            <column name="CATEGORY" value="UK - Keyboard"/>
+            <column name="COUNTRY" value="UK"/>
+            <column name="SALES" valueNumeric="421"/>
+            <column name="EXPENSE" valueNumeric="167"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="a59ee68f-09c2-4a42-ea09-13858f9db2f4"/>
+            <column name="PRODUCT" value="Keyboard"/>
+            <column name="CATEGORY" value="USA - Keyboard"/>
+            <column name="COUNTRY" value="USA"/>
+            <column name="SALES" valueNumeric="349"/>
+            <column name="EXPENSE" valueNumeric="165"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="dabac1de-aef8-86b3-a76a-377010294734"/>
+            <column name="PRODUCT" value="Computer mouse"/>
+            <column name="CATEGORY" value="France - Computer mouse"/>
+            <column name="COUNTRY" value="France"/>
+            <column name="SALES" valueNumeric="382"/>
+            <column name="EXPENSE" valueNumeric="187"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="f64d6d5d-d396-6afe-06af-b288fc289801"/>
+            <column name="PRODUCT" value="Computer mouse"/>
+            <column name="CATEGORY" value="Russia - Computer mouse"/>
+            <column name="COUNTRY" value="Russia"/>
+            <column name="SALES" valueNumeric="427"/>
+            <column name="EXPENSE" valueNumeric="176"/>
+        </insert>
+        <insert tableName="SAMPLER_COUNTRY_SALES">
+            <column name="ID" value="fab72f7d-b93a-ec11-113a-c0a1459f5c8e"/>
+            <column name="PRODUCT" value="Computer mouse"/>
+            <column name="CATEGORY" value="UK - Computer mouse"/>
+            <column name="COUNTRY" value="UK"/>
+            <column name="SALES" valueNumeric="328"/>
+            <column name="EXPENSE" valueNumeric="189"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_POINT_PAIR"/>
+            </column>
+            <column name="AX" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="AY" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BX" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="BY_" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="6f2386f4-f457-4247-afb9-4665f8d15a02"/>
+            <column name="AX" valueNumeric="1.0"/>
+            <column name="AY" valueNumeric="0.5"/>
+            <column name="BX" valueNumeric="1.0"/>
+            <column name="BY_" valueNumeric="2.2"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="ddaacf74-feac-4c64-90e8-bd3dca4450e0"/>
+            <column name="AX" valueNumeric="2.0"/>
+            <column name="AY" valueNumeric="1.3"/>
+            <column name="BX" valueNumeric="2.0"/>
+            <column name="BY_" valueNumeric="4.9"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="e7fad59f-e926-4c1e-8b12-be7ed59a0423"/>
+            <column name="AX" valueNumeric="3.0"/>
+            <column name="AY" valueNumeric="2.3"/>
+            <column name="BX" valueNumeric="3.0"/>
+            <column name="BY_" valueNumeric="5.1"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="6043ce84-c4f3-42fd-b036-570828fc74fa"/>
+            <column name="AX" valueNumeric="4.0"/>
+            <column name="AY" valueNumeric="2.8"/>
+            <column name="BX" valueNumeric="4.0"/>
+            <column name="BY_" valueNumeric="5.3"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="fe77952c-bb32-4eb9-9902-3614220af8e0"/>
+            <column name="AX" valueNumeric="5.0"/>
+            <column name="AY" valueNumeric="3.5"/>
+            <column name="BX" valueNumeric="5.0"/>
+            <column name="BY_" valueNumeric="6.1"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="f10d8239-8c04-4f7b-a37a-b568e1073cec"/>
+            <column name="AX" valueNumeric="6.0"/>
+            <column name="AY" valueNumeric="5.1"/>
+            <column name="BX" valueNumeric="6.0"/>
+            <column name="BY_" valueNumeric="8.3"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="6b5928b1-2a30-4164-92b8-c546941a9c91"/>
+            <column name="AX" valueNumeric="7.0"/>
+            <column name="AY" valueNumeric="6.7"/>
+            <column name="BX" valueNumeric="7.0"/>
+            <column name="BY_" valueNumeric="10.5"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="e0ff1c70-e97e-4617-b8b5-fc0d3050e352"/>
+            <column name="AX" valueNumeric="8.0"/>
+            <column name="AY" valueNumeric="8.0"/>
+            <column name="BX" valueNumeric="8.0"/>
+            <column name="BY_" valueNumeric="12.3"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="961f1f66-c320-4c80-b5a9-14ff18727a09"/>
+            <column name="AX" valueNumeric="9.0"/>
+            <column name="AY" valueNumeric="8.9"/>
+            <column name="BX" valueNumeric="9.0"/>
+            <column name="BY_" valueNumeric="14.5"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="237b09d2-6fd4-4358-a116-fd4e377e1353"/>
+            <column name="AX" valueNumeric="10.0"/>
+            <column name="AY" valueNumeric="9.7"/>
+            <column name="BX" valueNumeric="10.0"/>
+            <column name="BY_" valueNumeric="15.0"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="161b4a67-68b4-420f-b417-55e267b92e96"/>
+            <column name="AX" valueNumeric="11.0"/>
+            <column name="AY" valueNumeric="10.4"/>
+            <column name="BX" valueNumeric="11.0"/>
+            <column name="BY_" valueNumeric="18.8"/>
+        </insert>
+        <insert tableName="SAMPLER_POINT_PAIR">
+            <column name="ID" value="de9456f9-8984-4891-8e1a-26464338875d"/>
+            <column name="AX" valueNumeric="12.0"/>
+            <column name="AY" valueNumeric="11.7"/>
+            <column name="BX" valueNumeric="12.0"/>
+            <column name="BY_" valueNumeric="19.0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

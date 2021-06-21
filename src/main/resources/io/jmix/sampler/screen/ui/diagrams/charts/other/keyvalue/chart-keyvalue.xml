@@ -1,0 +1,32 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <keyValueCollection id="salesDc">
+            <loader id="salesLoader">
+                <query>
+                    <![CDATA[select o.customer, sum(o.amount) from sampler_Order o group by o.customer]]>
+                </query>
+            </loader>
+            <properties>
+                <property class="io.jmix.sampler.entity.Customer"
+                          name="customer"/>
+                <property datatype="decimal"
+                          name="sum"/>
+            </properties>
+        </keyValueCollection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <chart:pieChart dataContainer="salesDc"
+                        angle="30"
+                        depth3D="15"
+                        height="100%"
+                        titleField="customer"
+                        valueField="sum"
+                        width="100%">
+            <chart:legend position="RIGHT"/>
+        </chart:pieChart>
+    </layout>
+</window>

@@ -1,0 +1,74 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <layout>
+        <chart:serialChart id="cylinderChart"
+                           height="100%"
+                           width="100%"
+                           depth3D="100"
+                           angle="30"
+                           categoryField="category"
+                           autoMargins="false"
+                           marginBottom="100"
+                           marginRight="300"
+                           marginLeft="350">
+            <chart:valueAxes>
+                <chart:axis stackType="FILL"
+                            gridAlpha="0"/>
+            </chart:valueAxes>
+            <chart:graphs>
+                <chart:graph type="COLUMN"
+                             topRadius="1"
+                             columnWidth="1"
+                             showOnAxis="true"
+                             lineThickness="2"
+                             lineAlpha="0.5"
+                             lineColor="#FFFFFF"
+                             fillAlphas="0.8"
+                             valueField="value1">
+                    <chart:fillColors>
+                        <chart:color value="#e0853a"/>
+                    </chart:fillColors>
+                </chart:graph>
+                <chart:graph type="COLUMN"
+                             topRadius="1"
+                             columnWidth="0.8"
+                             showOnAxis="true"
+                             lineThickness="2"
+                             lineAlpha="0.5"
+                             lineColor="#cdcdcd"
+                             fillAlphas="0.5"
+                             valueField="value2">
+                    <chart:fillColors>
+                        <chart:color value="#00b012"/>
+                    </chart:fillColors>
+                </chart:graph>
+                <chart:graph type="COLUMN"
+                             topRadius="1"
+                             columnWidth="0.6"
+                             showOnAxis="true"
+                             lineThickness="2"
+                             lineAlpha="0.8"
+                             fillAlphas="0.8"
+                             lineColor="#FFFFFF"
+                             valueField="value3">
+                    <chart:fillColors>
+                        <chart:color value="#0074c7"/>
+                    </chart:fillColors>
+                </chart:graph>
+            </chart:graphs>
+            <chart:categoryAxis axisAlpha="0"
+                                labelOffset="40"
+                                gridAlpha="0"
+                                labelsEnabled="false"/>
+            <chart:data>
+                <chart:item>
+                    <chart:property name="category" value="3 layers"/>
+                    <chart:property name="value1" value="35"/>
+                    <chart:property name="value2" value="35"/>
+                    <chart:property name="value3" value="30"/>
+                </chart:item>
+            </chart:data>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

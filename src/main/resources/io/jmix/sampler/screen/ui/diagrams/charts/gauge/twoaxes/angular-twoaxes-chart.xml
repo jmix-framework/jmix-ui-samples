@@ -1,0 +1,32 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <layout>
+        <chart:gaugeChart id="gaugeChart"
+                          height="100%"
+                          width="100%">
+            <chart:axes>
+                <chart:axis axisColor="#67b7dc"
+                            axisThickness="3"
+                            gridInside="false"
+                            inside="false"
+                            radius="100%"
+                            valueInterval="20"
+                            tickColor="#67b7dc"/>
+                <chart:axis axisColor="#fdd400"
+                            axisThickness="3"
+                            endValue="160"
+                            radius="80%"
+                            valueInterval="20"
+                            tickColor="#fdd400"/>
+            </chart:axes>
+            <chart:arrows>
+                <chart:arrow color="#67b7dc"
+                             innerRadius="20%"
+                             nailRadius="0"
+                             value="100"
+                             radius="85%"/>
+            </chart:arrows>
+            <chart:export/>
+        </chart:gaugeChart>
+    </layout>
+</window>

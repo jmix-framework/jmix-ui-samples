@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1" author="sampler">
+        <createTable tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_DATE_SEGMENT"/>
+            </column>
+            <column name="START_" type="DATE"/>
+            <column name="END_" type="DATE"/>
+            <column name="COLOR" type="VARCHAR(255)"/>
+            <column name="TASK_" type="VARCHAR(255)"/>
+            <column name="DATE_TASK_SPAN_ID" type="${uuid.type}"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="sampler">
+        <addForeignKeyConstraint baseColumnNames="DATE_TASK_SPAN_ID" baseTableName="SAMPLER_DATE_SEGMENT"
+                                 constraintName="FK_SAMPLERDATE_ON_DATETASKSPA"
+                                 referencedColumnNames="ID" referencedTableName="SAMPLER_DATE_TASK_SPAN"/>
+    </changeSet>
+
+    <changeSet id="3" author="sampler">
+
+        <!-- SAMPLER_DATE_TASK_SPAN - Module #1 -->
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="264ab365-2465-32b2-c307-13138f3aea44"/>
+            <column name="START_" valueDate="2016-01-01"/>
+            <column name="END_" valueDate="2016-01-14"/>
+            <column name="COLOR" value="#b9783f"/>
+            <column name="TASK_" value="Gathering requirements"/>
+            <column name="DATE_TASK_SPAN_ID" value="77aaa6cf-ed0b-fd3f-2790-d68f3fa159ed"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="9ef154c9-805a-0ee4-5fa2-00735c13c204"/>
+            <column name="START_" valueDate="2016-01-16"/>
+            <column name="END_" valueDate="2016-01-27"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Producing specifications"/>
+            <column name="DATE_TASK_SPAN_ID" value="77aaa6cf-ed0b-fd3f-2790-d68f3fa159ed"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="d7e741d4-3f78-d3f9-0e54-52a4c3698136"/>
+            <column name="START_" valueDate="2016-02-05"/>
+            <column name="END_" valueDate="2016-04-18"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Development"/>
+            <column name="DATE_TASK_SPAN_ID" value="77aaa6cf-ed0b-fd3f-2790-d68f3fa159ed"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="e23b4d92-91ca-6fd0-31f6-1ecbd9c7c6ca"/>
+            <column name="START_" valueDate="2016-04-18"/>
+            <column name="END_" valueDate="2016-04-30"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Testing and QA"/>
+            <column name="DATE_TASK_SPAN_ID" value="77aaa6cf-ed0b-fd3f-2790-d68f3fa159ed"/>
+        </insert>
+
+        <!-- SAMPLER_DATE_TASK_SPAN - Module #2 -->
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="9f9a56a8-fbaf-4aca-b27e-d6805a99a340"/>
+            <column name="START_" valueDate="2016-01-08"/>
+            <column name="END_" valueDate="2016-01-10"/>
+            <column name="COLOR" value="#cc4748"/>
+            <column name="TASK_" value="Gathering requirements"/>
+            <column name="DATE_TASK_SPAN_ID" value="4d04aa84-ae6d-fa6b-a1bb-562dd555fe6c"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="41b988f1-1a0f-fd08-17e8-bc4c2881f45e"/>
+            <column name="START_" valueDate="2016-01-12"/>
+            <column name="END_" valueDate="2016-01-15"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Producing specifications"/>
+            <column name="DATE_TASK_SPAN_ID" value="4d04aa84-ae6d-fa6b-a1bb-562dd555fe6c"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="726379b4-a407-7101-8f55-ccb43fa63d5c"/>
+            <column name="START_" valueDate="2016-01-16"/>
+            <column name="END_" valueDate="2016-02-05"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Development"/>
+            <column name="DATE_TASK_SPAN_ID" value="4d04aa84-ae6d-fa6b-a1bb-562dd555fe6c"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="0109236a-5142-03c9-7b24-300852586038"/>
+            <column name="START_" valueDate="2016-02-10"/>
+            <column name="END_" valueDate="2016-02-18"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Testing and QA"/>
+            <column name="DATE_TASK_SPAN_ID" value="4d04aa84-ae6d-fa6b-a1bb-562dd555fe6c"/>
+        </insert>
+
+        <!-- SAMPLER_DATE_TASK_SPAN - Module #3 -->
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="c47f98ce-3854-7eab-cd3f-a4c12e629dec"/>
+            <column name="START_" valueDate="2016-01-02"/>
+            <column name="END_" valueDate="2016-01-08"/>
+            <column name="COLOR" value="#cd82ad"/>
+            <column name="TASK_" value="Gathering requirements"/>
+            <column name="DATE_TASK_SPAN_ID" value="d7701287-004e-30e8-e5f6-baad0a09ab7a"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="d52bc841-c3dd-a8e2-8f2a-5b26e9265126"/>
+            <column name="START_" valueDate="2016-01-08"/>
+            <column name="END_" valueDate="2016-01-16"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Producing specifications"/>
+            <column name="DATE_TASK_SPAN_ID" value="d7701287-004e-30e8-e5f6-baad0a09ab7a"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="612c058c-9897-6a99-6cb5-edd66ef7f5f4"/>
+            <column name="START_" valueDate="2016-01-19"/>
+            <column name="END_" valueDate="2016-03-01"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Development"/>
+            <column name="DATE_TASK_SPAN_ID" value="d7701287-004e-30e8-e5f6-baad0a09ab7a"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="553db4f4-b26a-5b41-99c1-39c636ef7b4f"/>
+            <column name="START_" valueDate="2016-03-12"/>
+            <column name="END_" valueDate="2016-04-05"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Testing and QA"/>
+            <column name="DATE_TASK_SPAN_ID" value="d7701287-004e-30e8-e5f6-baad0a09ab7a"/>
+        </insert>
+
+        <!-- SAMPLER_DATE_TASK_SPAN - Module #4 -->
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="27157932-bd39-d3fa-acb5-80c52da8191b"/>
+            <column name="START_" valueDate="2016-01-01"/>
+            <column name="END_" valueDate="2016-01-19"/>
+            <column name="COLOR" value="#2f4074"/>
+            <column name="TASK_" value="Gathering requirements"/>
+            <column name="DATE_TASK_SPAN_ID" value="975d175b-e07c-0f34-3f8b-07faec59c248"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="fc2ee963-d875-5bc7-1115-91bc05fd8206"/>
+            <column name="START_" valueDate="2016-01-19"/>
+            <column name="END_" valueDate="2016-02-03"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Producing specifications"/>
+            <column name="DATE_TASK_SPAN_ID" value="975d175b-e07c-0f34-3f8b-07faec59c248"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="a129aa80-ed07-8a35-7428-dbff5c1a7db9"/>
+            <column name="START_" valueDate="2016-03-20"/>
+            <column name="END_" valueDate="2016-04-25"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Development"/>
+            <column name="DATE_TASK_SPAN_ID" value="975d175b-e07c-0f34-3f8b-07faec59c248"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="e3f30242-e6c8-449f-7fd8-38c9f713278a"/>
+            <column name="START_" valueDate="2016-04-27"/>
+            <column name="END_" valueDate="2016-05-15"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Testing and QA"/>
+            <column name="DATE_TASK_SPAN_ID" value="975d175b-e07c-0f34-3f8b-07faec59c248"/>
+        </insert>
+
+        <!-- SAMPLER_DATE_TASK_SPAN - Module #5 -->
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="42675573-1b3b-05b8-b81c-ec0f29547aa9"/>
+            <column name="START_" valueDate="2016-01-01"/>
+            <column name="END_" valueDate="2016-01-12"/>
+            <column name="COLOR" value="#448e4d"/>
+            <column name="TASK_" value="Gathering requirements"/>
+            <column name="DATE_TASK_SPAN_ID" value="4fc62742-91e2-dead-a1ec-9d7754b6e814"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="99fed0c6-0d61-1395-469f-869fb47bcad7"/>
+            <column name="START_" valueDate="2016-01-12"/>
+            <column name="END_" valueDate="2016-01-19"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Producing specifications"/>
+            <column name="DATE_TASK_SPAN_ID" value="4fc62742-91e2-dead-a1ec-9d7754b6e814"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="ec63b897-0396-99f6-8326-cf470214305e"/>
+            <column name="START_" valueDate="2016-01-19"/>
+            <column name="END_" valueDate="2016-03-01"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Development"/>
+            <column name="DATE_TASK_SPAN_ID" value="4fc62742-91e2-dead-a1ec-9d7754b6e814"/>
+        </insert>
+        <insert tableName="SAMPLER_DATE_SEGMENT">
+            <column name="ID" value="42a3792e-42a9-bc3b-a756-8de7d375ca15"/>
+            <column name="START_" valueDate="2016-03-08"/>
+            <column name="END_" valueDate="2016-03-30"/>
+            <column name="COLOR" value="null"/>
+            <column name="TASK_" value="Testing and QA"/>
+            <column name="DATE_TASK_SPAN_ID" value="4fc62742-91e2-dead-a1ec-9d7754b6e814"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

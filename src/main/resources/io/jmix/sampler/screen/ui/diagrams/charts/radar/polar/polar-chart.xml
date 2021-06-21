@@ -1,0 +1,48 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <layout>
+        <chart:radarChart id="polarChart"
+                          categoryField="direction"
+                          height="100%"
+                          startDuration="1"
+                          theme="LIGHT"
+                          width="100%">
+            <chart:valueAxes>
+                <chart:axis autoGridCount="false"
+                            axisAlpha="0.2"
+                            fillAlpha="0.05"
+                            fillColor="WHITE"
+                            gridAlpha="0.08"
+                            gridType="CIRCLES"
+                            minimum="0"
+                            position="LEFT">
+                    <chart:guides>
+                        <chart:guide angle="255"
+                                     fillAlpha="0.3"
+                                     fillColor="#0066CC"
+                                     lineAlpha="0"
+                                     tickLength="0"
+                                     toAngle="315"
+                                     toValue="14"
+                                     value="0"/>
+                        <chart:guide angle="45"
+                                     fillAlpha="0.3"
+                                     fillColor="#CC3333"
+                                     lineAlpha="0"
+                                     tickLength="0"
+                                     toAngle="135"
+                                     toValue="14"
+                                     value="0"/>
+                    </chart:guides>
+                </chart:axis>
+            </chart:valueAxes>
+            <chart:graphs>
+                <chart:graph balloonText="[[category]]: [[value]] m/s"
+                             bullet="ROUND"
+                             fillAlphas="0.3"
+                             valueField="value"/>
+            </chart:graphs>
+            <chart:export/>
+        </chart:radarChart>
+    </layout>
+</window>

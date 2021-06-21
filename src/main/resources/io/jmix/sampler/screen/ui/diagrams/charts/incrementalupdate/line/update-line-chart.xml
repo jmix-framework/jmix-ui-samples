@@ -1,0 +1,73 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="dateValueDc"
+                    class="io.jmix.sampler.entity.DateValue">
+            <fetchPlan extends="_local"/>
+            <loader id="dateValueLoader"
+                    maxResults="30">
+                <query>
+                    <![CDATA[select e from sampler_DateValue e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <timer id="timer" autostart="true" delay="5000" repeating="true"/>
+    </facets>
+    <layout expand="lineChart" spacing="true">
+        <hbox spacing="true">
+            <button id="startTimer" caption="Start" icon="font-awesome-icon:PLAY"/>
+            <button id="stopTimer" caption="Stop" icon="font-awesome-icon:STOP"/>
+            <label id="statusLabel" align="MIDDLE_LEFT" value="Update enabled"/>
+        </hbox>
+        <chart:serialChart id="lineChart"
+                           autoMarginOffset="20"
+                           categoryField="date"
+                           dataContainer="dateValueDc"
+                           marginRight="40"
+                           marginLeft="40"
+                           mouseWheelZoomEnabled="true"
+                           theme="LIGHT"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis id="v1"
+                            axisAlpha="0"
+                            ignoreAxisWidth="true"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:balloon borderThickness="1"
+                           shadowAlpha="0"/>
+            <chart:graphs>
+                <chart:graph id="g1"
+                             bullet="ROUND"
+                             bulletBorderAlpha="1"
+                             bulletColor="WHITE"
+                             bulletSize="5"
+                             hideBulletsCount="50"
+                             lineThickness="2"
+                             title="Red line"
+                             useLineColorForBulletBorder="true"
+                             valueField="value"
+                             balloonText="&lt;span style='font-size:18px;'&gt;[[value]]&lt;/span&gt;">
+                    <chart:balloon adjustBorderColor="false"
+                                   color="WHITE"
+                                   drop="true"/>
+                </chart:graph>
+            </chart:graphs>
+            <chart:categoryAxis dashLength="1"
+                                minorGridEnabled="true"/>
+            <chart:chartCursor cursorAlpha="1"
+                               cursorColor="#258cbb"
+                               cursorPosition="MOUSE"
+                               limitToGraph="g1"
+                               pan="true"
+                               valueLineAlpha="0.2"
+                               valueLineEnabled="true"
+                               valueLineBalloonEnabled="true"
+                               valueZoomable="true"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

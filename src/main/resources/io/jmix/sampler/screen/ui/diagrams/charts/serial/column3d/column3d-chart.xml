@@ -1,0 +1,52 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="countryGrowthDc"
+                    class="io.jmix.sampler.entity.CountryGrowth">
+            <fetchPlan extends="_local"/>
+            <loader id="countryGrowthLoader">
+                <query>
+                    <![CDATA[select e from sampler_CountryGrowth e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <chart:serialChart id="column3d"
+                           angle="30"
+                           categoryField="country"
+                           dataContainer="countryGrowthDc"
+                           depth3D="60"
+                           height="100%"
+                           plotAreaFillAlphas="0.1"
+                           startDuration="1"
+                           theme="LIGHT"
+                           width="100%">
+            <chart:categoryAxis gridPosition="START"/>
+            <chart:valueAxes>
+                <chart:axis position="LEFT"
+                            stackType="BOX_3D"
+                            title="GDP growth rate"
+                            unit="%"/>
+            </chart:valueAxes>
+            <chart:graphs>
+                <chart:graph balloonText="GDP grow in [[category]] (2014): &lt;strong&gt;[[value]]&lt;/strong&gt;"
+                             fillAlphas="0.9"
+                             lineAlpha="0.2"
+                             title="2014"
+                             type="COLUMN"
+                             valueField="year2014"/>
+                <chart:graph balloonText="GDP grow in [[category]] (2015): &lt;strong&gt;[[value]]&lt;/strong&gt;"
+                             fillAlphas="09."
+                             lineAlpha="0.2"
+                             title="2015"
+                             type="COLUMN"
+                             valueField="year2015"/>
+            </chart:graphs>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>

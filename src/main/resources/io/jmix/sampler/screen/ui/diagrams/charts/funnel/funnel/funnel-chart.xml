@@ -1,0 +1,36 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="titleValueDc"
+                    class="io.jmix.sampler.entity.TitleValue">
+            <fetchPlan extends="_local"/>
+            <loader id="titleValueLoader">
+                <query>
+                    <![CDATA[select e from sampler_TitleValue e order by e.value desc]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <chart:funnelChart id="funnel"
+                           balloonText="[[title]]: &lt;strong&gt;[[value]]&lt;/strong&gt;"
+                           dataContainer="titleValueDc"
+                           height="100%"
+                           labelPosition="RIGHT"
+                           marginLeft="15"
+                           marginRight="160"
+                           neckHeight="30%"
+                           neckWidth="40%"
+                           outlineThickness="1"
+                           startAlpha="0"
+                           startX="0"
+                           titleField="title"
+                           valueField="value"
+                           width="100%">
+            <chart:export/>
+        </chart:funnelChart>
+    </layout>
+</window>

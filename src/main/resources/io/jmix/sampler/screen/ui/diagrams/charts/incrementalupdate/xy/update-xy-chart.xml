@@ -1,0 +1,55 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="pointsDc"
+                    class="io.jmix.sampler.entity.PointValue">
+            <fetchPlan extends="_local"/>
+            <loader id="pointsLoader">
+                <query>
+                    <![CDATA[select e from sampler_PointValue e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <timer id="timer" autostart="true" delay="5000" repeating="true"/>
+    </facets>
+    <layout expand="xyChart" spacing="true">
+        <hbox spacing="true">
+            <button id="startTimer" caption="Start" icon="font-awesome-icon:PLAY"/>
+            <button id="stopTimer" caption="Stop" icon="font-awesome-icon:STOP"/>
+            <label id="statusLabel" align="MIDDLE_LEFT" value="Update enabled"/>
+        </hbox>
+        <chart:xyChart id="xyChart"
+                       dataContainer="pointsDc"
+                       marginBottom="35"
+                       marginLeft="46"
+                       startDuration="1"
+                       theme="LIGHT"
+                       width="100%">
+            <chart:graphs>
+                <chart:graph balloonText="x:&lt;b&gt;[[x]]&lt;/b&gt; y:&lt;b&gt;[[y]]&lt;/b&gt;
+                &lt;br&gt;value:&lt;b&gt;[[value]]&lt;/b&gt;"
+                             bullet="ROUND"
+                             bulletAlpha="0.8"
+                             bulletBorderAlpha="0.2"
+                             fillAlphas="0"
+                             lineAlpha="0"
+                             maxBulletSize="100"
+                             valueField="value"
+                             xField="x"
+                             yField="y"/>
+            </chart:graphs>
+            <chart:balloon fixedPosition="true"/>
+            <chart:valueAxes>
+                <chart:axis axisAlpha="0"
+                            position="BOTTOM"/>
+                <chart:axis axisAlpha="0"
+                            minMaxMultiplier="1.2"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:export/>
+        </chart:xyChart>
+    </layout>
+</window>

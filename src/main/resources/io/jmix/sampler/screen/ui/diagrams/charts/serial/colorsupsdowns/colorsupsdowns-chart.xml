@@ -1,0 +1,66 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:chart="http://jmix.io/schema/ui/charts">
+    <data>
+        <collection id="dateValueDc"
+                    class="io.jmix.sampler.entity.DateValue">
+            <loader id="dateValueLoader"
+                    maxResults="10">
+                <query>
+                    <![CDATA[select e from sampler_DateValue e order by e.date]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <chart:serialChart id="lineChart"
+                           autoMarginOffset="20"
+                           categoryField="date"
+                           dataContainer="dateValueDc"
+                           height="100%"
+                           marginRight="40"
+                           marginLeft="40"
+                           mouseWheelZoomEnabled="true"
+                           theme="LIGHT"
+                           width="100%">
+            <chart:valueAxes>
+                <chart:axis id="v1"
+                            axisAlpha="0"
+                            ignoreAxisWidth="true"
+                            position="LEFT"/>
+            </chart:valueAxes>
+            <chart:balloon borderThickness="1"
+                           shadowAlpha="0"/>
+            <chart:graphs>
+                <chart:graph id="g1"
+                             bullet="ROUND"
+                             bulletBorderAlpha="1"
+                             bulletBorderColor="WHITE"
+                             hideBulletsCount="50"
+                             lineThickness="2"
+                             useNegativeColorIfDown="true"
+                             negativeLineColor="YELLOWGREEN"
+                             valueField="value"
+                             balloonText="&lt;span style='font-size:18px;'&gt;[[value]]&lt;/span&gt;">
+                    <chart:balloon adjustBorderColor="false"
+                                   color="WHITE"
+                                   drop="true"/>
+                </chart:graph>
+            </chart:graphs>
+            <chart:categoryAxis dashLength="1"
+                                minorGridEnabled="true"/>
+            <chart:chartCursor cursorAlpha="1"
+                               cursorColor="#258cbb"
+                               cursorPosition="MOUSE"
+                               limitToGraph="g1"
+                               pan="true"
+                               valueLineAlpha="0.2"
+                               valueLineEnabled="true"
+                               valueLineBalloonEnabled="true"
+                               valueZoomable="true"/>
+            <chart:export/>
+        </chart:serialChart>
+    </layout>
+</window>
