@@ -4,7 +4,10 @@
                   height="250px"
                   width="370px">
             <image id="image"
-                   align="MIDDLE_CENTER"/>
+                   align="MIDDLE_CENTER"
+                   scaleMode="SCALE_DOWN"
+                   height="100%"
+                   width="100%"/>
         </groupBox>
     </layout>
 </window>

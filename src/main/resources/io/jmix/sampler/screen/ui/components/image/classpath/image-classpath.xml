@@ -13,7 +13,7 @@
                 <image id="declarativeImage"
                        align="MIDDLE_CENTER">
                     <resource>
-                        <classpath path="io/jmix/sampler/screen/ui/components/image/classpath/jmix-icon-login.svg"/>
+                        <classpath path="io/jmix/sampler/screen/ui/components/image/classpath/jmix-logo.svg"/>
                     </resource>
                 </image>
             </groupBox>

@@ -18,6 +18,6 @@ public class ImageClassPathSample extends ScreenFragment {
     @Subscribe
     protected void onInit(InitEvent event) {
         programmaticImage.setSource(ClasspathResource.class)
-                .setPath("io/jmix/sampler/screen/ui/components/image/classpath/jmix-icon-login.svg");
+                .setPath("io/jmix/sampler/screen/ui/components/image/classpath/jmix-logo.svg");
     }
 }

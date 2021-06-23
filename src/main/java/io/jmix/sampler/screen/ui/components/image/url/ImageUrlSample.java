@@ -24,7 +24,7 @@ public class ImageUrlSample extends ScreenFragment {
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        String address = "https://www.cuba-platform.com/sites/all/themes/cuba_adaptive/img/upper-header-logo.png";
+        String address = "https://www.jmix.io/uploads/framework_image_9efadbc372.svg";
         URL url = null;
 
         try {

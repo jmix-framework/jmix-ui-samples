@@ -6,15 +6,20 @@
                       width="370px">
                 <image id="programmaticImage"
                        align="MIDDLE_CENTER"
-                       width="100%"/>
+                       scaleMode="SCALE_DOWN"
+                       width="100%"
+                       height="100%"/>
             </groupBox>
             <groupBox caption="msg://io.jmix.sampler.screen.ui.components.image/declarativelyDefinedSource"
                       height="200px"
                       width="370px">
                 <image id="declarativeImage"
-                       align="MIDDLE_CENTER">
+                       align="MIDDLE_CENTER"
+                       scaleMode="SCALE_DOWN"
+                       width="100%"
+                       height="100%">
                     <resource>
-                        <url url="https://www.cuba-platform.com/sites/all/themes/cuba_adaptive/img/logo-cuba.png"/>
+                        <url url="https://www.jmix.io/uploads/framework_image_9efadbc372.svg"/>
                     </resource>
                 </image>
             </groupBox>

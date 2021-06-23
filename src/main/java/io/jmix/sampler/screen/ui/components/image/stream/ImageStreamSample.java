@@ -23,6 +23,6 @@ public class ImageStreamSample extends ScreenFragment {
     protected void onInit(InitEvent event) {
         image.setSource(StreamResource.class).
                 setStreamSupplier(() ->
-                        resources.getResourceAsStream("io/jmix/sampler/screen/ui/components/image/classpath/jmix-icon-login.svg"));
+                        resources.getResourceAsStream("io/jmix/sampler/screen/ui/components/image/stream/jmix-logo.png"));
     }
 }

@@ -769,7 +769,7 @@
                   image="components/grouptable/grouptable-style-provider.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
-                    <file name="io/jmix/sampler/screen/ui/components/grouptable/stylepovider/grouptable-style.scss"/>
+                    <file name="io/jmix/sampler/screen/ui/components/grouptable/styleprovider/grouptable-style.scss"/>
                 </otherFiles>
             </item>
             <item id="grouptable-aggregatable" splitEnabled="true"
