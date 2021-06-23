@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet author="sampler" id="1">
+        <createTable tableName="SAMPLER_LOCATION">
+            <column name="ID" type="${uuid.type}">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_SAMPLER_LOCATION"/>
+            </column>
+            <column name="NAME" type="varchar(255)"/>
+            <column name="POINT" type="varchar(100)"/>
+            <column name="INTENSITY" type="double"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="sampler" id="2">
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="18fb5497-8dd5-4260-ba1e-e71556a9f0f8"/>
+            <column name="NAME" value="1"/>
+            <column name="POINT" value="POINT (-1.9886970520019531 53.46408767296994)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="aa9f235b-39bc-49ab-8805-a4ac8119f79f"/>
+            <column name="NAME" value="2"/>
+            <column name="POINT" value="POINT (-1.989426612854004 53.46470083596062)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="0946da08-b1b4-4bf4-a482-a01b429ab3fd"/>
+            <column name="NAME" value="3"/>
+            <column name="POINT" value="POINT (-1.990971565246582 53.465160702391685)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="8e96a7b1-cb4c-4a65-a373-f129d861a4a9"/>
+            <column name="NAME" value="4"/>
+            <column name="POINT" value="POINT (-1.9925594329833984 53.464598642743894)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="b8275dbe-111e-4533-96c8-6014b6c0af7b"/>
+            <column name="NAME" value="5"/>
+            <column name="POINT" value="POINT (-1.990799903869629 53.464445352457474)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="2b6c5e28-4460-4070-99ab-d28bbbc9182e"/>
+            <column name="NAME" value="6"/>
+            <column name="POINT" value="POINT (-1.9923019409179688 53.46388328333828)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="8de37ad2-2c64-4451-b59d-82e0762b1373"/>
+            <column name="NAME" value="7"/>
+            <column name="POINT" value="POINT (-1.9920873641967773 53.46304016570603)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="3da50647-26fb-4ad6-9a3e-a1899ffbd34b"/>
+            <column name="NAME" value="8"/>
+            <column name="POINT" value="POINT (-1.9908857345581055 53.46355114808806)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="6d02e14e-8ce7-407d-b0bd-9ce88d561607"/>
+            <column name="NAME" value="9"/>
+            <column name="POINT" value="POINT (-1.9895124435424805 53.46388328333828)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="d7779ebb-0daf-474e-85e3-19e4beceeb4a"/>
+            <column name="NAME" value="10"/>
+            <column name="POINT" value="POINT (-1.9884395599365234 53.464138770224096)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="8e1dc10f-ee8e-46db-869a-69e6b36d9ef5"/>
+            <column name="NAME" value="11"/>
+            <column name="POINT" value="POINT (-1.9873237609863281 53.46367889272259)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="0cf457e1-1124-4524-b6a4-944ee2053bc4"/>
+            <column name="NAME" value="12"/>
+            <column name="POINT" value="POINT (-1.9886112213134766 53.46334675587328)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="d70402d2-99e1-4c91-8383-c21829cfd51e"/>
+            <column name="NAME" value="13"/>
+            <column name="POINT" value="POINT (-1.9898557662963867 53.46296351781824)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="4cdf8f8b-bed0-41b9-b296-e5b96d309eb7"/>
+            <column name="NAME" value="14"/>
+            <column name="POINT" value="POINT (-1.990971565246582 53.46229923032746)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="661ccc04-ca49-43d9-bc1d-7857360b901c"/>
+            <column name="NAME" value="15"/>
+            <column name="POINT" value="POINT (-1.9874095916748047 53.46296351781824)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="0663bbc2-d6f3-41d8-b99b-29985e362390"/>
+            <column name="NAME" value="16"/>
+            <column name="POINT" value="POINT (-1.9889116287231445 53.46237587941455)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="2f1fb2e6-543a-4727-b949-05ef7175b40d"/>
+            <column name="NAME" value="17"/>
+            <column name="POINT" value="POINT (-1.9907569885253906 53.46199263259525)"/>
+            <column name="INTENSITY" valueNumeric="2.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="84c1ea19-28da-4c14-a43d-89ed43b653a5"/>
+            <column name="NAME" value="18"/>
+            <column name="POINT" value="POINT (-1.9945764541625977 53.46595268290078)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="5c1a02ae-e972-4815-a8ee-7f16fcebb7c8"/>
+            <column name="NAME" value="19"/>
+            <column name="POINT" value="POINT (-1.9925165176391602 53.46577384988382)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="54241c3b-5d9c-4b7d-b070-3df71ba978b6"/>
+            <column name="NAME" value="20"/>
+            <column name="POINT" value="POINT (-1.9916152954101562 53.466642460337496)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="5601e76f-0b6b-4e39-802a-a64844bb442c"/>
+            <column name="NAME" value="21"/>
+            <column name="POINT" value="POINT (-1.9902420043945312 53.465824945108395)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="6e6016fd-3d35-473f-b280-5fa91610d252"/>
+            <column name="NAME" value="22"/>
+            <column name="POINT" value="POINT (-1.9887399673461914 53.46559501611345)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="80007c86-5014-4a54-8509-935528656fca"/>
+            <column name="NAME" value="23"/>
+            <column name="POINT" value="POINT (-1.987924575805664 53.464905221656124)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="df8bedc7-ca3a-4045-a70a-42034d55cf7f"/>
+            <column name="NAME" value="24"/>
+            <column name="POINT" value="POINT (-1.9861221313476562 53.46436870710672)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="d703fda1-ffa1-44ce-8d23-b79f9685be79"/>
+            <column name="NAME" value="25"/>
+            <column name="POINT" value="POINT (-1.9850921630859375 53.463985478277124)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="9d417587-a47c-44d6-ac3f-d527a10ac6ca"/>
+            <column name="NAME" value="26"/>
+            <column name="POINT" value="POINT (-1.9829034805297852 53.46350005012661)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="36e41b81-cf32-4c30-8011-66b5e0e76ea8"/>
+            <column name="NAME" value="27"/>
+            <column name="POINT" value="POINT (-1.9842767715454102 53.46268247437912)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="69e6b7a4-cb68-403c-bdcf-9d0020c2557c"/>
+            <column name="NAME" value="28"/>
+            <column name="POINT" value="POINT (-1.9856929779052734 53.46199263259525)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="bb638c63-576e-4c88-8c64-464e5ee5f5ff"/>
+            <column name="NAME" value="29"/>
+            <column name="POINT" value="POINT (-1.9861650466918945 53.46168603264886)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="3a7f6ad1-4767-4908-86a9-89d62a5a93ad"/>
+            <column name="NAME" value="30"/>
+            <column name="POINT" value="POINT (-1.9896841049194336 53.46114947741487)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="d59f4c61-a85a-479b-b0a0-91b96deb3f71"/>
+            <column name="NAME" value="31"/>
+            <column name="POINT" value="POINT (-1.99127197265625 53.460664016836425)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="8cbf2158-9bad-4d79-b48f-9df941c0c2df"/>
+            <column name="NAME" value="32"/>
+            <column name="POINT" value="POINT (-1.9929027557373047 53.46107282611361)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="4a66cd60-60b8-480e-bb6e-c3b9a04b6358"/>
+            <column name="NAME" value="33"/>
+            <column name="POINT" value="POINT (-1.9947052001953125 53.4618137828956)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="6b4a1fc9-07f6-4f39-87fc-80e0ace62975"/>
+            <column name="NAME" value="34"/>
+            <column name="POINT" value="POINT (-1.9954347610473633 53.462759122774294)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="e6252bdc-052d-471c-ad5e-7fecfb80338a"/>
+            <column name="NAME" value="35"/>
+            <column name="POINT" value="POINT (-1.9938468933105469 53.46347450112283)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+        <insert tableName="SAMPLER_LOCATION">
+            <column name="ID" value="9bc47f5a-a4f7-4775-a41a-c06b61365c5f"/>
+            <column name="NAME" value="36"/>
+            <column name="POINT" value="POINT (-1.9940614700317383 53.464470900876975)"/>
+            <column name="INTENSITY" valueNumeric="1.0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

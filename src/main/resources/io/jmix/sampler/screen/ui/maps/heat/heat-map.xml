@@ -1,0 +1,25 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:maps="http://jmix.io/schema/maps/ui">
+    <layout>
+        <maps:geoMap id="map"
+                     zoom="14"
+                     centerX="-1.98"
+                     centerY="53.464"
+                     height="100%"
+                     width="100%">
+            <maps:layers>
+                <maps:tile id="tiles" tileProvider="map_OpenStreetMap"/>
+                <maps:heatmap id="heatMapLayer1"
+                              maximumIntensity="1D"
+                              maxZoom="15"
+                              minOpacity="0.65"
+                              radius="20"/>
+                <maps:heatmap id="heatMapLayer2"
+                              maximumIntensity="1D"
+                              maxZoom="15"
+                              minOpacity="0.65"
+                              radius="20"/>
+            </maps:layers>
+        </maps:geoMap>
+    </layout>
+</window>

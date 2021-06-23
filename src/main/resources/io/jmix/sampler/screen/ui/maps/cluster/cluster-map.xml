@@ -1,0 +1,32 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:maps="http://jmix.io/schema/maps/ui">
+    <data>
+        <collection id="locationsDc"
+                    class="io.jmix.sampler.entity.Location">
+            <fetchPlan extends="_local"/>
+            <loader id="locationsDl">
+                <query>
+                    <![CDATA[select e from sampler_Location e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <maps:geoMap id="map"
+                     zoom="14"
+                     centerX="-1.98"
+                     centerY="53.464"
+                     height="100%"
+                     width="100%">
+            <maps:layers>
+                <maps:tile id="tiles" tileProvider="map_OpenStreetMap"/>
+                <maps:vector id="locations" dataContainer="locationsDc">
+                    <maps:cluster disableAtZoom="18"/>
+                </maps:vector>
+            </maps:layers>
+        </maps:geoMap>
+    </layout>
+</window>

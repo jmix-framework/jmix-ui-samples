@@ -48,6 +48,13 @@ repositories {
     maven {
         url 'https://vaadin.com/nexus/content/repositories/vaadin-addons'
     }
+    maven {
+        url 'https://nexus.jmix.io/repository/premium'
+        credentials {
+            username rootProject['premiumRepoUser']
+            password rootProject['premiumRepoPass']
+        }
+    }
 }
 
 dependencies {
@@ -57,6 +64,8 @@ dependencies {
     implementation 'io.jmix.ui:jmix-ui-data-starter'
     implementation "io.jmix.ui:jmix-charts-starter"
     implementation "io.jmix.ui:jmix-pivot-table-starter"
+    implementation "io.jmix.maps:jmix-maps-starter"
+    implementation "io.jmix.maps:jmix-maps-ui-starter"
     implementation 'io.jmix.sessions:jmix-sessions-starter'
     implementation 'io.jmix.translations:jmix-translations-ru'
 
@@ -70,6 +79,7 @@ dependencies {
 
     widgets "io.jmix.ui:jmix-charts-widgets"
     widgets "io.jmix.ui:jmix-pivot-table-widgets"
+    widgets "io.jmix.maps:jmix-maps-ui-widgets"
     widgets "io.jmix.ui:jmix-ui-widgets"
 }
 

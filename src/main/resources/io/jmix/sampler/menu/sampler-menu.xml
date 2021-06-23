@@ -1545,4 +1545,37 @@
         </item>
     </menu>
 
+    <menu id="maps" url="maps" image="mainmenu/maps.svg">
+        <item id="point-map" page="additional-options" anchor="_point_icons" splitEnabled="true"
+              image="maps/point-map.png"/>
+        <item id="polygon-map" page="canvas-layer" splitEnabled="true"
+              image="maps/polygon-map.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/maps/polygon/PolygonPoints.java"/>
+            </otherFiles>
+        </item>
+        <item id="polyline-map" page="canvas-layer" splitEnabled="true"
+              image="maps/polyline-map.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/maps/polyline/PolylinePoints.java"/>
+            </otherFiles>
+        </item>
+        <item id="heat-map" page="heatmap-layer" splitEnabled="true"
+              image="maps/heat-map.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/maps/heat/HeatPoints.java"/>
+            </otherFiles>
+        </item>
+        <item id="actions-map" page="index" splitEnabled="true"
+              image="maps/actions-map.png"/>
+        <item id="label-map" page="index" splitEnabled="true"
+              image="maps/label-map.png"/>
+        <item id="cluster-map" page="vector-layers" anchor="_clustering" splitEnabled="true"
+              image="maps/cluster-map.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/Location.java"/>
+            </otherFiles>
+        </item>
+    </menu>
+
 </menu-config>

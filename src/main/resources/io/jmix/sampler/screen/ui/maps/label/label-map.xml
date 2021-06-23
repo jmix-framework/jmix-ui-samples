@@ -1,0 +1,15 @@
+<window xmlns="http://jmix.io/schema/ui/window"
+        xmlns:maps="http://jmix.io/schema/maps/ui">
+    <layout>
+        <maps:geoMap id="map"
+                     zoom="12"
+                     centerX="-1.788697"
+                     centerY="53.464087"
+                     height="100%"
+                     width="100%">
+            <maps:layers>
+                <maps:tile id="tiles" tileProvider="map_OpenStreetMap"/>
+            </maps:layers>
+        </maps:geoMap>
+    </layout>
+</window>
