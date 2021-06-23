@@ -51,8 +51,8 @@ repositories {
     maven {
         url 'https://nexus.jmix.io/repository/premium'
         credentials {
-            username rootProject['premiumRepoUser']
-            password rootProject['premiumRepoPass']
+            username(rootProject.hasProperty('premiumRepoUser') ? rootProject['premiumRepoUser'] : System.getenv('CUBA_PREMIUM_USER'))
+            password(rootProject.hasProperty('premiumRepoPass') ? rootProject['premiumRepoPass'] : System.getenv('CUBA_PREMIUM_PASSWORD'))
         }
     }
 }
