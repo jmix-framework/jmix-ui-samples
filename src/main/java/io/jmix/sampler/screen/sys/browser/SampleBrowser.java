@@ -316,8 +316,8 @@ public class SampleBrowser extends Screen {
                 .ifPresent(component -> ((Component.Focusable) component).focus());
     }
 
-    protected ComponentContainer createContainer() {
-        return createContainer(true, true, true, true);
+    protected ComponentContainer createTabContainer() {
+        return createContainer(true, false, false, false);
     }
 
     protected ComponentContainer createContainer(boolean topEnable, boolean rightEnable,
@@ -343,7 +343,7 @@ public class SampleBrowser extends Screen {
     }
 
     protected void addTab(String name, Component component) {
-        ComponentContainer container = createContainer();
+        ComponentContainer container = createTabContainer();
         container.add(component);
         TabSheet.Tab tab = tabSheet.addTab(name, container);
         tab.setCaption(name);
@@ -387,6 +387,12 @@ public class SampleBrowser extends Screen {
                     break;
                 case "properties":
                     mode = SourceCodeEditor.Mode.Properties;
+                    break;
+                case "css":
+                    mode = SourceCodeEditor.Mode.CSS;
+                    break;
+                case "scss":
+                    mode = SourceCodeEditor.Mode.SCSS;
                     break;
             }
         }
