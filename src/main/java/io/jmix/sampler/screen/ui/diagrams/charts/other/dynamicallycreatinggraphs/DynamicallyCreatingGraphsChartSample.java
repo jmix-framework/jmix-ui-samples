@@ -1,4 +1,4 @@
-package io.jmix.sampler.screen.ui.diagrams.charts.other.dynamicallyсreatinggraphs;
+package io.jmix.sampler.screen.ui.diagrams.charts.other.dynamicallycreatinggraphs;
 
 import io.jmix.charts.component.SerialChart;
 import io.jmix.charts.model.graph.Graph;
