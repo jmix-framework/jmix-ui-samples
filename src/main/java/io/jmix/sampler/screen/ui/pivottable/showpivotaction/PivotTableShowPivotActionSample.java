@@ -38,8 +38,16 @@ public class PivotTableShowPivotActionSample extends ScreenFragment {
     public void onTipsTableCustomShowPivotAction(Action.ActionPerformedEvent event) {
         PivotScreenBuilder builder = getApplicationContext().getBean(PivotScreenBuilder.class, tipsTable);
         builder.withIncludedProperties(Arrays.asList("sex", "smoker", "day", "time"))
-                .withNativeJson("{\"cols\": " + messageBundle.getMessage("localizedCols") + ","
-                        + "\"rows\": " + messageBundle.getMessage("localizedRows") + "}")
+                .withNativeJson(
+                        "{"
+                        + "\"cols\": " + messageBundle.getMessage("localizedCols") + ","
+                        + "\"rows\": " + messageBundle.getMessage("localizedRows") + ","
+                        + "\"renderers\": {"
+                        + "  \"selectedRenderer\": \"table\","
+                        + "  \"renderers\": [\"table\", \"tableBarchart\", \"heatmap\", \"rowHeatmap\", "
+                        + "                  \"colHeatmap\"]"
+                        + "  }"
+                        + "}")
                 .withItems((Collection) tipsTable.getItems().getItems())
                 .build()
                 .show();
