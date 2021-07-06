@@ -522,6 +522,27 @@
             </otherFiles>
         </item>
 
+        <menu id="pagination">
+            <item id="pagination-simple" splitEnabled="true"
+                  image="components/pagination/pagination-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="pagination-pagelistener" splitEnabled="true"
+                  image="components/pagination/pagination-pagelistener.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="pagination-maxpages" splitEnabled="true"
+                  image="components/pagination/pagination-maxpages.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+
         <menu id="popupview">
             <item id="popupview-closing" page="popup-view"
                   image="components/popupview/popupview-closing.png"/>
@@ -616,6 +637,46 @@
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
+        </menu>
+
+        <menu id="simplepagination">
+            <item id="simplepagination-simple" splitEnabled="true"
+                  image="components/simplepagination/simplepagination-simple.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="simplepagination-table" splitEnabled="true"
+                  image="components/simplepagination/simplepagination-table.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="simplepagination-itemsperpage" splitEnabled="true"
+                  image="components/simplepagination/simplepagination-itemsperpage.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="simplepagination-beforerefresh" splitEnabled="true"
+                  image="components/simplepagination/simplepagination-beforerefresh.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="simplepagination-afterrefresh" splitEnabled="true"
+                  image="components/simplepagination/simplepagination-afterrefresh.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="simplepagination-autoload" splitEnabled="true"
+                  image="components/simplepagination/simplepagination-autoload.png">
+                <otherFiles>
+                    <file name="io/jmix/sampler/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+
         </menu>
 
         <menu id="singleselectlist">

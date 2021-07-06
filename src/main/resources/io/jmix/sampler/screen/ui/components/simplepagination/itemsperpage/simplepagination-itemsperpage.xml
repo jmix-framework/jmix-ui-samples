@@ -1,0 +1,32 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.sampler.entity.Customer">
+            <fetchPlan extends="_local"/>
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from sampler_Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="customerTable" spacing="true">
+        <simplePagination align="MIDDLE_CENTER"
+                          itemsPerPageVisible="true"
+                          itemsPerPageOptions="5, 10, 15"
+                          itemsPerPageDefaultValue="5">
+            <loaderProvider loaderId="customersDl"/>
+        </simplePagination>
+        <table id="customerTable"
+               dataContainer="customersDc"
+               width="100%">
+            <columns>
+                <column id="name"/>
+                <column id="lastName"/>
+            </columns>
+        </table>
+    </layout>
+</window>
