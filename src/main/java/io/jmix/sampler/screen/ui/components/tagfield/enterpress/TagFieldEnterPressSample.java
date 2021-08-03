@@ -6,8 +6,9 @@ import io.jmix.ui.Notifications;
 import io.jmix.ui.component.HasEnterPressHandler;
 import io.jmix.ui.component.TagField;
 import io.jmix.ui.screen.*;
-import org.jetbrains.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.Nullable;
 
 @UiController("tagfield-enterpress")
 @UiDescriptor("tagfield-enterpress.xml")

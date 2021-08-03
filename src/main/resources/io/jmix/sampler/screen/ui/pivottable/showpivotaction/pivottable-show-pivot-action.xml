@@ -30,7 +30,6 @@
                 <button id="defaultShowPivotBtn"
                         caption="msg://button.defaultShowPivot.caption"/>
             </buttonsPanel>
-            <simplePagination/>
             <columns>
                 <column id="day"/>
                 <column id="time"/>

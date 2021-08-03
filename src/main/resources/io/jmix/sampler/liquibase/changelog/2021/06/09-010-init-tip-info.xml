@@ -27,10 +27,10 @@
             <column name="ID" type="${uuid.type}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="TOTAL_BILL" type="decimal">
+            <column name="TOTAL_BILL" type="DECIMAL(19, 2)">
                 <constraints nullable="false"/>
             </column>
-            <column name="TIP" type="int">
+            <column name="TIP" type="DECIMAL(19, 2)">
                 <constraints nullable="false"/>
             </column>
             <column name="SMOKER" type="boolean">
