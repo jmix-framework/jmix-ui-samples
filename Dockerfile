@@ -1,10 +1,10 @@
-FROM openjdk:8-alpine as builder
+FROM openjdk:11-alpine as builder
 
 WORKDIR application
 COPY build/libs/jmix-sampler.jar jmix-sampler.jar
 RUN java -Djarmode=layertools -jar jmix-sampler.jar extract
 
-FROM openjdk:8-alpine
+FROM openjdk:11-alpine
 WORKDIR application
 COPY --from=builder application/dependencies/ ./
 COPY --from=builder application/snapshot-dependencies/ ./
