@@ -26,7 +26,7 @@ import java.util.function.Consumer;
 @Component("sampler_MenuConfig")
 public class SamplerMenuConfig {
 
-    public static final String MENU_CONFIG_XML_PROP = "jmix.sampler.menuConfig";
+    public static final String MENU_CONFIG_XML_PROP = "jmix.sampler.menu-сonfig";
 
     private static final Log log = LogFactory.getLog(SamplerMenuConfig.class);
 
@@ -117,7 +117,7 @@ public class SamplerMenuConfig {
                 if ("menu".equals(element.getName())) {
                     menuItem = new SamplerMenuItem(parentItem, id);
                     menuItem.setMenu(true);
-                    
+
                     loadString(element, "image", menuItem::setImage);
                     loadString(element, "url", menuItem::setUrl);
 
