@@ -13,6 +13,8 @@ COPY --from=builder application/application/ ./
 
 RUN apk add --no-cache ttf-dejavu
 
-CMD java -Xmx512m org.springframework.boot.loader.JarLauncher --server.port=8080 --jmix.sampler.googleAnalyticsTracker.enabled=true --jmix.sampler.googleAnalyticsTracker.id=UA-48250949-5
+CMD java -Xmx512m org.springframework.boot.loader.JarLauncher --server.port=8080  --jmix.ui.productionMode=true \
+--jmix.sampler.googleAnalyticsTracker.enabled=true --jmix.sampler.googleAnalyticsTracker.id=UA-48250949-5
+
 
 EXPOSE 8080

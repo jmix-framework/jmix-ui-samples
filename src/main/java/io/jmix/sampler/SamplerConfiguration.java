@@ -34,6 +34,7 @@ import io.jmix.ui.sys.registration.ComponentRegistrationBuilder;
 import liquibase.integration.spring.SpringLiquibase;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.boot.actuate.jdbc.DataSourceHealthIndicator;
 import org.springframework.boot.autoconfigure.liquibase.LiquibaseProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -103,6 +104,11 @@ public class SamplerConfiguration {
     @ConfigurationProperties(prefix = "routing.datasource")
     public DataSource dataSource() {
         return new SamplerRoutingDataSource();
+    }
+
+    @Bean
+    public DataSourceHealthIndicator dataSourceHealthIndicator(DataSource dataSource) {
+        return new DataSourceHealthIndicator(dataSource);
     }
 
     @Bean("sampler_SessionDataSource")

@@ -70,6 +70,7 @@ dependencies {
     implementation 'io.jmix.translations:jmix-translations-ru'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.apache.commons:commons-dbcp2'
     implementation 'org.vaadin.addons:googleanalyticstracker:3.0.0'
 
