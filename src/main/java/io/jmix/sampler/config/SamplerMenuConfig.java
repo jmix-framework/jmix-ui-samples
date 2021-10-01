@@ -26,7 +26,7 @@ import java.util.function.Consumer;
 @Component("sampler_MenuConfig")
 public class SamplerMenuConfig {
 
-    public static final String MENU_CONFIG_XML_PROP = "jmix.sampler.menu-сonfig";
+    public static final String MENU_CONFIG_XML_PROP = "jmix.sampler.menu-config";
 
     private static final Log log = LogFactory.getLog(SamplerMenuConfig.class);
 
