@@ -41,6 +41,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -49,6 +50,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class SamplerRoutingDataSource extends AbstractDataSource implements ApplicationContextAware {
 
     private static final Logger log = LoggerFactory.getLogger(SamplerRoutingDataSource.class);
+    private static final String SESSION_DATASOURCE_PROPERTY = "jmix.sampler.session-datasource";
 
     protected Map<String, DataSource> dataSources = new ConcurrentHashMap<>();
 
@@ -143,6 +145,13 @@ public class SamplerRoutingDataSource extends AbstractDataSource implements Appl
     protected DataSource determineSessionDataSource() {
         String sessionId = getSessionId();
         log.debug("Session datasource with url {} is used", urlPrefix + sessionId);
+
+        if (Objects.equals(applicationContext.getEnvironment().getProperty(SESSION_DATASOURCE_PROPERTY), Boolean.FALSE.toString())) {
+            if (!dataSources.isEmpty()) {
+                return dataSources.values().iterator().next();
+            }
+        }
+
         return dataSources.computeIfAbsent(sessionId, this::createSessionDataSource);
     }
 
