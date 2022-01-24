@@ -1,6 +1,6 @@
-# Jmix Backoffice UI Sampler
+# Jmix UI Samples
 
-This repository contains Backoffice UI components sampler project of the [Jmix](https://jmix.io) framework.
+This repository contains Jmix UI Samples project of the [Jmix](https://jmix.io) framework.
 
 For more information see:
 
