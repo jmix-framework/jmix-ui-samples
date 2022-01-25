@@ -26,7 +26,6 @@ jmix {
 }
 
 group = 'io.jmix.sampler'
-version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
