@@ -5,14 +5,14 @@
     }
 
     .#{$primary-stylename}-item {
-        padding: 0 30px 0 0;
+        padding: 0 $v-unit-size 0 0;
         text-shadow: 0 -2px 0 rgba(255,255,255,0.05);
         font-size: $v-font-size;
     }
 
     .#{$primary-stylename}-item-caption {
         max-width: initial;
-        padding-left: 15px;
+        padding-left: floor($v-unit-size / 2);
     }
 
     .#{$primary-stylename}-item-header {
@@ -30,8 +30,7 @@
 
     .#{$primary-stylename}-submenu-open {
         max-height: 8000px;
-        padding-left: 10px;
-        margin-left: 5px;
+        padding-left: floor($v-unit-size / 3);
     }
 
     .#{$primary-stylename}-submenu .#{$primary-stylename}-item-header {
@@ -46,19 +45,14 @@
         max-width: initial;
     }
 
-   .#{$primary-stylename}-submenu.jmix-sidemenu-submenu-open {
-        margin-left: 15px;
-    }
-
     .#{$primary-stylename}-item-header-open::before {
         content: "\f0da";
         font-family: FontAwesome;
         position: absolute;
         display: -webkit-box;
         width: inherit;
-        height: inherit;
+        line-height: $v-unit-size;
         padding-left: 3px;
-        margin-top: 3px;
         cursor: pointer;
         text-align: center;
         -webkit-transition: all 100ms;
@@ -77,9 +71,8 @@
         position: absolute;
         display: -webkit-box;
         width: inherit;
-        height: inherit;
+        line-height: $v-unit-size;
         padding-left: 3px;
-        margin-top: 3px;
         cursor: pointer;
         text-align: center;
         -webkit-transition: all 100ms;
