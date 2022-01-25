@@ -14,31 +14,19 @@
  * limitations under the License.
  */
 
-buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            url 'https://nexus.jmix.io/repository/public'
-        }
-    }
-
-    dependencies {
-        classpath('io.jmix.gradle:jmix-gradle-plugin:1.0.0-M4')
-    }
-}
-
 plugins {
+    id 'io.jmix' version '1.2.0-M4'
     id 'java'
 }
 
-apply plugin: 'io.jmix'
 apply plugin: 'org.springframework.boot'
 
 jmix {
-    bomVersion = '1.0.0'
+    bomVersion = '1.1.2'
 }
 
 group = 'io.jmix.sampler'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -98,6 +86,7 @@ compileThemes {
 
 compileWidgets {
     generate "io.jmix.sampler.widgets.CustomWidgetSet"
+    includePaths("**/io/jmix/**/widget/**", "**/io/jmix/sampler/widgets/**")
 }
 
 test {

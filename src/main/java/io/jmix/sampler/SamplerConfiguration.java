@@ -23,6 +23,7 @@ import io.jmix.core.Stores;
 import io.jmix.core.security.CoreSecurityConfiguration;
 import io.jmix.core.security.CurrentAuthentication;
 import io.jmix.data.impl.liquibase.LiquibaseChangeLogProcessor;
+import io.jmix.data.persistence.DbmsType;
 import io.jmix.sampler.bean.*;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperFieldLoader;
@@ -116,6 +117,12 @@ public class SamplerConfiguration {
     @ConfigurationProperties(prefix = "session.datasource")
     public DataSource sessionDataSource() {
         return new BasicDataSource();
+    }
+
+    @Bean("sampler_DbmsType")
+    @Primary
+    public DbmsType dbmsType() {
+        return new SamplerDbmsType();
     }
 
     @Bean(name = "sampler_Liquibase")
