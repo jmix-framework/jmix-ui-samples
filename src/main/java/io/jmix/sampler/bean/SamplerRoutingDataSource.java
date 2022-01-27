@@ -157,10 +157,10 @@ public class SamplerRoutingDataSource extends AbstractDataSource implements Appl
 
     protected String getSessionId() {
         CurrentAuthentication currentAuthentication = applicationContext.getBean(CurrentAuthentication.class);
-        Authentication authentication = currentAuthentication.getAuthentication();
 
         String sessionId = null;
-        if (authentication != null) {
+        if (currentAuthentication.isSet()) {
+            Authentication authentication = currentAuthentication.getAuthentication();
             Object details = authentication.getDetails();
 
             if (details instanceof WebAuthenticationDetails) {
