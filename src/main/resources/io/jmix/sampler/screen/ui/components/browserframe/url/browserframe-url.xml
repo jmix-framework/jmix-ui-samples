@@ -15,7 +15,7 @@
                               height="100%"
                               width="100%">
                     <resource>
-                        <url url="https://docs.jmix.io/jmix/0.x/intro.html"/>
+                        <url url="https://docs.jmix.io/jmix/intro.html"/>
                     </resource>
                 </browserFrame>
             </groupBox>

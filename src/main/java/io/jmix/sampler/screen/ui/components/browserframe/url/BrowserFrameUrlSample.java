@@ -25,7 +25,7 @@ public class BrowserFrameUrlSample extends ScreenFragment {
     @Subscribe
     protected void onInit(InitEvent event) {
         try {
-            URL url = new URL("https://docs.jmix.io/jmix/0.x/intro.html");
+            URL url = new URL("https://docs.jmix.io/jmix/intro.html");
             programmaticBrowserFrame.setSource(UrlResource.class)
                     .setUrl(url);
         } catch (MalformedURLException e) {
