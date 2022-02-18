@@ -1,0 +1,28 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout spacing="true" expand="split">
+        <split id="split" orientation="horizontal" pos="310px" maxSplitPosition="310px" dockable="true" width="100%">
+            <groupBox spacing="true" width="300px" caption="msg://markerBox">
+                <form id="markerForm" width="100%">
+                    <column width="100%">
+                        <textField id="markerTitleField" datatype="string" caption="msg://markerTitleField"
+                                   required="true"/>
+                        <textField id="markerLatField" datatype="double" caption="msg://markerLatField"
+                                   required="true"/>
+                        <textField id="markerLngField" datatype="double" caption="msg://markerLngField"
+                                   required="true"/>
+                    </column>
+                </form>
+                <hbox width="100%">
+                    <button id="addMarkerBtn" caption="msg:///actions.Add" align="MIDDLE_RIGHT"/>
+                </hbox>
+            </groupBox>
+            <jsComponent id="map" width="100%" height="100%"
+                         initFunctionName="io_jmix_sampler_screen_ui_components_javascript_component_GoogleMap">
+                <dependencies>
+                    <dependency path="vaadin://googlemaps/google-maps-connector.js"/>
+                    <dependency path="vaadin://googlemaps/google-maps-style.css"/>
+                </dependencies>
+            </jsComponent>
+        </split>
+    </layout>
+</window>

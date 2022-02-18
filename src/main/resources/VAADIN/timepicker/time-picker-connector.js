@@ -1,15 +1,15 @@
 io_jmix_sampler_screen_ui_components_javascript_component_TimePicker = function () {
-    var connector = this;
-    var element = connector.getElement();
+    let connector = this;
+    let element = connector.getElement();
     element.innerHTML = "<input type=\"text\" name=\"timepicker\" class=\"timepicker\"/>";
 
-    var timepicker;
+    let timepicker;
 
     // Handle changes from the server-side
     this.onStateChange = function () {
-        var data = this.getState().data;
+        let data = this.getState().data;
 
-        var options = {
+        let options = {
             now: data.now,
             twentyFour: data.twentyFour,
             showSeconds: data.showSeconds,

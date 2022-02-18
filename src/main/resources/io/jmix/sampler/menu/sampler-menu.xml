@@ -495,12 +495,23 @@
             <item id="image-click" page="image" image="components/image/image-click.png"/>
         </menu>
 
-        <item id="java-script-component"
-              image="components/javascript/java-script-component.png">
-            <otherFiles>
-                <file name="VAADIN/timepicker/time-picker-connector.js"/>
-            </otherFiles>
-        </item>
+        <menu id="java-script-component">
+            <item id="java-script-component-time-picker"
+                  image="components/javascriptcomponent/java-script-component-time-picker.png">
+                <otherFiles>
+                    <file name="VAADIN/timepicker/time-picker-connector.js"/>
+                    <file name="io/jmix/sampler/screen/ui/components/javascript/timepicker/state/TimePickerState.java"/>
+                </otherFiles>
+            </item>
+            <item id="java-script-component-google-maps"
+                  image="components/javascriptcomponent/java-script-component-google-maps.png" splitEnabled="true">
+                <otherFiles>
+                    <file name="VAADIN/googlemaps/google-maps-connector.js"/>
+                    <file name="VAADIN/googlemaps/google-maps-style.css"/>
+                    <file name="io/jmix/sampler/screen/ui/components/javascript/googlemaps/state/GoogleMapState.java"/>
+                </otherFiles>
+            </item>
+        </menu>
 
         <menu id="label">
             <item id="label-simple" page="label" image="components/label/label-simple.png"/>
