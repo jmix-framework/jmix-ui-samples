@@ -99,9 +99,3 @@ bootBuildImage {
         imageName = 'docker.haulmont.com/platform/infrastructure/demo-cuba-apps-docker/jmix-demo-sampler:testing'
     }
 }
-
-bootRun {
-    if (rootProject.hasProperty('jmix.sampler.google-api-key')) {
-        systemProperty 'jmix.sampler.google-api-key', rootProject['jmix.sampler.google-api-key']
-    }
-}

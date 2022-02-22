@@ -3,6 +3,7 @@ package io.jmix.sampler.screen.ui.components.javascript.googlemaps;
 import elemental.json.JsonArray;
 import io.jmix.core.Messages;
 import io.jmix.core.security.CurrentAuthentication;
+import io.jmix.sampler.SamplerProperties;
 import io.jmix.sampler.screen.ui.components.javascript.googlemaps.state.GoogleMapState;
 import io.jmix.ui.component.Button;
 import io.jmix.ui.component.Form;
@@ -14,7 +15,6 @@ import io.jmix.ui.screen.Subscribe;
 import io.jmix.ui.screen.UiController;
 import io.jmix.ui.screen.UiDescriptor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 
 @UiController("java-script-component-google-maps")
 @UiDescriptor("java-script-component-google-maps.xml")
@@ -35,7 +35,7 @@ public class JavaScriptComponentGoogleMapsSample extends ScreenFragment {
     @Autowired
     private Messages messages;
     @Autowired
-    private Environment environment;
+    private SamplerProperties samplerProperties;
     @Autowired
     private CurrentAuthentication currentAuthentication;
 
@@ -45,7 +45,7 @@ public class JavaScriptComponentGoogleMapsSample extends ScreenFragment {
         state.lat = 53.225;
         state.lng = 50.195;
         state.zoom = 8;
-        state.key = environment.getProperty("jmix.sampler.google-api-key");
+        state.key = samplerProperties.getGoogleApiKey();
         state.language = currentAuthentication.getLocale().getLanguage();
         map.setState(state);
 

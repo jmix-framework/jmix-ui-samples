@@ -22,23 +22,30 @@ import org.springframework.boot.context.properties.bind.DefaultValue;
 
 @ConstructorBinding
 @ConfigurationProperties(prefix = "jmix.sampler")
-public class SamplerProperties  {
+public class SamplerProperties {
 
-    private GoogleAnalyticsTracker googleAnalyticsTracker;
+    GoogleAnalyticsTracker googleAnalyticsTracker;
+    String googleApiKey;
 
-    public SamplerProperties(@DefaultValue GoogleAnalyticsTracker googleAnalyticsTracker) {
+    public SamplerProperties(@DefaultValue GoogleAnalyticsTracker googleAnalyticsTracker,
+                             String googleApiKey) {
         this.googleAnalyticsTracker = googleAnalyticsTracker;
+        this.googleApiKey = googleApiKey;
     }
 
     public GoogleAnalyticsTracker getGoogleAnalyticsTracker() {
         return googleAnalyticsTracker;
     }
 
+    public String getGoogleApiKey() {
+        return googleApiKey;
+    }
+
     public static class GoogleAnalyticsTracker {
 
-        private String id;
-        private String domainName;
-        private Boolean enabled;
+        String id;
+        String domainName;
+        Boolean enabled;
 
         public GoogleAnalyticsTracker(
                 String id,
