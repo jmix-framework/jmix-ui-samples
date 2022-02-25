@@ -1,0 +1,25 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout expand="root" spacing="true">
+        <groupBox width="AUTO">
+            <label value="msg://infoLabel.value"/>
+        </groupBox>
+        <hbox id="root"
+              width="100%"
+              spacing="true"
+              expand="rootSpacer">
+            <groupBox id="palette"
+                      caption="msg://rootPalette.caption"
+                      height="100%"
+                      width="200px">
+                <scrollBox id="paletteScrollBox" width="100%" height="100%"/>
+            </groupBox>
+            <groupBox id="dashboard"
+                      caption="msg://rootDashboard.caption"
+                      width="500px"
+                      height="100%">
+                <scrollBox id="dashboardScrollBox" width="100%" height="100%"/>
+            </groupBox>
+            <label id="rootSpacer"/>
+        </hbox>
+    </layout>
+</window>

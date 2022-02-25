@@ -1,0 +1,33 @@
+<p>
+    The example shows how to implement Drag and Drop functionality, using the <code>DDVerticalLayout</code> component.
+</p>
+<p>
+    To enable dragging components from container we need to set <code>LayoutDragMode</code>:
+</p>
+<pre class="code-block">
+DDVerticalLayout ddPalette = new DDVerticalLayout();
+ddPalette.setDragMode(LayoutDragMode.CLONE);
+</pre>
+<p>
+    Then set <code>DropHandler</code> to the component that should handle drop event.
+</p>
+<pre class="code-block">
+DDVerticalLayout dashboard = new DDVerticalLayout();
+dashboard.setDropHandler(new DropHandler() {
+    @Override
+    public void drop(DragAndDropEvent event) {
+        onDrop(event);
+    }
+
+    @Override
+    public AcceptCriterion getAcceptCriterion() {
+        return AcceptAll.get();
+    }
+});
+</pre>
+<p>
+    The methods <code>drop()</code> and <code>getCriterion()</code> are invoked every time when the dragged component is
+    dropped to the layout. In the <code>drop()</code> method we should implement our logic to handle component's drop.
+    Method <code>getCriterion()</code> allows us to specify the criteria to accept dropping various components to this
+    layout (e.g. only Labels and/or Buttons etc.). In this case we accept all components: <code>AcceptAll.get()</code>.
+</p>

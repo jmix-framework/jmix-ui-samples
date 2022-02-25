@@ -1,0 +1,34 @@
+<p>
+    Данный пример показывает как организовать функциональность Drag and drop, используя компонент
+    <code>DDVerticalLayout</code>.
+</p>
+<p>
+    Чтобы активировать перенос компонетов из контейнера нужно установить <code>LayoutDragMode</code>:
+</p>
+<pre class="code-block">
+DDVerticalLayout ddPalette = new DDVerticalLayout();
+ddPalette.setDragMode(LayoutDragMode.CLONE);
+</pre>
+<p>
+    Далее установить <code>DropHandler</code> компоненту, который собирается обрабатывать событие падения.
+</p>
+<pre class="code-block">
+DDVerticalLayout dashboard = new DDVerticalLayout();
+dashboard.setDropHandler(new DropHandler() {
+    @Override
+    public void drop(DragAndDropEvent event) {
+        onDrop(event);
+    }
+
+    @Override
+    public AcceptCriterion getAcceptCriterion() {
+        return AcceptAll.get();
+    }
+});
+</pre>
+<p>
+    Методы: <code>drop()</code> и <code>getCriterion()</code> вызываются каждый раз когда переносимый компонент падает
+    на контейнер. В методе <code>drop()</code> должна быть реализована логика обработки падения компонента.
+    Метод <code>getCriterion()</code> позволяет фильтровать компоненты, которые падают на данный контейнер. В данном
+    случае используется <code>AcceptAll.get()</code>.
+</p>

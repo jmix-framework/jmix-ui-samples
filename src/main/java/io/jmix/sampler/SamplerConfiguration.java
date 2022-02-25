@@ -17,11 +17,9 @@
 package io.jmix.sampler;
 
 import com.vaadin.spring.annotation.UIScope;
-import io.jmix.core.Messages;
 import io.jmix.core.MetadataTools;
 import io.jmix.core.Stores;
 import io.jmix.core.security.CoreSecurityConfiguration;
-import io.jmix.core.security.CurrentAuthentication;
 import io.jmix.data.impl.liquibase.LiquibaseChangeLogProcessor;
 import io.jmix.sampler.bean.*;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
@@ -63,12 +61,6 @@ public class SamplerConfiguration {
         return new SamplerAppUI();
     }
 
-    @Bean("sampler_Messages")
-    @Primary
-    public Messages messages() {
-        return new SamplerMessagesImpl();
-    }
-
     @Bean("sampler_UrlTools")
     @Primary
     public UrlTools urlTools() {
@@ -79,12 +71,6 @@ public class SamplerConfiguration {
     @Primary
     public MetadataTools metadataTools() {
         return new SamplerMetadataTools();
-    }
-
-    @Bean("sampler_CurrentAuthentication")
-    @Primary
-    public CurrentAuthentication authentication() {
-        return new SamplerCurrentAuthentication();
     }
 
     @EnableWebSecurity

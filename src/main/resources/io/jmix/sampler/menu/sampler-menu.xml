@@ -1650,4 +1650,9 @@
         </item>
     </menu>
 
+    <menu id="cookbook" image="mainmenu/cookbook.svg">
+        <item id="dd-verticallayout" splitEnabled="true"
+              image="cookbook/draganddrop/ddverticallayout/dd-verticallayout.png"/>
+    </menu>
+
 </menu-config>

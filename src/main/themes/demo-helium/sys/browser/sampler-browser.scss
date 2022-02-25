@@ -15,5 +15,11 @@
       background-color: #f9f2f4;
       border-radius: $v-border-radius / 2;
     }
+
+    pre.code-block {
+      background-color: rgb(246, 248, 250);
+      font-family: monospace;
+      padding: 10px;
+    }
   }
 }
