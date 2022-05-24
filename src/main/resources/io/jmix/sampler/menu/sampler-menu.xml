@@ -276,6 +276,9 @@
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
+            <item id="datagrid-var-columns" url="backoffice-ui/data" page="key-value-containers" splitEnabled="true"
+                  image="components/datagrid/datagrid-var-columns.png">
+            </item>
             <item id="datagrid-editor" splitEnabled="true"
                   image="components/datagrid/datagrid-editor.png">
                 <otherFiles>

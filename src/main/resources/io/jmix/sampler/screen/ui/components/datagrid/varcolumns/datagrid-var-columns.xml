@@ -1,0 +1,10 @@
+<window xmlns="http://jmix.io/schema/ui/window">
+    <layout expand="box" spacing="true">
+        <hbox spacing="true">
+            <label value="Number of columns" align="MIDDLE_LEFT"/>
+            <textField id="columnCountField" datatype="int" width="50px"/>
+            <button id="createDataGridBtn" caption="Create DataGrid"/>
+        </hbox>
+        <vbox id="box"/>
+    </layout>
+</window>
