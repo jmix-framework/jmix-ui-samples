@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <collection id="customersDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_base">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from sampler_Customer e order by e.name]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="customersTable">
+        <dataGrid id="customersTable" dataContainer="customersDc" width="100%">
+            <actions>
+                <action id="copy" caption="Copy" trackSelection="true"/>
+                <action id="copyAndEdit" caption="Copy and edit" trackSelection="true"/>
+                <action id="refresh" type="refresh"/>
+            </actions>
+            <buttonsPanel alwaysVisible="true">
+                <button id="customersTableCopyBtn" action="customersTable.copy"/>
+                <button id="customersTableCopyAndEditBtn" action="customersTable.copyAndEdit"/>
+                <button id="customersTableRefreshBtn" action="customersTable.refresh"/>
+            </buttonsPanel>
+            <columns>
+                <column id="name" property="name"/>
+                <column id="lastName" property="lastName"/>
+                <column id="age" property="age"/>
+                <column id="active" property="active"/>
+                <column id="grade" property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</fragment>
+

@@ -9,8 +9,8 @@
             <loader/>
         </instance>
     </data>
-    <dialogMode height="600"
-                width="800"/>
+    <dialogMode height="AUTO"
+                width="AUTO"/>
     <facets>
         <dataLoadCoordinator auto="true"/>
     </facets>
