@@ -1657,7 +1657,11 @@
         <item id="dd-verticallayout" splitEnabled="true"
               image="cookbook/draganddrop/ddverticallayout/dd-verticallayout.png"/>
         <item id="copy-action" url="ui/actions" page="declarative-actions" splitEnabled="true"
-              image="cookbook/copyaction/copy-action.png"/>
+              image="cookbook/copyaction/copy-action.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/Customer.java"/>
+            </otherFiles>
+        </item>
         <item id="cascading-dropdowns" url="ui/facets" page="data-load-coordinator" splitEnabled="true"
               image="cookbook/cascadingdropdowns/cascading-dropdowns.png">
             <otherFiles>
