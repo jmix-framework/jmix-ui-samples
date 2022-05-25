@@ -13,8 +13,6 @@ import java.util.UUID;
 @JmixEntity
 public class CalendarEvent {
 
-    private static final long serialVersionUID = 8854732567865981389L;
-
     @Id
     @Column(name = "ID")
     @JmixGeneratedValue

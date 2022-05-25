@@ -15,7 +15,6 @@ import java.util.UUID;
 @Table(name = "SAMPLER_PRODUCT_TAG")
 @Entity(name = "sampler_ProductTag")
 public class ProductTag {
-    private static final long serialVersionUID = 2857008534215233780L;
 
     @JmixGeneratedValue
     @Column(name = "ID", nullable = false)

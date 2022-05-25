@@ -15,7 +15,6 @@ import java.util.UUID;
 @Table(name = "SAMPLER_TIP_INFO")
 @Entity(name = "sampler_TipInfo")
 public class TipInfo {
-    private static final long serialVersionUID = -3694731124780694415L;
 
     @JmixGeneratedValue
     @Column(name = "ID", nullable = false)

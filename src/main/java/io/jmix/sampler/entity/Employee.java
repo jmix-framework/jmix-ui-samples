@@ -15,7 +15,6 @@ import java.util.UUID;
 @Entity(name = "sampler_Employee")
 @JmixEntity
 public class Employee {
-    private static final long serialVersionUID = -5217124568295017832L;
 
     @Id
     @Column(name = "ID")
