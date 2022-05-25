@@ -1658,6 +1658,13 @@
               image="cookbook/draganddrop/ddverticallayout/dd-verticallayout.png"/>
         <item id="copy-action" url="ui/actions" page="declarative-actions" splitEnabled="true"
               image="cookbook/copyaction/copy-action.png"/>
+        <item id="cascading-dropdowns" url="ui/facets" page="data-load-coordinator" splitEnabled="true"
+              image="cookbook/cascadingdropdowns/cascading-dropdowns.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/Planet.java"/>
+                <file name="io/jmix/sampler/entity/Moon.java"/>
+            </otherFiles>
+        </item>
     </menu>
 
 </menu-config>

@@ -1,0 +1,7 @@
+<p>Cascading dropdowns filter their options based on the previous selection in a hierarchy.</p>
+
+<p>This example shows how to implement selection of two dependent entities: Planets and their Moons. When the user selects a planet in the first dropdown, the second dropdown shows the moons of the selected planet.</p>
+
+<p>Entities are loaded into two data containers: <code>planetsDc</code> and <code>moonsDc</code>. The loader query of the moons container has the <code>:container_planetsDc</code> parameter, which refers to the planets container by its name. This parameter is recognized by the <code>DataLoadCoordinator</code> facet, which automatically reloads the moons container each time the selected value in the planets container changes.</p>
+
+<p>The <code>onPlanetsComboBoxValueChange()</code> handler clears the current value of the moons dropdown when the selected planet changes.</p>

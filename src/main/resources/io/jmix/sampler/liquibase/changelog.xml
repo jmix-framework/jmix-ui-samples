@@ -10,4 +10,5 @@
 
     <includeAll path="/io/jmix/sampler/liquibase/changelog/2020"/>
     <includeAll path="/io/jmix/sampler/liquibase/changelog/2021"/>
+    <includeAll path="/io/jmix/sampler/liquibase/changelog/2022"/>
 </databaseChangeLog>

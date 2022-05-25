@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <collection id="planetsDc"
+                  class="io.jmix.sampler.entity.Planet"
+                  fetchPlan="_base">
+            <loader>
+                <query>
+                    <![CDATA[select p from Planet p
+                    where (select count(m) from Moon m where m.planet = p) > 0
+                    order by p.id]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="moonsDc"
+                  class="io.jmix.sampler.entity.Moon"
+                  fetchPlan="_base">
+            <loader>
+                <query>
+                    <![CDATA[select m from Moon m where m.planet = :container_planetsDc order by m.name]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <hbox spacing="true">
+            <entityComboBox id="planetsComboBox" caption="Planets" optionsContainer="planetsDc"/>
+            <entityComboBox id="moonsComboBox" caption="Moons" optionsContainer="moonsDc"/>
+        </hbox>
+    </layout>
+</fragment>
+
