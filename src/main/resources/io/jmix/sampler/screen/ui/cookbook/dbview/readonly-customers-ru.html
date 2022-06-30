@@ -1,0 +1,9 @@
+<p>Данный пример демонстрирует использование представления (view) базы данных в экране списка.</p>
+
+<p>Сущность <code>Customer</code> отображена на таблицу <code>SAMPLER_CUSTOMER</code>, хранящую информацию о заказчиках. Сущность <code>ReadOnlyCustomer</code> отображена на представление БД <code>SAMPLER_CUSTOMER_VIEW</code>, объявленное следующим образом:</p>
+
+<pre>create view SAMPLER_CUSTOMER_VIEW as select ID, NAME || ' ' || LAST_NAME as FULL_NAME, AGE from SAMPLER_CUSTOMER</pre>
+
+<p>Экран <code>readonly-customers.xml</code> определяет компоненты данных и таблицу для загрузки и отображения данных из представления БД с помощью сущности <code>ReadOnlyCustomer</code>. Разумеется, данная сущность не может использоваться для изменения данных, поэтому в контроллере <code>ReadOnlyCustomersSample</code> для действий таблицы созданы специальные обработчики, чтобы редактировать данные с помощью сущности <code>Customer</code>.</p>
+
+<p>Обработчики действий используют бин <code>ScreenBuilders</code> чтобы открывать экран редактирования сущности <code>Customer</code> и перезагружать данные в таблице после успешного коммита.</p>

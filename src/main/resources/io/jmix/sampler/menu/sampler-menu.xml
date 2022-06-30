@@ -1669,6 +1669,13 @@
                 <file name="io/jmix/sampler/entity/Moon.java"/>
             </otherFiles>
         </item>
+        <item id="readonly-customers" url="ui" page="opening-screens" splitEnabled="true"
+              image="cookbook/dbview/readonly-customers.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/Customer.java"/>
+                <file name="io/jmix/sampler/entity/ReadOnlyCustomer.java"/>
+            </otherFiles>
+        </item>
     </menu>
 
 </menu-config>

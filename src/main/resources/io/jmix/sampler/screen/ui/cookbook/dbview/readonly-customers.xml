@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data readOnly="true">
+        <collection id="readOnlyCustomersDc"
+                    class="io.jmix.sampler.entity.ReadOnlyCustomer">
+            <fetchPlan extends="_base"/>
+            <loader id="readOnlyCustomersDl">
+                <query>
+                    <![CDATA[select e from sampler_ReadOnlyCustomer e order by e.fullName]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="readOnlyCustomersTable" spacing="true">
+        <groupTable id="readOnlyCustomersTable"
+                    width="100%"
+                    dataContainer="readOnlyCustomersDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="fullName"/>
+                <column id="age"/>
+            </columns>
+            <simplePagination/>
+            <buttonsPanel id="buttonsPanel">
+                <button id="createBtn" action="readOnlyCustomersTable.create"/>
+                <button id="editBtn" action="readOnlyCustomersTable.edit"/>
+                <button id="removeBtn" action="readOnlyCustomersTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+    </layout>
+</fragment>
+

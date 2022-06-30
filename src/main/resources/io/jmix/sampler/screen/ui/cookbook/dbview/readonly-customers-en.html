@@ -1,0 +1,9 @@
+<p>This example demonstrates usage of a database view in the browse screen.</p>
+
+<p>The <code>Customer</code> entity is mapped to the <code>SAMPLER_CUSTOMER</code> table which stores information about customers. The <code>ReadOnlyCustomer</code> entity is mapped to the <code>SAMPLER_CUSTOMER_VIEW</code> database view defined as follows:</p>
+
+<pre>create view SAMPLER_CUSTOMER_VIEW as select ID, NAME || ' ' || LAST_NAME as FULL_NAME, AGE from SAMPLER_CUSTOMER</pre>
+
+<p>The <code>readonly-customers.xml</code> screen defines data components and table to load and display data from the database view using the <code>ReadOnlyCustomer</code> entity. Obviously, this entity cannot be used to edit data. So the table actions have custom handlers in the <code>ReadOnlyCustomersSample</code> controller to edit data using the <code>Customer</code> entity.</p>
+
+<p>The action handlers use the <code>ScreenBuilders</code> bean to open the <code>Customer</code> edit screen and reload data in the table after successful commit.</p>
