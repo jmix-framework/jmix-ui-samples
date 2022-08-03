@@ -1676,6 +1676,18 @@
                 <file name="io/jmix/sampler/entity/ReadOnlyCustomer.java"/>
             </otherFiles>
         </item>
+        <item id="custom-filter" url="ui/facets" page="data-load-coordinator" splitEnabled="true"
+              image="cookbook/filter/custom-filter.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/Customer.java"/>
+            </otherFiles>
+        </item>
+        <item id="custom-filter-query" url="ui/data" page="data-loaders" splitEnabled="true"
+              image="cookbook/filter/custom-filter.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/entity/Customer.java"/>
+            </otherFiles>
+        </item>
     </menu>
 
 </menu-config>

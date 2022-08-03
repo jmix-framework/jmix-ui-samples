@@ -1,0 +1,7 @@
+<p>This example shows how to implement a custom filter by programmatically modifying the query text in the <code>ValueChangeEvent</code> handler of an input field.</p>
+
+<p>See <code>reload()</code> method of <code>CustomFilterQuerySample</code> class. If the filter field is not empty, it adds a <code>where</code> condition to the query text and sets the appropriate query parameter value. The value contains the <code>(?i)</code> prefix which ensures <a href="https://docs.jmix.io/jmix/data-access/jpql-extensions.html#case-insensitive-substring-search" target="_blank">case-insensitive search</a>.</p>
+
+<p>The <code>DataLoadCoordinator</code> facet is not used in this example. Instead, the <code>reload()</code> method is invoked on <code>BeforeShowEvent</code> explicitly in the controller.</p>
+
+<p>Note also that <a href="https://docs.jmix.io/jmix/ui/vcl/components/filter.html" target="_blank">generic filter</a> component can be used together with a custom filter.</p>

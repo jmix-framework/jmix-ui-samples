@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <collection id="customersDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_base">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from sampler_Customer e order by e.name]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout expand="customersTable" spacing="true">
+        <filter id="filter" caption="Generic filter" collapsed="true"
+                dataLoader="customersDl">
+            <properties include=".*"/>
+        </filter>
+        <hbox spacing="true">
+            <label value="Custom filter by" align="MIDDLE_LEFT"/>
+            <textField id="nameFilterField" inputPrompt="first or last name" width="200"/>
+            <button id="customersTableRefreshBtn" action="customersTable.refresh"/>
+        </hbox>
+        <dataGrid id="customersTable" dataContainer="customersDc" width="100%">
+            <actions>
+                <action id="refresh" type="refresh"/>
+            </actions>
+            <columns>
+                <column id="name" property="name"/>
+                <column id="lastName" property="lastName"/>
+                <column id="age" property="age"/>
+                <column id="active" property="active"/>
+                <column id="grade" property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</fragment>
+

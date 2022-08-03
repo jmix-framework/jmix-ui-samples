@@ -1,0 +1,7 @@
+<p>В данном примере показано, как можно реализовать кастомный фильтр путем модификации текста запроса в обработчике события <code>ValueChangeEvent</code> поля ввода.</p>
+
+<p>См. метод <code>reload()</code> класса <code>CustomFilterQuerySample</code>. Если поле фильтра не пустое, данный метод добавляет в запрос условие <code>where</code> и устанавливает соответствующее значение параметра запроса. Значение параметра содержит префикс <code>(?i)</code>, что обеспечивает <a href="https://docs.jmix.io/jmix/data-access/jpql-extensions.html#case-insensitive-substring-search" target="_blank">регистро-независимый поиск</a>.</p>
+
+<p>Фасет <code>DataLoadCoordinator</code> в данном примере не используется. Вместо него метод <code>reload()</code> вызывается явно в обработчике события <code>BeforeShowEvent</code>.</p>
+
+<p>Обратите внимание, что компонент <a href="https://docs.jmix.io/jmix/ui/vcl/components/filter.html" target="_blank">универсальный фильтр</a> можно использовать совместно с кастомным фильтром.</p>
