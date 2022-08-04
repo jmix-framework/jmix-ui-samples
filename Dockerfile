@@ -1,17 +1,17 @@
-FROM openjdk:8-alpine as builder
+FROM openjdk:11-jre-slim-buster as builder
 
 WORKDIR application
 COPY build/libs/jmix-sampler.jar jmix-sampler.jar
 RUN java -Djarmode=layertools -jar jmix-sampler.jar extract
 
-FROM openjdk:8-alpine
+FROM openjdk:11-jre-slim-buster
 WORKDIR application
 COPY --from=builder application/dependencies/ ./
 COPY --from=builder application/snapshot-dependencies/ ./
 COPY --from=builder application/spring-boot-loader/ ./
 COPY --from=builder application/application/ ./
 
-RUN apk add --no-cache ttf-dejavu
+RUN apt-get update && apt-get install -y ttf-dejavu
 
 ARG googleApiKey
 ENV jmix_sampler_google_api_key=$googleApiKey
