@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fragment xmlns="http://jmix.io/schema/ui/fragment">
+    <data>
+        <collection id="customersDc"
+                  class="io.jmix.sampler.entity.Customer"
+                  fetchPlan="_base">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from sampler_Customer e order by e.name]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout expand="customersTable" spacing="true">
+        <dataGrid id="customersTable" dataContainer="customersDc" width="100%">
+            <buttonsPanel>
+                <button id="openEditorBtn" action="customersTable.openEditor"/>
+                <button action="customersTable.remove"/>
+                <button action="customersTable.refresh"/>
+            </buttonsPanel>
+            <actions>
+                <action id="openEditor" caption="Open navigating editor"/>
+                <action id="remove" type="remove"/>
+                <action id="refresh" type="refresh"/>
+            </actions>
+            <columns>
+                <column id="name" property="name"/>
+                <column id="lastName" property="lastName"/>
+                <column id="age" property="age"/>
+                <column id="active" property="active"/>
+                <column id="grade" property="grade"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</fragment>
+

@@ -1,0 +1,9 @@
+<p>The editor screen with navigation allows users to edit an existing or new entity and move to the next or previous record without closing the screen.</p>
+
+<p>In this example, the <code>navedit.xml</code> screen demonstrates a standard browse screen but with a custom action opening the navigating edit screen.</p>
+
+<p>The action handler is implemented in the <code>NavEditSample.java</code> class. It creates the edit screen and passes the collection container and table component to navigate through their rows.</p>
+
+<p>The <code>customer-nav-edit.xml</code> descriptor of the navigating edit screen is no different from a standard edit screen descriptor except by the set of additional buttons at the bottom.</p>
+
+<p>The <code>CustomerNavEdit.java</code> controller implements the navigation button click handlers. It checks if the edited entity is changed, shows a dialog to save or discard the changes, then proceeds with the navigation or creating a new entity. It uses the dynamically added and removed <code>DataContext.PostCommitEvent</code> listener to set the changed and saved entity in the external collection container and table.</p>

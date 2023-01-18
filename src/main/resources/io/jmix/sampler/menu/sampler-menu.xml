@@ -1688,6 +1688,14 @@
                 <file name="io/jmix/sampler/entity/Customer.java"/>
             </otherFiles>
         </item>
+        <item id="navigating-editor" url="ui" page="screens" splitEnabled="true"
+              image="cookbook/navedit/navedit.png">
+            <otherFiles>
+                <file name="io/jmix/sampler/screen/ui/cookbook/navedit/customer-nav-edit.xml"/>
+                <file name="io/jmix/sampler/screen/ui/cookbook/navedit/CustomerNavEdit.java"/>
+                <file name="io/jmix/sampler/entity/Customer.java"/>
+            </otherFiles>
+        </item>
     </menu>
 
 </menu-config>

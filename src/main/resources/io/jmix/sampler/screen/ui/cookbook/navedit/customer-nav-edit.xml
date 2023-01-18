@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://jmix.io/schema/ui/window"
+        caption="Customer"
+        focusComponent="form">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.sampler.entity.Customer">
+            <fetchPlan extends="_base"/>
+            <loader id="customerDl"/>
+        </instance>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <screenSettings id="settingsFacet" auto="true"/>
+    </facets>
+    <actions>
+        <action id="windowCommit" caption="msg:///actions.Save"
+                icon="EDITOR_OK"
+                primary="true"
+                shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="windowClose"
+                caption="msg:///actions.Close"
+                icon="EDITOR_CANCEL"/>
+    </actions>
+    <dialogMode width="-1" height="-1"/>
+    <layout spacing="true" expand="editActions">
+        <form id="form" dataContainer="customerDc">
+            <column width="250px">
+                <textField id="nameField" property="name"/>
+                <textField id="lastNameField" property="lastName"/>
+                <textField id="ageField" property="age" required="true"/>
+                <checkBox id="activeField" property="active"/>
+                <comboBox id="gradeField" property="grade"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitBtn" action="windowCommit"/>
+            <button id="closeBtn" action="windowClose"/>
+            <button id="prevBtn" caption="Previous" icon="ARROW_LEFT"/>
+            <button id="nextBtn" caption="Next" icon="ARROW_RIGHT"/>
+            <button id="newBtn" caption="New" icon="PLUS"/>
+        </hbox>
+    </layout>
+</window>
