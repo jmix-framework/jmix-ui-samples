@@ -71,6 +71,10 @@ public class CustomerNavEdit extends StandardEditor<Customer> {
     public void onBeforeShow(BeforeShowEvent event) {
         addDataContextPostCommitListener();
         wasNewEntity = entityStates.isNew(getEditedEntity());
+        if (collectionContainer.getItemIndex(getEditedEntity()) <= 0)
+            prevBtn.setEnabled(false);
+        if (collectionContainer.getItemIndex(getEditedEntity()) >= collectionContainer.getItems().size() - 1)
+            nextBtn.setEnabled(false);
     }
 
     // Checks if the edited entity is changed, shows a dialog to save or discard the changes,
@@ -95,6 +99,7 @@ public class CustomerNavEdit extends StandardEditor<Customer> {
                                     .withCaption("Don't save")
                                     .withHandler(e -> {
                                         dataContext.evictModified();
+                                        setModifiedAfterOpen(false);
                                         gotoMethod.run();
                                     }),
                             new DialogAction(DialogAction.Type.CANCEL)
@@ -124,6 +129,11 @@ public class CustomerNavEdit extends StandardEditor<Customer> {
         dataContext.clear();
 
         int currentIdx = collectionContainer.getItemIndex(getEditedEntity());
+        if (currentIdx == -1) { // If discarded a new instance
+            editEntity(0);
+            nextBtn.setEnabled(true);
+            prevBtn.setEnabled(false);
+        }
         if (currentIdx > 0) {
             editEntity(--currentIdx);
             nextBtn.setEnabled(true);
