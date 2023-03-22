@@ -18,9 +18,7 @@ package io.jmix.sampler;
 
 import com.vaadin.spring.annotation.UIScope;
 import io.jmix.core.MetadataTools;
-import io.jmix.core.Stores;
 import io.jmix.core.security.CoreSecurityConfiguration;
-import io.jmix.data.impl.liquibase.LiquibaseChangeLogProcessor;
 import io.jmix.sampler.bean.*;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperField;
 import io.jmix.sampler.screen.ui.components.composite.component.StepperFieldLoader;
@@ -107,21 +105,26 @@ public class SamplerConfiguration {
     @Bean(name = "sampler_Liquibase")
     @Primary
     public SpringLiquibase liquibase(DataSource dataSource,
-                                     LiquibaseProperties properties,
-                                     LiquibaseChangeLogProcessor processor) {
+                                     LiquibaseProperties properties) {
 
         SamplerLiquibase liquibase = new SamplerLiquibase();
 
-        liquibase.setChangeLogContent(processor.createMasterChangeLog(Stores.MAIN));
-
         liquibase.setDataSource(dataSource);
+        liquibase.setChangeLog(properties.getChangeLog());
+        liquibase.setClearCheckSums(properties.isClearChecksums());
         liquibase.setContexts(properties.getContexts());
         liquibase.setDefaultSchema(properties.getDefaultSchema());
+        liquibase.setLiquibaseSchema(properties.getLiquibaseSchema());
+        liquibase.setLiquibaseTablespace(properties.getLiquibaseTablespace());
+        liquibase.setDatabaseChangeLogTable(properties.getDatabaseChangeLogTable());
+        liquibase.setDatabaseChangeLogLockTable(properties.getDatabaseChangeLogLockTable());
         liquibase.setDropFirst(properties.isDropFirst());
         liquibase.setShouldRun(properties.isEnabled());
         liquibase.setLabels(properties.getLabels());
         liquibase.setChangeLogParameters(properties.getParameters());
         liquibase.setRollbackFile(properties.getRollbackFile());
+        liquibase.setTestRollbackOnUpdate(properties.isTestRollbackOnUpdate());
+        liquibase.setTag(properties.getTag());
 
         return liquibase;
     }

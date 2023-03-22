@@ -16,7 +16,7 @@
 
 package io.jmix.sampler.bean;
 
-import io.jmix.data.impl.liquibase.JmixLiquibase;
+import liquibase.integration.spring.SpringLiquibase;
 import liquibase.integration.spring.SpringResourceAccessor;
 import org.springframework.core.io.ResourceLoader;
 
@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.SortedSet;
 
-public class SamplerLiquibase extends JmixLiquibase {
+public class SamplerLiquibase extends SpringLiquibase {
 
     protected Map<String, SortedSet<String>> changelogPaths = new HashMap<>();
 
@@ -34,7 +34,7 @@ public class SamplerLiquibase extends JmixLiquibase {
         return new SamplerResourceOpener(resourceLoader);
     }
 
-    public class SamplerResourceOpener extends JmixResourceAccessor {
+    public class SamplerResourceOpener extends SpringResourceAccessor {
 
         public SamplerResourceOpener(ResourceLoader resourceLoader) {
             super(resourceLoader);

@@ -8,6 +8,9 @@
     <property name="uuid.type" dbms="oracle" value="varchar2(32)"/>
     <property name="uuid.type" dbms="!oracle" value="uuid"/>
 
+    <include file="/io/jmix/data/liquibase/changelog.xml"/>
+    <include file="/io/jmix/uidata/liquibase/changelog.xml"/>
+
     <includeAll path="/io/jmix/sampler/liquibase/changelog/2020"/>
     <includeAll path="/io/jmix/sampler/liquibase/changelog/2021"/>
     <includeAll path="/io/jmix/sampler/liquibase/changelog/2022"/>
