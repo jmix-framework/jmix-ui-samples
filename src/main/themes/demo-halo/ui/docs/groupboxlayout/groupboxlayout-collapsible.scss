@@ -1,0 +1,11 @@
+@mixin sampler-docs-groupboxlayout-collapsible {
+
+  span.groupboxlayout-collapsable.collapse::before {
+    font-family: FontAwesome;
+    content: "\f147";
+  }
+  span.groupboxlayout-collapsable.expand::before {
+    font-family: FontAwesome;
+    content: "\f196";
+  }
+}

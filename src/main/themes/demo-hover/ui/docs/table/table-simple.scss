@@ -1,0 +1,15 @@
+@mixin sampler-docs-table-simple {
+
+  span.table-simple.table-sortable-down::before {
+    content: "\f0dd";
+    font-family: ThemeIcons;
+  }
+  span.table-simple.table-sortable-up::before {
+    content: "\f0de";
+    font-family: ThemeIcons;
+  }
+  span.table-simple.table-column-control-button::before {
+    content: "\f013";
+    font-family: ThemeIcons;
+  }
+}

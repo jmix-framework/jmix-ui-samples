@@ -17,7 +17,7 @@
 
 <menu-config xmlns="io/jmix/sampler/menu/sampler-menu.xsd">
 
-    <menu id="components" image="mainmenu/components.svg" url="backoffice-ui/vcl/components">
+    <menu id="components" image="mainmenu/components.svg" url="ui/vcl/components">
         <menu id="button">
             <item id="button-simple" page="button" image="components/button/button-simple.png"/>
             <item id="button-localized" page="button" image="components/button/button-localized.png"/>
@@ -164,17 +164,17 @@
         </item>
 
         <menu id="contexthelp">
-            <item id="contexthelp-field" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
+            <item id="contexthelp-field" url="ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-field.png"/>
-            <item id="contexthelp-field-click" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
+            <item id="contexthelp-field-click" url="ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-field-click.png"/>
-            <item id="contexthelp-form" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
+            <item id="contexthelp-form" url="ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-form.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="contexthelp-form-click" url="backoffice-ui/vcl" page="xml" anchor="context-help-text"
+            <item id="contexthelp-form-click" url="ui/vcl" page="xml" anchor="context-help-text"
                   image="components/contexthelp/contexthelp-form-click.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -269,14 +269,14 @@
                     <file name="io/jmix/sampler/screen/ui/components/datagrid/headerfooter/datagrid-style.scss"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-key-value" url="backoffice-ui/data" page="key-value-containers" splitEnabled="true"
+            <item id="datagrid-key-value" url="ui/data" page="key-value-containers" splitEnabled="true"
                   image="components/datagrid/datagrid-key-value.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                     <file name="io/jmix/sampler/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="datagrid-var-columns" url="backoffice-ui/data" page="key-value-containers" splitEnabled="true"
+            <item id="datagrid-var-columns" url="ui/data" page="key-value-containers" splitEnabled="true"
                   image="components/datagrid/datagrid-var-columns.png">
             </item>
             <item id="datagrid-editor" splitEnabled="true"
@@ -483,7 +483,7 @@
             </item>
         </menu>
 
-        <menu id="icons" url="backoffice-ui">
+        <menu id="icons" url="ui">
             <item id="icons-all" page="icons" splitEnabled="true" image="components/icons/icons-all.png"/>
             <item id="icons-simple" page="icons" image="components/icons/icons-simple.png"/>
         </menu>
@@ -827,7 +827,7 @@
                     <file name="io/jmix/sampler/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="table-key-value" url="backoffice-ui/data" page="key-value-containers" splitEnabled="true"
+            <item id="table-key-value" url="ui/data" page="key-value-containers" splitEnabled="true"
                   image="components/table/table-key-value.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Customer.java"/>
@@ -863,7 +863,7 @@
             </item>
         </menu>
 
-        <menu id="tagfield" url="backoffice-ui/vcl/components">
+        <menu id="tagfield" url="ui/vcl/components">
             <item id="tagfield-simple" page="tag-field"
                   image="components/tagfield/tagfield-simple.png"/>
             <item id="tagfield-dataaware" page="tag-field"
@@ -906,7 +906,7 @@
             </item>
         </menu>
 
-        <menu id="tagpicker" url="backoffice-ui/vcl/components">
+        <menu id="tagpicker" url="ui/vcl/components">
             <item id="tagpicker-simple" page="tag-picker"
                   image="components/tagpicker/tagpicker-simple.png">
                 <otherFiles>
@@ -938,9 +938,9 @@
         <menu id="textarea">
             <item id="textarea-simple" page="text-area"
                   image="components/textarea/textarea-simple.png"/>
-            <item id="resizabletextarea-simple" page="gui_ResizableTextArea"
+            <item id="resizabletextarea-simple" page="resizable-text-area"
                   image="components/resizabletextarea/resizabletextarea-simple.png"/>
-            <item id="richtextarea-simple" page="gui_RichTextArea"
+            <item id="richtextarea-simple" page="rich-text-area"
                   image="components/richtextarea/richtextarea-simple.png"/>
         </menu>
 
@@ -969,26 +969,26 @@
                   image="components/textfield/textfield-text-change.png"/>
             <item id="textfield-text-change-event-mode" page="text-field"
                   image="components/textfield/textfield-text-change-event-mode.png"/>
-            <item id="maskedfield-simple" page="gui_MaskedField"
+            <item id="maskedfield-simple" page="masked-field"
                   image="components/maskedfield/maskedfield-simple.png"/>
-            <item id="passwordfield-simple" page="gui_PasswordField"
+            <item id="passwordfield-simple" page="password-field"
                   image="components/passwordfield/passwordfield-simple.png"/>
         </menu>
 
         <menu id="timefield">
-            <item id="timefield-simple" page="gui_TimeField"
+            <item id="timefield-simple" page="time-field"
                   image="components/timefield/timefield-simple.png"/>
-            <item id="timefield-dataaware" page="gui_TimeField"
+            <item id="timefield-dataaware" page="time-field"
                   image="components/timefield/timefield-dataaware.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
                 </otherFiles>
             </item>
-            <item id="timefield-format" page="gui_TimeField"
+            <item id="timefield-format" page="time-field"
                   image="components/timefield/timefield-format.png"/>
-            <item id="timefield-resolution" page="gui_TimeField"
+            <item id="timefield-resolution" page="time-field"
                   image="components/timefield/timefield-resolution.png"/>
-            <item id="timefield-time-mode" page="gui_TimeField"
+            <item id="timefield-time-mode" page="time-field"
                   image="components/timefield/timefield-time-mode.png">
                 <otherFiles>
                     <file name="io/jmix/sampler/entity/Task.java"/>
@@ -1061,7 +1061,7 @@
         </menu>
     </menu>
 
-    <menu id="containers" image="mainmenu/containers.svg" url="backoffice-ui/vcl/containers">
+    <menu id="containers" image="mainmenu/containers.svg" url="ui/vcl/containers">
         <menu id="accordion">
             <item id="accordion-simple" page="accordion" splitEnabled="true"
                   image="containers/accordion/accordion-simple.svg">
@@ -1110,7 +1110,7 @@
             </otherFiles>
         </item>
 
-        <item id="fragment-simple" url="backoffice-ui" page="using-fragments"
+        <item id="fragment-simple" url="ui" page="using-fragments"
               image="containers/fragment/fragment-simple.svg">
             <otherFiles>
                 <file name="io/jmix/sampler/screen/ui/components/button/simple/ButtonSimpleSample.java"/>
@@ -1243,7 +1243,7 @@
         <item id="layout-shortcut" page="box-layout" image="containers/layoutshortcut/layout-shortcut.png"/>
     </menu>
 
-    <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg" url="backoffice-ui">
+    <menu id="dialogsAndNotifications" image="mainmenu/dialogsAndNotifications.svg" url="ui">
         <menu id="dialogs">
             <item id="message-dialog" page="dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
             <item id="option-dialog" page="dialogs" image="mainmenu/dialogsAndNotifications.svg"/>
@@ -1305,7 +1305,7 @@
         </menu>
     </menu>
 
-    <menu id="charts" image="mainmenu/charts.svg" url="backoffice-ui">
+    <menu id="charts" image="mainmenu/charts.svg" url="ui">
         <menu id="sub-charts">
 
             <menu id="serialChart">

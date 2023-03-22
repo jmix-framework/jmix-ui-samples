@@ -21,6 +21,9 @@
 @import "ui/containers/layoutclick/sampler-layout-click";
 @import "ui/containers/responsivegridlayout/sampler-responsivegridlayout";
 
+@import "ui/docs/groupboxlayout/groupboxlayout-collapsible";
+@import "ui/docs/table/table-simple";
+
 @mixin demo-hover {
   @include hover;
 
@@ -48,4 +51,7 @@
   @include sampler-drawer;
   @include sampler-layout-click;
   @include sampler-responsivegridlayout;
+
+  @include sampler-docs-groupboxlayout-collapsible;
+  @include sampler-docs-table-simple;
 }
