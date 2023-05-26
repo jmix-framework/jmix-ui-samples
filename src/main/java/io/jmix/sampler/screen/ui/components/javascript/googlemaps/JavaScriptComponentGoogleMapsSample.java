@@ -42,8 +42,8 @@ public class JavaScriptComponentGoogleMapsSample extends ScreenFragment {
     @Subscribe
     public void onAfterInit(AfterInitEvent event) {
         GoogleMapState state = new GoogleMapState();
-        state.lat = 53.225;
-        state.lng = 50.195;
+        state.lat = 53.590905;
+        state.lng = -2.24955;
         state.zoom = 8;
         state.key = samplerProperties.getGoogleApiKey();
         state.language = currentAuthentication.getLocale().getLanguage();
