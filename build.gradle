@@ -10,6 +10,8 @@ apply plugin: 'com.vaadin'
 
 jmix {
     bomVersion = '2.8.0'
+    // todo kd, replace by stable version
+    bomVersion = '2.8.999-SNAPSHOT'
 }
 
 group = 'io.jmix.uisamples'
