@@ -1,13 +1,14 @@
 package io.jmix.uisamples.view.flowui.components.dropdownbutton.themevariant;
 
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.SupportsTypedValue;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
+import io.jmix.flowui.icon.Icons;
 import io.jmix.flowui.kit.component.combobutton.ComboButton;
 import io.jmix.flowui.kit.component.dropdownbutton.AbstractDropdownButton;
 import io.jmix.flowui.kit.component.dropdownbutton.DropdownButton;
+import io.jmix.flowui.kit.icon.JmixFontIcon;
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,6 +26,8 @@ public class DropdownButtonThemeVariantSample extends StandardView {
 
     @Autowired
     protected UiComponents uiComponents;
+    @Autowired
+    protected Icons icons;
 
     protected AbstractDropdownButton testButton;
 
@@ -70,7 +73,7 @@ public class DropdownButtonThemeVariantSample extends StandardView {
             testButton.setText("Button text");
         } else if ("icon".equalsIgnoreCase(command)) {
             testButton.addThemeName(command);
-            testButton.setIconComponent(VaadinIcon.SMILEY_O.create());
+            testButton.setIconComponent(icons.get(JmixFontIcon.SMILEY_O));
         } else {
             testButton.addThemeName(command);
         }
