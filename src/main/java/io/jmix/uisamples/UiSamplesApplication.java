@@ -16,16 +16,22 @@
 
 package io.jmix.uisamples;
 
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
+import io.jmix.flowui.theme.lumo.JmixLumo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @Push
-@Theme(value = "jmix-ui-samples")
+@StyleSheet(Lumo.STYLESHEET)
+@StyleSheet(JmixLumo.STYLESHEET)
+@StyleSheet(Lumo.UTILITY_STYLESHEET) // todo kd, remove
+@StyleSheet("themes/lumo/styles.css")
 @PWA(name = "Jmix UI Samples", shortName = "Jmix UI Samples", offline = false)
 @SpringBootApplication
 public class UiSamplesApplication extends SpringBootServletInitializer implements AppShellConfigurator {

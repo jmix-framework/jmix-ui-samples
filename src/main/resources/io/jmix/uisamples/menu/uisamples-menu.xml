@@ -24,7 +24,7 @@
             <item id="badge-simple"/>
             <item id="badge-icons">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/badge-icons.css"/>
+                    <file name="META-INF/resources/themes/lumo/badge-icons.css"/>
                 </otherFiles>
             </item>
             <item id="badge-theme-variant" splitEnabled="true"/>
@@ -157,7 +157,7 @@
             <item id="data-grid-part-name-generator" page="dataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
-                    <file name="META-INF/resources/themes/data-grid-part-name-generator.css"/>
+                    <file name="META-INF/resources/themes/lumo/data-grid-part-name-generator.css"/>
                 </otherFiles>
             </item>
             <item id="data-grid-tooltip-generator" page="dataGrid" splitEnabled="true">
@@ -360,17 +360,17 @@
             <item id="html-component" page="html" splitEnabled="true">
                 <otherFiles>
                     <file name="META-INF/resources/html/html-component.html"/>
-                    <file name="META-INF/resources/themes/html-component.css"/>
+                    <file name="META-INF/resources/themes/lumo/html-component.css"/>
                 </otherFiles>
             </item>
             <item id="html-declaratively" page="html" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/html-component.css"/>
+                    <file name="META-INF/resources/themes/lumo/html-component.css"/>
                 </otherFiles>
             </item>
             <item id="html-programmatically" page="html" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/html-component.css"/>
+                    <file name="META-INF/resources/themes/lumo/html-component.css"/>
                 </otherFiles>
             </item>
         </menu>
@@ -575,7 +575,7 @@
             </item>
             <item id="text-area-resizable" page="textArea">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/text-area-resizable.css"/>
+                    <file name="META-INF/resources/themes/lumo/text-area-resizable.css"/>
                 </otherFiles>
             </item>
             <item id="text-area-theme-variant" page="textArea" splitEnabled="true"/>
@@ -694,7 +694,7 @@
             <item id="card-header" page="card" anchor="slot-header"/>
             <item id="card-theme-variant" page="card" anchor="theme-variants" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/card-theme-variant.css"/>
+                    <file name="META-INF/resources/themes/lumo/card-theme-variant.css"/>
                 </otherFiles>
             </item>
         </menu>
@@ -1211,7 +1211,7 @@
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                     <file name="io/jmix/uisamples/entity/BackgroundEvent.java"/>
                     <file name="io/jmix/uisamples/entity/WorkingShift.java"/>
-                    <file name="META-INF/resources/themes/calendar-event-overlap-function.css"/>
+                    <file name="META-INF/resources/themes/lumo/calendar-event-overlap-function.css"/>
                 </otherFiles>
             </item>
             <item id="calendar-event-constraint" splitEnabled="true"
@@ -1237,7 +1237,7 @@
             <item id="calendar-class-names-generator" splitEnabled="true"
                   page="full-calendar-component" anchor="class-names-generators">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/calendar-class-names-generator.css"/>
+                    <file name="META-INF/resources/themes/lumo/calendar-class-names-generator.css"/>
                 </otherFiles>
             </item>
             <item id="calendar-event-styling" splitEnabled="true"
@@ -1350,7 +1350,7 @@
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
-                    <file name="META-INF/resources/themes/group-data-grid-styling.css"/>
+                    <file name="META-INF/resources/themes/lumo/group-data-grid-styling.css"/>
                 </otherFiles>
             </item>
         </menu>
@@ -1560,7 +1560,7 @@
             <item id="copy-to-clipboard"/>
             <item id="custom-login" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/custom-login.css"/>
+                    <file name="META-INF/resources/themes/lumo/custom-login.css"/>
                 </otherFiles>
             </item>
             <item id="iframe-pdf" splitEnabled="true">
