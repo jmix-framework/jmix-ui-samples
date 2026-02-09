@@ -19,8 +19,8 @@ import io.jmix.flowui.view.ViewController;
 import io.jmix.flowui.view.ViewDescriptor;
 import io.jmix.uisamples.entity.Customer;
 import io.jmix.uisamples.entity.CustomerGrade;
+import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.Nullable;
 
 @ViewController("virtual-list-simple")
 @ViewDescriptor("virtual-list-simple.xml")

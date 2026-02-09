@@ -17,7 +17,7 @@
 package io.jmix.uisamples.config;
 
 import io.jmix.flowui.menu.MenuItem;
-import org.springframework.lang.Nullable;
+import org.jspecify.annotations.Nullable;
 
 import java.util.*;
 

@@ -10,7 +10,7 @@ import com.vaadin.flow.component.shared.HasTooltip;
 import com.vaadin.flow.dom.Element;
 import com.vaadin.flow.shared.Registration;
 import io.jmix.flowui.kit.component.HasTitle;
-import org.springframework.lang.Nullable;
+import org.jspecify.annotations.Nullable;
 
 import java.util.Set;
 import java.util.function.Predicate;

@@ -19,7 +19,7 @@ import io.jmix.uisamples.view.sys.sampleview.SampleView;
 import org.apache.commons.lang3.StringUtils;
 import org.dom4j.Document;
 import org.dom4j.Element;
-import org.springframework.lang.Nullable;
+import org.jspecify.annotations.Nullable;
 
 import java.io.InputStream;
 import java.util.List;

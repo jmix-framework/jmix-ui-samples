@@ -44,8 +44,8 @@ import io.jmix.uisamples.config.UiSamplesMenuItem;
 import io.jmix.uisamples.view.sys.sampleview.SampleView;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Strings;
+import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collections;

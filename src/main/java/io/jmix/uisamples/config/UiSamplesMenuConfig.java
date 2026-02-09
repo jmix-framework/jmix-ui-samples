@@ -29,9 +29,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.commons.text.StringTokenizer;
 import org.dom4j.Element;
+import org.jspecify.annotations.Nullable;
 import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
-import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

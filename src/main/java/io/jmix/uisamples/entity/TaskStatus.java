@@ -1,7 +1,7 @@
 package io.jmix.uisamples.entity;
 
 import io.jmix.core.metamodel.datatype.EnumClass;
-import org.springframework.lang.Nullable;
+import org.jspecify.annotations.Nullable;
 
 public enum TaskStatus implements EnumClass<String> {
 
