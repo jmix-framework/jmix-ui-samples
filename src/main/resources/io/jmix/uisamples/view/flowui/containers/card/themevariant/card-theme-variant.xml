@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex flex-row flex-wrap" justifyContent="CENTER">
+    <layout classNames="horizontal-layout card-theme-variant" justifyContent="CENTER">
         <card id="card" width="30em"/>
         <vbox width="min-content" padding="false">
             <checkboxGroup id="slotsGroup" label="msg://slotsGroup.label"

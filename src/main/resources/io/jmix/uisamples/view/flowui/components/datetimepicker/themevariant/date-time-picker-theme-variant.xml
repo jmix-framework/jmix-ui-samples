@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <details summaryText="Theme Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <dateTimePicker label="Standard DateTimePicker"/>
                 <dateTimePicker label="Small DateTimePicker" themeNames="small"/>
                 <dateTimePicker label="Helper-above-field Field" themeNames="helper-above-field"
@@ -9,7 +9,7 @@
             </hbox>
         </details>
         <details summaryText="Align Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <dateTimePicker id="dateTimePicker" label="Standard align DateTimePicker"
                                 datePlaceholder="Placeholder" timePlaceholder="Placeholder"/>
                 <dateTimePicker id="dateTimePicker2" label="Align-center DateTimePicker" themeNames="align-center"

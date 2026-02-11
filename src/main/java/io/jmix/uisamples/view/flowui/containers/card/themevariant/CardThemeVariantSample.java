@@ -11,9 +11,10 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
+import com.vaadin.flow.component.orderedlayout.FlexLayout;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.server.streams.DownloadHandler;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 import io.jmix.core.Messages;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
@@ -87,35 +88,33 @@ public class CardThemeVariantSample extends StandardView {
     }
 
     private Component initMediaSelect() {
-        Div div = new Div();
-        div.addClassNames(LumoUtility.Display.FLEX, LumoUtility.AlignItems.BASELINE);
+        FlexLayout layout = new FlexLayout();
+        layout.setAlignItems(FlexComponent.Alignment.BASELINE);
 
         mediaSelect = uiComponents.create(JmixSelect.class);
-        mediaSelect.addClassName("card-select");
 
         mediaSelect.setItems("Image", "Icon", "Avatar");
         mediaSelect.addValueChangeListener(e -> updateMedia(e.getValue()));
 
         mediaSelect.setValue("Image");
 
-        div.add(new Text("Media:"), mediaSelect);
-        return div;
+        layout.add(new Text("Media:"), mediaSelect);
+        return layout;
     }
 
     private Component initContentSelect() {
-        Div div = new Div();
-        div.addClassNames(LumoUtility.Display.FLEX, LumoUtility.AlignItems.BASELINE);
+        FlexLayout layout = new FlexLayout();
+        layout.setAlignItems(FlexComponent.Alignment.BASELINE);
 
         contentSelect = uiComponents.create(JmixSelect.class);
-        contentSelect.addClassName("card-select");
 
         contentSelect.setItems("Text", "Scroller", "Image & Text");
         contentSelect.addValueChangeListener(e -> updateContent(e.getValue()));
 
         contentSelect.setValue("Text");
 
-        div.add(new Text("Content:"), contentSelect);
-        return div;
+        layout.add(new Text("Content:"), contentSelect);
+        return layout;
     }
 
     private void updateMedia(String value) {
@@ -157,7 +156,7 @@ public class CardThemeVariantSample extends StandardView {
             }
             case "Image & Text" -> {
                 Div div = new Div();
-                div.addClassName(LumoUtility.Gap.SMALL);
+                div.addClassName("image-text-container");
 
                 Image image = uiComponents.create(Image.class);
                 image.setSizeFull();
@@ -196,7 +195,7 @@ public class CardThemeVariantSample extends StandardView {
         card.setHeader(null);
         card.setHeaderSuffix(null);
         card.setTitle((Component) null);
-        card.setSubtitle(null);
+        card.setSubtitle((Component) null);
         card.removeAll();
         Arrays.stream(card.getFooterComponents()).forEach(Component::removeFromParent);
 
@@ -259,21 +258,14 @@ public class CardThemeVariantSample extends StandardView {
     }
 
     private Component createHeader() {
-        Div header = new Div();
-        header.addClassNames(
-                LumoUtility.Display.FLEX,
-                LumoUtility.FlexDirection.COLUMN_REVERSE,
-                LumoUtility.LineHeight.XSMALL
-        );
+        FlexLayout header = new FlexLayout();
+        header.setFlexDirection(FlexLayout.FlexDirection.COLUMN_REVERSE);
+        header.addClassNames("header");
 
         H2 title = new H2("Jmix");
 
         Div subtitle = new Div("Modern Dev Platform");
-        subtitle.addClassNames(
-                LumoUtility.TextTransform.UPPERCASE,
-                LumoUtility.FontSize.XSMALL,
-                LumoUtility.TextColor.SECONDARY
-        );
+        subtitle.addClassNames("subtitle");
 
         header.add(title, subtitle);
         return header;

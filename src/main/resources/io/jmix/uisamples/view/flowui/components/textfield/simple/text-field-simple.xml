@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row flex-wrap">
+    <layout classNames="horizontal-layout">
         <textField id="textField" label="TextField"/>
         <textField id="textLengthField" label="MaxLength = 10" maxLength="10"/>
     </layout>

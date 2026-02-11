@@ -10,7 +10,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.QueryParameters;
 import com.vaadin.flow.router.RouteParameters;
 import com.vaadin.flow.router.RouterLink;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 import io.jmix.core.Messages;
 import io.jmix.core.Resources;
 import io.jmix.core.common.xmlparsing.Dom4jTools;
@@ -44,6 +43,7 @@ public class OverviewPageGenerator {
         String prefix = messagesPrefix + "-overview";
 
         VerticalLayout overviewRoot = uiComponents.create(VerticalLayout.class);
+        overviewRoot.addClassName("overview-root");
         InputStream inputStream = resources.getResourceAsStream(resourceName);
 
         if (inputStream == null) {
@@ -112,7 +112,7 @@ public class OverviewPageGenerator {
         flexLayout.setFlexDirection(FlexLayout.FlexDirection.ROW);
         flexLayout.setJustifyContentMode(FlexComponent.JustifyContentMode.START);
         flexLayout.setFlexWrap(FlexLayout.FlexWrap.WRAP);
-        flexLayout.addClassName(LumoUtility.Gap.SMALL);
+        flexLayout.addClassName("tag-container");
 
         for (Element tagElement : tagElements) {
             Component tag = createComponentByName(tagElement.attributeValue("component"));
@@ -207,7 +207,7 @@ public class OverviewPageGenerator {
             List<Element> textElements = resources.elements("text");
             VerticalLayout verticalLayout = uiComponents.create(VerticalLayout.class);
             verticalLayout.setPadding(false);
-            verticalLayout.addClassName(LumoUtility.Gap.XSMALL);
+            verticalLayout.addClassName("resources-container");
 
             for (Element textElement : textElements) {
                 String href = textElement.attributeValue("href");
@@ -226,7 +226,7 @@ public class OverviewPageGenerator {
         anchor.setHref(getMessage(messagesPrefix, textElement.attributeValue("href")));
         anchor.setTarget(AnchorTarget.BLANK);
 
-        anchor.addClassName(LumoUtility.FontWeight.BOLD);
+        anchor.addClassName("link");
         addClassNames(anchor, textElement.attributeValue("classNames"));
 
         return anchor;

@@ -1,6 +1,6 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
-        <hbox id="content" padding="false" classNames="items-center flex-wrap">
+        <hbox id="content" padding="false" alignItems="CENTER" wrap="true">
             <button icon="CHECK" themeNames="icon"/>
             <icon icon="vaadin:smiley-o"/>
             <textField id="field" placeholder="Field"/>

@@ -422,7 +422,7 @@ public class SampleView extends StandardView {
         permalinkButton.setIcon(VaadinIcon.LINK.create());
         permalinkButton.setTitle(messageBundle.getMessage("permalink.title"));
         permalinkButton.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
-        permalinkButton.addClassNames("me-s", "ms-auto");
+        permalinkButton.addClassNames("permalink-button");
 
         permalinkButton.addClickListener(this::copyToClipboard);
 

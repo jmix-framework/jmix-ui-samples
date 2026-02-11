@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <details summaryText="Theme Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <timePicker label="Standard TimePicker"/>
                 <timePicker label="Small TimePicker" themeNames="small"/>
                 <timePicker label="Helper-above-field Field" themeNames="helper-above-field"
@@ -9,7 +9,7 @@
             </hbox>
         </details>
         <details summaryText="Align Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <timePicker label="Standard align TimePicker" placeholder="Placeholder"/>
                 <timePicker label="Align-center TimePicker" themeNames="align-center" placeholder="Placeholder"/>
                 <timePicker label="Align-right TimePicker" themeNames="align-right" placeholder="Placeholder"/>

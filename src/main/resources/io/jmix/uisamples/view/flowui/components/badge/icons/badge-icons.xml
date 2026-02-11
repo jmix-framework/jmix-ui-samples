@@ -2,7 +2,7 @@
     <layout>
         <details summaryText="Simple icon" opened="true">
             <vbox padding="false">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <span themeNames="badge normal">
                         <icon icon="CLOCK" classNames="badged-icon"/>
                         <span text="Pending"/>
@@ -20,7 +20,7 @@
                         <span text="On hold"/>
                     </span>
                 </hbox>
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <span themeNames="badge normal">
                         <span text="Pending"/>
                         <icon icon="CLOCK" classNames="badged-icon"/>
@@ -41,7 +41,7 @@
             </vbox>
         </details>
         <details summaryText="Icon-Only" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <icon id="checkIcon" icon="CHECK"/>
                 <icon id="closeIcon" icon="CLOSE_SMALL"/>
             </hbox>

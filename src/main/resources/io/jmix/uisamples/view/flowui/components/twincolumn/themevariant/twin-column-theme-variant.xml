@@ -14,7 +14,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <hbox classNames="buttons-panel">
+        <hbox width="100%" wrap="true">
             <checkboxGroup id="twinColumnThemeCheckboxGroup" label="ThemeVariants"/>
         </hbox>
         <twinColumn id="customersTwinColumn" label="Customers TwinColumn" itemsContainer="customersDc"/>

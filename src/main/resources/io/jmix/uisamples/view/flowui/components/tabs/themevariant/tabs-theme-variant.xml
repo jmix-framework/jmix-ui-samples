@@ -1,9 +1,9 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout>
-        <hbox padding="false" classNames="flex-wrap">
+    <layout classNames="tabs-theme-variant">
+        <hbox padding="false" wrap="true">
             <checkboxGroup id="tabsSettingsCheckboxGroup" label="Tabs themes"/>
-            <vbox padding="false" width="AUTO" classNames="gap-s justify-end">
-                <label text="Tabs count" classNames="text-secondary text-s font-medium"
+            <vbox padding="false" width="AUTO" justifyContent="END" classNames="tabs-count-control-box">
+                <nativeLabel text="Tabs count" classNames="control-label"
                        setFor="controlButtonPlaceholder"/>
                 <hbox id="controlButtonPlaceholder" padding="false"/>
             </vbox>

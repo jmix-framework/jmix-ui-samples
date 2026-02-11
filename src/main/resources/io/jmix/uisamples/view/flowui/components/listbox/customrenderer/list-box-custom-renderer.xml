@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout>
+    <layout classNames="list-box-custom-renderer">
         <listBox id="listBox"/>
     </layout>
 </view>

@@ -80,9 +80,9 @@ public class HtmlProgrammaticallySample extends StandardView {
     protected ListItem[] createFormattingListItems() {
         return new ListItem[]{
                 new ListItem(
-                        createSpan("Bold text: ", "font-semibold"),
+                        createSpan("Bold text: ", "text-semibold"),
                         createSpan("Use the <b> tag to make text "),
-                        createSpan("bold.", "font-semibold")
+                        createSpan("bold.", "text-semibold")
                 ),
                 new ListItem(
                         createSpan("Italic text: ", "font-italic"),

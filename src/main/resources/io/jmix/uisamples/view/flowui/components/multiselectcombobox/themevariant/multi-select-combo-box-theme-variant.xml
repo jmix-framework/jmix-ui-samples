@@ -1,8 +1,8 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Size variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <multiSelectComboBox id="defaultMultiSelectComboBox" label="Default MultiSelectComboBox"
                                          itemsEnum="io.jmix.uisamples.entity.Day"/>
                     <multiSelectComboBox id="smallMultiSelectComboBox" label="Small"
@@ -11,7 +11,7 @@
                 </hbox>
             </details>
             <details summaryText="Align variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <multiSelectComboBox id="alignLeftMultiSelectComboBox" label="Align left"
                                          themeNames="align-left"
                                          placeholder="Placeholder"
@@ -27,7 +27,7 @@
                 </hbox>
             </details>
             <details summaryText="Helper variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <multiSelectComboBox id="defaultHelperMultiSelectComboBox"
                                          label="Default helper"
                                          itemsEnum="io.jmix.uisamples.entity.Day"

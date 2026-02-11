@@ -11,7 +11,7 @@
         </collection>
     </data>
     <layout>
-        <hbox id="buttonsPanel" classNames="buttons-panel">
+        <hbox id="buttonsPanel" width="100%" wrap="true">
             <button id="unloadBtn" action="customersDataGrid.unload"/>
         </hbox>
         <dataGrid id="customersDataGrid"

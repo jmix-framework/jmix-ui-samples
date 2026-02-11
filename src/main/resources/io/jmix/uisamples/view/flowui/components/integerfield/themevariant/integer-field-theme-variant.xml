@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <details summaryText="Theme Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <integerField label="Standard IntegerField"/>
                 <integerField label="Small IntegerField" themeNames="small"/>
                 <integerField label="Helper-above-field Field" themeNames="helper-above-field"
@@ -9,7 +9,7 @@
             </hbox>
         </details>
         <details summaryText="Align Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <integerField label="Standard align IntegerField" placeholder="Placeholder"/>
                 <integerField label="Align-center IntegerField" themeNames="align-center" placeholder="Placeholder"/>
                 <integerField label="Align-right IntegerField" themeNames="align-right" placeholder="Placeholder"/>

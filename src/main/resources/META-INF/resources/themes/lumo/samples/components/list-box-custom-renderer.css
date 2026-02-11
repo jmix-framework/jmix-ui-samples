@@ -1,0 +1,9 @@
+
+.list-box-custom-renderer .short-name {
+    color: var(--lumo-secondary-text-color);
+    font-size: var(--lumo-font-size-s);
+}
+
+.list-box-custom-renderer .row {
+    line-height: var(--lumo-line-height-m);
+}

@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <details summaryText="Theme Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <emailField label="Standard EmailField"/>
                 <emailField label="Small EmailField" themeNames="small"/>
                 <emailField label="Helper-above-field Field" themeNames="helper-above-field"
@@ -9,7 +9,7 @@
             </hbox>
         </details>
         <details summaryText="Align Variant" opened="true">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <emailField label="Standard align EmailField" placeholder="Placeholder"/>
                 <emailField label="Align-center EmailField" themeNames="align-center" placeholder="Placeholder"/>
                 <emailField label="Align-right EmailField" themeNames="align-right" placeholder="Placeholder"/>

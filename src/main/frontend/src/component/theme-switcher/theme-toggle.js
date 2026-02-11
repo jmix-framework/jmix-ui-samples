@@ -1,24 +1,8 @@
-import {html} from "@polymer/polymer";
+import {html} from 'lit';
 import {Button} from "@vaadin/button";
-import {css, registerStyles} from "@vaadin/vaadin-themable-mixin";
+import {defineCustomElement} from '@vaadin/component-base/src/define.js';
 
-/**
- * Use registerStyles instead of the `<style>` tag to make sure
- * that this CSS will override core styles of `vaadin-button`.
- */
-registerStyles(
-    'theme-toggle',
-    css`
-      :host {
-        background: transparent;
-
-        color: var(--lumo-text-color);
-      }
-    `,
-    {moduleId: 'theme-toggle-styles'},
-);
-
-class ThemeToggle extends Button {
+export class ThemeToggle extends Button {
 
     static get is() {
         return 'theme-toggle';
@@ -109,6 +93,4 @@ class ThemeToggle extends Button {
     }
 }
 
-customElements.define(ThemeToggle.is, ThemeToggle);
-
-export {ThemeToggle};
+defineCustomElement(ThemeToggle);

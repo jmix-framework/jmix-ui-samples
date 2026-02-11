@@ -1,8 +1,8 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Size variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <comboBox id="defaultComboBox" label="Default ComboBox"
                               itemsEnum="io.jmix.uisamples.entity.CustomerGrade"/>
                     <comboBox id="smallComboBox" label="Small"
@@ -11,7 +11,7 @@
                 </hbox>
             </details>
             <details summaryText="Align variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <comboBox id="alignLeftComboBox" label="Align left"
                               themeNames="align-left"
                               placeholder="Placeholder"
@@ -27,7 +27,7 @@
                 </hbox>
             </details>
             <details summaryText="Helper variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <comboBox id="defaultHelperComboBox" label="Default helper ComboBox"
                               itemsEnum="io.jmix.uisamples.entity.CustomerGrade"
                               helperText="Default helper text"/>

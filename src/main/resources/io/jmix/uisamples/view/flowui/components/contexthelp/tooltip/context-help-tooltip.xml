@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <details summaryText="Default tooltip" opened="true" width="AUTO">
-            <hbox classNames="flex-wrap">
+            <hbox wrap="true">
                 <textField label="Field with tooltip">
                     <tooltip text="Tooltip text"/>
                 </textField>

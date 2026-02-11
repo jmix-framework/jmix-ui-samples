@@ -21,6 +21,7 @@ html {
 
 .jmix-menu-tools-button {
     margin-inline-start: auto;
+    margin-inline-end: var(--lumo-space-xs);
 }
 
 .jmix-main-view-title {
@@ -61,63 +62,21 @@ html {
     cursor: pointer;
 }
 
+.permalink-button {
+    margin-inline-start: auto;
+    margin-inline-end: var(--lumo-space-s);
+}
+
 vaadin-app-layout::part(drawer) {
     width: 22em;
-}
-
-.overview-main-layout {
-    grid-gap: 1.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-}
-
-.overview-tag-grey {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #F4F8FE;
-}
-
-.overview-tag-blue {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #E9FEFE;
-}
-
-.overview-tag-green {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #EFFEEF;
-}
-
-.overview-tag-purple {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FBF4FE;
-}
-
-.overview-tag-red {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FEF4F6;
-}
-
-.overview-tag-yellow {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FDFBE8;
-}
-
-.overview-tag-orange {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FEF9ED;
-}
-
-.overview-resources-title-padding {
-    padding-bottom: 0.35em;
 }
 
 [theme~='badge'][theme~='paid'] {
     color: var(--lumo-paid-text-color);
     background-color: var(--lumo-paid-color);
+}
+
+/* workaround for https://github.com/vaadin/web-components/issues/10627 */
+vaadin-split-layout > [slot] {
+    overflow: auto;
 }

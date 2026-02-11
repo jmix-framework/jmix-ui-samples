@@ -1,14 +1,14 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <details summaryText="Simple avatar" opened="true">
-            <hbox padding="false" classNames="flex-wrap">
+            <hbox padding="false" wrap="true">
                 <avatar name="Homer Jay Simpson"/>
                 <avatar name="Homer Jay Simpson" abbreviation="HS"/>
                 <avatar id="avatarWithImage"/>
             </hbox>
         </details>
         <details summaryText="Theme variants" opened="true">
-            <hbox padding="false" classNames="flex-wrap">
+            <hbox padding="false" wrap="true">
                 <avatar abbreviation="XL" themeNames="xlarge"/>
                 <avatar abbreviation="L" themeNames="large"/>
                 <avatar abbreviation="M"/>

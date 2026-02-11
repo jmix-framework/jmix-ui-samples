@@ -31,7 +31,7 @@
                     <button id="showNewBtn"
                           text="msg://menu.showNew"
                           themeNames="badge small pill tertiary-inline"
-                          classNames="jmix-menu-tools-button me-xs"/>
+                          classNames="jmix-menu-tools-button"/>
                     <button id="collapseAllBtn"
                             title="msg://menu.collapseAll"
                             icon="COMPRESS"

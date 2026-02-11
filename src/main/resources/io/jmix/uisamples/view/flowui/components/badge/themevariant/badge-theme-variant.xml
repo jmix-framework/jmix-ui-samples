@@ -1,8 +1,8 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout badge-theme-variant">
         <vbox width="AUTO" padding="false">
             <details summaryText="Style variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <span text="Pending" themeNames="badge normal"/>
                     <span text="Confirmed" themeNames="badge success"/>
                     <span text="Denied" themeNames="badge error"/>
@@ -10,13 +10,13 @@
                 </hbox>
             </details>
             <details summaryText="Size variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <span text="Medium badge" themeNames="badge normal"/>
                     <span text="Small badge" themeNames="badge small"/>
                 </hbox>
             </details>
             <details summaryText="Visual variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <span text="Primary badge" themeNames="badge normal primary"/>
                     <span text="Pill badge" themeNames="badge normal pill"/>
                 </hbox>

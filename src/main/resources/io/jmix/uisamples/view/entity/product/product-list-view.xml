@@ -24,7 +24,7 @@
         <action id="discardAction" type="lookup_discard"/>
     </actions>
     <layout>
-        <hbox id="buttonsPanel" classNames="buttons-panel">
+        <hbox id="buttonsPanel" width="100%" wrap="true">
             <button id="createBtn" action="productsDataGrid.create"/>
             <button id="editBtn" action="productsDataGrid.edit"/>
             <button id="removeBtn" action="productsDataGrid.remove"/>

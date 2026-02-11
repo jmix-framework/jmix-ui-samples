@@ -1,0 +1,10 @@
+
+.tabs-theme-variant .tabs-count-control-box {
+    gap: var(--lumo-space-s)
+}
+
+.tabs-theme-variant .control-label {
+    color: var(--lumo-secondary-text-color);
+    font-size: var(--lumo-font-size-s);
+    font-weight: 500;
+}

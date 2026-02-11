@@ -30,7 +30,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @Push
 @StyleSheet(Lumo.STYLESHEET)
 @StyleSheet(JmixLumo.STYLESHEET)
-@StyleSheet(Lumo.UTILITY_STYLESHEET) // todo kd, remove
 @StyleSheet("themes/lumo/styles.css")
 @PWA(name = "Jmix UI Samples", shortName = "Jmix UI Samples", offline = false)
 @SpringBootApplication

@@ -15,9 +15,9 @@ public class BadgeIconsSample extends StandardView {
     @Subscribe
     protected void onInit(InitEvent event) {
         checkIcon.getElement().getThemeList().add("badge success");
-        checkIcon.getStyle().set("padding", "var(--lumo-space-xs)");
+        checkIcon.getStyle().set("padding", "4px");
 
         closeIcon.getElement().getThemeList().add("badge error");
-        closeIcon.getStyle().set("padding", "var(--lumo-space-xs)");
+        closeIcon.getStyle().set("padding", "4px");
     }
 }

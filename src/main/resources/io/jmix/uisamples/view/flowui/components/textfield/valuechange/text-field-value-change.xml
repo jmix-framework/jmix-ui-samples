@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <details summaryText="Default value change" opened="true" width="AUTO">
             <textField id="textField" placeholder="Start typing"/>
         </details>

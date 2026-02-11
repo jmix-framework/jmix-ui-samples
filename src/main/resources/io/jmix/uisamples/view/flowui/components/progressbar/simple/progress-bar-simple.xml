@@ -5,7 +5,7 @@
             <button id="controlButton"
                     icon="PLAY" themeNames="icon tertiary-inline"/>
         </hbox>
-        <hbox padding="false" classNames="justify-between" width="100%">
+        <hbox padding="false" justifyContent="BETWEEN" width="100%">
             <span id="labelSpan" text="Ready to start"/>
             <span id="percentSpan" text="0%"/>
         </hbox>

@@ -1,8 +1,8 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Style variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <dropdownButton id="primaryButton" text="Primary button" themeNames="primary"/>
                     <dropdownButton id="successButton" text="Success button" themeNames="success"/>
                     <dropdownButton id="errorButton" text="Error button" themeNames="error"/>
@@ -11,7 +11,7 @@
             </details>
 
             <details summaryText="Size variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <dropdownButton id="largeButton" text="Large button" themeNames="large"/>
                     <dropdownButton id="medium" text="Medium button"/>
                     <dropdownButton id="smallButton" text="Small button" themeNames="small"/>
@@ -19,7 +19,7 @@
             </details>
 
             <details summaryText="Visual variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <dropdownButton id="iconButton" themeNames="icon" icon="SMILEY_O"/>
                     <dropdownButton id="tertiaryButton" text="Tertiary button" themeNames="tertiary"/>
                     <dropdownButton id="tertiaryInlineButton" text="Tertiary-inline button"

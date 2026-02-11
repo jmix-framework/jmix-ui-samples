@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row">
+    <layout classNames="horizontal-layout">
         <multiValuePicker id="multiValuePicker">
             <actions>
                 <action id="select" type="multi_value_select">

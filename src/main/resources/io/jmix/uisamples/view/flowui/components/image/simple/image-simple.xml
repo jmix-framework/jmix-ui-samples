@@ -1,6 +1,6 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row flex-wrap">
-        <vbox classNames="items-center justify-center" padding="false" width="AUTO">
+    <layout classNames="horizontal-layout">
+        <vbox alignItems="CENTER" justifyContent="CENTER" padding="false" width="AUTO">
             <h4 text="Declaratively defined source"/>
             <image resource="icons/jmix-icon.png" height="10em" width="10em"/>
         </vbox>

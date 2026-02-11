@@ -1,10 +1,10 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
-        <hbox padding="false" classNames="flex-wrap">
+        <hbox padding="false" wrap="true">
             <textField label="Default helper" helperText="Helper text"/>
             <textField label="Helper above" helperText="Helper text" themeNames="helper-above-field"/>
         </hbox>
-        <hbox padding="false" classNames="flex-wrap">
+        <hbox padding="false" wrap="true">
             <textField id="notificationField" label="Helper notification"/>
             <textField id="dialogField" label="Helper dialog"/>
         </hbox>

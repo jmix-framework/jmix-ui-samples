@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row flex-wrap">
+    <layout classNames="horizontal-layout">
         <textField id="integerTextField" label="Positive TextField"
                    helperText="Value must be positive"
                    datatype="int">

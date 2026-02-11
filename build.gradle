@@ -62,6 +62,7 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.apache.commons:commons-dbcp2'
+    implementation 'com.vaadin:vaadin-dev'
 
     runtimeOnly 'org.hsqldb:hsqldb'
 
