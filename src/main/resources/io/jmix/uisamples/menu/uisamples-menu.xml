@@ -846,6 +846,7 @@
                 <file name="io/jmix/uisamples/view/flowui/fragments/renderer/employee-info-fragment.xml"/>
                 <file name="io/jmix/uisamples/view/flowui/fragments/renderer/EmployeeInfoFragment.java"/>
                 <file name="io/jmix/uisamples/entity/Customer.java"/>
+                <file name="META-INF/resources/themes/lumo/samples/fragments/employee-info.css"/>
             </otherFiles>
         </item>
         <menu id="fragments-facets" isNew="true" url="flow-ui/fragments">
@@ -855,6 +856,7 @@
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/dataloadcoordinator/DataLoadCoordinatorFragment.java"/>
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
+                    <file name="META-INF/resources/themes/lumo/samples/fragments/data-load-coordinator.css"/>
                 </otherFiles>
             </item>
             <item id="fragment-timer-facet" page="facets-in-fragment" anchor="timer">
@@ -888,6 +890,7 @@
             <otherFiles>
                 <file name="io/jmix/uisamples/entity/Order.java"/>
                 <file name="io/jmix/uisamples/entity/Customer.java"/>
+                <file name="META-INF/resources/themes/lumo/samples/facets/data-load-coordinator.css"/>
             </otherFiles>
         </item>
         <item id="timer-facet" page="timer"/>
@@ -1156,6 +1159,7 @@
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
+                    <file name="META-INF/resources/themes/lumo/samples/kanban/kanban-events.css"/>
                 </otherFiles>
             </item>
             <item id="kanban-hierarchical-columns" splitEnabled="true"

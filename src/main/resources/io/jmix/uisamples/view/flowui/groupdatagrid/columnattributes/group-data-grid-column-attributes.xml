@@ -15,7 +15,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <hbox padding="false" classNames="items-center">
+        <hbox padding="false" alignItems="CENTER">
             <comboBox id="groupIconsField" placeholder="msg://groupIconsField.placeholder" clearButtonVisible="true"/>
             <checkbox id="groupIconVisibleField" label="msg://groupIconVisibleField.label"/>
             <checkbox id="displayItemsCountField" label="msg://displayItemsCountField.label"/>

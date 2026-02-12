@@ -13,8 +13,8 @@
     <facets>
         <dataLoadCoordinator auto="true"/>
     </facets>
-    <layout>
-        <hbox classNames="buttons-panel">
+    <layout classNames="kanban-events">
+        <hbox width="100%" wrap="true">
             <button id="showAllBtn" text="msg://showAllBtn.text" icon="CIRCLE"/>
             <button id="resetExecutedBtn" text="msg://resetExecutedBtn.text" icon="REFRESH"/>
         </hbox>

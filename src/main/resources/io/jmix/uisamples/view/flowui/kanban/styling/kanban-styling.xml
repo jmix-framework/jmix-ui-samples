@@ -14,7 +14,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <hbox classNames="buttons-panel">
+        <hbox width="100%" wrap="true">
             <button id="createBtn" action="kanban.create"/>
             <button id="editBtn" action="kanban.edit"/>
             <button id="removeBtn" action="kanban.remove"/>

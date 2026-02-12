@@ -14,10 +14,5 @@
  * limitations under the License.
  */
 
-@import './calendar/index.css';
-@import './components/index.css';
-@import './containers/index.css';
-@import './cookbook/index.css';
-@import './facets/index.css';
-@import './fragments/index.css';
-@import './kanban/index.css';
+@import './data-load-coordinator.css';
+@import './employee-info.css';

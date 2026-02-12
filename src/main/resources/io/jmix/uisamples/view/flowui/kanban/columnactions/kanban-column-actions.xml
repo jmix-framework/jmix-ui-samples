@@ -15,7 +15,7 @@
         <settings auto="true"/>
     </facets>
     <layout>
-        <hbox classNames="buttons-panel">
+        <hbox width="100%" wrap="true">
             <button id="collapseAllBtn" text="msg://collapseAllBtn.text" icon="COMPRESS"/>
             <button id="expandAllBtn" text="msg://expandAllBtn.text" icon="EXPAND"/>
             <button id="hideAllBtn" text="msg://hideAllBtn.text" icon="CIRCLE_THIN"/>

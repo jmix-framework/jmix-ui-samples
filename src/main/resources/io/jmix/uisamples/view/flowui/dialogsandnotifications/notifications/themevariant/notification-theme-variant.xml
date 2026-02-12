@@ -1,8 +1,8 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Theme Variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="standardNotificationButton" text="Standard"/>
                     <button id="primaryNotificationButton" text="Primary" themeNames="primary"/>
                     <button id="successNotificationButton" text="Success" themeNames="success"/>
@@ -12,7 +12,7 @@
             </details>
 
             <details summaryText="Type" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="defaultTypeNotificationButton" text="Default" icon="COMMENT"/>
                     <button id="successTypeNotificationButton" text="Success" icon="CHECK"/>
                     <button id="warningTypeNotificationButton" text="Warning" icon="WARNING"/>
@@ -22,7 +22,7 @@
             </details>
 
             <details summaryText="Duration and cloesable" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="durationNotificationButton" text="With duration" icon="CLOCK"/>
                     <button id="closeableNotificationButton" text="Closeable" icon="CLOSE"/>
                 </hbox>

@@ -1,0 +1,4 @@
+
+.data-load-coordinator .flex-with-gap {
+    gap: var(--lumo-space-s);
+}
