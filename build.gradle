@@ -55,8 +55,8 @@ dependencies {
     implementation 'io.jmix.pivottable:jmix-pivottable-flowui-starter'
     implementation 'io.jmix.groupgrid:jmix-groupgrid-flowui-starter'
 
-    implementation 'com.storedobject.chart:so-charts:3.2.4'
-    implementation 'org.vaadin.addons.componentfactory:vcf-input-mask:2.2.0'
+    implementation 'org.vaadin.addons.so:so-charts:6.0.1'
+    implementation 'org.vaadin.addons.componentfactory:vcf-input-mask:3.0.0'
     implementation 'org.commonmark:commonmark:0.24.0'
     implementation 'org.jsoup:jsoup:1.17.2'
 
