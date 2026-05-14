@@ -23,6 +23,7 @@ import io.jmix.core.Resources;
 import io.jmix.core.security.CoreSecurityConfiguration;
 import io.jmix.flowui.exception.UiExceptionHandlers;
 import io.jmix.flowui.sys.JmixServiceInitListener;
+import io.jmix.flowui.sys.LoginViewBeforeEnterHandler;
 import io.jmix.flowui.view.ViewRegistry;
 import io.jmix.uisamples.bean.UiSamplesRoutingDataSource;
 import io.jmix.uisamples.bean.UiSamplesServiceInitListener;
@@ -73,9 +74,10 @@ public class UiSamplesConfiguration {
     public JmixServiceInitListener uiSamplesServiceInitListener(ViewRegistry viewRegistry,
                                                                 UiExceptionHandlers uiExceptionHandlers,
                                                                 CoreProperties coreProperties,
+                                                                LoginViewBeforeEnterHandler loginViewBeforeEnterHandler,
                                                                 JmixModules modules,
                                                                 Resources resources) {
-        return new UiSamplesServiceInitListener(viewRegistry, uiExceptionHandlers, coreProperties, modules, resources);
+        return new UiSamplesServiceInitListener(viewRegistry, uiExceptionHandlers, coreProperties, loginViewBeforeEnterHandler, modules, resources);
     }
 
     @EventListener
