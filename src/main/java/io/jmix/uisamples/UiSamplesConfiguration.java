@@ -21,12 +21,16 @@ import io.jmix.core.CoreProperties;
 import io.jmix.core.JmixModules;
 import io.jmix.core.Resources;
 import io.jmix.core.security.CoreSecurityConfiguration;
+import io.jmix.flowui.component.main.JmixListMenu;
 import io.jmix.flowui.exception.UiExceptionHandlers;
 import io.jmix.flowui.sys.JmixServiceInitListener;
 import io.jmix.flowui.sys.LoginViewBeforeEnterHandler;
+import io.jmix.flowui.sys.registration.ComponentRegistration;
+import io.jmix.flowui.sys.registration.ComponentRegistrationBuilder;
 import io.jmix.flowui.view.ViewRegistry;
 import io.jmix.uisamples.bean.UiSamplesRoutingDataSource;
 import io.jmix.uisamples.bean.UiSamplesServiceInitListener;
+import io.jmix.uisamples.config.UiSamplesJmixListMenu;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,5 +90,12 @@ public class UiSamplesConfiguration {
                 + "http://localhost:"
                 + environment.getProperty("local.server.port")
                 + Strings.nullToEmpty(environment.getProperty("server.servlet.context-path")));
+    }
+
+    @Bean
+    public ComponentRegistration listMenu() {
+        return ComponentRegistrationBuilder.create(UiSamplesJmixListMenu.class)
+                .replaceComponent(JmixListMenu.class)
+                .build();
     }
 }
