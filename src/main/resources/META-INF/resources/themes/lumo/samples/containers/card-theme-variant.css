@@ -1,8 +1,10 @@
 
-.options vaadin-checkbox label {
-    display: flex;
-    align-items: center;
-    gap: 0.3em;
+.options-label {
+    display: block;
+    color: var(--lumo-secondary-text-color);
+    font-weight: 500;
+    font-size: var(--lumo-font-size-s);
+    padding-bottom: var(--lumo-space-xs);
 }
 
 .options :is(vaadin-select, vaadin-select-value-button) {
