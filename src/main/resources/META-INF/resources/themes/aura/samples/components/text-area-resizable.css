@@ -1,0 +1,18 @@
+
+.resizable-both {
+    resize: both;
+    overflow: auto;
+    padding-bottom: unset;
+}
+
+.resizable-vertical {
+    resize: vertical;
+    overflow: auto;
+    padding-bottom: unset;
+}
+
+.resizable-horizontal {
+    resize: horizontal;
+    overflow: auto;
+    padding-bottom: unset;
+}

@@ -1,0 +1,6 @@
+
+.virtual-list-simple .info-layout {
+    padding-bottom: var(--vaadin-padding-s);
+    padding-top: var(--vaadin-padding-s);
+    gap: var(--vaadin-gap-s);
+}

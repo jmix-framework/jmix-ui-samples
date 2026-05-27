@@ -19,9 +19,10 @@ html {
     align-items: center;
 }
 
-.jmix-menu-tools-button {
+vaadin-button.jmix-menu-tools-button {
     margin-inline-start: auto;
     margin-inline-end: var(--lumo-space-xs);
+    padding: 0.4em calc(0.5em + var(--lumo-border-radius-s) / 4);
 }
 
 .jmix-main-view-title {

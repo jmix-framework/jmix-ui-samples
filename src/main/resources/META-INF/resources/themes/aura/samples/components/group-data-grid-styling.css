@@ -1,0 +1,15 @@
+
+vaadin-grid::part(group-grade premium),
+vaadin-grid::part(group-column-cell premium) {
+    background-color: #f3cff3;
+}
+
+vaadin-grid::part(group-grade high),
+vaadin-grid::part(group-column-cell high) {
+    background-color: #caccff;
+}
+
+vaadin-grid::part(group-grade standard),
+vaadin-grid::part(group-column-cell standard) {
+    background-color: #f0f0f0;
+}

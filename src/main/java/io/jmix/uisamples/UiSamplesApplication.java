@@ -20,8 +20,9 @@ import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.aura.Aura;
 import com.vaadin.flow.theme.lumo.Lumo;
+import io.jmix.flowui.theme.aura.JmixAura;
 import io.jmix.flowui.theme.lumo.JmixLumo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -31,6 +32,9 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @StyleSheet(Lumo.STYLESHEET)
 @StyleSheet(JmixLumo.STYLESHEET)
 @StyleSheet("themes/lumo/styles.css")
+//@StyleSheet(Aura.STYLESHEET)
+//@StyleSheet(JmixAura.STYLESHEET)
+//@StyleSheet("themes/aura/styles.css")
 @PWA(name = "Jmix UI Samples", shortName = "Jmix UI Samples", offline = false)
 @SpringBootApplication
 public class UiSamplesApplication extends SpringBootServletInitializer implements AppShellConfigurator {

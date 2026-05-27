@@ -1,0 +1,16 @@
+
+vaadin-grid::part(high-grade) {
+    background-color: color-mix(in srgb, var(--aura-green) 10%, transparent);
+}
+
+vaadin-grid::part(standard-grade) {
+    background-color: var(--vaadin-background-container-strong);
+}
+
+vaadin-grid::part(premium-grade) {
+    background-color: color-mix(in srgb, var(--aura-accent-color) 10%, transparent);
+}
+
+vaadin-grid::part(font-weight-bold) {
+    font-weight: bold;
+}

@@ -1,0 +1,49 @@
+
+.icon-info-layout {
+    padding: calc(var(--vaadin-padding-m) / 2) var(--vaadin-padding-m);
+    gap: var(--vaadin-gap-m);
+    display: flex;
+
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    background-color: var(--vaadin-background-color);
+    border-radius: var(--vaadin-radius-l);
+}
+
+.icon-info-layout:hover {
+    background-color: color-mix(in srgb, var(--aura-accent-color) 10%, transparent);
+}
+
+.icon-layout {
+    border: 1px solid;
+    border-color: var(--vaadin-border-color);
+    border-radius: var(--vaadin-radius-l);
+    background-color: var(--vaadin-background-container);
+
+    width: 100%;
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+}
+
+.icon-info-description {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.icon-size {
+    min-height: 2em;
+    min-width: 2em;
+}
+
+.icon-name-text {
+    font-size: var(--aura-font-size-xs);
+}
+
+.icon-fqn-text {
+    color: var(--vaadin-text-color-secondary);
+    font-size: var(--aura-font-size-xs);
+}

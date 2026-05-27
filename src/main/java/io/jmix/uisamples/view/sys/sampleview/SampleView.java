@@ -310,7 +310,6 @@ public class SampleView extends StandardView {
         editor.setReadOnly(true);
         editor.setWidthFull();
         editor.setHeightFull();
-        editor.setMinHeight("20em");
         editor.getStyle().setPadding("unset");
         editor.setFontSize("0.9rem");
 

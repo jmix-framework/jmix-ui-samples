@@ -5,7 +5,7 @@
     <actions>
         <action id="logout" type="logout"/>
     </actions>
-    <appLayout>
+    <appLayout classNames="jmix-main-view-app-layout">
         <navigationBar>
             <header id="header" classNames="jmix-main-view-header">
                 <drawerToggle id="drawerToggle"
@@ -30,8 +30,8 @@
                     <h4 id="menuLabel" text="msg://menu.label"/>
                     <button id="showNewBtn"
                           text="msg://menu.showNew"
-                          themeNames="badge small pill tertiary-inline"
-                          classNames="jmix-menu-tools-button"/>
+                          themeNames="badge small pill"
+                          classNames="jmix-menu-tools-button link-button"/>
                     <button id="collapseAllBtn"
                             title="msg://menu.collapseAll"
                             icon="COMPRESS"

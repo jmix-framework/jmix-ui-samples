@@ -36,6 +36,7 @@ import io.jmix.flowui.component.textfield.TypedTextField;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.kit.component.main.ListMenu;
 import io.jmix.flowui.menu.MenuItem;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
@@ -247,7 +248,8 @@ public class MainView extends StandardMainView {
     protected JmixButton createSearchButton() {
         JmixButton searchButton = uiComponents.create(JmixButton.class);
         searchButton.setIcon(VaadinIcon.SEARCH.create());
-        searchButton.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
+        searchButton.addThemeVariants(ButtonVariant.LUMO_ICON);
+        searchButton.addClassName(StyleUtility.Button.LINK_BUTTON);
 
         searchButton.addClickListener(this::searchButtonClickListener);
 

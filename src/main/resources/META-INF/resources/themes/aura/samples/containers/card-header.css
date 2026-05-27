@@ -1,0 +1,10 @@
+
+.card-header .header {
+    line-height: var(--aura-line-height-xs);
+}
+
+.card-header .subtitle {
+    text-transform: uppercase;
+    color: var(--vaadin-text-color-secondary);
+    font-size: var(--aura-font-size-xs);
+}
