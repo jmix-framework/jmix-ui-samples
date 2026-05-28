@@ -7,6 +7,7 @@ import io.jmix.flowui.view.*;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @ViewController("split-theme-variant")
 @ViewDescriptor("split-theme-variant.xml")
@@ -21,6 +22,7 @@ public class SplitThemeVariantSample extends StandardView {
     protected void onInit(InitEvent event) {
         List<String> settingsItems = List.of("Minimal", "Small", "Splitter-spacing");
         settingsCheckboxGroup.setItems(settingsItems);
+        settingsCheckboxGroup.setValue(Set.of("Splitter-spacing"));
     }
 
     @Subscribe("settingsCheckboxGroup")
