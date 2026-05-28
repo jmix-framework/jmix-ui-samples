@@ -28,6 +28,11 @@ html {
     cursor: var(--vaadin-clickable-cursor);
 }
 
+.jmix-main-view-title-holder .ui-samples-logo {
+    width: 1.375em;
+    height: 1.375em;
+}
+
 .jmix-main-view-title:hover {
     cursor: pointer;
 }
@@ -48,7 +53,8 @@ html {
 .jmix-main-view-header-link {
     display: flex;
     align-items: center;
-    gap: var(--vaadin-gap-s);
+    gap: var(--vaadin-gap-xs);
+    text-decoration: none;
 }
 
 .jmix-main-view-header-link:hover {
@@ -59,10 +65,6 @@ html {
 .permalink-button {
     margin-inline-start: auto;
     margin-inline-end: var(--vaadin-padding-s);
-}
-
-vaadin-app-layout::part(drawer) {
-    width: 22em;
 }
 
 [theme~='badge'][theme~='paid'] {

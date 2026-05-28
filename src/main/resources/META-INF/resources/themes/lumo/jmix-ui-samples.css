@@ -19,10 +19,9 @@ html {
     align-items: center;
 }
 
-vaadin-button.jmix-menu-tools-button {
+.jmix-menu-tools-button {
     margin-inline-start: auto;
     margin-inline-end: var(--lumo-space-xs);
-    padding: 0.4em calc(0.5em + var(--lumo-border-radius-s) / 4);
 }
 
 .jmix-main-view-title {
@@ -52,10 +51,15 @@ vaadin-button.jmix-menu-tools-button {
     margin-inline-end: var(--lumo-space-s);
 }
 
+.jmix-main-view-title-holder .ui-samples-logo {
+    width: 1.375em;
+    height: 1.375em;
+}
+
 .jmix-main-view-header-link {
     display: flex;
     align-items: center;
-    gap: var(--lumo-space-s);
+    gap: var(--lumo-space-xs);
 }
 
 .jmix-main-view-header-link:hover {

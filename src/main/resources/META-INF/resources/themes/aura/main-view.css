@@ -2,7 +2,7 @@
 
 :where(:root),
 :where(:host) {
-    --vaadin-app-layout-drawer-width: 256px;
+    --vaadin-app-layout-drawer-width: 352px;
 }
 
 vaadin-app-layout.jmix-main-view-app-layout:not([primary-section='navbar']) {
@@ -64,10 +64,6 @@ vaadin-app-layout.jmix-main-view-app-layout[has-drawer][drawer-opened]:not([over
     width: 100%;
     box-sizing: border-box;
     gap: var(--vaadin-gap-m);
-}
-
-.jmix-main-view-title {
-    font-size: var(--aura-font-size-xl);
 }
 
 .jmix-main-view-section {
@@ -253,12 +249,6 @@ vaadin-app-layout.jmix-main-view-app-layout[has-drawer][drawer-opened]:not([over
         line-height: var(--aura-line-height-m);
         text-align: center;
     }
-}
-
-/* MenuFilterField component */
-
-.jmix-main-view-navigation > .jmix-menu-filter-field {
-    margin: var(--vaadin-padding-s) var(--vaadin-padding-m);
 }
 
 /* Search add-on */

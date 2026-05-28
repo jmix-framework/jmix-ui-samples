@@ -29,12 +29,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @Push
-@StyleSheet(Lumo.STYLESHEET)
-@StyleSheet(JmixLumo.STYLESHEET)
-@StyleSheet("themes/lumo/styles.css")
-//@StyleSheet(Aura.STYLESHEET)
-//@StyleSheet(JmixAura.STYLESHEET)
-//@StyleSheet("themes/aura/styles.css")
+//@StyleSheet(Lumo.STYLESHEET)
+//@StyleSheet(JmixLumo.STYLESHEET)
+//@StyleSheet("themes/lumo/styles.css")
+@StyleSheet(Aura.STYLESHEET)
+@StyleSheet(JmixAura.STYLESHEET)
+@StyleSheet("themes/aura/styles.css")
 @PWA(name = "Jmix UI Samples", shortName = "Jmix UI Samples", offline = false)
 @SpringBootApplication
 public class UiSamplesApplication extends SpringBootServletInitializer implements AppShellConfigurator {

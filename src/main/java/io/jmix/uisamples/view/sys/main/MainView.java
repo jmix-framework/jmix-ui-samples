@@ -113,10 +113,10 @@ public class MainView extends StandardMainView {
 
     protected Component createApplicationImage() {
         Image image = uiComponents.create(Image.class);
-        image.setSrc("icons/icon.png");
 
-        image.setWidth("1.5em");
-        image.setHeight("1.5em");
+        image.setSrc("icons/icon.png");
+        image.addClassName("ui-samples-logo");
+
         return image;
     }
 
@@ -328,15 +328,15 @@ public class MainView extends StandardMainView {
     }
 
     @Subscribe("showNewBtn")
-    public void onShowNewBtnClick(ClickEvent<Button> event) {
+    public void onShowNewBtnClick(ClickEvent<Span> event) {
         showNew = !showNew;
         search(searchField.getValue());
 
-        Button showNewBtn = event.getSource();
+        Span showNewBtn = event.getSource();
         if (showNew) {
-            showNewBtn.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+            showNewBtn.getElement().getThemeList().add("primary");
         } else {
-            showNewBtn.removeThemeVariants(ButtonVariant.LUMO_PRIMARY);
+            showNewBtn.getElement().getThemeList().remove("primary");
         }
     }
 

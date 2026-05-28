@@ -51,6 +51,7 @@ import io.jmix.flowui.component.splitlayout.JmixSplitLayout;
 import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.kit.component.codeeditor.CodeEditorMode;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
@@ -420,8 +421,8 @@ public class SampleView extends StandardView {
 
         permalinkButton.setIcon(VaadinIcon.LINK.create());
         permalinkButton.setTitle(messageBundle.getMessage("permalink.title"));
-        permalinkButton.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
-        permalinkButton.addClassNames("permalink-button");
+        permalinkButton.addThemeVariants(ButtonVariant.LUMO_ICON);
+        permalinkButton.addClassNames(StyleUtility.Button.LINK_BUTTON, "permalink-button");
 
         permalinkButton.addClickListener(this::copyToClipboard);
 

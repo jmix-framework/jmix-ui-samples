@@ -28,7 +28,7 @@
                 </hbox>
                 <hbox classNames="jmix-menu-tools" spacing="false">
                     <h4 id="menuLabel" text="msg://menu.label"/>
-                    <button id="showNewBtn"
+                    <span id="showNewBtn"
                           text="msg://menu.showNew"
                           themeNames="badge small pill"
                           classNames="jmix-menu-tools-button link-button"/>
