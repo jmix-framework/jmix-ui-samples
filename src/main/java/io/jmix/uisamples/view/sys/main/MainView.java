@@ -42,11 +42,13 @@ import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
 import io.jmix.uisamples.config.UiSamplesMenuConfig;
 import io.jmix.uisamples.config.UiSamplesMenuItem;
+import io.jmix.uisamples.icon.UiSamplesIcon;
 import io.jmix.uisamples.view.sys.sampleview.SampleView;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.Strings;
 import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -91,6 +93,11 @@ public class MainView extends StandardMainView {
     @Subscribe
     public void onReady(final ReadyEvent event) {
         createOverviewLayout();
+    }
+
+    @Install(to = "userMenu", subject = "buttonRenderer")
+    private Component userMenuButtonRenderer(UserDetails userDetails) {
+        return UiSamplesIcon.PALETTE.create();
     }
 
     private void createOverviewLayout() {

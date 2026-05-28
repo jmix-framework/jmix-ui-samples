@@ -46,7 +46,7 @@ html {
     margin-inline-start: var(--lumo-space-m);
 }
 
-.jmix-main-view-header .theme-toggle {
+.jmix-main-view-header .align-end {
     margin-inline-start: auto;
     margin-inline-end: var(--lumo-space-s);
 }

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <mainView xmlns="http://jmix.io/schema/flowui/main-view"
-          xmlns:app="http://jmix.io/schema/uisamples/theme-toggle.xsd"
           title="msg://MainView.title">
-    <actions>
-        <action id="logout" type="logout"/>
-    </actions>
     <appLayout classNames="jmix-main-view-app-layout">
         <navigationBar>
             <header id="header" classNames="jmix-main-view-header">
@@ -14,7 +10,16 @@
                               ariaLabel="msg://drawerToggle.ariaLabel"/>
                 <h1 id="viewTitle" classNames="jmix-main-view-title"/>
 
-                <app:themeToggle id="themeToggle" classNames="theme-toggle"/>
+                <userMenu id="userMenu" classNames="align-end" themeNames="tertiary">
+                    <items>
+                        <actionItem id="appThemeSwitchItem">
+                            <action id="appThemeSwitch" type="uisamples_userMenu_appThemeSwitch"/>
+                        </actionItem>
+                        <actionItem id="themeSwitchItem">
+                            <action id="themeSwitch" type="userMenu_themeSwitch"/>
+                        </actionItem>
+                    </items>
+                </userMenu>
             </header>
         </navigationBar>
         <drawerLayout>
