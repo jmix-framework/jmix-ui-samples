@@ -170,7 +170,7 @@ public class OverviewPageGenerator {
 
         routerLink.setRoute(SampleView.class, routeParams);
         routerLink.setQueryParameters(QueryParameters.fromString(urlQueryParameters));
-        routerLink.addClassNames("jmix-main-view-header-link");
+        routerLink.addClassNames("jmix-main-view-header-link", "animated-sizing");
         routerLink.add(component);
 
         return routerLink;

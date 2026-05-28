@@ -54,6 +54,26 @@ html {
 .jmix-main-view-title-holder .ui-samples-logo {
     width: 1.375em;
     height: 1.375em;
+    transition: transform 200ms ease-out;
+}
+
+.jmix-main-view-title-holder .ui-samples-logo:hover {
+    transform: scale(1.1) rotate(-6deg);
+}
+
+.animated-sizing {
+    transition: transform 200ms ease-out;
+}
+
+.animated-sizing:hover {
+    transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .jmix-main-view-title-holder .ui-samples-logo,
+    .animated-sizing {
+        transition: none;
+    }
 }
 
 .jmix-main-view-header-link {
