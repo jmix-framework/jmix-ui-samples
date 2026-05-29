@@ -9,6 +9,7 @@ import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
 import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.kit.component.button.JmixButton;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -58,7 +59,8 @@ public class TabSheetThemeVariantSample extends StandardView {
     protected Component createAddTabButton() {
         JmixButton button = uiComponents.create(JmixButton.class);
         button.setIcon(VaadinIcon.PLUS.create());
-        button.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
+        button.addThemeVariants(ButtonVariant.LUMO_ICON);
+        button.addClassName(StyleUtility.Button.LINK_BUTTON);
 
         button.addClickListener(event -> {
             int newTabIndex = tabSheet.getOwnComponents().size() + 1;
@@ -72,7 +74,8 @@ public class TabSheetThemeVariantSample extends StandardView {
     protected Component createRemoveTabButton() {
         JmixButton button = uiComponents.create(JmixButton.class);
         button.setIcon(VaadinIcon.MINUS.create());
-        button.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
+        button.addThemeVariants(ButtonVariant.LUMO_ICON);
+        button.addClassName(StyleUtility.Button.LINK_BUTTON);
 
         button.addClickListener(event -> {
             int currentTabSheetSize = tabSheet.getOwnComponents().size();

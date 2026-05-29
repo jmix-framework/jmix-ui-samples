@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <hbox id="content" alignItems="END">
-            <radioButtonGroup id="iconSetRadioButtonGroup" label="Icon set"/>
+            <radioButtonGroup id="iconSetRadioButtonGroup" label="Icon set" themeNames="horizontal"/>
             <textField id="searchField" placeholder="Search icons" datatype="string"/>
         </hbox>
     </layout>

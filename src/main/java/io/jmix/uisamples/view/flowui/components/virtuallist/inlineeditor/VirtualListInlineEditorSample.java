@@ -24,6 +24,7 @@ import io.jmix.flowui.DialogWindows;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.model.CollectionContainer;
 import io.jmix.flowui.model.DataContext;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.bean.FoodPlaceholderDataGenerator;
 import io.jmix.uisamples.entity.Food;
@@ -105,11 +106,12 @@ public class VirtualListInlineEditorSample extends StandardView {
                         }
                     })
                     .open());
-            detailButton.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE);
+            detailButton.addClassName(StyleUtility.Button.LINK_BUTTON);
 
             Button removeButton = new Button(new Icon(VaadinIcon.TRASH));
             removeButton.setText(messages.getMessage("actions.Remove"));
-            removeButton.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE, ButtonVariant.LUMO_ERROR);
+            removeButton.addThemeVariants(ButtonVariant.LUMO_ERROR);
+            removeButton.addClassName(StyleUtility.Button.LINK_BUTTON);
             removeButton.addClickListener(e -> {
                 foodDc.getMutableItems().remove(item);
                 dataContext.remove(dataContext.merge(item));
