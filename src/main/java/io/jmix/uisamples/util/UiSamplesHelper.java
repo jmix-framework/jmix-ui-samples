@@ -19,8 +19,10 @@ package io.jmix.uisamples.util;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.Resources;
 import io.jmix.flowui.view.ViewInfo;
+import io.jmix.uisamples.theme.ThemeManager;
 import org.apache.commons.io.FileUtils;
 import org.jspecify.annotations.Nullable;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ResourceUtils;
 
@@ -34,21 +36,44 @@ import java.util.Locale;
 @Component("uisamples_UiSamplesHelper")
 public class UiSamplesHelper {
 
+    /**
+     * Placeholder usable inside menu XML {@code <file name="..."/>} entries to
+     * point at the active theme's sample resources. Resolved by
+     * {@link #getFileContent(String)} into
+     * {@code META-INF/resources/themes/<theme.id>/samples}.
+     *
+     * <p>If the file is missing for the active theme, the source tab is simply
+     * not shown — this is intentional, so menu entries can declare per-theme
+     * styling without having to provide a copy for every theme.
+     *
+     * <p>Analogous to the {@code {contextPath}} placeholder resolved in
+     * {@code SampleView}.
+     */
+    public static final String CURRENT_THEME_PLACEHOLDER = "{currentTheme}";
+
     protected final Resources resources;
     protected final CoreProperties coreProperties;
+    protected final ObjectProvider<ThemeManager> themeManagerProvider;
 
-    public UiSamplesHelper(Resources resources, CoreProperties coreProperties) {
+    public UiSamplesHelper(Resources resources,
+                           CoreProperties coreProperties,
+                           ObjectProvider<ThemeManager> themeManagerProvider) {
         this.resources = resources;
         this.coreProperties = coreProperties;
+        this.themeManagerProvider = themeManagerProvider;
     }
 
     @Nullable
     public String getFileContent(String src) {
-        String resourceCandidate = resources.getResourceAsString(src);
+        String resolved = src.contains(CURRENT_THEME_PLACEHOLDER)
+                ? src.replace(CURRENT_THEME_PLACEHOLDER, currentThemePrefix())
+                : src;
+
+        String resourceCandidate = resources.getResourceAsString(resolved);
 
         if (resourceCandidate == null) {
             try {
-                File file = ResourceUtils.getFile(src);
+                File file = ResourceUtils.getFile(resolved);
                 resourceCandidate = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
             } catch (IOException e) {
                 return null;
@@ -56,6 +81,12 @@ public class UiSamplesHelper {
         }
 
         return resourceCandidate;
+    }
+
+    private String currentThemePrefix() {
+        return "META-INF/resources/themes/"
+                + themeManagerProvider.getObject().getCurrentTheme().getId()
+                + "/samples";
     }
 
     public String packageToPath(String pkg) {
