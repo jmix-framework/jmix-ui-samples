@@ -1,13 +1,19 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout classNames="progress-bar-theme-variant-layout">
         <checkbox id="indeterminateCheckbox" label="Indeterminate" value="true"/>
-        <h4 text="Standard"/>
+        <h4 id="standardSpan" text="Standard"/>
         <progressBar id="standardProgressBar" indeterminate="true"/>
-        <h4 text="Success"/>
+        <h4 id="successSpan" text="Success"/>
         <progressBar id="successProgressBar" indeterminate="true" themeNames="success"/>
-        <h4 text="Error"/>
+        <!-- theme-only:aura -->
+        <h4 id="warningSpan" text="Warning"/>
+        <progressBar id="warningProgressBar" indeterminate="true" themeNames="warning"/>
+        <!-- theme-only:aura:end -->
+        <h4 id="errorSpan" text="Error"/>
         <progressBar id="errorProgressBar" indeterminate="true" themeNames="error"/>
-        <h4 text="Contrast"/>
+        <!-- theme-only:lumo -->
+        <h4 id="contrastSpan" text="Contrast"/>
         <progressBar id="contrastProgressBar" indeterminate="true" themeNames="contrast"/>
+        <!-- theme-only:lumo:end -->
     </layout>
 </view>

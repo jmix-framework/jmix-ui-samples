@@ -17,7 +17,7 @@
     </facets>
     <layout>
         <hbox width="100%" wrap="true">
-            <checkboxGroup id="gridSettingsCheckboxGroup" label="ThemeVariants"/>
+            <checkboxGroup id="gridSettingsCheckboxGroup" label="ThemeVariants" themeNames="horizontal"/>
         </hbox>
         <dataGrid id="ordersDataGrid"
                   width="100%"

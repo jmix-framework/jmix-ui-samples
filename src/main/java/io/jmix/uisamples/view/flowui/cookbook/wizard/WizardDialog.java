@@ -96,11 +96,11 @@ public class WizardDialog extends StandardDetailView<Employee> {
         if (isLastTabSelected()) {
             nextButton.setText("Complete");
             nextButton.setIcon(VaadinIcon.CHECK.create());
-            nextButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+            nextButton.addThemeVariants(ButtonVariant.PRIMARY);
         } else {
             nextButton.setText("Next");
             nextButton.setIcon(VaadinIcon.ARROW_CIRCLE_RIGHT_O.create());
-            nextButton.removeThemeVariants(ButtonVariant.LUMO_PRIMARY);
+            nextButton.removeThemeVariants(ButtonVariant.PRIMARY);
         }
     }
 

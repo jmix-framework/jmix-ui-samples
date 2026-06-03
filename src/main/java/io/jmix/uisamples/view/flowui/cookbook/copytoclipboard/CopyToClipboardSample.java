@@ -16,10 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class CopyToClipboardSample extends StandardView {
 
     @ViewComponent
-    protected TypedTextField<String> textField;
+    private TypedTextField<String> textField;
 
     @Autowired
-    protected Notifications notifications;
+    private Notifications notifications;
 
     @Subscribe("copyButton")
     public void onCopyButtonClick(ClickEvent<JmixButton> event) {
@@ -28,11 +28,11 @@ public class CopyToClipboardSample extends StandardView {
         UiComponentUtils.copyToClipboard(valueToCopy)
                 .then(successResult -> notifications.create("Text copied!")
                                 .withPosition(Notification.Position.BOTTOM_END)
-                                .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                                .withThemeVariant(NotificationVariant.SUCCESS)
                                 .show(),
                         errorResult -> notifications.create("Copy failed!")
                                 .withPosition(Notification.Position.BOTTOM_END)
-                                .withThemeVariant(NotificationVariant.LUMO_ERROR)
+                                .withThemeVariant(NotificationVariant.ERROR)
                                 .show());
     }
 }

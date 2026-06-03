@@ -4,11 +4,11 @@
             <hbox wrap="true">
                 <datePicker label="Standard DatePicker"/>
                 <datePicker label="Small DatePicker" themeNames="small"/>
-                <datePicker label="Helper-above-field Field" themeNames="helper-above-field"
+                <datePicker id="helperAboveField" label="Helper-above-field Field" themeNames="helper-above-field"
                             helperText="Helper text"/>
             </hbox>
         </details>
-        <details summaryText="Align Variant" opened="true">
+        <details id="alignVariantDetails" summaryText="Align Variant" opened="true">
             <hbox wrap="true">
                 <datePicker label="Standard align DatePicker" placeholder="Placeholder"/>
                 <datePicker label="Align-center DatePicker" themeNames="align-center" placeholder="Placeholder"/>

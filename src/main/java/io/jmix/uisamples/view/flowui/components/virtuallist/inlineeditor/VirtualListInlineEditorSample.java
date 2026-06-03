@@ -51,7 +51,7 @@ public class VirtualListInlineEditorSample extends StandardView {
     private CollectionContainer<Food> foodDc;
 
     @Supply(to = "foodList", subject = "renderer")
-    private Renderer<Food> foodListRenderer() {
+    public Renderer<Food> foodListRenderer() {
         return new ComponentRenderer<>(item -> {
             HorizontalLayout rootCardLayout = new HorizontalLayout();
             rootCardLayout.setMargin(true);
@@ -62,7 +62,7 @@ public class VirtualListInlineEditorSample extends StandardView {
             infoLayout.setWidth("30%");
 
             Avatar avatar = new Avatar();
-            avatar.addThemeVariants(AvatarVariant.LUMO_XLARGE);
+            avatar.addThemeVariants(AvatarVariant.XLARGE);
 
             if (item.getIcon() != null && item.getIcon().length > 0) {
                 String iconFileName = "%s.png".formatted(item.getTitle());
@@ -110,7 +110,7 @@ public class VirtualListInlineEditorSample extends StandardView {
 
             Button removeButton = new Button(new Icon(VaadinIcon.TRASH));
             removeButton.setText(messages.getMessage("actions.Remove"));
-            removeButton.addThemeVariants(ButtonVariant.LUMO_ERROR);
+            removeButton.addThemeVariants(ButtonVariant.ERROR);
             removeButton.addClassName(StyleUtility.Button.LINK_BUTTON);
             removeButton.addClickListener(e -> {
                 foodDc.getMutableItems().remove(item);
@@ -124,7 +124,7 @@ public class VirtualListInlineEditorSample extends StandardView {
     }
 
     @Install(to = "foodDl", target = Target.DATA_LOADER)
-    private List<Food> foodDlLoadDelegate(final LoadContext<Food> loadContext) {
+    public List<Food> foodDlLoadDelegate(final LoadContext<Food> loadContext) {
         return foodPlaceholderDataGenerator.getFoodSamplesList();
     }
 

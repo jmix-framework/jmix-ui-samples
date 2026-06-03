@@ -4,6 +4,11 @@ import com.vaadin.flow.component.details.Details;
 import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
 import io.jmix.flowui.view.*;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+import org.springframework.beans.factory.annotation.Autowired;
+// sample-hide:end
 
 import java.util.Collection;
 import java.util.List;
@@ -13,25 +18,29 @@ import java.util.List;
 public class DetailsThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected Details firstDetails;
+    private Details firstDetails;
     @ViewComponent
-    protected JmixCheckboxGroup<String> firstDetailsSettingsCheckboxGroup;
+    private JmixCheckboxGroup<String> firstDetailsSettingsCheckboxGroup;
 
     @ViewComponent
-    protected Details secondDetails;
+    private Details secondDetails;
     @ViewComponent
-    protected JmixCheckboxGroup<String> secondDetailsSettingsCheckboxGroup;
+    private JmixCheckboxGroup<String> secondDetailsSettingsCheckboxGroup;
 
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
     @Subscribe
-    protected void onInit(InitEvent event) {
-        List<String> settingsItems = List.of("Filled", "Reverse", "Small");
+    public void onInit(InitEvent event) {
+        List<String> settingsItems = getThemeList();
 
         firstDetailsSettingsCheckboxGroup.setItems(settingsItems);
         secondDetailsSettingsCheckboxGroup.setItems(settingsItems);
     }
 
     @Subscribe("firstDetailsSettingsCheckboxGroup")
-    protected void onFirstDetailsSettingsValueChange(
+    public void onFirstDetailsSettingsValueChange(
             TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
@@ -41,7 +50,7 @@ public class DetailsThemeVariantSample extends StandardView {
     }
 
     @Subscribe("secondDetailsSettingsCheckboxGroup")
-    protected void onSecondDetailsSettingsValueChange(
+    public void onSecondDetailsSettingsValueChange(
             TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
@@ -50,11 +59,23 @@ public class DetailsThemeVariantSample extends StandardView {
         applyDetailsSettings(event.getValue(), secondDetails);
     }
 
-    protected void applyDetailsSettings(Collection<String> settings, Details targetDetails) {
+    private void applyDetailsSettings(Collection<String> settings, Details targetDetails) {
         targetDetails.setThemeName("");
 
         settings.stream()
                 .map(String::toLowerCase)
                 .forEach(targetDetails::addThemeName);
+    }
+
+    private List<String> getThemeList() {
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {            // sample-hide
+            // theme-only:lumo
+            return List.of("Filled", "Reverse", "Small");
+            // theme-only:lumo:end
+        } else { // sample-hide
+            // theme-only:aura
+            return List.of("Filled", "Reverse", "Small", "No-padding");
+            // theme-only:aura:end
+        } // sample-hide
     }
 }

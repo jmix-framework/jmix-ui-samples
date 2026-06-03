@@ -67,7 +67,7 @@ public class DataGridTreeLazyNodesSample extends StandardView {
 
             notifications.create(String.format("Loaded: %d items", list.size()))
                     .withPosition(Notification.Position.TOP_CENTER)
-                    .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                    .withThemeVariant(NotificationVariant.SUCCESS)
                     .show();
 
             return list.stream();

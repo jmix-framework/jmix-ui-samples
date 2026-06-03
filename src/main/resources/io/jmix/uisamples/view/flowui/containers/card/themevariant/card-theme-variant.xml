@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout classNames="horizontal-layout card-theme-variant" justifyContent="CENTER">
         <card id="card" width="30em"/>
-        <vbox width="min-content" padding="false">
+        <vbox width="fit-content" padding="false">
             <vbox id="slotsGroupContainer" padding="false" spacing="false" classNames="options">
                 <span text="msg://slotsGroup.label" classNames="options-label"/>
 

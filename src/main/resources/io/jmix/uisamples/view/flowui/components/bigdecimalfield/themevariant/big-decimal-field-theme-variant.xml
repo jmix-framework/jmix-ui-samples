@@ -4,12 +4,12 @@
             <hbox wrap="true">
                 <bigDecimalField label="Standard BigDecimalField" width="15em"/>
                 <bigDecimalField label="Small BigDecimalField" themeNames="small" width="15em"/>
-                <bigDecimalField label="Helper-above-field Field" themeNames="helper-above-field"
+                <bigDecimalField id="helperAboveField" label="Helper-above-field Field" themeNames="helper-above-field"
                                  width="15em"
                                  helperText="Helper text"/>
             </hbox>
         </details>
-        <details summaryText="Align Variant" opened="true">
+        <details id="alignVariantDetails" summaryText="Align Variant" opened="true">
             <hbox wrap="true">
                 <bigDecimalField label="Standard align BigDecimalField" width="15em" placeholder="Placeholder"/>
                 <bigDecimalField label="Align-center BigDecimalField" themeNames="align-center" width="15em"

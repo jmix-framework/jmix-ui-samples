@@ -15,22 +15,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class TimerFacetSample extends StandardView {
 
     @ViewComponent
-    protected Timer timer;
+    private Timer timer;
     @ViewComponent
-    protected Span timerIndicator;
+    private Span timerIndicator;
     @ViewComponent
-    protected JmixButton timerStartBtn;
+    private JmixButton timerStartBtn;
     @ViewComponent
-    protected JmixButton timerStopBtn;
+    private JmixButton timerStopBtn;
 
     @Autowired
-    protected Notifications notifications;
+    private Notifications notifications;
 
-    protected int seconds = 0;
-    protected int ticks = 0;
+    private int seconds = 0;
+    private int ticks = 0;
 
     @Subscribe("timerStartBtn")
-    protected void onStartTimerClick(ClickEvent<JmixButton> event) {
+    public void onStartTimerClick(ClickEvent<JmixButton> event) {
         timer.start();
 
         timerIndicator.setText("Timer started");
@@ -39,7 +39,7 @@ public class TimerFacetSample extends StandardView {
 
         notifications.create("Timer started")
                 .withPosition(Notification.Position.BOTTOM_END)
-                .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                .withThemeVariant(NotificationVariant.SUCCESS)
                 .show();
 
         timerStartBtn.setEnabled(false);
@@ -47,7 +47,7 @@ public class TimerFacetSample extends StandardView {
     }
 
     @Subscribe("timerStopBtn")
-    protected void onStopTimerClick(ClickEvent<JmixButton> event) {
+    public void onStopTimerClick(ClickEvent<JmixButton> event) {
         timer.stop();
         seconds = 0;
 
@@ -60,7 +60,7 @@ public class TimerFacetSample extends StandardView {
     }
 
     @Subscribe("timer")
-    protected void onTimerTick(Timer.TimerActionEvent event) {
+    public void onTimerTick(Timer.TimerActionEvent event) {
         ++ticks;
         seconds += event.getSource().getDelay() / 1000;
 
@@ -70,7 +70,7 @@ public class TimerFacetSample extends StandardView {
     }
 
     @Subscribe("timer")
-    protected void onTimerStop(Timer.TimerStopEvent event) {
+    public void onTimerStop(Timer.TimerStopEvent event) {
         notifications.create("Timer stopped", "Number of ticks: " + ticks)
                 .withThemeVariant(NotificationVariant.LUMO_PRIMARY)
                 .withDuration(5000)

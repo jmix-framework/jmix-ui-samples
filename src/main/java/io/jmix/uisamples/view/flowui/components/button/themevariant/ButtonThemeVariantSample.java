@@ -5,6 +5,11 @@ import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.view.*;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+import org.springframework.beans.factory.annotation.Autowired;
+// sample-hide:end
 
 import java.util.Collection;
 import java.util.List;
@@ -14,17 +19,21 @@ import java.util.List;
 public class ButtonThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected JmixButton testButton;
+    private JmixButton testButton;
     @ViewComponent
-    protected JmixCheckboxGroup<String> settingsCheckboxGroup;
+    private JmixCheckboxGroup<String> settingsCheckboxGroup;
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    public void onInit(InitEvent event) {
         settingsCheckboxGroup.setItems(getSettingsCheckboxGroupItems());
     }
 
     @Subscribe("settingsCheckboxGroup")
-    protected void onSettingsValueChange(TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
+    public void onSettingsValueChange(TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
         }
@@ -39,7 +48,7 @@ public class ButtonThemeVariantSample extends StandardView {
                 .forEach(this::applyTestButtonTheme);
     }
 
-    protected void applyTestButtonTheme(String command) {
+    private void applyTestButtonTheme(String command) {
         if ("text".equalsIgnoreCase(command)) {
             testButton.setText("Button text");
         } else if ("icon".equalsIgnoreCase(command)) {
@@ -50,8 +59,17 @@ public class ButtonThemeVariantSample extends StandardView {
         }
     }
 
-    protected List<String> getSettingsCheckboxGroupItems() {
-        return List.of("Text", "Primary", "Success", "Error", "Contrast",
-                "Large", "Small", "Icon", "Tertiary", "Tertiary-inline");
+    private List<String> getSettingsCheckboxGroupItems() {
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {            // sample-hide
+            // theme-only:lumo
+        return List.of("Text", "Primary", "Success", "Warning", "Error", "Contrast",
+                    "Large", "Small", "Icon", "Tertiary", "Tertiary-inline");
+            // theme-only:lumo:end
+        } else { // sample-hide
+            // theme-only:aura
+        return List.of(
+                    "Text", "Primary", "Success", "Warning", "Error", "Large", "Small", "Icon", "Tertiary");
+            // theme-only:aura:end
+        } // sample-hide
     }
 }

@@ -16,7 +16,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <checkboxGroup id="dataGridSettingsGroup" label="Settings"/>
+        <checkboxGroup id="dataGridSettingsGroup" label="Settings" themeNames="horizontal"/>
         <dataGrid id="dataGrid" width="100%" minHeight="20em"
                   dataContainer="ordersDc">
             <columns>

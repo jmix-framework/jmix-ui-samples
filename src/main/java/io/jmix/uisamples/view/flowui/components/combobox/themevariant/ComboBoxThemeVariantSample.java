@@ -14,17 +14,17 @@ import java.util.List;
 public class ComboBoxThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected JmixComboBox<CustomerGrade> testComboBox;
+    private JmixComboBox<CustomerGrade> testComboBox;
     @ViewComponent
-    protected JmixCheckboxGroup<String> settingsCheckboxGroup;
+    private JmixCheckboxGroup<String> settingsCheckboxGroup;
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    public void onInit(InitEvent event) {
         settingsCheckboxGroup.setItems(getSettingsCheckboxGroupItems());
     }
 
     @Subscribe("settingsCheckboxGroup")
-    protected void onSettingsValueChange(TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
+    public void onSettingsValueChange(TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
         }
@@ -41,7 +41,7 @@ public class ComboBoxThemeVariantSample extends StandardView {
                 .forEach(this::applyTestComboBoxTheme);
     }
 
-    protected void applyTestComboBoxTheme(String command) {
+    private void applyTestComboBoxTheme(String command) {
         switch (command) {
             case "label" -> testComboBox.setLabel("Label");
             case "placeholder" -> testComboBox.setPlaceholder("Placeholder");
@@ -51,7 +51,7 @@ public class ComboBoxThemeVariantSample extends StandardView {
         }
     }
 
-    protected List<String> getSettingsCheckboxGroupItems() {
+    private List<String> getSettingsCheckboxGroupItems() {
         return List.of("Label", "Placeholder", "Helper-Text", "Readonly", "Small", "Align-Left", "Align-Center",
                 "Align-Right", "Helper-Above-Field");
     }

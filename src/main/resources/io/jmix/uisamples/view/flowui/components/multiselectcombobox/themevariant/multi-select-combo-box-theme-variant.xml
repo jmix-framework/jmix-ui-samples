@@ -10,7 +10,7 @@
                                          itemsEnum="io.jmix.uisamples.entity.Day"/>
                 </hbox>
             </details>
-            <details summaryText="Align variant" opened="true">
+            <details id="alignVariantDetails" summaryText="Align variant" opened="true">
                 <hbox wrap="true">
                     <multiSelectComboBox id="alignLeftMultiSelectComboBox" label="Align left"
                                          themeNames="align-left"

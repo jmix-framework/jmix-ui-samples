@@ -1,7 +1,7 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout classNames="tabs-theme-variant">
         <hbox padding="false" wrap="true">
-            <checkboxGroup id="tabsSettingsCheckboxGroup" label="Tabs themes"/>
+            <checkboxGroup id="tabsSettingsCheckboxGroup" label="Tabs themes" themeNames="horizontal"/>
             <vbox padding="false" width="AUTO" justifyContent="END" classNames="tabs-count-control-box">
                 <nativeLabel text="Tabs count" classNames="control-label"
                        setFor="controlButtonPlaceholder"/>

@@ -6,6 +6,6 @@
     This example allows uploading up to 3 files with a maximum size of 10 KB each. The name of the uploaded file appears next to its corresponding uploaded file.
 </p>
 <p>
-    This example uses a <Code>MultiFileMemoryBuffer</Code> to handle multiple files and write file data into a set of in-memory buffers.
+    This example uses the in-memory upload handler (configured via <code>uploadHandlerType="IN_MEMORY"</code>), which keeps the content of each uploaded file in memory and provides it as a <code>byte[]</code> through the <code>UploadSucceededEvent</code>.
     For uploading and saving large files, it is recommended to use the <a href="/ui-samples/sample/file-storage-upload-field">FileStorageUploadField</a>.
 </p>

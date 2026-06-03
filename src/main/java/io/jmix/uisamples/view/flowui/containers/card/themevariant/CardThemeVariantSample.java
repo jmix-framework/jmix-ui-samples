@@ -226,11 +226,11 @@ public class CardThemeVariantSample extends StandardView {
 
     private void initThemeGroup() {
         themeGroup.setItems(
-                CardVariant.LUMO_OUTLINED.getVariantName(),
-                CardVariant.LUMO_ELEVATED.getVariantName(),
-                CardVariant.LUMO_HORIZONTAL.getVariantName(),
-                CardVariant.LUMO_STRETCH_MEDIA.getVariantName(),
-                CardVariant.LUMO_COVER_MEDIA.getVariantName()
+                CardVariant.OUTLINED.getVariantName(),
+                CardVariant.ELEVATED.getVariantName(),
+                CardVariant.HORIZONTAL.getVariantName(),
+                CardVariant.STRETCH_MEDIA.getVariantName(),
+                CardVariant.COVER_MEDIA.getVariantName()
         );
     }
 

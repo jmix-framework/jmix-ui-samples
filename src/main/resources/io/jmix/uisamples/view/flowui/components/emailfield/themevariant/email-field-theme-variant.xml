@@ -4,11 +4,11 @@
             <hbox wrap="true">
                 <emailField label="Standard EmailField"/>
                 <emailField label="Small EmailField" themeNames="small"/>
-                <emailField label="Helper-above-field Field" themeNames="helper-above-field"
+                <emailField id="helperAboveField" label="Helper-above-field Field" themeNames="helper-above-field"
                             helperText="Helper text"/>
             </hbox>
         </details>
-        <details summaryText="Align Variant" opened="true">
+        <details id="alignVariantDetails" summaryText="Align Variant" opened="true">
             <hbox wrap="true">
                 <emailField label="Standard align EmailField" placeholder="Placeholder"/>
                 <emailField label="Align-center EmailField" themeNames="align-center" placeholder="Placeholder"/>

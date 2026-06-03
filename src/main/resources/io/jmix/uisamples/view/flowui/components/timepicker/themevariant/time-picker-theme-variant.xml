@@ -4,11 +4,11 @@
             <hbox wrap="true">
                 <timePicker label="Standard TimePicker"/>
                 <timePicker label="Small TimePicker" themeNames="small"/>
-                <timePicker label="Helper-above-field Field" themeNames="helper-above-field"
+                <timePicker id="helperAboveField" label="Helper-above-field Field" themeNames="helper-above-field"
                             helperText="Helper text"/>
             </hbox>
         </details>
-        <details summaryText="Align Variant" opened="true">
+        <details id="alignVariantDetails" summaryText="Align Variant" opened="true">
             <hbox wrap="true">
                 <timePicker label="Standard align TimePicker" placeholder="Placeholder"/>
                 <timePicker label="Align-center TimePicker" themeNames="align-center" placeholder="Placeholder"/>

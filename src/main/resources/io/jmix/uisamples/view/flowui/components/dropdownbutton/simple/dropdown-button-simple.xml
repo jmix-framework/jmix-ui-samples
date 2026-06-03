@@ -6,7 +6,7 @@
                 <textItem id="pdfSaveItem" text="Save as PDF"/>
             </items>
         </dropdownButton>
-        <dropdownButton id="dropdownButton2" text="Save" icon="ARCHIVE" themeNames="icon">
+        <dropdownButton id="dropdownButton2" text="Save" icon="ARCHIVE">
             <items>
                 <componentItem id="docSaveItem">
                     <hbox padding="false">
@@ -22,6 +22,6 @@
                 </componentItem>
             </items>
         </dropdownButton>
-        <dropdownButton id="dropdownButton3" icon="ARCHIVE" themeNames="icon"/>
+        <dropdownButton id="dropdownButton3" icon="ARCHIVE"/>
     </layout>
 </view>

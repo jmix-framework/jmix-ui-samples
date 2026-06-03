@@ -4,7 +4,6 @@
 }
 
 .tabs-theme-variant .control-label {
-    color: var(--vaadin-text-color-secondary);
     font-size: var(--aura-font-size-s);
     font-weight: 500;
 }

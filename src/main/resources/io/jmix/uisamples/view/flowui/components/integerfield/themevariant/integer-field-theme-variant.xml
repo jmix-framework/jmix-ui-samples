@@ -4,11 +4,11 @@
             <hbox wrap="true">
                 <integerField label="Standard IntegerField"/>
                 <integerField label="Small IntegerField" themeNames="small"/>
-                <integerField label="Helper-above-field Field" themeNames="helper-above-field"
+                <integerField id="helperAboveField" label="Helper-above-field Field" themeNames="helper-above-field"
                               helperText="Helper text"/>
             </hbox>
         </details>
-        <details summaryText="Align Variant" opened="true">
+        <details id="alignVariantDetails" summaryText="Align Variant" opened="true">
             <hbox wrap="true">
                 <integerField label="Standard align IntegerField" placeholder="Placeholder"/>
                 <integerField label="Align-center IntegerField" themeNames="align-center" placeholder="Placeholder"/>

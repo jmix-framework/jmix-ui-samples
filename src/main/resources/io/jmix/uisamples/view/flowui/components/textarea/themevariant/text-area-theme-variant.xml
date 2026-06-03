@@ -4,11 +4,11 @@
             <hbox wrap="true">
                 <textArea label="Standard TextArea"/>
                 <textArea label="Small TextArea" themeNames="small"/>
-                <textArea label="Helper-above-field Field" themeNames="helper-above-field"
+                <textArea id="helperAboveField" label="Helper-above-field Field" themeNames="helper-above-field"
                           helperText="Helper text"/>
             </hbox>
         </details>
-        <details summaryText="Align Variant" opened="true">
+        <details id="alignVariantDetails" summaryText="Align Variant" opened="true">
             <hbox wrap="true">
                 <textArea label="Standard align TextArea" placeholder="Placeholder"/>
                 <textArea label="Align-center TextArea" themeNames="align-center" placeholder="Placeholder"/>

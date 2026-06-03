@@ -7,6 +7,11 @@ import io.jmix.flowui.component.grid.DataGrid;
 import io.jmix.flowui.kit.component.ComponentUtils;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.entity.Customer;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+import org.springframework.beans.factory.annotation.Autowired;
+// sample-hide:end
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -17,17 +22,21 @@ import java.util.Map;
 public class DataGridThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected JmixCheckboxGroup<GridVariant> gridSettingsCheckboxGroup;
+    private JmixCheckboxGroup<GridVariant> gridSettingsCheckboxGroup;
     @ViewComponent
-    protected DataGrid<Customer> ordersDataGrid;
+    private DataGrid<Customer> ordersDataGrid;
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    public void onInit(InitEvent event) {
         ComponentUtils.setItemsMap(gridSettingsCheckboxGroup, getGridThemeVariantItemsMap());
     }
 
     @Subscribe("gridSettingsCheckboxGroup")
-    protected void onGridSettingsCheckboxGroupValueChange(
+    public void onGridSettingsCheckboxGroupValueChange(
             TypedValueChangeEvent<JmixCheckboxGroup<GridVariant>, Collection<GridVariant>> event) {
         if (event.getValue() == null) {
             return;
@@ -39,15 +48,19 @@ public class DataGridThemeVariantSample extends StandardView {
         event.getValue().forEach(ordersDataGrid::addThemeVariants);
     }
 
-    protected Map<GridVariant, String> getGridThemeVariantItemsMap() {
+    private Map<GridVariant, String> getGridThemeVariantItemsMap() {
         LinkedHashMap<GridVariant, String> map = new LinkedHashMap<>();
 
-        map.put(GridVariant.LUMO_NO_BORDER, "No border");
-        map.put(GridVariant.LUMO_NO_ROW_BORDERS, "No row borders");
-        map.put(GridVariant.LUMO_COLUMN_BORDERS, "Column borders");
-        map.put(GridVariant.LUMO_ROW_STRIPES, "Row stripes");
-        map.put(GridVariant.LUMO_COMPACT, "Compact");
-        map.put(GridVariant.LUMO_WRAP_CELL_CONTENT, "Wrap cell content");
+        map.put(GridVariant.NO_BORDER, "No border");
+        map.put(GridVariant.NO_ROW_BORDERS, "No row borders");
+        map.put(GridVariant.COLUMN_BORDERS, "Column borders");
+        map.put(GridVariant.ROW_STRIPES, "Row stripes");
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {            // sample-hide
+            // theme-only:lumo
+            map.put(GridVariant.LUMO_COMPACT, "Compact");
+            // theme-only:lumo:end
+        }                                                                // sample-hide
+        map.put(GridVariant.WRAP_CELL_CONTENT, "Wrap cell content");
         return map;
     }
 }

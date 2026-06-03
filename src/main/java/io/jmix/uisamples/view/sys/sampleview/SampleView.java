@@ -44,6 +44,7 @@ import io.jmix.core.security.CurrentAuthentication;
 import io.jmix.flowui.Notifications;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.Views;
+import io.jmix.flowui.component.UiComponentUtils;
 import io.jmix.flowui.component.codeeditor.CodeEditor;
 import io.jmix.flowui.component.layout.ViewLayout;
 import io.jmix.flowui.component.scroller.JmixScroller;
@@ -154,9 +155,25 @@ public class SampleView extends StandardView {
             initOverviewView();
         } else {
             this.sampleView = (StandardView) views.create(sampleId);
+            hideForeignThemeComponents();
             updateLayout(sampleView);
             updateTabs();
         }
+    }
+
+    /**
+     * Hides sample components declared only for a theme other than the active one (marked in the
+     * descriptor with {@code theme-only:<themeId>} comments). Runs after {@link Views#create} so the
+     * components are already built and their {@code @ViewComponent} fields injected — they are only
+     * hidden, never removed, so controllers never see null injections.
+     */
+    protected void hideForeignThemeComponents() {
+        viewRegistry.getViewInfo(sampleId).getTemplatePath().ifPresent(templatePath -> {
+            for (String id : uiSamplesHelper.findThemeHiddenComponentIds(templatePath)) {
+                UiComponentUtils.findComponent(sampleView, id)
+                        .ifPresent(component -> component.setVisible(false));
+            }
+        });
     }
 
     protected void initOverviewView() {
@@ -436,11 +453,11 @@ public class SampleView extends StandardView {
                 page.executeJs(getCopyToClipboardScript(), url.toString())
                         .then(jsonValue -> notifications.create(messageBundle.getMessage("successCopyNotification"))
                                         .withPosition(Notification.Position.BOTTOM_END)
-                                        .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                                        .withThemeVariant(NotificationVariant.SUCCESS)
                                         .show(),
                                 s -> notifications.create(messageBundle.getMessage("errorCopyNotification"))
                                         .withPosition(Notification.Position.BOTTOM_END)
-                                        .withThemeVariant(NotificationVariant.LUMO_ERROR)
+                                        .withThemeVariant(NotificationVariant.ERROR)
                                         .show())
         );
     }

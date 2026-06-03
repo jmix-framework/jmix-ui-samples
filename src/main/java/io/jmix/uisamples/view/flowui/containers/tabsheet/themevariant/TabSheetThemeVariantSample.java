@@ -11,8 +11,13 @@ import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+// sample-hide:end
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -21,25 +26,27 @@ import java.util.List;
 public class TabSheetThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected JmixTabSheet tabSheet;
+    private JmixTabSheet tabSheet;
     @ViewComponent
-    protected JmixCheckboxGroup<String> tabSheetSettingsCheckboxGroup;
+    private JmixCheckboxGroup<String> tabSheetSettingsCheckboxGroup;
 
     @Autowired
-    protected UiComponents uiComponents;
+    private UiComponents uiComponents;
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
 
     @Subscribe
-    protected void onInit(InitEvent event) {
-        List<String> tabSheetSettingsItems = List.of("Centered", "Small", "Minimal", "Hide-scroll-buttons",
-                "Equal-width-tabs", "Bordered");
-        tabSheetSettingsCheckboxGroup.setItems(tabSheetSettingsItems);
+    public void onInit(InitEvent event) {
+        tabSheetSettingsCheckboxGroup.setItems(getTabSheetThemes());
 
         tabSheet.setSuffixComponent(createAddTabButton());
         tabSheet.setPrefixComponent(createRemoveTabButton());
     }
 
     @Subscribe("tabSheetSettingsCheckboxGroup")
-    protected void onTabSheetSettingsCheckboxGroupValueChange(
+    public void onTabSheetSettingsCheckboxGroupValueChange(
             ComponentValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
@@ -48,7 +55,7 @@ public class TabSheetThemeVariantSample extends StandardView {
         applyTabSheetThemes(event.getValue());
     }
 
-    protected void applyTabSheetThemes(Collection<String> themes) {
+    private void applyTabSheetThemes(Collection<String> themes) {
         tabSheet.getElement().getThemeList().clear();
 
         themes.stream()
@@ -56,7 +63,7 @@ public class TabSheetThemeVariantSample extends StandardView {
                 .forEach(tabSheet::addThemeName);
     }
 
-    protected Component createAddTabButton() {
+    private Component createAddTabButton() {
         JmixButton button = uiComponents.create(JmixButton.class);
         button.setIcon(VaadinIcon.PLUS.create());
         button.addThemeVariants(ButtonVariant.LUMO_ICON);
@@ -71,7 +78,7 @@ public class TabSheetThemeVariantSample extends StandardView {
         return button;
     }
 
-    protected Component createRemoveTabButton() {
+    private Component createRemoveTabButton() {
         JmixButton button = uiComponents.create(JmixButton.class);
         button.setIcon(VaadinIcon.MINUS.create());
         button.addThemeVariants(ButtonVariant.LUMO_ICON);
@@ -85,5 +92,18 @@ public class TabSheetThemeVariantSample extends StandardView {
         });
 
         return button;
+    }
+
+    private List<String> getTabSheetThemes() {
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {  // sample-hide
+            // theme-only:lumo
+        return List.of("Centered", "Small", "Minimal", "Hide-scroll-buttons",
+                    "Equal-width-tabs", "Bordered", "No-padding");
+            // theme-only:lumo:end
+        } else { // sample-hide
+            // theme-only:aura
+        return List.of("Small", "Hide-scroll-buttons", "No-border", "No-padding");
+            // theme-only:aura:end
+        } // sample-hide
     }
 }

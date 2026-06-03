@@ -4,6 +4,11 @@ import com.vaadin.flow.component.accordion.AccordionPanel;
 import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
 import io.jmix.flowui.view.*;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+import org.springframework.beans.factory.annotation.Autowired;
+// sample-hide:end
 
 import java.util.Collection;
 import java.util.List;
@@ -13,25 +18,28 @@ import java.util.List;
 public class AccordionThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected AccordionPanel firstPanel;
+    private AccordionPanel firstPanel;
     @ViewComponent
-    protected JmixCheckboxGroup<String> firstPanelSettingsCheckboxGroup;
+    private JmixCheckboxGroup<String> firstPanelSettingsCheckboxGroup;
 
     @ViewComponent
-    protected AccordionPanel secondPanel;
+    private AccordionPanel secondPanel;
     @ViewComponent
-    protected JmixCheckboxGroup<String> secondPanelSettingsCheckboxGroup;
+    private JmixCheckboxGroup<String> secondPanelSettingsCheckboxGroup;
 
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
     @Subscribe
-    protected void onInit(InitEvent event) {
-        List<String> settingsItems = List.of("Filled", "Reverse", "Small");
-
+    public void onInit(InitEvent event) {
+        List<String> settingsItems = getThemeList();
         firstPanelSettingsCheckboxGroup.setItems(settingsItems);
         secondPanelSettingsCheckboxGroup.setItems(settingsItems);
     }
 
     @Subscribe("firstPanelSettingsCheckboxGroup")
-    protected void onFirstPanelSettingsValueChange(
+    public void onFirstPanelSettingsValueChange(
             TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
@@ -41,7 +49,7 @@ public class AccordionThemeVariantSample extends StandardView {
     }
 
     @Subscribe("secondPanelSettingsCheckboxGroup")
-    protected void onSecondPanelSettingsValueChange(
+    public void onSecondPanelSettingsValueChange(
             TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
@@ -50,11 +58,23 @@ public class AccordionThemeVariantSample extends StandardView {
         applyPanelSettings(event.getValue(), secondPanel);
     }
 
-    protected void applyPanelSettings(Collection<String> settings, AccordionPanel targetPanel) {
+    private void applyPanelSettings(Collection<String> settings, AccordionPanel targetPanel) {
         targetPanel.setThemeName("");
 
         settings.stream()
                 .map(String::toLowerCase)
                 .forEach(targetPanel::addThemeName);
+    }
+
+    private List<String> getThemeList() {
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {            // sample-hide
+            // theme-only:lumo
+        return List.of("Filled", "Reverse", "Small");
+            // theme-only:lumo:end
+        } else { // sample-hide
+            // theme-only:aura
+        return List.of("Filled", "Reverse", "Small", "No-padding");
+            // theme-only:aura:end
+        } // sample-hide
     }
 }

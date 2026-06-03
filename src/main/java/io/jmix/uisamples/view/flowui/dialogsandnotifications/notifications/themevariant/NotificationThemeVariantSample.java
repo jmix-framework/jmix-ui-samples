@@ -12,6 +12,10 @@ import io.jmix.flowui.component.textfield.TypedTextField;
 import io.jmix.flowui.kit.component.ComponentUtils;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.view.*;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+// sample-hide:end
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.LinkedHashMap;
@@ -22,25 +26,29 @@ import java.util.Map;
 public class NotificationThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected TypedTextField<String> titleField;
+    private TypedTextField<String> titleField;
     @ViewComponent
-    protected TypedTextField<String> messageField;
+    private TypedTextField<String> messageField;
     @ViewComponent
-    protected JmixCheckbox closeableField;
+    private JmixCheckbox closeableField;
     @ViewComponent
-    protected JmixIntegerField durationField;
+    private JmixIntegerField durationField;
     @ViewComponent
-    protected JmixComboBox<Notification.Position> positionField;
+    private JmixComboBox<Notification.Position> positionField;
     @ViewComponent
-    protected JmixComboBox<NotificationVariant> themeVariantField;
+    private JmixComboBox<NotificationVariant> themeVariantField;
     @ViewComponent
-    protected JmixComboBox<Notifications.Type> typeField;
+    private JmixComboBox<Notifications.Type> typeField;
 
     @Autowired
-    protected Notifications notifications;
+    private Notifications notifications;
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    public void onInit(InitEvent event) {
         ComponentUtils.setItemsMap(positionField, getPositionItemsMap());
         ComponentUtils.setItemsMap(themeVariantField, getThemeVariantItemsMap());
         ComponentUtils.setItemsMap(typeField, getTypeItemsMap());
@@ -50,89 +58,105 @@ public class NotificationThemeVariantSample extends StandardView {
     }
 
     @Subscribe("standardNotificationButton")
-    protected void onStandardNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onStandardNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.show("ThemeVariant: Standard");
     }
 
+    // theme-only:lumo
     @Subscribe("primaryNotificationButton")
-    protected void onPrimaryNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onPrimaryNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("ThemeVariant: Primary")
                 .withThemeVariant(NotificationVariant.LUMO_PRIMARY)
                 .show();
     }
+    // theme-only:lumo:end
+    @Subscribe("infoNotificationButton")
+    public void onInfoNotificationButtonClick(ClickEvent<JmixButton> event) {
+        notifications.create("ThemeVariant: Info")
+                .withThemeVariant(NotificationVariant.INFO)
+                .show();
+    }
 
     @Subscribe("successNotificationButton")
-    protected void onSuccessNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onSuccessNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("ThemeVariant: Success")
-                .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                .withThemeVariant(NotificationVariant.SUCCESS)
+                .show();
+    }
+    
+    @Subscribe("warningNotificationButton")
+    public void onWarningNotificationButtonClick(ClickEvent<JmixButton> event) {
+        notifications.create("ThemeVariant: Warning")
+                .withThemeVariant(NotificationVariant.WARNING)
                 .show();
     }
 
     @Subscribe("errorNotificationButton")
-    protected void onErrorNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onErrorNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("ThemeVariant: Error")
-                .withThemeVariant(NotificationVariant.LUMO_ERROR)
+                .withThemeVariant(NotificationVariant.ERROR)
                 .show();
     }
 
+    // theme-only:lumo
     @Subscribe("contrastNotificationButton")
-    protected void onContrastNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onContrastNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("ThemeVariant: Contrast")
                 .withThemeVariant(NotificationVariant.LUMO_CONTRAST)
                 .show();
     }
-
+    // theme-only:lumo:end
     @Subscribe("defaultTypeNotificationButton")
-    protected void onDefaultTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onDefaultTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("Type: Default")
                 .withType(Notifications.Type.DEFAULT)
                 .show();
     }
 
     @Subscribe("successTypeNotificationButton")
-    protected void onSuccessTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onSuccessTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("Type: Success")
                 .withType(Notifications.Type.SUCCESS)
                 .show();
     }
 
     @Subscribe("warningTypeNotificationButton")
-    protected void onWarningTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onWarningTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("Type: Warning")
                 .withType(Notifications.Type.WARNING)
                 .show();
     }
 
     @Subscribe("errorTypeNotificationButton")
-    protected void onErrorTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onErrorTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("Type: Error")
                 .withType(Notifications.Type.ERROR)
                 .show();
     }
 
     @Subscribe("systemTypeNotificationButton")
-    protected void onSystemTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onSystemTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("Type: System")
                 .withType(Notifications.Type.SYSTEM)
                 .show();
     }
 
     @Subscribe("durationNotificationButton")
-    protected void onDurationTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onDurationTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("Duration: 5 sec")
                 .withDuration(5000)
                 .show();
     }
 
     @Subscribe("closeableNotificationButton")
-    protected void onCloseableTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
+    public void onCloseableTypeNotificationButtonClick(ClickEvent<JmixButton> event) {
         notifications.create("Closeable: true")
                 .withCloseable(true)
                 .show();
     }
 
     @Subscribe("testButton")
-    protected void onTestButtonClick(ClickEvent<JmixButton> event) {
+    public void onTestButtonClick(ClickEvent<JmixButton> event) {
         Notifications.NotificationBuilder notificationBuilder;
 
         String title = titleField.getTypedValue();
@@ -173,7 +197,7 @@ public class NotificationThemeVariantSample extends StandardView {
         notificationBuilder.show();
     }
 
-    protected Map<Notification.Position, String> getPositionItemsMap() {
+    private Map<Notification.Position, String> getPositionItemsMap() {
         LinkedHashMap<Notification.Position, String> map = new LinkedHashMap<>();
         map.put(Notification.Position.TOP_STRETCH, "Top Stretch");
         map.put(Notification.Position.TOP_START, "Top Start");
@@ -187,16 +211,26 @@ public class NotificationThemeVariantSample extends StandardView {
         return map;
     }
 
-    protected Map<NotificationVariant, String> getThemeVariantItemsMap() {
+    private Map<NotificationVariant, String> getThemeVariantItemsMap() {
         LinkedHashMap<NotificationVariant, String> map = new LinkedHashMap<>();
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {            // sample-hide
+            // theme-only:lumo
         map.put(NotificationVariant.LUMO_PRIMARY, "Primary");
-        map.put(NotificationVariant.LUMO_SUCCESS, "Success");
-        map.put(NotificationVariant.LUMO_ERROR, "Error");
+            // theme-only:lumo:end
+        }                                                                // sample-hide
+        map.put(NotificationVariant.INFO, "Info");
+        map.put(NotificationVariant.SUCCESS, "Success");
+        map.put(NotificationVariant.WARNING, "Warning");
+        map.put(NotificationVariant.ERROR, "Error");
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {            // sample-hide
+            // theme-only:lumo
         map.put(NotificationVariant.LUMO_CONTRAST, "Contrast");
+            // theme-only:lumo:end
+        }                                                                // sample-hide
         return map;
     }
 
-    protected Map<Notifications.Type, String> getTypeItemsMap() {
+    private Map<Notifications.Type, String> getTypeItemsMap() {
         LinkedHashMap<Notifications.Type, String> map = new LinkedHashMap<>();
         map.put(Notifications.Type.DEFAULT, "Default");
         map.put(Notifications.Type.SUCCESS, "Success");

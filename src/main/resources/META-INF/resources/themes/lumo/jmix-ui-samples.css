@@ -87,7 +87,7 @@ html {
     cursor: pointer;
 }
 
-.permalink-button {
+vaadin-button.permalink-button {
     margin-inline-start: auto;
     margin-inline-end: var(--lumo-space-s);
 }
