@@ -21,18 +21,18 @@ public class RichTextEditorThemeVariantSample extends StandardView {
     @Subscribe("noBorderCheckbox")
     protected void onHighlightCheckboxValueChange(ComponentValueChangeEvent<JmixCheckbox, Boolean> event) {
         if (event.getValue()) {
-            richTextEditor.addThemeVariants(RichTextEditorVariant.NO_BORDER);
+            richTextEditor.addThemeVariants(RichTextEditorVariant.LUMO_NO_BORDER);
         } else {
-            richTextEditor.removeThemeVariants(RichTextEditorVariant.NO_BORDER);
+            richTextEditor.removeThemeVariants(RichTextEditorVariant.LUMO_NO_BORDER);
         }
     }
 
     @Subscribe("compactCheckbox")
     protected void onHighlightGutterCheckboxValueChange(ComponentValueChangeEvent<JmixCheckbox, Boolean> event) {
         if (event.getValue()) {
-            richTextEditor.addThemeVariants(RichTextEditorVariant.COMPACT);
+            richTextEditor.addThemeVariants(RichTextEditorVariant.LUMO_COMPACT);
         } else {
-            richTextEditor.removeThemeVariants(RichTextEditorVariant.COMPACT);
+            richTextEditor.removeThemeVariants(RichTextEditorVariant.LUMO_COMPACT);
         }
     }
 

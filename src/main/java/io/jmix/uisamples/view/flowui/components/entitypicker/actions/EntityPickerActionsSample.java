@@ -79,7 +79,7 @@ public class EntityPickerActionsSample extends StandardView {
 
     protected Action createEntityClearAction() {
         Action entityClearAction = actions.create(EntityClearAction.ID);
-        entityClearAction.setIconComponent(icons.get(JmixFontIcon.BAN));
+        entityClearAction.setIcon(icons.get(JmixFontIcon.BAN));
 
         return entityClearAction;
     }
