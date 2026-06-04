@@ -57,6 +57,7 @@ import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.kit.component.codeeditor.CodeEditorMode;
 import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
+import io.jmix.flowui.view.navigation.RouteSupport;
 import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
 import io.jmix.uisamples.config.UiSamplesMenuConfig;
@@ -121,6 +122,8 @@ public class SampleView extends StandardView {
     protected OverviewPageGenerator overviewPageGenerator;
     @Autowired
     protected ThemeManager themeManager;
+    @Autowired
+    protected RouteSupport routeSupport;
     @Autowired(required = false)
     protected ServletContext servletContext;
 
@@ -134,8 +137,15 @@ public class SampleView extends StandardView {
 
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
-        event.getRouteParameters().get("sampleId")
-                .ifPresent(this::updateSample);
+        Optional<String> sampleIdParam = event.getRouteParameters().get("sampleId")
+                .filter(StringUtils::isNotBlank);
+        if (sampleIdParam.isEmpty()) {
+            // redirect to the home page if no sample selected
+            event.forwardTo(MainView.class);
+            return;
+        }
+
+        updateSample(sampleIdParam.get());
         super.beforeEnter(event);
 
         if (sampleView != null) {
@@ -290,15 +300,14 @@ public class SampleView extends StandardView {
         tabSheet.setWidthFull();
 
         tabSheet.addSelectedChangeListener(event -> {
-            if (sampleId != null) {
-                String label = event.getSelectedTab().getLabel();
-
-                String currentUrl = RouteConfiguration.forSessionScope()
-                        .getUrl(getClass(), new RouteParameters("sampleId", sampleId))
-                        + "?" + QueryParameters.of("tab", label).getQueryString();
-
+            // Reflect only user-initiated tab changes in the url. The initial/programmatic selection
+            // (including restoring a tab from the url) must not write, so opening a sample keeps a
+            // clean url without a default tab parameter.
+            if (sampleId != null && event.isFromClient()) {
+                // RouteSupport preserves the current path and other query parameters (e.g. the menu
+                // 'search' tracked by MainView), unlike rebuilding the url from the route only.
                 getUI().ifPresent(ui ->
-                        ui.getPage().getHistory().replaceState(null, currentUrl)
+                        routeSupport.setQueryParameter(ui, "tab", event.getSelectedTab().getLabel())
                 );
             }
         });

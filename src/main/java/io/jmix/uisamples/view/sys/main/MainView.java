@@ -26,6 +26,9 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.router.AfterNavigationEvent;
+import com.vaadin.flow.router.Location;
+import com.vaadin.flow.router.QueryParameters;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
@@ -38,6 +41,7 @@ import io.jmix.flowui.kit.component.main.ListMenu;
 import io.jmix.flowui.menu.MenuItem;
 import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
+import io.jmix.flowui.view.navigation.RouteSupport;
 import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
 import io.jmix.uisamples.config.UiSamplesMenuConfig;
@@ -52,13 +56,17 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Route("")
 @ViewController("MainView")
 @ViewDescriptor("main-view.xml")
 @AnonymousAllowed
 public class MainView extends StandardMainView {
+
+    protected static final String SEARCH_QUERY_PARAM = "search";
 
     @ViewComponent
     protected MessageBundle messageBundle;
@@ -77,6 +85,8 @@ public class MainView extends StandardMainView {
     protected MenuNavigationExpander menuNavigationExpander;
     @Autowired
     protected OverviewPageGenerator overviewPageGenerator;
+    @Autowired
+    protected RouteSupport routeSupport;
 
     protected List<JmixListMenu.MenuItem> foundItems = new ArrayList<>();
     protected List<String> parentListIdsToExpand = new ArrayList<>();
@@ -264,11 +274,61 @@ public class MainView extends StandardMainView {
     }
 
     protected void searchFieldEnterPressListener(KeyPressEvent keyPressEvent) {
-        search(searchField.getValue());
+        performSearch(searchField.getValue());
     }
 
     protected void searchButtonClickListener(ClickEvent<Button> buttonClickEvent) {
-        search(searchField.getValue());
+        performSearch(searchField.getValue());
+    }
+
+    protected void performSearch(@Nullable String searchValue) {
+        search(searchValue);
+        updateUrlSearchParameter(searchValue);
+    }
+
+    protected void updateUrlSearchParameter(@Nullable String searchValue) {
+        getUI().ifPresent(ui ->
+                routeSupport.fetchCurrentLocation(ui, location -> {
+                    QueryParameters queryParameters = StringUtils.isEmpty(searchValue)
+                            ? removeQueryParameter(location.getQueryParameters(), SEARCH_QUERY_PARAM)
+                            : routeSupport.setQueryParameter(location.getQueryParameters(), SEARCH_QUERY_PARAM, searchValue);
+
+                    routeSupport.setLocation(ui, new Location(location.getPath(), queryParameters));
+                })
+        );
+    }
+
+    protected QueryParameters removeQueryParameter(QueryParameters queryParameters, String name) {
+        Map<String, List<String>> parameters = new HashMap<>(queryParameters.getParameters());
+        parameters.remove(name);
+
+        return new QueryParameters(parameters);
+    }
+
+    @Subscribe
+    public void onQueryParametersChange(final QueryParametersChangeEvent event) {
+        event.getQueryParameters().getSingleParameter(SEARCH_QUERY_PARAM)
+                .filter(value -> !value.equals(searchField.getValue()))
+                .ifPresent(value -> {
+                    searchField.setValue(value);
+                    search(value);
+                });
+    }
+
+    @Override
+    public void afterNavigation(AfterNavigationEvent event) {
+        super.afterNavigation(event);
+
+        Location location = event.getLocation();
+        String currentValue = searchField.getValue();
+        if (!StringUtils.isEmpty(currentValue)
+                && location.getQueryParameters().getSingleParameter(SEARCH_QUERY_PARAM).isEmpty()) {
+            QueryParameters queryParameters =
+                    routeSupport.setQueryParameter(location.getQueryParameters(), SEARCH_QUERY_PARAM, currentValue);
+
+            getUI().ifPresent(ui ->
+                    routeSupport.setLocation(ui, new Location(location.getPath(), queryParameters)));
+        }
     }
 
     @SuppressWarnings("ConstantConditions")
