@@ -783,6 +783,7 @@
         </menu>
         <menu id="tabsheet">
             <item id="tabsheet-simple" page="tabSheet"/>
+            <item id="tabsheet-states" page="tabSheet" isNew="true"/>
             <item id="tabsheet-icons" page="tabSheet"/>
             <item id="tabsheet-badges" page="tabSheet">
                 <otherFiles>
