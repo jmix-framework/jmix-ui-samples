@@ -422,7 +422,16 @@
                 </otherFiles>
             </item>
         </menu>
-        <item id="markdown" page="markdown" splitEnabled="true"/>
+        <menu id="markdown-components">
+            <item id="markdown" page="markdown" splitEnabled="true"/>
+            <item id="markdown-editor-simple" page="markdownEditor" splitEnabled="true" isNew="true"/>
+            <item id="markdown-editor-dataaware" page="markdownEditor" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="markdown-editor-theme-variant" page="markdownEditor" splitEnabled="true" isNew="true"/>
+        </menu>
         <menu id="multi-select-combo-box">
             <item id="multi-select-combo-box-simple" page="multiSelectComboBox">
                 <otherFiles>
@@ -850,7 +859,8 @@
             </otherFiles>
         </item>
         <menu id="fragments-facets" url="flow-ui/fragments">
-            <item id="fragment-data-load-coordinator" page="facets-in-fragment" anchor="fragmentDataLoadCoordinator" splitEnabled="true">
+            <item id="fragment-data-load-coordinator" page="facets-in-fragment" anchor="fragmentDataLoadCoordinator"
+                  splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/dataloadcoordinator/data-load-coordinator-fragment.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/dataloadcoordinator/DataLoadCoordinatorFragment.java"/>
@@ -865,7 +875,8 @@
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/timer/TimerFacetFragment.java"/>
                 </otherFiles>
             </item>
-            <item id="fragment-url-query-parameters" page="facets-in-fragment" anchor="urlQueryParameters" splitEnabled="true">
+            <item id="fragment-url-query-parameters" page="facets-in-fragment" anchor="urlQueryParameters"
+                  splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/urlqueryparameters/url-query-parameters-fragment.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/urlqueryparameters/UrlQueryParametersFragment.java"/>
@@ -1365,7 +1376,8 @@
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-custom-column" page="groupdatagrid-component" anchor="custom-grouping-column" splitEnabled="true">
+            <item id="group-data-grid-custom-column" page="groupdatagrid-component" anchor="custom-grouping-column"
+                  splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
