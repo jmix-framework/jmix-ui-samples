@@ -3,7 +3,7 @@
         <hbox padding="false">
             <h4 text="ProgressBar with indicator"/>
             <button id="controlButton"
-                    icon="PLAY" themeNames="icon tertiary-inline"/>
+                    icon="PLAY" classNames="link-button"/>
         </hbox>
         <hbox padding="false" justifyContent="BETWEEN" width="100%">
             <span id="labelSpan" text="Ready to start"/>

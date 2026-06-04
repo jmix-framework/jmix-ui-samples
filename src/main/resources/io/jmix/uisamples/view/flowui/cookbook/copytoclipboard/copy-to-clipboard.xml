@@ -2,7 +2,7 @@
     <layout>
         <textField id="textField" value="UI Samples">
             <suffix>
-                <button id="copyButton" icon="CLIPBOARD_TEXT" themeNames="tertiary-inline"/>
+                <button id="copyButton" icon="CLIPBOARD_TEXT" classNames="link-button"/>
             </suffix>
         </textField>
     </layout>
