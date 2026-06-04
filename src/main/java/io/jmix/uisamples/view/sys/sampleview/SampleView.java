@@ -17,8 +17,10 @@
 package io.jmix.uisamples.view.sys.sampleview;
 
 import com.google.common.base.Strings;
+import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.DetachEvent;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -36,6 +38,7 @@ import com.vaadin.flow.component.splitlayout.SplitLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
+import com.vaadin.flow.shared.Registration;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.Messages;
 import io.jmix.core.Resources;
@@ -58,6 +61,7 @@ import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
 import io.jmix.uisamples.config.UiSamplesMenuConfig;
 import io.jmix.uisamples.config.UiSamplesMenuItem;
+import io.jmix.uisamples.theme.ThemeManager;
 import io.jmix.uisamples.util.UiSamplesHelper;
 import io.jmix.uisamples.view.sys.main.MainView;
 import jakarta.servlet.ServletContext;
@@ -115,6 +119,8 @@ public class SampleView extends StandardView {
     protected Resources resources;
     @Autowired
     protected OverviewPageGenerator overviewPageGenerator;
+    @Autowired
+    protected ThemeManager themeManager;
     @Autowired(required = false)
     protected ServletContext servletContext;
 
@@ -124,6 +130,7 @@ public class SampleView extends StandardView {
     protected JmixTabSheet tabSheet;
     protected UiSamplesMenuItem menuItem;
     protected Set<CodeEditor> codeEditors = new HashSet<>();
+    protected Registration themeChangedRegistration;
 
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
@@ -143,6 +150,63 @@ public class SampleView extends StandardView {
         }
 
         super.afterNavigation(event);
+    }
+
+    @Override
+    protected void onAttach(AttachEvent attachEvent) {
+        super.onAttach(attachEvent);
+
+        // Reload the sample when the user switches the theme so the live demo and
+        // the source tabs reflect the new theme's components and resources.
+        themeChangedRegistration = themeManager.addThemeChangedListener(this::onThemeChanged);
+    }
+
+    @Override
+    protected void onDetach(DetachEvent detachEvent) {
+        if (themeChangedRegistration != null) {
+            themeChangedRegistration.remove();
+            themeChangedRegistration = null;
+        }
+
+        super.onDetach(detachEvent);
+    }
+
+    /**
+     * Reloads the current sample for the newly selected theme without a full
+     * browser page refresh. {@link UI#refreshCurrentRoute(boolean) Refreshing}
+     * the route (target only, parent layout reused) re-runs the navigation
+     * lifecycle: the inner sample view is recreated with its {@code theme-only}
+     * components re-evaluated and the source tabs resolved again for the active
+     * theme. The parent {@link MainView} layout is preserved, so the theme
+     * switcher and navigation menu keep their state.
+     */
+    protected void onThemeChanged(ThemeManager.ThemeChangedEvent event) {
+        if (sampleId == null) {
+            return;
+        }
+
+        getUI().ifPresent(ui -> {
+            keepSelectedTabOnRefresh(ui);
+            ui.refreshCurrentRoute(false);
+        });
+    }
+
+    /**
+     * Keeps the active source tab selected across a {@link UI#refreshCurrentRoute(boolean)}.
+     * The refresh re-navigates to the location Vaadin remembers for the route, but that location is
+     * updated only on real navigations — not by the {@code history.replaceState} that tracks the
+     * active tab (see {@link #createTabSheet()}). Re-seeding it with the current tab makes the
+     * recreated view restore the same tab through {@link #onQueryParametersChange} instead of
+     * falling back to the first one. No-op for overview pages, which have no source tabs.
+     */
+    protected void keepSelectedTabOnRefresh(UI ui) {
+        if (menuItem.isOverview() || tabSheet == null || tabSheet.getSelectedTab() == null) {
+            return;
+        }
+
+        Location location = new Location(getCurrentUrlPath(),
+                QueryParameters.of("tab", tabSheet.getSelectedTab().getLabel()));
+        ui.getInternals().setLocationForRefresh(location);
     }
 
     protected void updateSample(String sampleId) {
@@ -198,6 +262,7 @@ public class SampleView extends StandardView {
             splitLayout.setOrientation(SplitLayout.Orientation.VERTICAL);
             splitLayout.setWidthFull();
             splitLayout.setHeightFull();
+            splitLayout.addThemeName("splitter-spacing");
 
             VerticalLayout contentHolder = uiComponents.create(VerticalLayout.class);
             contentHolder.setPadding(false);

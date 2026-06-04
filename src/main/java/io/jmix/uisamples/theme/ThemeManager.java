@@ -23,6 +23,7 @@ import com.vaadin.flow.spring.annotation.UIScope;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.EventObject;
 import java.util.List;
 
 /**
@@ -40,6 +41,12 @@ import java.util.List;
  * tracks its own active stylesheets and survives in-app navigation (the
  * application layout is not recreated).
  *
+ * <p>A {@link ThemeChangedEvent} is published to {@link #addThemeChangedListener
+ * registered listeners} when the user switches the theme via
+ * {@link #applyTheme(AppTheme)}, so views whose content depends on the active
+ * theme (notably the sample view, which shows theme-specific source files and
+ * demo components) can reload themselves without a full browser page refresh.
+ *
  * @see AppTheme
  * @see io.jmix.uisamples.bean.ThemeUiInitListener
  * @see io.jmix.uisamples.action.UserMenuAppThemeSwitchAction
@@ -53,6 +60,7 @@ public class ThemeManager {
 
     private AppTheme currentTheme = AppTheme.getDefault();
     private final List<Registration> activeRegistrations = new ArrayList<>();
+    private final List<ThemeChangedListener> themeChangedListeners = new ArrayList<>();
 
     /**
      * Switches the current UI to the given theme and persists the selection in
@@ -61,12 +69,23 @@ public class ThemeManager {
      * stylesheets are injected. Intended to be called when the user picks a
      * theme via the UI.
      *
+     * <p>When the theme actually changes, a {@link ThemeChangedEvent} is
+     * published to {@link #addThemeChangedListener registered listeners} so they
+     * can react (e.g. reload theme-dependent content). Selecting the already
+     * active theme applies the stylesheets again but fires no event.
+     *
      * @param theme the theme to apply (non-null)
      */
     public void applyTheme(AppTheme theme) {
+        AppTheme previousTheme = currentTheme;
+
         applyInitial(theme);
         UI.getCurrent().getPage().executeJs("localStorage.setItem($0, $1)",
                 THEME_STORAGE_KEY, theme.getId());
+
+        if (previousTheme != theme) {
+            fireThemeChangedEvent(new ThemeChangedEvent(this, previousTheme, theme));
+        }
     }
 
     /**
@@ -93,5 +112,75 @@ public class ThemeManager {
     /** @return the theme currently applied to this UI. */
     public AppTheme getCurrentTheme() {
         return currentTheme;
+    }
+
+    /**
+     * Registers a listener notified whenever the user switches the theme via
+     * {@link #applyTheme(AppTheme)}. Typically used by views whose content
+     * depends on the active theme (e.g. the sample view) to reload themselves
+     * without a full browser page refresh.
+     *
+     * @param listener the listener to add (non-null)
+     * @return a handle for removing the listener; call {@link Registration#remove()}
+     *         when the listener is no longer needed (e.g. on view detach)
+     */
+    public Registration addThemeChangedListener(ThemeChangedListener listener) {
+        themeChangedListeners.add(listener);
+        return () -> themeChangedListeners.remove(listener);
+    }
+
+    protected void fireThemeChangedEvent(ThemeChangedEvent event) {
+        // Iterate over a copy: a listener may trigger a view refresh that
+        // re-registers/removes listeners while the event is being dispatched.
+        for (ThemeChangedListener listener : List.copyOf(themeChangedListeners)) {
+            listener.onThemeChanged(event);
+        }
+    }
+
+    /**
+     * Published by {@link ThemeManager} after the user switches the application
+     * theme at runtime via {@link #applyTheme(AppTheme)}. It is <b>not</b>
+     * published for the theme applied at UI start nor for the {@code localStorage}
+     * restore (both go through {@link #applyInitial(AppTheme)}), so listeners
+     * react only to deliberate user-initiated switches.
+     *
+     * @see #addThemeChangedListener(ThemeChangedListener)
+     */
+    public static class ThemeChangedEvent extends EventObject {
+
+        private final AppTheme previousTheme;
+        private final AppTheme theme;
+
+        public ThemeChangedEvent(ThemeManager source, AppTheme previousTheme, AppTheme theme) {
+            super(source);
+            this.previousTheme = previousTheme;
+            this.theme = theme;
+        }
+
+        @Override
+        public ThemeManager getSource() {
+            return (ThemeManager) super.getSource();
+        }
+
+        /** @return the theme that was active before the switch. */
+        public AppTheme getPreviousTheme() {
+            return previousTheme;
+        }
+
+        /** @return the theme that is now active. */
+        public AppTheme getTheme() {
+            return theme;
+        }
+    }
+
+    /**
+     * Listener notified when the user switches the application theme at runtime.
+     *
+     * @see #addThemeChangedListener(ThemeChangedListener)
+     */
+    @FunctionalInterface
+    public interface ThemeChangedListener {
+
+        void onThemeChanged(ThemeChangedEvent event);
     }
 }
