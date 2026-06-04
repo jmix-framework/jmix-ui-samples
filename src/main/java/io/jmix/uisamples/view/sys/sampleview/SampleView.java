@@ -284,7 +284,7 @@ public class SampleView extends StandardView {
 
             getContent().add(splitLayout);
         } else {
-            sampleViewContent.setHeight(null);
+            sampleViewContent.setHeight("auto");
             getContent().add(sampleViewContent);
             getContent().add(tabSheet);
 
