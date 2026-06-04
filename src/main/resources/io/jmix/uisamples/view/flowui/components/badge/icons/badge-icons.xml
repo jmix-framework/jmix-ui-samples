@@ -11,6 +11,10 @@
                         <icon icon="CHECK" classNames="badged-icon"/>
                         <span text="Confirmed"/>
                     </span>
+                    <span themeNames="badge warning">
+                        <icon icon="WARNING" classNames="badged-icon"/>
+                        <span text="Warning"/>
+                    </span>
                     <span themeNames="badge error">
                         <icon icon="EXCLAMATION_CIRCLE_O" classNames="badged-icon"/>
                         <span text="Denied"/>
@@ -29,6 +33,10 @@
                         <span text="Confirmed"/>
                         <icon icon="CHECK" classNames="badged-icon"/>
                     </span>
+                    <span themeNames="badge warning">
+                        <span text="Warning"/>
+                        <icon icon="WARNING" classNames="badged-icon"/>
+                    </span>
                     <span themeNames="badge error">
                         <span text="Denied"/>
                         <icon icon="EXCLAMATION_CIRCLE_O" classNames="badged-icon"/>
@@ -42,8 +50,8 @@
         </details>
         <details summaryText="Icon-Only" opened="true">
             <hbox wrap="true">
-                <icon id="checkIcon" icon="CHECK"/>
-                <icon id="closeIcon" icon="CLOSE_SMALL"/>
+                <icon id="checkIcon" icon="CHECK" classNames="badged-icon"/>
+                <icon id="closeIcon" icon="CLOSE_SMALL" classNames="badged-icon"/>
             </hbox>
         </details>
     </layout>

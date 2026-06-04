@@ -2,6 +2,7 @@
     <layout classNames="horizontal-layout">
         <span text="Pending" themeNames="badge normal"/>
         <span text="Confirmed" themeNames="badge success"/>
+        <span text="Warning" themeNames="badge warning"/>
         <span text="Denied" themeNames="badge error"/>
         <span text="On hold" themeNames="badge contrast"/>
     </layout>

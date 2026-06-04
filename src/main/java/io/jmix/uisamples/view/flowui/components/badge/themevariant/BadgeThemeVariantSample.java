@@ -53,6 +53,6 @@ public class BadgeThemeVariantSample extends StandardView {
     }
 
     protected List<String> getSettingsCheckboxGroupItems() {
-        return List.of("Text", "Icon", "Primary", "Pill", "Success", "Error", "Contrast", "Small");
+        return List.of("Text", "Icon", "Primary", "Pill", "Success", "Warning", "Error", "Contrast", "Small");
     }
 }

@@ -1,4 +1,9 @@
 
 .badged-icon {
-    padding: var(--vaadin-padding-xs);
+    box-sizing: content-box;
+}
+
+.badged-icon[theme~="badge"] {
+    min-width: 1em;
+    gap: 0;
 }
