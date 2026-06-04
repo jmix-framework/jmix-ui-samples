@@ -16,46 +16,46 @@ class UiSamplesHelperTest {
     private final UiSamplesHelper helper = new UiSamplesHelper(null, null, null);
 
     @Test
-    void content_without_markers_is_unchanged() {
+    void contentWithoutMarkersIsUnchanged() {
         String src = "line A\nline B\nline C";
         assertEquals(src, helper.stripForDisplay(src, "aura"));
         assertEquals(src, helper.stripForDisplay(src, "lumo"));
     }
 
     @Test
-    void theme_only_block_kept_under_matching_theme_markers_removed() {
+    void themeOnlyBlockKeptUnderMatchingThemeMarkersRemoved() {
         String src = "line A\n// theme-only:lumo\nline B\n// theme-only:lumo:end\nline C";
         assertEquals("line A\nline B\nline C", helper.stripForDisplay(src, "lumo"));
     }
 
     @Test
-    void theme_only_block_dropped_under_other_theme() {
+    void themeOnlyBlockDroppedUnderOtherTheme() {
         String src = "line A\n// theme-only:lumo\nline B\n// theme-only:lumo:end\nline C";
         assertEquals("line A\nline C", helper.stripForDisplay(src, "aura"));
     }
 
     @Test
-    void xml_theme_only_block_handled() {
+    void xmlThemeOnlyBlockHandled() {
         String src = "<a/>\n<!-- theme-only:lumo -->\n<b id=\"x\"/>\n<!-- theme-only:lumo:end -->\n<c/>";
         assertEquals("<a/>\n<b id=\"x\"/>\n<c/>", helper.stripForDisplay(src, "lumo"));
         assertEquals("<a/>\n<c/>", helper.stripForDisplay(src, "aura"));
     }
 
     @Test
-    void sample_hide_inline_drops_the_line_under_any_theme() {
+    void sampleHideInlineDropsTheLineUnderAnyTheme() {
         String src = "keep1\ndrop me // sample-hide\nkeep2";
         assertEquals("keep1\nkeep2", helper.stripForDisplay(src, "aura"));
         assertEquals("keep1\nkeep2", helper.stripForDisplay(src, "lumo"));
     }
 
     @Test
-    void sample_hide_block_drops_the_span() {
+    void sampleHideBlockDropsTheSpan() {
         String src = "keep1\n// sample-hide:start\nx\ny\n// sample-hide:end\nkeep2";
         assertEquals("keep1\nkeep2", helper.stripForDisplay(src, "aura"));
     }
 
     @Test
-    void sample_hide_guard_around_theme_only_block() {
+    void sampleHideGuardAroundThemeOnlyBlock() {
         // Mirrors ButtonThemeVariantSample#getSettingsCheckboxGroupItems
         String src = """
                 List<String> items = base;
@@ -105,18 +105,18 @@ class UiSamplesHelperTest {
             </view>""";
 
     @Test
-    void foreign_theme_ids_collected_under_active_aura() {
+    void foreignThemeIdsCollectedUnderActiveAura() {
         assertEquals(List.of("contrastLabel", "contrastProgressBar"),
                 helper.themeHiddenComponentIds(PROGRESS_BAR_XML, "aura"));
     }
 
     @Test
-    void no_ids_hidden_under_the_blocks_own_theme() {
+    void noIdsHiddenUnderTheBlocksOwnTheme() {
         assertTrue(helper.themeHiddenComponentIds(PROGRESS_BAR_XML, "lumo").isEmpty());
     }
 
     @Test
-    void foreign_theme_ids_collected_from_nested_blocks() {
+    void foreignThemeIdsCollectedFromNestedBlocks() {
         assertEquals(List.of("contrastButton", "tertiaryInlineButton"),
                 helper.themeHiddenComponentIds(BUTTON_XML, "aura"));
         assertTrue(helper.themeHiddenComponentIds(BUTTON_XML, "lumo").isEmpty());

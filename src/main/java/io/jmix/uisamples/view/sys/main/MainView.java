@@ -49,7 +49,6 @@ import io.jmix.uisamples.config.UiSamplesMenuItem;
 import io.jmix.uisamples.icon.UiSamplesIcon;
 import io.jmix.uisamples.view.sys.sampleview.SampleView;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.Strings;
 import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -58,7 +57,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 @Route("")
 @ViewController("MainView")
@@ -67,6 +68,7 @@ import java.util.Map;
 public class MainView extends StandardMainView {
 
     protected static final String SEARCH_QUERY_PARAM = "search";
+    protected static final Pattern NON_ALPHANUMERIC_PATTERN = Pattern.compile("[^\\p{IsAlphabetic}\\p{Nd}]");
 
     @ViewComponent
     protected MessageBundle messageBundle;
@@ -373,7 +375,43 @@ public class MainView extends StandardMainView {
     }
 
     protected boolean matchSearchValue(JmixListMenu.MenuItem item, @Nullable String searchValue) {
-        return searchValue == null || Strings.CI.contains(item.getTitle(), searchValue);
+        return searchValue == null || matchesQuery(item.getTitle(), searchValue);
+    }
+
+    /**
+     * Token-AND matching: the title matches when every whitespace-separated token of the query
+     * occurs in it as a substring, compared case- and separator-insensitively (lower-cased, with
+     * spaces, hyphens, etc. stripped). So both {@code "text field"} and {@code "textfield"} match
+     * "TextField", and {@code "button action"} matches "Button with Action", while staying as precise
+     * as a substring search — unlike fuzzy/subsequence matching, which is noisy on short queries.
+     * Tokens may appear in any order.
+     */
+    protected static boolean matchesQuery(@Nullable String title, @Nullable String query) {
+        String normalizedTitle = normalizeForSearch(title);
+        List<String> tokens = tokenize(query);
+
+        return tokens.isEmpty() || tokens.stream().allMatch(normalizedTitle::contains);
+    }
+
+    protected static List<String> tokenize(@Nullable String query) {
+        if (query == null) {
+            return Collections.emptyList();
+        }
+
+        List<String> tokens = new ArrayList<>();
+        for (String token : query.trim().split("\\s+")) {
+            String normalizedToken = normalizeForSearch(token);
+            if (!normalizedToken.isEmpty()) {
+                tokens.add(normalizedToken);
+            }
+        }
+        return tokens;
+    }
+
+    protected static String normalizeForSearch(@Nullable String value) {
+        return value == null
+                ? ""
+                : NON_ALPHANUMERIC_PATTERN.matcher(value.toLowerCase(Locale.ROOT)).replaceAll("");
     }
 
     @SuppressWarnings("ConstantConditions")
@@ -383,11 +421,11 @@ public class MainView extends StandardMainView {
             if (item.isMenu() && item instanceof ListMenu.MenuBarItem menuItem && menuItem.hasChildren()) {
                 if (!menuItem.isOpened()) {
                     menu.removeMenuItem(item);
-                } else if (!Strings.CI.contains(item.getTitle(), searchValue)
+                } else if (!matchesQuery(item.getTitle(), searchValue)
                         || showNew && item.getSuffixComponent() == null) {
                     removeNotRequestedItems(menuItem.getChildItems(), searchValue);
                 }
-            } else if (!Strings.CI.contains(item.getTitle(), searchValue)
+            } else if (!matchesQuery(item.getTitle(), searchValue)
                     || showNew && item.getSuffixComponent() == null) {
                 menu.removeMenuItem(item);
             }
