@@ -143,7 +143,7 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="data-grid-sort-event" page="dataGrid" splitEnabled="true" isNew="true">
+            <item id="data-grid-sort-event" page="dataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -754,7 +754,7 @@
             </item>
         </menu>
         <item id="scroller" page="scroller" splitEnabled="true"/>
-        <menu id="side-panel-layout" isNew="true">
+        <menu id="side-panel-layout">
             <item id="side-panel-layout-simple" page="sidePanelLayout" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
@@ -802,7 +802,7 @@
                 </otherFiles>
             </item>
             <item id="background-task-dialog" page="background-tasks" anchor="notes-and-tips"/>
-            <item id="side-dialog" page="dialogs" anchor="side-dialog" isNew="true"/>
+            <item id="side-dialog" page="dialogs" anchor="side-dialog"/>
         </menu>
         <menu id="notifications">
             <item id="notification-simple" page="notifications"/>
@@ -849,7 +849,7 @@
                 <file name="{currentTheme}/fragments/employee-info.css"/>
             </otherFiles>
         </item>
-        <menu id="fragments-facets" isNew="true" url="flow-ui/fragments">
+        <menu id="fragments-facets" url="flow-ui/fragments">
             <item id="fragment-data-load-coordinator" page="facets-in-fragment" anchor="fragmentDataLoadCoordinator" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/dataloadcoordinator/data-load-coordinator-fragment.xml"/>
