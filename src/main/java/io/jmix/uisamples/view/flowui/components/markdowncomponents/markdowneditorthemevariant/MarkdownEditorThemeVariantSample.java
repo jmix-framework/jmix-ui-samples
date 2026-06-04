@@ -1,4 +1,4 @@
-package io.jmix.uisamples.view.flowui.components.markdowneditor.themevariant;
+package io.jmix.uisamples.view.flowui.components.markdowncomponents.markdowneditorthemevariant;
 
 import io.jmix.flowui.view.StandardView;
 import io.jmix.flowui.view.ViewController;

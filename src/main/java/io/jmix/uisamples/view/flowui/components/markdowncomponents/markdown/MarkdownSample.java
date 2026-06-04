@@ -1,4 +1,4 @@
-package io.jmix.uisamples.view.flowui.components.markdown;
+package io.jmix.uisamples.view.flowui.components.markdowncomponents.markdown;
 
 import com.vaadin.flow.component.markdown.Markdown;
 import io.jmix.core.Resources;

@@ -1,4 +1,4 @@
-package io.jmix.uisamples.view.flowui.components.markdowneditor.simple;
+package io.jmix.uisamples.view.flowui.components.markdowncomponents.markdowneditorsimple;
 
 import io.jmix.flowui.component.markdowneditor.MarkdownEditor;
 import io.jmix.flowui.view.*;

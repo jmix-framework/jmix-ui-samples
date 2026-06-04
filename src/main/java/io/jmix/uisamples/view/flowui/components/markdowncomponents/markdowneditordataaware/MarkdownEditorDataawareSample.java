@@ -1,4 +1,4 @@
-package io.jmix.uisamples.view.flowui.components.markdowneditor.dataaware;
+package io.jmix.uisamples.view.flowui.components.markdowncomponents.markdowneditordataaware;
 
 import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;
 import com.vaadin.flow.component.html.Span;
