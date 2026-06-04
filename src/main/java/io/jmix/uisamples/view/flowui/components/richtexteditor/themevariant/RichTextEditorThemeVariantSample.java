@@ -3,7 +3,9 @@ package io.jmix.uisamples.view.flowui.components.richtexteditor.themevariant;
 import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;
 import io.jmix.flowui.component.checkbox.JmixCheckbox;
 import io.jmix.flowui.component.richtexteditor.RichTextEditor;
+// theme-only:lumo
 import io.jmix.flowui.kit.component.richtexteditor.RichTextEditorVariant;
+// theme-only:lumo:end
 import io.jmix.flowui.view.*;
 
 @ViewController("rich-text-editor-theme-variant")
@@ -17,7 +19,7 @@ public class RichTextEditorThemeVariantSample extends StandardView {
     protected void onInit(InitEvent event) {
         richTextEditor.setValue("<p><strong>Bold</strong> <em>Italic</em> <u>Underline</u> <s>Strikethrough</s></p>");
     }
-
+    // theme-only:lumo
     @Subscribe("noBorderCheckbox")
     protected void onHighlightCheckboxValueChange(ComponentValueChangeEvent<JmixCheckbox, Boolean> event) {
         if (event.getValue()) {
@@ -35,6 +37,7 @@ public class RichTextEditorThemeVariantSample extends StandardView {
             richTextEditor.removeThemeVariants(RichTextEditorVariant.LUMO_COMPACT);
         }
     }
+    // theme-only:lumo:end
 
     @Subscribe("readOnlyCheckbox")
     protected void onGutterCheckboxValueChange(ComponentValueChangeEvent<JmixCheckbox, Boolean> event) {

@@ -1,6 +1,8 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
+        <!-- theme-only:lumo -->
         <checkbox id="iconControlCheckbox" label="Icon on top"/>
+        <!-- theme-only:lumo:end -->
         <tabs id="tabs" width="100%">
             <tab id="profileTab">
                 <icon icon="USER"/>
