@@ -1,0 +1,39 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout classNames="dnd-effects">
+        <hbox width="100%" height="100%">
+            <vbox id="sourcePanel" classNames="dnd-panel" minHeight="20em">
+                <span text="Drag sources" classNames="bold"/>
+                <div id="card1" classNames="dnd-card">
+                    <span text="Item 1"/>
+                </div>
+                <div id="card2" classNames="dnd-card">
+                    <span text="Item 2"/>
+                </div>
+                <div id="card3" classNames="dnd-card">
+                    <span text="Item 3"/>
+                </div>
+                <div id="card4" classNames="dnd-card">
+                    <span text="Item 4"/>
+                </div>
+                <div id="card5" classNames="dnd-card">
+                    <span text="Item 5"/>
+                </div>
+                <div id="card6" classNames="dnd-card">
+                    <span text="Item 6"/>
+                </div>
+            </vbox>
+            <vbox id="moveZone" classNames="dnd-zone" minHeight="20em">
+                <span text="Move here" classNames="bold"/>
+            </vbox>
+            <vbox id="copyZone" classNames="dnd-zone" minHeight="20em">
+                <span text="Copy here" classNames="bold"/>
+            </vbox>
+            <vbox id="linkZone" classNames="dnd-zone" minHeight="20em">
+                <span text="Link here" classNames="bold"/>
+            </vbox>
+            <vbox id="noneZone" classNames="dnd-zone" minHeight="20em">
+                <span text="No drop" classNames="bold"/>
+            </vbox>
+        </hbox>
+    </layout>
+</view>

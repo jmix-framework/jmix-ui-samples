@@ -1,0 +1,121 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:groupg="http://jmix.io/schema/groupgrid/ui">
+    <data>
+        <collection id="customersSourceDc" class="io.jmix.uisamples.entity.Customer" fetchPlan="_base">
+            <loader id="customersSourceDl">
+                <query>
+                    <![CDATA[select e from Customer e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="customersTargetDc" class="io.jmix.uisamples.entity.Customer" fetchPlan="_base"/>
+
+        <collection id="tasksSourceDc" class="io.jmix.uisamples.entity.Task">
+            <fetchPlan extends="_local">
+                <property name="parentTask" fetchPlan="_local"/>
+                <property name="assignee" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="tasksSourceDl">
+                <query>
+                    <![CDATA[select e from Task e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="tasksTargetDc" class="io.jmix.uisamples.entity.Task">
+            <fetchPlan extends="_local">
+                <property name="parentTask" fetchPlan="_local"/>
+                <property name="assignee" fetchPlan="_local"/>
+            </fetchPlan>
+        </collection>
+
+        <collection id="customersGroupSourceDc" class="io.jmix.uisamples.entity.Customer" fetchPlan="_base">
+            <loader id="customersGroupSourceDl">
+                <query>
+                    <![CDATA[select e from Customer e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="customersGroupTargetDc" class="io.jmix.uisamples.entity.Customer" fetchPlan="_base"/>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <tabSheet width="100%" height="100%">
+            <tab id="dataGridTab" label="DataGrid">
+                <hbox width="100%" height="100%">
+                    <dataGrid id="customersSourceGrid" dataContainer="customersSourceDc"
+                              height="100%"
+                              rowsDraggable="true" dropMode="ON_GRID" minHeight="20em">
+                        <columns>
+                            <column property="name"/>
+                            <column property="lastName"/>
+                            <column property="grade"/>
+                        </columns>
+                    </dataGrid>
+                    <dataGrid id="customersTargetGrid" dataContainer="customersTargetDc"
+                              height="100%"
+                              rowsDraggable="true" dropMode="ON_GRID" minHeight="20em">
+                        <columns>
+                            <column property="name"/>
+                            <column property="lastName"/>
+                            <column property="grade"/>
+                        </columns>
+                    </dataGrid>
+                </hbox>
+            </tab>
+            <tab id="treeDataGridTab" label="TreeDataGrid">
+                <hbox width="100%" height="100%">
+                    <treeDataGrid id="tasksSourceGrid" dataContainer="tasksSourceDc"
+                                  hierarchyProperty="parentTask"
+                                  height="100%"
+                                  rowsDraggable="true" dropMode="ON_GRID" minHeight="20em">
+                        <columns>
+                            <column property="name"/>
+                            <column property="assignee"/>
+                        </columns>
+                    </treeDataGrid>
+                    <treeDataGrid id="tasksTargetGrid" dataContainer="tasksTargetDc"
+                                  hierarchyProperty="parentTask"
+                                  height="100%"
+                                  rowsDraggable="true" dropMode="ON_GRID" minHeight="20em">
+                        <columns>
+                            <column property="name"/>
+                            <column property="assignee"/>
+                        </columns>
+                    </treeDataGrid>
+                </hbox>
+            </tab>
+            <tab id="groupDataGridTab" label="GroupDataGrid">
+                <hbox width="100%" height="100%">
+                    <groupg:groupDataGrid id="customersGroupSourceGrid" dataContainer="customersGroupSourceDc"
+                                          height="100%"
+                                          rowsDraggable="true" dropMode="ON_GRID" minHeight="20em">
+                        <groupg:groupBy>
+                            <groupg:columnRef key="grade"/>
+                        </groupg:groupBy>
+                        <groupg:columns>
+                            <groupg:groupColumn header="Group"/>
+                            <groupg:column property="grade"/>
+                            <groupg:column property="name"/>
+                            <groupg:column property="lastName"/>
+                        </groupg:columns>
+                    </groupg:groupDataGrid>
+                    <groupg:groupDataGrid id="customersGroupTargetGrid" dataContainer="customersGroupTargetDc"
+                                          height="100%"
+                                          rowsDraggable="true" dropMode="ON_GRID" minHeight="20em">
+                        <groupg:groupBy>
+                            <groupg:columnRef key="grade"/>
+                        </groupg:groupBy>
+                        <groupg:columns>
+                            <groupg:groupColumn header="Group"/>
+                            <groupg:column property="grade"/>
+                            <groupg:column property="name"/>
+                            <groupg:column property="lastName"/>
+                        </groupg:columns>
+                    </groupg:groupDataGrid>
+                </hbox>
+            </tab>
+        </tabSheet>
+    </layout>
+</view>

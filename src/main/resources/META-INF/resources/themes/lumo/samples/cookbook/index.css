@@ -16,3 +16,8 @@
 
 @import './wizard-dialog.css';
 @import './third-step.css';
+@import './dnd-components.css';
+@import './dnd-events.css';
+@import './dnd-effects.css';
+@import './dnd-conditional.css';
+@import './dnd-styling.css';

@@ -1599,6 +1599,34 @@
                 </otherFiles>
             </item>
         </menu>
+        <menu id="cookbook-drag-drop" isNew="true">
+            <item id="dnd-data-grid" splitEnabled="true"/>
+            <item id="dnd-components" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-components.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-events" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-events.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-effects" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-effects.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-conditional-drop" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-conditional.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-styling" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-styling.css"/>
+                </otherFiles>
+            </item>
+        </menu>
         <menu id="cookbook-other">
             <item id="copy-to-clipboard"/>
             <item id="custom-login" splitEnabled="true">
