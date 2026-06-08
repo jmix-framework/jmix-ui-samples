@@ -287,6 +287,7 @@ public class SampleView extends StandardView {
             sampleViewContent.setHeight("auto");
             getContent().add(sampleViewContent);
             getContent().add(tabSheet);
+            sampleViewContent.getStyle().set("flex-shrink", "0");
 
             getContent().expand(tabSheet);
         }
