@@ -1,5 +1,6 @@
 package io.jmix.uisamples.util;
 
+import io.jmix.uisamples.theme.AppTheme;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -120,5 +121,15 @@ class UiSamplesHelperTest {
         assertEquals(List.of("contrastButton", "tertiaryInlineButton"),
                 helper.themeHiddenComponentIds(BUTTON_XML, "aura"));
         assertTrue(helper.themeHiddenComponentIds(BUTTON_XML, "lumo").isEmpty());
+    }
+
+    // --- getCurrentThemeId fallback outside a Vaadin UI (e.g. the /doc REST endpoint) ---
+
+    @Test
+    void currentThemeIdFallsBackToDefaultWithoutUi() {
+        // No Vaadin UI is bound to the test thread, so the UI-scoped ThemeManager can't be
+        // resolved; getCurrentThemeId() must return the default theme id instead of throwing
+        // (themeManagerProvider is null here and must not be touched on this path).
+        assertEquals(AppTheme.getDefault().getId(), helper.getCurrentThemeId());
     }
 }

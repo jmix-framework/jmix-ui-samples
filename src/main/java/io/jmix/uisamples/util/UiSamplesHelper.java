@@ -16,10 +16,12 @@
 
 package io.jmix.uisamples.util;
 
+import com.vaadin.flow.component.UI;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.Resources;
 import io.jmix.core.common.util.Dom4j;
 import io.jmix.flowui.view.ViewInfo;
+import io.jmix.uisamples.theme.AppTheme;
 import io.jmix.uisamples.theme.ThemeManager;
 import org.apache.commons.io.FileUtils;
 import org.dom4j.Comment;
@@ -70,7 +72,9 @@ public class UiSamplesHelper {
      */
     static final String THEME_ONLY_MARKER = "theme-only:";
 
-    /** Suffix that turns a {@link #THEME_ONLY_MARKER} into its closing marker. */
+    /**
+     * Suffix that turns a {@link #THEME_ONLY_MARKER} into its closing marker.
+     */
     static final String MARKER_END_SUFFIX = ":end";
 
     /**
@@ -119,7 +123,14 @@ public class UiSamplesHelper {
      * @return the id of the theme currently applied to this UI (e.g. {@code "lumo"} / {@code "aura"}).
      */
     public String getCurrentThemeId() {
-        return themeManagerProvider.getObject().getCurrentTheme().getId();
+        if (UI.getCurrent() != null) {
+            ThemeManager themeManager = themeManagerProvider.getIfAvailable();
+            if (themeManager != null) {
+                return themeManager.getCurrentTheme().getId();
+            }
+        }
+
+        return AppTheme.getDefault().getId();
     }
 
     private String currentThemePrefix() {
