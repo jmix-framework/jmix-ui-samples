@@ -39,6 +39,7 @@
             <tag text="passwordField" route="password-field-simple" classNames="overview-tag-font overview-tag-green"/>
             <tag text="codeEditor" route="code-editor-simple" classNames="overview-tag-font overview-tag-green"/>
             <tag text="richTextEditor" route="rich-text-editor-simple" classNames="overview-tag-font overview-tag-green"/>
+            <tag text="markdownEditor" route="markdown-editor-simple" classNames="overview-tag-font overview-tag-green"/>
             <tag text="numberField" route="number-field-simple" classNames="overview-tag-font overview-tag-green"/>
             <tag text="bigDecimalField"
                  route="big-decimal-field-simple"
