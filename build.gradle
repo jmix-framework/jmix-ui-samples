@@ -1,6 +1,6 @@
 plugins {
     // todo kd, replace by stable version
-    id 'io.jmix' version '3.0.0-M1'
+    id 'io.jmix' version '3.0.0-RC1'
     id 'java'
     id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.9'
     id 'war'
@@ -11,7 +11,7 @@ apply plugin: 'com.vaadin'
 
 jmix {
     // todo kd, replace by stable version
-    bomVersion = '3.0.999-SNAPSHOT'
+    bomVersion = '3.0.0-RC1'
 }
 
 group = 'io.jmix.uisamples'

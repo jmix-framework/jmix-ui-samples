@@ -1,9 +1,1 @@
-// todo kd, remove before merge
-pluginManagement {
-    repositories {
-        mavenLocal()
-        gradlePluginPortal()
-    }
-}
-
 rootProject.name = 'jmix-ui-samples'
