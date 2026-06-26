@@ -45,7 +45,7 @@ public class SideDialogSample extends StandardView {
         header.setJustifyContentMode(FlexComponent.JustifyContentMode.BETWEEN);
 
         Button closeButton = new Button(LumoIcon.CROSS.create(), event -> sideDialog.close());
-        closeButton.addThemeVariants(ButtonVariant.LUMO_TERTIARY, ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_CONTRAST);
+        closeButton.addThemeVariants(ButtonVariant.TERTIARY);
         header.add(closeButton);
 
         return header;
@@ -60,7 +60,7 @@ public class SideDialogSample extends StandardView {
             root.setTitle(item);
             root.setHeaderSuffix(LumoIcon.CROSS.create());
             root.add(messageBundle.getMessage("activityDescription"));
-            root.addThemeVariants(CardVariant.LUMO_HORIZONTAL);
+            root.addThemeVariants(CardVariant.HORIZONTAL);
             root.addClassName(LumoUtility.Margin.Bottom.MEDIUM);
             return root;
         })));

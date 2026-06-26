@@ -14,7 +14,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <hbox id="buttonsPanel" classNames="buttons-panel">
+        <hbox id="buttonsPanel" width="100%" wrap="true">
             <button id="createBtn" action="readOnlyCustomersDataGrid.create"/>
             <button id="editBtn" action="readOnlyCustomersDataGrid.edit"/>
             <button id="removeBtn" action="readOnlyCustomersDataGrid.remove"/>

@@ -1,0 +1,9 @@
+
+.tabs-theme-variant .tabs-count-control-box {
+    gap: var(--vaadin-gap-s)
+}
+
+.tabs-theme-variant .control-label {
+    font-size: var(--aura-font-size-s);
+    font-weight: 500;
+}

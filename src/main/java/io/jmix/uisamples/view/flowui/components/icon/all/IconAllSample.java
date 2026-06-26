@@ -19,6 +19,7 @@ import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.radiobuttongroup.JmixRadioButtonGroup;
 import io.jmix.flowui.component.textfield.TypedTextField;
 import io.jmix.flowui.kit.component.button.JmixButton;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -138,7 +139,8 @@ public class IconAllSample extends StandardView {
     protected JmixButton createSearchButton() {
         JmixButton searchButton = uiComponents.create(JmixButton.class);
         searchButton.setIcon(VaadinIcon.SEARCH.create());
-        searchButton.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
+        searchButton.addThemeVariants(ButtonVariant.LUMO_ICON);
+        searchButton.addClassName(StyleUtility.Button.LINK_BUTTON);
 
         searchButton.addClickListener(this::searchButtonClickListener);
 

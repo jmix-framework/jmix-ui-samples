@@ -13,7 +13,7 @@
     <facets>
         <dataLoadCoordinator auto="true"/>
     </facets>
-    <layout alignItems="CENTER">
+    <layout alignItems="CENTER" classNames="virtual-list-simple">
         <virtualList id="virtualList" width="30em"
                      itemsContainer="customersDc"
                      alignSelf="CENTER"/>

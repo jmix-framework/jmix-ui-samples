@@ -16,16 +16,22 @@
 
 package io.jmix.uisamples;
 
+import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.component.page.Push;
 import com.vaadin.flow.server.PWA;
-import com.vaadin.flow.theme.Theme;
+import io.jmix.core.impl.scanning.AnnotationScanMetadataReaderFactory;
+import io.jmix.flowui.sys.ActionsConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+import java.util.List;
 
 @Push
-@Theme(value = "jmix-ui-samples")
+@JsModule("./src/theme/color-scheme-switching-support.js")
 @PWA(name = "Jmix UI Samples", shortName = "Jmix UI Samples", offline = false)
 @SpringBootApplication
 public class UiSamplesApplication extends SpringBootServletInitializer implements AppShellConfigurator {
@@ -34,4 +40,11 @@ public class UiSamplesApplication extends SpringBootServletInitializer implement
         SpringApplication.run(UiSamplesApplication.class, args);
     }
 
+    @Bean
+    public ActionsConfiguration uisamplesActions(ApplicationContext applicationContext,
+                                                 AnnotationScanMetadataReaderFactory metadataReaderFactory) {
+        ActionsConfiguration actionsConfiguration = new ActionsConfiguration(applicationContext, metadataReaderFactory);
+        actionsConfiguration.setBasePackages(List.of("io.jmix.uisamples.action"));
+        return actionsConfiguration;
+    }
 }

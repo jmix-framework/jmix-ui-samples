@@ -1,0 +1,8 @@
+
+.employee-info {
+    margin-bottom: var(--vaadin-padding-m);
+}
+
+.employee-info .employee-name {
+    gap: var(--vaadin-gap-xs);
+}

@@ -1,10 +1,10 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-<layout>
-    <upload id="upload"
-                     dropAllowed="true"
-                     maxFileSize="10000"
-                     receiverType="MULTI_FILE_MEMORY_BUFFER"
-                     maxFiles="3"
-    />
-</layout>
+    <layout>
+        <upload id="upload"
+                dropAllowed="true"
+                maxFileSize="10000"
+                uploadHandlerType="IN_MEMORY"
+                maxFiles="3"
+        />
+    </layout>
 </view>

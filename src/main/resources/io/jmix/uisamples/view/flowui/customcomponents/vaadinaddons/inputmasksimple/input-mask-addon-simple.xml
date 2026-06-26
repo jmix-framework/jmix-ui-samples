@@ -3,7 +3,7 @@
         <textField id="phoneNumberField" label="msg://phoneNumberField.label"
                    helperText="msg://phoneNumberField.helperText">
             <suffix>
-                <button id="showNumberBtn" icon="PHONE" themeNames="tertiary-inline"/>
+                <button id="showNumberBtn" icon="PHONE" classNames="link-button"/>
             </suffix>
         </textField>
     </layout>

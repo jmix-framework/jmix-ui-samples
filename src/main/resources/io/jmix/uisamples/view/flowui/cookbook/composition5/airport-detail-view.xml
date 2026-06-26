@@ -42,7 +42,7 @@
             </entityComboBox>
         </formLayout>
         <h4 text="msg://io.jmix.uisamples.entity/Airport.terminals"/>
-        <hbox id="buttonsPanel" classNames="buttons-panel">
+        <hbox id="buttonsPanel" width="100%" wrap="true">
             <button action="terminalsDataGrid.createAction"/>
             <button action="terminalsDataGrid.removeAction"/>
             <button action="terminalsDataGrid.showMeetingPointsAction"/>

@@ -1,29 +1,78 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Style variant" opened="true">
-                <hbox classNames="flex-wrap">
-                    <dropdownButton id="primaryButton" text="Primary button" themeNames="primary"/>
-                    <dropdownButton id="successButton" text="Success button" themeNames="success"/>
-                    <dropdownButton id="errorButton" text="Error button" themeNames="error"/>
-                    <dropdownButton id="contrastButton" text="Contrast button" themeNames="contrast"/>
+                <hbox wrap="true">
+                    <dropdownButton id="primaryButton" text="Primary button" themeNames="primary">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <dropdownButton id="successButton" text="Success button" themeNames="success">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <dropdownButton id="warningButton" text="Warning button" themeNames="warning">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <dropdownButton id="errorButton" text="Error button" themeNames="error">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <!-- theme-only:lumo -->
+                    <dropdownButton id="contrastButton" text="Contrast button" themeNames="contrast">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <!-- theme-only:lumo:end -->
                 </hbox>
             </details>
 
             <details summaryText="Size variant" opened="true">
-                <hbox classNames="flex-wrap">
-                    <dropdownButton id="largeButton" text="Large button" themeNames="large"/>
-                    <dropdownButton id="medium" text="Medium button"/>
-                    <dropdownButton id="smallButton" text="Small button" themeNames="small"/>
+                <hbox wrap="true">
+                    <dropdownButton id="largeButton" text="Large button" themeNames="large">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <dropdownButton id="medium" text="Medium button">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <dropdownButton id="smallButton" text="Small button" themeNames="small">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
                 </hbox>
             </details>
 
             <details summaryText="Visual variant" opened="true">
-                <hbox classNames="flex-wrap">
-                    <dropdownButton id="iconButton" themeNames="icon" icon="SMILEY_O"/>
-                    <dropdownButton id="tertiaryButton" text="Tertiary button" themeNames="tertiary"/>
+                <hbox wrap="true">
+                    <dropdownButton id="iconButton" themeNames="icon" icon="SMILEY_O">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <dropdownButton id="tertiaryButton" text="Tertiary button" themeNames="tertiary">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <!-- theme-only:lumo -->
                     <dropdownButton id="tertiaryInlineButton" text="Tertiary-inline button"
-                                    themeNames="tertiary-inline"/>
+                                    themeNames="tertiary-inline">
+                        <items>
+                            <textItem id="textItem" text="Text"/>
+                        </items>
+                    </dropdownButton>
+                    <!-- theme-only:lumo:end -->
                 </hbox>
             </details>
         </vbox>

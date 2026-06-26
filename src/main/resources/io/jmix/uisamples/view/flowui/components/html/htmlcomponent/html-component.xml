@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout>
+    <layout classNames="html-component">
         <tabSheet id="tabSheet" width="100%">
             <tab id="declarativeTab" label="Declaratively added component">
                 <html file="META-INF/resources/html/html-component.html"/>

@@ -1,17 +1,20 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Style variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="primaryButton" text="Primary button" themeNames="primary"/>
                     <button id="successButton" text="Success button" themeNames="success"/>
+                    <button id="warningButton" text="Warning button" themeNames="warning"/>
                     <button id="errorButton" text="Error button" themeNames="error"/>
+                    <!-- theme-only:lumo -->
                     <button id="contrastButton" text="Contrast button" themeNames="contrast"/>
+                    <!-- theme-only:lumo:end -->
                 </hbox>
             </details>
 
             <details summaryText="Size variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="largeButton" text="Large button" themeNames="large"/>
                     <button id="medium" text="Medium button"/>
                     <button id="smallButton" text="Small button" themeNames="small"/>
@@ -19,10 +22,12 @@
             </details>
 
             <details summaryText="Visual variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="iconButton" themeNames="icon" icon="SMILEY_O"/>
                     <button id="tertiaryButton" text="Tertiary button" themeNames="tertiary"/>
+                    <!-- theme-only:lumo -->
                     <button id="tertiaryInlineButton" text="Tertiary-inline button" themeNames="tertiary-inline"/>
+                    <!-- theme-only:lumo:end -->
                 </hbox>
             </details>
         </vbox>

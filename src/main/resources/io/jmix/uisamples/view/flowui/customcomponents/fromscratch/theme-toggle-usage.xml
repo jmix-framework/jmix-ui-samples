@@ -1,6 +1,6 @@
 <view xmlns="http://jmix.io/schema/flowui/view"
       xmlns:tt="http://io.jmix.uisamples/theme-toggle.xsd">
-    <layout classNames="flex" justifyContent="CENTER" alignItems="CENTER">
+    <layout justifyContent="CENTER" alignItems="CENTER">
         <h2 text="Theme Toggle"/>
         <tt:themeToggle id="themeToggle"
                         text="Click to switch theme"/>

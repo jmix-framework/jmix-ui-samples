@@ -1,0 +1,13 @@
+
+.html-component .highlight {
+    color: red;
+    font-weight: 600;
+}
+
+.html-component .font-italic {
+    font-style: italic;
+}
+
+.html-component .text-semibold {
+    font-weight: 600;
+}

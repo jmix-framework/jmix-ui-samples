@@ -1,8 +1,10 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
-        <hbox classNames="buttons-panel">
+        <hbox width="100%" wrap="true">
+            <!-- theme-only:lumo -->
             <checkbox id="noBorderCheckbox" label="No border"/>
             <checkbox id="compactCheckbox" label="Compact"/>
+            <!-- theme-only:lumo:end -->
             <checkbox id="readOnlyCheckbox" label="Read only"/>
             <checkbox id="enabledCheckbox" label="Disabled"/>
         </hbox>

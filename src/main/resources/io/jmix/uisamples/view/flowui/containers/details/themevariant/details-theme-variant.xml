@@ -1,10 +1,10 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
         <details id="firstDetails" summaryText="Details 1" width="100%" opened="true">
-            <checkboxGroup id="firstDetailsSettingsCheckboxGroup" label="Details themes"/>
+            <checkboxGroup id="firstDetailsSettingsCheckboxGroup" label="Details themes" themeNames="horizontal"/>
         </details>
         <details id="secondDetails" summaryText="Details 2" width="100%">
-            <checkboxGroup id="secondDetailsSettingsCheckboxGroup" label="Details themes"/>
+            <checkboxGroup id="secondDetailsSettingsCheckboxGroup" label="Details themes" themeNames="horizontal"/>
         </details>
     </layout>
 </view>

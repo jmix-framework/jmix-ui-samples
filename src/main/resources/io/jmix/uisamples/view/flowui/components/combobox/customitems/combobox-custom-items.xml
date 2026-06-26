@@ -7,7 +7,7 @@
                   class="io.jmix.uisamples.entity.Customer"
                   fetchPlan="_local"/>
     </data>
-    <layout classNames="flex-row flex-wrap">
+    <layout classNames="horizontal-layout">
         <comboBox id="amountComboBox"
                   label="Items List"
                   dataContainer="orderDc"

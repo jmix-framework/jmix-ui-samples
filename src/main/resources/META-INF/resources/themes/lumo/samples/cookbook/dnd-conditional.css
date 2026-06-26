@@ -1,0 +1,51 @@
+
+.dnd-conditional .dnd-panel {
+    gap: var(--vaadin-gap-s);
+    padding: var(--vaadin-padding-m);
+
+    border: 1px solid var(--vaadin-border-color-secondary);
+    border-radius: var(--vaadin-radius-l);
+
+    align-items: stretch;
+}
+
+.dnd-conditional .dnd-zone {
+    gap: var(--vaadin-gap-s);
+    padding: var(--vaadin-padding-m);
+
+    border: 1px dashed var(--vaadin-border-color-secondary);
+    border-radius: var(--vaadin-radius-l);
+
+    align-items: stretch;
+}
+
+.dnd-conditional .dnd-card {
+    padding: var(--vaadin-padding-s) var(--vaadin-padding-m);
+
+    border: 1px solid var(--vaadin-border-color);
+    border-radius: var(--vaadin-radius-l);
+
+    background: var(--vaadin-background-container);
+    cursor: grab;
+    user-select: none;
+}
+
+.dnd-conditional .dnd-card:active {
+    cursor: grabbing;
+}
+
+.dnd-conditional .dnd-red {
+    border-color: var(--lumo-error-color);
+}
+
+.dnd-conditional .dnd-green {
+    border-color: var(--lumo-success-color);
+}
+
+.dnd-conditional .dnd-card.dnd-red {
+    color: var(--lumo-error-text-color);
+}
+
+.dnd-conditional .dnd-card.dnd-green {
+    color: var(--lumo-success-text-color);
+}

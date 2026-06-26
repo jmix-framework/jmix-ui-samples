@@ -3,11 +3,11 @@
         <instance id="employeeDc" class="io.jmix.uisamples.entity.Employee"/>
     </data>
     <content>
-        <vbox padding="false" spacing="false" classNames="mb-m">
-            <div classNames="flex flex-row gap-xs">
+        <vbox padding="false" spacing="false" classNames="employee-info">
+            <flexLayout flexDirection="ROW" classNames="employee-name">
                 <h3 dataContainer="employeeDc" property="firstName"/>
                 <h3 dataContainer="employeeDc" property="lastName"/>
-            </div>
+            </flexLayout>
 
             <details summaryText="Address" width="100%">
                 <formLayout dataContainer="employeeDc">

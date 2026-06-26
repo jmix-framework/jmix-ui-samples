@@ -17,8 +17,10 @@
 package io.jmix.uisamples.view.sys.sampleview;
 
 import com.google.common.base.Strings;
+import com.vaadin.flow.component.AttachEvent;
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.Component;
+import com.vaadin.flow.component.DetachEvent;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
@@ -36,6 +38,7 @@ import com.vaadin.flow.component.splitlayout.SplitLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
+import com.vaadin.flow.shared.Registration;
 import io.jmix.core.CoreProperties;
 import io.jmix.core.Messages;
 import io.jmix.core.Resources;
@@ -44,6 +47,7 @@ import io.jmix.core.security.CurrentAuthentication;
 import io.jmix.flowui.Notifications;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.Views;
+import io.jmix.flowui.component.UiComponentUtils;
 import io.jmix.flowui.component.codeeditor.CodeEditor;
 import io.jmix.flowui.component.layout.ViewLayout;
 import io.jmix.flowui.component.scroller.JmixScroller;
@@ -51,11 +55,14 @@ import io.jmix.flowui.component.splitlayout.JmixSplitLayout;
 import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.kit.component.codeeditor.CodeEditorMode;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
+import io.jmix.flowui.view.navigation.RouteSupport;
 import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
 import io.jmix.uisamples.config.UiSamplesMenuConfig;
 import io.jmix.uisamples.config.UiSamplesMenuItem;
+import io.jmix.uisamples.theme.ThemeManager;
 import io.jmix.uisamples.util.UiSamplesHelper;
 import io.jmix.uisamples.view.sys.main.MainView;
 import jakarta.servlet.ServletContext;
@@ -66,10 +73,10 @@ import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.AttributeProvider;
 import org.commonmark.renderer.html.HtmlRenderer;
+import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.Nullable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 
@@ -113,6 +120,10 @@ public class SampleView extends StandardView {
     protected Resources resources;
     @Autowired
     protected OverviewPageGenerator overviewPageGenerator;
+    @Autowired
+    protected ThemeManager themeManager;
+    @Autowired
+    protected RouteSupport routeSupport;
     @Autowired(required = false)
     protected ServletContext servletContext;
 
@@ -122,11 +133,19 @@ public class SampleView extends StandardView {
     protected JmixTabSheet tabSheet;
     protected UiSamplesMenuItem menuItem;
     protected Set<CodeEditor> codeEditors = new HashSet<>();
+    protected Registration themeChangedRegistration;
 
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
-        event.getRouteParameters().get("sampleId")
-                .ifPresent(this::updateSample);
+        Optional<String> sampleIdParam = event.getRouteParameters().get("sampleId")
+                .filter(StringUtils::isNotBlank);
+        if (sampleIdParam.isEmpty()) {
+            // redirect to the home page if no sample selected
+            event.forwardTo(MainView.class);
+            return;
+        }
+
+        updateSample(sampleIdParam.get());
         super.beforeEnter(event);
 
         if (sampleView != null) {
@@ -143,6 +162,63 @@ public class SampleView extends StandardView {
         super.afterNavigation(event);
     }
 
+    @Override
+    protected void onAttach(AttachEvent attachEvent) {
+        super.onAttach(attachEvent);
+
+        // Reload the sample when the user switches the theme so the live demo and
+        // the source tabs reflect the new theme's components and resources.
+        themeChangedRegistration = themeManager.addThemeChangedListener(this::onThemeChanged);
+    }
+
+    @Override
+    protected void onDetach(DetachEvent detachEvent) {
+        if (themeChangedRegistration != null) {
+            themeChangedRegistration.remove();
+            themeChangedRegistration = null;
+        }
+
+        super.onDetach(detachEvent);
+    }
+
+    /**
+     * Reloads the current sample for the newly selected theme without a full
+     * browser page refresh. {@link UI#refreshCurrentRoute(boolean) Refreshing}
+     * the route (target only, parent layout reused) re-runs the navigation
+     * lifecycle: the inner sample view is recreated with its {@code theme-only}
+     * components re-evaluated and the source tabs resolved again for the active
+     * theme. The parent {@link MainView} layout is preserved, so the theme
+     * switcher and navigation menu keep their state.
+     */
+    protected void onThemeChanged(ThemeManager.ThemeChangedEvent event) {
+        if (sampleId == null) {
+            return;
+        }
+
+        getUI().ifPresent(ui -> {
+            keepSelectedTabOnRefresh(ui);
+            ui.refreshCurrentRoute(false);
+        });
+    }
+
+    /**
+     * Keeps the active source tab selected across a {@link UI#refreshCurrentRoute(boolean)}.
+     * The refresh re-navigates to the location Vaadin remembers for the route, but that location is
+     * updated only on real navigations — not by the {@code history.replaceState} that tracks the
+     * active tab (see {@link #createTabSheet()}). Re-seeding it with the current tab makes the
+     * recreated view restore the same tab through {@link #onQueryParametersChange} instead of
+     * falling back to the first one. No-op for overview pages, which have no source tabs.
+     */
+    protected void keepSelectedTabOnRefresh(UI ui) {
+        if (menuItem.isOverview() || tabSheet == null || tabSheet.getSelectedTab() == null) {
+            return;
+        }
+
+        Location location = new Location(getCurrentUrlPath(),
+                QueryParameters.of("tab", tabSheet.getSelectedTab().getLabel()));
+        ui.getInternals().setLocationForRefresh(location);
+    }
+
     protected void updateSample(String sampleId) {
         log.debug("Sample '{}' opened for session with {} id", sampleId, getSessionId());
 
@@ -153,9 +229,25 @@ public class SampleView extends StandardView {
             initOverviewView();
         } else {
             this.sampleView = (StandardView) views.create(sampleId);
+            hideForeignThemeComponents();
             updateLayout(sampleView);
             updateTabs();
         }
+    }
+
+    /**
+     * Hides sample components declared only for a theme other than the active one (marked in the
+     * descriptor with {@code theme-only:<themeId>} comments). Runs after {@link Views#create} so the
+     * components are already built and their {@code @ViewComponent} fields injected — they are only
+     * hidden, never removed, so controllers never see null injections.
+     */
+    protected void hideForeignThemeComponents() {
+        viewRegistry.getViewInfo(sampleId).getTemplatePath().ifPresent(templatePath -> {
+            for (String id : uiSamplesHelper.findThemeHiddenComponentIds(templatePath)) {
+                UiComponentUtils.findComponent(sampleView, id)
+                        .ifPresent(component -> component.setVisible(false));
+            }
+        });
     }
 
     protected void initOverviewView() {
@@ -180,6 +272,7 @@ public class SampleView extends StandardView {
             splitLayout.setOrientation(SplitLayout.Orientation.VERTICAL);
             splitLayout.setWidthFull();
             splitLayout.setHeightFull();
+            splitLayout.addThemeName("splitter-spacing");
 
             VerticalLayout contentHolder = uiComponents.create(VerticalLayout.class);
             contentHolder.setPadding(false);
@@ -191,9 +284,10 @@ public class SampleView extends StandardView {
 
             getContent().add(splitLayout);
         } else {
-            sampleViewContent.setHeight(null);
+            sampleViewContent.setHeight("auto");
             getContent().add(sampleViewContent);
             getContent().add(tabSheet);
+            sampleViewContent.getStyle().set("flex-shrink", "0");
 
             getContent().expand(tabSheet);
         }
@@ -207,15 +301,14 @@ public class SampleView extends StandardView {
         tabSheet.setWidthFull();
 
         tabSheet.addSelectedChangeListener(event -> {
-            if (sampleId != null) {
-                String label = event.getSelectedTab().getLabel();
-
-                String currentUrl = RouteConfiguration.forSessionScope()
-                        .getUrl(getClass(), new RouteParameters("sampleId", sampleId))
-                        + "?" + QueryParameters.of("tab", label).getQueryString();
-
+            // Reflect only user-initiated tab changes in the url. The initial/programmatic selection
+            // (including restoring a tab from the url) must not write, so opening a sample keeps a
+            // clean url without a default tab parameter.
+            if (sampleId != null && event.isFromClient()) {
+                // RouteSupport preserves the current path and other query parameters (e.g. the menu
+                // 'search' tracked by MainView), unlike rebuilding the url from the route only.
                 getUI().ifPresent(ui ->
-                        ui.getPage().getHistory().replaceState(null, currentUrl)
+                        routeSupport.setQueryParameter(ui, "tab", event.getSelectedTab().getLabel())
                 );
             }
         });
@@ -310,7 +403,6 @@ public class SampleView extends StandardView {
         editor.setReadOnly(true);
         editor.setWidthFull();
         editor.setHeightFull();
-        editor.setMinHeight("20em");
         editor.getStyle().setPadding("unset");
         editor.setFontSize("0.9rem");
 
@@ -421,8 +513,8 @@ public class SampleView extends StandardView {
 
         permalinkButton.setIcon(VaadinIcon.LINK.create());
         permalinkButton.setTitle(messageBundle.getMessage("permalink.title"));
-        permalinkButton.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
-        permalinkButton.addClassNames("me-s", "ms-auto");
+        permalinkButton.addThemeVariants(ButtonVariant.LUMO_ICON);
+        permalinkButton.addClassNames(StyleUtility.Button.LINK_BUTTON, "permalink-button");
 
         permalinkButton.addClickListener(this::copyToClipboard);
 
@@ -436,11 +528,11 @@ public class SampleView extends StandardView {
                 page.executeJs(getCopyToClipboardScript(), url.toString())
                         .then(jsonValue -> notifications.create(messageBundle.getMessage("successCopyNotification"))
                                         .withPosition(Notification.Position.BOTTOM_END)
-                                        .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                                        .withThemeVariant(NotificationVariant.SUCCESS)
                                         .show(),
                                 s -> notifications.create(messageBundle.getMessage("errorCopyNotification"))
                                         .withPosition(Notification.Position.BOTTOM_END)
-                                        .withThemeVariant(NotificationVariant.LUMO_ERROR)
+                                        .withThemeVariant(NotificationVariant.ERROR)
                                         .show())
         );
     }

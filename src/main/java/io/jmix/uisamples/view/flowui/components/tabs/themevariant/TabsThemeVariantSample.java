@@ -10,9 +10,15 @@ import com.vaadin.flow.component.tabs.Tabs;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
 import io.jmix.flowui.kit.component.button.JmixButton;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+// sample-hide:end
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -21,26 +27,27 @@ import java.util.List;
 public class TabsThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected Tabs tabs;
+    private Tabs tabs;
     @ViewComponent
-    protected JmixCheckboxGroup<String> tabsSettingsCheckboxGroup;
+    private JmixCheckboxGroup<String> tabsSettingsCheckboxGroup;
     @ViewComponent
-    protected HorizontalLayout controlButtonPlaceholder;
+    private HorizontalLayout controlButtonPlaceholder;
 
     @Autowired
-    protected UiComponents uiComponents;
+    private UiComponents uiComponents;
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
 
     @Subscribe
-    protected void onInit(InitEvent event) {
-        List<String> tabsSettingsItems = List.of("Centered", "Small", "Minimal", "Hide-scroll-buttons",
-                "Equal-width-tabs");
-        tabsSettingsCheckboxGroup.setItems(tabsSettingsItems);
-
+    public void onInit(InitEvent event) {
+        tabsSettingsCheckboxGroup.setItems(getTabsThemes());
         controlButtonPlaceholder.add(createRemoveTabButton(), createAddTabButton());
     }
 
     @Subscribe("tabsSettingsCheckboxGroup")
-    protected void onTabsSettingsCheckboxGroupValueChange(
+    public void onTabsSettingsCheckboxGroupValueChange(
             AbstractField.ComponentValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
@@ -49,7 +56,7 @@ public class TabsThemeVariantSample extends StandardView {
         applyTabsThemes(event.getValue());
     }
 
-    protected void applyTabsThemes(Collection<String> themes) {
+    private void applyTabsThemes(Collection<String> themes) {
         tabs.getElement().getThemeList().clear();
 
         themes.stream()
@@ -57,10 +64,11 @@ public class TabsThemeVariantSample extends StandardView {
                 .forEach(tabs::addThemeName);
     }
 
-    protected Component createAddTabButton() {
+    private Component createAddTabButton() {
         JmixButton button = uiComponents.create(JmixButton.class);
         button.setIcon(VaadinIcon.PLUS.create());
-        button.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
+        button.addThemeVariants(ButtonVariant.LUMO_ICON);
+        button.addClassName(StyleUtility.Button.LINK_BUTTON);
 
         button.addClickListener(event -> {
             long newTabIndex = tabs.getChildren().count() + 1;
@@ -71,10 +79,11 @@ public class TabsThemeVariantSample extends StandardView {
         return button;
     }
 
-    protected Component createRemoveTabButton() {
+    private Component createRemoveTabButton() {
         JmixButton button = uiComponents.create(JmixButton.class);
         button.setIcon(VaadinIcon.MINUS.create());
-        button.addThemeVariants(ButtonVariant.LUMO_ICON, ButtonVariant.LUMO_TERTIARY_INLINE);
+        button.addThemeVariants(ButtonVariant.LUMO_ICON);
+        button.addClassName(StyleUtility.Button.LINK_BUTTON);
 
         button.addClickListener(event -> {
             long currentTabsSize = tabs.getChildren().count();
@@ -85,5 +94,17 @@ public class TabsThemeVariantSample extends StandardView {
         });
 
         return button;
+    }
+
+    private List<String> getTabsThemes() {
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {  // sample-hide
+            // theme-only:lumo
+        return List.of("Centered", "Small", "Minimal", "Hide-scroll-buttons", "Equal-width-tabs");
+            // theme-only:lumo:end
+        } else { // sample-hide
+            // theme-only:aura
+        return List.of("Small", "Hide-scroll-buttons");
+            // theme-only:aura:end
+        } // sample-hide
     }
 }

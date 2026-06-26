@@ -1,0 +1,49 @@
+
+.dnd-styling .dnd-panel {
+    gap: var(--vaadin-gap-s);
+    padding: var(--vaadin-padding-m);
+
+    border: 1px solid var(--vaadin-border-color-secondary);
+    border-radius: var(--vaadin-radius-l);
+
+    align-items: stretch;
+}
+
+.dnd-styling .dnd-zone {
+    gap: var(--vaadin-gap-s);
+    padding: var(--vaadin-padding-m);
+
+    border: 1px dashed var(--vaadin-border-color-secondary);
+    border-radius: var(--vaadin-radius-l);
+
+    align-items: stretch;
+}
+
+.dnd-styling .dnd-card {
+    padding: var(--vaadin-padding-s) var(--vaadin-padding-m);
+
+    border: 1px solid var(--vaadin-border-color);
+    border-radius: var(--vaadin-radius-l);
+
+    background: var(--vaadin-background-container);
+    cursor: grab;
+    user-select: none;
+}
+
+.dnd-styling .dnd-card:active {
+    cursor: grabbing;
+}
+
+.dnd-styling .dnd-zone-hint {
+    color: var(--vaadin-text-color-secondary);
+}
+
+.dnd-styling .v-dragged {
+    opacity: 0.5;
+}
+
+.dnd-styling .v-drag-over-target {
+    outline: 2px solid var(--aura-accent-color);
+    outline-offset: 2px;
+    background: color-mix(in srgb, var(--aura-accent-color) 10%, transparent);
+}

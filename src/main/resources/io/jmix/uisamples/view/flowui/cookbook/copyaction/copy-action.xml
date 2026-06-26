@@ -14,7 +14,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <hbox id="buttonsPanel" classNames="buttons-panel">
+        <hbox id="buttonsPanel" width="100%" wrap="true">
             <button id="customersDataGridCopyBtn" action="customersDataGrid.copy"/>
             <button id="customersDataGridCopyAndEditBtn" action="customersDataGrid.copyAndEdit"/>
             <button id="customersDataGridRefreshBtn" action="customersDataGrid.refresh"/>

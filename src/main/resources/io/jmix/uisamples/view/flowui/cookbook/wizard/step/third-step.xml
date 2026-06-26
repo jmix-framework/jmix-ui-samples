@@ -1,28 +1,28 @@
 <fragment xmlns="http://jmix.io/schema/flowui/fragment">
     <content>
-        <vbox padding="false" spacing="false">
+        <vbox padding="false" spacing="false" classNames="third-step">
             <h4 text="Employee information confirmation"/>
-            <span text="Please check the information before saving" classNames="text-secondary"/>
+            <span text="Please check the information before saving" classNames="reminder"/>
             <hr width="100%"/>
-            <div id="employeeData" classNames="grid grid-cols-2 grid-rows-2 gap-x-s">
-                <span text="First name:" classNames="font-bold"/>
+            <div id="employeeData" classNames="grid-container">
+                <span text="First name:" classNames="bold"/>
                 <span id="firstName"/>
-                <span text="Last name" classNames="font-bold"/>
+                <span text="Last name" classNames="bold"/>
                 <span id="lastName"/>
-                <span text="Email:" classNames="font-bold"/>
+                <span text="Email:" classNames="bold"/>
                 <span id="email"/>
-                <span text="Department:" classNames="font-bold"/>
+                <span text="Department:" classNames="bold"/>
                 <span id="department"/>
             </div>
             <hr width="100%"/>
-            <div id="addressData" classNames="grid grid-cols-2 grid-rows-2 gap-x-s">
-                <span text="Zip:" classNames="font-bold"/>
+            <div id="addressData" classNames="grid-container">
+                <span text="Zip:" classNames="bold"/>
                 <span id="zip"/>
-                <span text="Country:" classNames="font-bold"/>
+                <span text="Country:" classNames="bold"/>
                 <span id="country"/>
-                <span text="City:" classNames="font-bold"/>
+                <span text="City:" classNames="bold"/>
                 <span id="city"/>
-                <span text="Address Line:" classNames="font-bold"/>
+                <span text="Address Line:" classNames="bold"/>
                 <span id="addressLine"/>
             </div>
         </vbox>

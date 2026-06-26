@@ -15,7 +15,7 @@
     </facets>
     <layout>
         <select id="selectionModeSelect" label="Selection mode"/>
-        <hbox id="buttonsPanel" classNames="buttons-panel">
+        <hbox id="buttonsPanel" width="100%" wrap="true">
             <button id="greetAllBtn" action="customersDataGrid.greetAll"/>
             <button id="greetOneBtn" action="customersDataGrid.greetOne"/>
         </hbox>

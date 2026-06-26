@@ -42,7 +42,7 @@ public class TimerFacetFragment extends Fragment<VerticalLayout> {
 
         notifications.create("Timer started")
                 .withPosition(Notification.Position.BOTTOM_END)
-                .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                .withThemeVariant(NotificationVariant.SUCCESS)
                 .show();
 
         timerStartBtn.setEnabled(false);

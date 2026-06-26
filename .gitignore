@@ -26,3 +26,11 @@ vite.generated.ts
 webpack.generated.js
 
 .DS_Store
+
+/src/main/bundles/dev.bundle
+/src/main/bundles/README.md
+/package.json
+/tsconfig.json
+/types.d.ts
+/vite.config.ts
+/package-lock.json

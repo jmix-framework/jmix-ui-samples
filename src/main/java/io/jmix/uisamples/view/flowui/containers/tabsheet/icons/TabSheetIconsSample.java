@@ -1,13 +1,19 @@
 package io.jmix.uisamples.view.flowui.containers.tabsheet.icons;
 
+// theme-only:lumo
 import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;
+// theme-only:lumo:end
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.tabs.Tab;
+// theme-only:lumo
 import com.vaadin.flow.component.tabs.TabVariant;
+// theme-only:lumo:end
 import io.jmix.flowui.UiComponents;
+// theme-only:lumo
 import io.jmix.flowui.component.checkbox.JmixCheckbox;
+// theme-only:lumo:end
 import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +38,7 @@ public class TabSheetIconsSample extends StandardView {
         tabSheet.add(createNotificationsTab(), new Span("Notifications tab content"));
         tabSheet.add(createSettingsTab(), new Span("Settings tab content"));
     }
-
+    // theme-only:lumo
     @Subscribe("iconControlCheckbox")
     protected void onIconControlCheckboxValueChane(ComponentValueChangeEvent<JmixCheckbox, Boolean> event) {
         if (event.getValue()) {
@@ -41,6 +47,7 @@ public class TabSheetIconsSample extends StandardView {
             tabSheet.getChildren().forEach(tab -> tab.getElement().getThemeList().clear());
         }
     }
+    // theme-only:lumo:end
 
     protected Tab createProfileTab() {
         Tab tab = uiComponents.create(Tab.class);

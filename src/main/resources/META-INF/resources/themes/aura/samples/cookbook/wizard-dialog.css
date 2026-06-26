@@ -1,0 +1,17 @@
+
+.wizard-dialog .tab-container {
+    line-height: var(--aura-line-height-m);
+}
+
+.wizard-dialog .label-container {
+    gap: var(--vaadin-gap-xs);
+}
+
+.wizard-dialog .label {
+    font-size: var(--aura-font-size-s);
+}
+
+.wizard-dialog .sublabel {
+    font-size: var(--aura-font-size-s);
+    color: var(--vaadin-text-color-secondary);
+}

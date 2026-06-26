@@ -1,0 +1,34 @@
+
+.options-label {
+    display: block;
+    color: var(--lumo-secondary-text-color);
+    font-weight: 500;
+    font-size: var(--lumo-font-size-s);
+    padding-bottom: var(--lumo-space-xs);
+}
+
+.options :is(vaadin-select, vaadin-select-value-button) {
+    --vaadin-field-default-width: auto;
+    --vaadin-input-field-height: auto;
+    width: auto;
+    mask-image: none;
+    padding: 0;
+}
+
+.options vaadin-select::part(input-field) {
+    background: unset;
+}
+
+.card-theme-variant .image-text-container {
+    gap: var(--lumo-space-s);
+}
+
+.card-theme-variant .header {
+    line-height: var(--lumo-line-height-xs);
+}
+
+.card-theme-variant .header .subtitle {
+    text-transform: uppercase;
+    font-size: var(--lumo-font-size-xs);
+    color: var(--lumo-secondary-text-color);
+}

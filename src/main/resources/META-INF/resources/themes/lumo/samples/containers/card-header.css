@@ -1,0 +1,10 @@
+
+.card-header .header {
+    line-height: var(--lumo-line-height-xs);
+}
+
+.card-header .subtitle {
+    text-transform: uppercase;
+    color: var(--lumo-secondary-text-color);
+    font-size: var(--lumo-font-size-xs);
+}

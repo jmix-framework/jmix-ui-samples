@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row flex-wrap">
+    <layout classNames="horizontal-layout">
         <textArea id="textArea" value="Great job. This is excellent!" label="Comment"
                   valueChangeMode="EAGER" maxLength="140" helperText="29/140"/>
         <textArea id="textArea2" value="Everything you do works great!" label="Additional comment"/>

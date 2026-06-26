@@ -15,7 +15,7 @@
     </facets>
     <layout>
         <simplePagination id="simplePagination"
-                          classNames="self-center"
+                          alignSelf="CENTER"
                           itemsPerPageDefaultValue="5"
                           dataLoader="customersDl"/>
         <dataGrid id="customersDataGrid"

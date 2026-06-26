@@ -17,8 +17,8 @@ import io.jmix.flowui.data.grid.DataGridItems;
 import io.jmix.flowui.kit.event.EventBus;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.entity.Task;
+import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.Nullable;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -67,7 +67,7 @@ public class DataGridTreeLazyNodesSample extends StandardView {
 
             notifications.create(String.format("Loaded: %d items", list.size()))
                     .withPosition(Notification.Position.TOP_CENTER)
-                    .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                    .withThemeVariant(NotificationVariant.SUCCESS)
                     .show();
 
             return list.stream();

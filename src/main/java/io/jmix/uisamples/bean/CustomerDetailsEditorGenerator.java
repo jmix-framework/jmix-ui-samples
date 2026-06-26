@@ -1,7 +1,6 @@
 package io.jmix.uisamples.bean;
 
 import com.vaadin.flow.component.formlayout.FormLayout;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import io.jmix.core.DataManager;
@@ -11,10 +10,12 @@ import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.grid.DataGrid;
 import io.jmix.flowui.component.validation.ValidationErrors;
 import io.jmix.flowui.data.grid.ContainerDataGridItems;
+import io.jmix.flowui.icon.Icons;
 import io.jmix.flowui.kit.action.Action;
 import io.jmix.flowui.kit.action.ActionVariant;
 import io.jmix.flowui.kit.action.BaseAction;
 import io.jmix.flowui.kit.component.button.JmixButton;
+import io.jmix.flowui.kit.icon.JmixFontIcon;
 import io.jmix.flowui.view.ViewValidation;
 import io.jmix.uisamples.entity.Customer;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -31,6 +32,7 @@ public class CustomerDetailsEditorGenerator {
     protected Metadata metadata;
     protected ViewValidation viewValidation;
     protected EntityStates entityStates;
+    protected Icons icons;
 
     protected DataGrid<Customer> customersDataGrid;
 
@@ -39,13 +41,15 @@ public class CustomerDetailsEditorGenerator {
                                           DataManager dataManager,
                                           Metadata metadata,
                                           ViewValidation viewValidation,
-                                          EntityStates entityStates) {
+                                          EntityStates entityStates,
+                                          Icons icons) {
         this.uiComponents = uiComponents;
         this.detailsGenerator = detailsGenerator;
         this.dataManager = dataManager;
         this.metadata = metadata;
         this.viewValidation = viewValidation;
         this.entityStates = entityStates;
+        this.icons = icons;
     }
 
     public VerticalLayout createDetailsEditorComponent() {
@@ -89,7 +93,7 @@ public class CustomerDetailsEditorGenerator {
     protected Action createSaveAndCloseAction(GenerationContext context) {
         return new BaseAction("ok")
                 .withText("OK")
-                .withIcon(VaadinIcon.CHECK.create())
+                .withIcon(icons.get(JmixFontIcon.CHECK))
                 .withVariant(ActionVariant.PRIMARY)
                 .withHandler(e -> {
                     ValidationErrors validationErrors = validate(context.mainLayout());
@@ -108,7 +112,7 @@ public class CustomerDetailsEditorGenerator {
     protected Action createCancelAction(Customer customer) {
         return new BaseAction("cancel")
                 .withText("Cancel")
-                .withIcon(VaadinIcon.BAN.create())
+                .withIcon(icons.get(JmixFontIcon.BAN))
                 .withHandler(e -> {
                     customersDataGrid.setDetailsVisible(customer, false);
 

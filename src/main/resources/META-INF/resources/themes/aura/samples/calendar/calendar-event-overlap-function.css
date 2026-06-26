@@ -1,0 +1,11 @@
+jmix-full-calendar .fc-event.green-background-event {
+    background: var(--aura-green);
+    border-radius: inherit;
+    color: var(--aura-accent-contrast-color);
+}
+
+jmix-full-calendar .fc-event.red-background-event {
+    background: var(--aura-red);
+    border-radius: inherit;
+    color: var(--aura-accent-contrast-color);
+}

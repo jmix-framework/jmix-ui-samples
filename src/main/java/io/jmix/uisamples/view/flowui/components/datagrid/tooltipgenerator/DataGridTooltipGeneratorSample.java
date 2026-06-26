@@ -5,8 +5,8 @@ import io.jmix.core.MetadataTools;
 import io.jmix.flowui.component.grid.DataGrid;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.entity.Customer;
+import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.lang.Nullable;
 
 @ViewController("data-grid-tooltip-generator")
 @ViewDescriptor("data-grid-tooltip-generator.xml")

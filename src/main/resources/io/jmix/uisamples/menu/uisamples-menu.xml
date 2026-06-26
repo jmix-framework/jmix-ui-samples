@@ -24,10 +24,14 @@
             <item id="badge-simple"/>
             <item id="badge-icons">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/badge-icons.css"/>
+                    <file name="{currentTheme}/components/badge-icons.css"/>
                 </otherFiles>
             </item>
-            <item id="badge-theme-variant" splitEnabled="true"/>
+            <item id="badge-theme-variant" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/components/badge-theme-variant.css"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="big-decimal-field">
             <item id="big-decimal-field-simple" page="bigDecimalField"/>
@@ -139,7 +143,7 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="data-grid-sort-event" page="dataGrid" splitEnabled="true" isNew="true">
+            <item id="data-grid-sort-event" page="dataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -157,7 +161,7 @@
             <item id="data-grid-part-name-generator" page="dataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
-                    <file name="META-INF/resources/themes/data-grid-part-name-generator.css"/>
+                    <file name="{currentTheme}/components/data-grid-part-name-generator.css"/>
                 </otherFiles>
             </item>
             <item id="data-grid-tooltip-generator" page="dataGrid" splitEnabled="true">
@@ -360,17 +364,17 @@
             <item id="html-component" page="html" splitEnabled="true">
                 <otherFiles>
                     <file name="META-INF/resources/html/html-component.html"/>
-                    <file name="META-INF/resources/themes/html-component.css"/>
+                    <file name="{currentTheme}/components/html-component.css"/>
                 </otherFiles>
             </item>
             <item id="html-declaratively" page="html" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/html-component.css"/>
+                    <file name="{currentTheme}/components/html-component.css"/>
                 </otherFiles>
             </item>
             <item id="html-programmatically" page="html" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/html-component.css"/>
+                    <file name="{currentTheme}/components/html-component.css"/>
                 </otherFiles>
             </item>
         </menu>
@@ -414,10 +418,20 @@
             <item id="list-box-custom-renderer" page="listBox">
                 <otherFiles>
                     <file name="io/jmix/uisamples/record/Simpson.java"/>
+                    <file name="{currentTheme}/components/list-box-custom-renderer.css"/>
                 </otherFiles>
             </item>
         </menu>
-        <item id="markdown" page="markdown" splitEnabled="true"/>
+        <menu id="markdown-components">
+            <item id="markdown" page="markdown" splitEnabled="true"/>
+            <item id="markdown-editor-simple" page="markdownEditor" splitEnabled="true" isNew="true"/>
+            <item id="markdown-editor-dataaware" page="markdownEditor" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Order.java"/>
+                </otherFiles>
+            </item>
+            <item id="markdown-editor-theme-variant" page="markdownEditor" splitEnabled="true" isNew="true"/>
+        </menu>
         <menu id="multi-select-combo-box">
             <item id="multi-select-combo-box-simple" page="multiSelectComboBox">
                 <otherFiles>
@@ -564,7 +578,11 @@
             <item id="tabs-states" page="tabs"/>
             <item id="tabs-icons" page="tabs"/>
             <item id="tabs-orientation" page="tabs"/>
-            <item id="tabs-theme-variant" page="tabs"/>
+            <item id="tabs-theme-variant" page="tabs">
+                <otherFiles>
+                    <file name="{currentTheme}/components/tabs-theme-variant.css"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="text-area">
             <item id="text-area-simple" page="textArea"/>
@@ -575,7 +593,7 @@
             </item>
             <item id="text-area-resizable" page="textArea">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/text-area-resizable.css"/>
+                    <file name="{currentTheme}/components/text-area-resizable.css"/>
                 </otherFiles>
             </item>
             <item id="text-area-theme-variant" page="textArea" splitEnabled="true"/>
@@ -653,6 +671,7 @@
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
+                    <file name="{currentTheme}/components/virtual-list-simple.css"/>
                 </otherFiles>
             </item>
             <item id="virtual-list-inline-editor" page="virtualList" splitEnabled="true">
@@ -691,10 +710,14 @@
         </menu>
         <menu id="card">
             <item id="card-simple" page="card" splitEnabled="true"/>
-            <item id="card-header" page="card" anchor="slot-header"/>
+            <item id="card-header" page="card" anchor="slot-header">
+                <otherFiles>
+                    <file name="{currentTheme}/containers/card-header.css"/>
+                </otherFiles>
+            </item>
             <item id="card-theme-variant" page="card" anchor="theme-variants" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/card-theme-variant.css"/>
+                    <file name="{currentTheme}/containers/card-theme-variant.css"/>
                 </otherFiles>
             </item>
         </menu>
@@ -704,7 +727,11 @@
                 <item id="hbox-slots" page="hbox" anchor="aligning-individual"/>
             </menu>
             <item id="vbox-simple" page="vbox"/>
-            <item id="flex-layout-simple" page="flexLayout"/>
+            <item id="flex-layout-simple" page="flexLayout">
+                <otherFiles>
+                    <file name="{currentTheme}/containers/flex-layout-simple.css"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="form-layout">
             <item id="form-layout-simple" page="formLayout" splitEnabled="true"/>
@@ -715,7 +742,11 @@
                 </otherFiles>
             </item>
             <item id="form-layout-responsive-steps" page="formLayout" splitEnabled="true"/>
-            <item id="form-layout-auto-responsive" page="formLayout" anchor="auto-responsive-mode" splitEnabled="true"/>
+            <item id="form-layout-auto-responsive" page="formLayout" anchor="auto-responsive-mode" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/containers/form-layout-auto-responsive.css"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="grid-layout">
             <item id="grid-layout-simple" page="gridLayout" splitEnabled="true"/>
@@ -732,7 +763,7 @@
             </item>
         </menu>
         <item id="scroller" page="scroller" splitEnabled="true"/>
-        <menu id="side-panel-layout" isNew="true">
+        <menu id="side-panel-layout">
             <item id="side-panel-layout-simple" page="sidePanelLayout" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
@@ -752,8 +783,13 @@
         </menu>
         <menu id="tabsheet">
             <item id="tabsheet-simple" page="tabSheet"/>
+            <item id="tabsheet-states" page="tabSheet" isNew="true"/>
             <item id="tabsheet-icons" page="tabSheet"/>
-            <item id="tabsheet-badges" page="tabSheet"/>
+            <item id="tabsheet-badges" page="tabSheet">
+                <otherFiles>
+                    <file name="{currentTheme}/containers/tab-sheet-badges.css"/>
+                </otherFiles>
+            </item>
             <item id="tabsheet-lazy-tab" page="tabSheet" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/component/lazycomponent/LazyComponent.java"/>
@@ -776,7 +812,7 @@
                 </otherFiles>
             </item>
             <item id="background-task-dialog" page="background-tasks" anchor="notes-and-tips"/>
-            <item id="side-dialog" page="dialogs" anchor="side-dialog" isNew="true"/>
+            <item id="side-dialog" page="dialogs" anchor="side-dialog"/>
         </menu>
         <menu id="notifications">
             <item id="notification-simple" page="notifications"/>
@@ -820,15 +856,18 @@
                 <file name="io/jmix/uisamples/view/flowui/fragments/renderer/employee-info-fragment.xml"/>
                 <file name="io/jmix/uisamples/view/flowui/fragments/renderer/EmployeeInfoFragment.java"/>
                 <file name="io/jmix/uisamples/entity/Customer.java"/>
+                <file name="{currentTheme}/fragments/employee-info.css"/>
             </otherFiles>
         </item>
-        <menu id="fragments-facets" isNew="true" url="flow-ui/fragments">
-            <item id="fragment-data-load-coordinator" page="facets-in-fragment" anchor="fragmentDataLoadCoordinator" splitEnabled="true">
+        <menu id="fragments-facets" url="flow-ui/fragments">
+            <item id="fragment-data-load-coordinator" page="facets-in-fragment" anchor="fragmentDataLoadCoordinator"
+                  splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/dataloadcoordinator/data-load-coordinator-fragment.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/dataloadcoordinator/DataLoadCoordinatorFragment.java"/>
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
+                    <file name="{currentTheme}/fragments/data-load-coordinator.css"/>
                 </otherFiles>
             </item>
             <item id="fragment-timer-facet" page="facets-in-fragment" anchor="timer">
@@ -837,7 +876,8 @@
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/timer/TimerFacetFragment.java"/>
                 </otherFiles>
             </item>
-            <item id="fragment-url-query-parameters" page="facets-in-fragment" anchor="urlQueryParameters" splitEnabled="true">
+            <item id="fragment-url-query-parameters" page="facets-in-fragment" anchor="urlQueryParameters"
+                  splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/urlqueryparameters/url-query-parameters-fragment.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/fragments/facets/urlqueryparameters/UrlQueryParametersFragment.java"/>
@@ -862,6 +902,7 @@
             <otherFiles>
                 <file name="io/jmix/uisamples/entity/Order.java"/>
                 <file name="io/jmix/uisamples/entity/Customer.java"/>
+                <file name="{currentTheme}/facets/data-load-coordinator.css"/>
             </otherFiles>
         </item>
         <item id="timer-facet" page="timer"/>
@@ -1130,6 +1171,7 @@
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
+                    <file name="{currentTheme}/kanban/kanban-events.css"/>
                 </otherFiles>
             </item>
             <item id="kanban-hierarchical-columns" splitEnabled="true"
@@ -1211,7 +1253,7 @@
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                     <file name="io/jmix/uisamples/entity/BackgroundEvent.java"/>
                     <file name="io/jmix/uisamples/entity/WorkingShift.java"/>
-                    <file name="META-INF/resources/themes/calendar-event-overlap-function.css"/>
+                    <file name="{currentTheme}/calendar/calendar-event-overlap-function.css"/>
                 </otherFiles>
             </item>
             <item id="calendar-event-constraint" splitEnabled="true"
@@ -1237,7 +1279,7 @@
             <item id="calendar-class-names-generator" splitEnabled="true"
                   page="full-calendar-component" anchor="class-names-generators">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/calendar-class-names-generator.css"/>
+                    <file name="{currentTheme}/calendar/calendar-class-names-generator.css"/>
                 </otherFiles>
             </item>
             <item id="calendar-event-styling" splitEnabled="true"
@@ -1335,7 +1377,8 @@
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-custom-column" page="groupdatagrid-component" anchor="custom-grouping-column" splitEnabled="true">
+            <item id="group-data-grid-custom-column" page="groupdatagrid-component" anchor="custom-grouping-column"
+                  splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -1350,7 +1393,7 @@
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
-                    <file name="META-INF/resources/themes/group-data-grid-styling.css"/>
+                    <file name="{currentTheme}/components/group-data-grid-styling.css"/>
                 </otherFiles>
             </item>
         </menu>
@@ -1556,11 +1599,39 @@
                 </otherFiles>
             </item>
         </menu>
+        <menu id="cookbook-drag-drop" isNew="true">
+            <item id="dnd-data-grid" splitEnabled="true"/>
+            <item id="dnd-components" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-components.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-events" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-events.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-effects" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-effects.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-conditional-drop" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-conditional.css"/>
+                </otherFiles>
+            </item>
+            <item id="dnd-styling" splitEnabled="true">
+                <otherFiles>
+                    <file name="{currentTheme}/cookbook/dnd-styling.css"/>
+                </otherFiles>
+            </item>
+        </menu>
         <menu id="cookbook-other">
             <item id="copy-to-clipboard"/>
             <item id="custom-login" splitEnabled="true">
                 <otherFiles>
-                    <file name="META-INF/resources/themes/custom-login.css"/>
+                    <file name="{currentTheme}/components/custom-login.css"/>
                 </otherFiles>
             </item>
             <item id="iframe-pdf" splitEnabled="true">
@@ -1584,12 +1655,14 @@
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/WizardDialog.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/wizard-dialog.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/WizardStep.java"/>
+                    <file name="{currentTheme}/cookbook/wizard-dialog.css"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/WizardStepFragment.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/FirstStep.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/first-step.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/SecondStep.java"/>
                     <file name="io/jmix/uisamples/component/addresscomponent/AddressComponent.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/ThirdStep.java"/>
+                    <file name="{currentTheme}/cookbook/third-step.css"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/third-step.xml"/>
                     <file name="io/jmix/uisamples/entity/Employee.java"/>
                     <file name="io/jmix/uisamples/entity/Address.java"/>

@@ -14,7 +14,7 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
-        <simplePagination classNames="self-center"
+        <simplePagination alignSelf="CENTER"
                           itemsPerPageVisible="true"
                           itemsPerPageItems="5, 10, 15"
                           itemsPerPageDefaultValue="5"

@@ -18,12 +18,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class OptionDialogSample extends StandardView {
 
     @Autowired
-    protected Dialogs dialogs;
+    private Dialogs dialogs;
     @Autowired
-    protected Notifications notifications;
+    private Notifications notifications;
 
     @Subscribe("okAndCancelButton")
-    protected void onOkAndCancelButtonClick(ClickEvent<JmixButton> event) {
+    public void onOkAndCancelButtonClick(ClickEvent<JmixButton> event) {
         dialogs.createOptionDialog()
                 .withHeader("Default option dialog")
                 .withText("Default actions are here!")
@@ -31,14 +31,14 @@ public class OptionDialogSample extends StandardView {
                         new DialogAction(DialogAction.Type.OK)
                                 .withHandler(e ->
                                         notifications.create("OK pressed")
-                                                .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                                                .withThemeVariant(NotificationVariant.SUCCESS)
                                                 .show()),
                         new DialogAction(DialogAction.Type.CANCEL))
                 .open();
     }
 
     @Subscribe("allActionsButton")
-    protected void onAllActionsButtonClick(ClickEvent<JmixButton> event) {
+    public void onAllActionsButtonClick(ClickEvent<JmixButton> event) {
         dialogs.createOptionDialog()
                 .withHeader("All option dialog")
                 .withText("All actions are here!")
@@ -54,16 +54,16 @@ public class OptionDialogSample extends StandardView {
     }
 
     @Subscribe("customActionButton")
-    protected void onCustomActionButtonClick(ClickEvent<JmixButton> event) {
+    public void onCustomActionButtonClick(ClickEvent<JmixButton> event) {
         dialogs.createOptionDialog()
                 .withHeader("Custom Action")
                 .withText("Custom action are here!")
                 .withActions(
-                        new BaseAction("customAction")
+                        new BaseAction<>("customAction")
                                 .withText("Do something")
                                 .withHandler(e ->
                                         notifications.create("Done!")
-                                                .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                                                .withThemeVariant(NotificationVariant.SUCCESS)
                                                 .show()),
                         new DialogAction(DialogAction.Type.CANCEL)
                 )

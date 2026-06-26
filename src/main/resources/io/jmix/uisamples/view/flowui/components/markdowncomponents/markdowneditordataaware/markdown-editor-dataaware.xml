@@ -1,0 +1,15 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data>
+        <instance id="orderDc"
+                  class="io.jmix.uisamples.entity.Order"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <markdownEditor id="markdownEditor" label="Order description"
+                        dataContainer="orderDc" property="description"/>
+        <hbox>
+            <span text="Value in the container:" css="flex-shrink: 0;"/>
+            <span id="spanValue"/>
+        </hbox>
+    </layout>
+</view>

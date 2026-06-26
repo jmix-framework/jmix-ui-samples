@@ -9,7 +9,6 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.ThemableLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.tabs.Tab;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.component.validation.ValidationErrors;
 import io.jmix.flowui.kit.component.button.JmixButton;
@@ -97,11 +96,11 @@ public class WizardDialog extends StandardDetailView<Employee> {
         if (isLastTabSelected()) {
             nextButton.setText("Complete");
             nextButton.setIcon(VaadinIcon.CHECK.create());
-            nextButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+            nextButton.addThemeVariants(ButtonVariant.PRIMARY);
         } else {
             nextButton.setText("Next");
             nextButton.setIcon(VaadinIcon.ARROW_CIRCLE_RIGHT_O.create());
-            nextButton.removeThemeVariants(ButtonVariant.LUMO_PRIMARY);
+            nextButton.removeThemeVariants(ButtonVariant.PRIMARY);
         }
     }
 
@@ -116,17 +115,17 @@ public class WizardDialog extends StandardDetailView<Employee> {
     private Tab createTab(WizardStep<?> step, int index) {
         VerticalLayout layout = createLayout(VerticalLayout::new);
         layout.setAlignItems(FlexComponent.Alignment.CENTER);
-        layout.addClassName(LumoUtility.LineHeight.MEDIUM);
+        layout.addClassName("tab-container");
 
         HorizontalLayout horizontalLayout = createLayout(HorizontalLayout::new);
-        horizontalLayout.addClassName(LumoUtility.Gap.XSMALL);
+        horizontalLayout.addClassName("label-container");
 
         Span label = new Span("Step #" + index);
-        label.addClassName(LumoUtility.FontSize.SMALL);
+        label.addClassName("label");
         horizontalLayout.add(step.icon(), label);
 
         Span text = new Span(step.text());
-        text.addClassNames(LumoUtility.TextColor.SECONDARY, LumoUtility.FontSize.SMALL);
+        text.addClassNames("sublabel");
 
         layout.add(horizontalLayout, text);
 

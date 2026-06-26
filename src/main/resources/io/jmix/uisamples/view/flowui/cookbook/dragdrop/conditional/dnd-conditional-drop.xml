@@ -1,0 +1,27 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout classNames="dnd-conditional">
+        <hbox width="100%" height="100%">
+            <vbox id="sourcePanel" classNames="dnd-panel" minHeight="20em">
+                <span text="Drag sources" classNames="bold"/>
+                <div id="redCard1" classNames="dnd-card dnd-red">
+                    <span text="Red 1"/>
+                </div>
+                <div id="greenCard1" classNames="dnd-card dnd-green">
+                    <span text="Green 1"/>
+                </div>
+                <div id="redCard2" classNames="dnd-card dnd-red">
+                    <span text="Red 2"/>
+                </div>
+                <div id="greenCard2" classNames="dnd-card dnd-green">
+                    <span text="Green 2"/>
+                </div>
+            </vbox>
+            <vbox id="redZone" classNames="dnd-zone dnd-red" minHeight="20em">
+                <span text="Red items only" classNames="bold"/>
+            </vbox>
+            <vbox id="greenZone" classNames="dnd-zone dnd-green" minHeight="20em">
+                <span text="Green items only" classNames="bold"/>
+            </vbox>
+        </hbox>
+    </layout>
+</view>

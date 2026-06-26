@@ -1,0 +1,4 @@
+
+.flex-layout-simple .flex-with-gap {
+    gap: var(--vaadin-gap-s)
+}

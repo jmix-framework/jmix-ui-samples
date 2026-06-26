@@ -1,0 +1,17 @@
+
+.wizard-dialog .tab-container {
+    line-height: var(--lumo-line-height-m);
+}
+
+.wizard-dialog .label-container {
+    gap: var(--lumo-space-xs);
+}
+
+.wizard-dialog .label {
+    font-size: var(--lumo-font-size-s);
+}
+
+.wizard-dialog .sublabel {
+    font-size: var(--lumo-font-size-s);
+    color: var(--lumo-secondary-text-color);
+}

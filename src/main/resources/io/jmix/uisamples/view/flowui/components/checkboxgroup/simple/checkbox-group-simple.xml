@@ -6,6 +6,7 @@
                        itemsEnum="io.jmix.uisamples.entity.CustomerGrade"/>
         <checkboxGroup id="horizontalCheckboxGroup"
                        label="Horizontal"
+                       themeNames="horizontal"
                        itemsEnum="io.jmix.uisamples.entity.CustomerGrade"/>
     </layout>
 </view>

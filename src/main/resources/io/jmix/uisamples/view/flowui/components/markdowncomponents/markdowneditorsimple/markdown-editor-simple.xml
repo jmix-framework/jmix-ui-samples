@@ -1,0 +1,5 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout>
+        <markdownEditor id="markdownEditor" label="MarkdownEditor" helperText="Helper text"/>
+    </layout>
+</view>

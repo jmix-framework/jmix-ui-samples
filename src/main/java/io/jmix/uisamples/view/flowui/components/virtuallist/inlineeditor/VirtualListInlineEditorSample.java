@@ -24,6 +24,7 @@ import io.jmix.flowui.DialogWindows;
 import io.jmix.flowui.kit.component.button.JmixButton;
 import io.jmix.flowui.model.CollectionContainer;
 import io.jmix.flowui.model.DataContext;
+import io.jmix.flowui.theme.StyleUtility;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.bean.FoodPlaceholderDataGenerator;
 import io.jmix.uisamples.entity.Food;
@@ -50,7 +51,7 @@ public class VirtualListInlineEditorSample extends StandardView {
     private CollectionContainer<Food> foodDc;
 
     @Supply(to = "foodList", subject = "renderer")
-    private Renderer<Food> foodListRenderer() {
+    public Renderer<Food> foodListRenderer() {
         return new ComponentRenderer<>(item -> {
             HorizontalLayout rootCardLayout = new HorizontalLayout();
             rootCardLayout.setMargin(true);
@@ -61,7 +62,7 @@ public class VirtualListInlineEditorSample extends StandardView {
             infoLayout.setWidth("30%");
 
             Avatar avatar = new Avatar();
-            avatar.addThemeVariants(AvatarVariant.LUMO_XLARGE);
+            avatar.addThemeVariants(AvatarVariant.XLARGE);
 
             if (item.getIcon() != null && item.getIcon().length > 0) {
                 String iconFileName = "%s.png".formatted(item.getTitle());
@@ -105,11 +106,12 @@ public class VirtualListInlineEditorSample extends StandardView {
                         }
                     })
                     .open());
-            detailButton.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE);
+            detailButton.addClassName(StyleUtility.Button.LINK_BUTTON);
 
             Button removeButton = new Button(new Icon(VaadinIcon.TRASH));
             removeButton.setText(messages.getMessage("actions.Remove"));
-            removeButton.addThemeVariants(ButtonVariant.LUMO_TERTIARY_INLINE, ButtonVariant.LUMO_ERROR);
+            removeButton.addThemeVariants(ButtonVariant.ERROR);
+            removeButton.addClassName(StyleUtility.Button.LINK_BUTTON);
             removeButton.addClickListener(e -> {
                 foodDc.getMutableItems().remove(item);
                 dataContext.remove(dataContext.merge(item));
@@ -122,7 +124,7 @@ public class VirtualListInlineEditorSample extends StandardView {
     }
 
     @Install(to = "foodDl", target = Target.DATA_LOADER)
-    private List<Food> foodDlLoadDelegate(final LoadContext<Food> loadContext) {
+    public List<Food> foodDlLoadDelegate(final LoadContext<Food> loadContext) {
         return foodPlaceholderDataGenerator.getFoodSamplesList();
     }
 

@@ -14,17 +14,17 @@ import java.util.List;
 public class MultiSelectComboBoxThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected JmixMultiSelectComboBox<Day> testMultiSelectComboBox;
+    private JmixMultiSelectComboBox<Day> testMultiSelectComboBox;
     @ViewComponent
-    protected JmixCheckboxGroup<String> settingsCheckboxGroup;
+    private JmixCheckboxGroup<String> settingsCheckboxGroup;
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    public void onInit(InitEvent event) {
         settingsCheckboxGroup.setItems(getSettingsCheckboxGroupItems());
     }
 
     @Subscribe("settingsCheckboxGroup")
-    protected void onSettingsValueChange(TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
+    public void onSettingsValueChange(TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
         }
@@ -41,7 +41,7 @@ public class MultiSelectComboBoxThemeVariantSample extends StandardView {
                 .forEach(this::applyTestComboBoxTheme);
     }
 
-    protected void applyTestComboBoxTheme(String command) {
+    private void applyTestComboBoxTheme(String command) {
         switch (command) {
             case "label" -> testMultiSelectComboBox.setLabel("Label");
             case "placeholder" -> testMultiSelectComboBox.setPlaceholder("Placeholder");

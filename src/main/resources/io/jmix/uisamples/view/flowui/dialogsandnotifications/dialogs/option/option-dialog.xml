@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row flex-wrap">
+    <layout classNames="horizontal-layout">
         <button id="okAndCancelButton" text="OK &amp; Cancel" icon="CHECK"/>
         <button id="allActionsButton" text="All DialogActions" icon="GLOBE"/>
         <button id="customActionButton" text="Custom DialogActions" icon="COGS"/>

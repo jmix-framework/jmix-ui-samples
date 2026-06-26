@@ -1,0 +1,21 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout>
+        <details summaryText="Toolbar align variant" opened="true">
+            <hbox wrap="true">
+                <markdownEditor label="Align start" themeNames="toolbar-align-start"
+                                placeholder="Placeholder"/>
+                <markdownEditor label="Align center" themeNames="toolbar-align-center"
+                                placeholder="Placeholder"/>
+                <markdownEditor label="Align end" themeNames="toolbar-align-end"
+                                placeholder="Placeholder"/>
+            </hbox>
+        </details>
+        <details summaryText="Helper variant" opened="true">
+            <hbox wrap="true">
+                <markdownEditor label="Default helper" helperText="Default helper text"/>
+                <markdownEditor label="Helper above field" themeNames="helper-above-field"
+                                helperText="Above helper text"/>
+            </hbox>
+        </details>
+    </layout>
+</view>

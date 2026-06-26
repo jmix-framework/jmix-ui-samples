@@ -1,0 +1,62 @@
+/*
+ * Base color for day headers.
+ */
+.uisamples-day-header {
+    background-color: color-mix(in srgb, var(--aura-accent-color) 10%, transparent);
+}
+
+jmix-full-calendar .uisamples-day-header a {
+    color: var(--aura-accent-text-color);
+}
+
+.uisamples-day-header.uisamples-today {
+    background-color: var(--aura-accent-color);
+}
+
+jmix-full-calendar .uisamples-day-header.uisamples-today a {
+    color: var(--aura-accent-contrast-color);
+}
+
+jmix-full-calendar .fc-day.fc-daygrid-day.uisamples-today {
+    background-color: inherit;
+}
+
+jmix-full-calendar .uisamples-today .fc-daygrid-day-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: var(--aura-accent-text-color);
+    background-color: color-mix(in srgb, var(--aura-accent-color) 10%, transparent);
+    border-radius: var(--vaadin-radius-l);
+    line-height: 1;
+    font-weight: 500;
+    min-width: calc(var(--aura-base-line-height) * 1em + 0.45em);
+    flex-shrink: 0;
+    margin-top: var(--vaadin-padding-xs);
+    margin-inline-end: var(--vaadin-padding-xs);
+}
+
+/*
+ * Weekend header day colors.
+ */
+.uisamples-day-header.uisamples-weekend {
+    background-color: color-mix(in srgb, var(--aura-red) 10%, transparent);
+}
+
+jmix-full-calendar .uisamples-day-header.uisamples-weekend a {
+    color: var(--aura-red-text);
+}
+
+.uisamples-day-header.uisamples-weekend.uisamples-today {
+    background-color: var(--aura-red);
+}
+
+jmix-full-calendar .uisamples-day-header.uisamples-weekend.uisamples-today a {
+    color: var(--aura-accent-contrast-color);
+}
+
+jmix-full-calendar .uisamples-weekend.uisamples-today .fc-daygrid-day-number {
+    background-color: color-mix(in srgb, var(--aura-red) 10%, transparent);
+    color: var(--aura-red-text);
+}

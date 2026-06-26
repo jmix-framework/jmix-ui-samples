@@ -7,6 +7,10 @@ import io.jmix.flowui.backgroundtask.BackgroundTaskHandler;
 import io.jmix.flowui.backgroundtask.BackgroundWorker;
 import io.jmix.flowui.backgroundtask.TaskLifeCycle;
 import io.jmix.flowui.component.checkbox.JmixCheckbox;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+// sample-hide:end
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,30 +22,48 @@ import java.util.concurrent.TimeUnit;
 @ViewDescriptor("progress-bar-theme-variant.xml")
 public class ProgressBarThemeVariantSample extends StandardView {
 
-    protected static final int ITERATIONS = 20;
+    private static final int ITERATIONS = 20;
 
     @ViewComponent
-    protected ProgressBar standardProgressBar;
+    private ProgressBar standardProgressBar;
     @ViewComponent
-    protected ProgressBar successProgressBar;
+    private ProgressBar successProgressBar;
+    // theme-only:aura
     @ViewComponent
-    protected ProgressBar errorProgressBar;
+    private ProgressBar warningProgressBar;
+    // theme-only:aura:end
     @ViewComponent
-    protected ProgressBar contrastProgressBar;
+    private ProgressBar errorProgressBar;
+    // theme-only:lumo
+    @ViewComponent
+    private ProgressBar contrastProgressBar;
+    // theme-only:lumo:end
 
     @Autowired
-    protected BackgroundWorker backgroundWorker;
+    private BackgroundWorker backgroundWorker;
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
 
-    protected BackgroundTaskHandler<Void> taskHandler;
-    protected Collection<ProgressBar> progressBars;
+    private BackgroundTaskHandler<Void> taskHandler;
+    private Collection<ProgressBar> progressBars;
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    public void onInit(InitEvent event) {
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) { // sample-hide
+            // theme-only:lumo
         progressBars = List.of(standardProgressBar, successProgressBar, errorProgressBar, contrastProgressBar);
+            // theme-only:lumo:end
+        } else { // sample-hide
+            // theme-only:aura
+        progressBars = List.of(standardProgressBar, successProgressBar, warningProgressBar, errorProgressBar);
+            // theme-only:aura:end
+        } // sample-hide
     }
 
     @Subscribe("indeterminateCheckbox")
-    protected void onIndeterminateCheckboxValueChange(ComponentValueChangeEvent<JmixCheckbox, Boolean> event) {
+    public void onIndeterminateCheckboxValueChange(ComponentValueChangeEvent<JmixCheckbox, Boolean> event) {
         Boolean value = event.getValue();
 
         if (value && taskHandler != null && taskHandler.isAlive()) {
@@ -53,12 +75,12 @@ public class ProgressBarThemeVariantSample extends StandardView {
         progressBars.forEach(progressBar -> progressBar.setIndeterminate(value));
     }
 
-    protected void runNewTask() {
+    private void runNewTask() {
         taskHandler = backgroundWorker.handle(createBackgroundTask());
         taskHandler.execute();
     }
 
-    protected BackgroundTask<Integer, Void> createBackgroundTask() {
+    private BackgroundTask<Integer, Void> createBackgroundTask() {
         return new BackgroundTask<>(100, TimeUnit.SECONDS) {
 
             @Override

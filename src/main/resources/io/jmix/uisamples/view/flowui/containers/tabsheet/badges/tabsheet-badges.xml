@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout>
+    <layout classNames="tab-sheet-badges">
         <tabSheet id="tabSheet" width="100%"/>
     </layout>
 </view>

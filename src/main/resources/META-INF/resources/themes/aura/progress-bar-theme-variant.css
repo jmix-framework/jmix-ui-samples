@@ -1,0 +1,4 @@
+
+.progress-bar-theme-variant-layout vaadin-progress-bar {
+    min-height: var(--vaadin-gap-s);
+}

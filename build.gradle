@@ -1,5 +1,5 @@
 plugins {
-    id 'io.jmix' version '2.8.0'
+    id 'io.jmix' version '3.0.0'
     id 'java'
     id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.9'
     id 'war'
@@ -9,7 +9,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'com.vaadin'
 
 jmix {
-    bomVersion = '2.8.0'
+    bomVersion = '3.0.0'
 }
 
 group = 'io.jmix.uisamples'
@@ -53,13 +53,14 @@ dependencies {
     implementation 'io.jmix.pivottable:jmix-pivottable-flowui-starter'
     implementation 'io.jmix.groupgrid:jmix-groupgrid-flowui-starter'
 
-    implementation 'com.storedobject.chart:so-charts:3.2.4'
-    implementation 'org.vaadin.addons.componentfactory:vcf-input-mask:2.2.0'
+    implementation 'org.vaadin.addons.so:so-charts:6.0.1'
+    implementation 'org.vaadin.addons.componentfactory:vcf-input-mask:3.0.0'
     implementation 'org.commonmark:commonmark:0.24.0'
     implementation 'org.jsoup:jsoup:1.17.2'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.apache.commons:commons-dbcp2'
+    implementation 'com.vaadin:vaadin-dev'
 
     runtimeOnly 'org.hsqldb:hsqldb'
 

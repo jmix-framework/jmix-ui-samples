@@ -2,7 +2,6 @@ package io.jmix.uisamples.view.flowui.containers.tabsheet.badges;
 
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.tabs.Tab;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.view.*;
@@ -53,7 +52,7 @@ public class TabSheetBadgesSample extends StandardView {
     protected Span createBadge(int value, String theme) {
         Span badge = new Span(String.valueOf(value));
         badge.getElement().getThemeList().add("badge small " + theme);
-        badge.addClassName(LumoUtility.Margin.Start.XSMALL);
+        badge.addClassName("tab-badge");
         return badge;
     }
 }

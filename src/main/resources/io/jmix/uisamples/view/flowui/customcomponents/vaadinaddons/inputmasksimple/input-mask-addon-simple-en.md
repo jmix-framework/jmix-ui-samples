@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.vaadin.addons.componentfactory:vcf-input-mask:2.2.0'
+    implementation 'org.vaadin.addons.componentfactory:vcf-input-mask:3.0.0'
     // ...
 }
 ```

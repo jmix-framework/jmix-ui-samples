@@ -5,7 +5,7 @@
                autostart="false"
                repeating="true"/>
     </facets>
-    <layout classNames="flex-row flex-wrap" alignItems="CENTER">
+    <layout classNames="horizontal-layout" alignItems="CENTER">
         <button id="timerStartBtn" text="Start" icon="PLAY" themeNames="primary"/>
         <button id="timerStopBtn" text="Stop" icon="PAUSE" themeNames="primary error" enabled="false"/>
         <span id="timerIndicator" text="Timer is ready to start" themeNames="badge contrast pill"/>

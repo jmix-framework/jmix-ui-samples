@@ -42,6 +42,23 @@
                  classNames="overview-tag-font overview-tag-grey"/>
         </sample>
         <sample>
+            <image src="icons/cookbook/dragDrop.png" route="dnd-data-grid"/>
+            <text message="dragDrop.title" route="dnd-data-grid" component="h4"/>
+            <text message="dragDrop.description"/>
+            <tag messagePrefix="uisamples-menu-config" message="dnd-data-grid" route="dnd-data-grid"
+                 classNames="overview-tag-font overview-tag-grey"/>
+            <tag messagePrefix="uisamples-menu-config" message="dnd-components" route="dnd-components"
+                 classNames="overview-tag-font overview-tag-grey"/>
+            <tag messagePrefix="uisamples-menu-config" message="dnd-events" route="dnd-events"
+                 classNames="overview-tag-font overview-tag-grey"/>
+            <tag messagePrefix="uisamples-menu-config" message="dnd-effects" route="dnd-effects"
+                 classNames="overview-tag-font overview-tag-grey"/>
+            <tag messagePrefix="uisamples-menu-config" message="dnd-conditional-drop" route="dnd-conditional-drop"
+                 classNames="overview-tag-font overview-tag-grey"/>
+            <tag messagePrefix="uisamples-menu-config" message="dnd-styling" route="dnd-styling"
+                 classNames="overview-tag-font overview-tag-grey"/>
+        </sample>
+        <sample>
             <image src="icons/cookbook/wizard.png" route="copy-to-clipboard"/>
             <text message="other.title" route="copy-to-clipboard" component="h4"/>
             <text message="other.description"/>

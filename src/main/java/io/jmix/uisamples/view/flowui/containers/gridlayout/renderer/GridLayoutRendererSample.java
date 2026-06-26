@@ -46,7 +46,7 @@ public class GridLayoutRendererSample extends StandardView {
     private JmixCard createCard() {
         JmixCard card = uiComponents.create(JmixCard.class);
         card.setWidthFull();
-        card.addThemeVariants(CardVariant.LUMO_OUTLINED, CardVariant.LUMO_ELEVATED);
+        card.addThemeVariants(CardVariant.OUTLINED, CardVariant.ELEVATED);
         return card;
     }
 

@@ -1,18 +1,24 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="flex-row flex-wrap">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Theme Variant" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="standardNotificationButton" text="Standard"/>
+                    <!-- theme-only:lumo -->
                     <button id="primaryNotificationButton" text="Primary" themeNames="primary"/>
+                    <!-- theme-only:lumo:end -->
+                    <button id="infoNotificationButton" text="Info" themeNames="primary"/>
                     <button id="successNotificationButton" text="Success" themeNames="success"/>
+                    <button id="warningNotificationButton" text="Warning" themeNames="warning"/>
                     <button id="errorNotificationButton" text="Error" themeNames="error"/>
+                    <!-- theme-only:lumo -->
                     <button id="contrastNotificationButton" text="Contrast" themeNames="contrast"/>
+                    <!-- theme-only:lumo:end -->
                 </hbox>
             </details>
 
             <details summaryText="Type" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="defaultTypeNotificationButton" text="Default" icon="COMMENT"/>
                     <button id="successTypeNotificationButton" text="Success" icon="CHECK"/>
                     <button id="warningTypeNotificationButton" text="Warning" icon="WARNING"/>
@@ -22,7 +28,7 @@
             </details>
 
             <details summaryText="Duration and cloesable" opened="true">
-                <hbox classNames="flex-wrap">
+                <hbox wrap="true">
                     <button id="durationNotificationButton" text="With duration" icon="CLOCK"/>
                     <button id="closeableNotificationButton" text="Closeable" icon="CLOSE"/>
                 </hbox>
@@ -53,7 +59,7 @@
                     <comboBox id="themeVariantField" label="ThemeVariant" clearButtonVisible="true"/>
                     <comboBox id="typeField" label="Type" clearButtonVisible="true"/>
                 </formLayout>
-                <span text="Be attentive. Some of the settings overlap each other."/>
+                <span text="Be attentive. Some of the settings overlap each other." themeNames="badge"/>
             </vbox>
         </details>
     </layout>

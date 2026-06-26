@@ -1,0 +1,104 @@
+/* Define your styles here */
+
+html {
+    --paid-color: light-dark(hsl(258, 90%, 73%, 0.13), hsl(258, 100%, 78%, 0.13));
+    --paid-text-color: light-dark(hsl(264, 79%, 38%), hsl(264, 69%, 72%));
+}
+
+.jmix-search-field {
+    margin: calc(var(--vaadin-padding-s) / 2) var(--vaadin-padding-s);
+}
+
+.jmix-menu-tools {
+    margin: calc(var(--vaadin-padding-m) / 2) var(--vaadin-padding-m);
+    align-items: center;
+}
+
+.jmix-menu-tools-button {
+    margin-inline-start: auto;
+    margin-inline-end: var(--vaadin-padding-xs);
+}
+
+.jmix-main-view-title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: var(--aura-line-height-xl);
+    font-size: var(--aura-font-size-xl);
+    cursor: var(--vaadin-clickable-cursor);
+}
+
+.jmix-main-view-title-holder .ui-samples-logo {
+    width: 1.375em;
+    height: 1.375em;
+    transition: transform 200ms ease-out;
+}
+
+.jmix-main-view-title-holder .ui-samples-logo:hover {
+    transform: scale(1.1) rotate(-6deg);
+}
+
+.animated-sizing {
+    transition: transform 200ms ease-out;
+}
+
+.animated-sizing:hover {
+    transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .jmix-main-view-title-holder .ui-samples-logo,
+    .animated-sizing {
+        transition: none;
+    }
+}
+
+.jmix-main-view-title:hover {
+    cursor: pointer;
+}
+
+.jmix-main-view-title-holder {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: var(--vaadin-gap-s);
+    margin: calc(var(--vaadin-padding-m) * 14 / 16) 0;
+    margin-inline-start: var(--vaadin-padding-m);
+}
+
+.jmix-main-view-header .align-end {
+    margin-inline-start: auto;
+}
+
+.jmix-main-view-header-link {
+    display: flex;
+    align-items: center;
+    gap: var(--vaadin-gap-xs);
+    text-decoration: none;
+}
+
+.jmix-main-view-header-link:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+vaadin-button.permalink-button {
+    margin-inline-start: auto;
+    margin-inline-end: var(--vaadin-padding-s);
+}
+
+[theme~='badge'][theme~='paid'] {
+    color: var(--paid-text-color);
+    background-color: var(--paid-color);
+}
+
+/* jmix-tabsheet defaults to content-box in the Aura theme; with its 1px border
+   it overflows the app-layout content area by 2px, causing a horizontal scrollbar. */
+jmix-tabsheet {
+    box-sizing: border-box;
+}
+
+/* workaround for https://github.com/vaadin/web-components/issues/10627 */
+vaadin-split-layout > [slot] {
+    overflow: auto;
+}

@@ -1,0 +1,8 @@
+
+.employee-info {
+    margin-bottom: var(--lumo-space-m);
+}
+
+.employee-info .employee-name {
+    gap: var(--lumo-space-xs);
+}

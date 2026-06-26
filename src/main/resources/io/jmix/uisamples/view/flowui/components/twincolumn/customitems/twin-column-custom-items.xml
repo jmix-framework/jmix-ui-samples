@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row flex-wrap">
+    <layout classNames="horizontal-layout">
         <twinColumn id="twinColumnWithList"
                     label="Items List"/>
         <twinColumn id="twinColumnWithMap"

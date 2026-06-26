@@ -1,6 +1,5 @@
 package io.jmix.uisamples.entity;
 
-import io.jmix.core.entity.annotation.CurrencyValue;
 import io.jmix.core.entity.annotation.JmixGeneratedValue;
 import io.jmix.core.metamodel.annotation.InstanceName;
 import io.jmix.core.metamodel.annotation.JmixEntity;
@@ -25,7 +24,6 @@ public class Product {
     protected String name;
 
     @Column(name = "PRICE", nullable = false)
-    @CurrencyValue(currency = "$")
     protected BigDecimal price;
 
     @JoinTable(name = "PRODUCT_PRODUCT_TAG_LINK",

@@ -1,6 +1,6 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
-        <checkboxGroup id="tabSheetSettingsCheckboxGroup" label="TabSheet themes"/>
+        <checkboxGroup id="tabSheetSettingsCheckboxGroup" label="TabSheet themes" themeNames="horizontal"/>
         <tabSheet id="tabSheet" width="100%">
             <tab id="tab1" label="Tab 1">
                 <div/>

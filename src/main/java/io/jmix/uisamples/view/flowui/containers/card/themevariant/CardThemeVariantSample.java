@@ -1,7 +1,6 @@
 package io.jmix.uisamples.view.flowui.containers.card.themevariant;
 
 import com.vaadin.flow.component.Component;
-import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.avatar.Avatar;
 import com.vaadin.flow.component.card.CardVariant;
@@ -11,13 +10,14 @@ import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.data.renderer.ComponentRenderer;
+import com.vaadin.flow.component.orderedlayout.FlexLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.server.streams.DownloadHandler;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 import io.jmix.core.Messages;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
 import io.jmix.flowui.component.card.JmixCard;
+import io.jmix.flowui.component.checkbox.JmixCheckbox;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
 import io.jmix.flowui.component.scroller.JmixScroller;
 import io.jmix.flowui.component.select.JmixSelect;
@@ -38,19 +38,48 @@ public class CardThemeVariantSample extends StandardView {
     private JmixCard card;
 
     @ViewComponent
-    private JmixCheckboxGroup<String> slotsGroup;
+    private VerticalLayout slotsGroupContainer;
+
     @ViewComponent
     private JmixCheckboxGroup<String> themeGroup;
+
+    @ViewComponent
+    private MessageBundle messageBundle;
+
+    @ViewComponent
+    private JmixSelect<String> mediaSelect;
+
+    @ViewComponent
+    private JmixSelect<String> contentSelect;
+
+    @ViewComponent
+    private JmixCheckbox mediaCheckbox;
+
+    @ViewComponent
+    private JmixCheckbox headerPrefixCheckbox;
+
+    @ViewComponent
+    private JmixCheckbox headerCheckbox;
+
+    @ViewComponent
+    private JmixCheckbox headerSuffixCheckbox;
+
+    @ViewComponent
+    private JmixCheckbox titleCheckbox;
+
+    @ViewComponent
+    private JmixCheckbox subtitleCheckbox;
+
+    @ViewComponent
+    private JmixCheckbox contentCheckbox;
+
+    @ViewComponent
+    private JmixCheckbox footerCheckbox;
 
     @Autowired
     private UiComponents uiComponents;
     @Autowired
-    private MessageBundle messageBundle;
-    @Autowired
     private Messages messages;
-
-    private JmixSelect<String> mediaSelect;
-    private JmixSelect<String> contentSelect;
 
     @Subscribe
     public void onInit(final InitEvent event) {
@@ -60,61 +89,84 @@ public class CardThemeVariantSample extends StandardView {
 
     @Subscribe
     public void onReady(final ReadyEvent event) {
-        slotsGroup.setTypedValue(List.of("Media", "Content", "Title", "Subtitle", "Header Suffix", "Footer"));
+        updateSlotsFromCheckboxes();
+
         themeGroup.setTypedValue(List.of(
-                CardVariant.LUMO_OUTLINED.getVariantName(),
-                CardVariant.LUMO_ELEVATED.getVariantName(),
-                CardVariant.LUMO_COVER_MEDIA.getVariantName()
+                CardVariant.OUTLINED.getVariantName(),
+                CardVariant.ELEVATED.getVariantName(),
+                CardVariant.COVER_MEDIA.getVariantName()
         ));
     }
 
     private void initSlotsGroup() {
-        slotsGroup.setItems(
-                "Media", "Header Prefix", "Header", "Header Suffix",
-                "Title", "Subtitle", "Content", "Footer"
-        );
-    }
-
-    @Supply(to = "slotsGroup", subject = "renderer")
-    public ComponentRenderer<Component, String> slotsGroupRenderer() {
-        return new ComponentRenderer<>(slot ->
-                switch (slot) {
-                    case "Media" -> initMediaSelect();
-                    case "Content" -> initContentSelect();
-                    default -> new Text(slot);
-                });
-    }
-
-    private Component initMediaSelect() {
-        Div div = new Div();
-        div.addClassNames(LumoUtility.Display.FLEX, LumoUtility.AlignItems.BASELINE);
-
-        mediaSelect = uiComponents.create(JmixSelect.class);
-        mediaSelect.addClassName("card-select");
-
         mediaSelect.setItems("Image", "Icon", "Avatar");
         mediaSelect.addValueChangeListener(e -> updateMedia(e.getValue()));
-
         mediaSelect.setValue("Image");
-
-        div.add(new Text("Media:"), mediaSelect);
-        return div;
-    }
-
-    private Component initContentSelect() {
-        Div div = new Div();
-        div.addClassNames(LumoUtility.Display.FLEX, LumoUtility.AlignItems.BASELINE);
-
-        contentSelect = uiComponents.create(JmixSelect.class);
-        contentSelect.addClassName("card-select");
 
         contentSelect.setItems("Text", "Scroller", "Image & Text");
         contentSelect.addValueChangeListener(e -> updateContent(e.getValue()));
-
         contentSelect.setValue("Text");
 
-        div.add(new Text("Content:"), contentSelect);
-        return div;
+        mediaCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+        headerPrefixCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+        headerCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+        headerSuffixCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+        titleCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+        subtitleCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+        contentCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+        footerCheckbox.addValueChangeListener(e -> updateSlotsFromCheckboxes());
+
+        mediaSelect.addValueChangeListener(e -> {
+            if (Boolean.TRUE.equals(mediaCheckbox.getValue())) {
+                updateMedia(e.getValue());
+            }
+        });
+        contentSelect.addValueChangeListener(e -> {
+            if (Boolean.TRUE.equals(contentCheckbox.getValue())) {
+                updateContent(e.getValue());
+            }
+        });
+    }
+
+    private void updateSlotsFromCheckboxes() {
+        card.setMedia(null);
+        card.setHeaderPrefix(null);
+        card.setHeader(null);
+        card.setHeaderSuffix(null);
+        card.setTitle((Component) null);
+        card.setSubtitle((Component) null);
+        card.removeAll();
+        Arrays.stream(card.getFooterComponents()).forEach(Component::removeFromParent);
+
+        mediaSelect.setEnabled(false);
+        contentSelect.setEnabled(false);
+
+        if (Boolean.TRUE.equals(mediaCheckbox.getValue())) {
+            mediaSelect.setEnabled(true);
+            updateMedia(mediaSelect.getValue());
+        }
+        if (Boolean.TRUE.equals(headerPrefixCheckbox.getValue())) {
+            card.setHeaderPrefix(createAvatar());
+        }
+        if (Boolean.TRUE.equals(headerCheckbox.getValue())) {
+            card.setHeader(createHeader());
+        }
+        if (Boolean.TRUE.equals(headerSuffixCheckbox.getValue())) {
+            card.setHeaderSuffix(createBadge());
+        }
+        if (Boolean.TRUE.equals(titleCheckbox.getValue())) {
+            card.setTitle("Jmix");
+        }
+        if (Boolean.TRUE.equals(subtitleCheckbox.getValue())) {
+            card.setSubtitle(new Div("Modern Dev Platform"));
+        }
+        if (Boolean.TRUE.equals(contentCheckbox.getValue())) {
+            contentSelect.setEnabled(true);
+            updateContent(contentSelect.getValue());
+        }
+        if (Boolean.TRUE.equals(footerCheckbox.getValue())) {
+            card.addToFooter(createFooter());
+        }
     }
 
     private void updateMedia(String value) {
@@ -156,7 +208,7 @@ public class CardThemeVariantSample extends StandardView {
             }
             case "Image & Text" -> {
                 Div div = new Div();
-                div.addClassName(LumoUtility.Gap.SMALL);
+                div.addClassName("image-text-container");
 
                 Image image = uiComponents.create(Image.class);
                 image.setSizeFull();
@@ -174,64 +226,12 @@ public class CardThemeVariantSample extends StandardView {
 
     private void initThemeGroup() {
         themeGroup.setItems(
-                CardVariant.LUMO_OUTLINED.getVariantName(),
-                CardVariant.LUMO_ELEVATED.getVariantName(),
-                CardVariant.LUMO_HORIZONTAL.getVariantName(),
-                CardVariant.LUMO_STRETCH_MEDIA.getVariantName(),
-                CardVariant.LUMO_COVER_MEDIA.getVariantName()
+                CardVariant.OUTLINED.getVariantName(),
+                CardVariant.ELEVATED.getVariantName(),
+                CardVariant.HORIZONTAL.getVariantName(),
+                CardVariant.STRETCH_MEDIA.getVariantName(),
+                CardVariant.COVER_MEDIA.getVariantName()
         );
-    }
-
-    @Subscribe("slotsGroup")
-    public void onSlotsGroupValueChange(TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
-        if (event.getValue() == null) {
-            return;
-        }
-
-        // clear component
-
-        card.setMedia(null);
-        card.setHeaderPrefix(null);
-        card.setHeader(null);
-        card.setHeaderSuffix(null);
-        card.setTitle((Component) null);
-        card.setSubtitle(null);
-        card.removeAll();
-        Arrays.stream(card.getFooterComponents()).forEach(Component::removeFromParent);
-
-        mediaSelect.setEnabled(false);
-        contentSelect.setEnabled(false);
-
-        for (String slot : event.getValue()) {
-            switch (slot) {
-                case "Media" -> {
-                    mediaSelect.setEnabled(true);
-                    updateMedia(mediaSelect.getValue());
-                }
-                case "Header Prefix" -> {
-                    Component avatar = createAvatar();
-                    card.setHeaderPrefix(avatar);
-                }
-                case "Header" -> {
-                    Component header = createHeader();
-                    card.setHeader(header);
-                }
-                case "Header Suffix" -> {
-                    Component badge = createBadge();
-                    card.setHeaderSuffix(badge);
-                }
-                case "Title" -> card.setTitle("Jmix");
-                case "Subtitle" -> card.setSubtitle(new Div("Modern Dev Platform"));
-                case "Content" -> {
-                    contentSelect.setEnabled(true);
-                    updateContent(contentSelect.getValue());
-                }
-                case "Footer" -> {
-                    Component[] footerComponents = createFooter();
-                    card.addToFooter(footerComponents);
-                }
-            }
-        }
     }
 
     @Subscribe("themeGroup")
@@ -258,21 +258,14 @@ public class CardThemeVariantSample extends StandardView {
     }
 
     private Component createHeader() {
-        Div header = new Div();
-        header.addClassNames(
-                LumoUtility.Display.FLEX,
-                LumoUtility.FlexDirection.COLUMN_REVERSE,
-                LumoUtility.LineHeight.XSMALL
-        );
+        FlexLayout header = new FlexLayout();
+        header.setFlexDirection(FlexLayout.FlexDirection.COLUMN_REVERSE);
+        header.addClassNames("header");
 
         H2 title = new H2("Jmix");
 
         Div subtitle = new Div("Modern Dev Platform");
-        subtitle.addClassNames(
-                LumoUtility.TextTransform.UPPERCASE,
-                LumoUtility.FontSize.XSMALL,
-                LumoUtility.TextColor.SECONDARY
-        );
+        subtitle.addClassNames("subtitle");
 
         header.add(title, subtitle);
         return header;

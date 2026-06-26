@@ -1,5 +1,5 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout classNames="flex-row flex-wrap">
+    <layout classNames="horizontal-layout">
         <button id="standardDialogButton" text="Standard dialog"/>
         <button id="customParameterDialogButton" text="Custom parameter"/>
         <button id="customActionsDialogButton" text="Custom Actions"/>

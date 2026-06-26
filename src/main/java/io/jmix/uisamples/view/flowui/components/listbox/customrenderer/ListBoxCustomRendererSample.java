@@ -7,7 +7,6 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.server.streams.DownloadHandler;
-import com.vaadin.flow.theme.lumo.LumoUtility;
 import io.jmix.core.Resources;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.listbox.JmixListBox;
@@ -46,16 +45,16 @@ public class ListBoxCustomRendererSample extends StandardView {
             avatar.setImageHandler(getSimpsonImageHandler(simpson));
 
             Span name = new Span(simpson.name());
-            Span profession = new Span(simpson.shortName());
-            profession.addClassNames(LumoUtility.TextColor.SECONDARY, LumoUtility.FontSize.SMALL);
+            Span shortName = new Span(simpson.shortName());
+            shortName.addClassNames("short-name");
 
             VerticalLayout column = uiComponents.create(VerticalLayout.class);
-            column.add(name, profession);
+            column.add(name, shortName);
             column.setPadding(false);
             column.setSpacing(false);
 
             row.add(avatar, column);
-            row.addClassName(LumoUtility.LineHeight.MEDIUM);
+            row.addClassName("row");
             return row;
         });
     }

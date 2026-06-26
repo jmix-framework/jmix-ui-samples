@@ -20,7 +20,7 @@ public class KanbanDataSavingSample extends StandardView {
     @Install(to = "kanban", subject = "saveDelegate")
     public void kanbanSaveDelegate(final KanbanTask kanbanTask) {
         notifications.create("Task '%s' saved!".formatted(kanbanTask.getName()))
-                .withThemeVariant(NotificationVariant.LUMO_SUCCESS)
+                .withThemeVariant(NotificationVariant.SUCCESS)
                 .withPosition(Notification.Position.TOP_END)
                 .show();
     }

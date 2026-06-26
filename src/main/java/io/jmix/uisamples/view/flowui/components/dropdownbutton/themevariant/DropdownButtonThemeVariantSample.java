@@ -1,16 +1,22 @@
 package io.jmix.uisamples.view.flowui.components.dropdownbutton.themevariant;
 
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.SupportsTypedValue;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
+import io.jmix.flowui.icon.Icons;
 import io.jmix.flowui.kit.component.combobutton.ComboButton;
 import io.jmix.flowui.kit.component.dropdownbutton.AbstractDropdownButton;
 import io.jmix.flowui.kit.component.dropdownbutton.DropdownButton;
+import io.jmix.flowui.kit.icon.JmixFontIcon;
 import io.jmix.flowui.view.*;
+// sample-hide:start
+import io.jmix.uisamples.theme.AppTheme;
+import io.jmix.uisamples.theme.ThemeManager;
+// sample-hide:end
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -19,24 +25,31 @@ import java.util.List;
 public class DropdownButtonThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected VerticalLayout testButtonPlaceholder;
+    private VerticalLayout testButtonPlaceholder;
     @ViewComponent
-    protected JmixCheckboxGroup<String> settingsCheckboxGroup;
+    private JmixCheckboxGroup<String> settingsCheckboxGroup;
 
     @Autowired
-    protected UiComponents uiComponents;
+    private UiComponents uiComponents;
+    @Autowired
+    private Icons icons;
+    // sample-hide:start
+    @Autowired
+    private ThemeManager themeManager;
+    // sample-hide:end
 
-    protected AbstractDropdownButton testButton;
+    private AbstractDropdownButton testButton;
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    public void onInit(InitEvent event) {
         testButton = uiComponents.create(DropdownButton.class);
+        testButton.addItem("textItem", "Text");
         testButtonPlaceholder.addComponentAsFirst(testButton);
         settingsCheckboxGroup.setItems(getSettingsCheckboxGroupItems());
     }
 
     @Subscribe("settingsCheckboxGroup")
-    protected void onSettingsValueChange(SupportsTypedValue.TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
+    public void onSettingsValueChange(SupportsTypedValue.TypedValueChangeEvent<JmixCheckboxGroup<String>, Collection<String>> event) {
         if (event.getValue() == null) {
             return;
         }
@@ -54,7 +67,7 @@ public class DropdownButtonThemeVariantSample extends StandardView {
         }
 
         //clear
-        testButton.setIconComponent(null);
+        testButton.setIcon(null);
         testButton.setText("");
         testButton.getThemeNames().clear();
 
@@ -65,19 +78,28 @@ public class DropdownButtonThemeVariantSample extends StandardView {
                 .forEach(this::applyTestButtonTheme);
     }
 
-    protected void applyTestButtonTheme(String command) {
+    public void applyTestButtonTheme(String command) {
         if ("text".equalsIgnoreCase(command)) {
             testButton.setText("Button text");
         } else if ("icon".equalsIgnoreCase(command)) {
             testButton.addThemeName(command);
-            testButton.setIconComponent(VaadinIcon.SMILEY_O.create());
+            testButton.setIcon(icons.get(JmixFontIcon.SMILEY_O));
         } else {
             testButton.addThemeName(command);
         }
     }
 
-    protected List<String> getSettingsCheckboxGroupItems() {
-        return List.of("ComboButton", "Text", "Primary", "Success", "Error", "Contrast",
-                "Large", "Small", "Icon", "Tertiary", "Tertiary-inline");
+    private List<String> getSettingsCheckboxGroupItems() {
+        if (themeManager.getCurrentTheme() == AppTheme.LUMO) {            // sample-hide
+            // theme-only:lumo
+            return List.of("Text", "Primary", "Success", "Warning", "Error", "Contrast",
+                    "Large", "Small", "Icon", "Tertiary", "Tertiary-inline");
+            // theme-only:lumo:end
+        } else { // sample-hide
+            // theme-only:aura
+            return List.of(
+                    "Text", "Primary", "Success", "Warning", "Error", "Large", "Small", "Icon", "Tertiary");
+            // theme-only:aura:end
+        } // sample-hide
     }
 }

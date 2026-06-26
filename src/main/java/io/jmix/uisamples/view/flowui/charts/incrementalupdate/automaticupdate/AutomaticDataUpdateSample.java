@@ -19,23 +19,23 @@ import java.util.Random;
 public class AutomaticDataUpdateSample extends StandardView {
 
     @Autowired
-    protected Metadata metadata;
+    private Metadata metadata;
 
     @ViewComponent
-    protected CollectionContainer<TransportCount> transportDc;
+    private CollectionContainer<TransportCount> transportDc;
     @ViewComponent
-    protected Chart chart;
+    private Chart chart;
     @ViewComponent
-    protected Timer timer;
+    private Timer timer;
     @ViewComponent
-    protected JmixButton startStopDataGen;
+    private JmixButton startStopDataGen;
 
-    protected Integer baseYear = 2013;
-    protected Random random = new Random();
-    protected boolean timerStarted;
+    private Integer baseYear = 2013;
+    private final Random random = new Random();
+    private boolean timerStarted;
 
     @Subscribe
-    protected void onInit(InitEvent event) {
+    private void onInit(InitEvent event) {
         prepareTimerButtonToStart();
     }
 
@@ -53,25 +53,25 @@ public class AutomaticDataUpdateSample extends StandardView {
     }
 
     @Subscribe("timer")
-    protected void onTimerTick(Timer.TimerActionEvent event) {
+    private void onTimerTick(Timer.TimerActionEvent event) {
         removeData();
         addData();
     }
 
-    protected void prepareTimerButtonToStart() {
+    private void prepareTimerButtonToStart() {
         startStopDataGen.setText("Start");
         startStopDataGen.setIcon(VaadinIcon.PLAY.create());
-        startStopDataGen.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
-        startStopDataGen.removeThemeVariants(ButtonVariant.LUMO_ERROR);
+        startStopDataGen.addThemeVariants(ButtonVariant.PRIMARY);
+        startStopDataGen.removeThemeVariants(ButtonVariant.ERROR);
     }
 
-    protected void prepareTimerButtonToStop() {
+    private void prepareTimerButtonToStop() {
         startStopDataGen.setText("Stop");
         startStopDataGen.setIcon(VaadinIcon.PAUSE.create());
-        startStopDataGen.addThemeVariants(ButtonVariant.LUMO_ERROR);
+        startStopDataGen.addThemeVariants(ButtonVariant.ERROR);
     }
 
-    protected void addData() {
+    private void addData() {
         TransportCount transportCount = metadata.create(TransportCount.class);
 
         transportCount.setYear(baseYear++);
@@ -82,7 +82,7 @@ public class AutomaticDataUpdateSample extends StandardView {
         transportDc.getMutableItems().add(transportCount);
     }
 
-    protected void removeData() {
+    private void removeData() {
         transportDc.getMutableItems().remove(0);
     }
 }

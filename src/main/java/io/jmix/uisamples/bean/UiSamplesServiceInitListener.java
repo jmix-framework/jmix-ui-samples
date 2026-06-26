@@ -9,6 +9,7 @@ import io.jmix.core.JmixModules;
 import io.jmix.core.Resources;
 import io.jmix.flowui.exception.UiExceptionHandlers;
 import io.jmix.flowui.sys.JmixServiceInitListener;
+import io.jmix.flowui.sys.LoginViewBeforeEnterHandler;
 import io.jmix.flowui.view.ViewRegistry;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
@@ -23,9 +24,10 @@ public class UiSamplesServiceInitListener extends JmixServiceInitListener {
     public UiSamplesServiceInitListener(ViewRegistry viewRegistry,
                                         UiExceptionHandlers uiExceptionHandlers,
                                         CoreProperties coreProperties,
+                                        LoginViewBeforeEnterHandler loginViewBeforeEnterHandler,
                                         JmixModules modules,
                                         Resources resources) {
-        super(viewRegistry, uiExceptionHandlers, coreProperties, modules, resources);
+        super(viewRegistry, uiExceptionHandlers, coreProperties, loginViewBeforeEnterHandler, modules, resources);
     }
 
     @Override
