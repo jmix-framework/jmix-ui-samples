@@ -153,6 +153,18 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
+            <item id="data-grid-sort-delegate-expression" page="dataGrid" anchor="sorting" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Order.java"/>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="data-grid-sort-delegate-comparator" page="dataGrid" anchor="sorting" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                    <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
             <item id="data-grid-custom-renderer" page="dataGrid" anchor="renderers" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>

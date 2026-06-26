@@ -1,0 +1,36 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data readOnly="true">
+        <collection id="ordersDc"
+                    class="io.jmix.uisamples.entity.Order">
+            <fetchPlan extends="_local">
+                <property name="customer" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="ordersDl">
+                <query>
+                    <![CDATA[select e from uisamples_Order e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <div classNames="rounded-panel">
+            <span text="msg://sampleDescription.text"/>
+        </div>
+        <simplePagination id="pagination"
+                          dataLoader="ordersDl"
+                          itemsPerPageDefaultValue="4"/>
+        <dataGrid id="ordersDataGrid"
+                  width="100%"
+                  minHeight="20em"
+                  dataContainer="ordersDc">
+            <columns>
+                <column property="date"/>
+                <column property="customer"/>
+                <column property="amount"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</view>
