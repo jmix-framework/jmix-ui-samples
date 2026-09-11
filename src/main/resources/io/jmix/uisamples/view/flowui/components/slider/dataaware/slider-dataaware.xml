@@ -1,0 +1,17 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.uisamples.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <integerSlider id="ageSlider" label="Slider connected to a container" width="20em"
+                       min="0" max="100" step="1"
+                       minMaxVisible="true"
+                       dataContainer="customerDc" property="age"/>
+        <hbox>
+            <span text="Value in the container:"/>
+            <span id="spanValue"/>
+        </hbox>
+    </layout>
+</view>

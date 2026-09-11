@@ -20,7 +20,7 @@
     <menu id="components-root" url="flow-ui/vc/components">
         <overview id="components" location="components/overview/components-overview.xml"/>
         <item id="avatar" page="avatar"/>
-        <menu id="badge">
+        <menu id="badge" isNew="true">
             <item id="badge-simple"/>
             <item id="badge-icons"/>
             <item id="badge-theme-variant" splitEnabled="true"/>
@@ -145,13 +145,13 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="data-grid-sort-delegate-expression" page="dataGrid" anchor="sorting" splitEnabled="true" isNew="true">
+            <item id="data-grid-sort-delegate-expression" page="dataGrid" anchor="sorting" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="data-grid-sort-delegate-comparator" page="dataGrid" anchor="sorting" splitEnabled="true" isNew="true">
+            <item id="data-grid-sort-delegate-comparator" page="dataGrid" anchor="sorting" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
@@ -428,13 +428,13 @@
         </menu>
         <menu id="markdown-components">
             <item id="markdown" page="markdown" splitEnabled="true"/>
-            <item id="markdown-editor-simple" page="markdownEditor" splitEnabled="true" isNew="true"/>
-            <item id="markdown-editor-dataaware" page="markdownEditor" splitEnabled="true" isNew="true">
+            <item id="markdown-editor-simple" page="markdownEditor" splitEnabled="true"/>
+            <item id="markdown-editor-dataaware" page="markdownEditor" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="markdown-editor-theme-variant" page="markdownEditor" splitEnabled="true" isNew="true"/>
+            <item id="markdown-editor-theme-variant" page="markdownEditor" splitEnabled="true"/>
         </menu>
         <menu id="multi-select-combo-box">
             <item id="multi-select-combo-box-simple" page="multiSelectComboBox">
@@ -534,6 +534,14 @@
                 </otherFiles>
             </item>
         </menu>
+        <menu id="range-slider" isNew="true">
+            <item id="range-slider-simple"/>
+            <item id="range-slider-filter" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
         <menu id="select">
             <item id="select-simple" page="select">
                 <otherFiles>
@@ -564,6 +572,14 @@
                 </otherFiles>
             </item>
             <item id="simple-pagination-after-refresh" page="simplePagination" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+        <menu id="slider" isNew="true">
+            <item id="slider-simple"/>
+            <item id="slider-dataaware">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -787,7 +803,7 @@
         </menu>
         <menu id="tabsheet">
             <item id="tabsheet-simple" page="tabSheet"/>
-            <item id="tabsheet-states" page="tabSheet" isNew="true"/>
+            <item id="tabsheet-states" page="tabSheet"/>
             <item id="tabsheet-icons" page="tabSheet"/>
             <item id="tabsheet-badges" page="tabSheet">
                 <otherFiles>
@@ -1603,7 +1619,7 @@
                 </otherFiles>
             </item>
         </menu>
-        <menu id="cookbook-drag-drop" isNew="true">
+        <menu id="cookbook-drag-drop">
             <item id="dnd-data-grid" splitEnabled="true"/>
             <item id="dnd-components" splitEnabled="true">
                 <otherFiles>

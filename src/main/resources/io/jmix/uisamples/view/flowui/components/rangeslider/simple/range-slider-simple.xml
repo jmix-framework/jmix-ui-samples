@@ -1,0 +1,17 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout>
+        <integerRangeSlider id="integerRangeSlider" label="IntegerRangeSlider" width="20em"
+                            startValue="20" endValue="80"
+                            accessibleNameStart="Minimum" accessibleNameEnd="Maximum"/>
+        <integerRangeSlider id="stepRangeSlider" label="With min, max and step" width="20em"
+                            min="0" max="50" step="5"
+                            startValue="10" endValue="35"
+                            minMaxVisible="true"
+                            helperText="Values from 0 to 50 with a step of 5"/>
+        <decimalRangeSlider id="decimalRangeSlider" label="DecimalRangeSlider" width="20em"
+                            min="0" max="1" step="0.1"
+                            startValue="0.2" endValue="0.8"
+                            valueAlwaysVisible="true"
+                            helperText="The value bubbles are always visible"/>
+    </layout>
+</view>

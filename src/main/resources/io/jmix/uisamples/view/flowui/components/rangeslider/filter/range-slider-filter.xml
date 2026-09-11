@@ -1,0 +1,30 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data readOnly="true">
+        <collection id="customersDc"
+                    class="io.jmix.uisamples.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from Customer e
+                             where e.age >= :minAge and e.age <= :maxAge
+                             order by e.age]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <layout>
+        <integerRangeSlider id="ageRangeSlider" label="Age" width="20em"
+                            min="18" max="90" step="1"
+                            startValue="25" endValue="50"
+                            minMaxVisible="true"
+                            accessibleNameStart="Minimum age" accessibleNameEnd="Maximum age"/>
+        <dataGrid id="customersDataGrid" dataContainer="customersDc"
+                  width="100%" minHeight="20em">
+            <columns>
+                <column property="name"/>
+                <column property="lastName"/>
+                <column property="age"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</view>

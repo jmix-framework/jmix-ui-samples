@@ -45,6 +45,8 @@
                  route="big-decimal-field-simple"
                  classNames="overview-tag-font overview-tag-green"/>
             <tag text="integerField" route="integer-field-simple" classNames="overview-tag-font overview-tag-green"/>
+            <tag text="slider" route="slider-simple" classNames="overview-tag-font overview-tag-green"/>
+            <tag text="rangeSlider" route="range-slider-simple" classNames="overview-tag-font overview-tag-green"/>
             <tag text="fileUploadField" route="file-upload-field" classNames="overview-tag-font overview-tag-green"/>
         </sample>
         <sample>
