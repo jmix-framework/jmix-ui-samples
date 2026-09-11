@@ -17,6 +17,8 @@
 package io.jmix.uisamples.view.sys.main;
 
 import com.vaadin.flow.component.*;
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Div;
@@ -226,9 +228,9 @@ public class MainView extends StandardMainView {
     }
 
     protected void appendNewBadge(ListMenu.MenuItem child) {
-        Span newBadge = uiComponents.create(Span.class);
+        Badge newBadge = uiComponents.create(Badge.class);
         newBadge.setText(messageBundle.getMessage("newBadge.text"));
-        newBadge.getElement().getThemeList().add("badge pill small");
+        newBadge.addThemeVariants(BadgeVariant.SMALL);
 
         if (child.getSuffixComponent() != null && child.getSuffixComponent() instanceof HorizontalLayout suffixLayout) {
             suffixLayout.add(newBadge);
@@ -238,17 +240,14 @@ public class MainView extends StandardMainView {
     }
 
     protected void appendVaadinCommercialBadge(ListMenu.MenuItem child) {
-        Span badgeText = uiComponents.create(Span.class);
-        badgeText.setText(messageBundle.getMessage("vaadinCommercialBadge.text"));
-
         Icon icon = uiComponents.create(Icon.class);
         icon.setIcon(VaadinIcon.DOLLAR);
-        icon.addClassName("badged-icon");
 
-        Span vaadinCommercialBadge = uiComponents.create(Span.class);
-        vaadinCommercialBadge.getElement().getThemeList().add("badge pill small paid");
-
-        vaadinCommercialBadge.add(badgeText, icon);
+        Badge vaadinCommercialBadge = uiComponents.create(Badge.class);
+        vaadinCommercialBadge.setText(messageBundle.getMessage("vaadinCommercialBadge.text"));
+        vaadinCommercialBadge.setIcon(icon);
+        vaadinCommercialBadge.addThemeVariants(BadgeVariant.SMALL);
+        vaadinCommercialBadge.getElement().getThemeList().add("paid");
 
         if (child.getSuffixComponent() != null && child.getSuffixComponent() instanceof HorizontalLayout suffixLayout) {
             suffixLayout.add(vaadinCommercialBadge);

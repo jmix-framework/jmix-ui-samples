@@ -22,16 +22,8 @@
         <item id="avatar" page="avatar"/>
         <menu id="badge">
             <item id="badge-simple"/>
-            <item id="badge-icons">
-                <otherFiles>
-                    <file name="{currentTheme}/components/badge-icons.css"/>
-                </otherFiles>
-            </item>
-            <item id="badge-theme-variant" splitEnabled="true">
-                <otherFiles>
-                    <file name="{currentTheme}/components/badge-theme-variant.css"/>
-                </otherFiles>
-            </item>
+            <item id="badge-icons"/>
+            <item id="badge-theme-variant" splitEnabled="true"/>
         </menu>
         <menu id="big-decimal-field">
             <item id="big-decimal-field-simple" page="bigDecimalField"/>

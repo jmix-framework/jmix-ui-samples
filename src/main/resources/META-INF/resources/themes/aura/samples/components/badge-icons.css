@@ -1,9 +1,0 @@
-
-.badged-icon {
-    box-sizing: content-box;
-}
-
-.badged-icon[theme~="badge"] {
-    min-width: 1em;
-    gap: 0;
-}

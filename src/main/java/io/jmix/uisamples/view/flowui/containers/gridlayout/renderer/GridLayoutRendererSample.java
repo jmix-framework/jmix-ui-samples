@@ -2,6 +2,8 @@ package io.jmix.uisamples.view.flowui.containers.gridlayout.renderer;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.avatar.Avatar;
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.component.card.CardVariant;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -98,21 +100,18 @@ public class GridLayoutRendererSample extends StandardView {
     }
 
     private Component createGradeBadge(Customer customer) {
-        Span span = uiComponents.create(Span.class);
-        CustomerGrade gradeValue = customer.getGrade();
-        String gradeCaption = metadataTools.format(gradeValue);
+        CustomerGrade gradeValue = Objects.requireNonNull(customer.getGrade());
 
-        span.setText(gradeCaption);
-        span.getElement().getThemeList().add("badge " + getGradeColor(Objects.requireNonNull(gradeValue)));
-        return span;
-    }
+        Badge badge = uiComponents.create(Badge.class);
+        badge.setText(metadataTools.format(gradeValue));
 
-    private String getGradeColor(CustomerGrade customerGrade) {
-        return switch (customerGrade) {
-            case STANDARD -> "contrast";
-            case HIGH -> "success";
-            case PREMIUM -> "primary";
-        };
+        if (gradeValue == CustomerGrade.HIGH) {
+            badge.addThemeVariants(BadgeVariant.SUCCESS);
+        } else if (gradeValue == CustomerGrade.PREMIUM) {
+            badge.addThemeVariants(BadgeVariant.FILLED);
+        }
+
+        return badge;
     }
     // end::renderer[] sample-hide
 }

@@ -87,9 +87,10 @@ vaadin-button.permalink-button {
     margin-inline-end: var(--vaadin-padding-s);
 }
 
-[theme~='badge'][theme~='paid'] {
-    color: var(--paid-text-color);
-    background-color: var(--paid-color);
+vaadin-badge[theme~='paid'] {
+    --vaadin-badge-text-color: var(--paid-text-color);
+    --vaadin-badge-background: var(--paid-color);
+    --vaadin-badge-border-color: transparent;
 }
 
 /* jmix-tabsheet defaults to content-box in the Aura theme; with its 1px border

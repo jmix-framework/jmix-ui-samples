@@ -1,6 +1,6 @@
 package io.jmix.uisamples.view.flowui.cookbook.composition7;
 
-import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.badge.Badge;
 import io.jmix.flowui.model.DataContext;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.entity.Order;
@@ -11,7 +11,7 @@ import io.jmix.uisamples.entity.Order;
 public class OrderDetailView extends StandardDetailView<Order> {
 
     @ViewComponent
-    private Div infoPanel;
+    private Badge infoPanel;
     @ViewComponent
     private MessageBundle messageBundle;
 
