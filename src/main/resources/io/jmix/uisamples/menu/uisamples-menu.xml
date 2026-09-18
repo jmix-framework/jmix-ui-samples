@@ -1439,11 +1439,20 @@
                         <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
                     </otherFiles>
                 </item>
+                <item id="ai-chat-theme-variant" page="aiChat" anchor="chat-theme-variants"
+                      splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
             </menu>
             <menu id="ai-message-list">
                 <item id="ai-message-list-simple" page="aiMessageList" splitEnabled="true"/>
                 <item id="ai-message-list-generation" page="aiMessageList" anchor="driving"
                       splitEnabled="true"/>
+                <item id="ai-message-list-thinking-indicator" page="aiMessageList"
+                      anchor="thinking-indicator" splitEnabled="true"/>
             </menu>
             <menu id="ai-message-input">
                 <item id="ai-message-input-simple" page="aiMessageInput"/>

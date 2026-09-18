@@ -1,0 +1,17 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:aichat="http://jmix.io/schema/aichat/ui">
+    <layout expand="chat">
+        <multiSelectComboBox id="variantsBox" label="msg://variantsBox.label" width="30em"/>
+        <aichat:aiChat id="chat" width="100%" height="100%">
+            <aichat:inputPrefix>
+                <button id="modelButton" text="msg://modelButton.text" themeNames="tertiary"/>
+            </aichat:inputPrefix>
+            <aichat:inputHeader>
+                <span text="msg://contextSpan.text"/>
+            </aichat:inputHeader>
+            <aichat:inputFooter>
+                <span text="msg://disclaimer.text"/>
+            </aichat:inputFooter>
+        </aichat:aiChat>
+    </layout>
+</view>
