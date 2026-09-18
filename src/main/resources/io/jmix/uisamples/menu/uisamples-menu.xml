@@ -98,7 +98,7 @@
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="combobox-items-query" page="comboBox" splitEnabled="true">
+            <item id="combobox-items-query" page="comboBox" splitEnabled="true" splitterPosition="25">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -300,7 +300,7 @@
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="entity-combobox-items-query" page="entityComboBox" splitEnabled="true">
+            <item id="entity-combobox-items-query" page="entityComboBox" splitEnabled="true" splitterPosition="25">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -467,7 +467,8 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="multi-select-combo-box-items-query" page="multiSelectComboBox" splitEnabled="true">
+            <item id="multi-select-combo-box-items-query" page="multiSelectComboBox" splitEnabled="true"
+                  splitterPosition="25">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -494,7 +495,7 @@
         </menu>
         <menu id="progress-bar">
             <item id="progress-bar-simple" page="progressBar"/>
-            <item id="progress-bar-theme-variant" page="progressBar" splitEnabled="true"/>
+            <item id="progress-bar-theme-variant" page="progressBar" splitEnabled="true" splitterPosition="25"/>
         </menu>
         <menu id="property-filter">
             <item id="property-filter-simple" page="propertyFilter" splitEnabled="true">
@@ -679,14 +680,14 @@
             </item>
         </menu>
         <menu id="virtual-list">
-            <item id="virtual-list-simple" page="virtualList" splitEnabled="true">
+            <item id="virtual-list-simple" page="virtualList" splitEnabled="true" splitterPosition="40">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                     <file name="{currentTheme}/components/virtual-list-simple.css"/>
                 </otherFiles>
             </item>
-            <item id="virtual-list-inline-editor" page="virtualList" splitEnabled="true">
+            <item id="virtual-list-inline-editor" page="virtualList" splitEnabled="true" splitterPosition="40">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Food.java"/>
                     <file name="io/jmix/uisamples/view/entity/food/FoodDetailView.java"/>
@@ -694,7 +695,7 @@
                     <file name="io/jmix/uisamples/bean/FoodPlaceholderDataGenerator.java"/>
                 </otherFiles>
             </item>
-            <item id="virtual-list-custom-items" page="virtualList" splitEnabled="true">
+            <item id="virtual-list-custom-items" page="virtualList" splitEnabled="true" splitterPosition="40">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Day.java"/>
                 </otherFiles>
@@ -863,7 +864,7 @@
                 <file name="io/jmix/uisamples/view/flowui/fragments/events/EventsFragment.java"/>
             </otherFiles>
         </item>
-        <item id="fragment-renderer" page="fragments" splitEnabled="true">
+        <item id="fragment-renderer" page="fragments" splitEnabled="true" splitterPosition="40">
             <otherFiles>
                 <file name="io/jmix/uisamples/view/flowui/fragments/renderer/employee-info-fragment.xml"/>
                 <file name="io/jmix/uisamples/view/flowui/fragments/renderer/EmployeeInfoFragment.java"/>
@@ -1468,7 +1469,7 @@
         <overview id="cookbook" location="cookbook/overview/cookbook-overview.xml"/>
 
         <menu id="cookbook-ui-data">
-            <item id="cascading-dropdowns" page="facets/dataLoadCoordinator" splitEnabled="true">
+            <item id="cascading-dropdowns" page="facets/dataLoadCoordinator">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Planet.java"/>
                     <file name="io/jmix/uisamples/entity/Moon.java"/>
@@ -1646,17 +1647,17 @@
                     <file name="{currentTheme}/components/custom-login.css"/>
                 </otherFiles>
             </item>
-            <item id="iframe-pdf" splitEnabled="true">
+            <item id="iframe-pdf" splitEnabled="true" splitterPosition="40">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/iframepdf/IframeCustomSecurity.java"/>
                 </otherFiles>
             </item>
-            <item id="iframe-pdf-dynamic" splitEnabled="true">
+            <item id="iframe-pdf-dynamic" splitEnabled="true" splitterPosition="40">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/iframepdfdynamic/IframeCustomSecurity.java"/>
                 </otherFiles>
             </item>
-            <item id="iframe-pdf-rest" splitEnabled="true">
+            <item id="iframe-pdf-rest" splitEnabled="true" splitterPosition="40">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/iframepdfrest/CustomRestSecurityConfiguration.java"/>
                     <file name="io/jmix/uisamples/rest/CustomFileDownloadController.java"/>

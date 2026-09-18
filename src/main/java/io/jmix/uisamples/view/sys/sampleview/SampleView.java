@@ -274,6 +274,11 @@ public class SampleView extends StandardView {
             splitLayout.setHeightFull();
             splitLayout.addThemeName("splitter-spacing");
 
+            Double splitterPosition = menuItem.getSplitterPosition();
+            if (splitterPosition != null) {
+                splitLayout.setSplitterPosition(splitterPosition);
+            }
+
             VerticalLayout contentHolder = uiComponents.create(VerticalLayout.class);
             contentHolder.setPadding(false);
             sampleViewContent.setHeightFull();

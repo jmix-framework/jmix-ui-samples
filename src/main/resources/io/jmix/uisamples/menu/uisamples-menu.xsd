@@ -64,6 +64,14 @@
         </xs:attribute>
         <xs:attribute name="isNew" type="xs:boolean"/>
         <xs:attribute name="splitEnabled" type="xs:boolean"/>
+        <xs:attribute name="splitterPosition" type="xs:double">
+            <xs:annotation>
+                <xs:documentation>Percentage of the split layout height given to the sample itself, the rest goes to
+                    the tabs with sources. Applied only if splitEnabled="true". If not set, the default position is
+                    used. For example: 70
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="defaultFiles" type="xs:boolean"/>
     </xs:complexType>
 
