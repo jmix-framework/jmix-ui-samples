@@ -10,7 +10,7 @@
         <!-- tag::resources[] sample-hide -->
         <vbox padding="false" width="AUTO" alignItems="CENTER">
             <h4 text="URL resource"/>
-            <image resource="https://www.jmix.io/uploads/framework_image_9efadbc372.svg"
+            <image resource="https://demo.jmix.io/ui-samples/icons/image-sample.svg"
                    height="15em" width="15em"/>
         </vbox>
         <vbox padding="false" width="AUTO" alignItems="CENTER">

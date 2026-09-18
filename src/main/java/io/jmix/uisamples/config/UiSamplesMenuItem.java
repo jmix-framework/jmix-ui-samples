@@ -33,6 +33,7 @@ public class UiSamplesMenuItem {
     protected boolean isNew;
     protected boolean isVaadinCommercial;
     protected boolean splitEnabled;
+    protected Double splitterPosition;
     protected boolean defaultFiles = true;
     protected List<String> otherFiles;
     protected List<MenuItem.MenuItemParameter> urlQueryParameters;
@@ -88,6 +89,15 @@ public class UiSamplesMenuItem {
 
     public void setSplitEnabled(boolean splitEnabled) {
         this.splitEnabled = splitEnabled;
+    }
+
+    @Nullable
+    public Double getSplitterPosition() {
+        return splitterPosition;
+    }
+
+    public void setSplitterPosition(Double splitterPosition) {
+        this.splitterPosition = splitterPosition;
     }
 
     public boolean isNew() {

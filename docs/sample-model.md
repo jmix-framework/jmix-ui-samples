@@ -34,7 +34,7 @@ The catalog is strictly structured: one component is one menu group, and the pac
 Menu nodes live in `uisamples-menu.xml` (parsed by `UiSamplesMenuConfig`):
 
 - `<menu>` — a grouping node: `url` (docs-section path, **inherited by descendants**), `isNew`, `isVaadinCommercial`, `isVisibleForProduction`.
-- `<item>` — a sample: `page` (docs page name), `url`/`anchor` (docs link), `splitEnabled` (split demo vs source instead of stacked), `defaultFiles` (**default `true`** — auto-adds the descriptor + controller as source tabs), `isNew`, `isVaadinCommercial`, `isVisibleForProduction`. Children: `<otherFiles><file name="…"/>`, `<urlQueryParameters><parameter name="…" value="…"/>`, `<viewParamsType>` (params passed into the sample).
+- `<item>` — a sample: `page` (docs page name), `url`/`anchor` (docs link), `splitEnabled` (split demo vs source instead of stacked), `splitterPosition` (percentage of the split given to the demo; default position if omitted), `defaultFiles` (**default `true`** — auto-adds the descriptor + controller as source tabs), `isNew`, `isVaadinCommercial`, `isVisibleForProduction`. Children: `<otherFiles><file name="…"/>`, `<urlQueryParameters><parameter name="…" value="…"/>`, `<viewParamsType>` (params passed into the sample).
 - `<overview>` — a section landing page (`location` points to an overview XML), rendered by `OverviewPageGenerator` instead of a sample.
 - `isVisibleForProduction="false"` hides a `<menu>`/`<item>` when Vaadin runs in production mode — used to stage in-progress samples.
 

@@ -196,6 +196,7 @@ public class UiSamplesMenuConfig {
         loadBoolean(element, "isNew", menuItem::setNew);
         loadBoolean(element, "isVaadinCommercial", menuItem::setVaadinCommercial);
         loadBoolean(element, "splitEnabled", menuItem::setSplitEnabled);
+        loadDouble(element, "splitterPosition", menuItem::setSplitterPosition);
         loadBoolean(element, "defaultFiles", menuItem::setDefaultFiles);
 
         Element otherFilesElement = element.element("otherFiles");
@@ -342,6 +343,15 @@ public class UiSamplesMenuConfig {
 
     protected void loadBoolean(Element element, String attributeName, Consumer<Boolean> setter) {
         loadBoolean(element, attributeName)
+                .ifPresent(setter);
+    }
+
+    protected Optional<Double> loadDouble(Element element, String attributeName) {
+        return loaderSupport.loadDouble(element, attributeName);
+    }
+
+    protected void loadDouble(Element element, String attributeName, Consumer<Double> setter) {
+        loadDouble(element, attributeName)
                 .ifPresent(setter);
     }
 
