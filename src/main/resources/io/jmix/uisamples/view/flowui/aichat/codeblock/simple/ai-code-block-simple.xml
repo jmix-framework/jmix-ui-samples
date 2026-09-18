@@ -1,0 +1,34 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:aichat="http://jmix.io/schema/aichat/ui">
+    <layout>
+        <vbox width="100%" maxWidth="60em" padding="false">
+            <h4 text="msg://javaSection.title"/>
+            <aichat:aiCodeBlock id="javaBlock" language="java">
+                <aichat:code><![CDATA[@Subscribe("saveButton")
+public void onSaveButtonClick(final ClickEvent<JmixButton> event) {
+    Order order = dataManager.create(Order.class);
+    order.setCustomer(customer);
+    dataManager.save(order);
+
+    notifications.show("Saved");
+}]]></aichat:code>
+            </aichat:aiCodeBlock>
+
+            <h4 text="msg://sqlSection.title"/>
+            <aichat:aiCodeBlock id="sqlBlock" language="sql">
+                <aichat:code><![CDATA[select c.name, count(o.id) as order_count
+from CUSTOMER c
+    left join ORDER_ o on o.customer_id = c.id
+group by c.name
+order by order_count desc]]></aichat:code>
+            </aichat:aiCodeBlock>
+
+            <h4 text="msg://highlightOffSection.title"/>
+            <aichat:aiCodeBlock id="highlightOffBlock" language="properties" highlight="false">
+                <aichat:code><![CDATA[main.datasource.url=jdbc:postgresql://localhost:5432/demo
+main.datasource.username=demo
+jmix.core.available-locales=en,ru]]></aichat:code>
+            </aichat:aiCodeBlock>
+        </vbox>
+    </layout>
+</view>

@@ -1,0 +1,17 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:aichat="http://jmix.io/schema/aichat/ui">
+    <layout expand="chat">
+        <hbox id="buttonsPanel" padding="false" alignItems="BASELINE">
+            <button id="regenerateButton" text="msg://regenerateButton.text"/>
+            <button id="stopButton" text="msg://stopButton.text" enabled="false"/>
+            <span text="msg://stateLabel.text"/>
+            <span id="stateSpan" text="IDLE"/>
+        </hbox>
+        <aichat:aiChat id="chat" width="100%" height="100%">
+            <aichat:assistantActions>
+                <aichat:action id="assistantCopy" type="aichat_messageCopy"/>
+                <aichat:action id="assistantRegenerate" type="aichat_messageRegenerate"/>
+            </aichat:assistantActions>
+        </aichat:aiChat>
+    </layout>
+</view>

@@ -1418,6 +1418,42 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="ai-chat-root" url="ai-chat" isNew="true">
+            <menu id="ai-chat">
+                <item id="ai-chat-simple" page="aiChat" splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
+                <item id="ai-chat-empty-state" page="aiChat" anchor="empty-state" splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
+                <item id="ai-chat-generation" page="aiChat" anchor="generation" splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
+            </menu>
+            <menu id="ai-message-list">
+                <item id="ai-message-list-simple" page="aiMessageList" splitEnabled="true"/>
+                <item id="ai-message-list-generation" page="aiMessageList" anchor="driving"
+                      splitEnabled="true"/>
+            </menu>
+            <menu id="ai-message-input">
+                <item id="ai-message-input-simple" page="aiMessageInput"/>
+                <item id="ai-message-input-slots" page="aiMessageInput" anchor="slots"/>
+            </menu>
+            <menu id="ai-code-block">
+                <item id="ai-code-block-simple" page="aiCodeBlock" splitEnabled="true"/>
+                <item id="ai-code-block-actions" page="aiCodeBlock" anchor="actions" splitEnabled="true"/>
+            </menu>
+        </menu>
     </menu>
 
     <menu id="custom-components-root" url="flow-ui">

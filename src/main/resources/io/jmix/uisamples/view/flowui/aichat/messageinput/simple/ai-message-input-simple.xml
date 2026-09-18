@@ -1,0 +1,18 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:aichat="http://jmix.io/schema/aichat/ui">
+    <layout>
+        <vbox width="100%" maxWidth="48em" padding="false">
+            <aichat:aiMessageInput id="messageInput" width="100%"/>
+            <hbox padding="false">
+                <span text="msg://lastMessageLabel.text"/>
+                <span id="lastMessageSpan"/>
+            </hbox>
+
+            <h4 text="msg://maxRowsSection.title"/>
+            <aichat:aiMessageInput id="maxRowsInput" width="100%" maxRows="3"/>
+
+            <h4 text="msg://newlineSection.title"/>
+            <aichat:aiMessageInput id="newlineInput" width="100%" enterAction="NEWLINE"/>
+        </vbox>
+    </layout>
+</view>

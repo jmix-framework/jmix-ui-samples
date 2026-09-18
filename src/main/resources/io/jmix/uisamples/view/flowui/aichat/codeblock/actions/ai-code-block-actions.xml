@@ -1,0 +1,40 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:aichat="http://jmix.io/schema/aichat/ui">
+    <layout>
+        <vbox width="100%" maxWidth="60em" padding="false">
+            <h4 text="msg://actionsSection.title"/>
+            <aichat:aiCodeBlock id="actionsBlock" language="bash">
+                <aichat:code><![CDATA[./gradlew -PvaadinProductionMode=true bootJar --stacktrace --info --no-daemon --refresh-dependencies]]></aichat:code>
+            </aichat:aiCodeBlock>
+
+            <h4 text="msg://wrappedSection.title"/>
+            <aichat:aiCodeBlock id="wrappedBlock" language="bash" codeWrapped="true">
+                <aichat:code><![CDATA[./gradlew -PvaadinProductionMode=true bootJar --stacktrace --info --no-daemon --refresh-dependencies]]></aichat:code>
+            </aichat:aiCodeBlock>
+
+            <h4 text="msg://noActionsSection.title"/>
+            <aichat:aiCodeBlock id="noActionsBlock"
+                                language="yaml"
+                                copyActionEnabled="false"
+                                wrapActionEnabled="false">
+                <aichat:code><![CDATA[name: demo
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: demo
+      POSTGRES_PASSWORD: demo]]></aichat:code>
+            </aichat:aiCodeBlock>
+
+            <h4 text="msg://noLanguageSection.title"/>
+            <aichat:aiCodeBlock id="noLanguageBlock">
+                <aichat:code><![CDATA[{
+  "id": "a4f1c2e0-3b7d-4a91-8f56-2c0d9e8b1a34",
+  "number": "ORD-00417",
+  "amount": 149.90,
+  "paid": false
+}]]></aichat:code>
+            </aichat:aiCodeBlock>
+        </vbox>
+    </layout>
+</view>

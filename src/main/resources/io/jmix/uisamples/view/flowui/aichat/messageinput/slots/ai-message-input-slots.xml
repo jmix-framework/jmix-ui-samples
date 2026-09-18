@@ -1,0 +1,50 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:aichat="http://jmix.io/schema/aichat/ui">
+    <layout>
+        <vbox width="100%" maxWidth="48em" padding="false">
+            <h4 text="msg://slotsSection.title"/>
+            <aichat:aiMessageInput id="slotsInput" width="100%">
+                <aichat:prefix>
+                    <button id="promptLibraryButton"
+                            icon="PLUS"
+                            themeNames="tertiary"
+                            title="msg://promptLibraryButton.title"/>
+                </aichat:prefix>
+                <aichat:suffix>
+                    <button id="dictateButton"
+                            icon="MICROPHONE"
+                            themeNames="tertiary"
+                            title="msg://dictateButton.title"/>
+                </aichat:suffix>
+            </aichat:aiMessageInput>
+
+            <h4 text="msg://bandsSection.title"/>
+            <aichat:aiMessageInput id="bandsInput" width="100%">
+                <aichat:header>
+                    <span text="msg://contextSpan.text"/>
+                </aichat:header>
+                <aichat:footer>
+                    <span text="msg://disclaimer.text"/>
+                </aichat:footer>
+            </aichat:aiMessageInput>
+
+            <h4 text="msg://noGapSection.title"/>
+            <aichat:aiMessageInput id="noGapInput"
+                                   width="100%"
+                                   themeNames="no-header-footer-gap">
+                <aichat:footer>
+                    <span text="msg://disclaimer.text"/>
+                </aichat:footer>
+            </aichat:aiMessageInput>
+
+            <h4 text="msg://fixedToolbarSection.title"/>
+            <aichat:aiMessageInput id="fixedToolbarInput"
+                                   width="100%"
+                                   themeNames="fixed-toolbar">
+                <aichat:prefix>
+                    <button id="modelButton" text="msg://modelButton.text" themeNames="tertiary"/>
+                </aichat:prefix>
+            </aichat:aiMessageInput>
+        </vbox>
+    </layout>
+</view>
