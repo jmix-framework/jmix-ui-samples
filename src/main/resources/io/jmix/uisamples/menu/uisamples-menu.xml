@@ -248,6 +248,12 @@
                     <file name="io/jmix/uisamples/entity/Task.java"/>
                 </otherFiles>
             </item>
+            <item id="data-grid-tree-custom-renderer" page="treeDataGrid"
+                  anchor="hierarchy-column-component-renderer" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Task.java"/>
+                </otherFiles>
+            </item>
             <item id="data-grid-tree-lazy-nodes" page="treeDataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Task.java"/>
