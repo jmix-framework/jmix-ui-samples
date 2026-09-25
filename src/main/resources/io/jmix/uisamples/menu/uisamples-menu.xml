@@ -797,6 +797,11 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
+            <item id="side-panel-layout-resizable" page="sidePanelLayout" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="split">
             <item id="split-simple" page="split"/>

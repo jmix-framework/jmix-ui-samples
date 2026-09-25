@@ -1,0 +1,56 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data>
+        <collection id="customersDc"
+                    class="io.jmix.uisamples.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from Customer e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <settings auto="true"/>
+    </facets>
+    <layout>
+        <hbox alignItems="CENTER">
+            <button id="toggleSidePanelButton" text="msg://toggleSidePanelButton.text"/>
+            <select id="positionSelect"/>
+            <checkbox id="smallResizerCheckbox" label="msg://smallResizerCheckbox.label"/>
+            <button id="resetSizeButton" text="msg://resetSizeButton.text"/>
+        </hbox>
+        <sidePanelLayout id="sidePanelLayout" height="100%" width="100%"
+                         sidePanelResizable="true"
+                         sidePanelOverlay="false"
+                         modal="false"
+                         sidePanelHorizontalSize="25em"
+                         sidePanelHorizontalMinSize="15em"
+                         sidePanelHorizontalMaxSize="40em"
+                         sidePanelVerticalSize="15em"
+                         sidePanelVerticalMinSize="10em"
+                         sidePanelVerticalMaxSize="25em">
+            <dataGrid id="customersDataGrid"
+                      width="100%"
+                      minHeight="20em"
+                      dataContainer="customersDc">
+                <columns>
+                    <column property="name"/>
+                    <column property="lastName"/>
+                    <column property="email"/>
+                    <column property="age"/>
+                    <column property="active"/>
+                    <column property="grade"/>
+                </columns>
+            </dataGrid>
+            <vbox id="sidePanelBox" height="100%" width="100%">
+                <hbox width="100%" justifyContent="BETWEEN" alignItems="CENTER">
+                    <h2 id="header" text="msg://header.text"/>
+                    <sidePanelLayoutCloser themeNames="tertiary"/>
+                </hbox>
+                <span id="hintText" text="msg://hintText.text"/>
+            </vbox>
+        </sidePanelLayout>
+    </layout>
+</view>
