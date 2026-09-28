@@ -25,6 +25,7 @@
             <tag text="badge" route="badge-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="helperText" route="context-help-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="tooltip" route="context-help-tooltip" classNames="overview-tag-font overview-tag-blue"/>
+            <tag text="popover" route="popover-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="html" route="html-component" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="icon" route="icon-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="image" route="image-simple" classNames="overview-tag-font overview-tag-blue"/>

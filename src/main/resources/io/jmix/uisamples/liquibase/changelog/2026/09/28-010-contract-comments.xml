@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+
+    <changeSet id="1" author="jmix-ui-samples-2">
+        <update tableName="CONTRACT">
+            <column name="COMMENTS"
+                    value="Draft prepared by the sales team. Legal still has to review the liability clause and the penalty for late delivery before the contract goes to the customer for signing."/>
+            <where>NUMBER_ = 'C-001'</where>
+        </update>
+        <update tableName="CONTRACT">
+            <column name="COMMENTS"
+                    value="The customer asked to split the delivery into two batches: the first one in October, the second one after the warehouse stock is replenished. Payment terms stay the same, 30 days after each invoice."/>
+            <where>NUMBER_ = 'C-002'</where>
+        </update>
+        <update tableName="CONTRACT">
+            <column name="COMMENTS"
+                    value="Signed on October 3. A 5% discount applies to all orders placed before the end of the year. Contact the account manager before changing the delivery address or the order volume."/>
+            <where>NUMBER_ = 'C-003'</where>
+        </update>
+        <update tableName="CONTRACT">
+            <column name="COMMENTS"
+                    value="Rejected by the customer: the proposed delivery time does not fit their production schedule. The sales team is preparing a revised proposal with express shipping."/>
+            <where>NUMBER_ = 'C-004'</where>
+        </update>
+    </changeSet>
+
+</databaseChangeLog>

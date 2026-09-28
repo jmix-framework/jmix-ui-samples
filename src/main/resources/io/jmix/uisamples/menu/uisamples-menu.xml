@@ -162,6 +162,11 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
+            <item id="data-grid-popover-renderer" page="dataGrid" anchor="renderers" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Contract.java"/>
+                </otherFiles>
+            </item>
             <item id="data-grid-part-name-generator" page="dataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
@@ -484,6 +489,16 @@
                 </otherFiles>
             </item>
             <item id="password-field-theme-variant" page="passwordField"/>
+        </menu>
+        <menu id="popover" isNew="true">
+            <item id="popover-simple"/>
+            <item id="popover-triggers"/>
+            <item id="popover-position" splitEnabled="true"/>
+            <item id="popover-modal" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="progress-bar">
             <item id="progress-bar-simple" page="progressBar"/>

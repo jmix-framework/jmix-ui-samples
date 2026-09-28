@@ -55,6 +55,9 @@
                             <button id="labelSpacingHelpButton" icon="INFO_CIRCLE" classNames="link-button"/>
                         </suffix>
                     </textField>
+                    <popover target="labelSpacingHelpButton">
+                        <span text="msg://labelSpacingHelp"/>
+                    </popover>
                     <checkbox id="expandColumnsField" label="msg://expandColumnsField.label"/>
                     <checkbox id="expandFieldsField" label="msg://expandFieldsField.label"/>
                     <checkbox id="labelsAsideField" label="msg://labelsAsideField.label"/>
