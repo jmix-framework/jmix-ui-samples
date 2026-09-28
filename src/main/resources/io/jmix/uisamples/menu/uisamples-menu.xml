@@ -586,6 +586,11 @@
                 </otherFiles>
             </item>
         </menu>
+        <item id="svg" isNew="true">
+            <otherFiles>
+                <file name="META-INF/resources/svg/bar-chart.svg"/>
+            </otherFiles>
+        </item>
         <menu id="switch">
             <item id="switch-simple" page="switch"/>
             <item id="switch-dataaware" page="switch" anchor="_data_binding">

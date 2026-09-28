@@ -29,6 +29,7 @@
             <tag text="icon" route="icon-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="image" route="image-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="progressBar" route="progress-bar-simple" classNames="overview-tag-font overview-tag-blue"/>
+            <tag text="svg" route="svg" classNames="overview-tag-font overview-tag-blue"/>
         </sample>
         <sample>
             <image src="icons/components/inputFieldsBackground.png" route="text-field-simple"/>

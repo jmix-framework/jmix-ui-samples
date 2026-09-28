@@ -588,6 +588,7 @@ public class SampleView extends StandardView {
                 case "properties" -> mode = CodeEditorMode.PROPERTIES;
                 case "css" -> mode = CodeEditorMode.CSS;
                 case "scss" -> mode = CodeEditorMode.SCSS;
+                case "svg" -> mode = CodeEditorMode.SVG;
             }
         }
 
