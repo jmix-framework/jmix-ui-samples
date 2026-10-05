@@ -15,6 +15,7 @@
  */
 package io.jmix.uisamples.config;
 
+import com.vaadin.flow.component.ScrollIntoViewOption;
 import com.vaadin.flow.router.AfterNavigationEvent;
 import io.jmix.flowui.component.main.JmixListMenu;
 
@@ -23,5 +24,19 @@ public class UiSamplesJmixListMenu extends JmixListMenu {
     @Override
     public void afterNavigation(AfterNavigationEvent event) {
         // do nothing, expanding processed separately
+    }
+
+    /**
+     * Scrolls the menu item into view.
+     *
+     * @param id      menu item id
+     * @param options scroll options
+     */
+    public void scrollToMenuItem(String id, ScrollIntoViewOption... options) {
+        MenuItem menuItem = getMenuItem(id);
+
+        if (menuItem != null) {
+            getMenuItemComponent(menuItem).scrollIntoView(options);
+        }
     }
 }

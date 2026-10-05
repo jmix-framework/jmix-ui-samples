@@ -30,6 +30,7 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.AfterNavigationEvent;
 import com.vaadin.flow.router.Location;
+import com.vaadin.flow.router.NavigationTrigger;
 import com.vaadin.flow.router.QueryParameters;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
@@ -46,6 +47,7 @@ import io.jmix.flowui.view.*;
 import io.jmix.flowui.view.navigation.RouteSupport;
 import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
+import io.jmix.uisamples.config.UiSamplesJmixListMenu;
 import io.jmix.uisamples.config.UiSamplesMenuConfig;
 import io.jmix.uisamples.config.UiSamplesMenuItem;
 import io.jmix.uisamples.icon.UiSamplesIcon;
@@ -75,7 +77,7 @@ public class MainView extends StandardMainView {
     @ViewComponent
     protected MessageBundle messageBundle;
     @ViewComponent
-    protected JmixListMenu menu;
+    protected UiSamplesJmixListMenu menu;
     @ViewComponent
     protected TypedTextField<String> searchField;
     @ViewComponent
@@ -101,7 +103,7 @@ public class MainView extends StandardMainView {
         initSideMenu();
         initApplicationTitle();
 
-        menuNavigationExpander.setExpandCallback(this::expandAllParentRecursively);
+        menuNavigationExpander.setExpandCallback(this::expandAndScrollToMenuItem);
     }
 
     @Subscribe
@@ -470,6 +472,15 @@ public class MainView extends StandardMainView {
                 }
             }
         }
+    }
+
+    protected void expandAndScrollToMenuItem(String id, NavigationTrigger trigger) {
+        expandAllParentRecursively(id);
+
+        ScrollIntoViewOption.Block block = trigger == NavigationTrigger.PAGE_LOAD
+                ? ScrollIntoViewOption.Block.CENTER
+                : ScrollIntoViewOption.Block.NEAREST;
+        menu.scrollToMenuItem(id, ScrollIntoViewOption.Behavior.SMOOTH, block);
     }
 
     protected void expandAllParentRecursively(String id) {

@@ -156,7 +156,8 @@ public class SampleView extends StandardView {
     @Override
     public void afterNavigation(AfterNavigationEvent event) {
         if (sampleId != null) {
-            menuNavigationExpander.expand(sampleId);
+            menuNavigationExpander.
+                    expand(sampleId, event.getLocationChangeEvent().getTrigger());
         }
 
         super.afterNavigation(event);

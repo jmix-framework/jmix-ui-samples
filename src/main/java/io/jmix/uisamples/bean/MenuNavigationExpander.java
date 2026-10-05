@@ -16,22 +16,23 @@
 
 package io.jmix.uisamples.bean;
 
+import com.vaadin.flow.router.NavigationTrigger;
 import com.vaadin.flow.spring.annotation.UIScope;
 import org.springframework.stereotype.Component;
 
-import java.util.function.Consumer;
+import java.util.function.BiConsumer;
 
 @UIScope
 @Component("uisamples_MenuNavigationExpander")
 public class MenuNavigationExpander {
 
-    protected Consumer<String> expandCallback;
+    protected BiConsumer<String, NavigationTrigger> expandCallback;
 
-    public void setExpandCallback(Consumer<String> expandCallback) {
+    public void setExpandCallback(BiConsumer<String, NavigationTrigger> expandCallback) {
         this.expandCallback = expandCallback;
     }
 
-    public void expand(String id) {
-        expandCallback.accept(id);
+    public void expand(String id, NavigationTrigger trigger) {
+        expandCallback.accept(id, trigger);
     }
 }
