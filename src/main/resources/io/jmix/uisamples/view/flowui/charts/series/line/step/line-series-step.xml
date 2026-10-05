@@ -1,0 +1,22 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui">
+    <layout>
+        <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
+            <charts:legend top="0"/>
+            <charts:tooltip trigger="AXIS"/>
+
+            <charts:xAxes>
+                <charts:xAxis type="CATEGORY"/>
+            </charts:xAxes>
+            <charts:yAxes>
+                <charts:yAxis/>
+            </charts:yAxes>
+
+            <charts:series>
+                <charts:line name="Step start" step="START"/>
+                <charts:line name="Step middle" step="MIDDLE"/>
+                <charts:line name="Step end" step="END"/>
+            </charts:series>
+        </charts:chart>
+    </layout>
+</view>

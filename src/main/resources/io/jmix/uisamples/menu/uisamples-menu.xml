@@ -1006,6 +1006,12 @@
                             <file name="io/jmix/uisamples/entity/DateValueVolume.java"/>
                         </otherFiles>
                     </item>
+                    <item id="line-series-step" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
+                    <item id="line-series-race" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
+                    <item id="line-series-large" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
                 <menu id="bar-series">
                     <item id="bar-series-simple" page="chart-component" anchor="series" splitEnabled="true">
@@ -1018,6 +1024,24 @@
                             <file name="io/jmix/uisamples/entity/TransportCount.java"/>
                         </otherFiles>
                     </item>
+                    <item id="bar-series-horizontal" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true">
+                        <otherFiles>
+                            <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
+                        </otherFiles>
+                    </item>
+                    <item id="bar-series-mixed" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
+                    <item id="bar-series-waterfall" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
+                    <item id="bar-series-polar" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true">
+                        <otherFiles>
+                            <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
+                        </otherFiles>
+                    </item>
+                    <item id="bar-series-race" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
                 <menu id="pie-series">
                     <item id="pie-series-simple" page="chart-component" anchor="series" splitEnabled="true">
@@ -1039,6 +1063,8 @@
                         </otherFiles>
                     </item>
                     <item id="effect-scatter-series" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="scatter-series-large" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
                 <menu id="radar-series">
                     <item id="radar-series-simple" page="chart-component" anchor="series" splitEnabled="true">
@@ -1057,6 +1083,15 @@
                         </otherFiles>
                     </item>
                 </menu>
+                <menu id="boxplot-series" isNew="true">
+                    <item id="boxplot-series-simple" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="boxplot-series-multiple" page="chart-component" anchor="series" splitEnabled="true">
+                        <otherFiles>
+                            <file name="io/jmix/uisamples/entity/TemperatureData.java"/>
+                            <file name="io/jmix/uisamples/entity/Month.java"/>
+                        </otherFiles>
+                    </item>
+                </menu>
                 <menu id="funnel-series">
                     <item id="funnel-series-simple" page="chart-component" anchor="series" splitEnabled="true">
                         <otherFiles>
@@ -1070,6 +1105,8 @@
                     <item id="gauge-series-multiple-needles" page="chart-component" anchor="series"
                           splitEnabled="true"/>
                     <item id="gauge-series-colorized" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="gauge-series-ring" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
             </menu>
             <menu id="data-items">
@@ -1102,6 +1139,11 @@
                 </item>
                 <item id="chart-native-json" page="chart-component" anchor="native-json" splitEnabled="true"/>
                 <item id="chart-export" page="chart-component" anchor="tool-box" splitEnabled="true"/>
+                <item id="chart-click-event" page="chart-component" splitEnabled="true" isNew="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
+                    </otherFiles>
+                </item>
             </menu>
         </menu>
 

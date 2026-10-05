@@ -1,0 +1,35 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui">
+    <facets>
+        <timer id="timer"
+               delay="2000"
+               autostart="false"
+               repeating="true"/>
+    </facets>
+    <layout>
+        <hbox padding="false">
+            <button id="startStopRace"/>
+        </hbox>
+        <charts:chart id="chart" width="100%" height="100%" minHeight="30em"
+                      animationDuration="0"
+                      animationDurationUpdate="2000"
+                      animationEasing="linear"
+                      animationEasingUpdate="linear">
+            <charts:title text="Sales" subtext="By products" left="0" top="0"/>
+
+            <charts:xAxes>
+                <charts:xAxis type="VALUE" max="dataMax"/>
+            </charts:xAxes>
+            <charts:yAxes>
+                <charts:yAxis type="CATEGORY" inverse="true"
+                              animationDuration="300" animationDurationUpdate="300"/>
+            </charts:yAxes>
+
+            <charts:series>
+                <charts:bar name="Sales" realtimeSort="true">
+                    <charts:label show="true" position="RIGHT"/>
+                </charts:bar>
+            </charts:series>
+        </charts:chart>
+    </layout>
+</view>

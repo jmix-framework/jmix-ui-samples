@@ -1,0 +1,36 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui">
+    <layout>
+        <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
+            <charts:title text="Temperature" subtext="°C, by seasons" left="0" top="0"/>
+            <charts:legend top="0"/>
+            <charts:tooltip trigger="ITEM"/>
+
+            <charts:xAxes>
+                <charts:xAxis type="CATEGORY"/>
+            </charts:xAxes>
+            <charts:yAxes>
+                <charts:yAxis/>
+            </charts:yAxes>
+
+            <charts:series>
+                <charts:boxplot name="Winter">
+                    <charts:encode x="city" y="winterMin, winterQ1, winterMedian, winterQ3, winterMax"
+                                   tooltip="winterMin, winterQ1, winterMedian, winterQ3, winterMax"/>
+                </charts:boxplot>
+                <charts:boxplot name="Spring">
+                    <charts:encode x="city" y="springMin, springQ1, springMedian, springQ3, springMax"
+                                   tooltip="springMin, springQ1, springMedian, springQ3, springMax"/>
+                </charts:boxplot>
+                <charts:boxplot name="Summer">
+                    <charts:encode x="city" y="summerMin, summerQ1, summerMedian, summerQ3, summerMax"
+                                   tooltip="summerMin, summerQ1, summerMedian, summerQ3, summerMax"/>
+                </charts:boxplot>
+                <charts:boxplot name="Autumn">
+                    <charts:encode x="city" y="autumnMin, autumnQ1, autumnMedian, autumnQ3, autumnMax"
+                                   tooltip="autumnMin, autumnQ1, autumnMedian, autumnQ3, autumnMax"/>
+                </charts:boxplot>
+            </charts:series>
+        </charts:chart>
+    </layout>
+</view>

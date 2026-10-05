@@ -1,0 +1,32 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui">
+    <layout>
+        <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
+            <charts:title text="Large data set" subtext="20,000 points" left="0" top="0"/>
+
+            <charts:xAxes>
+                <charts:xAxis type="VALUE" scale="true">
+                    <charts:axisLine onZero="false"/>
+                </charts:xAxis>
+            </charts:xAxes>
+            <charts:yAxes>
+                <charts:yAxis type="VALUE" scale="true">
+                    <charts:axisLine onZero="false"/>
+                </charts:yAxis>
+            </charts:yAxes>
+
+            <charts:dataZoom>
+                <charts:insideDataZoom xAxisIndexes="0" filterMode="EMPTY"/>
+                <charts:insideDataZoom yAxisIndexes="0" filterMode="EMPTY"/>
+                <charts:sliderDataZoom xAxisIndexes="0" filterMode="EMPTY"/>
+                <charts:sliderDataZoom yAxisIndexes="0" orientation="VERTICAL" filterMode="EMPTY"/>
+            </charts:dataZoom>
+
+            <charts:series>
+                <charts:scatter name="Points" large="true" symbolSize="3">
+                    <charts:itemStyle opacity="0.5"/>
+                </charts:scatter>
+            </charts:series>
+        </charts:chart>
+    </layout>
+</view>
