@@ -256,6 +256,12 @@
                     <file name="io/jmix/uisamples/entity/Task.java"/>
                 </otherFiles>
             </item>
+            <item id="data-grid-tree-filter" page="treeDataGrid" anchor="showOrphans" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/view/flowui/components/datagrid/treefilter/TreeAncestorsLoader.java"/>
+                    <file name="io/jmix/uisamples/entity/Task.java"/>
+                </otherFiles>
+            </item>
             <item id="data-grid-theme-variant" page="dataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>

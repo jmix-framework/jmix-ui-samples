@@ -1,0 +1,47 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data>
+        <collection id="tasksDc"
+                    class="io.jmix.uisamples.entity.Task">
+            <fetchPlan extends="_local">
+                <property name="parentTask" fetchPlan="_local"/>
+                <property name="assignee" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="tasksDl">
+                <query>
+                    <![CDATA[select e from Task e order by e.name]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="tasksTreeDc"
+                    class="io.jmix.uisamples.entity.Task"/>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <genericFilter id="genericFilter" dataLoader="tasksDl">
+            <properties include=".*"/>
+            <configurations>
+                <configuration id="defaultConfiguration" name="Task name" default="true">
+                    <propertyFilter property="name" operation="CONTAINS"
+                                    operationEditable="true" defaultValue="Task4"/>
+                </configuration>
+            </configurations>
+        </genericFilter>
+        <simplePagination id="simplePagination"
+                          itemsPerPageDefaultValue="4"
+                          dataLoader="tasksDl"/>
+        <treeDataGrid id="tasksDataGrid"
+                      dataContainer="tasksTreeDc"
+                      hierarchyProperty="parentTask"
+                      showOrphans="true"
+                      width="100%"
+                      minHeight="20em">
+            <columns>
+                <column property="name"/>
+                <column property="dueDate"/>
+                <column property="assignee"/>
+            </columns>
+        </treeDataGrid>
+    </layout>
+</view>
