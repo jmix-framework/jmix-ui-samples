@@ -388,7 +388,7 @@
             </item>
         </menu>
         <menu id="icon">
-            <item id="icon-all" page="icon" splitEnabled="true"/>
+            <item id="icon-all" page="icon" splitEnabled="true" isNew="true"/>
             <item id="icon-simple" page="icon"/>
         </menu>
         <menu id="image" url="flow-ui/vc/html-components">
