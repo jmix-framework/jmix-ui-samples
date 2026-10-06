@@ -1008,8 +1008,6 @@
                     </item>
                     <item id="line-series-step" page="chart-component" anchor="series" splitEnabled="true"
                           isNew="true"/>
-                    <item id="line-series-race" page="chart-component" anchor="series" splitEnabled="true"
-                          isNew="true"/>
                     <item id="line-series-large" page="chart-component" anchor="series" splitEnabled="true"
                           isNew="true"/>
                 </menu>
