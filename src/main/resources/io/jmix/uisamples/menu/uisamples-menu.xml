@@ -1799,11 +1799,14 @@
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/wizard-dialog.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/WizardStep.java"/>
                     <file name="{currentTheme}/cookbook/wizard-dialog.css"/>
-                    <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/WizardStepFragment.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/FirstStep.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/first-step.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/SecondStep.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/second-step.xml"/>
                     <file name="io/jmix/uisamples/component/addresscomponent/AddressComponent.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/composite/address-component.xsd"/>
+                    <file name="io/jmix/uisamples/component/addresscomponent/AddressComponentLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/composite/AddressComponentRegistration.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/ThirdStep.java"/>
                     <file name="{currentTheme}/cookbook/third-step.css"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/third-step.xml"/>

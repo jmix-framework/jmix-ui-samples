@@ -1,0 +1,9 @@
+<fragment xmlns="http://jmix.io/schema/flowui/fragment"
+          xmlns:address="http://io.jmix.uisamples/address-component.xsd">
+    <data>
+        <instance id="addressDc" class="io.jmix.uisamples.entity.Address" provided="true"/>
+    </data>
+    <content>
+        <address:address id="addressComponent" dataContainer="addressDc"/>
+    </content>
+</fragment>

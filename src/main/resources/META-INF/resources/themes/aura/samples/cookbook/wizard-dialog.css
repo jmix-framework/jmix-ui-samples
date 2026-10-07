@@ -1,17 +1,59 @@
 
-.wizard-dialog .tab-container {
-    line-height: var(--aura-line-height-m);
+.wizard-dialog vaadin-tabs {
+    --vaadin-tabs-background: transparent;
 }
 
-.wizard-dialog .label-container {
-    gap: var(--vaadin-gap-xs);
+.wizard-dialog vaadin-tab {
+    --vaadin-tab-background: transparent;
+    flex: 1 1 0;
+    opacity: 1;
+    cursor: default;
 }
 
-.wizard-dialog .label {
-    font-size: var(--aura-font-size-s);
+.wizard-dialog vaadin-tab[selected] {
+    border-color: transparent;
+    box-shadow: none;
 }
 
-.wizard-dialog .sublabel {
-    font-size: var(--aura-font-size-s);
+.wizard-dialog vaadin-tab:not([disabled], [selected]) {
+    cursor: var(--vaadin-clickable-cursor);
+}
+
+.wizard-dialog vaadin-tab:last-of-type {
+    flex: none;
+}
+
+.wizard-dialog .wizard-step {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: var(--vaadin-gap-s);
     color: var(--vaadin-text-color-secondary);
+}
+
+.wizard-dialog .wizard-step::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--vaadin-border-color);
+}
+
+.wizard-dialog vaadin-tab:last-of-type .wizard-step::after {
+    display: none;
+}
+
+.wizard-dialog vaadin-tab:not([disabled]) .wizard-step {
+    color: var(--vaadin-text-color);
+}
+
+.wizard-dialog vaadin-tab:not([disabled]) vaadin-icon {
+    color: var(--aura-accent-color);
+}
+
+.wizard-dialog vaadin-tab:not([disabled], [selected]) .wizard-step::after {
+    background-color: var(--aura-accent-color);
+}
+
+.wizard-dialog vaadin-tab:not([disabled], [selected]):hover .wizard-step {
+    color: var(--aura-accent-text-color);
 }

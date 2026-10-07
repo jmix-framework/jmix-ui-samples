@@ -9,11 +9,10 @@
         </instance>
     </data>
     <layout classNames="wizard-dialog">
-        <tabSheet id="wizardContent" themeNames="equal-width-tabs"
-                  width="100%" height="100%"/>
+        <tabSheet id="wizardContent" themeNames="minimal" width="100%" height="100%"/>
         <hbox width="100%" justifyContent="END">
-            <button id="backButton" text="Back" icon="ARROW_CIRCLE_LEFT_O"/>
-            <button id="nextButton" text="Next" icon="ARROW_CIRCLE_RIGHT_O" iconAfterText="true"/>
+            <button id="backButton" text="Back" icon="ARROW_CIRCLE_LEFT"/>
+            <button id="nextButton" text="Next" icon="ARROW_CIRCLE_RIGHT" iconAfterText="true"/>
         </hbox>
     </layout>
 </view>
