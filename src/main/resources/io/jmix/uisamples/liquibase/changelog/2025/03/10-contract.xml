@@ -32,7 +32,7 @@
                                  referencedColumnNames="ID" referencedTableName="CUSTOMER"/>
     </changeSet>
 
-    <changeSet id="2" author="developer">
+    <changeSet id="3" author="developer">
         <insert tableName="CONTRACT">
             <column name="ID" value="d290f1ee-6c54-4b01-90e6-d701748f0851"/>
             <column name="VERSION" value="1"/>
