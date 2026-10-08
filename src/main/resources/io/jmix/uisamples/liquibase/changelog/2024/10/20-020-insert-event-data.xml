@@ -200,7 +200,7 @@
             <column name="ID" value="550e8400-e29b-41d4-a716-446655440023"/>
             <column name="TITLE" value="Technology Update Briefing"/>
             <column name="ALL_DAY" valueBoolean="false"/>
-            <column name="START_DATE" valueDate="DATE_ADD(${now}, INTERVAL -19 DAY)"/>
+            <column name="START_DATE" valueComputed="DATE_ADD(${now}, INTERVAL -19 DAY)"/>
             <column name="END_DATE" valueComputed="DATE_ADD(${now}, INTERVAL -455 HOUR)"/> <!--18 days and 23 hour-->
         </insert>
 
