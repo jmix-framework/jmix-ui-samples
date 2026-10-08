@@ -32,7 +32,7 @@
                                  referencedColumnNames="ID" referencedTableName="CUSTOMER"/>
     </changeSet>
 
-    <changeSet id="3" author="developer">
+    <changeSet id="3" author="jmix-ui-samples-2">
         <insert tableName="CONTRACT">
             <column name="ID" value="d290f1ee-6c54-4b01-90e6-d701748f0851"/>
             <column name="VERSION" value="1"/>
@@ -44,7 +44,7 @@
         </insert>
 
         <insert tableName="CONTRACT">
-            <column name="ID" value="e7e127d7-33b4-2bd9-d405-0f7923a8bec6"/>
+            <column name="ID" value="b0388a91-178f-4b66-9cbf-082370ac61fd"/>
             <column name="VERSION" value="1"/>
             <column name="DATE_" value="2023-10-02"/>
             <column name="NUMBER_" value="C-002"/>
@@ -54,7 +54,7 @@
         </insert>
 
         <insert tableName="CONTRACT">
-            <column name="ID" value="4d750fdb-8ed7-a4e4-88d2-40974615cab2"/>
+            <column name="ID" value="46b8d9c7-f7e1-4b25-aee2-ddb4eca02a4c"/>
             <column name="VERSION" value="1"/>
             <column name="DATE_" value="2023-10-03"/>
             <column name="NUMBER_" value="C-003"/>
@@ -64,7 +64,7 @@
         </insert>
 
         <insert tableName="CONTRACT">
-            <column name="ID" value="9d9f028c-eade-eee2-d4d8-e97ebb969c54"/>
+            <column name="ID" value="db3ca252-20cd-41a9-81ef-5753b3a34b04"/>
             <column name="VERSION" value="1"/>
             <column name="DATE_" value="2023-10-04"/>
             <column name="NUMBER_" value="C-004"/>

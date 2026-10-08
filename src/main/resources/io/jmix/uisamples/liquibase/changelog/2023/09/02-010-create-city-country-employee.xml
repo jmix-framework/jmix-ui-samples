@@ -42,6 +42,10 @@
         </createTable>
     </changeSet>
     <changeSet id="4" author="uisamples">
+        <createIndex indexName="IDX_CITY_COUNTRY" tableName="CITY">
+            <column name="COUNTRY_ID"/>
+        </createIndex>
+
         <addForeignKeyConstraint baseColumnNames="COUNTRY_ID" baseTableName="CITY"
                                  constraintName="FK_CITY_ON_COUNTRY" referencedColumnNames="ID"
                                  referencedTableName="COUNTRY"/>

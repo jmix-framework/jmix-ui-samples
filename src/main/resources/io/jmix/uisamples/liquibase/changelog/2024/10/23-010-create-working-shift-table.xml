@@ -17,7 +17,7 @@
     </changeSet>
 
     <changeSet id="2" author="uisamples">
-        <createIndex indexName="IDX_WORKING_SHIFT__ON_NUMBER"
+        <createIndex indexName="IDX_WORKING_SHIFT_UNQ"
                      tableName="WORKING_SHIFT" unique="true">
             <column name="NUMBER_"/>
         </createIndex>

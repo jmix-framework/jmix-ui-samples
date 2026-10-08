@@ -827,73 +827,73 @@
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184221"/>
-            <column name="TEMPERATURE" value="-6.2"/>
+            <column name="TEMPERATURE" value="-8.9"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="january"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184222"/>
-            <column name="TEMPERATURE" value="-14"/>
+            <column name="TEMPERATURE" value="-10.4"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="february"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184223"/>
-            <column name="TEMPERATURE" value="-9"/>
+            <column name="TEMPERATURE" value="-8.1"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="march"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184224"/>
-            <column name="TEMPERATURE" value="-5.0"/>
+            <column name="TEMPERATURE" value="-4.2"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="april"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184225"/>
-            <column name="TEMPERATURE" value="2.8"/>
+            <column name="TEMPERATURE" value="0.6"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="may"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184226"/>
-            <column name="TEMPERATURE" value="1.0"/>
+            <column name="TEMPERATURE" value="3.7"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="june"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184227"/>
-            <column name="TEMPERATURE" value="3.5"/>
+            <column name="TEMPERATURE" value="6.1"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="july"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184228"/>
-            <column name="TEMPERATURE" value="11.0"/>
+            <column name="TEMPERATURE" value="5.8"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="august"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184229"/>
-            <column name="TEMPERATURE" value="3.0"/>
+            <column name="TEMPERATURE" value="2.6"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="september"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184230"/>
-            <column name="TEMPERATURE" value="2.2"/>
+            <column name="TEMPERATURE" value="-1.4"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="october"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184231"/>
-            <column name="TEMPERATURE" value="-3.9"/>
+            <column name="TEMPERATURE" value="-4.8"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="november"/>
         </insert>
         <insert tableName="TEMPERATURE_DATA">
             <column name="ID" value="123e4567-e89b-12d3-a456-427614184232"/>
-            <column name="TEMPERATURE" value="-4.5"/>
+            <column name="TEMPERATURE" value="-7.2"/>
             <column name="CITY" value="Nuuk"/>
             <column name="MONTH_" value="december"/>
         </insert>

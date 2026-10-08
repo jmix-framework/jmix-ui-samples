@@ -48,7 +48,7 @@
             <column name="NAME" value="Create samples"/>
             <column name="STATUS" value="in_progress"/>
             <column name="ASSIGNEE_ID" value="da8aec7c-6e79-4d0c-9ec5-7190888411c9"/>
-            <column name="COLOR" value="#OO6AF5"/>
+            <column name="COLOR" value="#006AF5"/>
             <column name="PROGRESS" value="45"/>
             <column name="PRIORITY" value="critical"/>
             <column name="DUE_DATE" value="2077-08-17"/>
