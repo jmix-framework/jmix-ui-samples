@@ -10,7 +10,7 @@
             <column name="ID" type="UUID">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="PK_TEMPERATURE_DATA"/>
             </column>
-            <column name="TEMPERATURE" type="INT">
+            <column name="TEMPERATURE" type="DOUBLE">
                 <constraints nullable="false"/>
             </column>
             <column name="CITY" type="VARCHAR(255)">

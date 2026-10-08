@@ -31,7 +31,7 @@ public class BoxplotSeriesMultipleSample extends StandardView {
 
     @Subscribe
     public void onInit(InitEvent event) {
-        Map<String, Map<String, List<Integer>>> temperatures = dataManager.load(TemperatureData.class)
+        Map<String, Map<String, List<Double>>> temperatures = dataManager.load(TemperatureData.class)
                 .all()
                 .list()
                 .stream()
@@ -70,15 +70,15 @@ public class BoxplotSeriesMultipleSample extends StandardView {
         };
     }
 
-    private void addStatistics(MapDataItem item, String season, List<Integer> values) {
-        List<Integer> sorted = values.stream().sorted().toList();
+    private void addStatistics(MapDataItem item, String season, List<Double> values) {
+        List<Double> sorted = values.stream().sorted().toList();
 
         for (int i = 0; i < STATISTICS.size(); i++) {
             item.add(season + STATISTICS.get(i), quantile(sorted, QUANTILES[i]));
         }
     }
 
-    private double quantile(List<Integer> sorted, double p) {
+    private double quantile(List<Double> sorted, double p) {
         double index = p * (sorted.size() - 1);
         int lower = (int) Math.floor(index);
         int upper = (int) Math.ceil(index);
