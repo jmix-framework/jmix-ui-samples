@@ -1,0 +1,5 @@
+`NativeSelect` implements `SupportsValueSource`, so it can be bound to an entity attribute with the `dataContainer` and `property` attributes, like standard Jmix fields. The sample binds the select to the `department` attribute of the employee selected in the grid: choose a department, and the grid shows the new value.
+
+[`NativeSelect.setValueSource()`]({currentPath}?tab=NativeSelect.java) creates and activates the same `FieldValueBinding` bean that standard fields use, and [`NativeSelectLoader`]({currentPath}?tab=NativeSelectLoader.java) loads the `dataContainer` and `property` attributes with `DataLoaderSupport`. Options declared in XML are strings, so they can be bound only to a string attribute. An option without the `text` attribute uses its value as the text, and an attribute value that is not among the options leaves the select empty and stays unchanged.
+
+A native `<select>` has no read-only mode, so when the binding makes the field read-only, `NativeSelect` disables all options; for a mandatory attribute, it disables the empty option.

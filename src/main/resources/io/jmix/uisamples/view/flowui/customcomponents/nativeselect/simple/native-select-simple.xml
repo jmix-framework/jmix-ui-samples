@@ -1,0 +1,20 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:ns="http://io.jmix.uisamples/native-select.xsd">
+    <layout>
+        <vbox padding="false" spacing="false">
+            <nativeLabel text="Dinosaur" setFor="dinosaurSelect" classNames="native-select-label"/>
+            <ns:nativeSelect id="dinosaurSelect" width="15em">
+                <ns:optgroup label="Theropods">
+                    <ns:option value="tyrannosaurus" text="Tyrannosaurus"/>
+                    <ns:option value="velociraptor" text="Velociraptor"/>
+                    <ns:option value="deinonychus" text="Deinonychus"/>
+                </ns:optgroup>
+                <ns:optgroup label="Sauropods">
+                    <ns:option value="diplodocus" text="Diplodocus"/>
+                    <ns:option value="saltasaurus" text="Saltasaurus"/>
+                    <ns:option value="apatosaurus" text="Apatosaurus"/>
+                </ns:optgroup>
+            </ns:nativeSelect>
+        </vbox>
+    </layout>
+</view>

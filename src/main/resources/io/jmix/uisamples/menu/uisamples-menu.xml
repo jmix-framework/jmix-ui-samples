@@ -1592,6 +1592,36 @@
                 <file name="io/jmix/uisamples/view/flowui/customcomponents/fromscratch/ThemeToggleRegistration.java"/>
             </otherFiles>
         </item>
+        <menu id="native-select" isNew="true">
+            <item id="native-select-simple" page="visual-components">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelect.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/native-select.xsd"/>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelectLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/NativeSelectRegistration.java"/>
+                    <file name="{currentTheme}/customcomponents/native-select.css"/>
+                </otherFiles>
+            </item>
+            <item id="native-select-dataaware" page="visual-components" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelect.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/native-select.xsd"/>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelectLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/NativeSelectRegistration.java"/>
+                    <file name="io/jmix/uisamples/entity/Employee.java"/>
+                </otherFiles>
+            </item>
+            <item id="native-select-custom-items" page="visual-components">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelect.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/native-select.xsd"/>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelectLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/NativeSelectRegistration.java"/>
+                    <file name="io/jmix/uisamples/entity/City.java"/>
+                    <file name="io/jmix/uisamples/entity/Country.java"/>
+                </otherFiles>
+            </item>
+        </menu>
         <item id="generic-component-xml"/>
     </menu>
 

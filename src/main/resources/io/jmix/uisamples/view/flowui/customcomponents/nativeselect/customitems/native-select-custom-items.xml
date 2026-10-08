@@ -1,0 +1,25 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:ns="http://io.jmix.uisamples/native-select.xsd">
+    <data>
+        <collection id="citiesDc"
+                    class="io.jmix.uisamples.entity.City">
+            <fetchPlan extends="_base">
+                <property name="country" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="citiesDl">
+                <query>
+                    <![CDATA[select e from City e order by e.country.name, e.name]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <vbox padding="false" spacing="false">
+            <nativeLabel text="City" setFor="citySelect" classNames="native-select-label"/>
+            <ns:nativeSelect id="citySelect" itemsContainer="citiesDc" width="15em"/>
+        </vbox>
+    </layout>
+</view>

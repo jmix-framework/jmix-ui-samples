@@ -29,6 +29,12 @@
             <text message="componentFromScratch.description"/>
         </sample>
         <sample>
+            <image src="icons/customcomponents/nativeSelect.png" route="native-select-simple"/>
+            <text message="nativeSelect.title"
+                  route="native-select-simple" component="h4"/>
+            <text message="nativeSelect.description"/>
+        </sample>
+        <sample>
             <image src="icons/customcomponents/genericComponentXml.png" route="generic-component-xml"/>
             <text message="genericComponentXml.title"
                   route="generic-component-xml" component="h4"/>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="http://io.jmix.uisamples/native-select.xsd"
+           elementFormDefault="qualified"
+           targetNamespace="http://io.jmix.uisamples/native-select.xsd"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:layout="http://jmix.io/schema/flowui/layout">
+
+    <xs:element name="nativeSelect">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="layout:baseComponent">
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element name="optgroup" type="optgroupType"/>
+                        <xs:element name="option" type="optionType"/>
+                    </xs:choice>
+
+                    <xs:attribute name="itemsContainer" type="xs:string"/>
+                    <xs:attributeGroup ref="layout:hasSize"/>
+                    <xs:attributeGroup ref="layout:hasClassNames"/>
+                    <xs:attributeGroup ref="layout:hasEnabled"/>
+                    <xs:attributeGroup ref="layout:hasAriaLabel"/>
+                    <xs:attributeGroup ref="layout:hasDataContainer"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="optgroupType">
+        <xs:sequence>
+            <xs:element name="option" type="optionType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="label" type="layout:resourceString" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="optionType">
+        <xs:attribute name="value" type="xs:string" use="required"/>
+        <xs:attribute name="text" type="layout:resourceString"/>
+    </xs:complexType>
+
+</xs:schema>

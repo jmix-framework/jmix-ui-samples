@@ -14,11 +14,7 @@
  * limitations under the License.
  */
 
-@import './calendar/index.css';
-@import './components/index.css';
-@import './containers/index.css';
-@import './cookbook/index.css';
-@import './customcomponents/index.css';
-@import './facets/index.css';
-@import './fragments/index.css';
-@import './kanban/index.css';
+@NullMarked
+package io.jmix.uisamples.component.nativeselect;
+
+import org.jspecify.annotations.NullMarked;

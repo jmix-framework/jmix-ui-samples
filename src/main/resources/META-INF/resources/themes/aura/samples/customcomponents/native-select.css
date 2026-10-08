@@ -1,0 +1,65 @@
+
+.native-select {
+    --native-select-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a0b0d' stroke-opacity='.65' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+    appearance: none;
+    padding: var(--vaadin-input-field-padding, var(--vaadin-padding-block-container) var(--vaadin-padding-inline-container));
+    padding-inline-end: calc(var(--vaadin-padding-inline-container) + 1lh + var(--vaadin-gap-s));
+    border: var(--vaadin-input-field-border-width, 1px) solid var(--vaadin-input-field-border-color, var(--vaadin-border-color));
+    border-radius: var(--vaadin-input-field-border-radius, var(--vaadin-radius-m));
+    background-color: var(--vaadin-input-field-background, var(--vaadin-background-color));
+    background-image: var(--native-select-chevron);
+    background-position: right calc(var(--vaadin-padding-inline-container) + 0.05lh) center;
+    background-repeat: no-repeat;
+    background-size: 0.9lh;
+    box-shadow: var(--aura-shadow-xs);
+    color: var(--vaadin-input-field-value-color, var(--vaadin-text-color));
+    font: inherit;
+    font-size: var(--vaadin-input-field-value-font-size, inherit);
+    font-weight: var(--aura-font-weight-medium);
+    cursor: var(--vaadin-clickable-cursor);
+}
+
+.native-select:focus-visible {
+    outline: var(--vaadin-focus-ring-width) solid var(--vaadin-focus-ring-color);
+    outline-offset: calc(var(--vaadin-input-field-border-width, 1px) * -1);
+}
+
+.native-select[readonly] {
+    border-style: dashed;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    cursor: default;
+}
+
+.native-select:disabled {
+    --native-select-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a0b0d' stroke-opacity='.33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+    border-color: transparent;
+    background-color: var(--vaadin-input-field-disabled-background, var(--vaadin-background-container));
+    box-shadow: none;
+    color: var(--vaadin-input-field-disabled-text-color, var(--vaadin-text-color-disabled));
+    cursor: default;
+}
+
+.native-select-label {
+    margin-bottom: var(--vaadin-input-field-container-gap, var(--vaadin-gap-xs));
+    color: var(--vaadin-input-field-label-color, var(--vaadin-text-color));
+    font-size: var(--vaadin-input-field-label-font-size, inherit);
+    font-weight: var(--vaadin-input-field-label-font-weight, 500);
+    line-height: var(--vaadin-input-field-label-line-height, inherit);
+}
+
+[theme~='dark'] .native-select {
+    --native-select-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23feffff' stroke-opacity='.65' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+}
+
+[theme~='dark'] .native-select:disabled {
+    --native-select-chevron: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23feffff' stroke-opacity='.33' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+}
+
+@media (forced-colors: active) {
+    .native-select {
+        appearance: auto;
+        background-image: none;
+    }
+}
