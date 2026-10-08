@@ -6,6 +6,7 @@ import io.jmix.core.*;
 import jakarta.annotation.PreDestroy;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -85,7 +86,11 @@ public class SamplesFileStorage implements FileStorage {
         checkStorageDefined(roots, fileRef.getFileName());
         checkPrimaryStorageAccessible(roots, fileRef.getFileName());
 
-        Path path = roots[0].resolve(fileRef.getPath());
+        Path path = resolveWithinRoot(roots[0], fileRef);
+        if (path == null) {
+            throw new FileStorageException(FileStorageException.Type.IO_EXCEPTION,
+                    "Invalid file path: " + fileRef.getPath());
+        }
         Path parentPath = path.getParent();
         if (parentPath == null) {
             throw new FileStorageException(FileStorageException.Type.IO_EXCEPTION,
@@ -129,7 +134,10 @@ public class SamplesFileStorage implements FileStorage {
 
         InputStream inputStream = null;
         for (Path root : roots) {
-            Path path = root.resolve(reference.getPath());
+            Path path = resolveWithinRoot(root, reference);
+            if (path == null) {
+                continue;
+            }
 
             if (!path.toFile().exists()) {
                 log.error("File " + path + " not found");
@@ -159,7 +167,10 @@ public class SamplesFileStorage implements FileStorage {
         }
 
         for (Path root : roots) {
-            Path filePath = root.resolve(reference.getPath());
+            Path filePath = resolveWithinRoot(root, reference);
+            if (filePath == null) {
+                continue;
+            }
             File file = filePath.toFile();
             if (file.exists()) {
                 if (!file.delete()) {
@@ -175,8 +186,8 @@ public class SamplesFileStorage implements FileStorage {
         Path[] roots = getStorageRoots();
 
         for (Path root : roots) {
-            Path filePath = root.resolve(reference.getPath());
-            if (filePath.toFile().exists()) {
+            Path filePath = resolveWithinRoot(root, reference);
+            if (filePath != null && filePath.toFile().exists()) {
                 return true;
             }
         }
@@ -202,6 +213,19 @@ public class SamplesFileStorage implements FileStorage {
             log.error("No storage directories defined");
             throw new FileStorageException(FileStorageException.Type.STORAGE_INACCESSIBLE, fileName);
         }
+    }
+
+    @Nullable
+    protected Path resolveWithinRoot(Path root, FileRef reference) {
+        Path base = root.toAbsolutePath().normalize();
+        Path path = base.resolve(reference.getPath()).normalize();
+
+        if (!path.startsWith(base)) {
+            log.warn("File reference {} points outside of the storage root", reference);
+            return null;
+        }
+
+        return path;
     }
 
     /**
