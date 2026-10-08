@@ -11,6 +11,7 @@ import io.jmix.uisamples.entity.Customer;
 @ViewDescriptor("range-slider-filter.xml")
 public class RangeSliderFilterSample extends StandardView {
 
+    // tag::filter[] sample-hide
     @ViewComponent
     protected IntegerRangeSlider ageRangeSlider;
     @ViewComponent
@@ -32,4 +33,5 @@ public class RangeSliderFilterSample extends StandardView {
         customersDl.setParameter("maxAge", range.end());
         customersDl.load();
     }
+    // end::filter[] sample-hide
 }
