@@ -15,7 +15,7 @@ public class DataGridCustomerGradeAggregation implements AggregationStrategy<Cus
 
     // tag::aggregation[] sample-hide
     @Autowired
-    public Messages messages;
+    private Messages messages;
 
     @Override
     public String aggregate(Collection<CustomerGrade> propertyValues) {

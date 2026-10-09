@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <view xmlns="http://jmix.io/schema/flowui/view"
       title="msg://kanbanUserListView.title"
-      focusComponent="form">
+      focusComponent="kanbanUsersDataGrid">
     <data readOnly="true">
         <collection id="kanbanUsersDc"
                     class="io.jmix.uisamples.entity.KanbanUser">

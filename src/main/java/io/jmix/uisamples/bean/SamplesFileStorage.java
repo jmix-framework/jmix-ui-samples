@@ -118,7 +118,7 @@ public class SamplesFileStorage implements FileStorage {
     @Override
     public FileRef saveStream(String fileName, InputStream inputStream, Map<String, Object> parameters) {
         Map<String, String> fileRefParams = Maps.toMap(parameters.keySet(), key -> parameters.get(key).toString());
-        FileRef fileRef = new FileRef(storageName, "", fileName, fileRefParams);
+        FileRef fileRef = new FileRef(storageName, fileName, fileName, fileRefParams);
         saveStream(fileRef, inputStream);
         return fileRef;
     }

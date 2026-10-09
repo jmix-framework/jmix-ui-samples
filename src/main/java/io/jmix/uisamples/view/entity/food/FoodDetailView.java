@@ -16,7 +16,7 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.ByteArrayInputStream;
 
-@DialogMode(minWidth = "15em", minHeight = "10pm")
+@DialogMode(minWidth = "15em", minHeight = "10em")
 @EditedEntityContainer("foodDc")
 @ViewController("Food.detail")
 @ViewDescriptor("food-detail-view.xml")
@@ -52,20 +52,16 @@ public class FoodDetailView extends StandardDetailView<Food> {
         }
         byte[] iconArray = getEditedEntity().getIcon();
         if (iconArray != null && iconArray.length > 0) {
-            try {
-                String iconFileName = "%s.png".formatted(getEditedEntity().getTitle());
-                InputStreamDownloadHandler handler = DownloadHandler.fromInputStream(event -> {
-                    byte[] icon = getEditedEntity().getIcon();
-                    ByteArrayInputStream inputStream = new ByteArrayInputStream(getEditedEntity().getIcon());
+            String iconFileName = "%s.png".formatted(getEditedEntity().getTitle());
+            InputStreamDownloadHandler handler = DownloadHandler.fromInputStream(event -> {
+                byte[] icon = getEditedEntity().getIcon();
+                ByteArrayInputStream inputStream = new ByteArrayInputStream(icon);
 
-                    return new DownloadResponse(inputStream, iconFileName, "image/png", icon.length);
-                });
+                return new DownloadResponse(inputStream, iconFileName, "image/png", icon.length);
+            });
 
-                foodIcon.setImageHandler(handler);
-                foodIconUpload.setValue(iconArray);
-            } catch (RuntimeException e) {
-                throw new RuntimeException("Cannot init fields on food", e);
-            }
+            foodIcon.setImageHandler(handler);
+            foodIconUpload.setValue(iconArray);
         }
     }
 }
