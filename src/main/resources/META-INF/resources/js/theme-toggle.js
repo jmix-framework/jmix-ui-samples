@@ -33,7 +33,7 @@ export class ThemeToggle extends Button {
 
             storageKey: {
                 type: String,
-                value: 'jmix.flowui.theme',
+                value: 'jmix.app.theme',
                 observer: '_onStorageKeyChanged'
             }
         };
@@ -44,7 +44,11 @@ export class ThemeToggle extends Button {
 
         this.addEventListener('click', () => this.toggleTheme());
         this.addEventListener('click', () => {
-            const customEvent = new CustomEvent('theme-changed', {detail: {value: this.getCurrentTheme()}});
+            const customEvent = new CustomEvent('theme-changed', {
+                detail: {value: this.getCurrentTheme()},
+                bubbles: true,
+                composed: true
+            });
             this.dispatchEvent(customEvent);
         });
     }
@@ -74,11 +78,12 @@ export class ThemeToggle extends Button {
 
     toggleTheme() {
         const theme = this.getCurrentTheme();
-        this.applyTheme(theme === "dark" ? "" : "dark");
+        this.applyTheme(theme === "dark" ? "light" : "dark");
     }
 
     applyTheme(theme) {
         document.documentElement.setAttribute("theme", theme);
+        document.documentElement.style.colorScheme = theme;
         localStorage.setItem(this.storageKey, theme);
     }
 

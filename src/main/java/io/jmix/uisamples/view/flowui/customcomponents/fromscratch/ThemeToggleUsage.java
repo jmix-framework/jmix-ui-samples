@@ -24,6 +24,6 @@ public class ThemeToggleUsage extends StandardView {
     }
 
     protected String getThemeValue(ThemeToggle.ThemeToggleThemeChangedEvent event) {
-        return event.getValue().isEmpty() ? "Light" : "Dark";
+        return "dark".equals(event.getValue()) ? "Dark" : "Light";
     }
 }
