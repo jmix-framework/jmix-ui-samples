@@ -1,29 +1,33 @@
 <fragment xmlns="http://jmix.io/schema/flowui/fragment">
+    <data>
+        <instance id="employeeDc" class="io.jmix.uisamples.entity.Employee" provided="true"/>
+        <instance id="addressDc" class="io.jmix.uisamples.entity.Address" provided="true"/>
+    </data>
     <content>
         <vbox padding="false" spacing="false" classNames="third-step">
             <h4 text="Employee information confirmation"/>
             <span text="Please check the information before saving" classNames="reminder"/>
             <hr width="100%"/>
-            <div id="employeeData" classNames="grid-container">
+            <div classNames="grid-container">
                 <span text="First name:" classNames="bold"/>
-                <span id="firstName"/>
-                <span text="Last name" classNames="bold"/>
-                <span id="lastName"/>
+                <span dataContainer="employeeDc" property="firstName"/>
+                <span text="Last name:" classNames="bold"/>
+                <span dataContainer="employeeDc" property="lastName"/>
                 <span text="Email:" classNames="bold"/>
-                <span id="email"/>
+                <span dataContainer="employeeDc" property="email"/>
                 <span text="Department:" classNames="bold"/>
-                <span id="department"/>
+                <span dataContainer="employeeDc" property="department"/>
             </div>
             <hr width="100%"/>
-            <div id="addressData" classNames="grid-container">
+            <div classNames="grid-container">
                 <span text="Zip:" classNames="bold"/>
-                <span id="zip"/>
+                <span dataContainer="addressDc" property="zip"/>
                 <span text="Country:" classNames="bold"/>
-                <span id="country"/>
+                <span dataContainer="addressDc" property="country"/>
                 <span text="City:" classNames="bold"/>
-                <span id="city"/>
+                <span dataContainer="addressDc" property="city"/>
                 <span text="Address Line:" classNames="bold"/>
-                <span id="addressLine"/>
+                <span dataContainer="addressDc" property="addressLine"/>
             </div>
         </vbox>
     </content>

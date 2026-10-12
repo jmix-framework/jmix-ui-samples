@@ -17,6 +17,8 @@
 package io.jmix.uisamples.view.sys.main;
 
 import com.vaadin.flow.component.*;
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.html.Div;
@@ -28,6 +30,7 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.router.AfterNavigationEvent;
 import com.vaadin.flow.router.Location;
+import com.vaadin.flow.router.NavigationTrigger;
 import com.vaadin.flow.router.QueryParameters;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouterLink;
@@ -44,6 +47,7 @@ import io.jmix.flowui.view.*;
 import io.jmix.flowui.view.navigation.RouteSupport;
 import io.jmix.uisamples.bean.MenuNavigationExpander;
 import io.jmix.uisamples.bean.OverviewPageGenerator;
+import io.jmix.uisamples.config.UiSamplesJmixListMenu;
 import io.jmix.uisamples.config.UiSamplesMenuConfig;
 import io.jmix.uisamples.config.UiSamplesMenuItem;
 import io.jmix.uisamples.icon.UiSamplesIcon;
@@ -73,7 +77,7 @@ public class MainView extends StandardMainView {
     @ViewComponent
     protected MessageBundle messageBundle;
     @ViewComponent
-    protected JmixListMenu menu;
+    protected UiSamplesJmixListMenu menu;
     @ViewComponent
     protected TypedTextField<String> searchField;
     @ViewComponent
@@ -99,7 +103,7 @@ public class MainView extends StandardMainView {
         initSideMenu();
         initApplicationTitle();
 
-        menuNavigationExpander.setExpandCallback(this::expandAllParentRecursively);
+        menuNavigationExpander.setExpandCallback(this::expandAndScrollToMenuItem);
     }
 
     @Subscribe
@@ -226,9 +230,9 @@ public class MainView extends StandardMainView {
     }
 
     protected void appendNewBadge(ListMenu.MenuItem child) {
-        Span newBadge = uiComponents.create(Span.class);
+        Badge newBadge = uiComponents.create(Badge.class);
         newBadge.setText(messageBundle.getMessage("newBadge.text"));
-        newBadge.getElement().getThemeList().add("badge pill small");
+        newBadge.addThemeVariants(BadgeVariant.SMALL);
 
         if (child.getSuffixComponent() != null && child.getSuffixComponent() instanceof HorizontalLayout suffixLayout) {
             suffixLayout.add(newBadge);
@@ -238,17 +242,14 @@ public class MainView extends StandardMainView {
     }
 
     protected void appendVaadinCommercialBadge(ListMenu.MenuItem child) {
-        Span badgeText = uiComponents.create(Span.class);
-        badgeText.setText(messageBundle.getMessage("vaadinCommercialBadge.text"));
-
         Icon icon = uiComponents.create(Icon.class);
         icon.setIcon(VaadinIcon.DOLLAR);
-        icon.addClassName("badged-icon");
 
-        Span vaadinCommercialBadge = uiComponents.create(Span.class);
-        vaadinCommercialBadge.getElement().getThemeList().add("badge pill small paid");
-
-        vaadinCommercialBadge.add(badgeText, icon);
+        Badge vaadinCommercialBadge = uiComponents.create(Badge.class);
+        vaadinCommercialBadge.setText(messageBundle.getMessage("vaadinCommercialBadge.text"));
+        vaadinCommercialBadge.setIcon(icon);
+        vaadinCommercialBadge.addThemeVariants(BadgeVariant.SMALL);
+        vaadinCommercialBadge.getElement().getThemeList().add("paid");
 
         if (child.getSuffixComponent() != null && child.getSuffixComponent() instanceof HorizontalLayout suffixLayout) {
             suffixLayout.add(vaadinCommercialBadge);
@@ -471,6 +472,15 @@ public class MainView extends StandardMainView {
                 }
             }
         }
+    }
+
+    protected void expandAndScrollToMenuItem(String id, NavigationTrigger trigger) {
+        expandAllParentRecursively(id);
+
+        ScrollIntoViewOption.Block block = trigger == NavigationTrigger.PAGE_LOAD
+                ? ScrollIntoViewOption.Block.CENTER
+                : ScrollIntoViewOption.Block.NEAREST;
+        menu.scrollToMenuItem(id, ScrollIntoViewOption.Behavior.SMOOTH, block);
     }
 
     protected void expandAllParentRecursively(String id) {

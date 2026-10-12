@@ -3,6 +3,7 @@ package io.jmix.uisamples.bean;
 import com.google.common.base.Strings;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.HasText;
+import com.vaadin.flow.component.badge.Badge;
 import com.vaadin.flow.component.html.*;
 import com.vaadin.flow.component.orderedlayout.FlexComponent;
 import com.vaadin.flow.component.orderedlayout.FlexLayout;
@@ -115,23 +116,22 @@ public class OverviewPageGenerator {
         flexLayout.addClassName("tag-container");
 
         for (Element tagElement : tagElements) {
-            Component tag = createComponentByName(tagElement.attributeValue("component"));
+            Badge tag = uiComponents.create(Badge.class);
 
-            tag.getElement().getThemeList().add("badge pill");
             addClassNames(tag, tagElement.attributeValue("classNames"));
-            if (tag instanceof HasText hasText) {
-                String text = tagElement.attributeValue("text");
-                if (!Strings.isNullOrEmpty(text)) {
-                    hasText.setText(text);
-                } else {
-                    String message = tagElement.attributeValue("message");
-                    if (!Strings.isNullOrEmpty(message)) {
-                        String prefix = tagElement.attributeValue("messagePrefix");
-                        if (Strings.isNullOrEmpty(prefix)) {
-                            prefix = messagesPrefix;
-                        }
-                        hasText.setText(getMessage(prefix, message));
+
+            String text = tagElement.attributeValue("text");
+            if (!Strings.isNullOrEmpty(text)) {
+                tag.setText(text);
+            } else {
+                String message = tagElement.attributeValue("message");
+                if (!Strings.isNullOrEmpty(message)) {
+                    String prefix = tagElement.attributeValue("messagePrefix");
+                    if (Strings.isNullOrEmpty(prefix)) {
+                        prefix = messagesPrefix;
                     }
+
+                    tag.setText(getMessage(prefix, message));
                 }
             }
 

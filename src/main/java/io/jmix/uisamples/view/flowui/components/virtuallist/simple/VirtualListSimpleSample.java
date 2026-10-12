@@ -1,5 +1,7 @@
 package io.jmix.uisamples.view.flowui.components.virtuallist.simple;
 
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.component.html.H4;
 import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.html.Hr;
@@ -9,7 +11,6 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.data.renderer.Renderer;
-import com.vaadin.flow.dom.ThemeList;
 import io.jmix.core.MetadataTools;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.details.JmixDetails;
@@ -39,8 +40,8 @@ public class VirtualListSimpleSample extends StandardView {
             infoLayout.addClassNames("info-layout");
 
             H4 customerName = new H4(customer.getInstanceName());
-            Span gradeSpan = createGradeSpan(customer.getGrade());
-            infoLayout.add(customerName, gradeSpan);
+            Badge gradeBadge = createGradeBadge(customer.getGrade());
+            infoLayout.add(customerName, gradeBadge);
 
             HorizontalLayout infoLine = createHorizontalLayout();
             infoLine.setAlignItems(FlexComponent.Alignment.CENTER);
@@ -81,20 +82,16 @@ public class VirtualListSimpleSample extends StandardView {
         return layout;
     }
 
-    protected Span createGradeSpan(@Nullable CustomerGrade grade) {
-        Span gradeSpan = new Span(metadataTools.format(grade));
+    protected Badge createGradeBadge(@Nullable CustomerGrade grade) {
+        Badge gradeBadge = new Badge(metadataTools.format(grade));
 
-        if (grade != null) {
-            ThemeList gradeThemeList = gradeSpan.getElement().getThemeList();
-
-            switch (grade) {
-                case STANDARD -> gradeThemeList.add("badge contrast");
-                case PREMIUM -> gradeThemeList.add("badge primary");
-                default -> gradeThemeList.add("badge");
-            }
+        if (grade == CustomerGrade.HIGH) {
+            gradeBadge.addThemeVariants(BadgeVariant.SUCCESS);
+        } else if (grade == CustomerGrade.PREMIUM) {
+            gradeBadge.addThemeVariants(BadgeVariant.FILLED);
         }
 
-        return gradeSpan;
+        return gradeBadge;
     }
     // end::renderer[] sample-hide
 }

@@ -1,9 +1,11 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout classNames="horizontal-layout">
-        <span text="Pending" themeNames="badge normal"/>
-        <span text="Confirmed" themeNames="badge success"/>
-        <span text="Warning" themeNames="badge warning"/>
-        <span text="Denied" themeNames="badge error"/>
-        <span text="On hold" themeNames="badge contrast"/>
+        <badge id="pendingBadge" text="Pending"/>
+        <badge id="confirmedBadge" text="Confirmed" themeNames="success"/>
+        <badge id="warningBadge" text="Warning" themeNames="warning"/>
+        <badge id="deniedBadge" text="Denied" themeNames="error"/>
+        <!-- theme-only:lumo -->
+        <badge id="contrastBadge" text="On hold" themeNames="contrast"/>
+        <!-- theme-only:lumo:end -->
     </layout>
 </view>

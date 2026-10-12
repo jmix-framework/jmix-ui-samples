@@ -1,6 +1,7 @@
 package io.jmix.uisamples.view.flowui.components.datagrid.customrenderer;
 
-import com.vaadin.flow.component.html.Span;
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.data.renderer.Renderer;
 import io.jmix.core.Messages;
@@ -41,24 +42,25 @@ public class DataGridCustomRendererSample extends StandardView {
         return new ComponentRenderer<>(this::createGradeComponent, this::gradeComponentUpdater);
     }
 
-    protected Span createGradeComponent() {
-        Span span = uiComponents.create(Span.class);
-        span.getElement().getThemeList().add("badge");
-
-        return span;
+    protected Badge createGradeComponent() {
+        return uiComponents.create(Badge.class);
     }
 
-    protected void gradeComponentUpdater(Span span, Customer customer) {
-        if (customer.getGrade() != null) {
-            span.setText(messages.getMessage(CustomerGrade.class, customer.getGrade().name()));
+    protected void gradeComponentUpdater(Badge badge, Customer customer) {
+        badge.getElement().getThemeList().clear();
 
-            switch (customer.getGrade()) {
-                case STANDARD -> span.getElement().getThemeList().add("contrast");
-                case HIGH -> span.getElement().getThemeList().add("success");
-                case PREMIUM -> span.getElement().getThemeList().add("primary");
-            }
-        } else {
-            span.setText("No data");
+        CustomerGrade grade = customer.getGrade();
+        if (grade == null) {
+            badge.setText("No data");
+            return;
+        }
+
+        badge.setText(messages.getMessage(CustomerGrade.class, grade.name()));
+
+        if (grade == CustomerGrade.HIGH) {
+            badge.addThemeVariants(BadgeVariant.SUCCESS);
+        } else if (grade == CustomerGrade.PREMIUM) {
+            badge.addThemeVariants(BadgeVariant.FILLED);
         }
     }
     // end::component-renderer[] sample-hide

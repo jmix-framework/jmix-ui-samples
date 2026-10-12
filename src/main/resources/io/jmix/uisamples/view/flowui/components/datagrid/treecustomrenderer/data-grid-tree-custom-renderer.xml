@@ -1,0 +1,32 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data readOnly="true">
+        <collection id="tasksDc"
+                    class="io.jmix.uisamples.entity.Task">
+            <fetchPlan extends="_local">
+                <property name="parentTask" fetchPlan="_local"/>
+                <property name="assignee" fetchPlan="_local"/>
+            </fetchPlan>
+            <loader id="tasksDl">
+                <query>
+                    <![CDATA[select e from Task e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <treeDataGrid id="taskDataGrid"
+                      dataContainer="tasksDc"
+                      hierarchyProperty="parentTask"
+                      width="100%"
+                      minHeight="20em">
+            <columns>
+                <column property="name"/>
+                <column property="dueDate"/>
+                <column property="assignee"/>
+            </columns>
+        </treeDataGrid>
+    </layout>
+</view>

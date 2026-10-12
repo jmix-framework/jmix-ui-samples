@@ -32,11 +32,21 @@
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    min-width: 0;
+    overflow-wrap: anywhere;
 }
 
 .icon-size {
     min-height: 2em;
     min-width: 2em;
+}
+
+.icon-size.jmix-font-icon {
+    --vaadin-icon-visual-size: 2em;
+}
+
+.icon-size.jmix-font-icon.jmix-font-icon-lumo {
+    --vaadin-icon-visual-size: 3em;
 }
 
 .icon-name-text {

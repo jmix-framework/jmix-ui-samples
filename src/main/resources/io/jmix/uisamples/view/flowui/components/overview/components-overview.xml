@@ -25,10 +25,12 @@
             <tag text="badge" route="badge-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="helperText" route="context-help-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="tooltip" route="context-help-tooltip" classNames="overview-tag-font overview-tag-blue"/>
+            <tag text="popover" route="popover-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="html" route="html-component" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="icon" route="icon-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="image" route="image-simple" classNames="overview-tag-font overview-tag-blue"/>
             <tag text="progressBar" route="progress-bar-simple" classNames="overview-tag-font overview-tag-blue"/>
+            <tag text="svg" route="svg" classNames="overview-tag-font overview-tag-blue"/>
         </sample>
         <sample>
             <image src="icons/components/inputFieldsBackground.png" route="text-field-simple"/>
@@ -45,6 +47,8 @@
                  route="big-decimal-field-simple"
                  classNames="overview-tag-font overview-tag-green"/>
             <tag text="integerField" route="integer-field-simple" classNames="overview-tag-font overview-tag-green"/>
+            <tag text="slider" route="slider-simple" classNames="overview-tag-font overview-tag-green"/>
+            <tag text="rangeSlider" route="range-slider-simple" classNames="overview-tag-font overview-tag-green"/>
             <tag text="fileUploadField" route="file-upload-field" classNames="overview-tag-font overview-tag-green"/>
         </sample>
         <sample>

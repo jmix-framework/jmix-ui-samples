@@ -1,0 +1,15 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout>
+        <hbox alignItems="BASELINE" wrap="true">
+            <select id="positionSelect" label="Position"/>
+            <checkbox id="arrowCheckbox" label="Arrow"/>
+            <checkbox id="noPaddingCheckbox" label="No padding"/>
+        </hbox>
+        <vbox width="100%" minHeight="14em" alignItems="CENTER" justifyContent="CENTER">
+            <button id="targetButton" text="Target"/>
+        </vbox>
+        <popover id="popover" target="targetButton" position="BOTTOM" closeOnOutsideClick="false">
+            <span text="Popover content"/>
+        </popover>
+    </layout>
+</view>

@@ -2,21 +2,17 @@ package io.jmix.uisamples.view.flowui.cookbook.wizard;
 
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.button.ButtonVariant;
+import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Span;
-import com.vaadin.flow.component.icon.VaadinIcon;
-import com.vaadin.flow.component.orderedlayout.FlexComponent;
-import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.component.orderedlayout.ThemableLayout;
-import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.tabs.Tab;
 import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.component.validation.ValidationErrors;
+import io.jmix.flowui.icon.Icons;
 import io.jmix.flowui.kit.component.button.JmixButton;
+import io.jmix.flowui.kit.icon.JmixFontIcon;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.function.Supplier;
 
 @ViewController("wizard-dialog")
 @ViewDescriptor("wizard-dialog.xml")
@@ -34,40 +30,38 @@ public class WizardDialog extends StandardDetailView<Employee> {
 
     @Autowired
     private ViewValidation viewValidation;
-
-    private int tabsCount;
+    @Autowired
+    private Icons icons;
 
     @Subscribe
     public void onBeforeShow(final BeforeShowEvent event) {
-        if (tabsCount == 0) {
+        if (wizardContent.getTabCount() == 0) {
             throw new IllegalStateException("No steps added");
         }
 
-        wizardContent.getTabAt(0).setEnabled(true);
         wizardContent.setSelectedIndex(0);
 
+        updateStepsState();
         updateControlsState();
     }
 
-    public WizardDialog addStep(WizardStep<?> step) {
-        Tab tab = createTab(step, ++tabsCount);
-        tab.setEnabled(false);
-        step.content().setupData(getViewData());
-        wizardContent.add(tab, step.content());
+    public WizardDialog addStep(WizardStep step) {
+        wizardContent.add(createTab(step), step.content());
+
+        updateStepsState();
+        updateControlsState();
         return this;
     }
 
     @Subscribe("wizardContent")
     public void onWizardContentSelectedChange(final JmixTabSheet.SelectedChangeEvent event) {
+        updateStepsState();
         updateControlsState();
     }
 
     @Subscribe(id = "backButton", subject = "clickListener")
     public void onBackButtonClick(final ClickEvent<JmixButton> event) {
-        wizardContent.getSelectedTab().setEnabled(false);
-        int selectedIndex = wizardContent.getSelectedIndex();
-        wizardContent.getTabAt(--selectedIndex).setEnabled(true);
-        wizardContent.setSelectedIndex(selectedIndex);
+        wizardContent.setSelectedIndex(wizardContent.getSelectedIndex() - 1);
     }
 
     @Subscribe(id = "nextButton", subject = "clickListener")
@@ -80,13 +74,19 @@ public class WizardDialog extends StandardDetailView<Employee> {
         ValidationErrors validationErrors = validateCurrentStep();
 
         if (validationErrors.isEmpty()) {
-            wizardContent.getSelectedTab().setEnabled(false);
-            int selectedIndex = wizardContent.getSelectedIndex();
-            wizardContent.getTabAt(++selectedIndex).setEnabled(true);
-            wizardContent.setSelectedIndex(selectedIndex);
+            int nextIndex = wizardContent.getSelectedIndex() + 1;
+            wizardContent.getTabAt(nextIndex).setEnabled(true);
+            wizardContent.setSelectedIndex(nextIndex);
         } else {
             viewValidation.focusProblemComponent(validationErrors);
             viewValidation.showValidationErrors(validationErrors);
+        }
+    }
+
+    private void updateStepsState() {
+        int selectedIndex = wizardContent.getSelectedIndex();
+        for (int i = 0; i < wizardContent.getTabCount(); i++) {
+            wizardContent.getTabAt(i).setEnabled(i <= selectedIndex);
         }
     }
 
@@ -95,47 +95,26 @@ public class WizardDialog extends StandardDetailView<Employee> {
 
         if (isLastTabSelected()) {
             nextButton.setText("Complete");
-            nextButton.setIcon(VaadinIcon.CHECK.create());
+            nextButton.setIcon(icons.get(JmixFontIcon.CHECK));
             nextButton.addThemeVariants(ButtonVariant.PRIMARY);
         } else {
             nextButton.setText("Next");
-            nextButton.setIcon(VaadinIcon.ARROW_CIRCLE_RIGHT_O.create());
+            nextButton.setIcon(icons.get(JmixFontIcon.ARROW_CIRCLE_RIGHT));
             nextButton.removeThemeVariants(ButtonVariant.PRIMARY);
         }
     }
 
     private boolean isLastTabSelected() {
-        return wizardContent.getSelectedIndex() == tabsCount - 1;
+        return wizardContent.getSelectedIndex() == wizardContent.getTabCount() - 1;
     }
 
     private ValidationErrors validateCurrentStep() {
         return viewValidation.validateUiComponents(wizardContent.getContentByTab(wizardContent.getSelectedTab()));
     }
 
-    private Tab createTab(WizardStep<?> step, int index) {
-        VerticalLayout layout = createLayout(VerticalLayout::new);
-        layout.setAlignItems(FlexComponent.Alignment.CENTER);
-        layout.addClassName("tab-container");
-
-        HorizontalLayout horizontalLayout = createLayout(HorizontalLayout::new);
-        horizontalLayout.addClassName("label-container");
-
-        Span label = new Span("Step #" + index);
-        label.addClassName("label");
-        horizontalLayout.add(step.icon(), label);
-
-        Span text = new Span(step.text());
-        text.addClassNames("sublabel");
-
-        layout.add(horizontalLayout, text);
-
-        return new Tab(layout);
-    }
-
-    private <T extends ThemableLayout & FlexComponent> T createLayout(Supplier<T> factory) {
-        T layout = factory.get();
-        layout.setPadding(false);
-        layout.setSpacing(false);
-        return layout;
+    private Tab createTab(WizardStep step) {
+        Div stepContent = new Div(step.icon(), new Span(step.text()));
+        stepContent.addClassName("wizard-step");
+        return new Tab(stepContent);
     }
 }

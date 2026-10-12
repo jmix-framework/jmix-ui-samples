@@ -1,5 +1,7 @@
 package io.jmix.uisamples.view.flowui.containers.tabsheet.badges;
 
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.tabs.Tab;
 import io.jmix.flowui.UiComponents;
@@ -31,29 +33,32 @@ public class TabSheetBadgesSample extends StandardView {
 
     protected Tab createIssueTab() {
         Tab tab = uiComponents.create(Tab.class);
-        tab.add(new Span("Issues"), createBadge(15, "contrast"));
+        tab.add(new Span("Issues"), createBadge(15));
 
         return tab;
     }
 
     protected Tab createFeatureTab() {
         Tab tab = uiComponents.create(Tab.class);
-        tab.add(new Span("Features"), createBadge(132, "success"));
+        tab.add(new Span("Features"), createBadge(132, BadgeVariant.SUCCESS));
 
         return tab;
     }
 
     protected Tab createBugTab() {
         Tab tab = uiComponents.create(Tab.class);
-        tab.add(new Span("Bugs"), createBadge(32, "error"));
+        tab.add(new Span("Bugs"), createBadge(32, BadgeVariant.ERROR));
 
         return tab;
     }
 
-    protected Span createBadge(int value, String theme) {
-        Span badge = new Span(String.valueOf(value));
-        badge.getElement().getThemeList().add("badge small " + theme);
+    protected Badge createBadge(int value, BadgeVariant... variants) {
+        Badge badge = new Badge();
+        badge.setNumber(value);
+        badge.addThemeVariants(BadgeVariant.SMALL);
+        badge.addThemeVariants(variants);
         badge.addClassName("tab-badge");
+
         return badge;
     }
     // end::badges[] sample-hide

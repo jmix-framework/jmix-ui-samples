@@ -2,8 +2,6 @@ package io.jmix.uisamples.view.flowui.containers.formlayout.autoresponsive;
 
 import com.vaadin.flow.component.AbstractField.ComponentValueChangeEvent;
 import com.vaadin.flow.component.ClickEvent;
-import com.vaadin.flow.component.html.Span;
-import com.vaadin.flow.component.popover.Popover;
 import io.jmix.flowui.component.checkbox.JmixCheckbox;
 import io.jmix.flowui.component.formlayout.JmixFormLayout;
 import io.jmix.flowui.component.textfield.JmixIntegerField;
@@ -23,17 +21,6 @@ public class FormLayoutAutoResponsiveSample extends StandardView {
     private JmixIntegerField maxColumnsField;
     @ViewComponent
     private JmixIntegerField minColumnsField;
-
-    @ViewComponent
-    private MessageBundle messageBundle;
-
-    @Subscribe
-    public void onInit(final InitEvent event) {
-        Popover popover = new Popover();
-        popover.setFor("labelSpacingHelpButton");
-        popover.add(new Span(messageBundle.getMessage("labelSpacingHelp")));
-        getContent().add(popover);
-    }
 
     @Subscribe("columnSpacingField")
     public void onColumnSpacingFieldComponentValueChange(final ComponentValueChangeEvent<TypedTextField<String>, String> event) {

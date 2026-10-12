@@ -1,0 +1,41 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui">
+    <layout>
+        <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
+            <charts:title text="Project progress" left="0" top="0"/>
+
+            <charts:series>
+                <charts:gauge name="Progress" startAngle="90" endAngle="-270">
+                    <charts:axisLine>
+                        <charts:lineStyle width="40"/>
+                    </charts:axisLine>
+
+                    <charts:progress show="true" overlap="false" roundCap="true" clip="false"/>
+                    <charts:splitLine show="false"/>
+                    <charts:axisTick show="false"/>
+                    <charts:axisLabel show="false"/>
+                    <charts:pointer show="false"/>
+
+                    <charts:title fontSize="14"/>
+                    <charts:detail width="50" height="14" fontSize="14" formatter="{value}%"
+                                   color="inherit" borderColor="inherit" borderWidth="1" borderRadius="20"/>
+
+                    <charts:data>
+                        <charts:dataItem name="Design" value="80">
+                            <charts:title offsetCenter="0% -46%"/>
+                            <charts:detail offsetCenter="0% -31%"/>
+                        </charts:dataItem>
+                        <charts:dataItem name="Development" value="55">
+                            <charts:title offsetCenter="0% -8%"/>
+                            <charts:detail offsetCenter="0% 7%"/>
+                        </charts:dataItem>
+                        <charts:dataItem name="Testing" value="30">
+                            <charts:title offsetCenter="0% 30%"/>
+                            <charts:detail offsetCenter="0% 45%"/>
+                        </charts:dataItem>
+                    </charts:data>
+                </charts:gauge>
+            </charts:series>
+        </charts:chart>
+    </layout>
+</view>

@@ -1,8 +1,8 @@
 package io.jmix.uisamples.view.flowui.fragments.events;
 
-import com.vaadin.flow.component.html.Span;
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
-import com.vaadin.flow.dom.ThemeList;
 import io.jmix.flowui.fragment.Fragment;
 import io.jmix.flowui.fragment.FragmentDescriptor;
 import io.jmix.flowui.view.Subscribe;
@@ -33,17 +33,14 @@ public class EventsFragment extends Fragment<HorizontalLayout> {
     }
 
     public void addExecutedEvent(String eventName) {
-        Span span = new Span(eventName);
-
-        ThemeList themeList = span.getElement().getThemeList();
-        themeList.add("badge");
+        Badge badge = new Badge(eventName);
 
         if (eventName.contains("Fragment")) {
-            themeList.add("error");
+            badge.addThemeVariants(BadgeVariant.ERROR);
         } else if (eventName.contains("View")) {
-            themeList.add("success");
+            badge.addThemeVariants(BadgeVariant.SUCCESS);
         }
 
-        getContent().add(span);
+        getContent().add(badge);
     }
 }

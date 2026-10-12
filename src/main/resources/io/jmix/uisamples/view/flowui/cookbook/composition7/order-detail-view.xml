@@ -23,7 +23,7 @@
         <action id="closeAction" type="detail_close"/>
     </actions>
     <layout>
-        <div id="infoPanel" themeNames="badge success" text="msg://infoPanel.text.noChanges" height="2em" alignSelf="CENTER"/>
+        <badge id="infoPanel" themeNames="success" text="msg://infoPanel.text.noChanges" alignSelf="CENTER"/>
         <formLayout id="form" dataContainer="orderDc">
             <responsiveSteps>
                 <responsiveStep minWidth="0" columns="1"/>

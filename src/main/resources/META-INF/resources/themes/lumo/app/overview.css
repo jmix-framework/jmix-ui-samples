@@ -21,45 +21,52 @@
 }
 
 .overview-root .overview-tag-grey {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #F4F8FE;
+    --vaadin-badge-text-color: #4F5C78;
+    --vaadin-badge-font-weight: 400;
+    --vaadin-badge-background: #F4F8FE;
+    --vaadin-badge-border-color: transparent;
 }
 
 .overview-root .overview-tag-blue {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #E9FEFE;
+    --vaadin-badge-text-color: #4F5C78;
+    --vaadin-badge-font-weight: 400;
+    --vaadin-badge-background: #E9FEFE;
+    --vaadin-badge-border-color: transparent;
 }
 
 .overview-root .overview-tag-green {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #EFFEEF;
+    --vaadin-badge-text-color: #4F5C78;
+    --vaadin-badge-font-weight: 400;
+    --vaadin-badge-background: #EFFEEF;
+    --vaadin-badge-border-color: transparent;
 }
 
 .overview-root .overview-tag-purple {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FBF4FE;
+    --vaadin-badge-text-color: #4F5C78;
+    --vaadin-badge-font-weight: 400;
+    --vaadin-badge-background: #FBF4FE;
+    --vaadin-badge-border-color: transparent;
 }
 
 .overview-root .overview-tag-red {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FEF4F6;
+    --vaadin-badge-text-color: #4F5C78;
+    --vaadin-badge-font-weight: 400;
+    --vaadin-badge-background: #FEF4F6;
+    --vaadin-badge-border-color: transparent;
 }
 
 .overview-root .overview-tag-yellow {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FDFBE8;
+    --vaadin-badge-text-color: #4F5C78;
+    --vaadin-badge-font-weight: 400;
+    --vaadin-badge-background: #FDFBE8;
+    --vaadin-badge-border-color: transparent;
 }
 
 .overview-root .overview-tag-orange {
-    color: #4F5C78;
-    font-weight: 400;
-    background-color: #FEF9ED;
+    --vaadin-badge-text-color: #4F5C78;
+    --vaadin-badge-font-weight: 400;
+    --vaadin-badge-background: #FEF9ED;
+    --vaadin-badge-border-color: transparent;
 }
 
 .overview-root .overview-resources-title-padding {

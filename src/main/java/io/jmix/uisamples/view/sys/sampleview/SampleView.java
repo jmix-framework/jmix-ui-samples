@@ -156,7 +156,8 @@ public class SampleView extends StandardView {
     @Override
     public void afterNavigation(AfterNavigationEvent event) {
         if (sampleId != null) {
-            menuNavigationExpander.expand(sampleId);
+            menuNavigationExpander.
+                    expand(sampleId, event.getLocationChangeEvent().getTrigger());
         }
 
         super.afterNavigation(event);
@@ -588,6 +589,7 @@ public class SampleView extends StandardView {
                 case "properties" -> mode = CodeEditorMode.PROPERTIES;
                 case "css" -> mode = CodeEditorMode.CSS;
                 case "scss" -> mode = CodeEditorMode.SCSS;
+                case "svg" -> mode = CodeEditorMode.SVG;
             }
         }
 

@@ -20,18 +20,10 @@
     <menu id="components-root" url="flow-ui/vc/components">
         <overview id="components" location="components/overview/components-overview.xml"/>
         <item id="avatar" page="avatar"/>
-        <menu id="badge">
+        <menu id="badge" isNew="true">
             <item id="badge-simple"/>
-            <item id="badge-icons">
-                <otherFiles>
-                    <file name="{currentTheme}/components/badge-icons.css"/>
-                </otherFiles>
-            </item>
-            <item id="badge-theme-variant" splitEnabled="true">
-                <otherFiles>
-                    <file name="{currentTheme}/components/badge-theme-variant.css"/>
-                </otherFiles>
-            </item>
+            <item id="badge-icons"/>
+            <item id="badge-theme-variant" splitEnabled="true"/>
         </menu>
         <menu id="big-decimal-field">
             <item id="big-decimal-field-simple" page="bigDecimalField"/>
@@ -153,13 +145,13 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="data-grid-sort-delegate-expression" page="dataGrid" anchor="sorting" splitEnabled="true" isNew="true">
+            <item id="data-grid-sort-delegate-expression" page="dataGrid" anchor="sorting" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="data-grid-sort-delegate-comparator" page="dataGrid" anchor="sorting" splitEnabled="true" isNew="true">
+            <item id="data-grid-sort-delegate-comparator" page="dataGrid" anchor="sorting" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
@@ -168,6 +160,11 @@
             <item id="data-grid-custom-renderer" page="dataGrid" anchor="renderers" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="data-grid-popover-renderer" page="dataGrid" anchor="renderers" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Contract.java"/>
                 </otherFiles>
             </item>
             <item id="data-grid-part-name-generator" page="dataGrid" splitEnabled="true">
@@ -248,8 +245,20 @@
                     <file name="io/jmix/uisamples/entity/Task.java"/>
                 </otherFiles>
             </item>
+            <item id="data-grid-tree-custom-renderer" page="treeDataGrid"
+                  anchor="hierarchy-column-component-renderer" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Task.java"/>
+                </otherFiles>
+            </item>
             <item id="data-grid-tree-lazy-nodes" page="treeDataGrid" splitEnabled="true">
                 <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Task.java"/>
+                </otherFiles>
+            </item>
+            <item id="data-grid-tree-filter" page="treeDataGrid" anchor="showOrphans" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/view/flowui/components/datagrid/treefilter/TreeAncestorsLoader.java"/>
                     <file name="io/jmix/uisamples/entity/Task.java"/>
                 </otherFiles>
             </item>
@@ -391,7 +400,7 @@
             </item>
         </menu>
         <menu id="icon">
-            <item id="icon-all" page="icon" splitEnabled="true"/>
+            <item id="icon-all" page="icon" splitEnabled="true" isNew="true"/>
             <item id="icon-simple" page="icon"/>
         </menu>
         <menu id="image" url="flow-ui/vc/html-components">
@@ -436,13 +445,13 @@
         </menu>
         <menu id="markdown-components">
             <item id="markdown" page="markdown" splitEnabled="true"/>
-            <item id="markdown-editor-simple" page="markdownEditor" splitEnabled="true" isNew="true"/>
-            <item id="markdown-editor-dataaware" page="markdownEditor" splitEnabled="true" isNew="true">
+            <item id="markdown-editor-simple" page="markdownEditor" splitEnabled="true"/>
+            <item id="markdown-editor-dataaware" page="markdownEditor" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Order.java"/>
                 </otherFiles>
             </item>
-            <item id="markdown-editor-theme-variant" page="markdownEditor" splitEnabled="true" isNew="true"/>
+            <item id="markdown-editor-theme-variant" page="markdownEditor" splitEnabled="true"/>
         </menu>
         <menu id="multi-select-combo-box">
             <item id="multi-select-combo-box-simple" page="multiSelectComboBox">
@@ -492,6 +501,16 @@
                 </otherFiles>
             </item>
             <item id="password-field-theme-variant" page="passwordField"/>
+        </menu>
+        <menu id="popover" isNew="true">
+            <item id="popover-simple"/>
+            <item id="popover-triggers"/>
+            <item id="popover-position" splitEnabled="true"/>
+            <item id="popover-modal" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="progress-bar">
             <item id="progress-bar-simple" page="progressBar"/>
@@ -543,6 +562,14 @@
                 </otherFiles>
             </item>
         </menu>
+        <menu id="range-slider" isNew="true">
+            <item id="range-slider-simple"/>
+            <item id="range-slider-filter" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
         <menu id="select">
             <item id="select-simple" page="select">
                 <otherFiles>
@@ -578,6 +605,19 @@
                 </otherFiles>
             </item>
         </menu>
+        <menu id="slider" isNew="true">
+            <item id="slider-simple"/>
+            <item id="slider-dataaware">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+        </menu>
+        <item id="svg" isNew="true">
+            <otherFiles>
+                <file name="META-INF/resources/svg/bar-chart.svg"/>
+            </otherFiles>
+        </item>
         <menu id="switch">
             <item id="switch-simple" page="switch"/>
             <item id="switch-dataaware" page="switch" anchor="_data_binding">
@@ -789,6 +829,11 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
+            <item id="side-panel-layout-resizable" page="sidePanelLayout" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="split">
             <item id="split-simple" page="split"/>
@@ -796,7 +841,7 @@
         </menu>
         <menu id="tabsheet">
             <item id="tabsheet-simple" page="tabSheet"/>
-            <item id="tabsheet-states" page="tabSheet" isNew="true"/>
+            <item id="tabsheet-states" page="tabSheet"/>
             <item id="tabsheet-icons" page="tabSheet"/>
             <item id="tabsheet-badges" page="tabSheet">
                 <otherFiles>
@@ -961,6 +1006,10 @@
                             <file name="io/jmix/uisamples/entity/DateValueVolume.java"/>
                         </otherFiles>
                     </item>
+                    <item id="line-series-step" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
+                    <item id="line-series-large" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
                 <menu id="bar-series">
                     <item id="bar-series-simple" page="chart-component" anchor="series" splitEnabled="true">
@@ -973,6 +1022,24 @@
                             <file name="io/jmix/uisamples/entity/TransportCount.java"/>
                         </otherFiles>
                     </item>
+                    <item id="bar-series-horizontal" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true">
+                        <otherFiles>
+                            <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
+                        </otherFiles>
+                    </item>
+                    <item id="bar-series-mixed" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
+                    <item id="bar-series-waterfall" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
+                    <item id="bar-series-polar" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true">
+                        <otherFiles>
+                            <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
+                        </otherFiles>
+                    </item>
+                    <item id="bar-series-race" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
                 <menu id="pie-series">
                     <item id="pie-series-simple" page="chart-component" anchor="series" splitEnabled="true">
@@ -994,6 +1061,8 @@
                         </otherFiles>
                     </item>
                     <item id="effect-scatter-series" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="scatter-series-large" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
                 <menu id="radar-series">
                     <item id="radar-series-simple" page="chart-component" anchor="series" splitEnabled="true">
@@ -1012,6 +1081,15 @@
                         </otherFiles>
                     </item>
                 </menu>
+                <menu id="boxplot-series" isNew="true">
+                    <item id="boxplot-series-simple" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="boxplot-series-multiple" page="chart-component" anchor="series" splitEnabled="true">
+                        <otherFiles>
+                            <file name="io/jmix/uisamples/entity/TemperatureData.java"/>
+                            <file name="io/jmix/uisamples/entity/Month.java"/>
+                        </otherFiles>
+                    </item>
+                </menu>
                 <menu id="funnel-series">
                     <item id="funnel-series-simple" page="chart-component" anchor="series" splitEnabled="true">
                         <otherFiles>
@@ -1025,6 +1103,8 @@
                     <item id="gauge-series-multiple-needles" page="chart-component" anchor="series"
                           splitEnabled="true"/>
                     <item id="gauge-series-colorized" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="gauge-series-ring" page="chart-component" anchor="series" splitEnabled="true"
+                          isNew="true"/>
                 </menu>
             </menu>
             <menu id="data-items">
@@ -1057,6 +1137,11 @@
                 </item>
                 <item id="chart-native-json" page="chart-component" anchor="native-json" splitEnabled="true"/>
                 <item id="chart-export" page="chart-component" anchor="tool-box" splitEnabled="true"/>
+                <item id="chart-click-event" page="chart-component" splitEnabled="true" isNew="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
+                    </otherFiles>
+                </item>
             </menu>
         </menu>
 
@@ -1410,6 +1495,51 @@
                 </otherFiles>
             </item>
         </menu>
+
+        <menu id="ai-chat-root" url="ai-chat" isNew="true">
+            <menu id="ai-chat">
+                <item id="ai-chat-simple" page="aiChat" splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
+                <item id="ai-chat-empty-state" page="aiChat" anchor="empty-state" splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
+                <item id="ai-chat-generation" page="aiChat" anchor="generation" splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
+                <item id="ai-chat-theme-variant" page="aiChat" anchor="chat-theme-variants"
+                      splitEnabled="true">
+                    <otherFiles>
+                        <file name="io/jmix/uisamples/bean/PlaceholderChatModel.java"/>
+                        <file name="io/jmix/uisamples/UiSamplesAiConfiguration.java"/>
+                    </otherFiles>
+                </item>
+            </menu>
+            <menu id="ai-message-list">
+                <item id="ai-message-list-simple" page="aiMessageList" splitEnabled="true"/>
+                <item id="ai-message-list-generation" page="aiMessageList" anchor="driving"
+                      splitEnabled="true"/>
+                <item id="ai-message-list-thinking-indicator" page="aiMessageList"
+                      anchor="thinking-indicator" splitEnabled="true"/>
+            </menu>
+            <menu id="ai-message-input">
+                <item id="ai-message-input-simple" page="aiMessageInput"/>
+                <item id="ai-message-input-slots" page="aiMessageInput" anchor="slots"/>
+            </menu>
+            <menu id="ai-code-block">
+                <item id="ai-code-block-simple" page="aiCodeBlock" splitEnabled="true"/>
+                <item id="ai-code-block-actions" page="aiCodeBlock" anchor="actions" splitEnabled="true"/>
+            </menu>
+        </menu>
     </menu>
 
     <menu id="custom-components-root" url="flow-ui">
@@ -1462,6 +1592,36 @@
                 <file name="io/jmix/uisamples/view/flowui/customcomponents/fromscratch/ThemeToggleRegistration.java"/>
             </otherFiles>
         </item>
+        <menu id="native-select" isNew="true">
+            <item id="native-select-simple" page="visual-components">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelect.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/native-select.xsd"/>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelectLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/NativeSelectRegistration.java"/>
+                    <file name="{currentTheme}/customcomponents/native-select.css"/>
+                </otherFiles>
+            </item>
+            <item id="native-select-dataaware" page="visual-components" splitEnabled="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelect.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/native-select.xsd"/>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelectLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/NativeSelectRegistration.java"/>
+                    <file name="io/jmix/uisamples/entity/Employee.java"/>
+                </otherFiles>
+            </item>
+            <item id="native-select-custom-items" page="visual-components">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelect.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/native-select.xsd"/>
+                    <file name="io/jmix/uisamples/component/nativeselect/NativeSelectLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/nativeselect/NativeSelectRegistration.java"/>
+                    <file name="io/jmix/uisamples/entity/City.java"/>
+                    <file name="io/jmix/uisamples/entity/Country.java"/>
+                </otherFiles>
+            </item>
+        </menu>
         <item id="generic-component-xml"/>
     </menu>
 
@@ -1612,7 +1772,7 @@
                 </otherFiles>
             </item>
         </menu>
-        <menu id="cookbook-drag-drop" isNew="true">
+        <menu id="cookbook-drag-drop">
             <item id="dnd-data-grid" splitEnabled="true"/>
             <item id="dnd-components" splitEnabled="true">
                 <otherFiles>
@@ -1669,11 +1829,14 @@
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/wizard-dialog.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/WizardStep.java"/>
                     <file name="{currentTheme}/cookbook/wizard-dialog.css"/>
-                    <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/WizardStepFragment.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/FirstStep.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/first-step.xml"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/SecondStep.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/second-step.xml"/>
                     <file name="io/jmix/uisamples/component/addresscomponent/AddressComponent.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/composite/address-component.xsd"/>
+                    <file name="io/jmix/uisamples/component/addresscomponent/AddressComponentLoader.java"/>
+                    <file name="io/jmix/uisamples/view/flowui/customcomponents/composite/AddressComponentRegistration.java"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/ThirdStep.java"/>
                     <file name="{currentTheme}/cookbook/third-step.css"/>
                     <file name="io/jmix/uisamples/view/flowui/cookbook/wizard/step/third-step.xml"/>

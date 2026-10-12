@@ -1,0 +1,1 @@
+`HierarchyColumnComponentRenderer` displays custom components in a `TreeDataGrid` hierarchy column while preserving its expand and collapse control. This sample renders an icon next to each task name.

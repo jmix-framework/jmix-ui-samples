@@ -8,7 +8,7 @@
     <layout>
         <fileUploadField label="Load new image" dataContainer="pictureDc" property="content"
                          clearButtonVisible="true" fileNameVisible="true" acceptedFileTypes=".png"/>
-        <image id="numberField" height="10em" width="10em"
+        <image height="10em" width="10em"
                alternateText="No picture loaded"
                dataContainer="pictureDc" property="content"/>
     </layout>

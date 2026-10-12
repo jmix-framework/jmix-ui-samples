@@ -1,0 +1,52 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui">
+    <data readOnly="true">
+        <collection id="countryLitresDc"
+                    class="io.jmix.uisamples.entity.CountryLitres"
+                    fetchPlan="_local">
+            <loader id="countryLitresDl" readOnly="true">
+                <query>
+                    <![CDATA[select e from CountryLitres e order by e.litres]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
+            <charts:title text="Liters" subtext="By countries" left="0" top="0"/>
+            <charts:tooltip trigger="ITEM"/>
+
+            <charts:polar radius="15% 80%"/>
+            <charts:radiusAxis type="CATEGORY"/>
+            <charts:angleAxis type="VALUE" maxFunction="function (value) { return value.max * 4 / 3; }"/>
+
+            <charts:dataSet>
+                <charts:source dataContainer="countryLitresDc"
+                               categoryField="country" valueFields="litres"/>
+            </charts:dataSet>
+
+            <charts:series>
+                <charts:bar name="Liters" coordinateSystem="POLAR">
+                    <charts:encode radius="country" angle="litres"/>
+                </charts:bar>
+            </charts:series>
+
+            <charts:nativeJson>
+                <![CDATA[
+                {
+                    "series": [
+                        {
+                            "itemStyle": {
+                                "borderRadius": [0, "50%", 0, "50%"]
+                            }
+                        }
+                    ]
+                }
+                ]]>
+            </charts:nativeJson>
+        </charts:chart>
+    </layout>
+</view>

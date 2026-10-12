@@ -96,9 +96,10 @@ vaadin-app-layout::part(drawer) {
     width: 22em;
 }
 
-[theme~='badge'][theme~='paid'] {
-    color: var(--lumo-paid-text-color);
-    background-color: var(--lumo-paid-color);
+vaadin-badge[theme~='paid'] {
+    --vaadin-badge-text-color: var(--lumo-paid-text-color);
+    --vaadin-badge-background: var(--lumo-paid-color);
+    --vaadin-badge-border-color: transparent;
 }
 
 /* workaround for https://github.com/vaadin/web-components/issues/10627 */

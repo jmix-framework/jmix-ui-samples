@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="1" author="uisamples">
+        <createTable tableName="KANBAN_TASK">
+            <column name="ID" type="UUID">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_KANBAN_TASK"/>
+            </column>
+            <column name="NAME" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="STATUS" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ASSIGNEE_ID" type="UUID"/>
+            <column name="COLOR" type="VARCHAR(255)"/>
+            <column name="PROGRESS" type="INT"/>
+            <column name="PRIORITY" type="VARCHAR(255)"/>
+            <column name="DUE_DATE" type="DATE"/>
+            <column name="TAGS" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="2" author="uisamples">
+        <createIndex indexName="IDX_KANBAN_TASK_ASSIGNEE" tableName="KANBAN_TASK">
+            <column name="ASSIGNEE_ID"/>
+        </createIndex>
+
+        <addForeignKeyConstraint baseColumnNames="ASSIGNEE_ID" baseTableName="KANBAN_TASK"
+                                 constraintName="FK_KANBAN_TASK_ON_ASSIGNEE" referencedColumnNames="ID"
+                                 referencedTableName="KANBAN_USER"/>
+    </changeSet>
+    <changeSet id="3" author="uisamples">
+        <insert tableName="KANBAN_TASK">
+            <column name="ID" value="496b0be8-0627-4938-8dad-32795dcf46e0"/>
+            <column name="NAME" value="Create documentation"/>
+            <column name="STATUS" value="todo"/>
+            <column name="ASSIGNEE_ID" value="b1c7020b-f106-44ca-aa30-525b90632912"/>
+            <column name="COLOR" value="#A020F0"/>
+            <column name="PROGRESS" value="0"/>
+            <column name="TAGS" value="Docs,M"/>
+        </insert>
+        <insert tableName="KANBAN_TASK">
+            <column name="ID" value="e12aa713-c8f7-4b2c-b725-4b058060eec4"/>
+            <column name="NAME" value="Create samples"/>
+            <column name="STATUS" value="in_progress"/>
+            <column name="ASSIGNEE_ID" value="da8aec7c-6e79-4d0c-9ec5-7190888411c9"/>
+            <column name="COLOR" value="#006AF5"/>
+            <column name="PROGRESS" value="45"/>
+            <column name="PRIORITY" value="critical"/>
+            <column name="DUE_DATE" value="2077-08-17"/>
+            <column name="TAGS" value="Samples,L,UI"/>
+        </insert>
+        <insert tableName="KANBAN_TASK">
+            <column name="ID" value="7c349d8f-e44e-40a4-8647-7bd9c7f17894"/>
+            <column name="NAME" value="Implement feature"/>
+            <column name="STATUS" value="testing"/>
+            <column name="ASSIGNEE_ID" value="740fbf77-4c62-4cdd-b3d0-8424648b0777"/>
+            <column name="COLOR" value="#006AF5"/>
+            <column name="PROGRESS" value="100"/>
+            <column name="PRIORITY" value="high"/>
+            <column name="DUE_DATE" value="2024-07-25"/>
+            <column name="TAGS" value="Feature,S,Core"/>
+        </insert>
+        <insert tableName="KANBAN_TASK">
+            <column name="ID" value="34690562-8474-49b3-b284-40c3c8712c55"/>
+            <column name="NAME" value="Conduct a demo"/>
+            <column name="STATUS" value="done"/>
+            <column name="ASSIGNEE_ID" value="120f63e6-346d-45c0-8510-8f0ad985cdde"/>
+            <column name="PROGRESS" value="100"/>
+            <column name="PRIORITY" value="average"/>
+            <column name="TAGS" value="Demo,XS,Marketing"/>
+        </insert>
+        <insert tableName="KANBAN_TASK">
+            <column name="ID" value="3e34aabe-9d50-4188-8805-2bb36590c1dd"/>
+            <column name="NAME" value="Organize a webinar"/>
+            <column name="STATUS" value="in_progress"/>
+            <column name="ASSIGNEE_ID" value="b1c7020b-f106-44ca-aa30-525b90632912"/>
+            <column name="COLOR" value="#CA150C"/>
+            <column name="PROGRESS" value="67"/>
+            <column name="PRIORITY" value="critical"/>
+            <column name="DUE_DATE" value="2024-08-12"/>
+            <column name="TAGS" value="XL,Marketing,To be discussed"/>
+        </insert>
+        <insert tableName="KANBAN_TASK">
+            <column name="ID" value="c9b5f743-3192-4e74-b1df-d4a7b6715e0c"/>
+            <column name="NAME" value="Prepare the project for release"/>
+            <column name="STATUS" value="in_progress"/>
+            <column name="ASSIGNEE_ID" value="740fbf77-4c62-4cdd-b3d0-8424648b0777"/>
+            <column name="PROGRESS" value="23"/>
+            <column name="DUE_DATE" value="2024-07-01"/>
+            <column name="TAGS" value="XL,Development,Release"/>
+        </insert>
+        <insert tableName="KANBAN_TASK">
+            <column name="ID" value="29402128-c4b8-4ef5-a51c-38d8e1b058e6"/>
+            <column name="NAME" value="Create onboarding guide"/>
+            <column name="STATUS" value="todo"/>
+            <column name="ASSIGNEE_ID" value="da8aec7c-6e79-4d0c-9ec5-7190888411c9"/>
+            <column name="PRIORITY" value="average"/>
+            <column name="TAGS" value="Task,M"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

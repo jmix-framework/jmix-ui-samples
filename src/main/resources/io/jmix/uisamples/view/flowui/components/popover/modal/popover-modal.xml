@@ -1,0 +1,46 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data readOnly="true">
+        <collection id="customersDc"
+                    class="io.jmix.uisamples.entity.Customer"
+                    fetchPlan="_local">
+            <loader id="customersDl">
+                <query>
+                    <![CDATA[select e from Customer e order by e.lastName]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <hbox width="100%" justifyContent="END">
+            <button id="filterButton" text="Filter" icon="FILTER"/>
+        </hbox>
+        <popover id="filterPopover" target="filterButton" position="BOTTOM_END" width="22em"
+                 modal="true" backdropVisible="true">
+            <vbox padding="false">
+                <h4 text="Filter customers"/>
+                <propertyFilter id="lastNameFilter" property="lastName" operation="CONTAINS"
+                                dataLoader="customersDl" autoApply="false" width="100%"/>
+                <propertyFilter id="ageFilter" property="age" operation="GREATER_OR_EQUAL"
+                                dataLoader="customersDl" autoApply="false" width="100%"/>
+                <hbox>
+                    <button id="applyButton" text="Apply" themeNames="primary"/>
+                    <button id="clearButton" text="Clear"/>
+                </hbox>
+            </vbox>
+        </popover>
+        <dataGrid id="customersDataGrid"
+                  dataContainer="customersDc"
+                  width="100%"
+                  minHeight="20em">
+            <columns>
+                <column property="name"/>
+                <column property="lastName"/>
+                <column property="email"/>
+                <column property="age"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</view>

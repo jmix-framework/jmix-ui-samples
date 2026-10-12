@@ -1,0 +1,47 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:ns="http://io.jmix.uisamples/native-select.xsd">
+    <data>
+        <collection id="employeesDc"
+                    class="io.jmix.uisamples.entity.Employee">
+            <fetchPlan extends="_base"/>
+            <loader id="employeesDl">
+                <query>
+                    <![CDATA[select e from Employee e order by e.firstName]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <vbox padding="false" spacing="false">
+            <nativeLabel text="Department" setFor="departmentSelect" classNames="native-select-label"/>
+            <ns:nativeSelect id="departmentSelect"
+                             dataContainer="employeesDc"
+                             property="department"
+                             width="15em">
+                <ns:optgroup label="Engineering">
+                    <ns:option value="Development"/>
+                    <ns:option value="Quality Assurance"/>
+                    <ns:option value="Operations"/>
+                </ns:optgroup>
+                <ns:optgroup label="Business">
+                    <ns:option value="Sales"/>
+                    <ns:option value="Marketing"/>
+                    <ns:option value="Finance"/>
+                </ns:optgroup>
+            </ns:nativeSelect>
+        </vbox>
+        <dataGrid id="employeesDataGrid"
+                  dataContainer="employeesDc"
+                  width="100%"
+                  minHeight="15em">
+            <columns>
+                <column property="firstName"/>
+                <column property="lastName"/>
+                <column property="department"/>
+            </columns>
+        </dataGrid>
+    </layout>
+</view>

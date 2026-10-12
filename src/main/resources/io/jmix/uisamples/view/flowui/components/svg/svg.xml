@@ -1,0 +1,25 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
+        <vbox padding="false" width="AUTO" alignItems="CENTER">
+            <h4 text="Content element"/>
+            <svg>
+                <content><![CDATA[
+                    <svg xmlns="http://www.w3.org/2000/svg" width="160" height="120" viewBox="0 0 160 120">
+                        <circle cx="116" cy="36" r="18" fill="#ffb300"/>
+                        <path d="M8 112 L58 44 L108 112 Z" fill="#66bb6a"/>
+                        <path d="M64 112 L106 64 L152 112 Z" fill="#2e7d32"/>
+                    </svg>
+                ]]></content>
+            </svg>
+        </vbox>
+        <vbox padding="false" width="AUTO" alignItems="CENTER">
+            <h4 text="File attribute"/>
+            <svg file="META-INF/resources/svg/bar-chart.svg" css="width: 160px"/>
+        </vbox>
+        <vbox padding="false" width="AUTO" alignItems="CENTER">
+            <h4 text="setSvg() method"/>
+            <svg id="progressSvg"/>
+            <integerSlider id="progressSlider" width="10em" value="65" valueChangeMode="EAGER"/>
+        </vbox>
+    </layout>
+</view>

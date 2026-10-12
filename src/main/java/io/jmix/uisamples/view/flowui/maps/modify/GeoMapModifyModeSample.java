@@ -5,7 +5,7 @@ import io.jmix.flowui.Notifications;
 import io.jmix.flowui.view.*;
 import io.jmix.mapsflowui.component.model.feature.LineStringFeature;
 import io.jmix.mapsflowui.component.model.feature.PolygonFeature;
-import io.jmix.mapsflowui.component.model.source.HasFeatureModify.SourceFeatureDeleteEvent;
+import io.jmix.mapsflowui.component.model.source.HasFeatureDelete.SourceFeatureDeleteEvent;
 import io.jmix.mapsflowui.component.model.source.HasFeatureModify.SourceFeatureModifyEndEvent;
 import io.jmix.mapsflowui.component.model.source.HasFeatureModify.SourceFeatureModifyStartEvent;
 import io.jmix.mapsflowui.component.model.source.VectorSource;

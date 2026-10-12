@@ -1,0 +1,12 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout>
+        <button id="infoButton" text="About Popover" icon="INFO_CIRCLE_O"/>
+        <popover id="infoPopover" target="infoButton" width="20em">
+            <vbox padding="false">
+                <h4 text="Popover"/>
+                <span text="An overlay anchored to its target component. It can contain any components: text, fields, buttons and layouts."/>
+                <button id="closeButton" text="Close"/>
+            </vbox>
+        </popover>
+    </layout>
+</view>

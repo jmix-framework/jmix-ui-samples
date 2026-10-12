@@ -5,7 +5,7 @@
     </data>
     <layout>
         <charts:chart id="chart" height="100%" width="100%" minHeight="30em">
-            <charts:title text="Data Amount: 100"/>
+            <charts:title text="Data Amount: 100" left="0" top="0"/>
             <charts:tooltip trigger="AXIS">
                 <charts:axisPointer type="LINE"/>
                 <charts:formatterFunction>

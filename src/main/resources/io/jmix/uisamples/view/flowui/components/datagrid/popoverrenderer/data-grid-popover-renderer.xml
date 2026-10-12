@@ -1,0 +1,34 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <data readOnly="true">
+        <collection id="contractsDc"
+                    class="io.jmix.uisamples.entity.Contract">
+            <fetchPlan extends="_base">
+                <property name="customer" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="contractsDl">
+                <query>
+                    <![CDATA[select e from Contract e order by e.number]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <dataGrid id="contractsDataGrid"
+                  width="100%"
+                  minHeight="20em"
+                  dataContainer="contractsDc">
+            <columns>
+                <column property="number"/>
+                <column property="date"/>
+                <column property="customer"/>
+                <column property="status"/>
+                <column property="comments">
+                    <popoverRenderer/>
+                </column>
+            </columns>
+        </dataGrid>
+    </layout>
+</view>

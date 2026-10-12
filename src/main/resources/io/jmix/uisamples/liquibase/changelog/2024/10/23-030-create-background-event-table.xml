@@ -19,7 +19,7 @@
             <column name="CLASS_NAMES" type="VARCHAR(255)"/>
         </createTable>
 
-        <createIndex indexName="IDX_BACKGROUND_EVENT__WORKING_SHIFT_ID"
+        <createIndex indexName="IDX_BACKGROUND_EVENT_WORKING_SHIFT"
                      tableName="BACKGROUND_EVENT">
             <column name="WORKING_SHIFT_ID"/>
         </createIndex>

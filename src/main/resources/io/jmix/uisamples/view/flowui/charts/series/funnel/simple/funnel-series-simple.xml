@@ -16,7 +16,7 @@
     </facets>
     <layout>
         <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
-            <charts:legend/>
+            <charts:legend top="0"/>
             <charts:tooltip trigger="ITEM"/>
 
             <charts:dataSet>

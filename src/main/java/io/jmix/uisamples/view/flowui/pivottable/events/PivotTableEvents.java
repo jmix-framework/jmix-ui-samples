@@ -33,7 +33,7 @@ public class PivotTableEvents extends StandardView {
         List<TemperatureData> items = event.getDetail().getItems();
 
         String message = items.stream()
-                .map(temperatureData -> "Entity id: %s, Celsius: %d".formatted(
+                .map(temperatureData -> "Entity id: %s, Celsius: %s".formatted(
                                 temperatureData.getId(), temperatureData.getTemperature()
                         )
                 )

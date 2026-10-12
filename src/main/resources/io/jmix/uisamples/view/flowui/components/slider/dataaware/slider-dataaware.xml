@@ -1,0 +1,21 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <!-- tag::data-binding[] sample-hide -->
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.uisamples.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <integerSlider id="ageSlider" label="Slider connected to a container" width="20em"
+                       min="0" max="100" step="1"
+                       minMaxVisible="true"
+                       dataContainer="customerDc" property="age"/>
+        <!-- end::data-binding[] sample-hide -->
+        <hbox>
+            <span text="Value in the container:"/>
+            <span id="spanValue"/>
+        </hbox>
+        <!-- tag::data-binding[] sample-hide -->
+    </layout>
+    <!-- end::data-binding[] sample-hide -->
+</view>

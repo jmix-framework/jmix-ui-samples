@@ -1,17 +1,49 @@
 
-.wizard-dialog .tab-container {
-    line-height: var(--lumo-line-height-m);
+.wizard-dialog vaadin-tab {
+    flex: 1 1 0;
+    opacity: 1;
+    cursor: default;
 }
 
-.wizard-dialog .label-container {
-    gap: var(--lumo-space-xs);
+.wizard-dialog vaadin-tab:not([disabled], [selected]) {
+    cursor: var(--lumo-clickable-cursor);
 }
 
-.wizard-dialog .label {
-    font-size: var(--lumo-font-size-s);
+.wizard-dialog vaadin-tab:last-of-type {
+    flex: none;
 }
 
-.wizard-dialog .sublabel {
-    font-size: var(--lumo-font-size-s);
+.wizard-dialog .wizard-step {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: var(--lumo-space-s);
     color: var(--lumo-secondary-text-color);
+}
+
+.wizard-dialog .wizard-step::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--lumo-contrast-20pct);
+}
+
+.wizard-dialog vaadin-tab:last-of-type .wizard-step::after {
+    display: none;
+}
+
+.wizard-dialog vaadin-tab:not([disabled]) .wizard-step {
+    color: var(--lumo-body-text-color);
+}
+
+.wizard-dialog vaadin-tab:not([disabled]) vaadin-icon {
+    color: var(--lumo-primary-color);
+}
+
+.wizard-dialog vaadin-tab:not([disabled], [selected]) .wizard-step::after {
+    background-color: var(--lumo-primary-color);
+}
+
+.wizard-dialog vaadin-tab:not([disabled], [selected]):hover .wizard-step {
+    color: var(--lumo-primary-text-color);
 }

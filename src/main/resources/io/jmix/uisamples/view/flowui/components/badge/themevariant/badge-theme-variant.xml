@@ -1,31 +1,37 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
-    <layout justifyContent="BETWEEN" classNames="horizontal-layout badge-theme-variant">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
         <vbox width="AUTO" padding="false">
             <details summaryText="Style variant" opened="true">
                 <hbox wrap="true">
-                    <span text="Pending" themeNames="badge normal"/>
-                    <span text="Confirmed" themeNames="badge success"/>
-                    <span text="Warning" themeNames="badge warning"/>
-                    <span text="Denied" themeNames="badge error"/>
-                    <span text="On hold" themeNames="badge contrast"/>
+                    <badge id="defaultBadge" text="Default badge"/>
+                    <badge id="successBadge" text="Success badge" themeNames="success"/>
+                    <badge id="warningBadge" text="Warning badge" themeNames="warning"/>
+                    <badge id="errorBadge" text="Error badge" themeNames="error"/>
+                    <!-- theme-only:lumo -->
+                    <badge id="contrastBadge" text="Contrast badge" themeNames="contrast"/>
+                    <!-- theme-only:lumo:end -->
                 </hbox>
             </details>
+
             <details summaryText="Size variant" opened="true">
                 <hbox wrap="true">
-                    <span text="Medium badge" themeNames="badge normal"/>
-                    <span text="Small badge" themeNames="badge small"/>
+                    <badge id="mediumBadge" text="Medium badge"/>
+                    <badge id="smallBadge" text="Small badge" themeNames="small"/>
                 </hbox>
             </details>
+
             <details summaryText="Visual variant" opened="true">
-                <hbox wrap="true">
-                    <span text="Primary badge" themeNames="badge normal primary"/>
-                    <span text="Pill badge" themeNames="badge normal pill"/>
+                <hbox wrap="true" alignItems="CENTER">
+                    <badge id="filledBadge" text="Filled badge" themeNames="filled"/>
+                    <badge id="iconOnlyBadge" text="Confirmed" icon="CHECK" themeNames="icon-only"/>
+                    <badge id="numberOnlyBadge" text="unread messages" number="5" themeNames="number-only"/>
+                    <badge id="dotBadge" text="Online" themeNames="dot"/>
                 </hbox>
             </details>
         </vbox>
         <details summaryText="Test badge" opened="true" width="35%">
             <vbox padding="false">
-                <span id="testBadge" themeNames="badge normal"/>
+                <badge id="testBadge"/>
                 <checkboxGroup id="settingsCheckboxGroup" label="TestBadge settings" themeNames="vertical"/>
             </vbox>
         </details>

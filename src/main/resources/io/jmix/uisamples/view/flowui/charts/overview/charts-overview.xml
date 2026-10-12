@@ -15,6 +15,7 @@
             <tag text="scatter" route="scatter-series-simple" classNames="overview-tag-font overview-tag-grey"/>
             <tag text="radar" route="radar-series-simple" classNames="overview-tag-font overview-tag-grey"/>
             <tag text="candlestick" route="candlestick-series-simple" classNames="overview-tag-font overview-tag-grey"/>
+            <tag text="boxplot" route="boxplot-series-simple" classNames="overview-tag-font overview-tag-grey"/>
             <tag text="funnel" route="funnel-series-simple" classNames="overview-tag-font overview-tag-grey"/>
             <tag text="gauge" route="gauge-series-simple" classNames="overview-tag-font overview-tag-grey"/>
         </sample>
@@ -43,6 +44,9 @@
                  classNames="overview-tag-font overview-tag-yellow"/>
             <tag text="export"
                  route="chart-export"
+                 classNames="overview-tag-font overview-tag-yellow"/>
+            <tag text="clickEvent"
+                 route="chart-click-event"
                  classNames="overview-tag-font overview-tag-yellow"/>
         </sample>
     </samples>

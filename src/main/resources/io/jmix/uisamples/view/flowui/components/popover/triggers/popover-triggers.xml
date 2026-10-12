@@ -1,0 +1,45 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <layout justifyContent="BETWEEN" classNames="horizontal-layout">
+        <vbox padding="false" width="AUTO">
+            <h4 text="Click"/>
+            <button id="clickButton" text="Click me"/>
+            <popover target="clickButton" width="16em">
+                <span text="Opens on a click on the target. This is the default trigger."/>
+            </popover>
+        </vbox>
+        <vbox padding="false" width="AUTO">
+            <h4 text="Hover"/>
+            <avatar id="homerAvatar" name="Homer Simpson"/>
+            <popover target="homerAvatar" openOnClick="false" openOnHover="true" hoverDelay="300" hideDelay="300">
+                <vbox padding="false" spacing="false">
+                    <h5 text="Homer Simpson"/>
+                    <span text="Safety inspector, Sector 7G"/>
+                    <anchor href="mailto:homer@example.com" text="homer@example.com"/>
+                </vbox>
+            </popover>
+        </vbox>
+        <vbox padding="false" width="AUTO">
+            <h4 text="Focus"/>
+            <passwordField id="passwordField" label="Password"/>
+            <popover target="passwordField" openOnClick="false" openOnFocus="true">
+                <vbox padding="false" spacing="false">
+                    <span text="The password must contain:"/>
+                    <unorderedList>
+                        <listItem text="at least 8 characters"/>
+                        <listItem text="a letter and a digit"/>
+                    </unorderedList>
+                </vbox>
+            </popover>
+        </vbox>
+        <vbox padding="false" width="AUTO">
+            <h4 text="Programmatic"/>
+            <hbox alignItems="BASELINE">
+                <textField id="promoCodeField" label="Promo code"/>
+                <button id="promoCodeHintButton" text="Where do I find it?" themeNames="tertiary"/>
+            </hbox>
+            <popover id="promoCodePopover" target="promoCodeField" openOnClick="false" width="16em">
+                <span text="The promo code is printed on the back of your loyalty card."/>
+            </popover>
+        </vbox>
+    </layout>
+</view>

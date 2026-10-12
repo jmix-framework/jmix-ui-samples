@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-@import './badge-theme-variant.css';
-@import './badge-icons.css';
 @import './list-box-custom-renderer.css';
 @import './virtual-list-simple.css';
 @import './html-component.css';

@@ -1,7 +1,6 @@
 package io.jmix.uisamples.view.flowui.components.badge.themevariant;
 
-import com.vaadin.flow.component.html.Span;
-import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.badge.Badge;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
@@ -15,7 +14,7 @@ import java.util.List;
 public class BadgeThemeVariantSample extends StandardView {
 
     @ViewComponent
-    protected Span testBadge;
+    protected Badge testBadge;
     @ViewComponent
     protected JmixCheckboxGroup<String> settingsCheckboxGroup;
 
@@ -31,28 +30,27 @@ public class BadgeThemeVariantSample extends StandardView {
         }
 
         //clear
-        testBadge.removeAll();
+        testBadge.setText(null);
+        testBadge.setNumber(null);
+        testBadge.setIcon(null);
         testBadge.getElement().getThemeList().clear();
-        testBadge.getElement().getThemeList().add("badge");
 
         event.getValue().stream()
                 .map(String::toLowerCase)
-                .forEach(this::applyTestBadgeTheme);
+                .forEach(this::applyTestBadgeSetting);
     }
 
-    protected void applyTestBadgeTheme(String command) {
-        if ("text".equalsIgnoreCase(command)) {
-            testBadge.add(new Span("Badge text"));
-        } else if ("icon".equalsIgnoreCase(command)) {
-            Icon icon = VaadinIcon.SMILEY_O.create();
-            icon.addClassName("badge-icon");
-            testBadge.addComponentAsFirst(icon);
-        } else {
-            testBadge.getElement().getThemeList().add(command);
+    protected void applyTestBadgeSetting(String setting) {
+        switch (setting) {
+            case "text" -> testBadge.setText("Badge text");
+            case "number" -> testBadge.setNumber(5);
+            case "icon" -> testBadge.setIcon(VaadinIcon.SMILEY_O.create());
+            default -> testBadge.getElement().getThemeList().add(setting);
         }
     }
 
     protected List<String> getSettingsCheckboxGroupItems() {
-        return List.of("Text", "Icon", "Primary", "Pill", "Success", "Warning", "Error", "Contrast", "Small");
+        return List.of("Text", "Number", "Icon", "Success", "Warning", "Error",
+                "Filled", "Small", "Dot", "Icon-only", "Number-only");
     }
 }

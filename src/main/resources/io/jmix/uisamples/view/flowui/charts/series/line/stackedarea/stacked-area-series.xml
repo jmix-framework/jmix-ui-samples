@@ -15,7 +15,7 @@
     </facets>
     <layout>
         <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
-            <charts:title text="Traffic incidents"/>
+            <charts:title text="Traffic incidents" left="0" top="0"/>
             <charts:tooltip trigger="AXIS">
                 <charts:formatterFunction>
                     <![CDATA[

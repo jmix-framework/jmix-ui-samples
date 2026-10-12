@@ -3,6 +3,8 @@ package io.jmix.uisamples.view.flowui.containers.card.themevariant;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.avatar.Avatar;
+import com.vaadin.flow.component.badge.Badge;
+import com.vaadin.flow.component.badge.BadgeVariant;
 import com.vaadin.flow.component.card.CardVariant;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
@@ -272,9 +274,10 @@ public class CardThemeVariantSample extends StandardView {
     }
 
     private Component createBadge() {
-        Span span = new Span("Fullstack");
-        span.getElement().getThemeList().add("badge success");
-        return span;
+        Badge badge = new Badge("Fullstack");
+        badge.addThemeVariants(BadgeVariant.SUCCESS);
+
+        return badge;
     }
 
     private Component[] createFooter() {

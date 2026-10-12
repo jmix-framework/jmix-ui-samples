@@ -44,7 +44,7 @@ public class ChartLoader extends AbstractComponentLoader<SOChart> {
         predefinedData = new Data(data);
 
         if (predefinedData.asList().size() != predefinedLabels.asList().size()) {
-            throw new GuiDevelopmentException("Chart's date and labels must be the same size", context);
+            throw new GuiDevelopmentException("Chart's data and labels must be the same size", context);
         }
     }
 
@@ -52,7 +52,7 @@ public class ChartLoader extends AbstractComponentLoader<SOChart> {
         for (Element nestedElement : element.elements()) {
             Component subComponent = switch (nestedElement.getName()) {
                 case "nightingaleRoseChart" -> loadNightingaleRoseChart(nestedElement);
-                case "barChart" -> laodBarChart(nestedElement);
+                case "barChart" -> loadBarChart(nestedElement);
                 case "toolbox" -> loadToolbox(nestedElement);
                 case "title" -> loadTitle(nestedElement);
                 default -> throw new GuiDevelopmentException("Unknown nested tag", context);
@@ -68,7 +68,7 @@ public class ChartLoader extends AbstractComponentLoader<SOChart> {
         return nightingaleRoseChart;
     }
 
-    protected BarChart laodBarChart(Element element) {
+    protected BarChart loadBarChart(Element element) {
         BarChart barChart = new BarChart(predefinedLabels, predefinedData);
 
         RectangularCoordinate coordinate =
@@ -126,7 +126,6 @@ public class ChartLoader extends AbstractComponentLoader<SOChart> {
 
     protected Number[] mapToNumbers(String[] strings) {
         return Arrays.stream(strings)
-                .distinct()
                 .map(Double::valueOf)
                 .toArray(Number[]::new);
     }

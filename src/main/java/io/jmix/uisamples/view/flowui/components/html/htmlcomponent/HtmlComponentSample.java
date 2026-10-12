@@ -6,27 +6,31 @@ import io.jmix.flowui.component.tabsheet.JmixTabSheet;
 import io.jmix.flowui.view.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.UncheckedIOException;
 
 @ViewController("html-component")
 @ViewDescriptor("html-component.xml")
 public class HtmlComponentSample extends StandardView {
 
     // tag::stream-resource[] sample-hide
-    protected static final String SRC_PATH = "META-INF/resources/html/html-component.html";
+    private static final String SRC_PATH = "META-INF/resources/html/html-component.html";
 
     @ViewComponent
-    protected JmixTabSheet tabSheet;
+    private JmixTabSheet tabSheet;
 
     @Autowired
-    protected Resources resources;
+    private Resources resources;
 
     @Subscribe
-    protected void onInit(InitEvent event) {
-        InputStream resourceAsStream = resources.getResourceAsStream(SRC_PATH);
-
-        Html html = new Html(resourceAsStream);
-        tabSheet.add("Programmatically added component", html);
+    public void onInit(InitEvent event) {
+        try (InputStream resourceAsStream = resources.getResourceAsStream(SRC_PATH)) {
+            Html html = new Html(resourceAsStream);
+            tabSheet.add("Programmatically added component", html);
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
     }
     // end::stream-resource[] sample-hide
 }

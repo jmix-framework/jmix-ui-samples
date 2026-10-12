@@ -1,0 +1,15 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:aichat="http://jmix.io/schema/aichat/ui">
+    <layout expand="messageList">
+        <hbox id="buttonsPanel" padding="false">
+            <button id="generateButton" text="msg://generateButton.text"/>
+            <button id="failButton" text="msg://failButton.text"/>
+        </hbox>
+        <aichat:aiMessageList id="messageList" width="100%" height="100%">
+            <aichat:thinkingStages>
+                <aichat:thinkingStage delayMillis="6000" text="msg://thinkingStage.thinking"/>
+                <aichat:thinkingStage delayMillis="10000" text="msg://thinkingStage.stillThinking"/>
+            </aichat:thinkingStages>
+        </aichat:aiMessageList>
+    </layout>
+</view>

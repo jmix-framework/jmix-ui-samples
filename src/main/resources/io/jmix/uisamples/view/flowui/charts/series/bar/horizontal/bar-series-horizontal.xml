@@ -1,0 +1,43 @@
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:charts="http://jmix.io/schema/charts/ui">
+    <data readOnly="true">
+        <collection id="countryLitresDc"
+                    class="io.jmix.uisamples.entity.CountryLitres"
+                    fetchPlan="_local">
+            <loader id="countryLitresDl" readOnly="true">
+                <query>
+                    <![CDATA[select e from CountryLitres e order by e.litres]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+    </facets>
+    <layout>
+        <charts:chart id="chart" width="100%" height="100%" minHeight="30em">
+            <charts:title text="Liters" subtext="By countries" left="0" top="0"/>
+            <charts:tooltip trigger="AXIS">
+                <charts:axisPointer type="SHADOW"/>
+            </charts:tooltip>
+
+            <charts:xAxes>
+                <charts:xAxis type="VALUE"/>
+            </charts:xAxes>
+            <charts:yAxes>
+                <charts:yAxis type="CATEGORY"/>
+            </charts:yAxes>
+
+            <charts:dataSet>
+                <charts:source dataContainer="countryLitresDc"
+                               categoryField="country" valueFields="litres"/>
+            </charts:dataSet>
+
+            <charts:series>
+                <charts:bar name="Liters" showBackground="true">
+                    <charts:label show="true" position="RIGHT"/>
+                </charts:bar>
+            </charts:series>
+        </charts:chart>
+    </layout>
+</view>
