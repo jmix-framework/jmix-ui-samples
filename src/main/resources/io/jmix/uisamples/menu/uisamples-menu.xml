@@ -245,8 +245,7 @@
                     <file name="io/jmix/uisamples/entity/Task.java"/>
                 </otherFiles>
             </item>
-            <item id="data-grid-tree-custom-renderer" page="treeDataGrid"
-                  anchor="hierarchy-column-component-renderer" splitEnabled="true" isNew="true">
+            <item id="data-grid-tree-custom-renderer" page="treeDataGrid" splitEnabled="true" isNew="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Task.java"/>
                 </otherFiles>
@@ -503,10 +502,10 @@
             <item id="password-field-theme-variant" page="passwordField"/>
         </menu>
         <menu id="popover" isNew="true">
-            <item id="popover-simple"/>
-            <item id="popover-triggers"/>
-            <item id="popover-position" splitEnabled="true"/>
-            <item id="popover-modal" splitEnabled="true">
+            <item id="popover-simple" page="popover"/>
+            <item id="popover-triggers" page="popover" anchor="opening-and-closing"/>
+            <item id="popover-position" page="popover" anchor="about-positioning" splitEnabled="true"/>
+            <item id="popover-modal" page="popover" anchor="modal-popover" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -613,14 +612,14 @@
                 </otherFiles>
             </item>
         </menu>
-        <item id="svg" isNew="true">
+        <item id="svg" page="svg" isNew="true">
             <otherFiles>
                 <file name="META-INF/resources/svg/bar-chart.svg"/>
             </otherFiles>
         </item>
         <menu id="switch">
             <item id="switch-simple" page="switch"/>
-            <item id="switch-dataaware" page="switch" anchor="_data_binding">
+            <item id="switch-dataaware" page="switch" anchor="_data_aware_switch">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
@@ -698,7 +697,7 @@
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="twin-column-theme-variant" page="twinColumn" anchor="theme-variants"/>
+            <item id="twin-column-theme-variant" page="twinColumn" anchor="variants"/>
         </menu>
         <menu id="value-picker">
             <item id="value-picker-simple" page="valuePicker"/>
@@ -768,7 +767,7 @@
                     <file name="{currentTheme}/containers/card-header.css"/>
                 </otherFiles>
             </item>
-            <item id="card-theme-variant" page="card" anchor="theme-variants" splitEnabled="true">
+            <item id="card-theme-variant" page="card" anchor="variants" splitEnabled="true">
                 <otherFiles>
                     <file name="{currentTheme}/containers/card-theme-variant.css"/>
                 </otherFiles>
@@ -981,100 +980,100 @@
 
     <menu id="addons">
 
-        <menu id="charts-root" url="charts">
+        <menu id="charts-root" url="flow-ui/vc/components">
             <overview id="charts"
                       location="charts/overview/charts-overview.xml"/>
             <menu id="series">
                 <menu id="line-series">
-                    <item id="line-series-simple" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="line-series-simple" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/DateValue.java"/>
                         </otherFiles>
                     </item>
-                    <item id="smoothed-line-series" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="smoothed-line-series" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/DateValue.java"/>
                         </otherFiles>
                     </item>
-                    <item id="stacked-area-series" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="stacked-area-series" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/TransportCount.java"/>
                         </otherFiles>
                     </item>
-                    <item id="multiple-axes-line-series" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="multiple-axes-line-series" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/DateValueVolume.java"/>
                         </otherFiles>
                     </item>
-                    <item id="line-series-step" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="line-series-step" page="chart" anchor="series" splitEnabled="true"
                           isNew="true"/>
-                    <item id="line-series-large" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="line-series-large" page="chart" anchor="series" splitEnabled="true"
                           isNew="true"/>
                 </menu>
                 <menu id="bar-series">
-                    <item id="bar-series-simple" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="bar-series-simple" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/CountryGrowth.java"/>
                         </otherFiles>
                     </item>
-                    <item id="stacked-bar-series" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="stacked-bar-series" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/TransportCount.java"/>
                         </otherFiles>
                     </item>
-                    <item id="bar-series-horizontal" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="bar-series-horizontal" page="chart" anchor="series" splitEnabled="true"
                           isNew="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
                         </otherFiles>
                     </item>
-                    <item id="bar-series-mixed" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="bar-series-mixed" page="chart" anchor="series" splitEnabled="true"
                           isNew="true"/>
-                    <item id="bar-series-waterfall" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="bar-series-waterfall" page="chart" anchor="series" splitEnabled="true"
                           isNew="true"/>
-                    <item id="bar-series-polar" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="bar-series-polar" page="chart" anchor="series" splitEnabled="true"
                           isNew="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
                         </otherFiles>
                     </item>
-                    <item id="bar-series-race" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="bar-series-race" page="chart" anchor="series" splitEnabled="true"
                           isNew="true"/>
                 </menu>
                 <menu id="pie-series">
-                    <item id="pie-series-simple" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="pie-series-simple" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
                         </otherFiles>
                     </item>
-                    <item id="donut-series" page="chart-component" anchor="series" splitEnabled="true"/>
-                    <item id="pie-rose-type" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="donut-series" page="chart" anchor="series" splitEnabled="true"/>
+                    <item id="pie-rose-type" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
                         </otherFiles>
                     </item>
                 </menu>
                 <menu id="scatter-series">
-                    <item id="scatter-series-simple" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="scatter-series-simple" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/Point.java"/>
                         </otherFiles>
                     </item>
-                    <item id="effect-scatter-series" page="chart-component" anchor="series" splitEnabled="true"/>
-                    <item id="scatter-series-large" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="effect-scatter-series" page="chart" anchor="series" splitEnabled="true"/>
+                    <item id="scatter-series-large" page="chart" anchor="series" splitEnabled="true"
                           isNew="true"/>
                 </menu>
                 <menu id="radar-series">
-                    <item id="radar-series-simple" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="radar-series-simple" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
                         </otherFiles>
                     </item>
-                    <item id="radar-series-multiple" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="radar-series-multiple" page="chart" anchor="series" splitEnabled="true"/>
                 </menu>
                 <menu id="candlestick-series">
-                    <item id="candlestick-series-simple" page="chart-component" anchor="series" splitEnabled="true"/>
-                    <item id="candlestick-series-volume" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="candlestick-series-simple" page="chart" anchor="series" splitEnabled="true"/>
+                    <item id="candlestick-series-volume" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/StockData.java"/>
                             <file name="io/jmix/uisamples/bean/StockDataGenerator.java"/>
@@ -1082,8 +1081,8 @@
                     </item>
                 </menu>
                 <menu id="boxplot-series" isNew="true">
-                    <item id="boxplot-series-simple" page="chart-component" anchor="series" splitEnabled="true"/>
-                    <item id="boxplot-series-multiple" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="boxplot-series-simple" page="chart" anchor="series" splitEnabled="true"/>
+                    <item id="boxplot-series-multiple" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/TemperatureData.java"/>
                             <file name="io/jmix/uisamples/entity/Month.java"/>
@@ -1091,30 +1090,30 @@
                     </item>
                 </menu>
                 <menu id="funnel-series">
-                    <item id="funnel-series-simple" page="chart-component" anchor="series" splitEnabled="true">
+                    <item id="funnel-series-simple" page="chart" anchor="series" splitEnabled="true">
                         <otherFiles>
                             <file name="io/jmix/uisamples/entity/TitleValue.java"/>
                         </otherFiles>
                     </item>
-                    <item id="funnel-alignment" page="chart-component" anchor="series" splitEnabled="true"/>
+                    <item id="funnel-alignment" page="chart" anchor="series" splitEnabled="true"/>
                 </menu>
                 <menu id="gauge-series">
-                    <item id="gauge-series-simple" page="chart-component" anchor="series" splitEnabled="true"/>
-                    <item id="gauge-series-multiple-needles" page="chart-component" anchor="series"
+                    <item id="gauge-series-simple" page="chart" anchor="series" splitEnabled="true"/>
+                    <item id="gauge-series-multiple-needles" page="chart" anchor="series"
                           splitEnabled="true"/>
-                    <item id="gauge-series-colorized" page="chart-component" anchor="series" splitEnabled="true"/>
-                    <item id="gauge-series-ring" page="chart-component" anchor="series" splitEnabled="true"
+                    <item id="gauge-series-colorized" page="chart" anchor="series" splitEnabled="true"/>
+                    <item id="gauge-series-ring" page="chart" anchor="series" splitEnabled="true"
                           isNew="true"/>
                 </menu>
             </menu>
             <menu id="data-items">
-                <item id="entity-data-item" page="data-binding" splitEnabled="true">
+                <item id="entity-data-item" url="charts" page="data-binding" splitEnabled="true">
                     <otherFiles>
                         <file name="io/jmix/uisamples/entity/ValueDescription.java"/>
                     </otherFiles>
                 </item>
-                <item id="map-data-item" page="data-binding" splitEnabled="true"/>
-                <item id="simple-data-item" page="data-binding" splitEnabled="true"/>
+                <item id="map-data-item" url="charts" page="data-binding" splitEnabled="true"/>
+                <item id="simple-data-item" url="charts" page="data-binding" splitEnabled="true"/>
             </menu>
             <menu id="incremental-update">
                 <item id="automatic-data-update" splitEnabled="true">
@@ -1129,15 +1128,15 @@
                 </item>
             </menu>
             <menu id="other">
-                <item id="chart-key-value-container" page="chart-component" splitEnabled="true">
+                <item id="chart-key-value-container" page="chart" splitEnabled="true">
                     <otherFiles>
                         <file name="io/jmix/uisamples/entity/Order.java"/>
                         <file name="io/jmix/uisamples/entity/Customer.java"/>
                     </otherFiles>
                 </item>
-                <item id="chart-native-json" page="chart-component" anchor="native-json" splitEnabled="true"/>
-                <item id="chart-export" page="chart-component" anchor="tool-box" splitEnabled="true"/>
-                <item id="chart-click-event" page="chart-component" splitEnabled="true" isNew="true">
+                <item id="chart-native-json" page="chart" anchor="native-json" splitEnabled="true"/>
+                <item id="chart-export" page="chart" anchor="tool-box" splitEnabled="true"/>
+                <item id="chart-click-event" page="chart" splitEnabled="true" isNew="true">
                     <otherFiles>
                         <file name="io/jmix/uisamples/entity/CountryLitres.java"/>
                     </otherFiles>
@@ -1165,13 +1164,13 @@
                     <file name="io/jmix/uisamples/view/flowui/maps/multigeometry/MultiGeometries.java"/>
                 </otherFiles>
             </item>
-            <item id="geo-map-point-styling" page="style" anchor="_style_for_pointfeature" splitEnabled="true"/>
-            <item id="geo-map-polygon-styling" page="style" anchor="_style_for_polygonfeature" splitEnabled="true">
+            <item id="geo-map-point-styling" page="style" anchor="styling-point-features" splitEnabled="true"/>
+            <item id="geo-map-polygon-styling" page="style" anchor="styling-polygon-features" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/maps/polygon/PolygonFeatures.java"/>
                 </otherFiles>
             </item>
-            <item id="geo-map-line-string-styling" page="style" anchor="_style_for_linestringfeature"
+            <item id="geo-map-line-string-styling" page="style" anchor="styling-linestring-features"
                   splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/maps/linestringstyle/LineStringCoordinates.java"/>
@@ -1231,16 +1230,16 @@
             </item>
         </menu>
 
-        <menu id="kanban-root" url="kanban">
+        <menu id="kanban-root" url="flow-ui/vc/components">
             <overview id="kanban" location="kanban/overview/kanban-overview.xml"/>
-            <item id="kanban-simple" splitEnabled="true" page="kanban-component">
+            <item id="kanban-simple" splitEnabled="true" page="kanban">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
                 </otherFiles>
             </item>
             <item id="kanban-data" splitEnabled="true"
-                  page="kanban-component" anchor="data-binding">
+                  page="kanban" anchor="data-binding">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/KanbanUser.java"/>
@@ -1249,7 +1248,7 @@
                 </otherFiles>
             </item>
             <item id="kanban-data-saving" splitEnabled="true"
-                  page="kanban-component" anchor="save-delegate">
+                  page="kanban" anchor="save-delegate">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/KanbanUser.java"/>
@@ -1258,14 +1257,14 @@
                 </otherFiles>
             </item>
             <item id="kanban-column-actions" splitEnabled="true"
-                  page="kanban-styling" anchor="adding-column-actions-buttons">
+                  url="kanban" page="kanban-styling" anchor="adding-column-actions-buttons">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
                 </otherFiles>
             </item>
             <item id="kanban-events" splitEnabled="true"
-                  page="kanban-component" anchor="handlers">
+                  page="kanban" anchor="handlers">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
@@ -1273,20 +1272,20 @@
                 </otherFiles>
             </item>
             <item id="kanban-hierarchical-columns" splitEnabled="true"
-                  page="kanban-component" anchor="hierarchical-columns">
+                  page="kanban" anchor="hierarchical-columns">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
                 </otherFiles>
             </item>
             <item id="kanban-columns-enum" splitEnabled="true"
-                  page="kanban-component" anchor="columnsEnum">
+                  page="kanban" anchor="columnsEnum">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
                 </otherFiles>
             </item>
-            <item id="kanban-styling" splitEnabled="true" page="kanban-styling">
+            <item id="kanban-styling" splitEnabled="true" url="kanban" page="kanban-styling">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/KanbanTask.java"/>
                     <file name="io/jmix/uisamples/entity/TaskStatus.java"/>
@@ -1294,59 +1293,59 @@
             </item>
         </menu>
 
-        <menu id="calendar-root" url="calendar">
+        <menu id="calendar-root" url="flow-ui/vc/components">
             <overview id="calendar" location="calendar/overview/calendar-overview.xml"/>
             <item id="calendar-simple-calendar-event" splitEnabled="true"
-                  page="full-calendar-component" anchor="simple-calendar-event"/>
+                  page="fullCalendar" anchor="simple-calendar-event"/>
             <item id="calendar-container-calendar-data-provider" splitEnabled="true"
-                  page="full-calendar-component" anchor="container-data-provider">
+                  page="fullCalendar" anchor="container-data-provider">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-list-calendar-data-provider" splitEnabled="true"
-                  page="full-calendar-component" anchor="list-calendar-data-provider"/>
+                  page="fullCalendar" anchor="list-calendar-data-provider"/>
             <item id="calendar-callback-calendar-data-provider" splitEnabled="true"
-                  page="full-calendar-component" anchor="callback-data-provider">
+                  page="fullCalendar" anchor="callback-data-provider">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-callback-load-delegate" splitEnabled="true"
-                  page="full-calendar-component" anchor="callback-data-provider-and-load-delegate">
+                  page="fullCalendar" anchor="callback-data-provider-and-load-delegate">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                     <file name="io/jmix/uisamples/bean/EventService.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-calendar-data-retriever" splitEnabled="true"
-                  page="full-calendar-component" anchor="calendar-data-retriever"/>
+                  page="fullCalendar" anchor="calendar-data-retriever"/>
             <item id="calendar-calendar-display-modes" splitEnabled="true"
-                  page="full-calendar-component" anchor="calendar-display-modes"/>
+                  page="fullCalendar" anchor="calendar-display-modes"/>
             <item id="calendar-custom-calendar-display-mode" splitEnabled="true"
-                  page="full-calendar-component" anchor="custom-calendar-display-mode">
+                  page="fullCalendar" anchor="custom-calendar-display-mode">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/calendar/calendarcustomcalendardisplaymode/CustomCalendarDisplayModes.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-display-mode-specific-properties" splitEnabled="true"
-                  page="full-calendar-component" anchor="_display_mode_properties"/>
+                  page="fullCalendar" anchor="_display_mode_properties"/>
             <item id="calendar-generic-calendar-display-modes" splitEnabled="true"
-                  page="full-calendar-component" anchor="display-mode-and-visible-range"/>
+                  page="fullCalendar" anchor="display-mode-and-visible-range"/>
             <item id="calendar-event-start-editable" splitEnabled="true"
-                  page="full-calendar-component" anchor="drag-and-drop">
+                  page="fullCalendar" anchor="drag-and-drop">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-event-duration-editable" splitEnabled="true"
-                  page="full-calendar-component" anchor="resizable">
+                  page="fullCalendar" anchor="resizable">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-event-overlap-function" splitEnabled="true"
-                  page="full-calendar-component" anchor="event-overlap">
+                  page="fullCalendar" anchor="event-overlap">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                     <file name="io/jmix/uisamples/entity/BackgroundEvent.java"/>
@@ -1355,94 +1354,94 @@
                 </otherFiles>
             </item>
             <item id="calendar-event-constraint" splitEnabled="true"
-                  page="full-calendar-component" anchor="calendar-event-constraints">
+                  page="fullCalendar" anchor="calendar-event-constraints">
                 <otherFiles>
                     <file name="io/jmix/uisamples/view/flowui/calendar/eventconstraint/EventsHelper.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-recurring-events" splitEnabled="true"
-                  page="full-calendar-component" anchor="recurring-events"/>
+                  page="fullCalendar" anchor="recurring-events"/>
             <item id="calendar-event-actions" splitEnabled="true"
-                  page="full-calendar-component" anchor="handlers"/>
+                  page="fullCalendar" anchor="handlers"/>
             <item id="calendar-selection" splitEnabled="true"
-                  page="full-calendar-component" anchor="selection"/>
+                  page="fullCalendar" anchor="selection"/>
             <item id="calendar-select-mirror" splitEnabled="true"
-                  page="full-calendar-component" anchor="selectMirror"/>
+                  page="fullCalendar" anchor="selectMirror"/>
             <item id="calendar-select-overlap-function" splitEnabled="true"
-                  page="full-calendar-component"
+                  page="fullCalendar"
                   anchor="select-overlap"/>
             <item id="calendar-select-allow-function" splitEnabled="true"
-                  page="full-calendar-component"
+                  page="fullCalendar"
                   anchor="control-selection-by-a-javascript-function"/>
             <item id="calendar-class-names-generator" splitEnabled="true"
-                  page="full-calendar-component" anchor="class-names-generators">
+                  page="fullCalendar" anchor="class-names-generators">
                 <otherFiles>
                     <file name="{currentTheme}/calendar/calendar-class-names-generator.css"/>
                 </otherFiles>
             </item>
             <item id="calendar-event-styling" splitEnabled="true"
-                  page="full-calendar-component" anchor="component-and-event-properties"/>
+                  page="fullCalendar" anchor="component-and-event-properties"/>
             <item id="calendar-context-menu" splitEnabled="true"
-                  page="full-calendar-component" anchor="context-menu">
+                  page="fullCalendar" anchor="context-menu">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Event.java"/>
                 </otherFiles>
             </item>
             <item id="calendar-actions" splitEnabled="true"
-                  page="full-calendar-component" anchor="handlers"/>
+                  page="fullCalendar" anchor="handlers"/>
             <item id="calendar-business-hours" splitEnabled="true"
-                  page="full-calendar-component" anchor="business-hours"/>
+                  page="fullCalendar" anchor="business-hours"/>
             <item id="calendar-url-query-parameters" splitEnabled="true"
-                  page="url-query-parameters"/>
+                  url="calendar" page="url-query-parameters"/>
         </menu>
 
-        <menu id="pivot-table-root" url="pivot-table">
+        <menu id="pivot-table-root" url="flow-ui/vc/components">
             <overview id="pivot-table" location="pivottable/overview/pivot-table-overview.xml"/>
-            <item id="pivot-table-simple" page="pivottable-component">
+            <item id="pivot-table-simple" page="pivotTable">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TipInfo.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-properties" page="pivottable-component">
+            <item id="pivot-table-properties" page="pivotTable">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TipInfo.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-sorter-function" page="pivottable-component"
+            <item id="pivot-table-sorter-function" page="pivotTable"
                   anchor="sortersFunction">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TipInfo.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-ui" page="pivottable-component" anchor="ui-mode">
+            <item id="pivot-table-ui" page="pivotTable" anchor="ui-mode">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TipInfo.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-ui-properties" page="pivottable-component"
+            <item id="pivot-table-ui-properties" page="pivotTable"
                   anchor="ui-mode">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TipInfo.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-derived-properties" page="pivottable-component"
+            <item id="pivot-table-derived-properties" page="pivotTable"
                   anchor="derivedProperties" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TemperatureData.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-events" page="pivottable-component"
+            <item id="pivot-table-events" page="pivotTable"
                   anchor="_handlers">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TemperatureData.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-save-state" page="pivottable-component">
+            <item id="pivot-table-save-state" page="pivotTable">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TipInfo.java"/>
                 </otherFiles>
             </item>
-            <item id="pivot-table-color-function" page="pivottable-component"
+            <item id="pivot-table-color-function" page="pivotTable"
                   anchor="rendererOptions" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/TemperatureData.java"/>
@@ -1450,44 +1449,44 @@
             </item>
         </menu>
 
-        <menu id="group-data-grid-root" url="groupdatagrid">
+        <menu id="group-data-grid-root" url="flow-ui/vc/components">
             <overview id="group-data-grid" location="groupdatagrid/overview/group-data-grid-overview.xml"/>
-            <item id="group-data-grid-simple" page="groupdatagrid-component" splitEnabled="true">
+            <item id="group-data-grid-simple" page="groupDataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-column-attributes" page="groupdatagrid-component" splitEnabled="true">
+            <item id="group-data-grid-column-attributes" page="groupDataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-formatter" page="groupdatagrid-component" splitEnabled="true">
+            <item id="group-data-grid-formatter" page="groupDataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-renderer" page="groupdatagrid-component" splitEnabled="true">
+            <item id="group-data-grid-renderer" page="groupDataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-custom-column" page="groupdatagrid-component" anchor="custom-grouping-column"
+            <item id="group-data-grid-custom-column" page="groupDataGrid" anchor="custom-grouping-column"
                   splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-events" page="groupdatagrid-component" splitEnabled="true">
+            <item id="group-data-grid-events" page="groupDataGrid" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
                 </otherFiles>
             </item>
-            <item id="group-data-grid-styling" page="groupdatagrid-component" anchor="Styling" splitEnabled="true">
+            <item id="group-data-grid-styling" page="groupDataGrid" anchor="Styling" splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
@@ -1667,7 +1666,8 @@
                     <file name="io/jmix/uisamples/view/flowui/cookbook/customservice1/ContractListView.java"/>
                 </otherFiles>
             </item>
-            <item id="read-only-customers" page="opening-views" splitEnabled="true">
+            <item id="read-only-customers" page="views/opening-views" anchor="creating-editing-entities"
+                  splitEnabled="true">
                 <otherFiles>
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                     <file name="io/jmix/uisamples/entity/ReadOnlyCustomer.java"/>
