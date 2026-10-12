@@ -56,7 +56,7 @@
 
             <details summaryText="Visual variant" opened="true">
                 <hbox wrap="true">
-                    <dropdownButton id="iconButton" themeNames="icon" icon="SMILEY_O">
+                    <dropdownButton id="iconButton" themeNames="icon" icon="SMILEY">
                         <items>
                             <textItem id="textItem" text="Text"/>
                         </items>

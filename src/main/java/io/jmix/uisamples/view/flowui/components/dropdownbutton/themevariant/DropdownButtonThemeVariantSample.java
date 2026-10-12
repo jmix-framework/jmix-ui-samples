@@ -83,7 +83,7 @@ public class DropdownButtonThemeVariantSample extends StandardView {
             testButton.setText("Button text");
         } else if ("icon".equalsIgnoreCase(command)) {
             testButton.addThemeName(command);
-            testButton.setIcon(icons.get(JmixFontIcon.SMILEY_O));
+            testButton.setIcon(icons.get(JmixFontIcon.SMILEY));
         } else {
             testButton.addThemeName(command);
         }

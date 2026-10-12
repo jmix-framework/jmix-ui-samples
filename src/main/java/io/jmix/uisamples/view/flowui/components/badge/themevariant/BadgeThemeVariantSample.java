@@ -1,10 +1,12 @@
 package io.jmix.uisamples.view.flowui.components.badge.themevariant;
 
 import com.vaadin.flow.component.badge.Badge;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
+import io.jmix.flowui.icon.Icons;
+import io.jmix.flowui.kit.icon.JmixFontIcon;
 import io.jmix.flowui.view.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,6 +19,8 @@ public class BadgeThemeVariantSample extends StandardView {
     protected Badge testBadge;
     @ViewComponent
     protected JmixCheckboxGroup<String> settingsCheckboxGroup;
+    @Autowired
+    private Icons icons;
 
     @Subscribe
     protected void onInit(InitEvent event) {
@@ -44,7 +48,7 @@ public class BadgeThemeVariantSample extends StandardView {
         switch (setting) {
             case "text" -> testBadge.setText("Badge text");
             case "number" -> testBadge.setNumber(5);
-            case "icon" -> testBadge.setIcon(VaadinIcon.SMILEY_O.create());
+            case "icon" -> testBadge.setIcon(icons.get(JmixFontIcon.SMILEY));
             default -> testBadge.getElement().getThemeList().add(setting);
         }
     }

@@ -345,7 +345,7 @@ public class SampleView extends StandardView {
 
             Component componentDescription = createComponentDescription(scrollerContent);
 
-            addTab(message, componentDescription, VaadinIcon.INFO_CIRCLE_O.create());
+            addTab(message, componentDescription, VaadinIcon.INFO_CIRCLE.create());
         }
 
         if (menuItem.isDefaultFiles()) {
@@ -605,7 +605,6 @@ public class SampleView extends StandardView {
                 case "java" -> icon = VaadinIcon.COFFEE;
                 case "js" -> icon = VaadinIcon.CURLY_BRACKETS;
                 case "properties" -> icon = VaadinIcon.LIST_UL;
-                case "css", "scss" -> icon = VaadinIcon.CSS;
             }
         }
 

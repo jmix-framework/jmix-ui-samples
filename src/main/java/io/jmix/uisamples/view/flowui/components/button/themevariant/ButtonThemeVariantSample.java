@@ -1,15 +1,16 @@
 package io.jmix.uisamples.view.flowui.components.button.themevariant;
 
-import com.vaadin.flow.component.icon.VaadinIcon;
 import io.jmix.flowui.component.SupportsTypedValue.TypedValueChangeEvent;
 import io.jmix.flowui.component.checkboxgroup.JmixCheckboxGroup;
+import io.jmix.flowui.icon.Icons;
 import io.jmix.flowui.kit.component.button.JmixButton;
+import io.jmix.flowui.kit.icon.JmixFontIcon;
 import io.jmix.flowui.view.*;
 // sample-hide:start
 import io.jmix.uisamples.theme.AppTheme;
 import io.jmix.uisamples.theme.ThemeManager;
-import org.springframework.beans.factory.annotation.Autowired;
 // sample-hide:end
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
 import java.util.List;
@@ -22,6 +23,8 @@ public class ButtonThemeVariantSample extends StandardView {
     private JmixButton testButton;
     @ViewComponent
     private JmixCheckboxGroup<String> settingsCheckboxGroup;
+    @Autowired
+    private Icons icons;
     // sample-hide:start
     @Autowired
     private ThemeManager themeManager;
@@ -53,7 +56,7 @@ public class ButtonThemeVariantSample extends StandardView {
             testButton.setText("Button text");
         } else if ("icon".equalsIgnoreCase(command)) {
             testButton.addThemeName(command);
-            testButton.setIcon(VaadinIcon.SMILEY_O.create());
+            testButton.setIcon(icons.get(JmixFontIcon.SMILEY));
         } else {
             testButton.addThemeName(command);
         }

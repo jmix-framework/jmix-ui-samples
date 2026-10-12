@@ -1,13 +1,14 @@
 package io.jmix.uisamples.view.flowui.dialogsandnotifications.notifications.simple;
 
 import com.vaadin.flow.component.ClickEvent;
+import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.Text;
-import com.vaadin.flow.component.icon.Icon;
-import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import io.jmix.flowui.Notifications;
 import io.jmix.flowui.UiComponents;
+import io.jmix.flowui.icon.Icons;
 import io.jmix.flowui.kit.component.button.JmixButton;
+import io.jmix.flowui.kit.icon.JmixFontIcon;
 import io.jmix.flowui.view.StandardView;
 import io.jmix.flowui.view.Subscribe;
 import io.jmix.flowui.view.ViewController;
@@ -22,6 +23,8 @@ public class NotificationSimpleSample extends StandardView {
     protected Notifications notifications;
     @Autowired
     protected UiComponents uiComponents;
+    @Autowired
+    private Icons icons;
 
     @Subscribe("standardNotificationButton")
     protected void onStandardNotificationButtonClick(ClickEvent<JmixButton> event) {
@@ -38,7 +41,7 @@ public class NotificationSimpleSample extends StandardView {
         HorizontalLayout content = uiComponents.create(HorizontalLayout.class);
 
         Text text = new Text("Hello world!");
-        Icon icon = VaadinIcon.SMILEY_O.create();
+        Component icon = icons.get(JmixFontIcon.SMILEY);
 
         content.add(text, icon);
 

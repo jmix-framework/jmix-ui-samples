@@ -24,7 +24,7 @@
 
             <details summaryText="Visual variant" opened="true">
                 <hbox wrap="true">
-                    <button id="iconButton" themeNames="icon" icon="SMILEY_O"/>
+                    <button id="iconButton" themeNames="icon" icon="SMILEY"/>
                     <button id="tertiaryButton" text="Tertiary button" themeNames="tertiary"/>
                     <!-- theme-only:lumo -->
                     <button id="tertiaryInlineButton" text="Tertiary-inline button" themeNames="tertiary-inline"/>

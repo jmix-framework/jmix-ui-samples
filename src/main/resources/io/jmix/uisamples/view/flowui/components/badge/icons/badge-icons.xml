@@ -7,7 +7,7 @@
                 <badge id="warningBadge" text="Warning" icon="WARNING" themeNames="warning"/>
                 <badge id="deniedBadge" text="Denied" themeNames="error">
                     <icon>
-                        <icon icon="EXCLAMATION_CIRCLE_O"/>
+                        <icon icon="EXCLAMATION_CIRCLE"/>
                     </icon>
                 </badge>
             </hbox>
@@ -15,7 +15,7 @@
         <details summaryText="Icon only" opened="true">
             <hbox wrap="true">
                 <badge id="confirmedIconBadge" text="Confirmed" icon="CHECK" themeNames="success icon-only"/>
-                <badge id="deniedIconBadge" text="Denied" icon="CLOSE_SMALL" themeNames="error icon-only"/>
+                <badge id="deniedIconBadge" text="Denied" icon="CLOSE" themeNames="error icon-only"/>
             </hbox>
         </details>
     </layout>

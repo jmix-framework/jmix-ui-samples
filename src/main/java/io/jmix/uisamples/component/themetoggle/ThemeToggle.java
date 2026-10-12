@@ -40,7 +40,7 @@ public class ThemeToggle extends Component implements ClickNotifier<ThemeToggle>
     }
 
     private Icon getDefaultIcon() {
-        Icon icon = VaadinIcon.ADJUST.create();
+        Icon icon = VaadinIcon.CONTRAST.create();
         icon.getElement().getStyle().set("rotate", "180deg");
         return icon;
     }

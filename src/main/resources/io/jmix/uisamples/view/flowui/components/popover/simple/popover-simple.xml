@@ -1,6 +1,6 @@
 <view xmlns="http://jmix.io/schema/flowui/view">
     <layout>
-        <button id="infoButton" text="About Popover" icon="INFO_CIRCLE_O"/>
+        <button id="infoButton" text="About Popover" icon="INFO_CIRCLE"/>
         <popover id="infoPopover" target="infoButton" width="20em">
             <vbox padding="false">
                 <h4 text="Popover"/>
