@@ -2,6 +2,7 @@
     <layout>
         <details summaryText="Icon and text" opened="true">
             <hbox wrap="true">
+                <!-- tag::icons[] sample-hide -->
                 <badge id="pendingBadge" text="Pending" icon="CLOCK"/>
                 <badge id="confirmedBadge" text="Confirmed" icon="CHECK" themeNames="success"/>
                 <badge id="warningBadge" text="Warning" icon="WARNING" themeNames="warning"/>
@@ -10,12 +11,15 @@
                         <icon icon="EXCLAMATION_CIRCLE"/>
                     </icon>
                 </badge>
+                <!-- end::icons[] sample-hide -->
             </hbox>
         </details>
         <details summaryText="Icon only" opened="true">
             <hbox wrap="true">
+                <!-- tag::icon-only[] sample-hide -->
                 <badge id="confirmedIconBadge" text="Confirmed" icon="CHECK" themeNames="success icon-only"/>
                 <badge id="deniedIconBadge" text="Denied" icon="CLOSE" themeNames="error icon-only"/>
+                <!-- end::icon-only[] sample-hide -->
             </hbox>
         </details>
     </layout>

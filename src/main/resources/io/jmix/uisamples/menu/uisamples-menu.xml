@@ -23,6 +23,11 @@
         <menu id="badge" isNew="true">
             <item id="badge-simple"/>
             <item id="badge-icons"/>
+            <item id="badge-dataaware">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
             <item id="badge-theme-variant" splitEnabled="true"/>
         </menu>
         <menu id="big-decimal-field">

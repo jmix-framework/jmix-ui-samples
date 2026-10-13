@@ -1,0 +1,21 @@
+<view xmlns="http://jmix.io/schema/flowui/view">
+    <!-- tag::data-binding[] sample-hide -->
+    <data>
+        <instance id="customerDc"
+                  class="io.jmix.uisamples.entity.Customer"
+                  fetchPlan="_local"/>
+    </data>
+    <layout>
+        <hbox alignItems="CENTER">
+            <badge id="nameBadge" icon="USER" dataContainer="customerDc" property="name"/>
+            <badge id="gradeBadge" themeNames="success" dataContainer="customerDc" property="grade"/>
+        </hbox>
+        <!-- end::data-binding[] sample-hide -->
+        <formLayout id="customerForm" dataContainer="customerDc">
+            <textField id="nameField" property="name"/>
+            <comboBox id="gradeField" property="grade"/>
+        </formLayout>
+        <!-- tag::data-binding[] sample-hide -->
+    </layout>
+    <!-- end::data-binding[] sample-hide -->
+</view>
