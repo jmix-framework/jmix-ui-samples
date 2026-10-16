@@ -24,7 +24,9 @@
                 <hbox wrap="true" alignItems="CENTER">
                     <badge id="filledBadge" text="Filled badge" themeNames="filled"/>
                     <badge id="iconOnlyBadge" text="Confirmed" icon="CHECK" themeNames="icon-only"/>
+                    <!-- tag::number-only[] sample-hide -->
                     <badge id="numberOnlyBadge" text="unread messages" number="5" themeNames="number-only"/>
+                    <!-- end::number-only[] sample-hide -->
                     <badge id="dotBadge" text="Online" themeNames="dot"/>
                 </hbox>
             </details>
