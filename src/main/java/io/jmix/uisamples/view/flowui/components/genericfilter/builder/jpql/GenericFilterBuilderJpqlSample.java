@@ -21,8 +21,8 @@ public class GenericFilterBuilderJpqlSample extends StandardView {
         // Void JpqlFilter -- a checkbox that toggles a fixed WHERE clause.
         // defaultValue(true) makes the condition active when the view opens.
         JpqlFilter<Boolean> highValue = cb.jpqlFilter()
-                .where("{E}.amount >= 1000")
-                .label("High-value (>= 1000)")
+                .where("{E}.amount >= 30000")
+                .label("High-value (>= 30000)")
                 .defaultValue(true)
                 .build();
 
