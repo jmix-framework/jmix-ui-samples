@@ -384,6 +384,33 @@
                     <file name="io/jmix/uisamples/entity/Customer.java"/>
                 </otherFiles>
             </item>
+            <item id="generic-filter-programmatic-legacy" page="genericFilter" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="generic-filter-builder-configuration" page="genericFilter" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                    <file name="io/jmix/uisamples/entity/CustomerGrade.java"/>
+                </otherFiles>
+            </item>
+            <item id="generic-filter-builder-jpql" page="genericFilter" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Order.java"/>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="generic-filter-builder-group" page="genericFilter" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
+            <item id="generic-filter-builder-refresh" page="genericFilter" splitEnabled="true" isNew="true">
+                <otherFiles>
+                    <file name="io/jmix/uisamples/entity/Customer.java"/>
+                </otherFiles>
+            </item>
         </menu>
         <menu id="html">
             <item id="html-component" page="html" splitEnabled="true">
