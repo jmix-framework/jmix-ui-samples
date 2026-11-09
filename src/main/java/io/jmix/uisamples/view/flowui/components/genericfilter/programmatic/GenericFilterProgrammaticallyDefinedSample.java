@@ -1,11 +1,8 @@
 package io.jmix.uisamples.view.flowui.components.genericfilter.programmatic;
 
-import io.jmix.core.querycondition.PropertyConditionUtils;
 import io.jmix.flowui.UiComponents;
 import io.jmix.flowui.component.genericfilter.GenericFilter;
-import io.jmix.flowui.component.genericfilter.configuration.DesignTimeConfiguration;
 import io.jmix.flowui.component.propertyfilter.PropertyFilter;
-import io.jmix.flowui.component.propertyfilter.SingleFilterSupport;
 import io.jmix.flowui.model.CollectionLoader;
 import io.jmix.flowui.view.*;
 import io.jmix.uisamples.entity.Customer;
@@ -20,49 +17,31 @@ public class GenericFilterProgrammaticallyDefinedSample extends StandardView {
 
     @Autowired
     protected UiComponents uiComponents;
-    @Autowired
-    protected SingleFilterSupport singleFilterSupport;
 
     @Subscribe
     protected void onInit(InitEvent event) {
-        initFilter();
-    }
-
-    protected void initFilter() {
         GenericFilter genericFilter = uiComponents.create(GenericFilter.class);
         genericFilter.setId("genericFilter");
-        getContent().addComponentAsFirst(genericFilter);
         genericFilter.setDataLoader(customersDl);
+        getContent().addComponentAsFirst(genericFilter);
 
         genericFilter.loadConfigurationsAndApplyDefault();
 
-        initConfiguration(genericFilter);
-    }
+        // Build a condition and register a configuration with the fluent builder API.
+        // The builder performs the wiring (parameter name, value component, condition
+        // delegation) that otherwise has to be done by hand.
+        PropertyFilter<Integer> ageFilter = genericFilter.filterComponentBuilder()
+                .<Integer>propertyFilter()
+                .property("age")
+                .operation(PropertyFilter.Operation.LESS_OR_EQUAL)
+                .operationEditable(true)
+                .build();
 
-    protected void initConfiguration(GenericFilter genericFilter) {
-        DesignTimeConfiguration javaConfiguration = genericFilter.addConfiguration("javaConfiguration",
-                "Programmatically defined configuration");
-
-        javaConfiguration.getRootLogicalFilterComponent().add(createAgePropertyFilter());
-        genericFilter.setCurrentConfiguration(javaConfiguration);
-    }
-
-    protected PropertyFilter<Integer> createAgePropertyFilter() {
-        PropertyFilter<Integer> agePropertyFilter = uiComponents.create(PropertyFilter.class);
-        agePropertyFilter.setConditionModificationDelegated(true);
-        agePropertyFilter.setDataLoader(customersDl);
-        agePropertyFilter.setProperty("age");
-        agePropertyFilter.setOperation(PropertyFilter.Operation.LESS_OR_EQUAL);
-        agePropertyFilter.setOperationEditable(true);
-
-        agePropertyFilter.setParameterName(PropertyConditionUtils.generateParameterName(
-                agePropertyFilter.getProperty()));
-        agePropertyFilter.setValueComponent(singleFilterSupport.generateValueComponent(
-                customersDl.getContainer().getEntityMetaClass(),
-                agePropertyFilter.getProperty(),
-                agePropertyFilter.getOperation()
-        ));
-
-        return agePropertyFilter;
+        genericFilter.filterConfigurationBuilder()
+                .id("javaConfiguration")
+                .name("Programmatically defined configuration")
+                .add(ageFilter)
+                .makeCurrent()
+                .buildAndRegister();
     }
 }
